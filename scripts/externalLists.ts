@@ -41,6 +41,10 @@ const UNISWAP_LIST: ArbitraryTokenList = {
   url: 'https://tokens.uniswap.org',
   access: 'tokens',
 }
+const BEAMSWAP_LIST: ArbitraryTokenList = {
+  url: 'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
+  access: 'tokens',
+}
 const BASESWAP_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/baseswapfi/default-token-list/main/src/tokens/base.json',
   access: 'tokens',
@@ -661,6 +665,7 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   ICECREAM_LIST,
   UNISWAP_EXTENDED_LIST,
   UNISWAP_LIST,
+  BEAMSWAP_LIST,
   MORPHO_LIST,
   PANCAKE_EXTENDED_LIST,
   BASESWAP_LIST,
