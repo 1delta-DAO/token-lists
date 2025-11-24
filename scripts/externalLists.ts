@@ -452,6 +452,7 @@ const COINGECKO_LISTS = [
   'thundercore',
   'botanix',
   'manta-pacific',
+  'monad',
 ].map((a) => ({
   url: `https://tokens.coingecko.com/${a}/all.json`,
   access: 'tokens',
