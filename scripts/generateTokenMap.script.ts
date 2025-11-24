@@ -655,6 +655,9 @@ function filterForWNative(native: { decimals: number; symbol: string; name: stri
   if (candidates[0]?.chainId === Chain.ARBITRUM_ONE) {
     return candidates.find((a) => a.address === '0x82af49447d8a07e3bd95bd0d56f35241523fbab1')
   }
+  if (candidates[0]?.chainId === Chain.MONAD_MAINNET) {
+    return candidates.find((a) => a.address === '0x3bd359c1119da7da1d913d1c4d2b7c461115433a')
+  }
   const found = candidates.filter((c) => {
     if (c.name.toLowerCase().startsWith('wrapped') && c.symbol.toLowerCase().startsWith('w')) {
       const [cutname, cutSymbol] = trimForWrapped(c.name, c.symbol)
