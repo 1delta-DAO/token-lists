@@ -41,6 +41,10 @@ const UNISWAP_LIST: ArbitraryTokenList = {
   url: 'https://tokens.uniswap.org',
   access: 'tokens',
 }
+const MONAD_LIST: ArbitraryTokenList = {
+  url: 'https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/tokenlist-mainnet.json',
+  access: 'tokens',
+}
 const BEAMSWAP_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/BeamSwap/beamswap-tokenlist/main/tokenlist.json',
   access: 'tokens',
@@ -665,6 +669,7 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   ICECREAM_LIST,
   UNISWAP_EXTENDED_LIST,
   UNISWAP_LIST,
+  MONAD_LIST,
   BEAMSWAP_LIST,
   MORPHO_LIST,
   PANCAKE_EXTENDED_LIST,
