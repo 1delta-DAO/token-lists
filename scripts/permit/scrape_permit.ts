@@ -33,7 +33,7 @@ import { getEvmChain } from '@1delta/providers'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const inputFilePath = (chainId: string) =>
-  `https://raw.githubusercontent.com/1delta-DAO/asset-lists/main/${chainId}.json`
+  `https://raw.githubusercontent.com/1delta-DAO/token-lists/main/${chainId}.json`
 const outputFilePath = (chainId: string) => path.resolve(__dirname, `../permit-info/${chainId}.permit.json`)
 
 async function checkRpcHealth(client: any, chainId: string): Promise<boolean> {
