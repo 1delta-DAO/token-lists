@@ -763,7 +763,7 @@ async function main() {
   // const tokenMetaPath = './src/data/assetMeta.ts'
   // fs.writeFileSync(tokenMetaPath, tokenMeta)
 
-  const { data: WNativeMap, wNative } = createWnativeMap(listOfLists, CHAIN_INFO)
+  // const { data: WNativeMap, wNative } = createWnativeMap(listOfLists, CHAIN_INFO)
   // const WNativeMapPath = "./src/data/wnative.ts";
   // fs.writeFileSync(WNativeMapPath, WNativeMap);
 
