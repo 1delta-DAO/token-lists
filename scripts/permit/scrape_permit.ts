@@ -393,11 +393,12 @@ const chains = [
   // Chain.UNICHAIN,
   // Chain.HYPEREVM,
   // Chain.KATANA,
-  Chain.KAIA_MAINNET,
-  Chain.TAIKO_ALETHIA,
-  Chain.SONIC_MAINNET,
-  Chain.SCROLL,
-  Chain.LINEA,
+  // Chain.KAIA_MAINNET,
+  // Chain.TAIKO_ALETHIA,
+  // Chain.SONIC_MAINNET,
+  // Chain.SCROLL,
+  // Chain.LINEA,
+  Chain.MONAD_MAINNET,
 ]
 
 Promise.all(
