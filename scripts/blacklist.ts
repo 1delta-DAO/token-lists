@@ -11,6 +11,9 @@ export const BLACKLIST_PER_CHAIN = {
   [Chain.MANTLE]: [
     // "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // MNT
   ],
+  [Chain.OP_MAINNET]: [
+    "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // legacy ETH
+  ],
 }
 
 export const GROUP_BLACKLIST: { [c: string | number]: { [a: string]: string[] } } = {
