@@ -12,7 +12,7 @@ export const BLACKLIST_PER_CHAIN = {
     // "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // MNT
   ],
   [Chain.OP_MAINNET]: [
-    "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // legacy ETH
+    '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000', // legacy ETH
   ],
 }
 
