@@ -1,6 +1,9 @@
 import { Chain } from '@1delta/chain-registry'
 
 export const BLACKLIST_PER_CHAIN = {
+  [Chain.ETHEREUM_MAINNET]: [
+    '0x000ae314e2a2172a039b26378814c252734f556a', // ASTER _ EOA address
+  ],
   [Chain.ARBITRUM_ONE]: [
     '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // fake WETH
   ],
@@ -12,7 +15,14 @@ export const BLACKLIST_PER_CHAIN = {
     // "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // MNT
   ],
   [Chain.OP_MAINNET]: [
-    "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // legacy ETH
+    '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000', // legacy ETH
+    '0x7bfd4ca2a6cf3a3fddd645d10b323031afe47ff0', // wrsETH _ eoa address
+  ],
+  [Chain.BASE]: [
+    '0x80eede496655fb9047dd39d9f418d5483ed600df', // frax usd _ eoa address
+  ],
+  [Chain.METIS_ANDROMEDA_MAINNET]: [
+    '0x80eede496655fb9047dd39d9f418d5483ed600df', // frax usd _ eoa address
   ],
 }
 
@@ -69,6 +79,7 @@ export const NATIVE_ERC20: { [a: string]: string } = {
   [Chain.METIS_ANDROMEDA_MAINNET]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
   [Chain.CELO_MAINNET]: '0x471ece3750da237f93b8e339c536989b8978a438',
   [Chain.MANTLE]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
+  [Chain.MOONBEAM]: '0x0000000000000000000000000000000000000802',
 }
 
 export const GROUP_HARD_SETTER: { [c: string | number]: { [a: string]: string[] } } = {
