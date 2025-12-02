@@ -398,7 +398,8 @@ const chains = [
   // Chain.SONIC_MAINNET,
   // Chain.SCROLL,
   // Chain.LINEA,
-  Chain.MONAD_MAINNET,
+  // Chain.MONAD_MAINNET,
+  Chain.CORE_BLOCKCHAIN_MAINNET,
 ]
 
 Promise.all(
