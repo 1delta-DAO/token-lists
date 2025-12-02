@@ -79,6 +79,7 @@ export const NATIVE_ERC20: { [a: string]: string } = {
   [Chain.METIS_ANDROMEDA_MAINNET]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
   [Chain.CELO_MAINNET]: '0x471ece3750da237f93b8e339c536989b8978a438',
   [Chain.MANTLE]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
+  [Chain.MOONBEAM]: '0x0000000000000000000000000000000000000802',
 }
 
 export const GROUP_HARD_SETTER: { [c: string | number]: { [a: string]: string[] } } = {
