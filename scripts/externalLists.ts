@@ -657,7 +657,7 @@ export const GLUE_LIST: ArbitraryTokenList = {
 }
 
 export const PENDLE_LIST: ArbitraryTokenList = {
-  url: 'file://' + path.resolve(__dirname, '../../asset-lists/pendle.json'),
+  url: 'file://' + path.resolve(__dirname, 'pendle/pendle.json'),
   access: 'direct',
 }
 
