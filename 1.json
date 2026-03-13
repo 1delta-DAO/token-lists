@@ -21091,7 +21091,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c0eec3e-5a3c-4e12-913c-09eaae125e0f.svg",
       "assetGroup": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-5MAR2026",
       "currencyId": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-5MAR2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x97f35d16cfcfbc0669ecc2500d56791ed53e4014": {
       "chainId": "1",
@@ -21102,7 +21102,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/de79dda9-73e4-488a-8999-37883b13c3ae.svg",
       "assetGroup": "YT sNUSD (NUSD) Ethereum::YT-sNUSD-5MAR2026",
       "currencyId": "YT sNUSD (NUSD) Ethereum::YT-sNUSD-5MAR2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": { "pendle": { "tokenType": "YT", "expired": true } }
     },
     "0xa815a7cfa337d81e5d86286df9431488ec230abf": {
       "chainId": "1",
@@ -21242,7 +21242,8 @@
           "expiry": 1772668800,
           "underlyingAsset": "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313",
           "ytAddress": "0x08903411e7a3eb500e30aac3bdd44775055b8c00",
-          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409"
+          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
+          "expired": true
         }
       }
     },
@@ -21262,7 +21263,8 @@
           "expiry": 1772668800,
           "underlyingAsset": "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313",
           "ptAddress": "0x54bf2659b5cdfd86b75920e93c0844c0364f5166",
-          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409"
+          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
+          "expired": true
         }
       }
     },
@@ -22788,11 +22790,11 @@
       "props": {
         "pendle": {
           "tokenType": "SY",
-          "marketAddress": "0x696a9d9d4b0ba471ac309da8e168a2962af6ab22",
-          "expiry": 1773878400,
+          "marketAddress": "0x11aa6742bc3afd713e7fd3f0d3b1f7507cf2ad12",
+          "expiry": 1782345600,
           "underlyingAsset": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
-          "ptAddress": "0x0396be0b0d2a88beff7680529e7f16de393381e4",
-          "ytAddress": "0x6d716debd8147a0c7835d2f5d1fbc0707818445c"
+          "ptAddress": "0xdf7962c3aebea91067fb4179f8bdd8df40b4e9ed",
+          "ytAddress": "0x0a7e65d2d545b57da046b7f53cd99d5ad02efffc"
         }
       }
     },
@@ -24126,7 +24128,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg",
       "assetGroup": "USDG Ethereum::SY-USDG",
       "currencyId": "USDG Ethereum::SY-USDG",
-      "props": { "pendle": { "tokenType": "SY" } }
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xc5b32dba5f29f8395fb9591e1a15f23a75214f33",
+          "expiry": 1779926400,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ptAddress": "0x9db38d74a0d29380899ad354121dfb521adb0548",
+          "ytAddress": "0x4a1294749a70bc32a998b49dd11bf26e9379e3c1"
+        }
+      }
     },
     "0x9db38d74a0d29380899ad354121dfb521adb0548": {
       "chainId": "1",
@@ -24137,7 +24148,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3c5c1e3f-6dd7-463d-a36c-244662c6f243.svg",
       "assetGroup": "PT USDG (USDG) Ethereum::PT-USDG-28MAY2026",
       "currencyId": "PT USDG (USDG) Ethereum::PT-USDG-28MAY2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xc5b32dba5f29f8395fb9591e1a15f23a75214f33",
+          "expiry": 1779926400,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ytAddress": "0x4a1294749a70bc32a998b49dd11bf26e9379e3c1",
+          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+        }
+      }
     },
     "0x4a1294749a70bc32a998b49dd11bf26e9379e3c1": {
       "chainId": "1",
@@ -24148,7 +24168,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b62836c0-f848-4d73-829e-adce1aa38dea.svg",
       "assetGroup": "YT USDG (USDG) Ethereum::YT-USDG-28MAY2026",
       "currencyId": "YT USDG (USDG) Ethereum::YT-USDG-28MAY2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xc5b32dba5f29f8395fb9591e1a15f23a75214f33",
+          "expiry": 1779926400,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ptAddress": "0x9db38d74a0d29380899ad354121dfb521adb0548",
+          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+        }
+      }
     },
     "0xa28b2445c8e1751733e75e6794971aeea4806f45": {
       "chainId": "1",
@@ -24514,7 +24543,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/7fea3238-fc4f-49d2-9574-997dea2fd4d4.svg",
       "assetGroup": "PT USD3 (USD3) Ethereum::PT-USD3-25JUN2026",
       "currencyId": "PT USD3 (USD3) Ethereum::PT-USD3-25JUN2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x11aa6742bc3afd713e7fd3f0d3b1f7507cf2ad12",
+          "expiry": 1782345600,
+          "underlyingAsset": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
+          "ytAddress": "0x0a7e65d2d545b57da046b7f53cd99d5ad02efffc",
+          "syAddress": "0xea3bc608f32847b97965c5e1648bdfcd4c2c40d0"
+        }
+      }
     },
     "0x0a7e65d2d545b57da046b7f53cd99d5ad02efffc": {
       "chainId": "1",
@@ -24525,6 +24563,59 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f9d80108-afe7-4b2e-9ecf-124a938ae8a0.svg",
       "assetGroup": "YT USD3 (USD3) Ethereum::YT-USD3-25JUN2026",
       "currencyId": "YT USD3 (USD3) Ethereum::YT-USD3-25JUN2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x11aa6742bc3afd713e7fd3f0d3b1f7507cf2ad12",
+          "expiry": 1782345600,
+          "underlyingAsset": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
+          "ptAddress": "0xdf7962c3aebea91067fb4179f8bdd8df40b4e9ed",
+          "syAddress": "0xea3bc608f32847b97965c5e1648bdfcd4c2c40d0"
+        }
+      }
+    },
+    "0xfc6d463a9703d1317a32d9c14acbb0851d02ef56": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "PT syrupUSDC (USDC) Ethereum",
+      "address": "0xfc6d463a9703d1317a32d9c14acbb0851d02ef56",
+      "symbol": "PT-syrupUSDC-24SEP2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/462e7776-9473-4f01-b192-77df2e7da4f8.svg",
+      "assetGroup": "PT syrupUSDC (USDC) Ethereum::PT-syrupUSDC-24SEP2026",
+      "currencyId": "PT syrupUSDC (USDC) Ethereum::PT-syrupUSDC-24SEP2026",
+      "props": { "pendle": { "tokenType": "PT" } }
+    },
+    "0xa820d95e4c200b86fedbe86f8896e8306b069b1c": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "YT syrupUSDC (USDC) Ethereum",
+      "address": "0xa820d95e4c200b86fedbe86f8896e8306b069b1c",
+      "symbol": "YT-syrupUSDC-24SEP2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/47b18af9-3062-4548-ba36-9b8b37131634.svg",
+      "assetGroup": "YT syrupUSDC (USDC) Ethereum::YT-syrupUSDC-24SEP2026",
+      "currencyId": "YT syrupUSDC (USDC) Ethereum::YT-syrupUSDC-24SEP2026",
+      "props": { "pendle": { "tokenType": "YT" } }
+    },
+    "0x6c01b844f193c9ad6f7f1e3e17a19cfe73583c2f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT siUSD (iUSD) Ethereum",
+      "address": "0x6c01b844f193c9ad6f7f1e3e17a19cfe73583c2f",
+      "symbol": "PT-siUSD-11JUN2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/4b010b4f-d77a-4386-ae32-cd22b30a8bb8.svg",
+      "assetGroup": "PT siUSD (iUSD) Ethereum::PT-siUSD-11JUN2026",
+      "currencyId": "PT siUSD (iUSD) Ethereum::PT-siUSD-11JUN2026",
+      "props": { "pendle": { "tokenType": "PT" } }
+    },
+    "0xf5d47f240e675199a28cc97b1e5acc4ac20472fb": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT siUSD (iUSD) Ethereum",
+      "address": "0xf5d47f240e675199a28cc97b1e5acc4ac20472fb",
+      "symbol": "YT-siUSD-11JUN2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8fc96c8f-68b5-4e9c-9c12-6d7191f99fa1.svg",
+      "assetGroup": "YT siUSD (iUSD) Ethereum::YT-siUSD-11JUN2026",
+      "currencyId": "YT siUSD (iUSD) Ethereum::YT-siUSD-11JUN2026",
       "props": { "pendle": { "tokenType": "YT" } }
     },
     "0xb6ed7644c69416d67b522e20bc294a9a9b405b31": {
@@ -42716,6 +42807,7 @@
       "name": "MetaStreet V2 mwstETH WPUNKS 20",
       "address": "0xc975342a95ccb75378ddc646b8620fa3cd5bc051",
       "symbol": "PUNKETH-20",
+      "logoURI": "https://assets.coingecko.com/coins/images/36833/thumb/metastreet_400x400.jpg?1772613989",
       "assetGroup": "MetaStreet V2 mwstETH WPUNKS 20::PUNKETH-20",
       "currencyId": "MetaStreet V2 mwstETH WPUNKS 20::PUNKETH-20"
     },
@@ -47965,6 +48057,7 @@
       "name": "Thunderhead Staked FLIP",
       "address": "0x961d4921e1718e633bac8ded88c4a1cae44b785a",
       "symbol": "STFLIP",
+      "logoURI": "https://assets.coingecko.com/coins/images/33211/thumb/thunderhead-staked-flip.jpg?1772704822",
       "assetGroup": "Thunderhead Staked FLIP::STFLIP",
       "currencyId": "Thunderhead Staked FLIP::STFLIP"
     },
@@ -124713,10 +124806,10 @@
       "decimals": 18,
       "name": "Staked NUSD",
       "address": "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313",
-      "logoURI": "https://assets.coingecko.com/coins/images/70028/thumb/sNUSD-200x200.png?1760452644",
       "symbol": "sNUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/70028/thumb/sNUSD-200x200.png?1760452644",
       "assetGroup": "sNUSD::Staked NUSD",
-      "currencyId": "sNUSD::Staked NUSD",
+      "currencyId": "Staked NUSD::sNUSD",
       "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x699f088b5dddcafb7c4824db5b10b57b37cb0c66": {
@@ -128994,6 +129087,235 @@
       "logoURI": "https://assets.coingecko.com/coins/images/32070/thumb/SHIDO.png?1696530867",
       "assetGroup": "Shido Network::SHIDO",
       "currencyId": "Shido Network::SHIDO"
+    },
+    "0xd8a271974e8edae9d7b58e3370dc1669427503f4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Fluent",
+      "address": "0xd8a271974e8edae9d7b58e3370dc1669427503f4",
+      "symbol": "BLEND",
+      "assetGroup": "Fluent::BLEND",
+      "currencyId": "Fluent::BLEND"
+    },
+    "0xcc5c22c7a6bcc25e66726aef011dde74289ed203": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Midas M1 USD Market Neutral",
+      "address": "0xcc5c22c7a6bcc25e66726aef011dde74289ed203",
+      "symbol": "mM1-USD",
+      "logoURI": "https://cdn.morpho.org/assets/logos/mm1-usd.svg",
+      "assetGroup": "Midas M1 USD Market Neutral::mM1-USD",
+      "currencyId": "Midas M1 USD Market Neutral::mM1-USD"
+    },
+    "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Gauntlet USDC Frontier",
+      "address": "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e",
+      "symbol": "gtusdcf",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e.png",
+      "assetGroup": "Gauntlet USDC Frontier::gtusdcf",
+      "currencyId": "Gauntlet USDC Frontier::gtusdcf"
+    },
+    "0x633821b8e003344e5223509277f2084ea809a452": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Junior DOLA",
+      "address": "0x633821b8e003344e5223509277f2084ea809a452",
+      "symbol": "JRDOLA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172347/thumb/jrDOLA.webp?1773039024",
+      "assetGroup": "Junior DOLA::JRDOLA",
+      "currencyId": "Junior DOLA::JRDOLA"
+    },
+    "0xbd4dfc058eb95b8de5ceaf39966a1a70f5556f78": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "AllUnity CHF",
+      "address": "0xbd4dfc058eb95b8de5ceaf39966a1a70f5556f78",
+      "symbol": "CHFAU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172300/thumb/CHFAU_Single_Gradient_%282%29.png?1772721971",
+      "assetGroup": "AllUnity CHF::CHFAU",
+      "currencyId": "AllUnity CHF::CHFAU"
+    },
+    "0x44bb433d29fe966992a9c812da7f252c9c53f285": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Dollar",
+      "address": "0x44bb433d29fe966992a9c812da7f252c9c53f285",
+      "symbol": "RUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172367/thumb/RUSD_logo_200x200_px.png?1773310830",
+      "assetGroup": "Royal Dollar::RUSD",
+      "currencyId": "Royal Dollar::RUSD"
+    },
+    "0xf7d85ec4e7710f71992752eac2111312e73e9c9c": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Flying Tulip USD",
+      "address": "0xf7d85ec4e7710f71992752eac2111312e73e9c9c",
+      "symbol": "FTUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172348/thumb/flyingtulip_ftusd_200.png?1773039176",
+      "assetGroup": "Flying Tulip USD::FTUSD",
+      "currencyId": "Flying Tulip USD::FTUSD"
+    },
+    "0xa877d5bb0274dccba8556154a30e1ca4021a275f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "kpk EURC Yield V2 Morpho Vault (Ethereum)",
+      "address": "0xa877d5bb0274dccba8556154a30e1ca4021a275f",
+      "symbol": "KPKEURCYIELD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172330/thumb/avatar-light.png?1772896335",
+      "assetGroup": "kpk EURC Yield V2 Morpho Vault (Ethereum)::KPKEURCYIELD",
+      "currencyId": "kpk EURC Yield V2 Morpho Vault (Ethereum)::KPKEURCYIELD"
+    },
+    "0x7def4573628021500c3207994935a51801fb56be": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Akita",
+      "address": "0x7def4573628021500c3207994935a51801fb56be",
+      "symbol": "AKITA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172337/thumb/akita-inu.jpg?1772957985",
+      "assetGroup": "Akita::AKITA",
+      "currencyId": "Akita::AKITA"
+    },
+    "0xfccd6fbca272b4cc11069402f4123b070b7838f9": {
+      "chainId": "1",
+      "decimals": 9,
+      "name": "Kimchi Coin",
+      "address": "0xfccd6fbca272b4cc11069402f4123b070b7838f9",
+      "symbol": "KIMCHI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172279/thumb/IMG_20260224_154858_459.png?1772598345",
+      "assetGroup": "Kimchi Coin::KIMCHI",
+      "currencyId": "Kimchi Coin::KIMCHI"
+    },
+    "0xe3872dd4eba50598c54b2aa21b04c71fc37b000b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Nexira DAEP",
+      "address": "0xe3872dd4eba50598c54b2aa21b04c71fc37b000b",
+      "symbol": "NEXI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172360/thumb/200x200.png?1773095430",
+      "assetGroup": "Nexira DAEP::NEXI",
+      "currencyId": "Nexira DAEP::NEXI"
+    },
+    "0x5dbf760b4fd0cddde0366b33aeb338b2a6d77725": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "kpk ETH Yield V2 Morpho Vault (Ethereum)",
+      "address": "0x5dbf760b4fd0cddde0366b33aeb338b2a6d77725",
+      "symbol": "KPKETHYIELD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172329/thumb/avatar-light.png?1772896326",
+      "assetGroup": "kpk ETH Yield V2 Morpho Vault (Ethereum)::KPKETHYIELD",
+      "currencyId": "kpk ETH Yield V2 Morpho Vault (Ethereum)::KPKETHYIELD"
+    },
+    "0x386e0983d0e05f5239fd029793ef3ba37b468e9c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YieldFi yHLP",
+      "address": "0x386e0983d0e05f5239fd029793ef3ba37b468e9c",
+      "symbol": "YHLP",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172349/thumb/yHLP.png?1773039499",
+      "assetGroup": "YieldFi yHLP::YHLP",
+      "currencyId": "YieldFi yHLP::YHLP"
+    },
+    "0xdb6ba5d510f114f9b2ea08bea7d30e32eee33411": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Block Street",
+      "address": "0xdb6ba5d510f114f9b2ea08bea7d30e32eee33411",
+      "symbol": "BSB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172257/thumb/bsb_400x400.jpg?1772553610",
+      "assetGroup": "Block Street::BSB",
+      "currencyId": "Block Street::BSB"
+    },
+    "0x0b06d62b182abb7782d92a20f9f6ea0a4f59b0ae": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Hyperbridge",
+      "address": "0x0b06d62b182abb7782d92a20f9f6ea0a4f59b0ae",
+      "symbol": "BRIDGE",
+      "logoURI": "https://assets.coingecko.com/coins/images/53475/thumb/Sign_black.png?1736482584",
+      "assetGroup": "Hyperbridge::BRIDGE",
+      "currencyId": "Hyperbridge::BRIDGE"
+    },
+    "0x5702a4487da07c827cde512e2d5969cb430cd839": {
+      "chainId": "1",
+      "decimals": 27,
+      "name": "Exchange Request for Bitbon",
+      "address": "0x5702a4487da07c827cde512e2d5969cb430cd839",
+      "symbol": "ERBB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172398/thumb/logo-erbb.png?1773315088",
+      "assetGroup": "Exchange Request for Bitbon::ERBB",
+      "currencyId": "Exchange Request for Bitbon::ERBB"
+    },
+    "0x1bc1453e21b28ff68e189d9e2035865ce02b4cb2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Gold",
+      "address": "0x1bc1453e21b28ff68e189d9e2035865ce02b4cb2",
+      "symbol": "RXAU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172399/thumb/RXAU_logo_200x200.png?1773316092",
+      "assetGroup": "Royal Gold::RXAU",
+      "currencyId": "Royal Gold::RXAU"
+    },
+    "0xe21d7a0e7d11530cc08814ce9d3fe316e72ac382": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Silver",
+      "address": "0xe21d7a0e7d11530cc08814ce9d3fe316e72ac382",
+      "symbol": "RXAG",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172400/thumb/RXAG_logo_200x200.png?1773316147",
+      "assetGroup": "Royal Silver::RXAG",
+      "currencyId": "Royal Silver::RXAG"
+    },
+    "0x3ed0b3c4c0168a560d34e361b8130dcca4677736": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Euro",
+      "address": "0x3ed0b3c4c0168a560d34e361b8130dcca4677736",
+      "symbol": "REUR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172401/thumb/REUR_logo_200x200.png?1773316193",
+      "assetGroup": "Royal Euro::REUR",
+      "currencyId": "Royal Euro::REUR"
+    },
+    "0xb66a5d30d04f076e78ffb0d045c55846fdcde928": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Energy Web Token",
+      "address": "0xb66a5d30d04f076e78ffb0d045c55846fdcde928",
+      "symbol": "EWT",
+      "logoURI": "https://assets.coingecko.com/coins/images/10886/thumb/EWF_1.png?1773198639",
+      "assetGroup": "Energy Web Token::EWT",
+      "currencyId": "Energy Web Token::EWT"
+    },
+    "0x56ba8b58b7d1f6d384a1c4dd553f39ebc8741b8e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Kinesis Silver",
+      "address": "0x56ba8b58b7d1f6d384a1c4dd553f39ebc8741b8e",
+      "symbol": "KAG",
+      "logoURI": "https://assets.coingecko.com/coins/images/29789/thumb/kag-currency-ticker.png?1696528719",
+      "assetGroup": "Kinesis Silver::KAG",
+      "currencyId": "Kinesis Silver::KAG"
+    },
+    "0x14dab79fd7b7b3f748d434812fd6a9aac460ea52": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Kinesis Gold",
+      "address": "0x14dab79fd7b7b3f748d434812fd6a9aac460ea52",
+      "symbol": "KAU",
+      "logoURI": "https://assets.coingecko.com/coins/images/29788/thumb/kau-currency-ticker.png?1696528718",
+      "assetGroup": "Kinesis Gold::KAU",
+      "currencyId": "Kinesis Gold::KAU"
+    },
+    "0x7977bf3e7e0c954d12cdca3e013adaf57e0b06e0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Opinion",
+      "address": "0x7977bf3e7e0c954d12cdca3e013adaf57e0b06e0",
+      "symbol": "OPN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102171893/thumb/Opinon.jpg?1770269253",
+      "assetGroup": "Opinion::OPN",
+      "currencyId": "Opinion::OPN"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
