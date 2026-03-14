@@ -21091,7 +21091,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c0eec3e-5a3c-4e12-913c-09eaae125e0f.svg",
       "assetGroup": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-5MAR2026",
       "currencyId": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-5MAR2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x97f35d16cfcfbc0669ecc2500d56791ed53e4014": {
       "chainId": "1",
@@ -21102,7 +21102,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/de79dda9-73e4-488a-8999-37883b13c3ae.svg",
       "assetGroup": "YT sNUSD (NUSD) Ethereum::YT-sNUSD-5MAR2026",
       "currencyId": "YT sNUSD (NUSD) Ethereum::YT-sNUSD-5MAR2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": { "pendle": { "tokenType": "YT", "expired": true } }
     },
     "0xa815a7cfa337d81e5d86286df9431488ec230abf": {
       "chainId": "1",
@@ -21242,7 +21242,8 @@
           "expiry": 1772668800,
           "underlyingAsset": "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313",
           "ytAddress": "0x08903411e7a3eb500e30aac3bdd44775055b8c00",
-          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409"
+          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
+          "expired": true
         }
       }
     },
@@ -21262,7 +21263,8 @@
           "expiry": 1772668800,
           "underlyingAsset": "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313",
           "ptAddress": "0x54bf2659b5cdfd86b75920e93c0844c0364f5166",
-          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409"
+          "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
+          "expired": true
         }
       }
     },
@@ -22788,11 +22790,11 @@
       "props": {
         "pendle": {
           "tokenType": "SY",
-          "marketAddress": "0x696a9d9d4b0ba471ac309da8e168a2962af6ab22",
-          "expiry": 1773878400,
+          "marketAddress": "0x11aa6742bc3afd713e7fd3f0d3b1f7507cf2ad12",
+          "expiry": 1782345600,
           "underlyingAsset": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
-          "ptAddress": "0x0396be0b0d2a88beff7680529e7f16de393381e4",
-          "ytAddress": "0x6d716debd8147a0c7835d2f5d1fbc0707818445c"
+          "ptAddress": "0xdf7962c3aebea91067fb4179f8bdd8df40b4e9ed",
+          "ytAddress": "0x0a7e65d2d545b57da046b7f53cd99d5ad02efffc"
         }
       }
     },
@@ -24126,7 +24128,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg",
       "assetGroup": "USDG Ethereum::SY-USDG",
       "currencyId": "USDG Ethereum::SY-USDG",
-      "props": { "pendle": { "tokenType": "SY" } }
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xc5b32dba5f29f8395fb9591e1a15f23a75214f33",
+          "expiry": 1779926400,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ptAddress": "0x9db38d74a0d29380899ad354121dfb521adb0548",
+          "ytAddress": "0x4a1294749a70bc32a998b49dd11bf26e9379e3c1"
+        }
+      }
     },
     "0x9db38d74a0d29380899ad354121dfb521adb0548": {
       "chainId": "1",
@@ -24137,7 +24148,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3c5c1e3f-6dd7-463d-a36c-244662c6f243.svg",
       "assetGroup": "PT USDG (USDG) Ethereum::PT-USDG-28MAY2026",
       "currencyId": "PT USDG (USDG) Ethereum::PT-USDG-28MAY2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xc5b32dba5f29f8395fb9591e1a15f23a75214f33",
+          "expiry": 1779926400,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ytAddress": "0x4a1294749a70bc32a998b49dd11bf26e9379e3c1",
+          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+        }
+      }
     },
     "0x4a1294749a70bc32a998b49dd11bf26e9379e3c1": {
       "chainId": "1",
@@ -24148,7 +24168,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b62836c0-f848-4d73-829e-adce1aa38dea.svg",
       "assetGroup": "YT USDG (USDG) Ethereum::YT-USDG-28MAY2026",
       "currencyId": "YT USDG (USDG) Ethereum::YT-USDG-28MAY2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xc5b32dba5f29f8395fb9591e1a15f23a75214f33",
+          "expiry": 1779926400,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ptAddress": "0x9db38d74a0d29380899ad354121dfb521adb0548",
+          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+        }
+      }
     },
     "0xa28b2445c8e1751733e75e6794971aeea4806f45": {
       "chainId": "1",
@@ -24514,7 +24543,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/7fea3238-fc4f-49d2-9574-997dea2fd4d4.svg",
       "assetGroup": "PT USD3 (USD3) Ethereum::PT-USD3-25JUN2026",
       "currencyId": "PT USD3 (USD3) Ethereum::PT-USD3-25JUN2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x11aa6742bc3afd713e7fd3f0d3b1f7507cf2ad12",
+          "expiry": 1782345600,
+          "underlyingAsset": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
+          "ytAddress": "0x0a7e65d2d545b57da046b7f53cd99d5ad02efffc",
+          "syAddress": "0xea3bc608f32847b97965c5e1648bdfcd4c2c40d0"
+        }
+      }
     },
     "0x0a7e65d2d545b57da046b7f53cd99d5ad02efffc": {
       "chainId": "1",
@@ -24525,6 +24563,59 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f9d80108-afe7-4b2e-9ecf-124a938ae8a0.svg",
       "assetGroup": "YT USD3 (USD3) Ethereum::YT-USD3-25JUN2026",
       "currencyId": "YT USD3 (USD3) Ethereum::YT-USD3-25JUN2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x11aa6742bc3afd713e7fd3f0d3b1f7507cf2ad12",
+          "expiry": 1782345600,
+          "underlyingAsset": "0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc",
+          "ptAddress": "0xdf7962c3aebea91067fb4179f8bdd8df40b4e9ed",
+          "syAddress": "0xea3bc608f32847b97965c5e1648bdfcd4c2c40d0"
+        }
+      }
+    },
+    "0xfc6d463a9703d1317a32d9c14acbb0851d02ef56": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "PT syrupUSDC (USDC) Ethereum",
+      "address": "0xfc6d463a9703d1317a32d9c14acbb0851d02ef56",
+      "symbol": "PT-syrupUSDC-24SEP2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/462e7776-9473-4f01-b192-77df2e7da4f8.svg",
+      "assetGroup": "PT syrupUSDC (USDC) Ethereum::PT-syrupUSDC-24SEP2026",
+      "currencyId": "PT syrupUSDC (USDC) Ethereum::PT-syrupUSDC-24SEP2026",
+      "props": { "pendle": { "tokenType": "PT" } }
+    },
+    "0xa820d95e4c200b86fedbe86f8896e8306b069b1c": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "YT syrupUSDC (USDC) Ethereum",
+      "address": "0xa820d95e4c200b86fedbe86f8896e8306b069b1c",
+      "symbol": "YT-syrupUSDC-24SEP2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/47b18af9-3062-4548-ba36-9b8b37131634.svg",
+      "assetGroup": "YT syrupUSDC (USDC) Ethereum::YT-syrupUSDC-24SEP2026",
+      "currencyId": "YT syrupUSDC (USDC) Ethereum::YT-syrupUSDC-24SEP2026",
+      "props": { "pendle": { "tokenType": "YT" } }
+    },
+    "0x6c01b844f193c9ad6f7f1e3e17a19cfe73583c2f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT siUSD (iUSD) Ethereum",
+      "address": "0x6c01b844f193c9ad6f7f1e3e17a19cfe73583c2f",
+      "symbol": "PT-siUSD-11JUN2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/4b010b4f-d77a-4386-ae32-cd22b30a8bb8.svg",
+      "assetGroup": "PT siUSD (iUSD) Ethereum::PT-siUSD-11JUN2026",
+      "currencyId": "PT siUSD (iUSD) Ethereum::PT-siUSD-11JUN2026",
+      "props": { "pendle": { "tokenType": "PT" } }
+    },
+    "0xf5d47f240e675199a28cc97b1e5acc4ac20472fb": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT siUSD (iUSD) Ethereum",
+      "address": "0xf5d47f240e675199a28cc97b1e5acc4ac20472fb",
+      "symbol": "YT-siUSD-11JUN2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8fc96c8f-68b5-4e9c-9c12-6d7191f99fa1.svg",
+      "assetGroup": "YT siUSD (iUSD) Ethereum::YT-siUSD-11JUN2026",
+      "currencyId": "YT siUSD (iUSD) Ethereum::YT-siUSD-11JUN2026",
       "props": { "pendle": { "tokenType": "YT" } }
     },
     "0xb6ed7644c69416d67b522e20bc294a9a9b405b31": {
@@ -42716,6 +42807,7 @@
       "name": "MetaStreet V2 mwstETH WPUNKS 20",
       "address": "0xc975342a95ccb75378ddc646b8620fa3cd5bc051",
       "symbol": "PUNKETH-20",
+      "logoURI": "https://assets.coingecko.com/coins/images/36833/thumb/metastreet_400x400.jpg?1772613989",
       "assetGroup": "MetaStreet V2 mwstETH WPUNKS 20::PUNKETH-20",
       "currencyId": "MetaStreet V2 mwstETH WPUNKS 20::PUNKETH-20"
     },
@@ -47965,6 +48057,7 @@
       "name": "Thunderhead Staked FLIP",
       "address": "0x961d4921e1718e633bac8ded88c4a1cae44b785a",
       "symbol": "STFLIP",
+      "logoURI": "https://assets.coingecko.com/coins/images/33211/thumb/thunderhead-staked-flip.jpg?1772704822",
       "assetGroup": "Thunderhead Staked FLIP::STFLIP",
       "currencyId": "Thunderhead Staked FLIP::STFLIP"
     },
@@ -124713,10 +124806,10 @@
       "decimals": 18,
       "name": "Staked NUSD",
       "address": "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313",
-      "logoURI": "https://assets.coingecko.com/coins/images/70028/thumb/sNUSD-200x200.png?1760452644",
       "symbol": "sNUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/70028/thumb/sNUSD-200x200.png?1760452644",
       "assetGroup": "sNUSD::Staked NUSD",
-      "currencyId": "sNUSD::Staked NUSD",
+      "currencyId": "Staked NUSD::sNUSD",
       "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x699f088b5dddcafb7c4824db5b10b57b37cb0c66": {
@@ -128994,6 +129087,635 @@
       "logoURI": "https://assets.coingecko.com/coins/images/32070/thumb/SHIDO.png?1696530867",
       "assetGroup": "Shido Network::SHIDO",
       "currencyId": "Shido Network::SHIDO"
+    },
+    "0xd8a271974e8edae9d7b58e3370dc1669427503f4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Fluent",
+      "address": "0xd8a271974e8edae9d7b58e3370dc1669427503f4",
+      "symbol": "BLEND",
+      "assetGroup": "Fluent::BLEND",
+      "currencyId": "Fluent::BLEND"
+    },
+    "0xcc5c22c7a6bcc25e66726aef011dde74289ed203": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Midas M1 USD Market Neutral",
+      "address": "0xcc5c22c7a6bcc25e66726aef011dde74289ed203",
+      "symbol": "mM1-USD",
+      "logoURI": "https://cdn.morpho.org/assets/logos/mm1-usd.svg",
+      "assetGroup": "Midas M1 USD Market Neutral::mM1-USD",
+      "currencyId": "Midas M1 USD Market Neutral::mM1-USD"
+    },
+    "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Gauntlet USDC Frontier",
+      "address": "0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e",
+      "symbol": "gtusdcf",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xc582f04d8a82795aa2ff9c8bb4c1c889fe7b754e.png",
+      "assetGroup": "Gauntlet USDC Frontier::gtusdcf",
+      "currencyId": "Gauntlet USDC Frontier::gtusdcf"
+    },
+    "0xf98ec282300892b3518b5cb996012b18d9b7d435": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Global X Uranium ETF (Ondo Tokenized)",
+      "address": "0xf98ec282300892b3518b5cb996012b18d9b7d435",
+      "symbol": "URAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172414/thumb/uraon_160x160.png?1773392907",
+      "assetGroup": "Global X Uranium ETF (Ondo Tokenized)::URAON",
+      "currencyId": "Global X Uranium ETF (Ondo Tokenized)::URAON"
+    },
+    "0xd4c6cce0cadf2fe4c0af9ee6777989efd8fb7670": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Global X US Infrastructure Development ETF (Ondo Tokenized)",
+      "address": "0xd4c6cce0cadf2fe4c0af9ee6777989efd8fb7670",
+      "symbol": "PAVEON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172415/thumb/paveon_160x160.png?1773392973",
+      "assetGroup": "Global X US Infrastructure Development ETF (Ondo Tokenized)::PAVEON",
+      "currencyId": "Global X US Infrastructure Development ETF (Ondo Tokenized)::PAVEON"
+    },
+    "0x58a2edf0169ede82904e47a0e2a3a4008edebb60": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Intuitive Machines (Ondo Tokenized)",
+      "address": "0x58a2edf0169ede82904e47a0e2a3a4008edebb60",
+      "symbol": "LUNRON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172416/thumb/lunron_160x160.png?1773393077",
+      "assetGroup": "Intuitive Machines (Ondo Tokenized)::LUNRON",
+      "currencyId": "Intuitive Machines (Ondo Tokenized)::LUNRON"
+    },
+    "0xc98a910ede52e7d5308525845f19e17470dbccf7": {
+      "chainId": "1",
+      "decimals": 8,
+      "name": "Wrapped ILCOIN",
+      "address": "0xc98a910ede52e7d5308525845f19e17470dbccf7",
+      "symbol": "WILC",
+      "logoURI": "https://assets.coingecko.com/coins/images/17389/thumb/communityIcon_cx96tn4p5lh61.jpg?1696516938",
+      "assetGroup": "Wrapped ILCOIN::WILC",
+      "currencyId": "Wrapped ILCOIN::WILC"
+    },
+    "0x2f2e4b09b99fbf018f600e031aafd9da6347cc75": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "IonQ (Ondo Tokenized)",
+      "address": "0x2f2e4b09b99fbf018f600e031aafd9da6347cc75",
+      "symbol": "IONQON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172417/thumb/ionqon_160x160.png?1773394394",
+      "assetGroup": "IonQ (Ondo Tokenized)::IONQON",
+      "currencyId": "IonQ (Ondo Tokenized)::IONQON"
+    },
+    "0x5c424b9b60383fce7fe7069d2a2b1047bcd04a73": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares 1-3 Year Treasury Bond ETF (Ondo Tokenized)",
+      "address": "0x5c424b9b60383fce7fe7069d2a2b1047bcd04a73",
+      "symbol": "SHYON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172418/thumb/shyon_160x160.png?1773394465",
+      "assetGroup": "iShares 1-3 Year Treasury Bond ETF (Ondo Tokenized)::SHYON",
+      "currencyId": "iShares 1-3 Year Treasury Bond ETF (Ondo Tokenized)::SHYON"
+    },
+    "0xa2ec76139028f279a1c790d323c57cc4158098d6": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares 7-10 Year Treasury Bond ETF (Ondo Tokenized)",
+      "address": "0xa2ec76139028f279a1c790d323c57cc4158098d6",
+      "symbol": "IEFON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172419/thumb/iefon_160x160.png?1773394528",
+      "assetGroup": "iShares 7-10 Year Treasury Bond ETF (Ondo Tokenized)::IEFON",
+      "currencyId": "iShares 7-10 Year Treasury Bond ETF (Ondo Tokenized)::IEFON"
+    },
+    "0x122940c4c5f9ccfae7fa86455a42d3ec140855ce": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares Bitcoin Trust (Ondo Tokenized)",
+      "address": "0x122940c4c5f9ccfae7fa86455a42d3ec140855ce",
+      "symbol": "IBITON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172420/thumb/ibiton_160x160.png?1773394618",
+      "assetGroup": "iShares Bitcoin Trust (Ondo Tokenized)::IBITON",
+      "currencyId": "iShares Bitcoin Trust (Ondo Tokenized)::IBITON"
+    },
+    "0x2dd57b497c777d9825a5902114be81df98ede958": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares China Large-Cap ETF (Ondo Tokenized)",
+      "address": "0x2dd57b497c777d9825a5902114be81df98ede958",
+      "symbol": "FXION",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172421/thumb/fxion_160x160.png?1773394705",
+      "assetGroup": "iShares China Large-Cap ETF (Ondo Tokenized)::FXION",
+      "currencyId": "iShares China Large-Cap ETF (Ondo Tokenized)::FXION"
+    },
+    "0x98284fbc11edd7540e29b896a49817bbe52ddcbd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares Ethereum Trust (Ondo Tokenized)",
+      "address": "0x98284fbc11edd7540e29b896a49817bbe52ddcbd",
+      "symbol": "ETHAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172422/thumb/ethaon_160x160.png?1773394777",
+      "assetGroup": "iShares Ethereum Trust (Ondo Tokenized)::ETHAON",
+      "currencyId": "iShares Ethereum Trust (Ondo Tokenized)::ETHAON"
+    },
+    "0x54021fde36b7c4c4f9c35b02fb9a153ed8f5938a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares MSCI Brazil ETF (Ondo Tokenized)",
+      "address": "0x54021fde36b7c4c4f9c35b02fb9a153ed8f5938a",
+      "symbol": "EWZON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172423/thumb/ewzon_160x160.png?1773395129",
+      "assetGroup": "iShares MSCI Brazil ETF (Ondo Tokenized)::EWZON",
+      "currencyId": "iShares MSCI Brazil ETF (Ondo Tokenized)::EWZON"
+    },
+    "0x74c8f41f57948bfd8aa0d48c882d69d12d1cc579": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares MSCI Chile ETF (Ondo Tokenized)",
+      "address": "0x74c8f41f57948bfd8aa0d48c882d69d12d1cc579",
+      "symbol": "ECHON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172424/thumb/echon_160x160.png?1773395184",
+      "assetGroup": "iShares MSCI Chile ETF (Ondo Tokenized)::ECHON",
+      "currencyId": "iShares MSCI Chile ETF (Ondo Tokenized)::ECHON"
+    },
+    "0xa6cdb19b22b03e03ea89e133a8a46adc3017aa6d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares MSCI India ETF (Ondo Tokenized)",
+      "address": "0xa6cdb19b22b03e03ea89e133a8a46adc3017aa6d",
+      "symbol": "INDAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172425/thumb/indaon_160x160.png?1773395244",
+      "assetGroup": "iShares MSCI India ETF (Ondo Tokenized)::INDAON",
+      "currencyId": "iShares MSCI India ETF (Ondo Tokenized)::INDAON"
+    },
+    "0x625fb557cad6d4638dae420626f3f08a485b43a8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares MSCI Japan ETF (Ondo Tokenized)",
+      "address": "0x625fb557cad6d4638dae420626f3f08a485b43a8",
+      "symbol": "EWJON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172426/thumb/ewjon_160x160.png?1773395316",
+      "assetGroup": "iShares MSCI Japan ETF (Ondo Tokenized)::EWJON",
+      "currencyId": "iShares MSCI Japan ETF (Ondo Tokenized)::EWJON"
+    },
+    "0xbd660e96d45e7c175512d1ed0ccc119cb980b81a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares MSCI South Korea ETF (Ondo Tokenized)",
+      "address": "0xbd660e96d45e7c175512d1ed0ccc119cb980b81a",
+      "symbol": "EWYON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172427/thumb/ewyon_160x160.png?1773395377",
+      "assetGroup": "iShares MSCI South Korea ETF (Ondo Tokenized)::EWYON",
+      "currencyId": "iShares MSCI South Korea ETF (Ondo Tokenized)::EWYON"
+    },
+    "0x1fe2126bc05e4bb0468c4a198e930c889e1054a3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares Semiconductor ETF (Ondo Tokenized)",
+      "address": "0x1fe2126bc05e4bb0468c4a198e930c889e1054a3",
+      "symbol": "SOXXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172428/thumb/soxxon_160x160.png?1773395427",
+      "assetGroup": "iShares Semiconductor ETF (Ondo Tokenized)::SOXXON",
+      "currencyId": "iShares Semiconductor ETF (Ondo Tokenized)::SOXXON"
+    },
+    "0x68622855dcf14ced1b0cc2a69cc34843708e2e0f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares US Aerospace and Defense ETF (Ondo Tokenized)",
+      "address": "0x68622855dcf14ced1b0cc2a69cc34843708e2e0f",
+      "symbol": "ITAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172429/thumb/itaon_160x160.png?1773395485",
+      "assetGroup": "iShares US Aerospace and Defense ETF (Ondo Tokenized)::ITAON",
+      "currencyId": "iShares US Aerospace and Defense ETF (Ondo Tokenized)::ITAON"
+    },
+    "0xeaa2287290544ed9f481012aa348619a4d2f9e51": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "KraneShares CSI China Internet ETF (Ondo Tokenized)",
+      "address": "0xeaa2287290544ed9f481012aa348619a4d2f9e51",
+      "symbol": "KWEBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172430/thumb/kwebon_160x160.png?1773395551",
+      "assetGroup": "KraneShares CSI China Internet ETF (Ondo Tokenized)::KWEBON",
+      "currencyId": "KraneShares CSI China Internet ETF (Ondo Tokenized)::KWEBON"
+    },
+    "0xe4babaa960ba7d37860f3fe00d7b95d3868e8edc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Nebius Group (Ondo Tokenized)",
+      "address": "0xe4babaa960ba7d37860f3fe00d7b95d3868e8edc",
+      "symbol": "NBISON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172431/thumb/nbison_160x160.png?1773395603",
+      "assetGroup": "Nebius Group (Ondo Tokenized)::NBISON",
+      "currencyId": "Nebius Group (Ondo Tokenized)::NBISON"
+    },
+    "0x0c802acb21cb2aadb2eb5e5090868e1361b26b69": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Newmont (Ondo Tokenized)",
+      "address": "0x0c802acb21cb2aadb2eb5e5090868e1361b26b69",
+      "symbol": "NEMON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172432/thumb/nemon_160x160.png?1773395651",
+      "assetGroup": "Newmont (Ondo Tokenized)::NEMON",
+      "currencyId": "Newmont (Ondo Tokenized)::NEMON"
+    },
+    "0x8ce34f749796f82a6990ffa2d80622ef75ca7ad5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Northrop Grumman (Ondo Tokenized)",
+      "address": "0x8ce34f749796f82a6990ffa2d80622ef75ca7ad5",
+      "symbol": "NOCON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172433/thumb/nocon_160x160.png?1773395724",
+      "assetGroup": "Northrop Grumman (Ondo Tokenized)::NOCON",
+      "currencyId": "Northrop Grumman (Ondo Tokenized)::NOCON"
+    },
+    "0x633821b8e003344e5223509277f2084ea809a452": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Junior DOLA",
+      "address": "0x633821b8e003344e5223509277f2084ea809a452",
+      "symbol": "JRDOLA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172347/thumb/jrDOLA.webp?1773039024",
+      "assetGroup": "Junior DOLA::JRDOLA",
+      "currencyId": "Junior DOLA::JRDOLA"
+    },
+    "0xbd4dfc058eb95b8de5ceaf39966a1a70f5556f78": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "AllUnity CHF",
+      "address": "0xbd4dfc058eb95b8de5ceaf39966a1a70f5556f78",
+      "symbol": "CHFAU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172300/thumb/CHFAU_Single_Gradient_%282%29.png?1772721971",
+      "assetGroup": "AllUnity CHF::CHFAU",
+      "currencyId": "AllUnity CHF::CHFAU"
+    },
+    "0x44bb433d29fe966992a9c812da7f252c9c53f285": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Dollar",
+      "address": "0x44bb433d29fe966992a9c812da7f252c9c53f285",
+      "symbol": "RUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172367/thumb/RUSD_logo_200x200_px.png?1773310830",
+      "assetGroup": "Royal Dollar::RUSD",
+      "currencyId": "Royal Dollar::RUSD"
+    },
+    "0xf7d85ec4e7710f71992752eac2111312e73e9c9c": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Flying Tulip USD",
+      "address": "0xf7d85ec4e7710f71992752eac2111312e73e9c9c",
+      "symbol": "FTUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172348/thumb/flyingtulip_ftusd_200.png?1773039176",
+      "assetGroup": "Flying Tulip USD::FTUSD",
+      "currencyId": "Flying Tulip USD::FTUSD"
+    },
+    "0xa877d5bb0274dccba8556154a30e1ca4021a275f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "kpk EURC Yield V2 Morpho Vault (Ethereum)",
+      "address": "0xa877d5bb0274dccba8556154a30e1ca4021a275f",
+      "symbol": "KPKEURCYIELD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172330/thumb/avatar-light.png?1772896335",
+      "assetGroup": "kpk EURC Yield V2 Morpho Vault (Ethereum)::KPKEURCYIELD",
+      "currencyId": "kpk EURC Yield V2 Morpho Vault (Ethereum)::KPKEURCYIELD"
+    },
+    "0x7def4573628021500c3207994935a51801fb56be": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Akita",
+      "address": "0x7def4573628021500c3207994935a51801fb56be",
+      "symbol": "AKITA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172337/thumb/akita-inu.jpg?1772957985",
+      "assetGroup": "Akita::AKITA",
+      "currencyId": "Akita::AKITA"
+    },
+    "0xec169f9ac2161723a2d4febd9748bb529d6c12b5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok",
+      "address": "0xec169f9ac2161723a2d4febd9748bb529d6c12b5",
+      "symbol": "HYSON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172435/thumb/hyson_160x160.png?1773419262",
+      "assetGroup": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok::HYSON",
+      "currencyId": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok::HYSON"
+    },
+    "0xc95c9e3fa311664b5e744b3c2716547bec2ba7da": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Quantum Computing (Ondo Tokenized)",
+      "address": "0xc95c9e3fa311664b5e744b3c2716547bec2ba7da",
+      "symbol": "QUBTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172436/thumb/qubton_160x160.png?1773419307",
+      "assetGroup": "Quantum Computing (Ondo Tokenized)::QUBTON",
+      "currencyId": "Quantum Computing (Ondo Tokenized)::QUBTON"
+    },
+    "0xfccd6fbca272b4cc11069402f4123b070b7838f9": {
+      "chainId": "1",
+      "decimals": 9,
+      "name": "Kimchi Coin",
+      "address": "0xfccd6fbca272b4cc11069402f4123b070b7838f9",
+      "symbol": "KIMCHI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172279/thumb/IMG_20260224_154858_459.png?1772598345",
+      "assetGroup": "Kimchi Coin::KIMCHI",
+      "currencyId": "Kimchi Coin::KIMCHI"
+    },
+    "0x3a16af9ef328d087cc781053a2a2a27549ae6768": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Redwire (Ondo Tokenized)",
+      "address": "0x3a16af9ef328d087cc781053a2a2a27549ae6768",
+      "symbol": "RDWON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172437/thumb/rdwon_160x160.png?1773419575",
+      "assetGroup": "Redwire (Ondo Tokenized)::RDWON",
+      "currencyId": "Redwire (Ondo Tokenized)::RDWON"
+    },
+    "0x33ac34da58168de69ce74a66fbad81a88f974bd5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Regeneron Pharmaceuticals (Ondo Tokenized)",
+      "address": "0x33ac34da58168de69ce74a66fbad81a88f974bd5",
+      "symbol": "REGNON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172438/thumb/regnon_160x160.png?1773419619",
+      "assetGroup": "Regeneron Pharmaceuticals (Ondo Tokenized)::REGNON",
+      "currencyId": "Regeneron Pharmaceuticals (Ondo Tokenized)::REGNON"
+    },
+    "0x36e3b8d9aad0e51ac08e56a75a8f6005bf68535b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Rocket Lab (Ondo Tokenized)",
+      "address": "0x36e3b8d9aad0e51ac08e56a75a8f6005bf68535b",
+      "symbol": "RKLBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172439/thumb/rklbon_160x160.png?1773419655",
+      "assetGroup": "Rocket Lab (Ondo Tokenized)::RKLBON",
+      "currencyId": "Rocket Lab (Ondo Tokenized)::RKLBON"
+    },
+    "0x71e2400cf1cb83204f33794ed326636a71a9aafc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SanDisk (Ondo Tokenized)",
+      "address": "0x71e2400cf1cb83204f33794ed326636a71a9aafc",
+      "symbol": "SNDKON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172440/thumb/sndkon_160x160.png?1773419692",
+      "assetGroup": "SanDisk (Ondo Tokenized)::SNDKON",
+      "currencyId": "SanDisk (Ondo Tokenized)::SNDKON"
+    },
+    "0xb53894f82a6b2d3b7365f24932b5bde1c5fb51ff": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Seagate (Ondo Tokenized)",
+      "address": "0xb53894f82a6b2d3b7365f24932b5bde1c5fb51ff",
+      "symbol": "STXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172441/thumb/stxon_160x160.png?1773419730",
+      "assetGroup": "Seagate (Ondo Tokenized)::STXON",
+      "currencyId": "Seagate (Ondo Tokenized)::STXON"
+    },
+    "0x8e82a0d7347329703fb6c6a745b1c2b3abb1658c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SolarEdge Technologies (Ondo Tokenized)",
+      "address": "0x8e82a0d7347329703fb6c6a745b1c2b3abb1658c",
+      "symbol": "SEDGON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172442/thumb/sedgon_160x160.png?1773419776",
+      "assetGroup": "SolarEdge Technologies (Ondo Tokenized)::SEDGON",
+      "currencyId": "SolarEdge Technologies (Ondo Tokenized)::SEDGON"
+    },
+    "0xda81da76070a7377eaeeb2978f0e13c5d57fadb7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Southern Copper (Ondo Tokenized)",
+      "address": "0xda81da76070a7377eaeeb2978f0e13c5d57fadb7",
+      "symbol": "SCCOON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172443/thumb/sccoon_160x160.png?1773419813",
+      "assetGroup": "Southern Copper (Ondo Tokenized)::SCCOON",
+      "currencyId": "Southern Copper (Ondo Tokenized)::SCCOON"
+    },
+    "0x39930751d4569f7dd45d1ba46e82cd3680ec2e0a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Union Pacific Corporation (Ondo Tokenized)",
+      "address": "0x39930751d4569f7dd45d1ba46e82cd3680ec2e0a",
+      "symbol": "UNPON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172444/thumb/unpon_160x160.png?1773419860",
+      "assetGroup": "Union Pacific Corporation (Ondo Tokenized)::UNPON",
+      "currencyId": "Union Pacific Corporation (Ondo Tokenized)::UNPON"
+    },
+    "0x0f8887772262c449793890dcd3bf320308db423b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Uranium Energy (Ondo Tokenized)",
+      "address": "0x0f8887772262c449793890dcd3bf320308db423b",
+      "symbol": "UECON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172445/thumb/uecon_160x160.png?1773419902",
+      "assetGroup": "Uranium Energy (Ondo Tokenized)::UECON",
+      "currencyId": "Uranium Energy (Ondo Tokenized)::UECON"
+    },
+    "0x9ddb2524782684942fad28b44e76552cb7f3f548": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "US Brent Oil Fund (Ondo Tokenized)",
+      "address": "0x9ddb2524782684942fad28b44e76552cb7f3f548",
+      "symbol": "BNOON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172446/thumb/bnoon_160x160.png?1773419957",
+      "assetGroup": "US Brent Oil Fund (Ondo Tokenized)::BNOON",
+      "currencyId": "US Brent Oil Fund (Ondo Tokenized)::BNOON"
+    },
+    "0x7c488cfc874ca9f34e7bdbd0410c27ce6d6af5f9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "US Natural Gas Fund (Ondo Tokenized)",
+      "address": "0x7c488cfc874ca9f34e7bdbd0410c27ce6d6af5f9",
+      "symbol": "UNGON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172447/thumb/ungon_160x160.png?1773420007",
+      "assetGroup": "US Natural Gas Fund (Ondo Tokenized)::UNGON",
+      "currencyId": "US Natural Gas Fund (Ondo Tokenized)::UNGON"
+    },
+    "0xbca31049ab4782f0ffa9cffcb2cf48e8d6de4fb8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "VanEck Oil Services ETF (Ondo Tokenized)",
+      "address": "0xbca31049ab4782f0ffa9cffcb2cf48e8d6de4fb8",
+      "symbol": "OIHON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172448/thumb/oihon_160x160.png?1773420046",
+      "assetGroup": "VanEck Oil Services ETF (Ondo Tokenized)::OIHON",
+      "currencyId": "VanEck Oil Services ETF (Ondo Tokenized)::OIHON"
+    },
+    "0xccae8843e26259278c200c6506f6e5a3bdd524cd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Vanguard Real Estate ETF (Ondo Tokenized)",
+      "address": "0xccae8843e26259278c200c6506f6e5a3bdd524cd",
+      "symbol": "VNQON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172449/thumb/vnqon_160x160.png?1773420094",
+      "assetGroup": "Vanguard Real Estate ETF (Ondo Tokenized)::VNQON",
+      "currencyId": "Vanguard Real Estate ETF (Ondo Tokenized)::VNQON"
+    },
+    "0xfc003a764a7b5054cc6fdb6b511f35dec8022751": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Vertex Pharmaceuticals (Ondo Tokenized)",
+      "address": "0xfc003a764a7b5054cc6fdb6b511f35dec8022751",
+      "symbol": "VRTXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172450/thumb/vrtxon_160x160.png?1773420136",
+      "assetGroup": "Vertex Pharmaceuticals (Ondo Tokenized)::VRTXON",
+      "currencyId": "Vertex Pharmaceuticals (Ondo Tokenized)::VRTXON"
+    },
+    "0xbfe6e76a2fe099392064fbb3e868558c82beb917": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "VinFast Auto (Ondo Tokenized)",
+      "address": "0xbfe6e76a2fe099392064fbb3e868558c82beb917",
+      "symbol": "VFSON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172451/thumb/vfson_160x160.png?1773420177",
+      "assetGroup": "VinFast Auto (Ondo Tokenized)::VFSON",
+      "currencyId": "VinFast Auto (Ondo Tokenized)::VFSON"
+    },
+    "0x1fb5a8dcd70be750a97eaf8a47bbe74ab7d3183e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Waste Management (Ondo Tokenized)",
+      "address": "0x1fb5a8dcd70be750a97eaf8a47bbe74ab7d3183e",
+      "symbol": "WMON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172452/thumb/wmon_160x160.png?1773420210",
+      "assetGroup": "Waste Management (Ondo Tokenized)::WMON",
+      "currencyId": "Waste Management (Ondo Tokenized)::WMON"
+    },
+    "0x44e89d34601b8d0155e16634d2553ef7f54dbab2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Western Digital (Ondo Tokenized)",
+      "address": "0x44e89d34601b8d0155e16634d2553ef7f54dbab2",
+      "symbol": "WDCON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172453/thumb/wdcon_160x160.png?1773420241",
+      "assetGroup": "Western Digital (Ondo Tokenized)::WDCON",
+      "currencyId": "Western Digital (Ondo Tokenized)::WDCON"
+    },
+    "0xe3872dd4eba50598c54b2aa21b04c71fc37b000b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Nexira DAEP",
+      "address": "0xe3872dd4eba50598c54b2aa21b04c71fc37b000b",
+      "symbol": "NEXI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172360/thumb/200x200.png?1773095430",
+      "assetGroup": "Nexira DAEP::NEXI",
+      "currencyId": "Nexira DAEP::NEXI"
+    },
+    "0x5dbf760b4fd0cddde0366b33aeb338b2a6d77725": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "kpk ETH Yield V2 Morpho Vault (Ethereum)",
+      "address": "0x5dbf760b4fd0cddde0366b33aeb338b2a6d77725",
+      "symbol": "KPKETHYIELD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172329/thumb/avatar-light.png?1772896326",
+      "assetGroup": "kpk ETH Yield V2 Morpho Vault (Ethereum)::KPKETHYIELD",
+      "currencyId": "kpk ETH Yield V2 Morpho Vault (Ethereum)::KPKETHYIELD"
+    },
+    "0x386e0983d0e05f5239fd029793ef3ba37b468e9c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YieldFi yHLP",
+      "address": "0x386e0983d0e05f5239fd029793ef3ba37b468e9c",
+      "symbol": "YHLP",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172349/thumb/yHLP.png?1773039499",
+      "assetGroup": "YieldFi yHLP::YHLP",
+      "currencyId": "YieldFi yHLP::YHLP"
+    },
+    "0xdb6ba5d510f114f9b2ea08bea7d30e32eee33411": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Block Street",
+      "address": "0xdb6ba5d510f114f9b2ea08bea7d30e32eee33411",
+      "symbol": "BSB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172257/thumb/bsb_400x400.jpg?1772553610",
+      "assetGroup": "Block Street::BSB",
+      "currencyId": "Block Street::BSB"
+    },
+    "0x0b06d62b182abb7782d92a20f9f6ea0a4f59b0ae": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Hyperbridge",
+      "address": "0x0b06d62b182abb7782d92a20f9f6ea0a4f59b0ae",
+      "symbol": "BRIDGE",
+      "logoURI": "https://assets.coingecko.com/coins/images/53475/thumb/Sign_black.png?1736482584",
+      "assetGroup": "Hyperbridge::BRIDGE",
+      "currencyId": "Hyperbridge::BRIDGE"
+    },
+    "0x5702a4487da07c827cde512e2d5969cb430cd839": {
+      "chainId": "1",
+      "decimals": 27,
+      "name": "Exchange Request for Bitbon",
+      "address": "0x5702a4487da07c827cde512e2d5969cb430cd839",
+      "symbol": "ERBB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172398/thumb/logo-erbb.png?1773315088",
+      "assetGroup": "Exchange Request for Bitbon::ERBB",
+      "currencyId": "Exchange Request for Bitbon::ERBB"
+    },
+    "0x1bc1453e21b28ff68e189d9e2035865ce02b4cb2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Gold",
+      "address": "0x1bc1453e21b28ff68e189d9e2035865ce02b4cb2",
+      "symbol": "RXAU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172399/thumb/RXAU_logo_200x200.png?1773316092",
+      "assetGroup": "Royal Gold::RXAU",
+      "currencyId": "Royal Gold::RXAU"
+    },
+    "0xe21d7a0e7d11530cc08814ce9d3fe316e72ac382": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Silver",
+      "address": "0xe21d7a0e7d11530cc08814ce9d3fe316e72ac382",
+      "symbol": "RXAG",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172400/thumb/RXAG_logo_200x200.png?1773316147",
+      "assetGroup": "Royal Silver::RXAG",
+      "currencyId": "Royal Silver::RXAG"
+    },
+    "0x3ed0b3c4c0168a560d34e361b8130dcca4677736": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Royal Euro",
+      "address": "0x3ed0b3c4c0168a560d34e361b8130dcca4677736",
+      "symbol": "REUR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172401/thumb/REUR_logo_200x200.png?1773316193",
+      "assetGroup": "Royal Euro::REUR",
+      "currencyId": "Royal Euro::REUR"
+    },
+    "0xb66a5d30d04f076e78ffb0d045c55846fdcde928": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Energy Web Token",
+      "address": "0xb66a5d30d04f076e78ffb0d045c55846fdcde928",
+      "symbol": "EWT",
+      "logoURI": "https://assets.coingecko.com/coins/images/10886/thumb/EWF_1.png?1773198639",
+      "assetGroup": "Energy Web Token::EWT",
+      "currencyId": "Energy Web Token::EWT"
+    },
+    "0x56ba8b58b7d1f6d384a1c4dd553f39ebc8741b8e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Kinesis Silver",
+      "address": "0x56ba8b58b7d1f6d384a1c4dd553f39ebc8741b8e",
+      "symbol": "KAG",
+      "logoURI": "https://assets.coingecko.com/coins/images/29789/thumb/kag-currency-ticker.png?1696528719",
+      "assetGroup": "Kinesis Silver::KAG",
+      "currencyId": "Kinesis Silver::KAG"
+    },
+    "0x14dab79fd7b7b3f748d434812fd6a9aac460ea52": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Kinesis Gold",
+      "address": "0x14dab79fd7b7b3f748d434812fd6a9aac460ea52",
+      "symbol": "KAU",
+      "logoURI": "https://assets.coingecko.com/coins/images/29788/thumb/kau-currency-ticker.png?1696528718",
+      "assetGroup": "Kinesis Gold::KAU",
+      "currencyId": "Kinesis Gold::KAU"
+    },
+    "0x7977bf3e7e0c954d12cdca3e013adaf57e0b06e0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Opinion",
+      "address": "0x7977bf3e7e0c954d12cdca3e013adaf57e0b06e0",
+      "symbol": "OPN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102171893/thumb/Opinon.jpg?1770269253",
+      "assetGroup": "Opinion::OPN",
+      "currencyId": "Opinion::OPN"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
