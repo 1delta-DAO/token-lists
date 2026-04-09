@@ -1,85 +1,85 @@
 name: Auto generate token maps
 
 on:
-    workflow_dispatch: # manual run
-    schedule:
-        - cron: "0 2 * * *" # optional nightly job
+  workflow_dispatch: # manual run
+  schedule:
+    - cron: "0 2 * * *" # optional nightly job
 
 permissions:
-    contents: write # allow pushing a branch
-    pull-requests: write # allow creating a PR
+  contents: write # allow pushing a branch
+  pull-requests: write # allow creating a PR
 
 jobs:
-    generate:
-        runs-on: ubuntu-latest
+  generate:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0
-                  token: ${{ secrets.GH_PAT }}
-                  ref: main
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_PAT }}
+          ref: main
 
-            - name: Setup Node
-              uses: actions/setup-node@v4
-              with:
-                  node-version: "20"
-                  cache: "npm"
-                  cache-dependency-path: "scripts/package-lock.json"
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "scripts/package-lock.json"
 
-            - name: Install dependencies
-              working-directory: scripts
-              run: npm ci
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci
 
-            - name: Run generate (generate + format)
-              working-directory: scripts
-              run: npm run generate:formatted
+      - name: Run generate (generate + format)
+        working-directory: scripts
+        run: npm run generate:formatted
 
-            - name: Compute branch name
-              id: vars
-              run: echo "BRANCH_NAME=ci/auto-generate-token-maps-$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
+      - name: Compute branch name
+        id: vars
+        run: echo "BRANCH_NAME=ci/auto-generate-token-maps-$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
 
-            - name: Commit & push if changed
-              id: commit
-              env:
-                  BRANCH_NAME: ${{ env.BRANCH_NAME }}
-              run: |
-                  git config user.name "github-actions[bot]"
-                  git config user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Commit & push if changed
+        id: commit
+        env:
+          BRANCH_NAME: ${{ env.BRANCH_NAME }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-                  git checkout main
-                  git pull origin main
+          git checkout main
+          git pull origin main
 
-                  if [[ -n "$(git status --porcelain)" ]]; then
-                    git checkout -b "$BRANCH_NAME"
-                    git add *.json scripts/** || true
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git checkout -b "$BRANCH_NAME"
+            git add *.json scripts/** || true
 
-                    if [[ -n "$(git diff --cached --name-only)" ]]; then
-                      git commit -m "chore: auto-generate token maps [skip ci]"
-                      git push origin "$BRANCH_NAME"
-                      echo "Pushed branch: $BRANCH_NAME"
-                      echo "has_changes=true" >> $GITHUB_OUTPUT
-                    else
-                      echo "No staged changes to commit."
-                      echo "has_changes=false" >> $GITHUB_OUTPUT
-                    fi
-                  else
-                    echo "No changes detected."
-                    echo "has_changes=false" >> $GITHUB_OUTPUT
-                  fi
+            if [[ -n "$(git diff --cached --name-only)" ]]; then
+              git commit -m "chore: auto-generate token maps [skip ci]"
+              git push origin "$BRANCH_NAME"
+              echo "Pushed branch: $BRANCH_NAME"
+              echo "has_changes=true" >> $GITHUB_OUTPUT
+            else
+              echo "No staged changes to commit."
+              echo "has_changes=false" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "No changes detected."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
 
-            - name: Create Pull Request
-              if: steps.commit.outputs.has_changes == 'true'
-              env:
-                  GH_TOKEN: ${{ secrets.GH_PAT }}
-                  BRANCH_NAME: ${{ env.BRANCH_NAME }}
-              run: |
-                  gh pr create \
-                    --title "chore: auto-generate token maps" \
-                    --body "This PR was automatically generated.
+      - name: Create Pull Request
+        if: steps.commit.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH_NAME: ${{ env.BRANCH_NAME }}
+        run: |
+          gh pr create \
+            --title "chore: auto-generate token maps" \
+            --body "This PR was automatically generated.
 
-                  Commands run:
-                  - npm run generate:formatted (includes formatting)" \
-                    --base main \
-                    --head "$BRANCH_NAME"
+          Commands run:
+          - npm run generate:formatted (includes formatting)" \
+            --base main \
+            --head "$BRANCH_NAME"

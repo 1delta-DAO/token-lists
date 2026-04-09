@@ -217,6 +217,10 @@ export interface TokenProps {
   erc20?: string
   /** Flag for native assets */
   isNative?: boolean
+  /** Flag for tokens that look suspicious (e.g. mimic an existing legit token) */
+  suspicious?: boolean
+  /** Flag for tokens that mimic another token's name/symbol on the same chain */
+  mimic?: boolean
 }
 
 export type OmniCurrencyList = { [assetId: string]: OmniCurrency }
