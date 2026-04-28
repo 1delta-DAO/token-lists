@@ -438,6 +438,7 @@ const COINGECKO_LISTS = [
   'chiliz',
   'x-layer',
   'boba',
+  'bob-network',
   'zircuit',
   'kroma',
   'moonbeam',
@@ -453,6 +454,9 @@ const COINGECKO_LISTS = [
   'botanix',
   'manta-pacific',
   'monad',
+  'stable',
+  'megaeth',
+  'plume-network',
 ].map((a) => ({
   url: `https://tokens.coingecko.com/${a}/all.json`,
   access: 'tokens',
