@@ -173,7 +173,7 @@ async function readTokenLists(): Promise<{
         listOfBridgeTokens[AutoGenHelpers.safeparseChainId(data.chainId)] = data.bridgeTokens
         bridgedTokensMapped[data.chainId] = true
       }
-      const array = accessListUnfiltered(data, list.access, list?.isMap, list?.isChainMap)
+      const array = accessListUnfiltered(data, list.access, list?.isMap, list?.isChainMap, list.url)
       if (!Array.isArray(array)) {
         console.log('object is not an array, skipping')
         continue
@@ -351,20 +351,27 @@ async function readTokenLists(): Promise<{
                         // add native
                         if (isWrappedNative) {
                           if (chainId !== Chain.FUEL) {
-                            const info = CHAIN_INFO[chainId].nativeCurrency
-                            let newCcy = {
-                              ...omniAssetEntry,
-                              ...info,
-                              tags: [],
+                            const info = CHAIN_INFO[chainId]?.nativeCurrency
+                            if (!info) {
+                              console.warn(
+                                `[wnative-native-inject skipped] chain ${chainId} missing from chains data feed; ` +
+                                  `wrapped-native ${lcAddress} added but no native asset injected for omni group ${assetGroup}`,
+                              )
+                            } else {
+                              let newCcy = {
+                                ...omniAssetEntry,
+                                ...info,
+                                tags: [],
+                              }
+                              omnis[assetGroup].name = info.name
+                              omnis[assetGroup].symbol = info.symbol
+                              omnis[assetGroup].currencies.push({
+                                ...newCcy,
+                                address: '0x0000000000000000000000000000000000000000',
+                                logoURI: getNativeIcon(info.symbol),
+                                tags: AutoGenHelpers.uniq([...tags.filter((t) => t !== 'wnative'), 'native']),
+                              })
                             }
-                            omnis[assetGroup].name = info.name
-                            omnis[assetGroup].symbol = info.symbol
-                            omnis[assetGroup].currencies.push({
-                              ...newCcy,
-                              address: '0x0000000000000000000000000000000000000000',
-                              logoURI: getNativeIcon(info.symbol),
-                              tags: AutoGenHelpers.uniq([...tags.filter((t) => t !== 'wnative'), 'native']),
-                            })
                           }
                         }
                       } else {
@@ -376,20 +383,27 @@ async function readTokenLists(): Promise<{
                         // add native
                         if (isWrappedNative) {
                           if (chainId !== Chain.FUEL) {
-                            const info = CHAIN_INFO[chainId].nativeCurrency
-                            let newCcy = {
-                              ...omniAssetEntry,
-                              ...info,
-                              tags: [],
+                            const info = CHAIN_INFO[chainId]?.nativeCurrency
+                            if (!info) {
+                              console.warn(
+                                `[wnative-native-inject skipped] chain ${chainId} missing from chains data feed; ` +
+                                  `wrapped-native ${lcAddress} added but no native asset injected for omni group ${assetGroup}`,
+                              )
+                            } else {
+                              let newCcy = {
+                                ...omniAssetEntry,
+                                ...info,
+                                tags: [],
+                              }
+                              omnis[assetGroup].name = info.name
+                              omnis[assetGroup].symbol = info.symbol
+                              omnis[assetGroup].currencies.push({
+                                ...newCcy,
+                                address: '0x0000000000000000000000000000000000000000',
+                                logoURI: getNativeIcon(info.symbol),
+                                tags: AutoGenHelpers.uniq([...tags.filter((t) => t !== 'wnative'), 'native']),
+                              })
                             }
-                            omnis[assetGroup].name = info.name
-                            omnis[assetGroup].symbol = info.symbol
-                            omnis[assetGroup].currencies.push({
-                              ...newCcy,
-                              address: '0x0000000000000000000000000000000000000000',
-                              logoURI: getNativeIcon(info.symbol),
-                              tags: AutoGenHelpers.uniq([...tags.filter((t) => t !== 'wnative'), 'native']),
-                            })
                           }
                         }
                         // skip naming if bridged only
@@ -553,7 +567,19 @@ async function readTokenLists(): Promise<{
       // add zero as native to mains
       if (!listOfMainTokens[chain].includes(zeroAddress))
         listOfMainTokens[chain] = [zeroAddress, ...listOfMainTokens[chain]]
+      if (!CHAIN_INFO[chain]) {
+        console.warn(
+          `chain ${chain} is in @1delta/chain-registry but missing from chains data feed (${chainsURL}); skipping native injection. Tokens for this chain: ${
+            Object.keys(data).length
+          }`,
+        )
+        return
+      }
       const info = CHAIN_INFO[chain].nativeCurrency
+      if (!info) {
+        console.warn(`chain ${chain} has no nativeCurrency in chains data feed; skipping native injection.`)
+        return
+      }
       if (info && !data[zeroAddress]) {
         // let tags = ['native']
         const wnative = WRAPPED_NATIVE_INFO[chain]

@@ -356,6 +356,22 @@ const HYPERSWAP_LIST: ArbitraryTokenList = {
   ignoreTags: true,
 }
 
+// socialscan response has no `decimals` field — default to 18 (EVM standard) for Pharos
+const PHAROS_SOCIALSCAN_LIST: ArbitraryTokenList = {
+  url: 'https://api.socialscan.io/pharos-mainnet/v1/explorer/tokens?type=erc20&is_verified=false&page=1&size=30&sort=on_chain_market_cap&order=desc',
+  access: 'data',
+  mutateEntry: ({ address, name, symbol, logo }: { address: string; name: string; symbol: string; logo: string }) => [
+    {
+      address,
+      name,
+      symbol,
+      logoURI: logo,
+      decimals: 18,
+      chainId: 1672,
+    },
+  ],
+}
+
 const JUMPER_LIST: ArbitraryTokenList = {
   url: 'https://api.jumper.exchange/p/lifi/tokens?chainTypes=EVM%2CSVM%2CUTXO%2CMVM',
   access: 'tokens',
@@ -694,6 +710,7 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   IGUANADEX_LIST,
   DGSWAP_LIST,
   HYPERSWAP_LIST,
+  PHAROS_SOCIALSCAN_LIST,
   POLYCAT_LIST,
   DFYN_LIST,
   IZUMI_LIST,
@@ -721,14 +738,27 @@ interface MinimalToken {
   decimals: number
 }
 
-export function accessListUnfiltered(data: any, access: string | undefined, isMap = false, isChainMap = false) {
+export function accessListUnfiltered(
+  data: any,
+  access: string | undefined,
+  isMap = false,
+  isChainMap = false,
+  url?: string,
+) {
+  const ctx = url ? ` [url=${url}, access=${access}, isMap=${isMap}, isChainMap=${isChainMap}]` : ''
   try {
     // no access - assume standard set by uniswap
     if (!access) return data as MinimalToken[]
 
     // data is directly an array
     if (access === 'direct') {
-      if (isMap) return Object.values(data)
+      if (isMap) {
+        if (data == null) {
+          console.log(`error - skipping: 'direct' + isMap but data is ${data}${ctx}`)
+          return []
+        }
+        return Object.values(data)
+      }
       return data
     }
     // access data
@@ -737,6 +767,11 @@ export function accessListUnfiltered(data: any, access: string | undefined, isMa
     accessSplit.map((a) => {
       dataAccessed = dataAccessed?.[a]
     })
+
+    if (dataAccessed == null) {
+      console.log(`error - skipping: access path '${access}' resolved to ${dataAccessed}${ctx}`)
+      return []
+    }
 
     if (isChainMap) {
       // @ts-ignore
@@ -748,7 +783,7 @@ export function accessListUnfiltered(data: any, access: string | undefined, isMa
     // special case, data as map
     return Object.values(dataAccessed)
   } catch (e) {
-    console.log('error - skipping', e)
+    console.log(`error - skipping${ctx}`, e)
     return []
   }
 }

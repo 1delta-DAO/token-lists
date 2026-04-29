@@ -78,6 +78,7 @@ export const NATIVE_ERC20: { [a: string]: string } = {
   [Chain.POLYGON_MAINNET]: '0x0000000000000000000000000000000000001010',
   [Chain.METIS_ANDROMEDA_MAINNET]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
   [Chain.CELO_MAINNET]: '0x471ece3750da237f93b8e339c536989b8978a438',
+  [Chain.STABLE_MAINNET]: '0x779ded0c9e1022225f8e0630b35a9b54be713736',
   [Chain.MANTLE]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
   [Chain.MOONBEAM]: '0x0000000000000000000000000000000000000802',
 }
