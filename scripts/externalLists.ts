@@ -473,6 +473,7 @@ const COINGECKO_LISTS = [
   'stable',
   'megaeth',
   'plume-network',
+  'flare-network'
 ].map((a) => ({
   url: `https://tokens.coingecko.com/${a}/all.json`,
   access: 'tokens',
