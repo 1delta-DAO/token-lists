@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -v \"\\\\.json$\")"
+      "Bash(grep -v \"\\\\.json$\")",
+      "Bash(npm ci *)",
+      "Bash(git -C /home/axtar/token-lists diff --stat scripts/package-lock.json)",
+      "Bash(git -C /home/axtar/token-lists status scripts/)",
+      "Bash(git -C /home/axtar/token-lists diff scripts/package-lock.json)",
+      "Bash(git -C /home/axtar/token-lists log -1 --format=\"%H %s\" -- scripts/package-lock.json)",
+      "Bash(git -C /home/axtar/token-lists show HEAD:scripts/package-lock.json)",
+      "Bash(git -C /home/axtar/token-lists log --oneline -10 -- scripts/package.json scripts/package-lock.json)",
+      "Bash(git -C /home/axtar/token-lists log dafa8e1 -1 --stat -- scripts/package.json scripts/package-lock.json)",
+      "Bash(git -C /home/axtar/token-lists log --oneline -10)",
+      "Bash(git -C /home/axtar/token-lists log origin/main..HEAD --oneline)",
+      "Bash(git -C /home/axtar/token-lists status -sb)"
     ]
   }
 }

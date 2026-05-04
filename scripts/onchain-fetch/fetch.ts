@@ -25,7 +25,18 @@ interface TokenListFile {
   list: { [address: string]: any }
 }
 
-async function fetchTokens(chainId: string, addrs: string[]): Promise<TokenEntry[]> {
+function isValidField(v: unknown): boolean {
+  if (v === undefined || v === null) return false
+  if (v === '0x') return false
+  if (typeof v === 'string' && v.length === 0) return false
+  if (typeof v === 'number' && !Number.isFinite(v)) return false
+  return true
+}
+
+async function fetchTokens(
+  chainId: string,
+  addrs: string[],
+): Promise<{ tokens: TokenEntry[]; failed: string[] }> {
   const calls = addrs
     .map((addr) => [
       { address: addr, name: 'name', args: [] },
@@ -39,25 +50,37 @@ async function fetchTokens(chainId: string, addrs: string[]): Promise<TokenEntry
     calls,
     abi: ERC20ABI,
     batchSize: 40,
-    allowFailure: false,
+    allowFailure: true,
     logErrors: true,
   })) as any[]
 
-  return addrs.map((addr, i) => {
+  const tokens: TokenEntry[] = []
+  const failed: string[] = []
+
+  for (let i = 0; i < addrs.length; i++) {
+    const addr = addrs[i]
     const name = datas[i * 3] as string
     const symbol = datas[i * 3 + 1] as string
     const decimals = datas[i * 3 + 2] as number
+
+    if (!isValidField(name) || !isValidField(symbol) || !isValidField(decimals)) {
+      failed.push(addr)
+      continue
+    }
+
     const lcAddr = addr.toLowerCase()
-    return {
+    tokens.push({
       chainId,
-      decimals,
+      decimals: Number(decimals),
       name,
       address: lcAddr,
       symbol,
       assetGroup: `${name}::${symbol}`,
       currencyId: `${name}::${symbol}`,
-    }
-  })
+    })
+  }
+
+  return { tokens, failed }
 }
 
 function tokenListPath(chainId: string) {
@@ -93,7 +116,7 @@ async function main() {
     }
     console.log(`Chain ${chainId}: ${missing.length} not in list, fetching metadata...`)
 
-    const tokens = await fetchTokens(chainId, missing)
+    const { tokens, failed } = await fetchTokens(chainId, missing)
 
     let added = 0
     for (const t of tokens) {
@@ -104,7 +127,10 @@ async function main() {
     }
 
     writeTokenList(chainId, listFile)
-    console.log(`Chain ${chainId}: added ${added} new tokens to ${chainId}.json`)
+    console.log(
+      `Chain ${chainId}: added ${added} new tokens to ${chainId}.json` +
+        (failed.length > 0 ? `, skipped ${failed.length} failed: ${failed.join(', ')}` : ''),
+    )
   }
 }
 
