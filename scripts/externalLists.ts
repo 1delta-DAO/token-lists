@@ -153,7 +153,7 @@ const camelotNames = [
   'sanko',
   'winr',
   'xai',
-  'plume'
+  'plume',
 ]
 
 const CAMELOT_TOKENLIST = (n: string): ArbitraryTokenList => ({
