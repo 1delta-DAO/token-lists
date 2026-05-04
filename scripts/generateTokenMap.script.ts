@@ -146,7 +146,11 @@ async function readTokenLists(): Promise<{
         const filePath = fileURLToPath(list.url)
         data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
       } else {
-        const listDataRaw = await fetch(list.url)
+        const listDataRaw = await fetch(list.url, {
+          method: list.method ?? 'GET',
+          headers: list.headers,
+          body: list.body,
+        })
         if (list.wait) {
           await AutoGenHelpers.sleep(list.wait)
         }
