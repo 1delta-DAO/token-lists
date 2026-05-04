@@ -408,6 +408,11 @@ const BLUESHIFT_LIST: ArbitraryTokenList = {
   access: 'tokens',
 }
 
+const PULSEX_LIST: ArbitraryTokenList = {
+  url: 'https://tokens.app.pulsex.com/pulsex-extended-v0.1.2.tokenlist.json',
+  access: 'tokens',
+}
+
 // Kona v2 (Abstract, chainId 2741) subgraph on Goldsky — GraphQL POST
 const KONA_ABSTRACT_SUBGRAPH_LIST: ArbitraryTokenList = {
   url: 'https://api.goldsky.com/api/public/project_cm33d1338c1jc010e715n1z6n/subgraphs/kona-v2-core-subgraph-abstract-mainnet/2.13.0/gn',
@@ -782,6 +787,7 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   PROTOFIRE_ANIME_LIST,
   PROTOFIRE_ZERO_LIST,
   BLUESHIFT_LIST,
+  PULSEX_LIST,
   KONA_ABSTRACT_SUBGRAPH_LIST,
   // JUMPER_LIST,
   ...KLAYSWAP_LIST,
