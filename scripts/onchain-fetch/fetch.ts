@@ -33,10 +33,7 @@ function isValidField(v: unknown): boolean {
   return true
 }
 
-async function fetchTokens(
-  chainId: string,
-  addrs: string[],
-): Promise<{ tokens: TokenEntry[]; failed: string[] }> {
+async function fetchTokens(chainId: string, addrs: string[]): Promise<{ tokens: TokenEntry[]; failed: string[] }> {
   const calls = addrs
     .map((addr) => [
       { address: addr, name: 'name', args: [] },
