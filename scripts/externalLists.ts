@@ -24,6 +24,12 @@ interface ArbitraryTokenList {
   mutateEntry?: (a: any) => any[]
   /** Ignore tags if any */
   ignoreTags?: boolean | undefined
+  /** HTTP method (defaults to GET) */
+  method?: 'GET' | 'POST'
+  /** Request body (e.g. GraphQL queries) */
+  body?: string
+  /** Extra headers */
+  headers?: Record<string, string>
 }
 
 /** Default mutator does nothing */
@@ -147,6 +153,7 @@ const camelotNames = [
   'sanko',
   'winr',
   'xai',
+  'plume'
 ]
 
 const CAMELOT_TOKENLIST = (n: string): ArbitraryTokenList => ({
@@ -381,6 +388,44 @@ const JUMPER_LIST: ArbitraryTokenList = {
 const FATHOM_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/Into-the-Fathom/fathom-swap-default-token-list/main/src/tokenlists/xdc.json',
   access: 'tokens',
+}
+
+const PROTOFIRE_ABSTRACT_LIST: ArbitraryTokenList = {
+  url: 'https://raw.githubusercontent.com/protofire/token-list/refs/heads/main/networks/abstract.json',
+  access: 'tokens',
+}
+const PROTOFIRE_ANIME_LIST: ArbitraryTokenList = {
+  url: 'https://raw.githubusercontent.com/protofire/token-list/refs/heads/main/networks/anime.json',
+  access: 'tokens',
+}
+const PROTOFIRE_ZERO_LIST: ArbitraryTokenList = {
+  url: 'https://raw.githubusercontent.com/protofire/token-list/refs/heads/main/networks/zero.json',
+  access: 'tokens',
+}
+
+const BLUESHIFT_LIST: ArbitraryTokenList = {
+  url: 'https://raw.githubusercontent.com/blueshift-fi/blueshift-tokenlist/main/blueshift.tokenlist.json',
+  access: 'tokens',
+}
+
+// Kona v2 (Abstract, chainId 2741) subgraph on Goldsky — GraphQL POST
+const KONA_ABSTRACT_SUBGRAPH_LIST: ArbitraryTokenList = {
+  url: 'https://api.goldsky.com/api/public/project_cm33d1338c1jc010e715n1z6n/subgraphs/kona-v2-core-subgraph-abstract-mainnet/2.13.0/gn',
+  method: 'POST',
+  headers: { 'content-type': 'application/json' },
+  body: JSON.stringify({
+    query: '{ tokens(first: 1000) { id symbol name decimals } }',
+  }),
+  access: 'data.tokens',
+  mutateEntry: ({ id, symbol, name, decimals }: { id: string; symbol: string; name: string; decimals: string }) => [
+    {
+      address: id,
+      symbol,
+      name,
+      decimals: Number(decimals),
+      chainId: 2741,
+    },
+  ],
 }
 
 const OPEN_OCEAN_LISTS = [
@@ -733,6 +778,11 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   VVS_LIST,
   KODIAK_LIST,
   FATHOM_LIST,
+  PROTOFIRE_ABSTRACT_LIST,
+  PROTOFIRE_ANIME_LIST,
+  PROTOFIRE_ZERO_LIST,
+  BLUESHIFT_LIST,
+  KONA_ABSTRACT_SUBGRAPH_LIST,
   // JUMPER_LIST,
   ...KLAYSWAP_LIST,
   // ...MOBULA_LISTS,
