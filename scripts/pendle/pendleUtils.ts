@@ -10,6 +10,12 @@ export const PENDLE_CHAINS = [
   Chain.SONIC_MAINNET,
   Chain.BERACHAIN,
   Chain.HYPEREVM,
+  Chain.MONAD_MAINNET,
+  Chain.PLASMA_MAINNET,
+  Chain.UNICHAIN,
+  Chain.INK,
+  Chain.AVALANCHE_C_CHAIN,
+  Chain.KATANA,
 ]
 
 export interface PendleMarket {
