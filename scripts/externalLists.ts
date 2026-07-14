@@ -752,8 +752,23 @@ export const PENDLE_LIST: ArbitraryTokenList = {
   access: 'direct',
 }
 
+// RWA and LST are categorically separate maps but handled identically. Both are placed
+// early so their `props.rwa` / `props.lst` win the first-list-wins props merge in the
+// generator (same pattern as PENDLE_LIST).
+export const RWA_LIST: ArbitraryTokenList = {
+  url: 'file://' + path.resolve(__dirname, 'rwa/rwa.json'),
+  access: 'direct',
+}
+
+export const LST_LIST: ArbitraryTokenList = {
+  url: 'file://' + path.resolve(__dirname, 'lst/lst.json'),
+  access: 'direct',
+}
+
 export const ALL_LISTS: ArbitraryTokenList[] = [
   PENDLE_LIST,
+  RWA_LIST,
+  LST_LIST,
   ...ONE_DELTA_LISTS,
   ...ONE_DELTA_LISTS_OTHER,
   ...ONE_DELTA_LISTS_LENDING,

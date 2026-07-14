@@ -207,6 +207,32 @@ export interface TokenProps {
     /** Whether the token has expired */
     expired?: boolean
   }
+  /** Real-world-asset classification (tokenized off-chain assets) */
+  rwa?: {
+    /** coarse, stable class used for filtering */
+    type: 'equity' | 'credit' | 'commodity' | 'fund' | 'other'
+    /**
+     * finer-grained descriptor under `type`, e.g.
+     * equity: 'stock'
+     * credit: 'treasury' | 'corporate-debt' (direct debt instruments)
+     * commodity: 'gold' | 'silver'
+     * fund: 'etf' | 'money-market' | 'treasury' | 'private-credit' (pooled vehicles)
+     */
+    subType?: string
+    /** issuing entity, e.g. 'ondo' | 'backed' | 'securitize' | 'franklin' | 'midas' */
+    issuer?: string
+    /** underlying real-world instrument, e.g. 'AAPL' | 'US T-Bill' | 'XAU' */
+    underlying?: string
+  }
+  /** Liquid (re)staking token classification */
+  lst?: {
+    /** 'staking' = liquid staking, 'restaking' = (liquid) re-staking / LRT */
+    type: 'staking' | 'restaking'
+    /** base staked asset, e.g. 'ETH' | 'BTC' | 'SOL' | 'BNB' | 'POL' | 'AVAX' */
+    asset?: string
+    /** staking provider, e.g. 'lido' | 'rocketpool' | 'renzo' | 'kelp' */
+    provider?: string
+  }
   /** permit data if any */
   permit?: { type: 0 | 1; version: string }
   /** Default wrapped native token address */
@@ -224,3 +250,12 @@ export interface TokenProps {
 }
 
 export type OmniCurrencyList = { [assetId: string]: OmniCurrency }
+
+/** RWA props shape, derived from TokenProps */
+export type RwaProps = NonNullable<TokenProps['rwa']>
+/** LST props shape, derived from TokenProps */
+export type LstProps = NonNullable<TokenProps['lst']>
+/** chainId -> address(lowercase) -> RWA classification */
+export type RwaRegistry = { [chainId: string]: { [address: string]: RwaProps } }
+/** chainId -> address(lowercase) -> LST classification */
+export type LstRegistry = { [chainId: string]: { [address: string]: LstProps } }
