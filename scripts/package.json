@@ -7,12 +7,13 @@
     "pendle": "tsx pendle/pendle.ts",
     "rwa": "tsx rwa/rwa.ts",
     "lst": "tsx lst/lst.ts",
+    "risk": "tsx risk/risk.ts",
     "sugar": "tsx onchain-fetch/sugar.ts",
     "onchain": "tsx onchain-fetch/fetch.ts",
     "format": "npx prettier .. -w --ignore-path .prettierignore",
     "generate": "tsx generateTokenMap.script.ts",
     "portal": "tsx portalTokens.script.ts",
-    "generate:formatted": "npm run pendle && npm run rwa && npm run lst && npm run generate && npm run format"
+    "generate:formatted": "npm run pendle && npm run rwa && npm run lst && npm run risk && npm run generate && npm run format"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",

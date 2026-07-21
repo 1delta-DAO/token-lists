@@ -32,8 +32,23 @@ jobs:
         working-directory: scripts
         run: npm ci
 
+      # Private repo — provides the asset risk overlay (data/asset-risks.json).
+      # Non-blocking: if the token lacks access, the risk step falls back to the
+      # GitHub API and then to the last committed risk.json snapshot.
+      - name: Checkout risk-data
+        continue-on-error: true
+        uses: actions/checkout@v4
+        with:
+          repository: 1delta-DAO/risk-data
+          token: ${{ secrets.GH_PAT }}
+          ref: main
+          path: risk-data-src
+
       - name: Run generate (generate + format)
         working-directory: scripts
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          RISK_DATA_JSON: ${{ github.workspace }}/risk-data-src/data/asset-risks.json
         run: npm run generate:formatted
 
       - name: Compute branch name

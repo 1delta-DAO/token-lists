@@ -9,6 +9,7 @@ import { PRESET_SYMBOLS } from './presets'
 import { FUEL_MAPPEDS } from './utils/data/knownAssets'
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
+import { lookupRisk } from './risk/riskMap'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -261,6 +262,11 @@ async function readTokenLists(): Promise<{
                     }
                     if (tokenInList?.name?.startsWith('Vault Bridge'))
                       tokenProps = { ...tokenProps, permit: DEFAULT_PERMIT }
+
+                    // Asset risk overlay (from risk-data). Orthogonal to rwa/lst/pendle, so
+                    // it's merged here by address rather than carried on a source list.
+                    const risk = lookupRisk(chainId, lcAddress)
+                    if (risk) tokenProps = { ...tokenProps, risk }
 
                     tags = AutoGenHelpers.uniq([...tags])
 

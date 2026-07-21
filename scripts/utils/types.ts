@@ -233,6 +233,19 @@ export interface TokenProps {
     /** staking provider, e.g. 'lido' | 'rocketpool' | 'renzo' | 'kelp' */
     provider?: string
   }
+  /**
+   * Asset risk overlay, sourced from the risk-data repository (data/asset-risks.json).
+   * This is a lagging annotation — risk-data is computed downstream of token-lists.
+   * Volatile fields (e.g. liquidityUsd) are intentionally excluded to avoid list churn.
+   */
+  risk?: {
+    /** risk score, 1 (safest) … 5 (riskiest) */
+    score: number
+    /** e.g. 'BLUE_CHIP' | 'STABLECOIN' | 'LST' | 'LRT' | 'COMPROMISED' | 'DISCONTINUED' | ... */
+    category?: string
+    /** provenance, e.g. 'whitelist' | 'default' | 'stablecoin' | 'pendle_inherit' */
+    source?: string
+  }
   /** permit data if any */
   permit?: { type: 0 | 1; version: string }
   /** Default wrapped native token address */
@@ -255,7 +268,11 @@ export type OmniCurrencyList = { [assetId: string]: OmniCurrency }
 export type RwaProps = NonNullable<TokenProps['rwa']>
 /** LST props shape, derived from TokenProps */
 export type LstProps = NonNullable<TokenProps['lst']>
+/** Risk props shape, derived from TokenProps */
+export type RiskProps = NonNullable<TokenProps['risk']>
 /** chainId -> address(lowercase) -> RWA classification */
 export type RwaRegistry = { [chainId: string]: { [address: string]: RwaProps } }
 /** chainId -> address(lowercase) -> LST classification */
 export type LstRegistry = { [chainId: string]: { [address: string]: LstProps } }
+/** chainId -> address(lowercase) -> risk overlay */
+export type RiskRegistry = { [chainId: string]: { [address: string]: RiskProps } }
