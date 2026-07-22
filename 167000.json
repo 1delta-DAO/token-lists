@@ -50,7 +50,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x07d83526730c7438048d55a4fc0b850e2aab6f0b": {
       "chainId": "167000",
@@ -113,7 +116,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38058/standard/taiko.jpeg",
       "assetGroup": "TAIKO",
       "currencyId": "Taiko Token::TAIKO",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 3, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x7e91f29f8a213c8311712a8fc8c61219fb9477cb": {
       "chainId": "167000",

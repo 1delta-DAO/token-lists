@@ -12,7 +12,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -38,7 +39,8 @@
       "assetGroup": "INETH",
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" }
       }
     },
     "0x11d8680c7f8f82f623e840130eb06c33d9f90c89": {
@@ -179,7 +181,8 @@
       "symbol": "CROAK",
       "logoURI": "https://bafybeiempzjdoflyvrhs6uk3424pij753jus3hz5ztkcri4d3zkyjmyd34.ipfs.dweb.link/logo/coin.png",
       "assetGroup": "CROAK::CROAK",
-      "currencyId": "CROAK::CROAK"
+      "currencyId": "CROAK::CROAK",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4af15ec2a0bd43db75dd04e62faa3b8ef36b00d5": {
       "chainId": "59144",
@@ -243,7 +246,8 @@
       "symbol": "FOXY",
       "logoURI": "https://i.ibb.co/MSKkFbf/logo.png",
       "assetGroup": "Foxy::FOXY",
-      "currencyId": "Foxy::FOXY"
+      "currencyId": "Foxy::FOXY",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0a79e44c99505c7f388ca30c787ff97217e73ecc": {
       "chainId": "59144",
@@ -523,7 +527,10 @@
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xc84f2ce21272f17d92d2a450f1c8567bf0ff448e": {
       "chainId": "59144",
@@ -555,7 +562,10 @@
       "symbol": "uniETH",
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/23773.png",
       "assetGroup": "Universal ETH::uniETH",
-      "currencyId": "Universal ETH::uniETH"
+      "currencyId": "Universal ETH::uniETH",
+      "props": {
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" }
+      }
     },
     "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376": {
       "chainId": "59144",
@@ -575,7 +585,10 @@
       "symbol": "USDC",
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3408.png",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x68592c5c98c4f4a8a4bc6da2121e65da3d1c0917": {
       "chainId": "59144",
@@ -606,7 +619,10 @@
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/3717.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f": {
       "chainId": "59144",
@@ -617,7 +633,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0x8c56017b172226fe024dea197748fc1eaccc82b1": {
       "chainId": "59144",
@@ -793,7 +812,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
       "assetGroup": "RSETH",
       "currencyId": "Wrapped rsETH::wrsETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "whitelist" }
+      }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
       "chainId": "59144",
@@ -813,7 +835,8 @@
       "symbol": "WEETH",
       "logoURI": "https://assets.coingecko.com/coins/images/37842/thumb/weETH_%281%29.png?1715747077",
       "assetGroup": "WEETH",
-      "currencyId": "ether fi Bridged weETH::WEETH"
+      "currencyId": "ether fi Bridged weETH::WEETH",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xdd3b8084af79b9bae3d1b668c0de08ccc2c9429a": {
       "chainId": "59144",
@@ -876,7 +899,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/50285/thumb/ezeth.png?1726826929",
       "assetGroup": "EZETH",
       "currencyId": "Everclear Bridged ezETH::ezETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0x7a087e75807f2e5143c161a817e64df6dc5eafe0": {
       "chainId": "59144",
@@ -1638,7 +1664,8 @@
       "symbol": "LYU",
       "logoURI": "https://static.debank.com/image/linea_token/logo_url/0xb20116ee399f15647bb1eef9a74f6ef3b58bc951/3034b0a9b1ab5d3aa409509233c410d0.png",
       "assetGroup": "LYVE Debt Token::LYU",
-      "currencyId": "LYVE Debt Token::LYU"
+      "currencyId": "LYVE Debt Token::LYU",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "59144",
@@ -1832,7 +1859,10 @@
       "logoURI": "https://static.cx.metamask.io/api/v2/tokenIcons/assets/eip155/59144/erc20/0xaca92e438df0b2401ff60da7e4337b687a2435da.png",
       "assetGroup": "MetaMask USD (Test)::mUSD",
       "currencyId": "MetaMask USD (Test)::mUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0xa18152629128738a5c081eb226335fed4b9c95e9": {
       "chainId": "59144",

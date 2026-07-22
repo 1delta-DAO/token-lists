@@ -12,7 +12,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -51,7 +52,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0x53878b874283351d26d206fa512aece1bef6c0dd": {
@@ -122,7 +124,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true, "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "wnative": true,
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0x643e160a3c3e2b7eae198f0beb1bfd2441450e86": {
       "chainId": "534352",
@@ -142,7 +148,10 @@
       "symbol": "USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/32611/thumb/USDC.png?1698733754",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xf55bec9cafdbe8730f096aa55dad6d22d44099df": {
       "chainId": "534352",
@@ -247,7 +256,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/50571/thumb/scroll.jpg?1728376125",
       "assetGroup": "Scroll::SCR",
       "currencyId": "Scroll::SCR",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 3, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x0fc479e2f9b7310bfb1db606cf565dea6910eedc": {
       "chainId": "534352",
@@ -580,7 +592,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66132/thumb/image_%289%29.png?1748439949",
       "assetGroup": "Quill USDQ::USDQ",
       "currencyId": "Quill USDQ::USDQ",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x8731d54e9d02c286767d56ac03e8037c07e01e98": {
       "chainId": "534352",
