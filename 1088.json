@@ -60,7 +60,8 @@
       "symbol": "WETH",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether::WETH"
+      "currencyId": "Wrapped Ether::WETH",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xa5b55ab1daf0f8e1efc0eb1931a957fd89b918f4": {
       "chainId": "1088",
@@ -131,7 +132,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/34526/thumb/metis.jpeg?1705305707",
       "assetGroup": "METIS",
       "currencyId": "Wrapped Metis::WMETIS",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0xc029adf62cf8f91985c49e1fde6900affcba0424": {
       "chainId": "1088",
@@ -241,7 +245,10 @@
       "symbol": "m.USDT",
       "logoURI": "https://assets.coingecko.com/coins/images/35001/thumb/logo.png?1706959346",
       "assetGroup": "USDT",
-      "currencyId": "Bridged USDT::m.USDT"
+      "currencyId": "Bridged USDT::m.USDT",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x85abaddcae06efee2cb5f75f33b6471759efde24": {
       "chainId": "1088",
@@ -271,7 +278,10 @@
       "symbol": "m.USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/35218/thumb/USDC_Icon.png?1707908537",
       "assetGroup": "USDC",
-      "currencyId": "Bridged USDC::m.USDC"
+      "currencyId": "Bridged USDC::m.USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000": {
       "chainId": "1088",
@@ -281,7 +291,10 @@
       "symbol": "METIS",
       "logoURI": "https://assets.coingecko.com/coins/images/15595/thumb/Metis_Black_Bg.png?1702968192",
       "assetGroup": "METIS",
-      "currencyId": "Metis (as ERC20)::METIS"
+      "currencyId": "Metis (as ERC20)::METIS",
+      "props": {
+        "risk": { "score": 2, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x1affbc17938a25d245e1b7ec6f2fc949df8e9760": {
       "chainId": "1088",
@@ -421,7 +434,10 @@
       "symbol": "DAI",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/dai.jpg",
       "assetGroup": "DAI",
-      "currencyId": "Dai Stablecoin::DAI"
+      "currencyId": "Dai Stablecoin::DAI",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x17ee7e4da37b01fc1bcc908fa63df343f23b4b7c": {
       "chainId": "1088",
@@ -519,7 +535,8 @@
       "address": "0x433e43047b95cb83517abd7c9978bdf7005e9938",
       "symbol": "m.WBTC",
       "assetGroup": "WBTC Token::m.WBTC",
-      "currencyId": "WBTC Token::m.WBTC"
+      "currencyId": "WBTC Token::m.WBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x1217bfe6c773eec6cc4a38b5dc45b92292b6e189": {
       "chainId": "1088",
