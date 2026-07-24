@@ -64,7 +64,8 @@
       "assetGroup": "Wrapped eETH::weETH.mode",
       "currencyId": "Wrapped eETH::weETH.mode",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" }
       }
     },
     "0x59e710215d45f584f44c0fee83da6d43d762d857": {
@@ -159,7 +160,10 @@
       "symbol": "MODE",
       "logoURI": "https://assets.coingecko.com/coins/images/34979/thumb/MODE.jpg?1714561871",
       "assetGroup": "MODE",
-      "currencyId": "Mode::MODE"
+      "currencyId": "Mode::MODE",
+      "props": {
+        "risk": { "score": 3, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x6863fb62ed27a9ddf458105b507c15b5d741d62e": {
       "chainId": "34443",
@@ -300,7 +304,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x6b2a01a5f79deb4c2f3c0eda7b01df456fbd726a": {
       "chainId": "34443",
@@ -578,7 +585,10 @@
       "symbol": "USDA",
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x0000206329b97db379d5e1bf586bbdb969c63274/48490bbb482704401030d0e0eae43610.png",
       "assetGroup": "USDA",
-      "currencyId": "Angle USDA::USDA"
+      "currencyId": "Angle USDA::USDA",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
       "chainId": "34443",

@@ -114,7 +114,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x1e4a5963abfd975d8c9021ce480b42188849d41d": {
       "chainId": "1101",
@@ -577,7 +580,10 @@
       "symbol": "USDA",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/USDA.svg",
       "assetGroup": "USDA::USDA",
-      "currencyId": "USDA::USDA"
+      "currencyId": "USDA::USDA",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "1101",
