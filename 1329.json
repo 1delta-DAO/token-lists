@@ -38,7 +38,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -72,7 +73,14 @@
       "symbol": "fastUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/50766/thumb/2024-10-16_14.54.03.jpg?1729120051",
       "assetGroup": "Sei fastUSD::fastUSD",
-      "currencyId": "Sei fastUSD::fastUSD"
+      "currencyId": "Sei fastUSD::fastUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0xdf77686d99667ae56bc18f539b777dbc2bbe3e9f": {
       "chainId": "1329",
@@ -82,7 +90,14 @@
       "symbol": "sfastUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/54334/standard/2025-02-10_12.59.16.jpg?1739330236",
       "assetGroup": "Staked sfastUSD::sfastUSD",
-      "currencyId": "Staked fastUSD::sfastUSD"
+      "currencyId": "Staked fastUSD::sfastUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x049eaa1b2c9934aaacc12a141484eefd62867653": {
       "chainId": "1329",
@@ -113,7 +128,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38470/thumb/sei.png?1717644025",
       "assetGroup": "SEI",
       "currencyId": "Wrapped SEI::WSEI",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 2, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x805679729df385815c57c24b20f4161bd34b655f": {
       "chainId": "1329",
@@ -173,7 +191,10 @@
       "symbol": "ISEI",
       "logoURI": "https://assets.coingecko.com/coins/images/38591/thumb/iSEI_logo_200_200.png?1718091709",
       "assetGroup": "Silo Staked SEI::ISEI",
-      "currencyId": "Silo Staked SEI::ISEI"
+      "currencyId": "Silo Staked SEI::ISEI",
+      "props": {
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+      }
     },
     "0x160345fc359604fc6e70e3c5facbde5f7a9342d8": {
       "chainId": "1329",
@@ -253,7 +274,10 @@
       "symbol": "sfrxUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/53964/thumb/sfrxUSD.png?1737792232",
       "assetGroup": "Staked Frax USD::sfrxUSD",
-      "currencyId": "Staked Frax USD::sfrxUSD"
+      "currencyId": "Staked Frax USD::sfrxUSD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
       "chainId": "1329",
@@ -443,7 +467,14 @@
       "symbol": "sUSDa",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
       "chainId": "1329",
@@ -453,7 +484,10 @@
       "symbol": "USDa",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/USDa.webp",
       "assetGroup": "USDa::USDa",
-      "currencyId": "USDa::USDa"
+      "currencyId": "USDa::USDa",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xe15fc38f6d8c56af07bbcbe3baf5708a2bf42392": {
       "chainId": "1329",
@@ -533,7 +567,8 @@
       "symbol": "FIABTC",
       "logoURI": "https://assets.coingecko.com/coins/images/68062/thumb/fiabtc_200-200.png?1754642511",
       "assetGroup": "Fiamma BTC::FIABTC",
-      "currencyId": "Fiamma BTC::FIABTC"
+      "currencyId": "Fiamma BTC::FIABTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
       "chainId": "1329",
@@ -563,7 +598,10 @@
       "symbol": "SPSEI",
       "logoURI": "https://assets.coingecko.com/coins/images/68734/thumb/logo_spSEI.png?1756409469",
       "assetGroup": "Splashing Staked SEI::SPSEI",
-      "currencyId": "Splashing Staked SEI::SPSEI"
+      "currencyId": "Splashing Staked SEI::SPSEI",
+      "props": {
+        "risk": { "score": 3, "category": "LST", "source": "whitelist" }
+      }
     },
     "0x71052bae71c25c78e37fd12e5ff1101a71d9018f": {
       "chainId": "1329",
@@ -593,7 +631,8 @@
       "symbol": "CLO",
       "logoURI": "https://assets.coingecko.com/coins/images/69987/thumb/yei.png?1760271689",
       "assetGroup": "Yei Finance::CLO",
-      "currencyId": "Yei Finance::CLO"
+      "currencyId": "Yei Finance::CLO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xa193d87b0d5e23ef45379f90066891cbd6013226": {
       "chainId": "1329",
@@ -703,7 +742,8 @@
       "symbol": "SBTC",
       "logoURI": "data:image/svg+xml,%3c?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3e%3csvg%20viewBox=%270%200%2042%2042%27%20version=%271.1%27%20xmlns=%27http://www.w3.org/2000/svg%27%20xmlns:xlink=%27http://www.w3.org/1999/xlink%27%20%3e%3cdefs%3e%3cpath%20d=%27M14.8836774,3.27374797%20C14.635641,1.09127001%2011.9069546,0.24247687%209.7984228,0%20L7.68989099,0%20L6.32556368,0%20L4.21706361,0%20L0,0%20L0,2.18247796%20L1.61239547,2.18247796%20C2.35656824,2.18247796%202.6046364,2.42501688%202.6046364,2.91000164%20L2.6046364,12.0038149%20C2.6046364,12.7313076%202.23255002,12.9738155%201.73641369,12.9738155%20L0.248068166,12.9738155%20L0.124018216,15.1563245%20L4.21706361,15.1563245%20L6.32559542,15.1563245%20L7.68992273,15.1563245%20L9.79845453,15.1563245%20L10.2945909,15.1563245%20C14.6356727,15.1563245%2016,13.0950539%2016,10.3062907%20C16,7.51752751%2013.1472954,6.79003486%2013.1472954,6.79003486%20C13.1472637,6.79003486%2015.2557955,5.82003431%2014.8836774,3.27374797%20Z%20M7.81390921,2.30374742%20C8.80618187,2.30374742%2010.9146819,2.42501688%2010.9146819,4.12251008%20C10.9146819,5.69879587%209.7984228,6.18378064%209.05425004,6.30501907%20L6.32556368,6.30501907%20L6.32556368,2.30374742%20L7.81390921,2.30374742%20Z%20M8.68216365,12.8525771%20L6.32556368,12.8525771%20L6.32556368,8.48752806%20L9.05425004,8.48752806%20C9.67440458,8.48752806%2012.0309728,8.73003595%2012.0309728,10.3062907%20C12.0309728,11.8825455%2010.9147137,12.8525771%208.68216365,12.8525771%20L8.68216365,12.8525771%20Z%27%20id=%27path-1%27/%3e%3c/defs%3e%3cg%20id=%27fianl%27%20stroke=%27none%27%20stroke-width=%271%27%20fill=%27none%27%20fill-rule=%27evenodd%27%20style=%27fill:%20white;%27%3e%3cg%20id=%27SSBTC-Black1%27%20transform=%27translate(0,%200)%27%20%3e%3ccircle%20id=%27%E6%A4%AD%E5%9C%86%E5%BD%A2%E5%A4%87%E4%BB%BD-25%27%20stroke=%27%23000000%27%20stroke-width=%271.05263158%27%20fill-rule=%27nonzero%27%20cx=%2721%27%20cy=%2721%27%20r=%2720%27/%3e%3cg%20id=%27group-13%E5%A4%87%E4%BB%BD-2%27%20transform=%27translate(13.000000,%2010.000000)%27%20%3e%3cpolygon%20id=%27path-5%27%20stroke=%27%23000000%27%20stroke-width=%270.507560951%27%20fill-rule=%27nonzero%27%20points=%274.12903226%201.14558876%204.12903226%203.94292672%206.0161066%203.94292672%206.0161066%201.77499259%206.59474281%200.961839387%205.16597514%200%27/%3e%3cpolygon%20id=%27path-5-bak%27%20stroke=%27%23000000%27%20stroke-width=%270.507560951%27%20fill-rule=%27nonzero%27%20points=%277.74193548%201.14558876%207.74193548%203.94292672%209.62900983%203.94292672%209.62900983%201.77499259%2010.207646%200.961839387%208.77887837%200%27/%3e%3cpolygon%20id=%27path-5%27%20fill=%27%23000000%27%20fill-rule=%27nonzero%27%20transform=%27translate(4.845759,%2020.889878)%20scale(-1,%20-1)%20translate(-4.845759,%20-20.889878)%20%27%20points=%273.61290323%2019.925344%203.61290323%2023%205.49997757%2023%205.49997757%2020.5547478%206.07861378%2019.7415946%204.64984611%2018.7797552%27/%3e%3cpolygon%20id=%27path-5bak%27%20fill=%27%23000000%27%20fill-rule=%27nonzero%27%20transform=%27translate(8.458662,%2020.889878)%20scale(-1,%20-1)%20translate(-8.458662,%20-20.889878)%20%27%20points=%277.22580645%2019.925344%207.22580645%2023%209.11288079%2023%209.11288079%2020.5547478%209.691517%2019.7415946%208.26274934%2018.7797552%27/%3e%3cg%20id=%27path%27%20transform=%27translate(0.000000,%203.942927)%27%3e%3cmask%20id=%27mask-2%27%20fill=%27white%27%3e%3cuse%20xlink:href=%27%23path-1%27/%3e%3c/mask%3e%3cuse%20id=%27mask%27%20stroke=%27%23000000%27%20stroke-width=%270.507560951%27%20fill-rule=%27nonzero%27%20xlink:href=%27%23path-1%27/%3e%3cellipse%20id=%27oval%27%20fill=%27%23000000%27%20mask=%27url(%23mask-2)%27%20cx=%273.87096774%27%20cy=%2714.7192676%27%20rx=%275.93548387%27%20ry=%275.83695094%27/%3e%3cpath%20d=%27M16.3802014,8.9034411%20C16.469228,9.30546375%2016.516129,9.72295515%2016.516129,10.151219%20C16.516129,13.374878%2013.8587224,15.98817%2010.5806452,15.98817%20C7.30256794,15.98817%204.64516129,13.374878%204.64516129,10.151219%20C4.64516129,9.72295515%204.69206236,9.30546375%204.78108896,8.9034411%20C5.94448801,10.8641688%208.10613445,12.1814628%2010.5806452,12.1814628%20C13.0247989,12.1814628%2015.1637177,10.8962912%2016.336751,8.97563135%20Z%27%20id=%27shape%27%20fill=%27%23000000%27%20mask=%27url(%23mask-2)%27/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e",
       "assetGroup": "StakeStone Bitcoin::SBTC",
-      "currencyId": "StakeStone Bitcoin::SBTC"
+      "currencyId": "StakeStone Bitcoin::SBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
       "chainId": "1329",

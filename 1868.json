@@ -36,7 +36,10 @@
       "symbol": "USDC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x3a337a6ada9d885b6ad95ec48f9b75f197b5ae35": {
       "chainId": "1868",
@@ -46,7 +49,10 @@
       "symbol": "USDT",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "1868",
@@ -57,7 +63,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "1868",
@@ -77,7 +86,8 @@
       "symbol": "WSTASTR",
       "logoURI": "https://assets.coingecko.com/coins/images/54782/thumb/wstASTR.png?1741570094",
       "assetGroup": "Wrapped stASTR::WSTASTR",
-      "currencyId": "Wrapped stASTR::WSTASTR"
+      "currencyId": "Wrapped stASTR::WSTASTR",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2cae934a1e84f693fbb78ca5ed3b0a6893259441": {
       "chainId": "1868",
@@ -87,7 +97,8 @@
       "symbol": "ASTR",
       "logoURI": "https://assets.coingecko.com/coins/images/53778/thumb/astar.jpg?1737341226",
       "assetGroup": "Soneium Bridged ASTR::ASTR",
-      "currencyId": "Soneium Bridged ASTR::ASTR"
+      "currencyId": "Soneium Bridged ASTR::ASTR",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xa8feaae65c44b458a16ea4e709036a2ee85d073a": {
       "chainId": "1868",
@@ -108,7 +119,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53814/thumb/20250116-173015.png?1737432919",
       "assetGroup": "SONE::SONE",
       "currencyId": "SONE::SONE",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x60336f9296c79da4294a19153ec87f8e52158e5f": {
       "chainId": "1868",
@@ -128,7 +142,10 @@
       "symbol": "NSASTR",
       "logoURI": "https://assets.coingecko.com/coins/images/53907/thumb/nsASTR_2x.png?1737707599",
       "assetGroup": "Neemo Staked Astar::NSASTR",
-      "currencyId": "Neemo Staked Astar::NSASTR"
+      "currencyId": "Neemo Staked Astar::NSASTR",
+      "props": {
+        "risk": { "score": 3, "category": "LST", "source": "whitelist" }
+      }
     },
     "0x54e86315c03217b76a7466c302245fd10ebef25a": {
       "chainId": "1868",
@@ -189,7 +206,8 @@
       "symbol": "SolvBTC.JUP",
       "logoURI": "https://assets.coingecko.com/coins/images/54834/thumb/solvBTC_Jupiter.png?1741969449",
       "assetGroup": "SOLVBTC.JUP",
-      "currencyId": "SolvBTC Jupiter::SolvBTC.JUP"
+      "currencyId": "SolvBTC Jupiter::SolvBTC.JUP",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x570f09ac53b96929e3868f71864e36ff6b1b67d7": {
       "chainId": "1868",
@@ -320,7 +338,14 @@
       "symbol": "SSUPERUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/67821/thumb/sSuperUSD_200x200.png?1753943152",
       "assetGroup": "SuperReturn sSuperUSD::SSUPERUSD",
-      "currencyId": "SuperReturn sSuperUSD::SSUPERUSD"
+      "currencyId": "SuperReturn sSuperUSD::SSUPERUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x35533f54740f1f1aa4179e57ba37039dfa16868b": {
       "chainId": "1868",
@@ -330,7 +355,10 @@
       "symbol": "RLP",
       "logoURI": "https://assets.coingecko.com/coins/images/40017/thumb/orangeLogo..png?1725344586",
       "assetGroup": "Resolv RLP::RLP",
-      "currencyId": "Resolv RLP::RLP"
+      "currencyId": "Resolv RLP::RLP",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0xb1b385542b6e80f77b94393ba8342c3af699f15c": {
       "chainId": "1868",
@@ -340,7 +368,10 @@
       "symbol": "USR",
       "logoURI": "https://assets.coingecko.com/coins/images/40008/thumb/USR_LOGO.png?1725222638",
       "assetGroup": "Resolv USD::USR",
-      "currencyId": "Resolv USD::USR"
+      "currencyId": "Resolv USD::USR",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x2a52b289ba68bbd02676640aa9f605700c9e5699": {
       "chainId": "1868",
@@ -350,7 +381,10 @@
       "symbol": "WSTUSR",
       "logoURI": "https://assets.coingecko.com/coins/images/51880/thumb/USR_LOGO.png?1732098841",
       "assetGroup": "Resolv wstUSR::WSTUSR",
-      "currencyId": "Resolv wstUSR::WSTUSR"
+      "currencyId": "Resolv wstUSR::WSTUSR",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0xf765356c901a064a74fa4560622f21c91048c3d7": {
       "chainId": "1868",
@@ -381,7 +415,10 @@
       "symbol": "USDSC",
       "logoURI": "https://assets.coingecko.com/coins/images/70883/thumb/stataleusd.png?1764393252",
       "assetGroup": "Startale USD::USDSC",
-      "currencyId": "Startale USD::USDSC"
+      "currencyId": "Startale USD::USDSC",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xd8bf9997f46dcda1be57018ec8e7728e8f7c139a": {
       "chainId": "1868",

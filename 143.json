@@ -11,7 +11,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e8e8523f-cce9-4933-b286-66aaec6ab805.svg",
       "assetGroup": "PT cUSD (cUSD) Monad::PT-cUSD-23JUL2026",
       "currencyId": "PT cUSD (cUSD) Monad::PT-cUSD-23JUL2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1": {
       "chainId": "143",
@@ -29,26 +29,6 @@
           "expiry": 1791417600,
           "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
-          "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
-        }
-      }
-    },
-    "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
-      "chainId": "143",
-      "decimals": 6,
-      "name": "YT AUSD (AUSD) Monad",
-      "address": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
-      "symbol": "YT-AUSD-8OCT2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
-      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
-      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7",
-          "expiry": 1791417600,
-          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
-          "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
           "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         }
       }
@@ -73,6 +53,26 @@
         }
       }
     },
+    "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "YT AUSD (AUSD) Monad",
+      "address": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
+      "symbol": "YT-AUSD-8OCT2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
+      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
+      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7",
+          "expiry": 1791417600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
+          "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
+        }
+      }
+    },
     "0xdaf216939826acaba0c2312f7e30a890213845cd": {
       "chainId": "143",
       "decimals": 6,
@@ -90,7 +90,8 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b": {
@@ -110,7 +111,8 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xe24a28fe8ecd859db4280d1291783a10017d6fc4": {
@@ -130,7 +132,8 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xf104c6cd68f81579c6a1d85849cb12fcc64bd72a": {
@@ -202,7 +205,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/770e75fe-05a2-4e57-9dac-fee6c850de3e.svg",
       "assetGroup": "PT sUSDe (USDe) Monad::PT-sUSDE-22OCT2026",
       "currencyId": "PT sUSDe (USDe) Monad::PT-sUSDE-22OCT2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x2142267022ecde6745de9f577e3ba4549ad23abc",
+          "expiry": 1792627200,
+          "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "ytAddress": "0x758119e49319b91332eebd6fcbecd9e0387de16b",
+          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
+        }
+      }
     },
     "0x758119e49319b91332eebd6fcbecd9e0387de16b": {
       "chainId": "143",
@@ -213,7 +225,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5fdff739-4c5d-4374-971c-b1dd5267e5f3.svg",
       "assetGroup": "YT sUSDe (USDe) Monad::YT-sUSDE-22OCT2026",
       "currencyId": "YT sUSDe (USDe) Monad::YT-sUSDE-22OCT2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x2142267022ecde6745de9f577e3ba4549ad23abc",
+          "expiry": 1792627200,
+          "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "ptAddress": "0xd236e83c563f888f540ca997c3ddf00e82d68c45",
+          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
+        }
+      }
     },
     "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51": {
       "chainId": "143",
@@ -224,7 +245,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/27678868-b28f-4113-a46e-7dd4b82c08de.svg",
       "assetGroup": "sUSDe Monad::SY-sUSDE",
       "currencyId": "sUSDe Monad::SY-sUSDE",
-      "props": { "pendle": { "tokenType": "SY" } }
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x2142267022ecde6745de9f577e3ba4549ad23abc",
+          "expiry": 1792627200,
+          "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "ptAddress": "0xd236e83c563f888f540ca997c3ddf00e82d68c45",
+          "ytAddress": "0x758119e49319b91332eebd6fcbecd9e0387de16b"
+        }
+      }
     },
     "0x01bff41798a0bcf287b996046ca68b395dbc1071": {
       "chainId": "143",
@@ -241,7 +271,8 @@
           "subType": "gold",
           "issuer": "tether",
           "underlying": "XAU"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365": {
@@ -487,7 +518,8 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
-      "currencyId": "SOL Wormhole ::SOL"
+      "currencyId": "SOL Wormhole ::SOL",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x754704bc059f8c67012fed69bc8a327a5aafb603": {
       "chainId": "143",
@@ -549,7 +581,10 @@
       "symbol": "AZND",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/AZND/logo.svg",
       "assetGroup": "Asian Dollar::AZND",
-      "currencyId": "Asian Dollar::AZND"
+      "currencyId": "Asian Dollar::AZND",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xb0f70c0bd6fd87dbeb7c10dc692a2a6106817072": {
       "chainId": "143",
@@ -623,7 +658,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/WMON/logo.svg",
       "assetGroup": "MON",
       "currencyId": "Wrapped MON::WMON",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 2, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x0c65a0bc65a5d819235b71f554d210d3f80e0852": {
       "chainId": "143",
@@ -645,7 +683,14 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/earnAUSD/logo.svg",
       "assetGroup": "earnAUSD::earnAUSD",
       "currencyId": "earnAUSD::earnAUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081": {
       "chainId": "143",
@@ -655,7 +700,8 @@
       "symbol": "gMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/gMON/logo.svg",
       "assetGroup": "gMON::gMON",
-      "currencyId": "gMON::gMON"
+      "currencyId": "gMON::gMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x1d4795a4670033f47f572b910553be0295077b51": {
       "chainId": "143",
@@ -705,7 +751,10 @@
       "symbol": "sMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sMON/logo.svg",
       "assetGroup": "Kintsu Staked Monad::sMON",
-      "currencyId": "Kintsu Staked Monad::sMON"
+      "currencyId": "Kintsu Staked Monad::sMON",
+      "props": {
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+      }
     },
     "0x1b68626dca36c7fe922fd2d55e4f631d962de19c": {
       "chainId": "143",
@@ -715,7 +764,8 @@
       "symbol": "shMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
       "assetGroup": "ShMonad::shMON",
-      "currencyId": "ShMonad::shMON"
+      "currencyId": "ShMonad::shMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe85411c030fb32a9d8b14bbbc6cb19417391f711": {
       "chainId": "143",
@@ -826,7 +876,10 @@
       "symbol": "LOAZND",
       "logoURI": "https://assets.coingecko.com/coins/images/70764/thumb/loAZND_4x.png?1763566149",
       "assetGroup": "Mu Digital Locked AZND::LOAZND",
-      "currencyId": "Mu Digital Locked AZND::LOAZND"
+      "currencyId": "Mu Digital Locked AZND::LOAZND",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x1f80c65cc2c37af84abbe1ea03183a624a6f8888": {
       "chainId": "143",
@@ -1158,7 +1211,8 @@
       "symbol": "aHYPER",
       "logoURI": "https://cdn.morpho.org/assets/logos/ahyper.svg",
       "assetGroup": "Hyperithm Delta Neutral Vault::aHYPER",
-      "currencyId": "Hyperithm Delta Neutral Vault::aHYPER"
+      "currencyId": "Hyperithm Delta Neutral Vault::aHYPER",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x8e94704607e857eb3e10bd21d90bf8c1ecba0452": {
       "chainId": "143",
@@ -1348,7 +1402,10 @@
       "symbol": "GBPm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/GBPm/logo.svg",
       "assetGroup": "Mento British Pound::GBPm",
-      "currencyId": "Mento British Pound::GBPm"
+      "currencyId": "Mento British Pound::GBPm",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xbc69212b8e4d445b2307c9d32dd68e2a4df00115": {
       "chainId": "143",
@@ -1684,7 +1741,10 @@
       "symbol": "EURW",
       "logoURI": "https://assets.coingecko.com/coins/images/102173287/thumb/newrails.jpeg?1778830747",
       "assetGroup": "Newrails Euro::EURW",
-      "currencyId": "Newrails Euro::EURW"
+      "currencyId": "Newrails Euro::EURW",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x0cc9b2e2acd7bacff79eb7db48f5662b622e7777": {
       "chainId": "143",
@@ -1854,7 +1914,10 @@
       "symbol": "CHFm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/CHFm/logo.svg",
       "assetGroup": "Mento Swiss Franc::CHFm",
-      "currencyId": "Mento Swiss Franc::CHFm"
+      "currencyId": "Mento Swiss Franc::CHFm",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x22f6a6752800eab67b84748fefc3cc658384af72": {
       "chainId": "143",
@@ -1864,7 +1927,10 @@
       "symbol": "JPYm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/JPYm/logo.svg",
       "assetGroup": "Mento Japanese Yen::JPYm",
-      "currencyId": "Mento Japanese Yen::JPYm"
+      "currencyId": "Mento Japanese Yen::JPYm",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
       "chainId": "143",
@@ -2035,6 +2101,86 @@
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
       "assetGroup": "Chainlink::LINK",
       "currencyId": "Chainlink::LINK"
+    },
+    "0x0bb150dfa86ea5d7742f07fefcd8e8eda81d64ef": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "Saturn USD",
+      "address": "0x0bb150dfa86ea5d7742f07fefcd8e8eda81d64ef",
+      "symbol": "USDat",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USDat/logo.svg",
+      "assetGroup": "Saturn USD::USDat",
+      "currencyId": "Saturn USD::USDat"
+    },
+    "0xad663ac84052b52be4ed1b27ba416505e84a00bf": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "High Yield AUSD Vault",
+      "address": "0xad663ac84052b52be4ed1b27ba416505e84a00bf",
+      "symbol": "hyAUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/hyAUSD/logo.svg",
+      "assetGroup": "High Yield AUSD Vault::hyAUSD",
+      "currencyId": "High Yield AUSD Vault::hyAUSD"
+    },
+    "0x9cd57d3685e6868cacaa8bdcaaf52cbdebf4fa25": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Staked Saturn USD",
+      "address": "0x9cd57d3685e6868cacaa8bdcaaf52cbdebf4fa25",
+      "symbol": "sUSDat",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sUSDat/logo.svg",
+      "assetGroup": "Staked Saturn USD::sUSDat",
+      "currencyId": "Staked Saturn USD::sUSDat"
+    },
+    "0x6f2cdf03c8343e1ea608668812fb094e46c41c80": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "Wrapped Aave Monad syrupUSDC",
+      "address": "0x6f2cdf03c8343e1ea608668812fb094e46c41c80",
+      "symbol": "waMonsyrupUSDC",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x6f2cdf03c8343e1ea608668812fb094e46c41c80.png",
+      "assetGroup": "Wrapped Aave Monad syrupUSDC::waMonsyrupUSDC",
+      "currencyId": "Wrapped Aave Monad syrupUSDC::waMonsyrupUSDC"
+    },
+    "0xdc00342d80de85a8b843dab1f29bb407b3abeb64": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped Aave Monad USDe",
+      "address": "0xdc00342d80de85a8b843dab1f29bb407b3abeb64",
+      "symbol": "waMonUSDe",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xdc00342d80de85a8b843dab1f29bb407b3abeb64.png",
+      "assetGroup": "Wrapped Aave Monad USDe::waMonUSDe",
+      "currencyId": "Wrapped Aave Monad USDe::waMonUSDe"
+    },
+    "0x50591a9f86972c591b6fe858b465f5b65d5c24ee": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped Aave Monad wstETH",
+      "address": "0x50591a9f86972c591b6fe858b465f5b65d5c24ee",
+      "symbol": "waMonwstETH",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x50591a9f86972c591b6fe858b465f5b65d5c24ee.png",
+      "assetGroup": "Wrapped Aave Monad wstETH::waMonwstETH",
+      "currencyId": "Wrapped Aave Monad wstETH::waMonwstETH"
+    },
+    "0xcdc050015042701f6b3af3b87990945d415fa657": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped Aave Monad weETH",
+      "address": "0xcdc050015042701f6b3af3b87990945d415fa657",
+      "symbol": "waMonweETH",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xcdc050015042701f6b3af3b87990945d415fa657.png",
+      "assetGroup": "Wrapped Aave Monad weETH::waMonweETH",
+      "currencyId": "Wrapped Aave Monad weETH::waMonweETH"
+    },
+    "0x4ec854a6fdf52eb64f8cabf87fafd3b1f1743a00": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped Aave Monad sUSDe",
+      "address": "0x4ec854a6fdf52eb64f8cabf87fafd3b1f1743a00",
+      "symbol": "waMonsUSDe",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x4ec854a6fdf52eb64f8cabf87fafd3b1f1743a00.png",
+      "assetGroup": "Wrapped Aave Monad sUSDe::waMonsUSDe",
+      "currencyId": "Wrapped Aave Monad sUSDe::waMonsUSDe"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",

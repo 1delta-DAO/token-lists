@@ -44,25 +44,26 @@
         }
       }
     },
-    "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8": {
+    "0x7b28407bf5df59ce93867b5e011575d14c1d7703": {
       "chainId": "9745",
       "decimals": 18,
-      "name": "PT sUSDe (USDe) Plasma",
-      "address": "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8",
-      "symbol": "PT-sUSDE-15JAN2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6f77480b-c00e-444d-8065-1f3858b4399d.svg",
-      "assetGroup": "PT sUSDe (USDe) Plasma::PT-sUSDE-15JAN2026",
-      "currencyId": "PT sUSDe (USDe) Plasma::PT-sUSDE-15JAN2026",
+      "name": "YT sUSDe (USDe) Plasma",
+      "address": "0x7b28407bf5df59ce93867b5e011575d14c1d7703",
+      "symbol": "YT-sUSDE-15JAN2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e6879e1f-fa5f-450f-80b1-615de6d46080.svg",
+      "assetGroup": "YT sUSDe (USDe) Plasma::YT-sUSDE-15JAN2026",
+      "currencyId": "YT sUSDe (USDe) Plasma::YT-sUSDE-15JAN2026",
       "props": {
         "pendle": {
-          "tokenType": "PT",
+          "tokenType": "YT",
           "marketAddress": "0xe06c3b972ba630ccf3392cecdbe070690b4e6b55",
           "expiry": 1768435200,
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
-          "ytAddress": "0x7b28407bf5df59ce93867b5e011575d14c1d7703",
+          "ptAddress": "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8",
           "syAddress": "0x16ac410945f082ce2de16d6e6a1ff60b318ed540",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x16ac410945f082ce2de16d6e6a1ff60b318ed540": {
@@ -82,27 +83,33 @@
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8",
           "ytAddress": "0x7b28407bf5df59ce93867b5e011575d14c1d7703"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
-    "0x7b28407bf5df59ce93867b5e011575d14c1d7703": {
+    "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8": {
       "chainId": "9745",
       "decimals": 18,
-      "name": "YT sUSDe (USDe) Plasma",
-      "address": "0x7b28407bf5df59ce93867b5e011575d14c1d7703",
-      "symbol": "YT-sUSDE-15JAN2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e6879e1f-fa5f-450f-80b1-615de6d46080.svg",
-      "assetGroup": "YT sUSDe (USDe) Plasma::YT-sUSDE-15JAN2026",
-      "currencyId": "YT sUSDe (USDe) Plasma::YT-sUSDE-15JAN2026",
+      "name": "PT sUSDe (USDe) Plasma",
+      "address": "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8",
+      "symbol": "PT-sUSDE-15JAN2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6f77480b-c00e-444d-8065-1f3858b4399d.svg",
+      "assetGroup": "PT sUSDe (USDe) Plasma::PT-sUSDE-15JAN2026",
+      "currencyId": "PT sUSDe (USDe) Plasma::PT-sUSDE-15JAN2026",
       "props": {
         "pendle": {
-          "tokenType": "YT",
+          "tokenType": "PT",
           "marketAddress": "0xe06c3b972ba630ccf3392cecdbe070690b4e6b55",
           "expiry": 1768435200,
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
-          "ptAddress": "0x02fcc4989b4c9d435b7ced3fe1ba4cf77bbb5dd8",
+          "ytAddress": "0x7b28407bf5df59ce93867b5e011575d14c1d7703",
           "syAddress": "0x16ac410945f082ce2de16d6e6a1ff60b318ed540",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -124,26 +131,11 @@
           "ytAddress": "0x000668f32da0c691149ac736024433d36a16b941",
           "syAddress": "0xe10b8c2b029c3369f7a910710ed4fa2b25059674",
           "expired": true
-        }
-      }
-    },
-    "0xe10b8c2b029c3369f7a910710ed4fa2b25059674": {
-      "chainId": "9745",
-      "decimals": 18,
-      "name": "USDe Plasma",
-      "address": "0xe10b8c2b029c3369f7a910710ed4fa2b25059674",
-      "symbol": "SY-USDe",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/edf9b366-6777-456c-a13f-4d3c9cc2494a.svg",
-      "assetGroup": "USDe Plasma::SY-USDe",
-      "currencyId": "USDe Plasma::SY-USDe",
-      "props": {
-        "pendle": {
-          "tokenType": "SY",
-          "marketAddress": "0xfd3eb62302fa3cbc3c7e59e887b92dbbc814285d",
-          "expiry": 1768435200,
-          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
-          "ptAddress": "0x93b544c330f60a2aa05ced87aeeffb8d38fd8c9a",
-          "ytAddress": "0x000668f32da0c691149ac736024433d36a16b941"
+        },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -165,7 +157,29 @@
           "ptAddress": "0x93b544c330f60a2aa05ced87aeeffb8d38fd8c9a",
           "syAddress": "0xe10b8c2b029c3369f7a910710ed4fa2b25059674",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0xe10b8c2b029c3369f7a910710ed4fa2b25059674": {
+      "chainId": "9745",
+      "decimals": 18,
+      "name": "USDe Plasma",
+      "address": "0xe10b8c2b029c3369f7a910710ed4fa2b25059674",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/edf9b366-6777-456c-a13f-4d3c9cc2494a.svg",
+      "assetGroup": "USDe Plasma::SY-USDe",
+      "currencyId": "USDe Plasma::SY-USDe",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xfd3eb62302fa3cbc3c7e59e887b92dbbc814285d",
+          "expiry": 1768435200,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ptAddress": "0x93b544c330f60a2aa05ced87aeeffb8d38fd8c9a",
+          "ytAddress": "0x000668f32da0c691149ac736024433d36a16b941"
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x8dfb9a39dfab16bffe77f15544b5bf03e377e419": {
@@ -186,7 +200,8 @@
           "ytAddress": "0x44920a786043f663693d2ea1c7de8551d90b3213",
           "syAddress": "0xd8b49fba7054a6ee2c4bd6813cdd6064430db85c",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x44920a786043f663693d2ea1c7de8551d90b3213": {
@@ -207,7 +222,8 @@
           "ptAddress": "0x8dfb9a39dfab16bffe77f15544b5bf03e377e419",
           "syAddress": "0xd8b49fba7054a6ee2c4bd6813cdd6064430db85c",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xd8b49fba7054a6ee2c4bd6813cdd6064430db85c": {
@@ -227,7 +243,8 @@
           "underlyingAsset": "0xc4374775489cb9c56003bf2c9b12495fc64f0771",
           "ptAddress": "0x34c772f9b78590f5ab324be11d87885e36878eee",
           "ytAddress": "0xb9f752b054f492a31b02d1b48af7253a7f13d27d"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xa536c9a209c290fd58bb235721c92de75ac4ad71": {
@@ -269,7 +286,8 @@
           "underlyingAsset": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
           "ptAddress": "0xd516188daf64efa04a8d60872f891f2cc811a561",
           "ytAddress": "0x8e05bf8df95134a95d3513d5e0a0030abc39f2a3"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xd516188daf64efa04a8d60872f891f2cc811a561": {
@@ -290,7 +308,8 @@
           "ytAddress": "0x8e05bf8df95134a95d3513d5e0a0030abc39f2a3",
           "syAddress": "0xe090d9d417e54116c50e5d5dde1509af91102ec3",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x8e05bf8df95134a95d3513d5e0a0030abc39f2a3": {
@@ -311,7 +330,8 @@
           "ptAddress": "0xd516188daf64efa04a8d60872f891f2cc811a561",
           "syAddress": "0xe090d9d417e54116c50e5d5dde1509af91102ec3",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xedac81b27790e0728f54dea3b7718e5437e85353": {
@@ -332,7 +352,8 @@
           "ytAddress": "0xf043ab55e8abac03fa4eeaa5102d8ca89e31fbe3",
           "syAddress": "0x601afacd8fbdbf44e71201b13d449441621332b9",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xf043ab55e8abac03fa4eeaa5102d8ca89e31fbe3": {
@@ -356,27 +377,6 @@
         }
       }
     },
-    "0xc0f6a41a9837c4d824bc8d346341db77e634ae69": {
-      "chainId": "9745",
-      "decimals": 6,
-      "name": "YT fUSDT0 (USDT0) Plasma",
-      "address": "0xc0f6a41a9837c4d824bc8d346341db77e634ae69",
-      "symbol": "YT-fUSDT0-26FEB2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2d5ca365-03f6-4045-851a-8762d440548c.svg",
-      "assetGroup": "YT fUSDT0 (USDT0) Plasma::YT-fUSDT0-26FEB2026",
-      "currencyId": "YT fUSDT0 (USDT0) Plasma::YT-fUSDT0-26FEB2026",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0x0cb289e9df2d0dcfe13732638c89655fb80c2be2",
-          "expiry": 1772064000,
-          "underlyingAsset": "0x1dd4b13fcae900c60a350589be8052959d2ed27b",
-          "ptAddress": "0xbe45f6f17b81571fc30253bdae0a2a6f7b04d60f",
-          "syAddress": "0xff3ccc1245d59b21b6ec4a597557e748f8311e8c",
-          "expired": true
-        }
-      }
-    },
     "0xbe45f6f17b81571fc30253bdae0a2a6f7b04d60f": {
       "chainId": "9745",
       "decimals": 6,
@@ -393,6 +393,27 @@
           "expiry": 1772064000,
           "underlyingAsset": "0x1dd4b13fcae900c60a350589be8052959d2ed27b",
           "ytAddress": "0xc0f6a41a9837c4d824bc8d346341db77e634ae69",
+          "syAddress": "0xff3ccc1245d59b21b6ec4a597557e748f8311e8c",
+          "expired": true
+        }
+      }
+    },
+    "0xc0f6a41a9837c4d824bc8d346341db77e634ae69": {
+      "chainId": "9745",
+      "decimals": 6,
+      "name": "YT fUSDT0 (USDT0) Plasma",
+      "address": "0xc0f6a41a9837c4d824bc8d346341db77e634ae69",
+      "symbol": "YT-fUSDT0-26FEB2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2d5ca365-03f6-4045-851a-8762d440548c.svg",
+      "assetGroup": "YT fUSDT0 (USDT0) Plasma::YT-fUSDT0-26FEB2026",
+      "currencyId": "YT fUSDT0 (USDT0) Plasma::YT-fUSDT0-26FEB2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x0cb289e9df2d0dcfe13732638c89655fb80c2be2",
+          "expiry": 1772064000,
+          "underlyingAsset": "0x1dd4b13fcae900c60a350589be8052959d2ed27b",
+          "ptAddress": "0xbe45f6f17b81571fc30253bdae0a2a6f7b04d60f",
           "syAddress": "0xff3ccc1245d59b21b6ec4a597557e748f8311e8c",
           "expired": true
         }
@@ -501,26 +522,6 @@
         }
       }
     },
-    "0x1e31c52936fc48146343a10f72c63c69dcddcd19": {
-      "chainId": "9745",
-      "decimals": 6,
-      "name": "PlasmaUSD Plasma",
-      "address": "0x1e31c52936fc48146343a10f72c63c69dcddcd19",
-      "symbol": "SY-PlasmaUSD",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f6983f77-9002-4e38-ad75-990446731c41.svg",
-      "assetGroup": "PlasmaUSD Plasma::SY-PlasmaUSD",
-      "currencyId": "PlasmaUSD Plasma::SY-PlasmaUSD",
-      "props": {
-        "pendle": {
-          "tokenType": "SY",
-          "marketAddress": "0xaf5407e916a7c788721265cd9cf4c3e84db2386e",
-          "expiry": 1777507200,
-          "underlyingAsset": "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000",
-          "ptAddress": "0x495d3bc8beb5ba9d89add019af8b80df3db09a4e",
-          "ytAddress": "0xf25259d739027a392ca982cd4f66248b4d89dcdb"
-        }
-      }
-    },
     "0xcc4fabf1f3623e4fdd05f119f296169bb56ea3af": {
       "chainId": "9745",
       "decimals": 6,
@@ -542,6 +543,26 @@
         }
       }
     },
+    "0x1e31c52936fc48146343a10f72c63c69dcddcd19": {
+      "chainId": "9745",
+      "decimals": 6,
+      "name": "PlasmaUSD Plasma",
+      "address": "0x1e31c52936fc48146343a10f72c63c69dcddcd19",
+      "symbol": "SY-PlasmaUSD",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f6983f77-9002-4e38-ad75-990446731c41.svg",
+      "assetGroup": "PlasmaUSD Plasma::SY-PlasmaUSD",
+      "currencyId": "PlasmaUSD Plasma::SY-PlasmaUSD",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xaf5407e916a7c788721265cd9cf4c3e84db2386e",
+          "expiry": 1777507200,
+          "underlyingAsset": "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000",
+          "ptAddress": "0x495d3bc8beb5ba9d89add019af8b80df3db09a4e",
+          "ytAddress": "0xf25259d739027a392ca982cd4f66248b4d89dcdb"
+        }
+      }
+    },
     "0xa6c55e31154d39bb0aa3ca2ff9f7665bda4e47fc": {
       "chainId": "9745",
       "decimals": 18,
@@ -560,7 +581,8 @@
           "ytAddress": "0x13e695e95601545657caaa7cd62a22fa87b62bdd",
           "syAddress": "0xad96c88ec5d39fc5020851075ecb756b2b228060",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x13e695e95601545657caaa7cd62a22fa87b62bdd": {
@@ -581,7 +603,8 @@
           "ptAddress": "0xa6c55e31154d39bb0aa3ca2ff9f7665bda4e47fc",
           "syAddress": "0xad96c88ec5d39fc5020851075ecb756b2b228060",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xad96c88ec5d39fc5020851075ecb756b2b228060": {
@@ -601,7 +624,8 @@
           "underlyingAsset": "0x616185600989bf8339b58ac9e539d49536598343",
           "ptAddress": "0xa6c55e31154d39bb0aa3ca2ff9f7665bda4e47fc",
           "ytAddress": "0x13e695e95601545657caaa7cd62a22fa87b62bdd"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xcea23ab8fde0b90e4d08eb68e8876e43933721d2": {
@@ -622,7 +646,8 @@
           "ytAddress": "0xeb9445e79047807e8a6fb394c2b66c42ca621463",
           "syAddress": "0x825645da91d741e429247f7fc01ca2dfacb61420",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xeb9445e79047807e8a6fb394c2b66c42ca621463": {
@@ -643,7 +668,8 @@
           "ptAddress": "0xcea23ab8fde0b90e4d08eb68e8876e43933721d2",
           "syAddress": "0x825645da91d741e429247f7fc01ca2dfacb61420",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x825645da91d741e429247f7fc01ca2dfacb61420": {
@@ -663,7 +689,8 @@
           "underlyingAsset": "0xb31bea5c2a43f942a3800558b1aa25978da75f8a",
           "ptAddress": "0xcea23ab8fde0b90e4d08eb68e8876e43933721d2",
           "ytAddress": "0xeb9445e79047807e8a6fb394c2b66c42ca621463"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x48f119b3fca8244274531f2e06b74ac4b1f5fe58": {
@@ -684,6 +711,11 @@
           "ytAddress": "0xdff365879600a918b1f57de6f7bbdc7092df39fc",
           "syAddress": "0x641066fc5b4f53432c4ad9ad745a175af4da7233",
           "expired": true
+        },
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         }
       }
     },
@@ -705,6 +737,11 @@
           "ptAddress": "0x48f119b3fca8244274531f2e06b74ac4b1f5fe58",
           "syAddress": "0x641066fc5b4f53432c4ad9ad745a175af4da7233",
           "expired": true
+        },
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         }
       }
     },
@@ -725,6 +762,11 @@
           "underlyingAsset": "0x35533f54740f1f1aa4179e57ba37039dfa16868b",
           "ptAddress": "0x48f119b3fca8244274531f2e06b74ac4b1f5fe58",
           "ytAddress": "0xdff365879600a918b1f57de6f7bbdc7092df39fc"
+        },
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         }
       }
     },
@@ -746,6 +788,11 @@
           "ytAddress": "0xdc8c86bc1cbc61946dde5e084e44f59619dfa75e",
           "syAddress": "0x2b04604c6f27b7d2cb910735110170bc26c33a4f",
           "expired": true
+        },
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         }
       }
     },
@@ -767,6 +814,11 @@
           "ptAddress": "0xffaf49f320b8ae1bb9ea596197040077a3666105",
           "syAddress": "0x2b04604c6f27b7d2cb910735110170bc26c33a4f",
           "expired": true
+        },
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         }
       }
     },
@@ -787,6 +839,11 @@
           "underlyingAsset": "0x2a52b289ba68bbd02676640aa9f605700c9e5699",
           "ptAddress": "0xffaf49f320b8ae1bb9ea596197040077a3666105",
           "ytAddress": "0xdc8c86bc1cbc61946dde5e084e44f59619dfa75e"
+        },
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         }
       }
     },
@@ -870,7 +927,8 @@
           "ytAddress": "0x3a138e9e6e5614d0ea754af778e2783c23617cd8",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x3a138e9e6e5614d0ea754af778e2783c23617cd8": {
@@ -891,7 +949,8 @@
           "ptAddress": "0xa4240b87076843b8b428b59de987706137b1861f",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x193b2f36957f7e9e498758bbf182273bc145bb92": {
@@ -911,7 +970,8 @@
           "underlyingAsset": "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6",
           "ptAddress": "0xa4240b87076843b8b428b59de987706137b1861f",
           "ytAddress": "0x3a138e9e6e5614d0ea754af778e2783c23617cd8"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xd421982dd59804fbf9a44b9f633f544a87eef154": {
@@ -932,7 +992,8 @@
           "ytAddress": "0xc8451e17c22a9d7e407b09972e3cfb0951e0b423",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xc8451e17c22a9d7e407b09972e3cfb0951e0b423": {
@@ -953,7 +1014,8 @@
           "ptAddress": "0xd421982dd59804fbf9a44b9f633f544a87eef154",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5edcbc20cac67adc2e724d4348ff85132b085b82": {
@@ -973,7 +1035,8 @@
           "underlyingAsset": "0x6695c0f8706c5ace3bdf8995073179cca47926dc",
           "ptAddress": "0xd421982dd59804fbf9a44b9f633f544a87eef154",
           "ytAddress": "0xc8451e17c22a9d7e407b09972e3cfb0951e0b423"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x54dc267be2839303ff1e323584a16e86cec4aa44": {
@@ -994,6 +1057,11 @@
           "ytAddress": "0x40acbcbc55d40500fc9d9da8204de972e441f809",
           "syAddress": "0x68930887e1318ef30653a4b7942ab07544ebed4d",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -1015,7 +1083,8 @@
           "ptAddress": "0x54dc267be2839303ff1e323584a16e86cec4aa44",
           "syAddress": "0x68930887e1318ef30653a4b7942ab07544ebed4d",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x68930887e1318ef30653a4b7942ab07544ebed4d": {
@@ -1035,7 +1104,8 @@
           "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
           "ptAddress": "0x54dc267be2839303ff1e323584a16e86cec4aa44",
           "ytAddress": "0x40acbcbc55d40500fc9d9da8204de972e441f809"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xab509448ad489e2e1341e25cc500f2596464cc82": {
@@ -1056,6 +1126,11 @@
           "ytAddress": "0xf57bf85a1067bddb44a34152d9a2992882bacce5",
           "syAddress": "0xdb3faad4436e2d133fdab0788332845df9b0abdf",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -1077,7 +1152,8 @@
           "ptAddress": "0xab509448ad489e2e1341e25cc500f2596464cc82",
           "syAddress": "0xdb3faad4436e2d133fdab0788332845df9b0abdf",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xdb3faad4436e2d133fdab0788332845df9b0abdf": {
@@ -1097,7 +1173,8 @@
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0xab509448ad489e2e1341e25cc500f2596464cc82",
           "ytAddress": "0xf57bf85a1067bddb44a34152d9a2992882bacce5"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x862756f2968f8e08e93da226c6b452acafc9c89b": {
@@ -1160,7 +1237,8 @@
           "ytAddress": "0xb9f752b054f492a31b02d1b48af7253a7f13d27d",
           "syAddress": "0xd8b49fba7054a6ee2c4bd6813cdd6064430db85c",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xb9f752b054f492a31b02d1b48af7253a7f13d27d": {
@@ -1181,7 +1259,8 @@
           "ptAddress": "0x34c772f9b78590f5ab324be11d87885e36878eee",
           "syAddress": "0xd8b49fba7054a6ee2c4bd6813cdd6064430db85c",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x495d3bc8beb5ba9d89add019af8b80df3db09a4e": {
@@ -1244,7 +1323,8 @@
           "ytAddress": "0x51c0f67a3be3b48b4e1bfabbeec259d4a0a0ac79",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x51c0f67a3be3b48b4e1bfabbeec259d4a0a0ac79": {
@@ -1265,7 +1345,8 @@
           "ptAddress": "0x58674ec29dd0742dddee721c5a6783c6bc417016",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xd2e8488b8aa076db8227a459d47288b0bbcf9779": {
@@ -1285,7 +1366,8 @@
           "underlyingAsset": "0x6695c0f8706c5ace3bdf8995073179cca47926dc",
           "ytAddress": "0xc928f4929583be12748d36672b9dfa40b46d0776",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xc928f4929583be12748d36672b9dfa40b46d0776": {
@@ -1305,7 +1387,8 @@
           "underlyingAsset": "0x6695c0f8706c5ace3bdf8995073179cca47926dc",
           "ptAddress": "0xd2e8488b8aa076db8227a459d47288b0bbcf9779",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x30559e3d35e33ab69399a3fe9f383d32bd3c016e": {
@@ -1326,7 +1409,8 @@
           "ytAddress": "0x5b184df579169775e46fb4a64f57596d25f1d44e",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5b184df579169775e46fb4a64f57596d25f1d44e": {
@@ -1347,7 +1431,8 @@
           "ptAddress": "0x30559e3d35e33ab69399a3fe9f383d32bd3c016e",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb": {
@@ -1367,7 +1452,8 @@
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0x30559e3d35e33ab69399a3fe9f383d32bd3c016e",
           "ytAddress": "0x5b184df579169775e46fb4a64f57596d25f1d44e"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x23b17d3944742ace3d0c71586fcb320d1e4a1ed2": {
@@ -1388,7 +1474,8 @@
           "ytAddress": "0x30f71afc81d770a5824e0c2a199f7af8bd450240",
           "syAddress": "0xaf8857ae2d2ddeaa23b2e8414d2031eb10621e19",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x30f71afc81d770a5824e0c2a199f7af8bd450240": {
@@ -1409,7 +1496,8 @@
           "ptAddress": "0x23b17d3944742ace3d0c71586fcb320d1e4a1ed2",
           "syAddress": "0xaf8857ae2d2ddeaa23b2e8414d2031eb10621e19",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xaf8857ae2d2ddeaa23b2e8414d2031eb10621e19": {
@@ -1429,7 +1517,8 @@
           "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
           "ptAddress": "0x23b17d3944742ace3d0c71586fcb320d1e4a1ed2",
           "ytAddress": "0x30f71afc81d770a5824e0c2a199f7af8bd450240"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x30aafa3878bccac1db73d846bfcdfedfdd5cc913": {
@@ -1449,7 +1538,8 @@
           "underlyingAsset": "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6",
           "ytAddress": "0x551160e525bb51bc95cba532b75d39fe1edc654b",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x551160e525bb51bc95cba532b75d39fe1edc654b": {
@@ -1469,7 +1559,8 @@
           "underlyingAsset": "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6",
           "ptAddress": "0x30aafa3878bccac1db73d846bfcdfedfdd5cc913",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xe1fec15061604c01d682bd7a61b23b8243923bc9": {
@@ -1511,7 +1602,8 @@
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ytAddress": "0x6214a4e602d145711a0bc0db22a9648e364a14bd",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x6214a4e602d145711a0bc0db22a9648e364a14bd": {
@@ -1531,7 +1623,8 @@
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0xf7fb83435f455bd970f2d9f943f4eece1941b3e9",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x1b64b9025eebb9a6239575df9ea4b9ac46d4d193": {
@@ -1549,7 +1642,8 @@
           "subType": "gold",
           "issuer": "tether",
           "underlying": "XAU"
-        }
+        },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0xa3d68b74bf0528fdd07263c60d6488749044914b": {
@@ -1562,7 +1656,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0x9ecaf80c1303cca8791afbc0ad405c8a35e8d9f1": {
@@ -1588,7 +1683,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0x6100e367285b01f48d07953803a2d8dca5d19873": {
@@ -1600,7 +1696,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x6100e367285b01f48d07953803a2d8dca5d19873.png",
       "assetGroup": "XPL",
       "currencyId": "Wrapped XPL::WXPL",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb": {
       "chainId": "9745",
@@ -1611,7 +1710,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb.png",
       "assetGroup": "USDT",
       "currencyId": "USDT0::USDT0",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x9895d81bb462a195b4922ed7de0e3acd007c32cb": {
       "chainId": "9745",
@@ -1621,7 +1723,8 @@
       "symbol": "WETH",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x9895d81bb462a195b4922ed7de0e3acd007c32cb.png",
       "assetGroup": "ETH",
-      "currencyId": "WETH::WETH"
+      "currencyId": "WETH::WETH",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
       "chainId": "9745",
@@ -1631,7 +1734,10 @@
       "symbol": "USDe",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34.png",
       "assetGroup": "USDE",
-      "currencyId": "USDe::USDe"
+      "currencyId": "USDe::USDe",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "9745",
@@ -1641,7 +1747,10 @@
       "symbol": "sUSDe",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2.png",
       "assetGroup": "SUSDE",
-      "currencyId": "Staked USDe::sUSDe"
+      "currencyId": "Staked USDe::sUSDe",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
       "chainId": "9745",
@@ -1651,7 +1760,8 @@
       "symbol": "ENA",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x58538e6a46e07434d7e7375bc268d3cb839c0133.png",
       "assetGroup": "ENA::ENA",
-      "currencyId": "ENA::ENA"
+      "currencyId": "ENA::ENA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef": {
       "chainId": "9745",
@@ -1662,7 +1772,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef.png",
       "assetGroup": "USDai::USDai",
       "currencyId": "USDai::USDai",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x0b2b2b2076d95dda7817e785989fe353fe955ef9": {
       "chainId": "9745",
@@ -1716,7 +1829,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xe561fe05c39075312aa9bc6af79ddae981461359.png",
       "assetGroup": "RSETH",
       "currencyId": "Wrapped rsETH::wrsETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "whitelist" }
+      }
     },
     "0xa31c7ddad8f1d66d037c4ee76f8fb725f927bc25": {
       "chainId": "9745",
@@ -1781,7 +1897,10 @@
       "symbol": "xUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x6eaf19b2fc24552925db245f9ff613157a7dbb4c_9745.png",
       "assetGroup": "Staked Stream USD::xUSD",
-      "currencyId": "Staked Stream USD::xUSD"
+      "currencyId": "Staked Stream USD::xUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x4ac60586c3e245ff5593cf99241395bf42509274": {
       "chainId": "9745",
@@ -1791,7 +1910,10 @@
       "symbol": "DEUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/39494/thumb/deUSD_Logo_%281%29.png?1723689002",
       "assetGroup": "Elixir deUSD::DEUSD",
-      "currencyId": "Elixir deUSD::DEUSD"
+      "currencyId": "Elixir deUSD::DEUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x98658bd74ef231158cadc21d8aba733a4e947e6a": {
       "chainId": "9745",
@@ -1801,7 +1923,8 @@
       "symbol": "EUROP",
       "logoURI": "https://plasmascan.to/token/images/schuman_europ_64.png",
       "assetGroup": "EUROP::EURØP",
-      "currencyId": "EURØP::EUROP"
+      "currencyId": "EURØP::EUROP",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x7884a8457f0e63e82c89a87fe48e8ba8223db069": {
       "chainId": "9745",
@@ -1811,7 +1934,10 @@
       "symbol": "SDEUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/52847/thumb/Staked_deUSD_%28sdeUSD%29_Logo.png?1734473339",
       "assetGroup": "Elixir Staked deUSD::SDEUSD",
-      "currencyId": "Elixir Staked deUSD::SDEUSD"
+      "currencyId": "Elixir Staked deUSD::SDEUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0xb1b385542b6e80f77b94393ba8342c3af699f15c": {
       "chainId": "9745",
@@ -1821,7 +1947,10 @@
       "symbol": "USR",
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x66a1e37c9b0eaddca17d3662d6c05f4decf3e110/791c489bf30421cfded8d372726503e6.png",
       "assetGroup": "Resolv USD::USR",
-      "currencyId": "Resolv USD::USR"
+      "currencyId": "Resolv USD::USR",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x35533f54740f1f1aa4179e57ba37039dfa16868b": {
       "chainId": "9745",
@@ -1831,7 +1960,10 @@
       "symbol": "RLP",
       "logoURI": "https://assets.coingecko.com/coins/images/40017/thumb/orangeLogo..png?1725344586",
       "assetGroup": "Resolv RLP::RLP",
-      "currencyId": "Resolv RLP::RLP"
+      "currencyId": "Resolv RLP::RLP",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x2a52b289ba68bbd02676640aa9f605700c9e5699": {
       "chainId": "9745",
@@ -1841,7 +1973,10 @@
       "symbol": "WSTUSR",
       "logoURI": "https://assets.coingecko.com/coins/images/51880/thumb/USR_LOGO.png?1732098841",
       "assetGroup": "Resolv wstUSR::WSTUSR",
-      "currencyId": "Resolv wstUSR::WSTUSR"
+      "currencyId": "Resolv wstUSR::WSTUSR",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000": {
       "chainId": "9745",
@@ -1861,7 +1996,10 @@
       "symbol": "syrupUSDT",
       "logoURI": "https://coin-images.coingecko.com/coins/images/69514/large/SyrupUSDT.png?1758823529",
       "assetGroup": "SYRUPUSDT",
-      "currencyId": "Syrup USDT::syrupUSDT"
+      "currencyId": "Syrup USDT::syrupUSDT",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xe13e223116b9f53238a228d7dc9159786fff502a": {
       "chainId": "9745",
@@ -1941,7 +2079,8 @@
       "symbol": "splUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x616185600989bf8339b58ac9e539d49536598343.png",
       "assetGroup": "Staked Plasma USD::splUSD",
-      "currencyId": "Staked Plasma USD::splUSD"
+      "currencyId": "Staked Plasma USD::splUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xf91c31299e998c5127bc5f11e4a657fc0cf358cd": {
       "chainId": "9745",
@@ -1951,7 +2090,14 @@
       "symbol": "plUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf91c31299e998c5127bc5f11e4a657fc0cf358cd.png",
       "assetGroup": "Plasma USD::plUSD",
-      "currencyId": "Plasma USD::plUSD"
+      "currencyId": "Plasma USD::plUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x29ad7fe4516909b9e498b5a65339e54791293234": {
       "chainId": "9745",
@@ -2001,7 +2147,14 @@
       "symbol": "syzUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xc8a8df9b210243c55d31c73090f06787ad0a1bf6.png",
       "assetGroup": "Staked Yuzu USD::syzUSD",
-      "currencyId": "Staked Yuzu USD::syzUSD"
+      "currencyId": "Staked Yuzu USD::syzUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0xabb48792a3161e81b47ca084c0b7a22a50324a44": {
       "chainId": "9745",
@@ -2041,7 +2194,10 @@
       "symbol": "yzUSD",
       "logoURI": "https://coin-images.coingecko.com/coins/images/70558/large/yzusd.png?1762518733",
       "assetGroup": "Yuzu USD::yzUSD",
-      "currencyId": "Yuzu USD::yzUSD"
+      "currencyId": "Yuzu USD::yzUSD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xb77e872a68c62cfc0dfb02c067ecc3da23b4bbf3": {
       "chainId": "9745",
@@ -2051,7 +2207,10 @@
       "symbol": "GHO",
       "logoURI": "https://coin-images.coingecko.com/coins/images/30663/large/gho-token-logo.png?1720517092",
       "assetGroup": "GHO",
-      "currencyId": "Gho Token::GHO"
+      "currencyId": "Gho Token::GHO",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x9d86b4fc23d8438fc4aba58642dc35d5f64fe941": {
       "chainId": "9745",
@@ -2070,7 +2229,8 @@
       "symbol": "mHYPER",
       "logoURI": "https://asset-metadata-service-production.s3.amazonaws.com/asset_icons/80afbe74a8ca584d816ad4e602c38d67d8388dfcf547879cb0f271ccb711bad2.png",
       "assetGroup": "mHYPER::Midas Hyperithm",
-      "currencyId": "Midas Hyperithm::mHYPER"
+      "currencyId": "Midas Hyperithm::mHYPER",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xebfc8c2fe73c431ef2a371aea9132110aab50dca": {
       "chainId": "9745",
@@ -2080,7 +2240,8 @@
       "symbol": "yzPP",
       "logoURI": "https://plasmascan.to/token/images/yzpp_32.svg",
       "assetGroup": "yzPP::Yuzu Protection Pool",
-      "currencyId": "Yuzu Protection Pool::yzPP"
+      "currencyId": "Yuzu Protection Pool::yzPP",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x5f264836ce02496ccf55d7f9aa5cb34e34319db5": {
       "chainId": "9745",
@@ -2090,7 +2251,8 @@
       "symbol": "pfxSAVE",
       "logoURI": "https://app.lagoon.finance/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Flagoon-logos%2Funderlying%2Fusdt0&w=48&q=75",
       "assetGroup": "pfxSAVE::Plasma fxSAVE",
-      "currencyId": "Plasma fxSAVE::pfxSAVE"
+      "currencyId": "Plasma fxSAVE::pfxSAVE",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x08efcc2f3e61185d0ea7f8830b3fec9bfa2ee313": {
       "chainId": "9745",
@@ -2100,7 +2262,14 @@
       "symbol": "sNUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/70028/thumb/sNUSD-200x200.png?1760452644",
       "assetGroup": "sNUSD::Staked NUSD",
-      "currencyId": "Staked NUSD::sNUSD"
+      "currencyId": "Staked NUSD::sNUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x4772d2e014f9fc3a820c444e3313968e9a5c8121": {
       "chainId": "9745",
@@ -2110,7 +2279,14 @@
       "symbol": "yUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/yusd.svg",
       "assetGroup": "YieldFi yUSD::yUSD",
-      "currencyId": "YieldFi yUSD::yUSD"
+      "currencyId": "YieldFi yUSD::yUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "9745",
@@ -2120,7 +2296,14 @@
       "symbol": "WSRUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/66163/thumb/wsrUSD.png?1748500965",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
-      "currencyId": "Wrapped Savings rUSD::WSRUSD"
+      "currencyId": "Wrapped Savings rUSD::WSRUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0xfdf91362b7e9330f232e500c0236a02b0de3e492": {
       "chainId": "9745",
@@ -2148,7 +2331,8 @@
       "address": "0x2139f45ce853bba998ec8d17d294d422b6fa4a6e",
       "symbol": "PENDLE-LPT-WRAPPED",
       "assetGroup": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED",
-      "currencyId": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED"
+      "currencyId": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x25835ddac2ca6e9806c7244e9a19924641e247df": {
       "chainId": "9745",
@@ -2158,7 +2342,11 @@
       "symbol": "PENDLE-LPT-WRAPPED",
       "assetGroup": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED::suspicious::25835dda",
       "currencyId": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xe556aba6fe6036275ec1f87eda296be72c811bce": {
       "chainId": "9745",
@@ -2167,7 +2355,14 @@
       "address": "0xe556aba6fe6036275ec1f87eda296be72c811bce",
       "symbol": "NUSD",
       "assetGroup": "Neutrl USD::NUSD",
-      "currencyId": "Neutrl USD::NUSD"
+      "currencyId": "Neutrl USD::NUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de": {
       "chainId": "9745",
@@ -2176,7 +2371,10 @@
       "address": "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de",
       "symbol": "vyUSD",
       "assetGroup": "YieldFi vyUSD::vyUSD",
-      "currencyId": "YieldFi vyUSD::vyUSD"
+      "currencyId": "YieldFi vyUSD::vyUSD",
+      "props": {
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xffc953feb92768e633a2530ef0a85f6334e1f7c6": {
       "chainId": "9745",
@@ -2186,7 +2384,11 @@
       "symbol": "PENDLE-LPT-WRAPPED",
       "assetGroup": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED::suspicious::ffc953fe",
       "currencyId": "Pendle Market Wrapped::PENDLE-LPT-WRAPPED",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x1e8d78e9b3f0152d54d32904b7933f1cfe439df1": {
       "chainId": "9745",
