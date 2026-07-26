@@ -55,7 +55,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0xad11a8beb98bbf61dbb1aa0f6d6f2ecd87b35afa": {
       "chainId": "43111",
@@ -97,7 +100,8 @@
       "symbol": "hemiBTC",
       "logoURI": "https://raw.githubusercontent.com/hemilabs/token-list/master/src/logos/hemibtc.svg",
       "assetGroup": "HEMIBTC",
-      "currencyId": "Hemi Bitcoin::hemiBTC"
+      "currencyId": "Hemi Bitcoin::hemiBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x623f2774d9f27b59bc6b954544487532ce79d9df": {
       "chainId": "43111",
@@ -107,7 +111,8 @@
       "symbol": "bfBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/bfBTC.webp",
       "assetGroup": "BitFi Bitcoin::bfBTC",
-      "currencyId": "BitFi Bitcoin::bfBTC"
+      "currencyId": "BitFi Bitcoin::bfBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "43111",
@@ -127,7 +132,8 @@
       "symbol": "brBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/53039/standard/brBTC_200.png?1735074374",
       "assetGroup": "BRBTC",
-      "currencyId": "brBTC::brBTC"
+      "currencyId": "brBTC::brBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
       "chainId": "43111",
@@ -198,7 +204,8 @@
       "symbol": "IBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/iBTC.webp",
       "assetGroup": "IBTC",
-      "currencyId": "iBTC::IBTC"
+      "currencyId": "iBTC::IBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {
       "chainId": "43111",
@@ -338,7 +345,8 @@
       "symbol": "suETH",
       "logoURI": "https://assets.coingecko.com/coins/images/33265/thumb/Sumer_Money_Logo.jpg?1701321407",
       "assetGroup": "Sumerian ETH::suETH",
-      "currencyId": "Sumerian ETH::suETH"
+      "currencyId": "Sumerian ETH::suETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb4818bb69478730ef4e33cc068dd94278e2766cb": {
       "chainId": "43111",
@@ -349,7 +357,14 @@
       "logoURI": "https://app.satoshiprotocol.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FsatIcon.c7c91de1.png&w=32&q=75",
       "assetGroup": "Satoshi Stablecoin V2::satUSD",
       "currencyId": "Satoshi Stablecoin V2::satUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {
       "chainId": "43111",
@@ -489,7 +504,10 @@
       "symbol": "SLP",
       "assetGroup": "SushiSwap LP Token (VUSD-hemiBTC)::SLP",
       "currencyId": "SushiSwap LP Token (VUSD-hemiBTC)::SLP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xaf6ed58980b5a0732423469dd9f3f69d9dc6dab5": {
       "chainId": "43111",
@@ -499,7 +517,10 @@
       "symbol": "SLP",
       "assetGroup": "SushiSwap LP Token (WETH-USDC.e)::SLP",
       "currencyId": "SushiSwap LP Token (WETH-USDC.e)::SLP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf23eec60263de9b0c8472c58be10feba28d9eb53": {
       "chainId": "43111",
@@ -509,7 +530,10 @@
       "symbol": "SLP",
       "assetGroup": "SushiSwap LP Token (VUSD-USDC.e)::SLP",
       "currencyId": "SushiSwap LP Token (VUSD-USDC.e)::SLP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xafb068838136358cfa6b54bea580b86df70bba7f": {
       "chainId": "43111",
@@ -529,7 +553,10 @@
       "symbol": "PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "assetGroup": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x42ca6ae4d7f0ff042ae0796685e82b12899a392e": {
       "chainId": "43111",
@@ -539,7 +566,10 @@
       "symbol": "PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "assetGroup": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x99e3de3817f6081b2568208337ef83295b7f591d": {
       "chainId": "43111",
@@ -549,7 +579,8 @@
       "symbol": "HEMI",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/HEMI.webp",
       "assetGroup": "Hemi::HEMI",
-      "currencyId": "Hemi::HEMI"
+      "currencyId": "Hemi::HEMI",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "43111",

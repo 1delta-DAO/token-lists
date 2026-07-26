@@ -399,7 +399,8 @@
       "assetGroup": "SAVAX",
       "currencyId": "Staked AVAX::sAVAX",
       "props": {
-        "lst": { "type": "staking", "asset": "AVAX", "provider": "benqi" }
+        "lst": { "type": "staking", "asset": "AVAX", "provider": "benqi" },
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -472,7 +473,8 @@
       "symbol": "AAVE",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/aave.webp",
       "assetGroup": "AAVE",
-      "currencyId": "Aave::AAVE"
+      "currencyId": "Aave::AAVE",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xcaf5191fc480f43e4df80106c7695eca56e48b18": {
       "chainId": "43114",
@@ -612,7 +614,10 @@
       "symbol": "DAI",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
       "assetGroup": "DAI",
-      "currencyId": "Dai Stablecoin::DAI"
+      "currencyId": "Dai Stablecoin::DAI",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x03e8d118a1864c7dc53bf91e007ab7d91f5a06fa": {
       "chainId": "43114",
@@ -652,7 +657,10 @@
       "symbol": "FRAX",
       "logoURI": "https://assets.coingecko.com/coins/images/13422/thumb/frax_logo.png?1608476506",
       "assetGroup": "FRAX",
-      "currencyId": "Frax::FRAX"
+      "currencyId": "Frax::FRAX",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xe5caef4af8780e59df925470b050fb23c43ca68c": {
       "chainId": "43114",
@@ -732,7 +740,8 @@
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0x9fda7ceec4c18008096c2fe2b85f05dc300f94d0": {
       "chainId": "43114",
@@ -883,7 +892,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
       "assetGroup": "RSETH",
       "currencyId": "Wrapped rsETH::wrsETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "whitelist" }
+      }
     },
     "0xce1bffbd5374dac86a2893119683f4911a2f7814": {
       "chainId": "43114",
@@ -1003,7 +1015,10 @@
       "symbol": "USDC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7": {
       "chainId": "43114",
@@ -1013,7 +1028,10 @@
       "symbol": "USDT",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x50b7545627a5162f82a992c33b87adc75187b218": {
       "chainId": "43114",
@@ -1023,7 +1041,8 @@
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab": {
       "chainId": "43114",
@@ -1033,7 +1052,8 @@
       "symbol": "WETH",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether::WETH"
+      "currencyId": "Wrapped Ether::WETH",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xabc9547b534519ff73921b1fba6e672b5f58d083": {
       "chainId": "43114",
@@ -1113,7 +1133,10 @@
       "symbol": "EURC",
       "logoURI": "https://assets.coingecko.com/coins/images/26045/standard/euro.png?1696525125",
       "assetGroup": "EURC",
-      "currencyId": "Euro Coin::EURC"
+      "currencyId": "Euro Coin::EURC",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x62edc0692bd897d2295872a9ffcac5425011c661": {
       "chainId": "43114",
@@ -1134,7 +1157,10 @@
       "logoURI": "https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/avalanchec/assets/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7/logo.png",
       "assetGroup": "AVAX",
       "currencyId": "Wrapped AVAX::WAVAX",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x6985884c4392d348587b19cb9eaaf157f13271cd": {
       "chainId": "43114",
@@ -1164,7 +1190,10 @@
       "symbol": "AUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x00000000eFE302BEAA2b3e6e1b18d08D69a9012a/logo.png",
       "assetGroup": "AUSD",
-      "currencyId": "AUSD::AUSD"
+      "currencyId": "AUSD::AUSD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x6e84a6216ea6dacc71ee8e6b0a5b7322eebc0fdd": {
       "chainId": "43114",
@@ -1174,7 +1203,14 @@
       "symbol": "JOE",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x6e84a6216eA6dACC71eE8E6b0a5B7322EEbC0fDd/logo.png",
       "assetGroup": "JOE",
-      "currencyId": "TraderJoe Token::JOE"
+      "currencyId": "TraderJoe Token::JOE",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "ESTABLISHED_DEFI",
+          "source": "whitelist"
+        }
+      }
     },
     "0xd1c3f94de7e5b45fa4edbba472491a9f4b166fc4": {
       "chainId": "43114",
@@ -1184,7 +1220,8 @@
       "symbol": "XAVA",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xd1c3f94DE7e5B45fa4eDBBA472491a9f4B166FC4/logo.png",
       "assetGroup": "Avalaunch::XAVA",
-      "currencyId": "Avalaunch::XAVA"
+      "currencyId": "Avalaunch::XAVA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4d6ec47118f807ace03d3b3a4ee6aa96cb2ab677": {
       "chainId": "43114",
@@ -1244,7 +1281,14 @@
       "symbol": "QI",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x8729438EB15e2C8B576fCc6AeCdA6A148776C0F5/logo.png",
       "assetGroup": "QI",
-      "currencyId": "Benqi::QI"
+      "currencyId": "Benqi::QI",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "ESTABLISHED_DEFI",
+          "source": "whitelist"
+        }
+      }
     },
     "0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664": {
       "chainId": "43114",
@@ -1374,7 +1418,8 @@
       "symbol": "BTC.b",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x152b9d0FdC40C096757F570A51E494bd4b943E50/logo.png",
       "assetGroup": "BTC",
-      "currencyId": "Bitcoin::BTC.b"
+      "currencyId": "Bitcoin::BTC.b",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0x8b82a291f83ca07af22120aba21632088fc92931": {
       "chainId": "43114",
@@ -1634,7 +1679,8 @@
       "symbol": "COQ",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x420FcA0121DC28039145009570975747295f2329/logo.png",
       "assetGroup": "COQ",
-      "currencyId": "COQINU::COQ"
+      "currencyId": "COQINU::COQ",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x997ddaa07d716995de90577c123db411584e5e46": {
       "chainId": "43114",
@@ -2174,7 +2220,10 @@
       "symbol": "bnUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xdBDd50997361522495EcFE57EBb6850dA0E4C699/logo.png",
       "assetGroup": "Balanced Dollar::bnUSD",
-      "currencyId": "Balanced Dollar::bnUSD"
+      "currencyId": "Balanced Dollar::bnUSD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x0a10d108e2d81ccc793e37b56206c84bf96ddc57": {
       "chainId": "43114",
@@ -2204,7 +2253,10 @@
       "symbol": "deUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xB57B25851fE2311CC3fE511c8F10E868932e0680/logo.png",
       "assetGroup": "DEUSD",
-      "currencyId": "deUSD::deUSD"
+      "currencyId": "deUSD::deUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0xaeb1fa0853c7c98eab10fcf0ea669ae3d07fbb10": {
       "chainId": "43114",
@@ -2233,7 +2285,14 @@
       "address": "0xcf0eb4ac018c06a16ed5c63484823c7805e7599d",
       "symbol": "xUSDC",
       "assetGroup": "xUSDC::xUSDC",
-      "currencyId": "xUSDC::xUSDC"
+      "currencyId": "xUSDC::xUSDC",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "UNKNOWN_ISSUER",
+          "source": "whitelist"
+        }
+      }
     },
     "0x468bbabaef852c134b584382c0fef83f2954cd5c": {
       "chainId": "43114",
@@ -2242,7 +2301,14 @@
       "address": "0x468bbabaef852c134b584382c0fef83f2954cd5c",
       "symbol": "xBTC.b",
       "assetGroup": "xBTC.b::xBTC.b",
-      "currencyId": "xBTC.b::xBTC.b"
+      "currencyId": "xBTC.b::xBTC.b",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "UNKNOWN_ISSUER",
+          "source": "whitelist"
+        }
+      }
     },
     "0xa39986f96b80d04e8d7aeaaf47175f47c23fd0f4": {
       "chainId": "43114",
@@ -2251,7 +2317,14 @@
       "address": "0xa39986f96b80d04e8d7aeaaf47175f47c23fd0f4",
       "symbol": "xUSDC",
       "assetGroup": "xUSDC::xUSDC",
-      "currencyId": "xUSDC::xUSDC"
+      "currencyId": "xUSDC::xUSDC",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "UNKNOWN_ISSUER",
+          "source": "whitelist"
+        }
+      }
     },
     "0xe46b44179db3af934da552b35ff8869e98dc6af5": {
       "chainId": "43114",
@@ -2511,7 +2584,10 @@
       "symbol": "avUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346/logo.png",
       "assetGroup": "avUSD::avUSD",
-      "currencyId": "avUSD::avUSD"
+      "currencyId": "avUSD::avUSD",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x06d47f3fb376649c3a9dafe069b3d6e35572219e": {
       "chainId": "43114",
@@ -2581,7 +2657,10 @@
       "symbol": "YUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/25024/thumb/1_oJ0F2Zf6CuAhLP0zOboo6w.png?1696524176",
       "assetGroup": "YUSD Stablecoin::YUSD",
-      "currencyId": "YUSD Stablecoin::YUSD"
+      "currencyId": "YUSD Stablecoin::YUSD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xfcc6ce74f4cd7edef0c5429bb99d38a3608043a5": {
       "chainId": "43114",
@@ -2771,7 +2850,8 @@
       "symbol": "UST",
       "logoURI": "https://assets.coingecko.com/coins/images/21150/thumb/UST_wh_small.png?1696520528",
       "assetGroup": "UST (Wormhole)::UST",
-      "currencyId": "UST (Wormhole)::UST"
+      "currencyId": "UST (Wormhole)::UST",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x120ad3e5a7c796349e591f1570d9f7980f4ea9cb": {
       "chainId": "43114",
@@ -3501,7 +3581,10 @@
       "symbol": "NXUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/25101/thumb/nxusd-logo.png?1696524253",
       "assetGroup": "NXUSD::NXUSD",
-      "currencyId": "NXUSD::NXUSD"
+      "currencyId": "NXUSD::NXUSD",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x6121191018baf067c6dc6b18d42329447a164f05": {
       "chainId": "43114",
@@ -3991,7 +4074,8 @@
       "symbol": "miMATIC",
       "logoURI": "https://assets.coingecko.com/coins/images/35541/thumb/mimatic-red.png?1709092837",
       "assetGroup": "MIMATIC",
-      "currencyId": "Mai Stablecoin::miMATIC"
+      "currencyId": "Mai Stablecoin::miMATIC",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0x617a4edfcec09864ca9d052ebcbab67da273f4d4": {
       "chainId": "43114",
@@ -4191,7 +4275,10 @@
       "symbol": "MONEY",
       "logoURI": "https://assets.coingecko.com/coins/images/24237/thumb/money.png?1696523422",
       "assetGroup": "Moremoney USD::MONEY",
-      "currencyId": "Moremoney USD::MONEY"
+      "currencyId": "Moremoney USD::MONEY",
+      "props": {
+        "risk": { "score": 4, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xedf647326007e64d94b0ee69743350f3736e392c": {
       "chainId": "43114",
@@ -4741,7 +4828,8 @@
       "symbol": "WXT",
       "logoURI": "https://assets.coingecko.com/coins/images/8835/thumb/Wirex.jpg?1696508988",
       "assetGroup": "WXT Token::WXT",
-      "currencyId": "WXT Token::WXT"
+      "currencyId": "WXT Token::WXT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd4d026322c88c2d49942a75dff920fcfbc5614c1": {
       "chainId": "43114",
@@ -6232,7 +6320,10 @@
       "symbol": "sdeUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x68088c91446c7bea49ea7dbd3b96ce62b272dc96.png",
       "assetGroup": "Staked deUSD::sdeUSD",
-      "currencyId": "Staked deUSD::sdeUSD"
+      "currencyId": "Staked deUSD::sdeUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x6c7d727a0432d03351678f91faa1126a5b871df5": {
       "chainId": "43114",
@@ -6302,7 +6393,10 @@
       "symbol": "UTY",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xdbc5192a6b6ffee7451301bb4ec312f844f02b4a.png",
       "assetGroup": "Unity::UTY",
-      "currencyId": "Unity::UTY"
+      "currencyId": "Unity::UTY",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x580d5e1399157fd0d58218b7a514b60974f2ab01": {
       "chainId": "43114",
@@ -6672,7 +6766,8 @@
       "symbol": "NXPC",
       "logoURI": "https://assets.coingecko.com/coins/images/55703/thumb/wk63iOZz_400x400.png?1747126039",
       "assetGroup": "Nexpace::NXPC",
-      "currencyId": "Nexpace::NXPC"
+      "currencyId": "Nexpace::NXPC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x6b56ec4a92765203508fb40fec9fa23e549b705a": {
       "chainId": "43114",
@@ -7394,7 +7489,14 @@
       "address": "0x0022228a2cc5e7ef0274a7baa600d44da5ab5776",
       "symbol": "stUSD",
       "assetGroup": "Angle Staked USDA::stUSD",
-      "currencyId": "Angle Staked USDA::stUSD"
+      "currencyId": "Angle Staked USDA::stUSD",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        }
+      }
     },
     "0xfea7976733f47557860f4483f2147a3e99c76b58": {
       "chainId": "43114",
@@ -7641,7 +7743,10 @@
       "symbol": "USDA",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/USDA.svg",
       "assetGroup": "USDA::USDA",
-      "currencyId": "USDA::USDA"
+      "currencyId": "USDA::USDA",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xa60c5bebccdb9738f63891bbdd7fec3e762f9098": {
       "chainId": "43114",
@@ -8240,7 +8345,10 @@
       "symbol": "GHO",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xfc421ad3c883bf9e7c4f42de845c4e4405799e73.png",
       "assetGroup": "GHO",
-      "currencyId": "Gho Token::GHO"
+      "currencyId": "Gho Token::GHO",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x0f13fc8a93ab8edc9fde0a1e19aac693161599a5": {
       "chainId": "43114",
@@ -8735,7 +8843,10 @@
       "symbol": "SUSDE",
       "logoURI": "https://assets.coingecko.com/coins/images/33669/thumb/sUSDe-Symbol-Color.png?1716307680",
       "assetGroup": "SUSDE",
-      "currencyId": "Ethena Staked USDe::SUSDE"
+      "currencyId": "Ethena Staked USDe::SUSDE",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xeb2729257280580694a06c499cb8c622e74215c8": {
       "chainId": "43114",
@@ -8775,7 +8886,10 @@
       "symbol": "USDE",
       "logoURI": "https://assets.coingecko.com/coins/images/33613/thumb/usde.png?1733810059",
       "assetGroup": "USDE",
-      "currencyId": "Ethena USDe::USDE"
+      "currencyId": "Ethena USDe::USDE",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4dc1ce9b9f9ef00c144bfad305f16c62293dc0e8": {
       "chainId": "43114",
@@ -9534,6 +9648,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/67664/thumb/TREE_logo.png?1753601041",
       "assetGroup": "Treehouse::TREE",
       "currencyId": "Treehouse::TREE"
+    },
+    "0x7b538a1840eaf2ed92eeb67ee744ae627335e201": {
+      "chainId": "43114",
+      "decimals": 6,
+      "name": "Wrapped Aave Core EURC",
+      "address": "0x7b538a1840eaf2ed92eeb67ee744ae627335e201",
+      "symbol": "waCoreEURC",
+      "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x7b538a1840eaf2ed92eeb67ee744ae627335e201.png",
+      "assetGroup": "Wrapped Aave Core EURC::waCoreEURC",
+      "currencyId": "Wrapped Aave Core EURC::waCoreEURC"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "43114",
