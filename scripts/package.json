@@ -9,12 +9,13 @@
     "lst": "tsx lst/lst.ts",
     "risk": "tsx risk/risk.ts",
     "stablecoin": "tsx stablecoin/stablecoin.ts",
+    "savings": "tsx savings/savings.ts",
     "sugar": "tsx onchain-fetch/sugar.ts",
     "onchain": "tsx onchain-fetch/fetch.ts",
     "format": "npx prettier .. -w --ignore-path .prettierignore",
     "generate": "tsx generateTokenMap.script.ts",
     "portal": "tsx portalTokens.script.ts",
-    "generate:formatted": "npm run pendle && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run generate && npm run format"
+    "generate:formatted": "npm run pendle && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run savings && npm run generate && npm run format"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",

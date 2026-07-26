@@ -254,6 +254,19 @@ export interface TokenProps {
     /** fiat peg base, e.g. 'USD' | 'EUR' | 'GBP'. Omitted for floating/variable pegs. */
     base?: string
   }
+  /**
+   * Savings-token classification: a yield-bearing wrapper whose underlying is a
+   * stablecoin (e.g. sDAI→DAI, sUSDe→USDe, sfrxUSD→frxUSD). Sourced from risk-data's
+   * DeFiLlama yield-bearing-stablecoins feed; the underlying is resolved on-chain via
+   * the ERC-4626 `asset()` getter (heuristic fallback). Presence of this prop is the
+   * savings flag.
+   */
+  savings?: {
+    /** underlying asset the wrapper earns yield on, e.g. 'DAI' | 'USDe' | 'frxUSD' */
+    underlying?: string
+    /** fiat peg of the underlying when known, e.g. 'USD' | 'EUR' | 'GBP' */
+    base?: string
+  }
   /** permit data if any */
   permit?: { type: 0 | 1; version: string }
   /** Default wrapped native token address */
@@ -280,6 +293,8 @@ export type LstProps = NonNullable<TokenProps['lst']>
 export type RiskProps = NonNullable<TokenProps['risk']>
 /** Stablecoin props shape, derived from TokenProps */
 export type StablecoinProps = NonNullable<TokenProps['stablecoin']>
+/** Savings props shape, derived from TokenProps */
+export type SavingsProps = NonNullable<TokenProps['savings']>
 /** chainId -> address(lowercase) -> RWA classification */
 export type RwaRegistry = { [chainId: string]: { [address: string]: RwaProps } }
 /** chainId -> address(lowercase) -> LST classification */
@@ -288,3 +303,5 @@ export type LstRegistry = { [chainId: string]: { [address: string]: LstProps } }
 export type RiskRegistry = { [chainId: string]: { [address: string]: RiskProps } }
 /** assetGroup -> stablecoin overlay (base is chain-independent) */
 export type StablecoinGroupMap = { [assetGroup: string]: StablecoinProps }
+/** assetGroup -> savings overlay (underlying/base is chain-independent) */
+export type SavingsGroupMap = { [assetGroup: string]: SavingsProps }

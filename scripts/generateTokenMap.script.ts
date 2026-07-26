@@ -11,6 +11,7 @@ import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
+import { lookupSavings } from './savings/savingsMap'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -273,6 +274,11 @@ async function readTokenLists(): Promise<{
                     // base is chain-independent — covers every deployment of the group.
                     const stablecoin = lookupStablecoin(assetGroup)
                     if (stablecoin && !tokenProps.stablecoin) tokenProps = { ...tokenProps, stablecoin }
+
+                    // Savings overlay (yield-bearing stablecoin wrappers, from risk-data). Keyed by
+                    // assetGroup so the underlying/base carries across every chain deployment.
+                    const savings = lookupSavings(assetGroup)
+                    if (savings && !tokenProps.savings) tokenProps = { ...tokenProps, savings }
 
                     tags = AutoGenHelpers.uniq([...tags])
 
