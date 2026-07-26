@@ -11,11 +11,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/21f9ad48-e8fc-4cdb-9a2a-b289320e005a.svg",
       "assetGroup": "PT sUSDai (USDai) Katana::PT-sUSDai-15OCT2026",
       "currencyId": "PT sUSDai (USDai) Katana::PT-sUSDai-15OCT2026",
-      "props": {
-        "pendle": {
-          "tokenType": "PT"
-        }
-      }
+      "props": { "pendle": { "tokenType": "PT" } }
     },
     "0x7fb4d0f51544f24f385a421db6e7d4fc71ad8e5c": {
       "chainId": "747474",
@@ -27,11 +23,7 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": {
-          "type": "staking",
-          "asset": "ETH",
-          "provider": "lido"
-        }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -44,11 +36,7 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": {
-          "type": "staking",
-          "asset": "BTC",
-          "provider": "lombard"
-        }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
       }
     },
     "0x9893989433e7a383cb313953e4c2365107dc19a7": {
@@ -61,11 +49,7 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": {
-          "type": "restaking",
-          "asset": "ETH",
-          "provider": "etherfi"
-        }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
       }
     },
     "0x6c16e26013f2431e8b2e1ba7067ecccad0db6c52": {
@@ -78,15 +62,8 @@
       "assetGroup": "Jito Staked SOL::JitoSOL",
       "currencyId": "Jito Staked SOL::JitoSOL",
       "props": {
-        "lst": {
-          "type": "staking",
-          "asset": "SOL",
-          "provider": "jito"
-        },
-        "risk": {
-          "level": "green",
-          "score": 1
-        }
+        "lst": { "type": "staking", "asset": "SOL", "provider": "jito" },
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
       }
     },
     "0x7f1f4b4b29f5058fa32cc7a97141b8d7e5abdc2d": {
@@ -98,12 +75,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/kat.svg",
       "assetGroup": "Katana Network Token::KAT",
       "currencyId": "Katana Network Token::KAT",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x3ba1fbc4c3aea775d335b31fb53778f46fd3a330": {
       "chainId": "747474",
@@ -113,8 +85,7 @@
       "symbol": "KAT",
       "logoURI": "https://cdn.morpho.org/assets/logos/kat.svg",
       "assetGroup": "Katana Network Token (wrapped)::KAT",
-      "currencyId": "Katana Network Token (wrapped)::KAT",
-      "props": {}
+      "currencyId": "Katana Network Token (wrapped)::KAT"
     },
     "0x6e9c1f88a960fe63387eb4b71bc525a9313d8461": {
       "chainId": "747474",
@@ -124,8 +95,7 @@
       "symbol": "KAT",
       "logoURI": "https://cdn.morpho.org/assets/logos/kat.svg",
       "assetGroup": "Katana Network Token (wrapped v2)::KAT",
-      "currencyId": "Katana Network Token (wrapped v2)::KAT",
-      "props": {}
+      "currencyId": "Katana Network Token (wrapped v2)::KAT"
     },
     "0x17bff452dae47e07cea877ff0e1aba17eb62b0ab": {
       "chainId": "747474",
@@ -136,12 +106,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/sushi.svg",
       "assetGroup": "SushiToken::SUSHI",
       "currencyId": "SushiToken::SUSHI",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0xee7d8bcfb72bc1880d0cf19822eb0a2e6577ab62": {
       "chainId": "747474",
@@ -153,22 +118,9 @@
       "assetGroup": "ETH",
       "currencyId": "Vault Bridge ETH::vbETH",
       "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        },
+        "permit": { "type": 1, "version": "1" },
         "wnative": true,
-        "risk": {
-          "level": "green",
-          "score": 2,
-          "upgradeable": true,
-          "adminKind": "SAFE",
-          "pause": true,
-          "controller": {
-            "kind": null,
-            "tier": "unknown"
-          }
-        }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
       }
     },
     "0x203a662b0bd271a6ed5a60edfbd04bfce608fd36": {
@@ -180,12 +132,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/vbusdc.svg",
       "assetGroup": "USDC",
       "currencyId": "Vault Bridge USDC::vbUSDC",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x2dca96907fde857dd3d816880a0df407eeb2d2f2": {
       "chainId": "747474",
@@ -196,12 +143,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/vbusdt.svg",
       "assetGroup": "USDT",
       "currencyId": "Vault Bridge USDT::vbUSDT",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x0913da6da4b42f538b445599b46bb4622342cf52": {
       "chainId": "747474",
@@ -212,12 +154,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/vbwbtc.svg",
       "assetGroup": "WBTC",
       "currencyId": "Vault Bridge WBTC::vbWBTC",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
       "chainId": "747474",
@@ -227,8 +164,7 @@
       "symbol": "AUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/ausd.svg",
       "assetGroup": "AUSD",
-      "currencyId": "AUSD::AUSD",
-      "props": {}
+      "currencyId": "AUSD::AUSD"
     },
     "0x1e5efca3d0db2c6d5c67a4491845c43253eb9e4e": {
       "chainId": "747474",
@@ -239,12 +175,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/morpho.svg",
       "assetGroup": "MORPHO",
       "currencyId": "Morpho Token::MORPHO",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x9b8df6e244526ab5f6e6400d331db28c8fdddb55": {
       "chainId": "747474",
@@ -256,16 +187,8 @@
       "assetGroup": "Solana (Universal)::uSOL",
       "currencyId": "Solana (Universal)::uSOL",
       "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        },
-        "risk": {
-          "level": "yellow",
-          "score": 3,
-          "upgradeable": true,
-          "adminKind": "SAFE"
-        }
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xb24e3035d1fcbc0e43cf3143c3fd92e53df2009b": {
@@ -277,12 +200,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/pol.svg",
       "assetGroup": "POL",
       "currencyId": "Polygon::POL",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0xb0f70c0bd6fd87dbeb7c10dc692a2a6106817072": {
       "chainId": "747474",
@@ -294,21 +212,8 @@
       "assetGroup": "Bitcoin on Katana::BTCK",
       "currencyId": "Bitcoin on Katana::BTCK",
       "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        },
-        "risk": {
-          "level": "yellow",
-          "score": 3,
-          "upgradeable": true,
-          "adminKind": "TIMELOCK",
-          "pause": true,
-          "controller": {
-            "kind": "TIMELOCK",
-            "tier": "medium"
-          }
-        }
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x62d6a123e8d19d06d68cf0d2294f9a3a0362c6b3": {
@@ -320,12 +225,7 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0xdc035d45d973e3ec169d2276ddab16f1e407384f/78fbc2e73e33fa80fcecfaafa2074887.png",
       "assetGroup": "USDS",
       "currencyId": "Vault Bridge USDS::vbUSDS",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0xb0505e5a99abd03d94a1169e638b78edfed26ea4": {
       "chainId": "747474",
@@ -336,12 +236,7 @@
       "logoURI": "https://static.debank.com/image/world_token/logo_url/0xb0505e5a99abd03d94a1169e638b78edfed26ea4/3ded500b84a0ee8ed79f088e96f841d9.png",
       "assetGroup": "Sui (Universal)::uSUI",
       "currencyId": "Sui (Universal)::uSUI",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x2615a94df961278dcbc41fb0a54fec5f10a693ae": {
       "chainId": "747474",
@@ -352,12 +247,7 @@
       "logoURI": "https://static.debank.com/image/world_token/logo_url/0x2615a94df961278dcbc41fb0a54fec5f10a693ae/33060c349aaec14e8ca665fba57b9c4c.png",
       "assetGroup": "XRP (Universal)::uXRP",
       "currencyId": "XRP (Universal)::uXRP",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x476eacd417cd65421bd34fca054377658bb5e02b": {
       "chainId": "747474",
@@ -368,12 +258,7 @@
       "logoURI": "https://static.debank.com/image/coin/logo_url/yearn/f14ac7f4efe5c51e1c6b32add3dea10c.png",
       "assetGroup": "yearn.finance::YFI",
       "currencyId": "yearn.finance::YFI",
-      "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "747474",
@@ -383,8 +268,7 @@
       "symbol": "WETH",
       "logoURI": "https://static.debank.com/image/katana_token/logo_url/0x4200000000000000000000000000000000000006/61844453e63cf81301f845d7864236f6.png",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether::WETH",
-      "props": {}
+      "currencyId": "Wrapped Ether::WETH"
     },
     "0x80c34bd3a3569e126e7055831036aa7b212cb159": {
       "chainId": "747474",
@@ -395,12 +279,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbusdc.svg",
       "assetGroup": "vbUSDC yVault::yvvbUSDC",
       "currencyId": "vbUSDC yVault::yvvbUSDC",
-      "props": {
-        "risk": {
-          "level": "green",
-          "score": 1
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x9a6bd7b6fd5c4f87eb66356441502fc7dcdd185b": {
       "chainId": "747474",
@@ -411,12 +290,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbusdt.svg",
       "assetGroup": "vbUSDT yVault::yvvbUSDT",
       "currencyId": "vbUSDT yVault::yvvbUSDT",
-      "props": {
-        "risk": {
-          "level": "green",
-          "score": 1
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4772d2e014f9fc3a820c444e3313968e9a5c8121": {
       "chainId": "747474",
@@ -426,8 +300,7 @@
       "symbol": "yUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/yusd.svg",
       "assetGroup": "YieldFi yUSD::yUSD",
-      "currencyId": "YieldFi yUSD::yUSD",
-      "props": {}
+      "currencyId": "YieldFi yUSD::yUSD"
     },
     "0xfcef626de4a0175ac962dd43eb0a002819faaefe": {
       "chainId": "747474",
@@ -437,8 +310,7 @@
       "symbol": "sYUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/syusd.svg",
       "assetGroup": "Staked YUSD::sYUSD",
-      "currencyId": "Staked YUSD::sYUSD",
-      "props": {}
+      "currencyId": "Staked YUSD::sYUSD"
     },
     "0xfba805659e5050544e185cccdf592fd77f8c7210": {
       "chainId": "747474",
@@ -448,8 +320,7 @@
       "symbol": "KITSU",
       "logoURI": "https://assets.coingecko.com/coins/images/67868/thumb/KitsuPNG2.png?1754110292",
       "assetGroup": "Kitsu::KITSU",
-      "currencyId": "Kitsu::KITSU",
-      "props": {}
+      "currencyId": "Kitsu::KITSU"
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
       "chainId": "747474",
@@ -459,8 +330,7 @@
       "symbol": "RUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
       "assetGroup": "Reservoir rUSD::RUSD",
-      "currencyId": "Reservoir rUSD::RUSD",
-      "props": {}
+      "currencyId": "Reservoir rUSD::RUSD"
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "747474",
@@ -470,8 +340,7 @@
       "symbol": "WSRUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/66163/thumb/wsrUSD.png?1748500965",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
-      "currencyId": "Wrapped Savings rUSD::WSRUSD",
-      "props": {}
+      "currencyId": "Wrapped Savings rUSD::WSRUSD"
     },
     "0xe007ca01894c863d7898045ed5a3b4abf0b18f37": {
       "chainId": "747474",
@@ -482,12 +351,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbeth.svg",
       "assetGroup": "vbETH yVault::yvvbETH",
       "currencyId": "vbETH yVault::yvvbETH",
-      "props": {
-        "risk": {
-          "level": "green",
-          "score": 1
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xaa0362ecc584b985056e47812931270b99c91f9d": {
       "chainId": "747474",
@@ -498,12 +362,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbwbtc.svg",
       "assetGroup": "vbWBTC yVault::yvvbWBTC",
       "currencyId": "vbWBTC yVault::yvvbWBTC",
-      "props": {
-        "risk": {
-          "level": "green",
-          "score": 1
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xc2c447b04e0ed3476ddbdae8e9e39be7159d27b6": {
       "chainId": "747474",
@@ -513,8 +372,7 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK",
-      "props": {}
+      "currencyId": "ChainLink Token::LINK"
     },
     "0x93fec6639717b6215a48e5a72a162c50dcc40d68": {
       "chainId": "747474",
@@ -527,8 +385,9 @@
       "currencyId": "AUSD yVault::AUSD",
       "props": {
         "risk": {
-          "level": "green",
-          "score": 1
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -542,20 +401,11 @@
       "assetGroup": "dTRINITY USD::DUSD",
       "currencyId": "dTRINITY USD::DUSD",
       "props": {
-        "permit": {
-          "type": 1,
-          "version": "1"
-        },
+        "permit": { "type": 1, "version": "1" },
         "risk": {
-          "level": "yellow",
           "score": 3,
-          "upgradeable": true,
-          "adminKind": "TIMELOCK",
-          "pause": true,
-          "controller": {
-            "kind": null,
-            "tier": "unknown"
-          }
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -567,8 +417,7 @@
       "symbol": "WFRAX",
       "logoURI": "https://assets.coingecko.com/coins/images/55432/thumb/wfrax_64.png?1745993624",
       "assetGroup": "Wrapped FRAX::WFRAX",
-      "currencyId": "Wrapped FRAX::WFRAX",
-      "props": {}
+      "currencyId": "Wrapped FRAX::WFRAX"
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "747474",
@@ -578,8 +427,7 @@
       "symbol": "FRXUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/53963/thumb/frxUSD.png?1737792154",
       "assetGroup": "FRXUSD",
-      "currencyId": "Frax USD::FRXUSD",
-      "props": {}
+      "currencyId": "Frax USD::FRXUSD"
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
       "chainId": "747474",
@@ -589,8 +437,7 @@
       "symbol": "sfrxUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/sfrxusd.svg",
       "assetGroup": "Staked Frax USD::sfrxUSD",
-      "currencyId": "Staked Frax USD::sfrxUSD",
-      "props": {}
+      "currencyId": "Staked Frax USD::sfrxUSD"
     },
     "0xc6135d59f8d10c9c035963ce9037b3635170d716": {
       "chainId": "747474",
@@ -600,8 +447,7 @@
       "symbol": "MRE7SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/70338/thumb/mre7sol-C2QhWme8.png?1761638664",
       "assetGroup": "Midas mRe7SOL::MRE7SOL",
-      "currencyId": "Midas mRe7SOL::MRE7SOL",
-      "props": {}
+      "currencyId": "Midas mRe7SOL::MRE7SOL"
     },
     "0x339893a2fe63ed56c4bae83e056f3131f9e3623f": {
       "chainId": "747474",
@@ -611,8 +457,7 @@
       "symbol": "PT-yvvbUSDC(vbUSDC)-2026/02/13",
       "logoURI": "https://cdn.morpho.org/assets/logos/pt-yvvbusdc(vbusdc).svg",
       "assetGroup": "Principal Token: yvvbUSDC(vbUSDC) 2026/02/13::PT-yvvbUSDC(vbUSDC)-2026/02/13",
-      "currencyId": "Principal Token: yvvbUSDC(vbUSDC) 2026/02/13::PT-yvvbUSDC(vbUSDC)-2026/02/13",
-      "props": {}
+      "currencyId": "Principal Token: yvvbUSDC(vbUSDC) 2026/02/13::PT-yvvbUSDC(vbUSDC)-2026/02/13"
     },
     "0x926a8a63fa1e1fdbbeb811a0319933b1a0f1edbb": {
       "chainId": "747474",
@@ -622,8 +467,7 @@
       "symbol": "mHYPER",
       "logoURI": "https://cdn.morpho.org/assets/logos/mhyper.svg",
       "assetGroup": "Midas Hyperithm::mHYPER",
-      "currencyId": "Midas Hyperithm::mHYPER",
-      "props": {}
+      "currencyId": "Midas Hyperithm::mHYPER"
     },
     "0x7231dbacdfc968e07656d12389ab20de82fbfceb": {
       "chainId": "747474",
@@ -633,8 +477,7 @@
       "symbol": "avKAT",
       "logoURI": "https://cdn.morpho.org/assets/logos/avkat.svg",
       "assetGroup": "Autocompounding vKAT::avKAT",
-      "currencyId": "Autocompounding vKAT::avKAT",
-      "props": {}
+      "currencyId": "Autocompounding vKAT::avKAT"
     },
     "0x68943c066747690ecdaeb027fa722b090ee6f92d": {
       "chainId": "747474",
@@ -644,8 +487,7 @@
       "symbol": "siUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/siusd.svg",
       "assetGroup": "Staked InfiniFi USD::siUSD",
-      "currencyId": "Staked InfiniFi USD::siUSD",
-      "props": {}
+      "currencyId": "Staked InfiniFi USD::siUSD"
     },
     "0x1b6e79f9da388387ed67a89cba06948e78d16796": {
       "chainId": "747474",
@@ -654,8 +496,7 @@
       "address": "0x1b6e79f9da388387ed67a89cba06948e78d16796",
       "symbol": "MERC",
       "assetGroup": "MockERC20::MERC",
-      "currencyId": "MockERC20::MERC",
-      "props": {}
+      "currencyId": "MockERC20::MERC"
     },
     "0x297612c171fc8adce32ac333085a9ee1f2bcc1da": {
       "chainId": "747474",
@@ -665,10 +506,7 @@
       "symbol": "avKAT",
       "assetGroup": "Autocompounding vKAT::avKAT::suspicious::297612c1",
       "currencyId": "Autocompounding vKAT::avKAT",
-      "props": {
-        "suspicious": true,
-        "mimic": true
-      }
+      "props": { "suspicious": true, "mimic": true }
     },
     "0x87f658d0e9d500214f3848536e070f45af10ae7e": {
       "chainId": "747474",
@@ -679,19 +517,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/pt-yvvbusdc(vbusdc).svg",
       "assetGroup": "Principal Token: yvvbUSDC(vbUSDC) 2026/08/02::PT-yvvbUSDC(vbUSDC)-2026/08/02",
       "currencyId": "Principal Token: yvvbUSDC(vbUSDC) 2026/08/02::PT-yvvbUSDC(vbUSDC)-2026/08/02",
-      "props": {
-        "risk": {
-          "level": "red",
-          "score": 4,
-          "upgradeable": true,
-          "adminKind": "UNKNOWN",
-          "pause": true,
-          "controller": {
-            "kind": null,
-            "tier": "unknown"
-          }
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xbb5874022ae19e2060b4bed1f310cb8e4a677fd9": {
       "chainId": "747474",
@@ -701,10 +527,7 @@
       "symbol": "avKAT",
       "assetGroup": "Autocompounding vKAT::avKAT::suspicious::bb587402",
       "currencyId": "Autocompounding vKAT::avKAT",
-      "props": {
-        "suspicious": true,
-        "mimic": true
-      }
+      "props": { "suspicious": true, "mimic": true }
     },
     "0xcd6863bb697d7cee5b7ed8dea7d803374f7e4aa6": {
       "chainId": "747474",
@@ -714,10 +537,7 @@
       "symbol": "MERC",
       "assetGroup": "MockERC20::MERC::suspicious::cd6863bb",
       "currencyId": "MockERC20::MERC",
-      "props": {
-        "suspicious": true,
-        "mimic": true
-      }
+      "props": { "suspicious": true, "mimic": true }
     },
     "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de": {
       "chainId": "747474",
@@ -726,8 +546,7 @@
       "address": "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de",
       "symbol": "vyUSD",
       "assetGroup": "YieldFi vyUSD::vyUSD",
-      "currencyId": "YieldFi vyUSD::vyUSD",
-      "props": {}
+      "currencyId": "YieldFi vyUSD::vyUSD"
     },
     "0xfcff2086192bd2f134b9bfa3acc4e7646b697d4b": {
       "chainId": "747474",
@@ -736,8 +555,7 @@
       "address": "0xfcff2086192bd2f134b9bfa3acc4e7646b697d4b",
       "symbol": "yUTY",
       "assetGroup": "Staked UTY::yUTY",
-      "currencyId": "Staked UTY::yUTY",
-      "props": {}
+      "currencyId": "Staked UTY::yUTY"
     },
     "0x0ef68c1ab3c83cf11f9546faba385e8a1bd38d74": {
       "chainId": "747474",
@@ -747,8 +565,7 @@
       "symbol": "WOOFY",
       "logoURI": "https://assets.coingecko.com/coins/images/102173146/thumb/photo_2026-05-05_10-18-59.jpg?1778063675",
       "assetGroup": "Woofy::WOOFY",
-      "currencyId": "Woofy::WOOFY",
-      "props": {}
+      "currencyId": "Woofy::WOOFY"
     },
     "0xbdcaaa7439a0fc6e01326d36ab8d72cceecd1f5a": {
       "chainId": "747474",
@@ -758,8 +575,7 @@
       "symbol": "BMX",
       "logoURI": "https://assets.coingecko.com/coins/images/31699/thumb/256x256_frame.png?1777046529",
       "assetGroup": "Boardwalk::BMX",
-      "currencyId": "Boardwalk::BMX",
-      "props": {}
+      "currencyId": "Boardwalk::BMX"
     },
     "0x88887be419578051ff9f4eb6c858a951921d8888": {
       "chainId": "747474",
@@ -769,8 +585,7 @@
       "symbol": "stcUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/stcusd.svg",
       "assetGroup": "Staked Cap USD::stcUSD",
-      "currencyId": "Staked Cap USD::stcUSD",
-      "props": {}
+      "currencyId": "Staked Cap USD::stcUSD"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "747474",
@@ -814,6 +629,5 @@
     "0x7fb4d0f51544f24f385a421db6e7d4fc71ad8e5c",
     "0xc6135d59f8d10c9c035963ce9037b3635170d716",
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0"
-  ],
-  "riskAssessedAt": "2026-07-26T11:42:09.769Z"
+  ]
 }
