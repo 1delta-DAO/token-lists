@@ -11,7 +11,10 @@
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/weth.svg",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0xa9f32a851b1800742e47725da54a09a7ef2556a3": {
       "chainId": "1729",
@@ -31,7 +34,10 @@
       "symbol": "deUSD",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/deUSD.svg",
       "assetGroup": "DEUSD",
-      "currencyId": "deUSD::deUSD"
+      "currencyId": "deUSD::deUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x4d3feb76ab1c7ef40388cd7a2066edace1a2237d": {
       "chainId": "1729",
@@ -41,7 +47,10 @@
       "symbol": "sdeUSD",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/deUSD.svg",
       "assetGroup": "Staked deUSD::sdeUSD",
-      "currencyId": "Staked deUSD::sdeUSD"
+      "currencyId": "Staked deUSD::sdeUSD",
+      "props": {
+        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1729",

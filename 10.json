@@ -20,7 +20,8 @@
           "ytAddress": "0x1dfe41cc7f7860ba7f1076ca6d0fedd707c87a00",
           "syAddress": "0x96a528f4414ac3ccd21342996c93f2ecdec24286",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x1dfe41cc7f7860ba7f1076ca6d0fedd707c87a00": {
@@ -41,7 +42,8 @@
           "ptAddress": "0xf4225f061e5e01aa59de5e615729a9180301eb07",
           "syAddress": "0x96a528f4414ac3ccd21342996c93f2ecdec24286",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x96a528f4414ac3ccd21342996c93f2ecdec24286": {
@@ -61,7 +63,8 @@
           "underlyingAsset": "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb",
           "ptAddress": "0xf4225f061e5e01aa59de5e615729a9180301eb07",
           "ytAddress": "0x1dfe41cc7f7860ba7f1076ca6d0fedd707c87a00"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xaa92ea52612fa5ee5aba5510682485c19750cb82": {
@@ -82,7 +85,8 @@
           "ytAddress": "0xe8f0cf61598e0d7d20f99b978bdeff4d4222feb8",
           "syAddress": "0x9d6d509c0354aca187aac6bea7d063d3ef68e2a0",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xe8f0cf61598e0d7d20f99b978bdeff4d4222feb8": {
@@ -103,7 +107,8 @@
           "ptAddress": "0xaa92ea52612fa5ee5aba5510682485c19750cb82",
           "syAddress": "0x9d6d509c0354aca187aac6bea7d063d3ef68e2a0",
           "expired": true
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x9d6d509c0354aca187aac6bea7d063d3ef68e2a0": {
@@ -123,7 +128,8 @@
           "underlyingAsset": "0x9bcef72be871e61ed4fbbc7630889bee758eb81d",
           "ptAddress": "0xaa92ea52612fa5ee5aba5510682485c19750cb82",
           "ytAddress": "0xe8f0cf61598e0d7d20f99b978bdeff4d4222feb8"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xa1cdab15bba75a80df4089cafba013e376957cf5": {
@@ -192,7 +198,8 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0x1f32b1c2345538c0c6f582fcb022739c4a194ebb": {
@@ -205,7 +212,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0xaddb6a0412de1ba0f936dcaeb8aaa24578dcf3b2": {
@@ -368,7 +376,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/aave.webp",
       "assetGroup": "AAVE",
       "currencyId": "Aave::AAVE",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0xff733b2a3557a7ed6697007ab5d11b79fdd1b76b": {
       "chainId": "10",
@@ -483,7 +494,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "permit": { "type": 1, "version": "2" } }
+      "props": {
+        "permit": { "type": 1, "version": "2" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x9e5aac1ba1a2e6aed6b32689dfcf62a509ca96f3": {
       "chainId": "10",
@@ -615,7 +629,8 @@
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xfeaa9194f9f8c1b65429e31341a103071464907e": {
       "chainId": "10",
@@ -635,7 +650,10 @@
       "symbol": "LUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/14666/thumb/Group_3.png?1617631327",
       "assetGroup": "LUSD",
-      "currencyId": "Liquity USD::LUSD"
+      "currencyId": "Liquity USD::LUSD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x50c5725949a6f0c72e6c4a641f24049a917db0cb": {
       "chainId": "10",
@@ -686,7 +704,14 @@
       "logoURI": "https://ethereum-optimism.github.io/data/OP/logo.png",
       "assetGroup": "OP",
       "currencyId": "Optimism::OP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 2,
+          "category": "ESTABLISHED_DEFI",
+          "source": "whitelist"
+        }
+      }
     },
     "0x6af3cb766d6cd37449bfd321d961a61b0515c1bc": {
       "chainId": "10",
@@ -907,7 +932,10 @@
       "symbol": "USDC.e",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
-      "currencyId": "Bridged USDC::USDC.e"
+      "currencyId": "Bridged USDC::USDC.e",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x94b008aa00579c1307b0ef2c499ad98a8ce58e58": {
       "chainId": "10",
@@ -917,7 +945,10 @@
       "symbol": "USDT",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x7d14206c937e70e19e3a5b94011faf0d5b3928e2": {
       "chainId": "10",
@@ -937,7 +968,8 @@
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "10",
@@ -948,7 +980,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 2, "source": "whitelist" }
+      }
     },
     "0x3e5d9d8a63cc8a88748f229999cf59487e90721e": {
       "chainId": "10",
@@ -1162,7 +1197,10 @@
       "symbol": "sUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/5013/thumb/sUSD.png?1616150765",
       "assetGroup": "SUSD",
-      "currencyId": "Synth sUSD::sUSD"
+      "currencyId": "Synth sUSD::sUSD",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x3eaeb77b03dbc0f6321ae1b72b2e9adb0f60112b": {
       "chainId": "10",
@@ -1202,7 +1240,10 @@
       "symbol": "USDC",
       "logoURI": "https://ethereum-optimism.github.io/data/USDC/logo.png",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x9560e827af36c94d2ac33a39bce1fe78631088db": {
       "chainId": "10",
@@ -1213,7 +1254,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/12538/standard/Logo_200x_200.png?1696512350",
       "assetGroup": "Velodrome V2::VELO",
       "currencyId": "Velodrome V2::VELO",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x871f2f2ff935fd1ed867842ff2a7bfd051a5e527": {
       "chainId": "10",
@@ -1440,7 +1484,8 @@
       "symbol": "miMATIC",
       "logoURI": "https://assets.smold.app/api/token/10/0xdFA46478F9e5EA86d57387849598dbFB2e964b02/logo-128.png",
       "assetGroup": "MIMATIC",
-      "currencyId": "Mai Stablecoin::miMATIC"
+      "currencyId": "Mai Stablecoin::miMATIC",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee": {
       "chainId": "10",
@@ -1461,7 +1506,8 @@
       "symbol": "VELO",
       "logoURI": "https://optimistic.etherscan.io/token/images/velodrome_32.png",
       "assetGroup": "Velodrome::VELO",
-      "currencyId": "Velodrome::VELO"
+      "currencyId": "Velodrome::VELO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x47536f17f4ff30e64a96a7555826b8f9e66ec468": {
       "chainId": "10",
@@ -1937,7 +1983,10 @@
       "logoURI": "https://static.debank.com/image/op_token/logo_url/0x10398abc267496e49106b07dd6be13364d10dc71/a79947b52d0330dff1c7bfa19007c4a6.png",
       "assetGroup": "Let's Get HAI::HAI",
       "currencyId": "Let's Get HAI::HAI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x191c10aa4af7c30e871e70c95db0e4eb77237530": {
       "chainId": "10",
@@ -2171,7 +2220,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xc5b001dc33727f8f26880b184090d3e252470d45/small/token-logo.png",
       "assetGroup": "Ethos Reserve Note::ERN",
       "currencyId": "Ethos Reserve Note::ERN",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xfd389dc9533717239856190f42475d3f263a270d": {
       "chainId": "10",
@@ -2233,7 +2285,10 @@
       "symbol": "USDA",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x0000206329b97db379d5e1bf586bbdb969c63274/small/token-logo.png",
       "assetGroup": "USDA",
-      "currencyId": "Angle USDA::USDA"
+      "currencyId": "Angle USDA::USDA",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x3925f9820c312d968644f12ebd314c13558a7c05": {
       "chainId": "10",
@@ -5406,7 +5461,14 @@
       "symbol": "stUSD",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/stUSD.svg",
       "assetGroup": "Angle Staked USDA::stUSD",
-      "currencyId": "Angle Staked USDA::stUSD"
+      "currencyId": "Angle Staked USDA::stUSD",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        }
+      }
     },
     "0x7d342726b69c28d942ad8bfe6ac81b972349d524": {
       "chainId": "10",

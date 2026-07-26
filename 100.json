@@ -241,7 +241,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 2, "source": "whitelist" }
       }
     },
     "0xc791240d1f2def5938e2031364ff4ed887133c3d": {
@@ -299,7 +300,8 @@
       "symbol": "GNO",
       "logoURI": "https://assets.coingecko.com/coins/images/662/thumb/logo_square_simple_300px.png?1696501854",
       "assetGroup": "GNO",
-      "currencyId": "Gnosis Token::GNO"
+      "currencyId": "Gnosis Token::GNO",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xd3dff217818b4f33eb38a243158fbed2bbb029d3": {
       "chainId": "100",
@@ -308,7 +310,14 @@
       "address": "0xd3dff217818b4f33eb38a243158fbed2bbb029d3",
       "symbol": "RTW-USD-01",
       "assetGroup": "RealToken Wrapped USD 01::RTW-USD-01",
-      "currencyId": "RealToken Wrapped USD 01::RTW-USD-01"
+      "currencyId": "RealToken Wrapped USD 01::RTW-USD-01",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x2995d1317dcd4f0ab89f4ae60f3f020a4f17c7ce": {
       "chainId": "100",
@@ -389,7 +398,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/11062/thumb/Identity-Primary-DarkBG.png?1696511004",
       "assetGroup": "XDAI",
       "currencyId": "Wrapped xDAI::WXDAI",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1": {
       "chainId": "100",
@@ -399,7 +411,8 @@
       "symbol": "WETH",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether::WETH"
+      "currencyId": "Wrapped Ether::WETH",
+      "props": { "risk": { "score": 2, "source": "whitelist" } }
     },
     "0xddafbb505ad214d7b80b1f830fccc89b60fb7a83": {
       "chainId": "100",
@@ -409,7 +422,10 @@
       "symbol": "USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/35300/thumb/USDC_Icon.png?1708083625",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4ecaba5870353805a9f068101a40e0f32ed605c6": {
       "chainId": "100",
@@ -549,7 +565,10 @@
       "symbol": "sDAI",
       "logoURI": "https://assets.coingecko.com/coins/images/32066/thumb/sDAI_Logo_%281%29.png?1696530863",
       "assetGroup": "SDAI",
-      "currencyId": "Savings Dai::sDAI"
+      "currencyId": "Savings Dai::sDAI",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x18e9262e68cc6c6004db93105cc7c001bb103e49": {
       "chainId": "100",
@@ -579,7 +598,10 @@
       "symbol": "USDC.e",
       "logoURI": "https://assets.coingecko.com/coins/images/38775/thumb/USDC_Icon.webp?1718798033",
       "assetGroup": "USDC",
-      "currencyId": "Bridged USDC::USDC.e"
+      "currencyId": "Bridged USDC::USDC.e",
+      "props": {
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x0aa1e96d2a46ec6beb2923de1e61addf5f5f1dce": {
       "chainId": "100",
@@ -729,7 +751,8 @@
       "symbol": "FOX",
       "logoURI": "https://assets.coingecko.com/coins/images/9988/thumb/fox_token.png?1728373561",
       "assetGroup": "ShapeShift FOX::FOX",
-      "currencyId": "ShapeShift FOX::FOX"
+      "currencyId": "ShapeShift FOX::FOX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2d5563da42b06fbbf9c67b7dc073cf6a7842239e": {
       "chainId": "100",
@@ -839,7 +862,10 @@
       "symbol": "USDA",
       "logoURI": "https://assets.coingecko.com/coins/images/34510/thumb/agUSD-coingecko.png?1705288392",
       "assetGroup": "USDA",
-      "currencyId": "Angle USDA::USDA"
+      "currencyId": "Angle USDA::USDA",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xd0dd6cef72143e22cced4867eb0d5f2328715533": {
       "chainId": "100",
@@ -939,7 +965,10 @@
       "symbol": "EURE",
       "logoURI": "https://assets.coingecko.com/coins/images/23354/thumb/eur.png?1696522569",
       "assetGroup": "Monerium EUR emoney::EURE",
-      "currencyId": "Monerium EUR emoney::EURE"
+      "currencyId": "Monerium EUR emoney::EURE",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xaad66432d27737ecf6ed183160adc5ef36ab99f2": {
       "chainId": "100",
@@ -959,7 +988,14 @@
       "symbol": "STEUR",
       "logoURI": "https://assets.coingecko.com/coins/images/32036/thumb/stEUR-x4.png?1696530832",
       "assetGroup": "Angle Staked EURA::STEUR",
-      "currencyId": "Angle Staked EURA::STEUR"
+      "currencyId": "Angle Staked EURA::STEUR",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        }
+      }
     },
     "0x3390742ac0dce14ea6fcbd5ae02e2303c5d62ad9": {
       "chainId": "100",
@@ -1209,7 +1245,10 @@
       "symbol": "BREAD",
       "logoURI": "https://assets.coingecko.com/coins/images/55143/thumb/solo_logo.png?1744126557",
       "assetGroup": "BREAD",
-      "currencyId": "Bread::BREAD"
+      "currencyId": "Bread::BREAD",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x41211bba6d37f5a74b22e667533f080c7c7f3f13": {
       "chainId": "100",
@@ -7223,7 +7262,14 @@
       "symbol": "stUSD",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/stUSD.svg",
       "assetGroup": "Angle Staked USDA::stUSD",
-      "currencyId": "Angle Staked USDA::stUSD"
+      "currencyId": "Angle Staked USDA::stUSD",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        }
+      }
     },
     "0x679922d1edca00d2f41ec9aeb023ccc1d58d045f": {
       "chainId": "100",
@@ -7533,7 +7579,10 @@
       "symbol": "GHO",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xfc421ad3c883bf9e7c4f42de845c4e4405799e73.png",
       "assetGroup": "GHO",
-      "currencyId": "Gho Token::GHO"
+      "currencyId": "Gho Token::GHO",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x8ccd277cc638e7e17f8100ce583cbcef42007dca": {
       "chainId": "100",
