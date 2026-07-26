@@ -12,6 +12,7 @@ import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
 import { lookupSavings } from './savings/savingsMap'
+import { lookupLstGroup } from './lst/lstGroupMap'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -279,6 +280,12 @@ async function readTokenLists(): Promise<{
                     // assetGroup so the underlying/base carries across every chain deployment.
                     const savings = lookupSavings(assetGroup)
                     if (savings && !tokenProps.savings) tokenProps = { ...tokenProps, savings }
+
+                    // LST/LRT overlay, keyed by assetGroup so the classification carries x-chain to
+                    // bridged deployments (wstETH, wrsETH, weETH, …). Only fills when the per-address
+                    // lst.json source list hasn't already classified this token.
+                    const lstGroup = lookupLstGroup(assetGroup)
+                    if (lstGroup && !tokenProps.lst) tokenProps = { ...tokenProps, lst: lstGroup }
 
                     tags = AutoGenHelpers.uniq([...tags])
 

@@ -12,7 +12,11 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": {
+          "type": "staking",
+          "asset": "ETH",
+          "provider": "lido"
+        }
       }
     },
     "0x0ce031aed457c870d74914ecaa7971dd3176cdaf": {
@@ -25,7 +29,11 @@
       "assetGroup": "Liquid staked Ether 2.0::stETH",
       "currencyId": "Liquid staked Ether 2.0::stETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": {
+          "type": "staking",
+          "asset": "ETH",
+          "provider": "lido"
+        }
       }
     },
     "0xba9986d2381edf1da03b0b9c1f8b00dc4aacc369": {
@@ -39,11 +47,21 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "SAFE",
+          "mint": "masterMinter",
+          "blacklist": true,
+          "pause": true,
+          "controller": {
+            "kind": "SAFE",
+            "tier": "low"
+          }
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0x3a337a6ada9d885b6ad95ec48f9b75f197b5ae35": {
@@ -57,11 +75,12 @@
       "currencyId": "Tether USD::USDT",
       "props": {
         "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "level": "green",
+          "score": 1
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -75,7 +94,10 @@
       "currencyId": "Wrapped Ether::WETH",
       "props": {
         "wnative": true,
-        "risk": { "score": 2, "source": "whitelist" }
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
       }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
@@ -86,7 +108,8 @@
       "symbol": "WBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/54974/thumb/wrapped_bitcoin_wbtc.png?1742962734",
       "assetGroup": "WBTC",
-      "currencyId": "Bridged WBTC (LayerZero)::WBTC"
+      "currencyId": "Bridged WBTC (LayerZero)::WBTC",
+      "props": {}
     },
     "0x3b0dc2dac9498a024003609031d973b1171de09e": {
       "chainId": "1868",
@@ -97,7 +120,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54782/thumb/wstASTR.png?1741570094",
       "assetGroup": "Wrapped stASTR::WSTASTR",
       "currencyId": "Wrapped stASTR::WSTASTR",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0x2cae934a1e84f693fbb78ca5ed3b0a6893259441": {
       "chainId": "1868",
@@ -108,7 +136,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53778/thumb/astar.jpg?1737341226",
       "assetGroup": "Soneium Bridged ASTR::ASTR",
       "currencyId": "Soneium Bridged ASTR::ASTR",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0xa8feaae65c44b458a16ea4e709036a2ee85d073a": {
       "chainId": "1868",
@@ -118,7 +153,8 @@
       "symbol": "HAHA",
       "logoURI": "https://assets.coingecko.com/coins/images/36245/thumb/HAHA_Logo.png?1710921482",
       "assetGroup": "Mother of Memes::HAHA",
-      "currencyId": "Mother of Memes::HAHA"
+      "currencyId": "Mother of Memes::HAHA",
+      "props": {}
     },
     "0xf24e57b1cb00d98c31f04f86328e22e8fca457fb": {
       "chainId": "1868",
@@ -130,8 +166,16 @@
       "assetGroup": "SONE::SONE",
       "currencyId": "SONE::SONE",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA"
+        }
       }
     },
     "0x60336f9296c79da4294a19153ec87f8e52158e5f": {
@@ -142,7 +186,8 @@
       "symbol": "VASTR",
       "logoURI": "https://assets.coingecko.com/coins/images/34706/thumb/vASTR.png?1705893008",
       "assetGroup": "Bifrost Voucher ASTR::VASTR",
-      "currencyId": "Bifrost Voucher ASTR::VASTR"
+      "currencyId": "Bifrost Voucher ASTR::VASTR",
+      "props": {}
     },
     "0xc67476893c166c537afd9bc6bc87b3f228b44337": {
       "chainId": "1868",
@@ -154,7 +199,10 @@
       "assetGroup": "Neemo Staked Astar::NSASTR",
       "currencyId": "Neemo Staked Astar::NSASTR",
       "props": {
-        "risk": { "score": 3, "category": "LST", "source": "whitelist" }
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
       }
     },
     "0x54e86315c03217b76a7466c302245fd10ebef25a": {
@@ -165,7 +213,8 @@
       "symbol": "YAYSTONE",
       "logoURI": "https://assets.coingecko.com/coins/images/54279/thumb/Yay!_Stone200w.png?1739438931",
       "assetGroup": "Yay StakeStone Ether::YAYSTONE",
-      "currencyId": "Yay StakeStone Ether::YAYSTONE"
+      "currencyId": "Yay StakeStone Ether::YAYSTONE",
+      "props": {}
     },
     "0xda14b3b7aef494b8c37ed9710d14e44d490316fa": {
       "chainId": "1868",
@@ -175,7 +224,8 @@
       "symbol": "YAYAGETH",
       "logoURI": "https://assets.coingecko.com/coins/images/54281/thumb/yayagETH200w.png?1739438881",
       "assetGroup": "Yay Kelp DAO s Airdrop Gain ETH::YAYAGETH",
-      "currencyId": "Yay Kelp DAO s Airdrop Gain ETH::YAYAGETH"
+      "currencyId": "Yay Kelp DAO s Airdrop Gain ETH::YAYAGETH",
+      "props": {}
     },
     "0xa0aebd4ae5f256b72b7d43f67ed934237adb1aee": {
       "chainId": "1868",
@@ -185,7 +235,8 @@
       "symbol": "BONSAICOIN",
       "logoURI": "https://assets.coingecko.com/coins/images/39273/thumb/1000007690.png?1721386111",
       "assetGroup": "BONSAICOIN",
-      "currencyId": "Bonsai Coin::BONSAICOIN"
+      "currencyId": "Bonsai Coin::BONSAICOIN",
+      "props": {}
     },
     "0x1217bfe6c773eec6cc4a38b5dc45b92292b6e189": {
       "chainId": "1868",
@@ -196,7 +247,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54815/thumb/ousdt.jpg?1741848258",
       "assetGroup": "OpenUSDT::OUSDT",
       "currencyId": "OpenUSDT::OUSDT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x6c460b2c6d6719562d5da43e5152b375e79b9a8b": {
       "chainId": "1868",
@@ -206,7 +262,8 @@
       "symbol": "PUFETH",
       "logoURI": "https://assets.coingecko.com/coins/images/35176/thumb/pufETH-200-200-resolution.png?1707753174",
       "assetGroup": "PUFETH",
-      "currencyId": "pufETH::PUFETH"
+      "currencyId": "pufETH::PUFETH",
+      "props": {}
     },
     "0xaffeb8576b927050f5a3b6fba43f360d2883a118": {
       "chainId": "1868",
@@ -217,7 +274,19 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54834/thumb/solvBTC_Jupiter.png?1741969449",
       "assetGroup": "SOLVBTC.JUP",
       "currencyId": "SolvBTC Jupiter::SolvBTC.JUP",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "CUSTOM",
+          "blacklist": true,
+          "controller": {
+            "kind": "SAFE",
+            "tier": "low"
+          }
+        }
+      }
     },
     "0x570f09ac53b96929e3868f71864e36ff6b1b67d7": {
       "chainId": "1868",
@@ -227,7 +296,8 @@
       "symbol": "ARCAS",
       "logoURI": "https://assets.coingecko.com/coins/images/17404/thumb/Arcas_Logo.png?1737199437",
       "assetGroup": "Arcas::ARCAS",
-      "currencyId": "Arcas::ARCAS"
+      "currencyId": "Arcas::ARCAS",
+      "props": {}
     },
     "0x541fd749419ca806a8bc7da8ac23d346f2df8b77": {
       "chainId": "1868",
@@ -237,7 +307,8 @@
       "symbol": "SolvBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36800/thumb/solvBTC.png?1719810684",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {}
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
       "chainId": "1868",
@@ -247,7 +318,8 @@
       "symbol": "xSolvBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39384/thumb/unnamed.png?1721961640",
       "assetGroup": "XSOLVBTC",
-      "currencyId": "xSolvBTC::xSolvBTC"
+      "currencyId": "xSolvBTC::xSolvBTC",
+      "props": {}
     },
     "0x8cd846c404c7267350a2920576816603cd5c6539": {
       "chainId": "1868",
@@ -257,7 +329,8 @@
       "symbol": "PIPO",
       "logoURI": "https://assets.coingecko.com/coins/images/54474/thumb/Pipo.jpg?1739951527",
       "assetGroup": "Pipo::PIPO",
-      "currencyId": "Pipo::PIPO"
+      "currencyId": "Pipo::PIPO",
+      "props": {}
     },
     "0x61f2993a644762a345b483adf0d6351c5edfb3b5": {
       "chainId": "1868",
@@ -267,7 +340,8 @@
       "symbol": "uBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/55079/thumb/uBTC.png?1743613297",
       "assetGroup": "UBTC",
-      "currencyId": "uBTC::uBTC"
+      "currencyId": "uBTC::uBTC",
+      "props": {}
     },
     "0x3d63825b0d8669307366e6c8202f656b9e91d368": {
       "chainId": "1868",
@@ -277,7 +351,8 @@
       "symbol": "WGC",
       "logoURI": "https://assets.coingecko.com/coins/images/37966/thumb/COIN_200x200.png?1716778831",
       "assetGroup": "Wild Goat Coin::WGC",
-      "currencyId": "Wild Goat Coin::WGC"
+      "currencyId": "Wild Goat Coin::WGC",
+      "props": {}
     },
     "0x2fc9a87b1ef46dcddf4801c36d752e0d5f243e4b": {
       "chainId": "1868",
@@ -287,7 +362,8 @@
       "symbol": "nrETH",
       "logoURI": "https://static.debank.com/image/soneium_token/logo_url/0x2fc9a87b1ef46dcddf4801c36d752e0d5f243e4b/fe282321e0d63db2fd54e93bab447658.png",
       "assetGroup": "Neemo ReStaked Ether::nrETH",
-      "currencyId": "Neemo ReStaked Ether::nrETH"
+      "currencyId": "Neemo ReStaked Ether::nrETH",
+      "props": {}
     },
     "0xea1e08a176528e2d7250a6f7001f18edf0caecf0": {
       "chainId": "1868",
@@ -297,7 +373,8 @@
       "symbol": "xnASTR",
       "logoURI": "https://img.sonex.so/xnASTR-logo.png",
       "assetGroup": "Algem xnASTR::xnASTR",
-      "currencyId": "Algem xnASTR::xnASTR"
+      "currencyId": "Algem xnASTR::xnASTR",
+      "props": {}
     },
     "0x1bd45cc20ce61be344a64218e6ade01e72b08f39": {
       "chainId": "1868",
@@ -307,7 +384,12 @@
       "symbol": "aSoneWETH",
       "assetGroup": "Aave Soneium WETH::aSoneWETH",
       "currencyId": "Aave Soneium WETH::aSoneWETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0xb2c9e934a55b58d20496a5019f8722a96d8a44d8": {
       "chainId": "1868",
@@ -317,7 +399,12 @@
       "symbol": "aSoneUSDCe",
       "assetGroup": "Aave Soneium USDCe::aSoneUSDCe",
       "currencyId": "Aave Soneium USDCe::aSoneUSDCe",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0xbab0366adda6d2845c6bb5db4339a824350d24f7": {
       "chainId": "1868",
@@ -327,7 +414,12 @@
       "symbol": "aSoneUSDT",
       "assetGroup": "Aave Soneium USDT::aSoneUSDT",
       "currencyId": "Aave Soneium USDT::aSoneUSDT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x102d758f688a4c1c5a80b116bd945d4455460282": {
       "chainId": "1868",
@@ -339,8 +431,13 @@
       "assetGroup": "USDT",
       "currencyId": "Stargate Bridged USDT0::USDT0",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0x139450c2dcef827c9a2a0bb1cb5506260940c9fd": {
@@ -354,9 +451,10 @@
       "currencyId": "SuperReturn sSuperUSD::SSUPERUSD",
       "props": {
         "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
-          "source": "whitelist"
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA"
         }
       }
     },
@@ -370,7 +468,12 @@
       "assetGroup": "Resolv RLP::RLP",
       "currencyId": "Resolv RLP::RLP",
       "props": {
-        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "TIMELOCK"
+        }
       }
     },
     "0xb1b385542b6e80f77b94393ba8342c3af699f15c": {
@@ -383,7 +486,12 @@
       "assetGroup": "Resolv USD::USR",
       "currencyId": "Resolv USD::USR",
       "props": {
-        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "TIMELOCK"
+        }
       }
     },
     "0x2a52b289ba68bbd02676640aa9f605700c9e5699": {
@@ -397,11 +505,15 @@
       "currencyId": "Resolv wstUSR::WSTUSR",
       "props": {
         "risk": {
-          "score": 5,
-          "category": "COMPROMISED",
-          "source": "whitelist"
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "TIMELOCK"
         },
-        "savings": { "underlying": "USR", "base": "USD" }
+        "savings": {
+          "underlying": "USR",
+          "base": "USD"
+        }
       }
     },
     "0xf765356c901a064a74fa4560622f21c91048c3d7": {
@@ -413,7 +525,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14040/thumb/SV-Logo-200x200.png?1706880312",
       "assetGroup": "SuperVerse::SUPER",
       "currencyId": "SuperVerse::SUPER",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x32d8f819c8080ae44375f8d383ffd39fc642f3ec": {
       "chainId": "1868",
@@ -423,7 +540,8 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {}
     },
     "0x3f99231dd03a9f0e7e3421c92b7b90fbe012985a": {
       "chainId": "1868",
@@ -436,11 +554,19 @@
       "currencyId": "Startale USD::USDSC",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "SAFE",
+          "blacklist": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0xd8bf9997f46dcda1be57018ec8e7728e8f7c139a": {
@@ -451,7 +577,8 @@
       "symbol": "KYO",
       "logoURI": "https://assets.coingecko.com/coins/images/71031/thumb/Kyo.png?1765377840",
       "assetGroup": "Kyo::KYO",
-      "currencyId": "Kyo::KYO"
+      "currencyId": "Kyo::KYO",
+      "props": {}
     },
     "0x9317841c2e9f6bcb44119c184152cfb1ef79034a": {
       "chainId": "1868",
@@ -461,7 +588,8 @@
       "symbol": "LOOT",
       "logoURI": "https://assets.coingecko.com/coins/images/71197/thumb/lootcoin-logo.jpg?1766302463",
       "assetGroup": "Lootcoin::LOOT",
-      "currencyId": "Lootcoin::LOOT"
+      "currencyId": "Lootcoin::LOOT",
+      "props": {}
     },
     "0x194bef1cc4d8e97fc6abeaface5c9872eeefdea4": {
       "chainId": "1868",
@@ -470,7 +598,8 @@
       "address": "0x194bef1cc4d8e97fc6abeaface5c9872eeefdea4",
       "symbol": "INTERN",
       "assetGroup": "INTERN::INTERN",
-      "currencyId": "INTERN::INTERN"
+      "currencyId": "INTERN::INTERN",
+      "props": {}
     },
     "0x19a80f5dfe30bdf19054716e221539fc040f3b72": {
       "chainId": "1868",
@@ -479,7 +608,8 @@
       "address": "0x19a80f5dfe30bdf19054716e221539fc040f3b72",
       "symbol": "yayASTR",
       "assetGroup": "Yay Staked Astar::yayASTR",
-      "currencyId": "Yay Staked Astar::yayASTR"
+      "currencyId": "Yay Staked Astar::yayASTR",
+      "props": {}
     },
     "0x651076b543c4f084e8b595818c371904fe742352": {
       "chainId": "1868",
@@ -488,7 +618,8 @@
       "address": "0x651076b543c4f084e8b595818c371904fe742352",
       "symbol": "HBI",
       "assetGroup": "HotBriquettedIron::HBI",
-      "currencyId": "HotBriquettedIron::HBI"
+      "currencyId": "HotBriquettedIron::HBI",
+      "props": {}
     },
     "0x7274364543edd6cd5ce59ad64b12e5f5837bb2f3": {
       "chainId": "1868",
@@ -497,7 +628,8 @@
       "address": "0x7274364543edd6cd5ce59ad64b12e5f5837bb2f3",
       "symbol": "xnASTR",
       "assetGroup": "Algem xnASTR::xnASTR",
-      "currencyId": "Algem xnASTR::xnASTR"
+      "currencyId": "Algem xnASTR::xnASTR",
+      "props": {}
     },
     "0x78ec2a0e1b5a0639173f0c9185455296cd63761a": {
       "chainId": "1868",
@@ -506,7 +638,8 @@
       "address": "0x78ec2a0e1b5a0639173f0c9185455296cd63761a",
       "symbol": "LWRAPPED",
       "assetGroup": "LFxVelodrome 28.06.25 ETH/yaySTONE::LWRAPPED",
-      "currencyId": "LFxVelodrome 28.06.25 ETH/yaySTONE::LWRAPPED"
+      "currencyId": "LFxVelodrome 28.06.25 ETH/yaySTONE::LWRAPPED",
+      "props": {}
     },
     "0x7a25b5faae8f06ee3ead7cd0e81706a68395ac87": {
       "chainId": "1868",
@@ -515,7 +648,8 @@
       "address": "0x7a25b5faae8f06ee3ead7cd0e81706a68395ac87",
       "symbol": "SNM",
       "assetGroup": "SONEIUM::SNM",
-      "currencyId": "SONEIUM::SNM"
+      "currencyId": "SONEIUM::SNM",
+      "props": {}
     },
     "0x7f9adfbd38b669f03d1d11000bc76b9aaea28a81": {
       "chainId": "1868",
@@ -524,7 +658,8 @@
       "address": "0x7f9adfbd38b669f03d1d11000bc76b9aaea28a81",
       "symbol": "XVELO",
       "assetGroup": "Superchain Velodrome::XVELO",
-      "currencyId": "Superchain Velodrome::XVELO"
+      "currencyId": "Superchain Velodrome::XVELO",
+      "props": {}
     },
     "0xa00223f9eb48f9afc4aa1f3d62dc16d0ea415c19": {
       "chainId": "1868",
@@ -533,7 +668,8 @@
       "address": "0xa00223f9eb48f9afc4aa1f3d62dc16d0ea415c19",
       "symbol": "SNYCAT",
       "assetGroup": "SNYCAT::SNYCAT",
-      "currencyId": "SNYCAT::SNYCAT"
+      "currencyId": "SNYCAT::SNYCAT",
+      "props": {}
     },
     "0xafcc6ae807187a31e84138f3860d4ce27973e01b": {
       "chainId": "1868",
@@ -542,7 +678,8 @@
       "address": "0xafcc6ae807187a31e84138f3860d4ce27973e01b",
       "symbol": "XOP",
       "assetGroup": "Superchain OP::XOP",
-      "currencyId": "Superchain OP::XOP"
+      "currencyId": "Superchain OP::XOP",
+      "props": {}
     },
     "0xb8c0f852c588ed93adeafdf7c3ea28989f1f91d8": {
       "chainId": "1868",
@@ -551,7 +688,8 @@
       "address": "0xb8c0f852c588ed93adeafdf7c3ea28989f1f91d8",
       "symbol": "KOBAN",
       "assetGroup": "Soneium Samurai Gold Coins::KOBAN",
-      "currencyId": "Soneium Samurai Gold Coins::KOBAN"
+      "currencyId": "Soneium Samurai Gold Coins::KOBAN",
+      "props": {}
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1868",
@@ -593,5 +731,6 @@
     "0x61f2993a644762a345b483adf0d6351c5edfb3b5",
     "0x102d758f688a4c1c5a80b116bd945d4455460282",
     "0xf765356c901a064a74fa4560622f21c91048c3d7"
-  ]
+  ],
+  "riskAssessedAt": "2026-07-26T16:23:15.573Z"
 }

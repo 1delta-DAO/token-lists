@@ -31,7 +31,12 @@
       "currencyId": "Celo (as ERC20)::CELO",
       "props": {
         "wnative": true,
-        "risk": { "score": 2, "source": "whitelist" }
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "CUSTOM"
+        }
       }
     },
     "0x2def4285787d58a2f811af24755a8150622f4361": {
@@ -42,7 +47,8 @@
       "symbol": "WETH",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether::WETH"
+      "currencyId": "Wrapped Ether::WETH",
+      "props": {}
     },
     "0xd629eb00deced2a080b7ec630ef6ac117e614f1b": {
       "chainId": "42220",
@@ -52,7 +58,8 @@
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/ubeswap/default-token-list/master/assets/asset_WBTC.png",
       "assetGroup": "WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": {}
     },
     "0xceba9300f2b948710d2653dd7b07f33a8b32118c": {
       "chainId": "42220",
@@ -65,11 +72,21 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA",
+          "mint": "masterMinter",
+          "blacklist": true,
+          "pause": true,
+          "controller": {
+            "kind": "EOA",
+            "tier": "high"
+          }
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0x48065fbbe25f71c9282ddf5e1cd6d6a887483d5e": {
@@ -83,11 +100,19 @@
       "currencyId": "Tether USD::USDT",
       "props": {
         "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "CUSTOM",
+          "blacklist": true,
+          "controller": {
+            "kind": "CUSTOM",
+            "tier": "unknown"
+          }
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0x9802d866fde4563d088a6619f7cef82c0b991a55": {
@@ -98,7 +123,8 @@
       "symbol": "MCREAL",
       "logoURI": "https://assets.coingecko.com/coins/images/26214/thumb/asset_mcREAL.png?1696525299",
       "assetGroup": "Moola interest bearing CREAL::MCREAL",
-      "currencyId": "Moola interest bearing CREAL::MCREAL"
+      "currencyId": "Moola interest bearing CREAL::MCREAL",
+      "props": {}
     },
     "0x71e26d0e519d14591b9de9a0fe9513a398101490": {
       "chainId": "42220",
@@ -108,7 +134,8 @@
       "symbol": "UBE",
       "logoURI": "https://assets.coingecko.com/coins/images/36950/thumb/ubeswap.png?1712898123",
       "assetGroup": "Ubeswap::UBE",
-      "currencyId": "Ubeswap::UBE"
+      "currencyId": "Ubeswap::UBE",
+      "props": {}
     },
     "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207": {
       "chainId": "42220",
@@ -118,7 +145,8 @@
       "symbol": "WETH",
       "logoURI": "https://assets.coingecko.com/coins/images/39887/thumb/weth.png?1724683172",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether (Wormhole)::WETH"
+      "currencyId": "Wrapped Ether (Wormhole)::WETH",
+      "props": {}
     },
     "0x2b9018ceb303d540bbf08de8e7de64fddd63396c": {
       "chainId": "42220",
@@ -128,7 +156,8 @@
       "symbol": "PACT",
       "logoURI": "https://assets.coingecko.com/coins/images/38805/thumb/pact.jpg?1735619390",
       "assetGroup": "PACT::PACT",
-      "currencyId": "PACT::PACT"
+      "currencyId": "PACT::PACT",
+      "props": {}
     },
     "0x7d00cd74ff385c955ea3d79e47bf06bd7386387d": {
       "chainId": "42220",
@@ -138,7 +167,8 @@
       "symbol": "MCELO",
       "logoURI": "https://assets.coingecko.com/coins/images/22346/thumb/1OY4GRnl_400x400_%281%29.jpg?1696521689",
       "assetGroup": "mCELO::MCELO",
-      "currencyId": "mCELO::MCELO"
+      "currencyId": "mCELO::MCELO",
+      "props": {}
     },
     "0x918146359264c492bd6934071c6bd31c854edbc3": {
       "chainId": "42220",
@@ -148,7 +178,8 @@
       "symbol": "MCUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/22380/thumb/McUSD_Blue_128x128_Square.jpg?1696521724",
       "assetGroup": "Moola Celo Dollars::MCUSD",
-      "currencyId": "Moola Celo Dollars::MCUSD"
+      "currencyId": "Moola Celo Dollars::MCUSD",
+      "props": {}
     },
     "0x17700282592d6917f6a73d0bf8accf4d578c131e": {
       "chainId": "42220",
@@ -158,7 +189,8 @@
       "symbol": "MOO",
       "logoURI": "https://assets.coingecko.com/coins/images/17719/thumb/MOO_Logo_blue.png?1696517246",
       "assetGroup": "Moola Market::MOO",
-      "currencyId": "Moola Market::MOO"
+      "currencyId": "Moola Market::MOO",
+      "props": {}
     },
     "0x73a210637f6f6b7005512677ba6b3c96bb4aa44b": {
       "chainId": "42220",
@@ -168,7 +200,8 @@
       "symbol": "MOBI",
       "logoURI": "https://assets.coingecko.com/coins/images/18467/thumb/MOBI-200.png?1696517953",
       "assetGroup": "Mobius Money::MOBI",
-      "currencyId": "Mobius Money::MOBI"
+      "currencyId": "Mobius Money::MOBI",
+      "props": {}
     },
     "0xae978582de8ca83a53eb1d8f879ba854895f96b1": {
       "chainId": "42220",
@@ -178,7 +211,8 @@
       "symbol": "TGS",
       "logoURI": "https://assets.coingecko.com/coins/images/29576/thumb/tgs.png?1696528515",
       "assetGroup": "Tegisto::TGS",
-      "currencyId": "Tegisto::TGS"
+      "currencyId": "Tegisto::TGS",
+      "props": {}
     },
     "0x456a3d042c0dbd3db53d5489e98dfb038553b0d0": {
       "chainId": "42220",
@@ -188,7 +222,8 @@
       "symbol": "CKES",
       "logoURI": "https://assets.coingecko.com/coins/images/38052/thumb/cKES_200x200.png?1716403445",
       "assetGroup": "Celo Kenyan Shilling::CKES",
-      "currencyId": "Celo Kenyan Shilling::CKES"
+      "currencyId": "Celo Kenyan Shilling::CKES",
+      "props": {}
     },
     "0x105d4a9306d2e55a71d2eb95b81553ae1dc20d7b": {
       "chainId": "42220",
@@ -198,7 +233,8 @@
       "symbol": "PUSO",
       "logoURI": "https://assets.coingecko.com/coins/images/50608/thumb/PUSO_transparent.png?1728473971",
       "assetGroup": "PUSO::PUSO",
-      "currencyId": "PUSO::PUSO"
+      "currencyId": "PUSO::PUSO",
+      "props": {}
     },
     "0xe8537a3d056da446677b9e9d6c5db704eaab4787": {
       "chainId": "42220",
@@ -208,7 +244,8 @@
       "symbol": "CREAL",
       "logoURI": "https://assets.coingecko.com/coins/images/27205/thumb/creal.png?1696526254",
       "assetGroup": "Celo Real::CREAL",
-      "currencyId": "Celo Real::CREAL"
+      "currencyId": "Celo Real::CREAL",
+      "props": {}
     },
     "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58": {
       "chainId": "42220",
@@ -218,7 +255,8 @@
       "symbol": "PACT",
       "logoURI": "https://assets.coingecko.com/coins/images/21907/thumb/PACT_Token_Ticker_Blue_2x.png?1696521258",
       "assetGroup": "PACT",
-      "currencyId": "impactMarket (OLD)::PACT"
+      "currencyId": "impactMarket (OLD)::PACT",
+      "props": {}
     },
     "0xe273ad7ee11dcfaa87383ad5977ee1504ac07568": {
       "chainId": "42220",
@@ -228,7 +266,8 @@
       "symbol": "MCEUR",
       "logoURI": "https://assets.coingecko.com/coins/images/22345/thumb/1OY4GRnl_400x400.jpg?1696521688",
       "assetGroup": "mcEUR::MCEUR",
-      "currencyId": "mcEUR::MCEUR"
+      "currencyId": "mcEUR::MCEUR",
+      "props": {}
     },
     "0x7ff62f59e3e89ea34163ea1458eebcc81177cfb6": {
       "chainId": "42220",
@@ -238,7 +277,8 @@
       "symbol": "MENTO",
       "logoURI": "https://assets.coingecko.com/coins/images/38958/thumb/MENTO_TOKEN_icon_200.png?1719691251",
       "assetGroup": "MENTO::MENTO",
-      "currencyId": "MENTO::MENTO"
+      "currencyId": "MENTO::MENTO",
+      "props": {}
     },
     "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73": {
       "chainId": "42220",
@@ -249,7 +289,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/16756/thumb/CEUR.png?1696516329",
       "assetGroup": "CEUR",
       "currencyId": "Celo Euro::CEUR",
-      "props": { "risk": { "score": 2, "source": "whitelist" } }
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec": {
       "chainId": "42220",
@@ -259,7 +306,8 @@
       "symbol": "UBE.O",
       "logoURI": "https://assets.coingecko.com/coins/images/15317/thumb/ubeswap.png?1696514966",
       "assetGroup": "Ubeswap (OLD)::UBE.O",
-      "currencyId": "Ubeswap (OLD)::UBE.O"
+      "currencyId": "Ubeswap (OLD)::UBE.O",
+      "props": {}
     },
     "0x74c0c58b99b68cf16a717279ac2d056a34ba2bfe": {
       "chainId": "42220",
@@ -269,7 +317,8 @@
       "symbol": "SOURCE",
       "logoURI": "https://assets.coingecko.com/coins/images/20740/thumb/source.png?1696520138",
       "assetGroup": "SOURCE",
-      "currencyId": "ReSource Protocol::SOURCE"
+      "currencyId": "ReSource Protocol::SOURCE",
+      "props": {}
     },
     "0xe685d21b7b0fc7a248a6a8e03b8db22d013aa2ee": {
       "chainId": "42220",
@@ -279,7 +328,8 @@
       "symbol": "IMMO",
       "logoURI": "https://assets.coingecko.com/coins/images/22189/thumb/immortal_logo.png?1696521533",
       "assetGroup": "ImmortalDAO::IMMO",
-      "currencyId": "ImmortalDAO::IMMO"
+      "currencyId": "ImmortalDAO::IMMO",
+      "props": {}
     },
     "0x27cd006548df7c8c8e9fdc4a67fa05c2e3ca5cf9": {
       "chainId": "42220",
@@ -289,7 +339,8 @@
       "symbol": "PLASTIK",
       "logoURI": "https://assets.coingecko.com/coins/images/21212/thumb/plastik.png?1696520587",
       "assetGroup": "Plastiks::PLASTIK",
-      "currencyId": "Plastiks::PLASTIK"
+      "currencyId": "Plastiks::PLASTIK",
+      "props": {}
     },
     "0x765de816845861e75a25fca122bb6898b8b1282a": {
       "chainId": "42220",
@@ -300,7 +351,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/13161/thumb/icon-celo-dollar-color-1000-circle-cropped.png?1696512945",
       "assetGroup": "CUSD",
       "currencyId": "Celo Dollar::CUSD",
-      "props": { "risk": { "score": 2, "source": "whitelist" } }
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0xfecb3f7c54e2caae9dc6ac9060a822d47e053760": {
       "chainId": "42220",
@@ -311,7 +369,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/40062/thumb/IconGreen400.png?1725459580",
       "assetGroup": "BRLA",
       "currencyId": "BRLA Digital BRLA::BRLA",
-      "props": { "stablecoin": { "base": "REAL" } }
+      "props": {
+        "stablecoin": {
+          "base": "REAL"
+        }
+      }
     },
     "0x1d18d0386f51ab03e7e84e71bda1681eba865f1f": {
       "chainId": "42220",
@@ -321,7 +383,8 @@
       "symbol": "JMPT",
       "logoURI": "https://assets.coingecko.com/coins/images/22603/thumb/200x200.png?1696521919",
       "assetGroup": "JMPT",
-      "currencyId": "JumpToken::JMPT"
+      "currencyId": "JumpToken::JMPT",
+      "props": {}
     },
     "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a": {
       "chainId": "42220",
@@ -331,7 +394,8 @@
       "symbol": "G",
       "logoURI": "https://assets.coingecko.com/coins/images/14782/thumb/G__Coin_%281%29.png?1696514451",
       "assetGroup": "GoodDollar::G",
-      "currencyId": "GoodDollar::G"
+      "currencyId": "GoodDollar::G",
+      "props": {}
     },
     "0x37f750b7cc259a2f741af45294f6a16572cf5cad": {
       "chainId": "42220",
@@ -342,7 +406,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/23019/thumb/USDCet_wh_small.png?1696522314",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Wormhole)::USDCET",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0x50e85c754929840b58614f48e29c64bc78c58345": {
       "chainId": "42220",
@@ -352,7 +420,8 @@
       "symbol": "CHAR",
       "logoURI": "https://assets.coingecko.com/coins/images/38094/thumb/char_logo_toucan.png?1716488453",
       "assetGroup": "CHAR",
-      "currencyId": "Biochar::CHAR"
+      "currencyId": "Biochar::CHAR",
+      "props": {}
     },
     "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3": {
       "chainId": "42220",
@@ -363,7 +432,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/29319/thumb/GLO_logo_pine_on_cyan_1_3.png?1716971065",
       "assetGroup": "Glo Dollar::USDGLO",
       "currencyId": "Glo Dollar::USDGLO",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0xd15ec721c2a896512ad29c671997dd68f9593226": {
       "chainId": "42220",
@@ -373,7 +446,8 @@
       "symbol": "SUSHI",
       "logoURI": "https://assets.coingecko.com/coins/images/12271/thumb/512x512_Logo_no_chop.png?1696512101",
       "assetGroup": "SUSHI",
-      "currencyId": "Sushi::SUSHI"
+      "currencyId": "Sushi::SUSHI",
+      "props": {}
     },
     "0xeb466342c4d449bc9f53a865d5cb90586f405215": {
       "chainId": "42220",
@@ -384,7 +458,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/26476/thumb/uausdc_D_3x.png?1696525548",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Axelar)::axlUSDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0xbdd31effb9e9f7509feaac5b4091b31645a47e4b": {
       "chainId": "42220",
@@ -394,7 +472,8 @@
       "symbol": "TFBX",
       "logoURI": "https://assets.coingecko.com/coins/images/8842/thumb/5rd7a55q_400x400.png?1696508994",
       "assetGroup": "Truefeedback::TFBX",
-      "currencyId": "Truefeedback::TFBX"
+      "currencyId": "Truefeedback::TFBX",
+      "props": {}
     },
     "0xc16b81af351ba9e64c1a069e3ab18c244a1e3049": {
       "chainId": "42220",
@@ -405,7 +484,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/19479/thumb/agEUR-4.png?1710726218",
       "assetGroup": "EURA",
       "currencyId": "EURA::EURA",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": {
+          "base": "EUR"
+        }
+      }
     },
     "0xd252e98c5b6ea1e29a7e2789a9ec0493707a60b9": {
       "chainId": "42220",
@@ -415,7 +498,8 @@
       "symbol": "KRW",
       "logoURI": "https://assets.coingecko.com/coins/images/16530/thumb/KRW_token_logo_200x200.png?1696516093",
       "assetGroup": "KROWN::KRW",
-      "currencyId": "KROWN::KRW"
+      "currencyId": "KROWN::KRW",
+      "props": {}
     },
     "0x9995cc8f20db5896943afc8ee0ba463259c931ed": {
       "chainId": "42220",
@@ -425,7 +509,8 @@
       "symbol": "ETHIX",
       "logoURI": "https://assets.coingecko.com/coins/images/3031/thumb/ETHIX_icon_256x256-256.png?1696503766",
       "assetGroup": "Ethix::ETHIX",
-      "currencyId": "Ethix::ETHIX"
+      "currencyId": "Ethix::ETHIX",
+      "props": {}
     },
     "0x6e512bfc33be36f2666754e996ff103ad1680cc9": {
       "chainId": "42220",
@@ -435,7 +520,8 @@
       "symbol": "ABR",
       "logoURI": "https://assets.coingecko.com/coins/images/18690/thumb/logo.png?1701737985",
       "assetGroup": "Allbridge::ABR",
-      "currencyId": "Allbridge::ABR"
+      "currencyId": "Allbridge::ABR",
+      "props": {}
     },
     "0xb9c8f0d3254007ee4b98970b94544e473cd610ec": {
       "chainId": "42220",
@@ -445,7 +531,8 @@
       "symbol": "miMATIC",
       "logoURI": "https://assets.coingecko.com/coins/images/15264/thumb/mimatic-red.png?1696514916",
       "assetGroup": "MIMATIC",
-      "currencyId": "Mai Stablecoin::miMATIC"
+      "currencyId": "Mai Stablecoin::miMATIC",
+      "props": {}
     },
     "0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c": {
       "chainId": "42220",
@@ -455,7 +542,8 @@
       "symbol": "BIFI",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0x639A647fbe20b6c8ac19E48E2de44ea792c62c5C/logo.png",
       "assetGroup": "Beefy Finance::BIFI",
-      "currencyId": "Beefy Finance::BIFI"
+      "currencyId": "Beefy Finance::BIFI",
+      "props": {}
     },
     "0xd90bbdf5904cb7d275c41f897495109b9a5ada58": {
       "chainId": "42220",
@@ -465,7 +553,8 @@
       "symbol": "cDOGE",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/cdoge.jpg",
       "assetGroup": "CeloDoge::cDOGE",
-      "currencyId": "CeloDoge::cDOGE"
+      "currencyId": "CeloDoge::cDOGE",
+      "props": {}
     },
     "0x5927fd244e11db1c7b1215619144d2aabac80a4f": {
       "chainId": "42220",
@@ -475,7 +564,8 @@
       "symbol": "CLA",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0x5927fd244E11dB1c7b1215619144d2aAbAc80a4F/logo.png",
       "assetGroup": "CeloLaunch::CLA",
-      "currencyId": "CeloLaunch::CLA"
+      "currencyId": "CeloLaunch::CLA",
+      "props": {}
     },
     "0x32a9fe697a32135bfd313a6ac28792dae4d9979d": {
       "chainId": "42220",
@@ -485,7 +575,8 @@
       "symbol": "cMCO2",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/cmco2.jpg",
       "assetGroup": "Celo Moss Carbon Credit::cMCO2",
-      "currencyId": "Celo Moss Carbon Credit::cMCO2"
+      "currencyId": "Celo Moss Carbon Credit::cMCO2",
+      "props": {}
     },
     "0xf3608f846ca73147f08fde8d57f45e27ceea4d61": {
       "chainId": "42220",
@@ -495,7 +586,8 @@
       "symbol": "cMeta",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0xF3608F846cA73147F08FdE8D57f45E27CeEA4d61/logo.png",
       "assetGroup": "MetaCelo::cMeta",
-      "currencyId": "MetaCelo::cMeta"
+      "currencyId": "MetaCelo::cMeta",
+      "props": {}
     },
     "0x22401536505dd5d85f7d57f8b37172feda8f499d": {
       "chainId": "42220",
@@ -505,7 +597,8 @@
       "symbol": "cSHIBA",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/cshiba.jpg",
       "assetGroup": "CeloShiba::cSHIBA",
-      "currencyId": "CeloShiba::cSHIBA"
+      "currencyId": "CeloShiba::cSHIBA",
+      "props": {}
     },
     "0x832f03bcee999a577cb592948983e35c048b5aa4": {
       "chainId": "42220",
@@ -515,7 +608,8 @@
       "symbol": "cXOF",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/cxof.jpg",
       "assetGroup": "Duniapay West African CFA franc::cXOF",
-      "currencyId": "Duniapay West African CFA franc::cXOF"
+      "currencyId": "Duniapay West African CFA franc::cXOF",
+      "props": {}
     },
     "0x90ca507a5d4458a4c6c6249d186b6dcb02a5bccd": {
       "chainId": "42220",
@@ -526,7 +620,11 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0x90Ca507a5D4458a4C6C6249d186b6dCb02a5BCCd/logo.png",
       "assetGroup": "DAI",
       "currencyId": "Bridged DAI (Optics v2)::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0xe4fe50cdd716522a56204352f00aa110f731932d": {
       "chainId": "42220",
@@ -537,7 +635,11 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/celo/0xE4fE50cdD716522A56204352f00AA110F731932d.jpg",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0xf2283840ce37dae0a06b40a9a80603977f36fa3f": {
       "chainId": "42220",
@@ -547,7 +649,8 @@
       "symbol": "G$",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/celo/0xf2283840cE37DAe0a06B40a9A80603977f36fA3F.jpg",
       "assetGroup": "GoodDollar::G$",
-      "currencyId": "GoodDollar::G$"
+      "currencyId": "GoodDollar::G$",
+      "props": {}
     },
     "0x7037f7296b2fc7908de7b57a89efaa8319f0c500": {
       "chainId": "42220",
@@ -557,7 +660,8 @@
       "symbol": "mCELO",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/mcelo.jpg",
       "assetGroup": "Moola CELO::mCELO",
-      "currencyId": "Moola CELO::mCELO"
+      "currencyId": "Moola CELO::mCELO",
+      "props": {}
     },
     "0xa8d0e6799ff3fd19c6459bf02689ae09c4d78ba7": {
       "chainId": "42220",
@@ -567,7 +671,8 @@
       "symbol": "mcEUR",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/mceur.jpg",
       "assetGroup": "Moola cEUR::mcEUR",
-      "currencyId": "Moola cEUR::mcEUR"
+      "currencyId": "Moola cEUR::mcEUR",
+      "props": {}
     },
     "0x64defa3544c695db8c535d289d843a189aa26b98": {
       "chainId": "42220",
@@ -577,7 +682,8 @@
       "symbol": "mcUSD",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/mcusd.jpg",
       "assetGroup": "Moola cUSD::mcUSD",
-      "currencyId": "Moola cUSD::mcUSD"
+      "currencyId": "Moola cUSD::mcUSD",
+      "props": {}
     },
     "0x8e0c1cdceeb773139b471fd1137502a28588178a": {
       "chainId": "42220",
@@ -587,7 +693,8 @@
       "symbol": "NSFW",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/celo/0x8E0C1cDCEEb773139B471fd1137502A28588178a.jpg",
       "assetGroup": "Pleasure Coin::NSFW",
-      "currencyId": "Pleasure Coin::NSFW"
+      "currencyId": "Pleasure Coin::NSFW",
+      "props": {}
     },
     "0x1a8dbe5958c597a744ba51763abebd3355996c3e": {
       "chainId": "42220",
@@ -597,7 +704,8 @@
       "symbol": "rCELO",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/rcelo.jpg",
       "assetGroup": "Rewards CELO::rCELO",
-      "currencyId": "Rewards CELO::rCELO"
+      "currencyId": "Rewards CELO::rCELO",
+      "props": {}
     },
     "0x2879bfd5e7c4ef331384e908aaa3bd3014b703fa": {
       "chainId": "42220",
@@ -607,7 +715,8 @@
       "symbol": "sCELO",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/scelo.jpg",
       "assetGroup": "Savings CELO::sCELO",
-      "currencyId": "Savings CELO::sCELO"
+      "currencyId": "Savings CELO::sCELO",
+      "props": {}
     },
     "0x29dfce9c22003a4999930382fd00f9fd6133acd1": {
       "chainId": "42220",
@@ -617,7 +726,8 @@
       "symbol": "SUSHI",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0x29dFce9c22003A4999930382Fd00f9Fd6133Acd1/logo.png",
       "assetGroup": "Optics SushiToken v2::SUSHI",
-      "currencyId": "Optics SushiToken v2::SUSHI"
+      "currencyId": "Optics SushiToken v2::SUSHI",
+      "props": {}
     },
     "0x2a3684e9dc20b857375ea04235f2f7edbe818fa7": {
       "chainId": "42220",
@@ -627,7 +737,8 @@
       "symbol": "USDCv1",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/usdc.jpg",
       "assetGroup": "Optics USDC v1::USDCv1",
-      "currencyId": "Optics USDC v1::USDCv1"
+      "currencyId": "Optics USDC v1::USDCv1",
+      "props": {}
     },
     "0xef4229c8c3250c675f21bcefa42f58efbff6002a": {
       "chainId": "42220",
@@ -637,7 +748,8 @@
       "symbol": "USDCv2",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/celo/0xef4229c8c3250C675F21BCefa42f58EfbfF6002a.jpg",
       "assetGroup": "Optics USD v2::USDCv2",
-      "currencyId": "Optics USD v2::USDCv2"
+      "currencyId": "Optics USD v2::USDCv2",
+      "props": {}
     },
     "0x1bfc26ce035c368503fae319cc2596716428ca44": {
       "chainId": "42220",
@@ -647,7 +759,8 @@
       "symbol": "USDCv2-PoS",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets//logo.png",
       "assetGroup": "Optics USDC v2 (PoS)::USDCv2-PoS",
-      "currencyId": "Optics USDC v2 (PoS)::USDCv2-PoS"
+      "currencyId": "Optics USDC v2 (PoS)::USDCv2-PoS",
+      "props": {}
     },
     "0x88eec49252c8cbc039dcdb394c0c2ba2f1637ea0": {
       "chainId": "42220",
@@ -657,7 +770,8 @@
       "symbol": "USDT",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/celo/0x88eeC49252c8cbc039DCdB394c0c2BA2f1637EA0.jpg",
       "assetGroup": "Tether USD::USDT",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {}
     },
     "0xb020d981420744f6b0fedd22bb67cd37ce18a1d5": {
       "chainId": "42220",
@@ -667,7 +781,8 @@
       "symbol": "USDTv1",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/usdt.jpg",
       "assetGroup": "Optics USDT v1::USDTv1",
-      "currencyId": "Optics USDT v1::USDTv1"
+      "currencyId": "Optics USDT v1::USDTv1",
+      "props": {}
     },
     "0xbaab46e28388d2779e6e31fd00cf0e5ad95e327b": {
       "chainId": "42220",
@@ -677,7 +792,8 @@
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0xBAAB46E28388d2779e6E31Fd00cF0e5Ad95E327B/logo.png",
       "assetGroup": "Optics WBTC v2::WBTC",
-      "currencyId": "Optics WBTC v2::WBTC"
+      "currencyId": "Optics WBTC v2::WBTC",
+      "props": {}
     },
     "0xbe50a3013a1c94768a1abb78c3cb79ab28fc1ace": {
       "chainId": "42220",
@@ -687,7 +803,8 @@
       "symbol": "WBTCv1",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/btc.jpg",
       "assetGroup": "Optics WBTC v1::WBTCv1",
-      "currencyId": "Optics WBTC v1::WBTCv1"
+      "currencyId": "Optics WBTC v1::WBTCv1",
+      "props": {}
     },
     "0x122013fd7df1c6f636a5bb8f03108e876548b455": {
       "chainId": "42220",
@@ -697,7 +814,8 @@
       "symbol": "WETH",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/celo/0x122013fd7dF1C6F636a5bb8f03108E876548b455.jpg",
       "assetGroup": "Wrapped Ether::WETH",
-      "currencyId": "Wrapped Ether::WETH"
+      "currencyId": "Wrapped Ether::WETH",
+      "props": {}
     },
     "0xe919f65739c26a42616b7b8eedc6b5524d1e3ac4": {
       "chainId": "42220",
@@ -707,7 +825,8 @@
       "symbol": "WETHv1",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/eth.jpg",
       "assetGroup": "Optics WETH v1::WETHv1",
-      "currencyId": "Optics WETH v1::WETHv1"
+      "currencyId": "Optics WETH v1::WETHv1",
+      "props": {}
     },
     "0x2e3487f967df2ebc2f236e16f8fcaeac7091324d": {
       "chainId": "42220",
@@ -717,7 +836,8 @@
       "symbol": "WMATIC",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/celo/assets/0x2E3487F967DF2Ebc2f236E16f8fCAeac7091324D/logo.png",
       "assetGroup": "POL",
-      "currencyId": "Optics WMATIC::WMATIC"
+      "currencyId": "Optics WMATIC::WMATIC",
+      "props": {}
     },
     "0xee9801669c6138e84bd50deb500827b776777d28": {
       "chainId": "42220",
@@ -727,7 +847,8 @@
       "symbol": "O3",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0xee9801669c6138e84bd50deb500827b776777d28/98e28b4dbf26999a2c8ec90401eff245.png",
       "assetGroup": "O3 Swap Token::O3",
-      "currencyId": "O3 Swap Token::O3"
+      "currencyId": "O3 Swap Token::O3",
+      "props": {}
     },
     "0x0000206329b97db379d5e1bf586bbdb969c63274": {
       "chainId": "42220",
@@ -739,7 +860,12 @@
       "assetGroup": "USDA::USDA",
       "currencyId": "USDA::USDA",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
       }
     },
     "0xc668583dcbdc9ae6fa3ce46462758188adfdfc24": {
@@ -750,7 +876,8 @@
       "symbol": "stCELO",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0xc668583dcbdc9ae6fa3ce46462758188adfdfc24/500bf40c1c1eed7f5a3cd93443a1d9c2.png",
       "assetGroup": "Staked CELO::stCELO",
-      "currencyId": "Staked CELO::stCELO"
+      "currencyId": "Staked CELO::stCELO",
+      "props": {}
     },
     "0x02de4766c272abc10bc88c220d214a26960a7e92": {
       "chainId": "42220",
@@ -760,7 +887,8 @@
       "symbol": "NCT",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x02de4766c272abc10bc88c220d214a26960a7e92/d888558aa983920f04321cb0351167cb.png",
       "assetGroup": "Toucan Protocol: Nature Carbon Tonne::NCT",
-      "currencyId": "Toucan Protocol: Nature Carbon Tonne::NCT"
+      "currencyId": "Toucan Protocol: Nature Carbon Tonne::NCT",
+      "props": {}
     },
     "0x8e3670fd7b0935d3fe832711debfe13bb689b690": {
       "chainId": "42220",
@@ -769,7 +897,8 @@
       "address": "0x8e3670fd7b0935d3fe832711debfe13bb689b690",
       "symbol": "AVAX",
       "assetGroup": "AVAX",
-      "currencyId": "AVAX::AVAX"
+      "currencyId": "AVAX::AVAX",
+      "props": {}
     },
     "0x173234922eb27d5138c5e481be9df5261faed450": {
       "chainId": "42220",
@@ -779,7 +908,8 @@
       "symbol": "SOL",
       "logoURI": "https://static.debank.com/image/bsc_token/logo_url/0x570a5d26f7765ecb712c0924e4de545b89fd43df/7c5db5c2eae571da837b65f5b9ae1a5c.png",
       "assetGroup": "SOL",
-      "currencyId": "SOL::SOL"
+      "currencyId": "SOL::SOL",
+      "props": {}
     },
     "0x301a61d01a63c8d670c2b8a43f37d12ef181f997": {
       "chainId": "42220",
@@ -788,7 +918,8 @@
       "address": "0x301a61d01a63c8d670c2b8a43f37d12ef181f997",
       "symbol": "pCELO",
       "assetGroup": "Poof CELO::pCELO",
-      "currencyId": "Poof CELO::pCELO"
+      "currencyId": "Poof CELO::pCELO",
+      "props": {}
     },
     "0x452ef5a4bd00796e62e5e5758548e0da6e8ccdf3": {
       "chainId": "42220",
@@ -798,7 +929,8 @@
       "symbol": "cStar",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x452ef5a4bd00796e62e5e5758548e0da6e8ccdf3/e29746a03f18d22f7946b17c4dfaa3ef.png",
       "assetGroup": "CeloStarter::cStar",
-      "currencyId": "CeloStarter::cStar"
+      "currencyId": "CeloStarter::cStar",
+      "props": {}
     },
     "0x47264ae1fc0c8e6418ebe78630718e11a07346a8": {
       "chainId": "42220",
@@ -807,7 +939,8 @@
       "address": "0x47264ae1fc0c8e6418ebe78630718e11a07346a8",
       "symbol": "SBR",
       "assetGroup": "SBR::SBR",
-      "currencyId": "SBR::SBR"
+      "currencyId": "SBR::SBR",
+      "props": {}
     },
     "0x788ba01f8e2b87c08b142db46f82094e0bdcad4f": {
       "chainId": "42220",
@@ -816,7 +949,8 @@
       "address": "0x788ba01f8e2b87c08b142db46f82094e0bdcad4f",
       "symbol": "xABR",
       "assetGroup": "xABR::xABR",
-      "currencyId": "xABR::xABR"
+      "currencyId": "xABR::xABR",
+      "props": {}
     },
     "0x8427bd503dd3169ccc9aff7326c15258bc305478": {
       "chainId": "42220",
@@ -826,7 +960,8 @@
       "symbol": "SYMM",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x8427bd503dd3169ccc9aff7326c15258bc305478/9684f6889041cfe6b843bd6deb7262c1.png",
       "assetGroup": "Symmetric::SYMM",
-      "currencyId": "Symmetric::SYMM"
+      "currencyId": "Symmetric::SYMM",
+      "props": {}
     },
     "0x0a60c25ef6021fc3b479914e6bca7c03c18a97f1": {
       "chainId": "42220",
@@ -835,7 +970,8 @@
       "address": "0x0a60c25ef6021fc3b479914e6bca7c03c18a97f1",
       "symbol": "stabilUSD",
       "assetGroup": "Stabilite USD::stabilUSD",
-      "currencyId": "Stabilite USD::stabilUSD"
+      "currencyId": "Stabilite USD::stabilUSD",
+      "props": {}
     },
     "0xa287a3722c367849efa5c76e96be36efd65c290e": {
       "chainId": "42220",
@@ -844,7 +980,8 @@
       "address": "0xa287a3722c367849efa5c76e96be36efd65c290e",
       "symbol": "cDEFI",
       "assetGroup": "Celo Defi Index::cDEFI",
-      "currencyId": "Celo Defi Index::cDEFI"
+      "currencyId": "Celo Defi Index::cDEFI",
+      "props": {}
     },
     "0x123ed050805e0998ebef43671327139224218e50": {
       "chainId": "42220",
@@ -853,7 +990,8 @@
       "address": "0x123ed050805e0998ebef43671327139224218e50",
       "symbol": "NTMX",
       "assetGroup": "NetM Token::NTMX",
-      "currencyId": "NetM Token::NTMX"
+      "currencyId": "NetM Token::NTMX",
+      "props": {}
     },
     "0x34c02571094e08e935b8cf8dc10f1ad6795f1f81": {
       "chainId": "42220",
@@ -862,7 +1000,8 @@
       "address": "0x34c02571094e08e935b8cf8dc10f1ad6795f1f81",
       "symbol": "aCelcEUR",
       "assetGroup": "Aave Celo cEUR::aCelcEUR",
-      "currencyId": "Aave Celo cEUR::aCelcEUR"
+      "currencyId": "Aave Celo cEUR::aCelcEUR",
+      "props": {}
     },
     "0xbba98352628b0b0c4b40583f593ffcb630935a45": {
       "chainId": "42220",
@@ -871,7 +1010,8 @@
       "address": "0xbba98352628b0b0c4b40583f593ffcb630935a45",
       "symbol": "aCelcUSD",
       "assetGroup": "Aave Celo cUSD::aCelcUSD",
-      "currencyId": "Aave Celo cUSD::aCelcUSD"
+      "currencyId": "Aave Celo cUSD::aCelcUSD",
+      "props": {}
     },
     "0xc3e77dc389537db1eec7c33b95cf3beeca71a209": {
       "chainId": "42220",
@@ -880,7 +1020,8 @@
       "address": "0xc3e77dc389537db1eec7c33b95cf3beeca71a209",
       "symbol": "aCelCELO",
       "assetGroup": "Aave Celo CELO::aCelCELO",
-      "currencyId": "Aave Celo CELO::aCelCELO"
+      "currencyId": "Aave Celo CELO::aCelCELO",
+      "props": {}
     },
     "0xdee98402a302e4d707fb9bf2bac66faeec31e8df": {
       "chainId": "42220",
@@ -889,7 +1030,8 @@
       "address": "0xdee98402a302e4d707fb9bf2bac66faeec31e8df",
       "symbol": "aCelUSDT",
       "assetGroup": "Aave Celo USDT::aCelUSDT",
-      "currencyId": "Aave Celo USDT::aCelUSDT"
+      "currencyId": "Aave Celo USDT::aCelUSDT",
+      "props": {}
     },
     "0xff8309b9e99bfd2d4021bc71a362abd93dbd4785": {
       "chainId": "42220",
@@ -898,7 +1040,8 @@
       "address": "0xff8309b9e99bfd2d4021bc71a362abd93dbd4785",
       "symbol": "aCelUSDC",
       "assetGroup": "Aave Celo USDC::aCelUSDC",
-      "currencyId": "Aave Celo USDC::aCelUSDC"
+      "currencyId": "Aave Celo USDC::aCelUSDC",
+      "props": {}
     },
     "0xd221812de1bd094f35587ee8e174b07b6167d9af": {
       "chainId": "42220",
@@ -909,7 +1052,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/55170/standard/weth_2.jpg?1744342217",
       "assetGroup": "Wrapped Ether (Celo native bridge)::WETH",
       "currencyId": "Wrapped Ether (Celo native bridge)::WETH",
-      "props": { "risk": { "score": 2, "source": "whitelist" } }
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0xd07294e6e917e07dfdcee882dd1e2565085c2ae0": {
       "chainId": "42220",
@@ -918,7 +1066,8 @@
       "address": "0xd07294e6e917e07dfdcee882dd1e2565085c2ae0",
       "symbol": "LINK",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {}
     },
     "0x617f3112bf5397d0467d315cc709ef968d9ba546": {
       "chainId": "42220",
@@ -928,7 +1077,8 @@
       "symbol": "USDT",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x617f3112bf5397d0467d315cc709ef968d9ba546/f1992d97a61c154a388c0de34cb136f3.png",
       "assetGroup": "Tether USD::USDT::42220::0",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {}
     },
     "0x73f93dcc49cb8a239e2032663e9475dd5ef29a08": {
       "chainId": "42220",
@@ -937,7 +1087,8 @@
       "address": "0x73f93dcc49cb8a239e2032663e9475dd5ef29a08",
       "symbol": "eXOF",
       "assetGroup": "ECO CFA::eXOF",
-      "currencyId": "ECO CFA::eXOF"
+      "currencyId": "ECO CFA::eXOF",
+      "props": {}
     },
     "0x8a567e2ae79ca692bd748ab832081c45de4041ea": {
       "chainId": "42220",
@@ -947,7 +1098,8 @@
       "symbol": "cCOP",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x8a567e2ae79ca692bd748ab832081c45de4041ea/0402a982676b5bae413cfbe5c7f37c67.png",
       "assetGroup": "Celo Colombian Peso::cCOP",
-      "currencyId": "Celo Colombian Peso::cCOP"
+      "currencyId": "Celo Colombian Peso::cCOP",
+      "props": {}
     },
     "0xfaea5f3404bba20d3cc2f8c4b0a888f55a3c7313": {
       "chainId": "42220",
@@ -957,7 +1109,8 @@
       "symbol": "cGHS",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0xfaea5f3404bba20d3cc2f8c4b0a888f55a3c7313/a1f534f5a59076c7b9448b17403a1a63.png",
       "assetGroup": "Celo Ghanian Cedi::cGHS",
-      "currencyId": "Celo Ghanian Cedi::cGHS"
+      "currencyId": "Celo Ghanian Cedi::cGHS",
+      "props": {}
     },
     "0x7175504c455076f15c04a2f90a8e352281f492f9": {
       "chainId": "42220",
@@ -967,7 +1120,8 @@
       "symbol": "cAUD",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0x7175504c455076f15c04a2f90a8e352281f492f9.png",
       "assetGroup": "Celo Australian Dollar::cAUD",
-      "currencyId": "Celo Australian Dollar::cAUD"
+      "currencyId": "Celo Australian Dollar::cAUD",
+      "props": {}
     },
     "0xff4ab19391af240c311c54200a492233052b6325": {
       "chainId": "42220",
@@ -977,7 +1131,8 @@
       "symbol": "cCAD",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xff4ab19391af240c311c54200a492233052b6325.png",
       "assetGroup": "Celo Canadian Dollar::cCAD",
-      "currencyId": "Celo Canadian Dollar::cCAD"
+      "currencyId": "Celo Canadian Dollar::cCAD",
+      "props": {}
     },
     "0xe2702bd97ee33c88c8f6f92da3b733608aa76f71": {
       "chainId": "42220",
@@ -987,7 +1142,8 @@
       "symbol": "cNGN",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xe2702bd97ee33c88c8f6f92da3b733608aa76f71.png",
       "assetGroup": "Celo Nigerian Naira::cNGN",
-      "currencyId": "Celo Nigerian Naira::cNGN"
+      "currencyId": "Celo Nigerian Naira::cNGN",
+      "props": {}
     },
     "0xccf663b1ff11028f0b19058d0f7b674004a40746": {
       "chainId": "42220",
@@ -997,7 +1153,8 @@
       "symbol": "cGBP",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xccf663b1ff11028f0b19058d0f7b674004a40746.png",
       "assetGroup": "Celo British Pound::cGBP",
-      "currencyId": "Celo British Pound::cGBP"
+      "currencyId": "Celo British Pound::cGBP",
+      "props": {}
     },
     "0x4c35853a3b4e647fd266f4de678dcc8fec410bf6": {
       "chainId": "42220",
@@ -1007,7 +1164,8 @@
       "symbol": "cZAR",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0x4c35853a3b4e647fd266f4de678dcc8fec410bf6.png",
       "assetGroup": "Celo South African Rand::cZAR",
-      "currencyId": "Celo South African Rand::cZAR"
+      "currencyId": "Celo South African Rand::cZAR",
+      "props": {}
     },
     "0xc45ecf20f3cd864b32d9794d6f76814ae8892e20": {
       "chainId": "42220",
@@ -1017,7 +1175,8 @@
       "symbol": "cJPY",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xc45ecf20f3cd864b32d9794d6f76814ae8892e20.png",
       "assetGroup": "Celo Japanese Yen::cJPY",
-      "currencyId": "Celo Japanese Yen::cJPY"
+      "currencyId": "Celo Japanese Yen::cJPY",
+      "props": {}
     },
     "0xb55a79f398e759e43c95b979163f30ec87ee131d": {
       "chainId": "42220",
@@ -1027,7 +1186,8 @@
       "symbol": "cCHF",
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xb55a79f398e759e43c95b979163f30ec87ee131d.png",
       "assetGroup": "Celo Swiss Franc::cCHF",
-      "currencyId": "Celo Swiss Franc::cCHF"
+      "currencyId": "Celo Swiss Franc::cCHF",
+      "props": {}
     },
     "0x94140c2ea9d208d8476ca4e3045254169791c59e": {
       "chainId": "42220",
@@ -1037,7 +1197,8 @@
       "symbol": "PREMIO",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x94140c2ea9d208d8476ca4e3045254169791c59e/13241a70c961a9aff100aeb13bb16da4.png",
       "assetGroup": "PREMIO::PREMIO",
-      "currencyId": "PREMIO::PREMIO"
+      "currencyId": "PREMIO::PREMIO",
+      "props": {}
     },
     "0x8ac2901dd8a1f17a1a4768a6ba4c3751e3995b2d": {
       "chainId": "42220",
@@ -1046,7 +1207,8 @@
       "address": "0x8ac2901dd8a1f17a1a4768a6ba4c3751e3995b2d",
       "symbol": "WBTC",
       "assetGroup": "Wrapped BTC (Celo native bridge)::WBTC",
-      "currencyId": "Wrapped BTC (Celo native bridge)::WBTC"
+      "currencyId": "Wrapped BTC (Celo native bridge)::WBTC",
+      "props": {}
     },
     "0x7f9adfbd38b669f03d1d11000bc76b9aaea28a81": {
       "chainId": "42220",
@@ -1055,7 +1217,8 @@
       "address": "0x7f9adfbd38b669f03d1d11000bc76b9aaea28a81",
       "symbol": "XVELO",
       "assetGroup": "Superchain Velodrome::XVELO",
-      "currencyId": "Superchain Velodrome::XVELO"
+      "currencyId": "Superchain Velodrome::XVELO",
+      "props": {}
     },
     "0x83e04b17ce5ccc1b1dcab192c618776114fa064a": {
       "chainId": "42220",
@@ -1064,7 +1227,8 @@
       "address": "0x83e04b17ce5ccc1b1dcab192c618776114fa064a",
       "symbol": "vCELO",
       "assetGroup": "Self.xyz Verified Celo::vCELO",
-      "currencyId": "Self.xyz Verified Celo::vCELO"
+      "currencyId": "Self.xyz Verified Celo::vCELO",
+      "props": {}
     },
     "0xafcc6ae807187a31e84138f3860d4ce27973e01b": {
       "chainId": "42220",
@@ -1073,7 +1237,8 @@
       "address": "0xafcc6ae807187a31e84138f3860d4ce27973e01b",
       "symbol": "XOP",
       "assetGroup": "Superchain OP::XOP",
-      "currencyId": "Superchain OP::XOP"
+      "currencyId": "Superchain OP::XOP",
+      "props": {}
     },
     "0xfc8da7cc54dae3376308b8c39758f5eb5d06e0df": {
       "chainId": "42220",
@@ -1082,7 +1247,8 @@
       "address": "0xfc8da7cc54dae3376308b8c39758f5eb5d06e0df",
       "symbol": "TECELO",
       "assetGroup": "TESTCelo::TECELO",
-      "currencyId": "TESTCelo::TECELO"
+      "currencyId": "TESTCelo::TECELO",
+      "props": {}
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42220",
@@ -1135,5 +1301,6 @@
     "0x8e3670fd7b0935d3fe832711debfe13bb689b690",
     "0xd221812de1bd094f35587ee8e174b07b6167d9af",
     "0x617f3112bf5397d0467d315cc709ef968d9ba546"
-  ]
+  ],
+  "riskAssessedAt": "2026-07-26T16:23:15.573Z"
 }

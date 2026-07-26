@@ -299,6 +299,8 @@ export type SavingsProps = NonNullable<TokenProps['savings']>
 export type RwaRegistry = { [chainId: string]: { [address: string]: RwaProps } }
 /** chainId -> address(lowercase) -> LST classification */
 export type LstRegistry = { [chainId: string]: { [address: string]: LstProps } }
+/** assetGroup -> LST/LRT classification (chain-independent; covers bridged deployments) */
+export type LstGroupMap = { [assetGroup: string]: LstProps }
 /** chainId -> address(lowercase) -> risk overlay */
 export type RiskRegistry = { [chainId: string]: { [address: string]: RiskProps } }
 /** assetGroup -> stablecoin overlay (base is chain-independent) */
