@@ -12,7 +12,11 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": {
+          "type": "staking",
+          "asset": "ETH",
+          "provider": "lido"
+        }
       }
     },
     "0x8bf40e191ac82bc09d946629655a6b8baf8f063e": {
@@ -25,7 +29,11 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::EZETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": {
+          "type": "restaking",
+          "asset": "ETH",
+          "provider": "renzo"
+        }
       }
     },
     "0x867f08a3ab824b42e8058a1b48e32e1df205b092": {
@@ -36,7 +44,8 @@
       "symbol": "ICE",
       "logoURI": "https://assets.coingecko.com/coins/images/26237/thumb/icecream.png?1696525321",
       "assetGroup": "ICE",
-      "currencyId": "IceCream::ICE"
+      "currencyId": "IceCream::ICE",
+      "props": {}
     },
     "0x12aa82525deff84777fa78578a68ceb854a85f43": {
       "chainId": "122",
@@ -46,7 +55,8 @@
       "symbol": "DOGE",
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/122/0x12AA82525DEfF84777fa78578A68ceB854A85f43.png",
       "assetGroup": "DOGE",
-      "currencyId": "Dogecoin::DOGE"
+      "currencyId": "Dogecoin::DOGE",
+      "props": {}
     },
     "0x8687cd1d02a28098571067ddb18f33fef667c929": {
       "chainId": "122",
@@ -56,7 +66,8 @@
       "symbol": "SHIB",
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/122/0x8687cD1d02A28098571067ddB18F33fEF667C929.png",
       "assetGroup": "SHIB",
-      "currencyId": "Shiba Inu::SHIB"
+      "currencyId": "Shiba Inu::SHIB",
+      "props": {}
     },
     "0x33284f95ccb7b948d9d352e1439561cf83d8d00d": {
       "chainId": "122",
@@ -66,7 +77,8 @@
       "symbol": "WBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39557/thumb/wbtc.png?1722898201",
       "assetGroup": "WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": {}
     },
     "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590": {
       "chainId": "122",
@@ -76,7 +88,8 @@
       "symbol": "WETH",
       "logoURI": "https://assets.coingecko.com/coins/images/53042/thumb/wETH_32.png?1735081743",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether (Stargate)::WETH"
+      "currencyId": "Wrapped Ether (Stargate)::WETH",
+      "props": {}
     },
     "0xce86a1cf3cff48139598de6bf9b1df2e0f79f86f": {
       "chainId": "122",
@@ -86,7 +99,8 @@
       "symbol": "FUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/24046/thumb/FUSD.png?1696523236",
       "assetGroup": "Dollar V3::FUSD",
-      "currencyId": "Dollar V3::FUSD"
+      "currencyId": "Dollar V3::FUSD",
+      "props": {}
     },
     "0xc6bc407706b7140ee8eef2f86f9504651b63e7f9": {
       "chainId": "122",
@@ -96,7 +110,8 @@
       "symbol": "USDC.e",
       "logoURI": "https://assets.coingecko.com/coins/images/53044/thumb/USDC_Icon.png?1735081798",
       "assetGroup": "USDC",
-      "currencyId": "Bridged USDC (Stargate)::USDC.e"
+      "currencyId": "Bridged USDC (Stargate)::USDC.e",
+      "props": {}
     },
     "0x3695dd1d1d43b794c0b13eb8be8419eb3ac22bf7": {
       "chainId": "122",
@@ -106,7 +121,8 @@
       "symbol": "USDT",
       "logoURI": "https://assets.coingecko.com/coins/images/53043/thumb/usdt.png?1735081778",
       "assetGroup": "USDT",
-      "currencyId": "Bridged USDT (Stargate)::USDT"
+      "currencyId": "Bridged USDT (Stargate)::USDT",
+      "props": {}
     },
     "0xb10ed6e3810c95a380e4f3e448af1755fa3368cf": {
       "chainId": "122",
@@ -116,7 +132,8 @@
       "symbol": "ULTRAETHS",
       "logoURI": "https://assets.coingecko.com/coins/images/50574/thumb/logo_%2810%29.png?1728403283",
       "assetGroup": "Affine ultraETHs 2 0::ULTRAETHS",
-      "currencyId": "Affine ultraETHs 2 0::ULTRAETHS"
+      "currencyId": "Affine ultraETHs 2 0::ULTRAETHS",
+      "props": {}
     },
     "0x0be9e53fd7edac9f859882afdda116645287c629": {
       "chainId": "122",
@@ -127,7 +144,13 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33535/thumb/3WFUSE_token_logo_crl.png?1703026207",
       "assetGroup": "FUSE",
       "currencyId": "Wrapped FUSE::WFUSE",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0x34ef2cc892a88415e9f02b91bfa9c91fc0be6bd4": {
       "chainId": "122",
@@ -137,7 +160,8 @@
       "symbol": "VOLT",
       "logoURI": "https://assets.coingecko.com/coins/images/21886/thumb/My_project.png?1696521238",
       "assetGroup": "Voltage Finance::VOLT",
-      "currencyId": "Voltage Finance::VOLT"
+      "currencyId": "Voltage Finance::VOLT",
+      "props": {}
     },
     "0xa722c13135930332eb3d749b2f0906559d2c5b99": {
       "chainId": "122",
@@ -147,7 +171,8 @@
       "symbol": "WETH",
       "logoURI": "https://assets.coingecko.com/coins/images/33412/thumb/weth.jpg?1726731618",
       "assetGroup": "ETH",
-      "currencyId": "Bridged WETH::WETH"
+      "currencyId": "Bridged WETH::WETH",
+      "props": {}
     },
     "0x68c9736781e9316ebf5c3d49fe0c1f45d2d104cd": {
       "chainId": "122",
@@ -157,7 +182,8 @@
       "symbol": "USDT",
       "logoURI": "https://assets.coingecko.com/coins/images/32986/thumb/logo_%288%29.png?1700094172",
       "assetGroup": "USDT",
-      "currencyId": "Bridged USDT (Layer0 Bridge)::USDT"
+      "currencyId": "Bridged USDT (Layer0 Bridge)::USDT",
+      "props": {}
     },
     "0x6acb34b1df86e254b544189ec32cf737e2482058": {
       "chainId": "122",
@@ -167,7 +193,8 @@
       "symbol": "WBNB",
       "logoURI": "https://assets.coingecko.com/coins/images/53071/thumb/wrapped_bnb.png?1735197840",
       "assetGroup": "BNB",
-      "currencyId": "Bridged WBNB::WBNB"
+      "currencyId": "Bridged WBNB::WBNB",
+      "props": {}
     },
     "0x5622f6dc93e08a8b717b149677930c38d5d50682": {
       "chainId": "122",
@@ -177,7 +204,8 @@
       "symbol": "WETH",
       "logoURI": "https://assets.coingecko.com/coins/images/32759/thumb/logo_%286%29.png?1699324862",
       "assetGroup": "ETH",
-      "currencyId": "Bridged WETH::WETH"
+      "currencyId": "Bridged WETH::WETH",
+      "props": {}
     },
     "0x28c3d1cd466ba22f6cae51b1a4692a831696391a": {
       "chainId": "122",
@@ -187,7 +215,8 @@
       "symbol": "USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/32758/thumb/USDC_v2.png?1699324701",
       "assetGroup": "USDC",
-      "currencyId": "Bridged USDC (Layer0 Bridge)::USDC"
+      "currencyId": "Bridged USDC (Layer0 Bridge)::USDC",
+      "props": {}
     },
     "0x5dd8015cec49f4db01fd228f688bf30337d3e0a9": {
       "chainId": "122",
@@ -197,7 +226,8 @@
       "symbol": "ELON",
       "logoURI": "https://assets.coingecko.com/coins/images/14962/thumb/6GxcPRo3_400x400.jpg?1696514622",
       "assetGroup": "ELON",
-      "currencyId": "Dogelon Mars::ELON"
+      "currencyId": "Dogelon Mars::ELON",
+      "props": {}
     },
     "0x495d133b938596c9984d462f007b676bdc57ecec": {
       "chainId": "122",
@@ -207,7 +237,8 @@
       "symbol": "G",
       "logoURI": "https://assets.coingecko.com/coins/images/14782/thumb/G__Coin_%281%29.png?1696514451",
       "assetGroup": "GoodDollar::G",
-      "currencyId": "GoodDollar::G"
+      "currencyId": "GoodDollar::G",
+      "props": {}
     },
     "0xfadbbf8ce7d5b7041be672561bba99f79c532e10": {
       "chainId": "122",
@@ -217,7 +248,8 @@
       "symbol": "USDT",
       "logoURI": "https://assets.coingecko.com/coins/images/35001/thumb/logo.png?1706959346",
       "assetGroup": "USDT",
-      "currencyId": "Bridged USDT::USDT"
+      "currencyId": "Bridged USDT::USDT",
+      "props": {}
     },
     "0x620fd5fa44be6af63715ef4e65ddfa0387ad13f5": {
       "chainId": "122",
@@ -227,7 +259,8 @@
       "symbol": "USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/35218/thumb/USDC_Icon.png?1707908537",
       "assetGroup": "USDC",
-      "currencyId": "Bridged USDC::USDC"
+      "currencyId": "Bridged USDC::USDC",
+      "props": {}
     },
     "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee": {
       "chainId": "122",
@@ -237,7 +270,8 @@
       "symbol": "ELK",
       "logoURI": "https://assets.coingecko.com/coins/images/17813/thumb/elk.png?1696517333",
       "assetGroup": "Elk Finance::ELK",
-      "currencyId": "Elk Finance::ELK"
+      "currencyId": "Elk Finance::ELK",
+      "props": {}
     },
     "0x6a5f6a8121592becd6747a38d67451b310f7f156": {
       "chainId": "122",
@@ -247,7 +281,8 @@
       "symbol": "BUSD",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/binance/assets/BUSD-BD1/logo.png",
       "assetGroup": "BUSD",
-      "currencyId": "Bridged BUSD::BUSD"
+      "currencyId": "Bridged BUSD::BUSD",
+      "props": {}
     },
     "0x34009565bfeefded0f7e774629a745636bf35e82": {
       "chainId": "122",
@@ -257,7 +292,8 @@
       "symbol": "WBTCV2",
       "logoURI": "https://assets.coingecko.com/coins/images/55265/thumb/logo_%2813%29.png?1745051128",
       "assetGroup": "Wrapped BTC::WBTCV2",
-      "currencyId": "Wrapped BTC::WBTCV2"
+      "currencyId": "Wrapped BTC::WBTCV2",
+      "props": {}
     },
     "0x94ba7a27c7a95863d1bdc7645ac2951e0cca06ba": {
       "chainId": "122",
@@ -267,7 +303,8 @@
       "symbol": "DAI",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/fuse/0x94Ba7A27c7A95863d1bdC7645AC2951E0cca06bA.jpg",
       "assetGroup": "DAI",
-      "currencyId": "Dai Stablecoin::DAI"
+      "currencyId": "Dai Stablecoin::DAI",
+      "props": {}
     },
     "0x2f60a843302f1be3fa87429ca9d684f9091b003c": {
       "chainId": "122",
@@ -277,7 +314,8 @@
       "symbol": "DEXT",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/dext.jpg",
       "assetGroup": "DEXT",
-      "currencyId": "DEXTools::DEXT"
+      "currencyId": "DEXTools::DEXT",
+      "props": {}
     },
     "0xe1c110e1b1b4a1ded0caf3e42bfbdbb7b5d7ce1c": {
       "chainId": "122",
@@ -287,7 +325,8 @@
       "symbol": "ELK",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/fuse/assets/0xE1C110E1B1b4A1deD0cAf3E42BfBdbB7b5d7cE1C/logo.png",
       "assetGroup": "Elk::ELK",
-      "currencyId": "Elk::ELK"
+      "currencyId": "Elk::ELK",
+      "props": {}
     },
     "0x249be57637d8b013ad64785404b24aebae9b098b": {
       "chainId": "122",
@@ -297,7 +336,8 @@
       "symbol": "fUSD",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/fuseusd.jpg",
       "assetGroup": "Fuse Dollar::fUSD",
-      "currencyId": "Fuse Dollar::fUSD"
+      "currencyId": "Fuse Dollar::fUSD",
+      "props": {}
     },
     "0x025a4c577198d116ea499193e6d735fdb2e6e841": {
       "chainId": "122",
@@ -307,7 +347,8 @@
       "symbol": "GRT",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/grt.jpg",
       "assetGroup": "Graph Token::GRT",
-      "currencyId": "Graph Token::GRT"
+      "currencyId": "Graph Token::GRT",
+      "props": {}
     },
     "0x43b17749b246fd2a96de25d9e4184e27e09765b0": {
       "chainId": "122",
@@ -317,7 +358,8 @@
       "symbol": "KNC",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/knc.jpg",
       "assetGroup": "KNC",
-      "currencyId": "Kyber Network Crystal::KNC"
+      "currencyId": "Kyber Network Crystal::KNC",
+      "props": {}
     },
     "0x0972f26e8943679b043de23df2fd3852177a7c48": {
       "chainId": "122",
@@ -327,7 +369,8 @@
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/link.jpg",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {}
     },
     "0x7f59ae3a787c0d1d640f99883d0e48c22188c54f": {
       "chainId": "122",
@@ -337,7 +380,8 @@
       "symbol": "OM",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/om.jpg",
       "assetGroup": "OM",
-      "currencyId": "MANTRA DAO::OM"
+      "currencyId": "MANTRA DAO::OM",
+      "props": {}
     },
     "0x90708b20ccc1eb95a4fa7c8b18fd2c22a0ff9e78": {
       "chainId": "122",
@@ -347,7 +391,8 @@
       "symbol": "SUSHI",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/fuse/0x90708b20ccC1eb95a4FA7C8b18Fd2C22a0Ff9E78.jpg",
       "assetGroup": "SUSHI",
-      "currencyId": "Sushi::SUSHI"
+      "currencyId": "Sushi::SUSHI",
+      "props": {}
     },
     "0x117c0419352ddb6fe575a67faa70315bdc4a93f3": {
       "chainId": "122",
@@ -357,7 +402,8 @@
       "symbol": "BNB",
       "logoURI": "https://static.debank.com/image/coin/logo_url/bnb/9784283a36f23a58982fc964574ea530.png",
       "assetGroup": "BNB",
-      "currencyId": "BNB::BNB"
+      "currencyId": "BNB::BNB",
+      "props": {}
     },
     "0x2363df84fdb7d4ee9d4e1a15c763bb6b7177eaee": {
       "chainId": "122",
@@ -367,7 +413,8 @@
       "symbol": "MST",
       "logoURI": "https://static.debank.com/image/project/logo_url/base_meridianfinance/70622d429db5c1ae0ce2d33b64836242.png",
       "assetGroup": "MST::MST",
-      "currencyId": "MST::MST"
+      "currencyId": "MST::MST",
+      "props": {}
     },
     "0x2502f488d481df4f5054330c71b95d93d41625c2": {
       "chainId": "122",
@@ -377,7 +424,8 @@
       "symbol": "DAI",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x2502f488d481df4f5054330c71b95d93d41625c2/b0f7e93ed5d6314101bb6c225e8141ac.png",
       "assetGroup": "Dai Stablecoin::DAI",
-      "currencyId": "Dai Stablecoin::DAI"
+      "currencyId": "Dai Stablecoin::DAI",
+      "props": {}
     },
     "0x2b09179d26fddb27a24ee25328890791c7a984c2": {
       "chainId": "122",
@@ -386,7 +434,8 @@
       "address": "0x2b09179d26fddb27a24ee25328890791c7a984c2",
       "symbol": "AMP",
       "assetGroup": "Ampere::AMP",
-      "currencyId": "Ampere::AMP"
+      "currencyId": "Ampere::AMP",
+      "props": {}
     },
     "0x303cc3f27034c4e3933dab8e601178ed3d2a1e3c": {
       "chainId": "122",
@@ -396,7 +445,8 @@
       "symbol": "MKR",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x303cc3f27034c4e3933dab8e601178ed3d2a1e3c/9cb777472c8f67432206da896e1548dc.png",
       "assetGroup": "MKR",
-      "currencyId": "Maker::MKR"
+      "currencyId": "Maker::MKR",
+      "props": {}
     },
     "0x3c5dd992d72d082b44c7505015e09fdb1e975ec2": {
       "chainId": "122",
@@ -406,7 +456,8 @@
       "symbol": "stETH",
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0/7e931af8cb34b6f5671ca2eb1b847849.png",
       "assetGroup": "STETH",
-      "currencyId": "stETH::stETH"
+      "currencyId": "stETH::stETH",
+      "props": {}
     },
     "0x4b9ae621e54bf1ecfe39366bca0018d97a2d510b": {
       "chainId": "122",
@@ -416,7 +467,8 @@
       "symbol": "Qiji",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x4b9ae621e54bf1ecfe39366bca0018d97a2d510b/32082d8c86c108f516a7a06108bbb8fe.png",
       "assetGroup": "Qiji::Qiji",
-      "currencyId": "Qiji::Qiji"
+      "currencyId": "Qiji::Qiji",
+      "props": {}
     },
     "0x4e69ae0cd024754655b4ef74f24a8dcb39ba07e8": {
       "chainId": "122",
@@ -426,7 +478,8 @@
       "symbol": "CEUS",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x4e69ae0cd024754655b4ef74f24a8dcb39ba07e8/d03f1f13bd1ac88afab64a4bfa869839.png",
       "assetGroup": "Coineus::CEUS",
-      "currencyId": "Coineus::CEUS"
+      "currencyId": "Coineus::CEUS",
+      "props": {}
     },
     "0x587983b895db50ddabc0aac8adc592b29bb30d80": {
       "chainId": "122",
@@ -436,7 +489,8 @@
       "symbol": "stETH",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x587983b895db50ddabc0aac8adc592b29bb30d80/1ee6279eb283ca3131f834da8ff7db09.png",
       "assetGroup": "stETH::stETH",
-      "currencyId": "stETH::stETH"
+      "currencyId": "stETH::stETH",
+      "props": {}
     },
     "0x5cb5249d420639619ffd637c79f0aa5c0a9fcd4b": {
       "chainId": "122",
@@ -446,7 +500,8 @@
       "symbol": "asSOL",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x5cb5249d420639619ffd637c79f0aa5c0a9fcd4b/89ab5562bab1624672dcbadcc1c86aa7.png",
       "assetGroup": "SOL (Allbridge)::asSOL",
-      "currencyId": "SOL (Allbridge)::asSOL"
+      "currencyId": "SOL (Allbridge)::asSOL",
+      "props": {}
     },
     "0x74616164eb1892cec5fa553d45b3e5d6df7bc7b9": {
       "chainId": "122",
@@ -455,7 +510,8 @@
       "address": "0x74616164eb1892cec5fa553d45b3e5d6df7bc7b9",
       "symbol": "$Foo",
       "assetGroup": "Foo::$Foo",
-      "currencyId": "Foo::$Foo"
+      "currencyId": "Foo::$Foo",
+      "props": {}
     },
     "0x7641d492c17795fb4cbaa8df99116c9c482c81a8": {
       "chainId": "122",
@@ -464,7 +520,8 @@
       "address": "0x7641d492c17795fb4cbaa8df99116c9c482c81a8",
       "symbol": "BTZ",
       "assetGroup": "Bitazza Token on Fuse::BTZ",
-      "currencyId": "Bitazza Token on Fuse::BTZ"
+      "currencyId": "Bitazza Token on Fuse::BTZ",
+      "props": {}
     },
     "0x861bf3d382593ed848972cadfacba9749adce101": {
       "chainId": "122",
@@ -474,7 +531,8 @@
       "symbol": "MATIC",
       "logoURI": "https://static.debank.com/image/hmy_token/logo_url/0xfbdd194376de19a88118e84e279b977f165d01b8/0f047f368f8c0dc532085075956cdadc.png",
       "assetGroup": "POL",
-      "currencyId": "Matic Token::MATIC"
+      "currencyId": "Matic Token::MATIC",
+      "props": {}
     },
     "0xa28a758619ba32b11f8d55eb6c0e1c7e5929bf61": {
       "chainId": "122",
@@ -483,7 +541,8 @@
       "address": "0xa28a758619ba32b11f8d55eb6c0e1c7e5929bf61",
       "symbol": "FVKSRG",
       "assetGroup": "Fates Violent Kiss Sends Reaper Grim::FVKSRG",
-      "currencyId": "Fates Violent Kiss Sends Reaper Grim::FVKSRG"
+      "currencyId": "Fates Violent Kiss Sends Reaper Grim::FVKSRG",
+      "props": {}
     },
     "0xcc9d144a8a8a1e71d5ec66a13f301b9e0137e71c": {
       "chainId": "122",
@@ -493,7 +552,8 @@
       "symbol": "aeETH",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xcc9d144a8a8a1e71d5ec66a13f301b9e0137e71c/562846b78b33ad7ab6087a20457f3d67.png",
       "assetGroup": "ETH (Allbridge)::aeETH",
-      "currencyId": "ETH (Allbridge)::aeETH"
+      "currencyId": "ETH (Allbridge)::aeETH",
+      "props": {}
     },
     "0xd0ce1b4a349c35e61af02f5971e71ac502441e49": {
       "chainId": "122",
@@ -503,7 +563,8 @@
       "symbol": "fUSD",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xd0ce1b4a349c35e61af02f5971e71ac502441e49/4db7f2d35e6ae655690aeb75dbdfd99a.png",
       "assetGroup": "Fuse Dollar::fUSD::122::0",
-      "currencyId": "Fuse Dollar::fUSD"
+      "currencyId": "Fuse Dollar::fUSD",
+      "props": {}
     },
     "0xd1b300aec14c5ddb934c5bbcba4e9f7463b9e3ca": {
       "chainId": "122",
@@ -512,7 +573,8 @@
       "address": "0xd1b300aec14c5ddb934c5bbcba4e9f7463b9e3ca",
       "symbol": "MKR",
       "assetGroup": "Maker::MKR",
-      "currencyId": "Maker::MKR"
+      "currencyId": "Maker::MKR",
+      "props": {}
     },
     "0xde4b9879b56187d13b2c41da24c72ff100a5ac9a": {
       "chainId": "122",
@@ -522,7 +584,8 @@
       "symbol": "$Lady",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xde4b9879b56187d13b2c41da24c72ff100a5ac9a/2b7ab8b8a87cb547b9afd8c3fa4e9e10.png",
       "assetGroup": "Ladybot::$Lady",
-      "currencyId": "Ladybot::$Lady"
+      "currencyId": "Ladybot::$Lady",
+      "props": {}
     },
     "0xe3df2c1f1ca54707ab49747eebc7658bb1c8bf1c": {
       "chainId": "122",
@@ -532,7 +595,8 @@
       "symbol": "FDM",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xe3df2c1f1ca54707ab49747eebc7658bb1c8bf1c/63a3b989a39a2ac5efa08894527ea10a.png",
       "assetGroup": "Freedom::FDM",
-      "currencyId": "Freedom::FDM"
+      "currencyId": "Freedom::FDM",
+      "props": {}
     },
     "0xf2c6c1aa2bf8ec40f564ea8a483f64907ea37a3f": {
       "chainId": "122",
@@ -542,7 +606,8 @@
       "symbol": "LIT",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xf2c6c1aa2bf8ec40f564ea8a483f64907ea37a3f/377487d690354af60fff867c0c889a4f.png",
       "assetGroup": "Lightning::LIT",
-      "currencyId": "Lightning::LIT"
+      "currencyId": "Lightning::LIT",
+      "props": {}
     },
     "0xefaeee334f0fd1712f9a8cc375f427d9cdd40d73": {
       "chainId": "122",
@@ -551,7 +616,8 @@
       "address": "0xefaeee334f0fd1712f9a8cc375f427d9cdd40d73",
       "symbol": "agEUR",
       "assetGroup": "AGEUR",
-      "currencyId": "agEUR::agEUR"
+      "currencyId": "agEUR::agEUR",
+      "props": {}
     },
     "0xd8bf72f3e163b9cf0c73dfdcc316417a5ac20670": {
       "chainId": "122",
@@ -560,7 +626,8 @@
       "address": "0xd8bf72f3e163b9cf0c73dfdcc316417a5ac20670",
       "symbol": "WETH",
       "assetGroup": "ETH",
-      "currencyId": "Wrapped Ether on Fuse::WETH"
+      "currencyId": "Wrapped Ether on Fuse::WETH",
+      "props": {}
     },
     "0x75333830e7014e909535389a6e5b0c02aa62ca27": {
       "chainId": "122",
@@ -570,7 +637,8 @@
       "symbol": "SOUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68960/thumb/soUSD_logo.png?1757088705",
       "assetGroup": "Solid USD soUSD::SOUSD",
-      "currencyId": "Solid USD soUSD::SOUSD"
+      "currencyId": "Solid USD soUSD::SOUSD",
+      "props": {}
     },
     "0x4447863cddabbf2c3dac826f042e03c91927a196": {
       "chainId": "122",
@@ -579,7 +647,8 @@
       "address": "0x4447863cddabbf2c3dac826f042e03c91927a196",
       "symbol": "USDM",
       "assetGroup": "USDM Stablecoin::USDM",
-      "currencyId": "USDM Stablecoin::USDM"
+      "currencyId": "USDM Stablecoin::USDM",
+      "props": {}
     },
     "0xb1dd0b683d9a56525cc096fbf5eec6e60fe79871": {
       "chainId": "122",
@@ -588,7 +657,8 @@
       "address": "0xb1dd0b683d9a56525cc096fbf5eec6e60fe79871",
       "symbol": "sFUSE",
       "assetGroup": "Liquid staked Fuse::sFUSE",
-      "currencyId": "Liquid staked Fuse::sFUSE"
+      "currencyId": "Liquid staked Fuse::sFUSE",
+      "props": {}
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "122",
@@ -638,5 +708,6 @@
     "0x90708b20ccc1eb95a4fa7c8b18fd2c22a0ff9e78",
     "0x117c0419352ddb6fe575a67faa70315bdc4a93f3",
     "0xd8bf72f3e163b9cf0c73dfdcc316417a5ac20670"
-  ]
+  ],
+  "riskAssessedAt": "2026-07-26T11:42:09.769Z"
 }

@@ -10,7 +10,8 @@
       "symbol": "USDC",
       "logoURI": "https://tokens.debridge.finance/Logo/100000006/0x7bbce15166bbc008ec1adf9b3d6bba0602fce7ba/small/token-logo.png",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {}
     },
     "0xc537d12bd626b135b251cca43283eff69ec109c4": {
       "chainId": "4158",
@@ -21,7 +22,15 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000006/0xc537d12bd626b135b251cca43283eff69ec109c4/small/token-logo.png",
       "assetGroup": "Wrapped XFI::WXFI",
       "currencyId": "Wrapped XFI::WXFI",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": {
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA"
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4158",
@@ -42,5 +51,6 @@
     "0x0000000000000000000000000000000000000000",
     "0x7bbce15166bbc008ec1adf9b3d6bba0602fce7ba",
     "0xc537d12bd626b135b251cca43283eff69ec109c4"
-  ]
+  ],
+  "riskAssessedAt": "2026-07-26T11:42:09.769Z"
 }

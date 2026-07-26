@@ -30,7 +30,11 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": {
+          "type": "staking",
+          "asset": "BTC",
+          "provider": "lorenzo"
+        }
       }
     },
     "0xc3eacf0612346366db554c991d7858716db09f58": {
@@ -43,7 +47,11 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": {
+          "type": "restaking",
+          "asset": "ETH",
+          "provider": "kelp"
+        }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -55,7 +63,13 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0xad11a8beb98bbf61dbb1aa0f6d6f2ecd87b35afa": {
       "chainId": "43111",
@@ -66,7 +80,12 @@
       "logoURI": "https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/assets/usdce.svg",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "permit": { "type": 1, "version": "2" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "2"
+        }
+      }
     },
     "0x7a06c4aef988e7925575c50261297a946ad204a8": {
       "chainId": "43111",
@@ -76,7 +95,8 @@
       "symbol": "VUSD",
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/vusd.png",
       "assetGroup": "VUSD",
-      "currencyId": "Vesper V-Dollar::VUSD"
+      "currencyId": "Vesper V-Dollar::VUSD",
+      "props": {}
     },
     "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e": {
       "chainId": "43111",
@@ -87,7 +107,12 @@
       "logoURI": "https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/assets/usdt.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0xaa40c0c7644e0b2b224509571e10ad20d9c4ef28": {
       "chainId": "43111",
@@ -97,7 +122,14 @@
       "symbol": "hemiBTC",
       "logoURI": "https://raw.githubusercontent.com/hemilabs/token-list/master/src/logos/hemibtc.svg",
       "assetGroup": "HEMIBTC",
-      "currencyId": "Hemi Bitcoin::hemiBTC"
+      "currencyId": "Hemi Bitcoin::hemiBTC",
+      "props": {
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "mint": "minter"
+        }
+      }
     },
     "0x623f2774d9f27b59bc6b954544487532ce79d9df": {
       "chainId": "43111",
@@ -107,7 +139,21 @@
       "symbol": "bfBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/bfBTC.webp",
       "assetGroup": "BitFi Bitcoin::bfBTC",
-      "currencyId": "BitFi Bitcoin::bfBTC"
+      "currencyId": "BitFi Bitcoin::bfBTC",
+      "props": {
+        "risk": {
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA",
+          "blacklist": true,
+          "pause": true,
+          "controller": {
+            "kind": "EOA",
+            "tier": "high"
+          }
+        }
+      }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "43111",
@@ -117,7 +163,8 @@
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0xCAbAE6f6Ea1ecaB08Ad02fE02ce9A44F09aebfA2/logo.png",
       "assetGroup": "WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": {}
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
       "chainId": "43111",
@@ -127,7 +174,15 @@
       "symbol": "brBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/53039/standard/brBTC_200.png?1735074374",
       "assetGroup": "BRBTC",
-      "currencyId": "brBTC::brBTC"
+      "currencyId": "brBTC::brBTC",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
       "chainId": "43111",
@@ -137,7 +192,8 @@
       "symbol": "enzoBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/enzoBTC.webp",
       "assetGroup": "ENZOBTC",
-      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC"
+      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
+      "props": {}
     },
     "0x1596be338b999e2376675c908168a7548c8b0525": {
       "chainId": "43111",
@@ -147,7 +203,8 @@
       "symbol": "cbBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/40143/standard/cbbtc.webp",
       "assetGroup": "CBBTC",
-      "currencyId": "Coinbase Wrapped BTC::cbBTC"
+      "currencyId": "Coinbase Wrapped BTC::cbBTC",
+      "props": {}
     },
     "0x1b529b888d15711b4baeb5a3b12465dc3e2520a3": {
       "chainId": "43111",
@@ -158,7 +215,12 @@
       "logoURI": "https://passdex.s3.ap-southeast-1.amazonaws.com/43111/0x1B529B888d15711b4baeb5A3B12465DC3E2520A3.png",
       "assetGroup": "PassDex::PASS",
       "currencyId": "PassDex::PASS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x71881974e96152643c74a8e0214b877cfb2a0aa1": {
       "chainId": "43111",
@@ -168,7 +230,8 @@
       "symbol": "VCRED",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_48/d_unknown.png/tokens/43111/0x71881974e96152643C74A8e0214B877CfB2A0Aa1.jpg",
       "assetGroup": "VCRED::VCRED",
-      "currencyId": "VCRED::VCRED"
+      "currencyId": "VCRED::VCRED",
+      "props": {}
     },
     "0x5b774f563c902fa7b203fb7029ed6ed4ce274705": {
       "chainId": "43111",
@@ -178,7 +241,8 @@
       "symbol": "HAIR",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_32/d_unknown.png/tokens/43111/0x5B774f563C902FA7b203FB7029ed6eD4Ce274705.jpg",
       "assetGroup": "Hair::HAIR",
-      "currencyId": "Hair::HAIR"
+      "currencyId": "Hair::HAIR",
+      "props": {}
     },
     "0xc8fc18299043e0c2d36c630fcd933db0c6f17042": {
       "chainId": "43111",
@@ -188,7 +252,8 @@
       "symbol": "MAX",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_32/d_unknown.png/tokens/43111/0xc8fc18299043e0C2D36C630fcD933db0c6f17042.jpg",
       "assetGroup": "Maxcoin::MAX",
-      "currencyId": "Maxcoin::MAX"
+      "currencyId": "Maxcoin::MAX",
+      "props": {}
     },
     "0x8154aaf094c2f03ad550b6890e1d4264b5ddad9a": {
       "chainId": "43111",
@@ -198,7 +263,19 @@
       "symbol": "IBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/iBTC.webp",
       "assetGroup": "IBTC",
-      "currencyId": "iBTC::IBTC"
+      "currencyId": "iBTC::IBTC",
+      "props": {
+        "risk": {
+          "level": "red",
+          "score": 4,
+          "blacklist": true,
+          "pause": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
+        }
+      }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {
       "chainId": "43111",
@@ -208,7 +285,8 @@
       "symbol": "oBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/oBTC.webp",
       "assetGroup": "OBTC",
-      "currencyId": "Obelisk BTC::oBTC"
+      "currencyId": "Obelisk BTC::oBTC",
+      "props": {}
     },
     "0x78e26e8b953c7c78a58d69d8b9a91745c2bbb258": {
       "chainId": "43111",
@@ -218,7 +296,8 @@
       "symbol": "uBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/55079/thumb/uBTC.png?1743613297",
       "assetGroup": "UBTC",
-      "currencyId": "uBTC::uBTC"
+      "currencyId": "uBTC::uBTC",
+      "props": {}
     },
     "0x9bfa177621119e64cecbeabe184ab9993e2ef727": {
       "chainId": "43111",
@@ -228,7 +307,8 @@
       "symbol": "M-BTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36566/standard/photo_2024-03-25_22-04-42.jpg?1711936162",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {}
     },
     "0xf469fbd2abcd6b9de8e169d128226c0fc90a012e": {
       "chainId": "43111",
@@ -238,7 +318,8 @@
       "symbol": "pumpBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39232/thumb/200pxPumpBTCLogo.png?1721227861",
       "assetGroup": "PUMPBTC",
-      "currencyId": "pumpBTC::pumpBTC"
+      "currencyId": "pumpBTC::pumpBTC",
+      "props": {}
     },
     "0x12b6e6fc45f81cda81d2656b974e8190e4ab8d93": {
       "chainId": "43111",
@@ -248,7 +329,8 @@
       "symbol": "tBTC",
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/60808/0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2.png",
       "assetGroup": "TBTC",
-      "currencyId": "tBTC v2::tBTC"
+      "currencyId": "tBTC v2::tBTC",
+      "props": {}
     },
     "0xf9775085d726e782e83585033b58606f7731ab18": {
       "chainId": "43111",
@@ -258,7 +340,8 @@
       "symbol": "uniBTC",
       "logoURI": "https://raw.githubusercontent.com/Bedrock-Technology/bedrock-static/39b68b34ecef136a7f57720ac6ac8773606539da/logo/unibtc.svg",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {}
     },
     "0x0af3ec6f9592c193196bef220bc0ce4d9311527d": {
       "chainId": "43111",
@@ -267,7 +350,8 @@
       "address": "0x0af3ec6f9592c193196bef220bc0ce4d9311527d",
       "symbol": "Remote Bridged mBTC",
       "assetGroup": "Liquid Staked BTC::Remote Bridged mBTC",
-      "currencyId": "Liquid Staked BTC::Remote Bridged mBTC"
+      "currencyId": "Liquid Staked BTC::Remote Bridged mBTC",
+      "props": {}
     },
     "0xe85411c030fb32a9d8b14bbbc6cb19417391f711": {
       "chainId": "43111",
@@ -277,7 +361,8 @@
       "symbol": "suBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUBTC.webp",
       "assetGroup": "SUBTC",
-      "currencyId": "Sumerian BTC::suBTC"
+      "currencyId": "Sumerian BTC::suBTC",
+      "props": {}
     },
     "0xc93b7aae2802f57eb9d98e2b6a68217d75a0658c": {
       "chainId": "43111",
@@ -287,7 +372,8 @@
       "symbol": "NBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/52630/thumb/NBTC-logo.png?1733837414",
       "assetGroup": "NexusBTC::NBTC",
-      "currencyId": "NexusBTC::NBTC"
+      "currencyId": "NexusBTC::NBTC",
+      "props": {}
     },
     "0x027a9d301fb747cd972cfb29a63f3bda551dfc5c": {
       "chainId": "43111",
@@ -298,7 +384,12 @@
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/egeth.png",
       "assetGroup": "Bridged egETH::Bridged egETH",
       "currencyId": "Bridged egETH::Bridged egETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0xbf7d0f62b64b23053949b3a88a03da5bfd35b2e2": {
       "chainId": "43111",
@@ -308,7 +399,8 @@
       "symbol": "msETH",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_32/d_unknown.png/tokens/43111/0xBF7d0F62B64B23053949B3a88a03da5Bfd35b2E2.jpg",
       "assetGroup": "Metronome Synth ETH::msETH",
-      "currencyId": "Metronome Synth ETH::msETH"
+      "currencyId": "Metronome Synth ETH::msETH",
+      "props": {}
     },
     "0x1855911ab07ed5cd056008f409b709dfa9d01183": {
       "chainId": "43111",
@@ -318,7 +410,8 @@
       "symbol": "msBTC",
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/msbtc.png",
       "assetGroup": "Metronome Synth BTC::msBTC",
-      "currencyId": "Metronome Synth BTC::msBTC"
+      "currencyId": "Metronome Synth BTC::msBTC",
+      "props": {}
     },
     "0x3ea24e3727a85a479e29e02cc70e792936fbbcad": {
       "chainId": "43111",
@@ -328,7 +421,8 @@
       "symbol": "msUSD",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_48/d_unknown.png/tokens/43111/0x3EA24E3727a85A479E29E02Cc70e792936FbBcaD.jpg",
       "assetGroup": "Metronome Synth USD::msUSD",
-      "currencyId": "Metronome Synth USD::msUSD"
+      "currencyId": "Metronome Synth USD::msUSD",
+      "props": {}
     },
     "0x1c22531aa9747d76fff8f0a43b37954ca67d28e0": {
       "chainId": "43111",
@@ -338,7 +432,21 @@
       "symbol": "suETH",
       "logoURI": "https://assets.coingecko.com/coins/images/33265/thumb/Sumer_Money_Logo.jpg?1701321407",
       "assetGroup": "Sumerian ETH::suETH",
-      "currencyId": "Sumerian ETH::suETH"
+      "currencyId": "Sumerian ETH::suETH",
+      "props": {
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "SAFE",
+          "mint": "access-control",
+          "pause": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
+        }
+      }
     },
     "0xb4818bb69478730ef4e33cc068dd94278e2766cb": {
       "chainId": "43111",
@@ -349,7 +457,18 @@
       "logoURI": "https://app.satoshiprotocol.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FsatIcon.c7c91de1.png&w=32&q=75",
       "assetGroup": "Satoshi Stablecoin V2::satUSD",
       "currencyId": "Satoshi Stablecoin V2::satUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA"
+        }
+      }
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {
       "chainId": "43111",
@@ -359,7 +478,8 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUUSD.webp",
       "assetGroup": "SUUSD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {}
     },
     "0x6c851f501a3f24e29a8e39a29591cddf09369080": {
       "chainId": "43111",
@@ -369,7 +489,8 @@
       "symbol": "DAI",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
       "assetGroup": "DAI",
-      "currencyId": "Dai Stablecoin::DAI"
+      "currencyId": "Dai Stablecoin::DAI",
+      "props": {}
     },
     "0x54df33333c78c13b1448cb35a0e49f75c3d4347f": {
       "chainId": "43111",
@@ -378,7 +499,8 @@
       "address": "0x54df33333c78c13b1448cb35a0e49f75c3d4347f",
       "symbol": "MET",
       "assetGroup": "Metronome2::MET",
-      "currencyId": "Metronome2::MET"
+      "currencyId": "Metronome2::MET",
+      "props": {}
     },
     "0xb2960608948c4d216f72f98c39eb3d0e775e3923": {
       "chainId": "43111",
@@ -388,7 +510,8 @@
       "symbol": "AAVE",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/aave.webp",
       "assetGroup": "AAVE",
-      "currencyId": "Aave::AAVE"
+      "currencyId": "Aave::AAVE",
+      "props": {}
     },
     "0x63d367531b460da78a9ebbaf6c1fbfc397e5d40a": {
       "chainId": "43111",
@@ -397,7 +520,8 @@
       "address": "0x63d367531b460da78a9ebbaf6c1fbfc397e5d40a",
       "symbol": "bwAJNA",
       "assetGroup": "Burn Wrapped AJNA::bwAJNA",
-      "currencyId": "Burn Wrapped AJNA::bwAJNA"
+      "currencyId": "Burn Wrapped AJNA::bwAJNA",
+      "props": {}
     },
     "0x584666a5024b9fe9e6a9cacb834f42ccaa248d08": {
       "chainId": "43111",
@@ -406,7 +530,8 @@
       "address": "0x584666a5024b9fe9e6a9cacb834f42ccaa248d08",
       "symbol": "LINK",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {}
     },
     "0xc9fe18def46952bab59bd15fbac865346f621649": {
       "chainId": "43111",
@@ -415,7 +540,8 @@
       "address": "0xc9fe18def46952bab59bd15fbac865346f621649",
       "symbol": "COMP",
       "assetGroup": "COMP",
-      "currencyId": "Compound::COMP"
+      "currencyId": "Compound::COMP",
+      "props": {}
     },
     "0xc4a20a608616f18aa631316eeda9fb62d089361e": {
       "chainId": "43111",
@@ -424,7 +550,8 @@
       "address": "0xc4a20a608616f18aa631316eeda9fb62d089361e",
       "symbol": "FRAX",
       "assetGroup": "FRAX",
-      "currencyId": "Frax::FRAX"
+      "currencyId": "Frax::FRAX",
+      "props": {}
     },
     "0xdf0e8f7b7fda30605ca5665161f9f3ddb489c870": {
       "chainId": "43111",
@@ -433,7 +560,8 @@
       "address": "0xdf0e8f7b7fda30605ca5665161f9f3ddb489c870",
       "symbol": "ZRO",
       "assetGroup": "ZRO",
-      "currencyId": "LayerZero::ZRO"
+      "currencyId": "LayerZero::ZRO",
+      "props": {}
     },
     "0x98d6e32f3092d39a6c0b36062cc9eb1e52ccc99d": {
       "chainId": "43111",
@@ -442,7 +570,8 @@
       "address": "0x98d6e32f3092d39a6c0b36062cc9eb1e52ccc99d",
       "symbol": "LMR",
       "assetGroup": "Lumerin::LMR",
-      "currencyId": "Lumerin::LMR"
+      "currencyId": "Lumerin::LMR",
+      "props": {}
     },
     "0x4f6a87566ebca017b147da84954d94b10d830727": {
       "chainId": "43111",
@@ -451,7 +580,8 @@
       "address": "0x4f6a87566ebca017b147da84954d94b10d830727",
       "symbol": "MKR",
       "assetGroup": "MKR",
-      "currencyId": "Maker::MKR"
+      "currencyId": "Maker::MKR",
+      "props": {}
     },
     "0x1ebd781b9259822d00b0c5f4ca2f0838d72bbe9c": {
       "chainId": "43111",
@@ -460,7 +590,8 @@
       "address": "0x1ebd781b9259822d00b0c5f4ca2f0838d72bbe9c",
       "symbol": "SUSHI",
       "assetGroup": "SUSHI",
-      "currencyId": "Sushi::SUSHI"
+      "currencyId": "Sushi::SUSHI",
+      "props": {}
     },
     "0x6fd31f56eb971113bea12c5883dec68337b3b7b5": {
       "chainId": "43111",
@@ -470,7 +601,8 @@
       "symbol": "UNI",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/UNI.webp",
       "assetGroup": "UNI",
-      "currencyId": "Uniswap::UNI"
+      "currencyId": "Uniswap::UNI",
+      "props": {}
     },
     "0x21c1f6be5765d378add561edddd1127a65df3820": {
       "chainId": "43111",
@@ -479,7 +611,8 @@
       "address": "0x21c1f6be5765d378add561edddd1127a65df3820",
       "symbol": "VSP",
       "assetGroup": "VesperToken::VSP",
-      "currencyId": "VesperToken::VSP"
+      "currencyId": "VesperToken::VSP",
+      "props": {}
     },
     "0x0ffb62483517309afd039b117d795521e8320a1b": {
       "chainId": "43111",
@@ -489,7 +622,16 @@
       "symbol": "SLP",
       "assetGroup": "SushiSwap LP Token (VUSD-hemiBTC)::SLP",
       "currencyId": "SushiSwap LP Token (VUSD-hemiBTC)::SLP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0xaf6ed58980b5a0732423469dd9f3f69d9dc6dab5": {
       "chainId": "43111",
@@ -499,7 +641,16 @@
       "symbol": "SLP",
       "assetGroup": "SushiSwap LP Token (WETH-USDC.e)::SLP",
       "currencyId": "SushiSwap LP Token (WETH-USDC.e)::SLP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0xf23eec60263de9b0c8472c58be10feba28d9eb53": {
       "chainId": "43111",
@@ -509,7 +660,16 @@
       "symbol": "SLP",
       "assetGroup": "SushiSwap LP Token (VUSD-USDC.e)::SLP",
       "currencyId": "SushiSwap LP Token (VUSD-USDC.e)::SLP",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0xafb068838136358cfa6b54bea580b86df70bba7f": {
       "chainId": "43111",
@@ -519,7 +679,8 @@
       "symbol": "esBTC",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_64/d_unknown.png/tokens/43111/0xaFB068838136358CFa6B54BEa580B86DF70BBA7f.jpg",
       "assetGroup": "exSat Staking BTC::esBTC",
-      "currencyId": "exSat Staking BTC::esBTC"
+      "currencyId": "exSat Staking BTC::esBTC",
+      "props": {}
     },
     "0x7f0b394bb1a2a4df859f8a0b2a384f3d9d4e95cc": {
       "chainId": "43111",
@@ -529,7 +690,23 @@
       "symbol": "PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "assetGroup": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "UNKNOWN",
+          "pause": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
+        }
+      }
     },
     "0x42ca6ae4d7f0ff042ae0796685e82b12899a392e": {
       "chainId": "43111",
@@ -539,7 +716,23 @@
       "symbol": "PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "assetGroup": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "UNKNOWN",
+          "pause": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
+        }
+      }
     },
     "0x99e3de3817f6081b2568208337ef83295b7f591d": {
       "chainId": "43111",
@@ -549,7 +742,13 @@
       "symbol": "HEMI",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/HEMI.webp",
       "assetGroup": "Hemi::HEMI",
-      "currencyId": "Hemi::HEMI"
+      "currencyId": "Hemi::HEMI",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "43111",
@@ -594,5 +793,6 @@
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35",
     "0xf9775085d726e782e83585033b58606f7731ab18",
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8"
-  ]
+  ],
+  "riskAssessedAt": "2026-07-26T11:42:09.769Z"
 }

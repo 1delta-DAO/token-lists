@@ -10,6 +10,7 @@ import { FUEL_MAPPEDS } from './utils/data/knownAssets'
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
+import { lookupStablecoin } from './stablecoin/stablecoinMap'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -267,6 +268,11 @@ async function readTokenLists(): Promise<{
                     // it's merged here by address rather than carried on a source list.
                     const risk = lookupRisk(chainId, lcAddress)
                     if (risk) tokenProps = { ...tokenProps, risk }
+
+                    // Stablecoin overlay (from risk-data). Keyed by assetGroup since the fiat
+                    // base is chain-independent — covers every deployment of the group.
+                    const stablecoin = lookupStablecoin(assetGroup)
+                    if (stablecoin && !tokenProps.stablecoin) tokenProps = { ...tokenProps, stablecoin }
 
                     tags = AutoGenHelpers.uniq([...tags])
 

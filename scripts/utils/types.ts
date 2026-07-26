@@ -246,6 +246,14 @@ export interface TokenProps {
     /** provenance, e.g. 'whitelist' | 'default' | 'stablecoin' | 'pendle_inherit' */
     source?: string
   }
+  /**
+   * Stablecoin classification (from risk-data's DeFiLlama stablecoin-quality feed).
+   * Presence of this prop is the stablecoin flag; `base` is the fiat peg when known.
+   */
+  stablecoin?: {
+    /** fiat peg base, e.g. 'USD' | 'EUR' | 'GBP'. Omitted for floating/variable pegs. */
+    base?: string
+  }
   /** permit data if any */
   permit?: { type: 0 | 1; version: string }
   /** Default wrapped native token address */
@@ -270,9 +278,13 @@ export type RwaProps = NonNullable<TokenProps['rwa']>
 export type LstProps = NonNullable<TokenProps['lst']>
 /** Risk props shape, derived from TokenProps */
 export type RiskProps = NonNullable<TokenProps['risk']>
+/** Stablecoin props shape, derived from TokenProps */
+export type StablecoinProps = NonNullable<TokenProps['stablecoin']>
 /** chainId -> address(lowercase) -> RWA classification */
 export type RwaRegistry = { [chainId: string]: { [address: string]: RwaProps } }
 /** chainId -> address(lowercase) -> LST classification */
 export type LstRegistry = { [chainId: string]: { [address: string]: LstProps } }
 /** chainId -> address(lowercase) -> risk overlay */
 export type RiskRegistry = { [chainId: string]: { [address: string]: RiskProps } }
+/** assetGroup -> stablecoin overlay (base is chain-independent) */
+export type StablecoinGroupMap = { [assetGroup: string]: StablecoinProps }

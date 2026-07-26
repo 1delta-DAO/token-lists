@@ -32,9 +32,9 @@ jobs:
         working-directory: scripts
         run: npm ci
 
-      # Private repo — provides the asset risk overlay (data/asset-risks.json).
-      # Non-blocking: if the token lacks access, the risk step falls back to the
-      # GitHub API and then to the last committed risk.json snapshot.
+      # Private repo — provides the risk & stablecoin overlays (data/asset-risks.json,
+      # data/defillama/stablecoin-quality.json). Non-blocking: if the token lacks access,
+      # those steps fall back to the GitHub API and then to the last committed snapshots.
       - name: Checkout risk-data
         continue-on-error: true
         uses: actions/checkout@v4
@@ -48,7 +48,7 @@ jobs:
         working-directory: scripts
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
-          RISK_DATA_JSON: ${{ github.workspace }}/risk-data-src/data/asset-risks.json
+          RISK_DATA_DIR: ${{ github.workspace }}/risk-data-src
         run: npm run generate:formatted
 
       - name: Compute branch name

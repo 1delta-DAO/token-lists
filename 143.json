@@ -11,7 +11,11 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e8e8523f-cce9-4933-b286-66aaec6ab805.svg",
       "assetGroup": "PT cUSD (cUSD) Monad::PT-cUSD-23JUL2026",
       "currencyId": "PT cUSD (cUSD) Monad::PT-cUSD-23JUL2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT"
+        }
+      }
     },
     "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1": {
       "chainId": "143",
@@ -90,6 +94,10 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        },
+        "risk": {
+          "level": "green",
+          "score": 1
         }
       }
     },
@@ -110,6 +118,10 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        },
+        "risk": {
+          "level": "green",
+          "score": 1
         }
       }
     },
@@ -130,6 +142,17 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b"
+        },
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE",
+          "pause": true,
+          "controller": {
+            "kind": "CUSTOM",
+            "tier": "unknown"
+          }
         }
       }
     },
@@ -202,7 +225,11 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/770e75fe-05a2-4e57-9dac-fee6c850de3e.svg",
       "assetGroup": "PT sUSDe (USDe) Monad::PT-sUSDE-22OCT2026",
       "currencyId": "PT sUSDe (USDe) Monad::PT-sUSDE-22OCT2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT"
+        }
+      }
     },
     "0x758119e49319b91332eebd6fcbecd9e0387de16b": {
       "chainId": "143",
@@ -213,7 +240,11 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5fdff739-4c5d-4374-971c-b1dd5267e5f3.svg",
       "assetGroup": "YT sUSDe (USDe) Monad::YT-sUSDE-22OCT2026",
       "currencyId": "YT sUSDe (USDe) Monad::YT-sUSDE-22OCT2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT"
+        }
+      }
     },
     "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51": {
       "chainId": "143",
@@ -224,7 +255,11 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/27678868-b28f-4113-a46e-7dd4b82c08de.svg",
       "assetGroup": "sUSDe Monad::SY-sUSDE",
       "currencyId": "sUSDe Monad::SY-sUSDE",
-      "props": { "pendle": { "tokenType": "SY" } }
+      "props": {
+        "pendle": {
+          "tokenType": "SY"
+        }
+      }
     },
     "0x01bff41798a0bcf287b996046ca68b395dbc1071": {
       "chainId": "143",
@@ -241,6 +276,17 @@
           "subType": "gold",
           "issuer": "tether",
           "underlying": "XAU"
+        },
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "SAFE",
+          "blacklist": true,
+          "controller": {
+            "kind": "SAFE",
+            "tier": "low"
+          }
         }
       }
     },
@@ -254,7 +300,11 @@
       "assetGroup": "RWA Backed Lending by Valos::vUSD",
       "currencyId": "RWA Backed Lending by Valos::vUSD",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed"
+        }
       }
     },
     "0x8c213ee79581ff4984583c6a801e5263418c4b86": {
@@ -267,7 +317,11 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "currencyId": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy"
+        }
       }
     },
     "0x5a0f93d040de44e78f251b03c43be9cf317dcf64": {
@@ -280,7 +334,11 @@
       "assetGroup": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy"
+        }
       }
     },
     "0x9477724bb54ad5417de8baff29e59df3fb4da74f": {
@@ -310,7 +368,11 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund::JTRSY::143::0",
       "currencyId": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy"
+        }
       }
     },
     "0x2fabf1c784b8583d63c00c5c9c0377d8cf1a3245": {
@@ -340,7 +402,11 @@
       "assetGroup": "Janus Henderson Anemoy AAA CLO Fund::JAAA::143::0",
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy"
+        }
       }
     },
     "0x5f8a1c74c112865bd05dbe4752c7608332719062": {
@@ -353,7 +419,11 @@
       "assetGroup": "DeFi Janus Henderson Anemoy AAA CLO Fund Token::deJAAA",
       "currencyId": "DeFi Janus Henderson Anemoy AAA CLO Fund Token::deJAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy"
+        }
       }
     },
     "0x8de0f3295b9e42b29e7617bada7c603277420451": {
@@ -366,7 +436,11 @@
       "assetGroup": "DeFi Janus Henderson Anemoy Treasury Fund Token::deJTRSY",
       "currencyId": "DeFi Janus Henderson Anemoy Treasury Fund Token::deJTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy"
+        }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -379,7 +453,11 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": {
+          "type": "staking",
+          "asset": "BTC",
+          "provider": "lombard"
+        }
       }
     },
     "0x10aeaf63194db8d453d4d85a06e5efe1dd0b5417": {
@@ -392,7 +470,11 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": {
+          "type": "staking",
+          "asset": "ETH",
+          "provider": "lido"
+        }
       }
     },
     "0xa3d68b74bf0528fdd07263c60d6488749044914b": {
@@ -405,7 +487,11 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": {
+          "type": "restaking",
+          "asset": "ETH",
+          "provider": "etherfi"
+        }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -418,7 +504,11 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": {
+          "type": "restaking",
+          "asset": "ETH",
+          "provider": "renzo"
+        }
       }
     },
     "0xc50f2e735edd9dcd8ccd41ecfe9894e679e3195f": {
@@ -431,7 +521,11 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": {
+          "type": "staking",
+          "asset": "ETH",
+          "provider": "rocketpool"
+        }
       }
     },
     "0x58ba69b289de313e66a13b7d1f822fc98b970554": {
@@ -441,7 +535,8 @@
       "address": "0x58ba69b289de313e66a13b7d1f822fc98b970554",
       "symbol": "naccUSDC",
       "assetGroup": "sUSN Delta Neutral Yield Vault::naccUSDC",
-      "currencyId": "sUSN Delta Neutral Yield Vault::naccUSDC"
+      "currencyId": "sUSN Delta Neutral Yield Vault::naccUSDC",
+      "props": {}
     },
     "0x03ef37626bc7c7b3f6cea4bcbfeb7764b51e22fb": {
       "chainId": "143",
@@ -450,7 +545,8 @@
       "address": "0x03ef37626bc7c7b3f6cea4bcbfeb7764b51e22fb",
       "symbol": "ouro90D",
       "assetGroup": "Ouroboros 90D Fixed Term Vault::ouro90D",
-      "currencyId": "Ouroboros 90D Fixed Term Vault::ouro90D"
+      "currencyId": "Ouroboros 90D Fixed Term Vault::ouro90D",
+      "props": {}
     },
     "0x0a4afb907672279926c73dc1f77151931c2a55cc": {
       "chainId": "143",
@@ -459,7 +555,8 @@
       "address": "0x0a4afb907672279926c73dc1f77151931c2a55cc",
       "symbol": "AccYUSD",
       "assetGroup": "Aegis Yield Vault::AccYUSD",
-      "currencyId": "Aegis Yield Vault::AccYUSD"
+      "currencyId": "Aegis Yield Vault::AccYUSD",
+      "props": {}
     },
     "0xa5f472f2114b973f3da973ddd0c310c45e5995d2": {
       "chainId": "143",
@@ -468,7 +565,8 @@
       "address": "0xa5f472f2114b973f3da973ddd0c310c45e5995d2",
       "symbol": "accNUSD",
       "assetGroup": "Neutrl Ecosystem Vault::accNUSD",
-      "currencyId": "Neutrl Ecosystem Vault::accNUSD"
+      "currencyId": "Neutrl Ecosystem Vault::accNUSD",
+      "props": {}
     },
     "0xdefd210dc0bd4b249904de47947e837643de6578": {
       "chainId": "143",
@@ -477,7 +575,8 @@
       "address": "0xdefd210dc0bd4b249904de47947e837643de6578",
       "symbol": "K3CC",
       "assetGroup": "K3 Capital Credit::K3CC",
-      "currencyId": "K3 Capital Credit::K3CC"
+      "currencyId": "K3 Capital Credit::K3CC",
+      "props": {}
     },
     "0xea17e5a9efebf1477db45082d67010e2245217f1": {
       "chainId": "143",
@@ -487,7 +586,15 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
-      "currencyId": "SOL Wormhole ::SOL"
+      "currencyId": "SOL Wormhole ::SOL",
+      "props": {
+        "risk": {
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "UNKNOWN"
+        }
+      }
     },
     "0x754704bc059f8c67012fed69bc8a327a5aafb603": {
       "chainId": "143",
@@ -497,7 +604,8 @@
       "symbol": "USDC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
-      "currencyId": "USD Coin::USDC"
+      "currencyId": "USD Coin::USDC",
+      "props": {}
     },
     "0xe7cd86e13ac4309349f30b3435a9d337750fc82d": {
       "chainId": "143",
@@ -508,7 +616,12 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "143",
@@ -518,7 +631,8 @@
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": {}
     },
     "0xee8c0e9f1bffb4eb878d8f15f368a02a35481242": {
       "chainId": "143",
@@ -529,7 +643,12 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
       "chainId": "143",
@@ -539,7 +658,8 @@
       "symbol": "AUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/AUSD/logo.svg",
       "assetGroup": "AUSD",
-      "currencyId": "AUSD::AUSD"
+      "currencyId": "AUSD::AUSD",
+      "props": {}
     },
     "0x4917a5ec9fcb5e10f47cbb197abe6ab63be81fe8": {
       "chainId": "143",
@@ -549,7 +669,13 @@
       "symbol": "AZND",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/AZND/logo.svg",
       "assetGroup": "Asian Dollar::AZND",
-      "currencyId": "Asian Dollar::AZND"
+      "currencyId": "Asian Dollar::AZND",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0xb0f70c0bd6fd87dbeb7c10dc692a2a6106817072": {
       "chainId": "143",
@@ -560,7 +686,12 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/BTC.b/logo.svg",
       "assetGroup": "BTC",
       "currencyId": "Bitcoin::BTC.b",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0xff7f8f301f7a706e3cfd3d2275f5dc0b9ee8009b": {
       "chainId": "143",
@@ -571,7 +702,12 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/FOLKS/logo.svg",
       "assetGroup": "Folks Finance::FOLKS",
       "currencyId": "Folks Finance::FOLKS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x91b81bfbe3a747230f0529aa28d8b2bc898e6d56": {
       "chainId": "143",
@@ -581,7 +717,8 @@
       "symbol": "LVMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/LVMON/logo.svg",
       "assetGroup": "LeverUp MON::LVMON",
-      "currencyId": "LeverUp MON::LVMON"
+      "currencyId": "LeverUp MON::LVMON",
+      "props": {}
     },
     "0xfd44b35139ae53fff7d8f2a9869c503d987f00d1": {
       "chainId": "143",
@@ -591,7 +728,8 @@
       "symbol": "LVUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/LVUSD/logo.svg",
       "assetGroup": "LeverUp USD::LVUSD",
-      "currencyId": "LeverUp USD::LVUSD"
+      "currencyId": "LeverUp USD::LVUSD",
+      "props": {}
     },
     "0x04f8c38ae80bcf690b947f60f62bda18145c3d67": {
       "chainId": "143",
@@ -601,7 +739,8 @@
       "symbol": "MVT",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/MVT/logo.svg",
       "assetGroup": "Monad Vault::MVT",
-      "currencyId": "Monad Vault::MVT"
+      "currencyId": "Monad Vault::MVT",
+      "props": {}
     },
     "0x111111d2bf19e43c34263401e0cad979ed1cdb61": {
       "chainId": "143",
@@ -612,7 +751,12 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USD1/logo.svg",
       "assetGroup": "USD1::USD1",
       "currencyId": "USD1::USD1",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x3bd359c1119da7da1d913d1c4d2b7c461115433a": {
       "chainId": "143",
@@ -623,7 +767,13 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/WMON/logo.svg",
       "assetGroup": "MON",
       "currencyId": "Wrapped MON::WMON",
-      "props": { "wnative": true }
+      "props": {
+        "wnative": true,
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0x0c65a0bc65a5d819235b71f554d210d3f80e0852": {
       "chainId": "143",
@@ -634,7 +784,12 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/aprMON/logo.svg",
       "assetGroup": "aPriori Monad LST::aprMON",
       "currencyId": "aPriori Monad LST::aprMON",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x103222f020e98bba0ad9809a011fdf8e6f067496": {
       "chainId": "143",
@@ -645,7 +800,18 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/earnAUSD/logo.svg",
       "assetGroup": "earnAUSD::earnAUSD",
       "currencyId": "earnAUSD::earnAUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081": {
       "chainId": "143",
@@ -655,7 +821,20 @@
       "symbol": "gMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/gMON/logo.svg",
       "assetGroup": "gMON::gMON",
-      "currencyId": "gMON::gMON"
+      "currencyId": "gMON::gMON",
+      "props": {
+        "risk": {
+          "level": "yellow",
+          "score": 3,
+          "upgradeable": true,
+          "adminKind": "SAFE",
+          "pause": true,
+          "controller": {
+            "kind": "SAFE",
+            "tier": "medium"
+          }
+        }
+      }
     },
     "0x1d4795a4670033f47f572b910553be0295077b51": {
       "chainId": "143",
@@ -665,7 +844,8 @@
       "symbol": "mcMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/mcMON/logo.svg",
       "assetGroup": "mcMON::mcMON",
-      "currencyId": "mcMON::mcMON"
+      "currencyId": "mcMON::mcMON",
+      "props": {}
     },
     "0x336d414754967c6682b5a665c7daf6f1409e63e8": {
       "chainId": "143",
@@ -675,7 +855,8 @@
       "symbol": "muBOND",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/muBOND/logo.svg",
       "assetGroup": "mu Bond::muBOND",
-      "currencyId": "mu Bond::muBOND"
+      "currencyId": "mu Bond::muBOND",
+      "props": {}
     },
     "0x37d6382b6889ccef8d6871a8b60e667115eddbcf": {
       "chainId": "143",
@@ -685,7 +866,8 @@
       "symbol": "pufETH",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/pufETH/logo.png",
       "assetGroup": "PUFETH",
-      "currencyId": "pufETH::pufETH"
+      "currencyId": "pufETH::pufETH",
+      "props": {}
     },
     "0x1ce060d47a0fd08b0869748fd7eccf151f4ec5d1": {
       "chainId": "143",
@@ -695,7 +877,8 @@
       "symbol": "shMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
       "assetGroup": "ShMonad (Old)::shMON",
-      "currencyId": "ShMonad (Old)::shMON"
+      "currencyId": "ShMonad (Old)::shMON",
+      "props": {}
     },
     "0xa3227c5969757783154c60bf0bc1944180ed81b9": {
       "chainId": "143",
@@ -705,7 +888,20 @@
       "symbol": "sMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sMON/logo.svg",
       "assetGroup": "Kintsu Staked Monad::sMON",
-      "currencyId": "Kintsu Staked Monad::sMON"
+      "currencyId": "Kintsu Staked Monad::sMON",
+      "props": {
+        "risk": {
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "UNKNOWN",
+          "pause": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
+        }
+      }
     },
     "0x1b68626dca36c7fe922fd2d55e4f631d962de19c": {
       "chainId": "143",
@@ -715,7 +911,15 @@
       "symbol": "shMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
       "assetGroup": "ShMonad::shMON",
-      "currencyId": "ShMonad::shMON"
+      "currencyId": "ShMonad::shMON",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0xe85411c030fb32a9d8b14bbbc6cb19417391f711": {
       "chainId": "143",
@@ -725,7 +929,8 @@
       "symbol": "suBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/suBTC/logo.png",
       "assetGroup": "SUBTC",
-      "currencyId": "Sumerian BTC::suBTC"
+      "currencyId": "Sumerian BTC::suBTC",
+      "props": {}
     },
     "0x1c22531aa9747d76fff8f0a43b37954ca67d28e0": {
       "chainId": "143",
@@ -735,7 +940,8 @@
       "symbol": "suETH",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/suETH/logo.png",
       "assetGroup": "Sumerian ETH::suETH",
-      "currencyId": "Sumerian ETH::suETH"
+      "currencyId": "Sumerian ETH::suETH",
+      "props": {}
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {
       "chainId": "143",
@@ -745,7 +951,8 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/suUSD/logo.png",
       "assetGroup": "SUUSD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {}
     },
     "0x62413d87cb81cf60a7b1599eacfbdeae1e569b93": {
       "chainId": "143",
@@ -755,7 +962,8 @@
       "symbol": "testWETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/testweth.svg",
       "assetGroup": "Test Wrapped ETH::testWETH",
-      "currencyId": "Test Wrapped ETH::testWETH"
+      "currencyId": "Test Wrapped ETH::testWETH",
+      "props": {}
     },
     "0x7f0b31617f0700358937b99f19b3d77db9c07d23": {
       "chainId": "143",
@@ -765,7 +973,8 @@
       "symbol": "testwstETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/testwsteth.svg",
       "assetGroup": "Test Wrapped stETH::testwstETH",
-      "currencyId": "Test Wrapped stETH::testwstETH"
+      "currencyId": "Test Wrapped stETH::testwstETH",
+      "props": {}
     },
     "0xdef72af3fc69e1dd5a094f7dda08ba203cd0438b": {
       "chainId": "143",
@@ -776,7 +985,12 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/EUL/logo.svg",
       "assetGroup": "EUL",
       "currencyId": "Euler::EUL",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x18bc5bcc660cf2b9ce3cd51a404afe1a0cbd3c22": {
       "chainId": "143",
@@ -786,7 +1000,8 @@
       "symbol": "IDRX",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/IDRX/logo.svg",
       "assetGroup": "IDRX::IDRX",
-      "currencyId": "IDRX::IDRX"
+      "currencyId": "IDRX::IDRX",
+      "props": {}
     },
     "0xd793c04b87386a6bb84ee61d98e0065fde7fda5e": {
       "chainId": "143",
@@ -796,7 +1011,8 @@
       "symbol": "sAUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sAUSD/logo.svg",
       "assetGroup": "sAUSD::sAUSD",
-      "currencyId": "sAUSD::sAUSD"
+      "currencyId": "sAUSD::sAUSD",
+      "props": {}
     },
     "0xc88cacd6fe1838c8dd1f0244b6cc0dee910dd261": {
       "chainId": "143",
@@ -806,7 +1022,8 @@
       "symbol": "AETHON",
       "logoURI": "https://assets.coingecko.com/coins/images/70760/thumb/AethonSwap_Logo_icon.png?1763560124",
       "assetGroup": "AethonSwap::AETHON",
-      "currencyId": "AethonSwap::AETHON"
+      "currencyId": "AethonSwap::AETHON",
+      "props": {}
     },
     "0x25ac11cb986ca6910501803af5b4e41cf3ad9999": {
       "chainId": "143",
@@ -816,7 +1033,8 @@
       "symbol": "MONADP",
       "logoURI": "https://assets.coingecko.com/coins/images/70817/thumb/monad-printer.jpg?1764001342",
       "assetGroup": "MonadPrinter::MONADP",
-      "currencyId": "MonadPrinter::MONADP"
+      "currencyId": "MonadPrinter::MONADP",
+      "props": {}
     },
     "0x9c82eb49b51f7dc61e22ff347931ca32adc6cd90": {
       "chainId": "143",
@@ -826,7 +1044,20 @@
       "symbol": "LOAZND",
       "logoURI": "https://assets.coingecko.com/coins/images/70764/thumb/loAZND_4x.png?1763566149",
       "assetGroup": "Mu Digital Locked AZND::LOAZND",
-      "currencyId": "Mu Digital Locked AZND::LOAZND"
+      "currencyId": "Mu Digital Locked AZND::LOAZND",
+      "props": {
+        "risk": {
+          "level": "red",
+          "score": 5,
+          "upgradeable": true,
+          "adminKind": "EOA",
+          "pause": true,
+          "controller": {
+            "kind": "EOA",
+            "tier": "high"
+          }
+        }
+      }
     },
     "0x1f80c65cc2c37af84abbe1ea03183a624a6f8888": {
       "chainId": "143",
@@ -836,7 +1067,8 @@
       "symbol": "GMONAD",
       "logoURI": "https://assets.coingecko.com/coins/images/70816/thumb/gmonad.jpg?1764001159",
       "assetGroup": "Gmonad::GMONAD",
-      "currencyId": "Gmonad::GMONAD"
+      "currencyId": "Gmonad::GMONAD",
+      "props": {}
     },
     "0xd32e9ddd968b18e8429f2d1da7efb2cc1f01d42d": {
       "chainId": "143",
@@ -846,7 +1078,8 @@
       "symbol": "MOLANDAK",
       "logoURI": "https://assets.coingecko.com/coins/images/70815/thumb/molandak-logo.jpg?1764000856",
       "assetGroup": "MOLANDAK::MOLANDAK",
-      "currencyId": "MOLANDAK::MOLANDAK"
+      "currencyId": "MOLANDAK::MOLANDAK",
+      "props": {}
     },
     "0x1ad7052bb331a0529c1981c3ec2bc4663498a110": {
       "chainId": "143",
@@ -856,7 +1089,8 @@
       "symbol": "ALLOCA",
       "logoURI": "https://assets.coingecko.com/coins/images/70749/thumb/Avatar-min.png?1763461541",
       "assetGroup": "Alloca::ALLOCA",
-      "currencyId": "Alloca::ALLOCA"
+      "currencyId": "Alloca::ALLOCA",
+      "props": {}
     },
     "0x7db552eeb6b77a6babe6e0a739b5382cd653cc3e": {
       "chainId": "143",
@@ -866,7 +1100,8 @@
       "symbol": "GMONAD",
       "logoURI": "https://assets.coingecko.com/coins/images/70825/thumb/gmonad.jpg?1764041457",
       "assetGroup": "GMONAD::GMONAD",
-      "currencyId": "GMONAD::GMONAD"
+      "currencyId": "GMONAD::GMONAD",
+      "props": {}
     },
     "0x3ff60900b70db8d0bde4d4819f028673718c5d1b": {
       "chainId": "143",
@@ -877,7 +1112,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70814/thumb/gmonad-logo.jpg?1764000507",
       "assetGroup": "GMONAD::GMONAD::143::0",
       "currencyId": "GMONAD::GMONAD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x65ea4cdaf74537202bfb1124131e1c68f9512d1b": {
       "chainId": "143",
@@ -887,7 +1127,8 @@
       "symbol": "SAL",
       "logoURI": "https://assets.coingecko.com/coins/images/70818/thumb/salmonad.jpg?1764001840",
       "assetGroup": "Salmonad::SAL",
-      "currencyId": "Salmonad::SAL"
+      "currencyId": "Salmonad::SAL",
+      "props": {}
     },
     "0x6fe981dbd557f81ff66836af0932cba535cbc343": {
       "chainId": "143",
@@ -897,7 +1138,8 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
       "assetGroup": "LINK",
-      "currencyId": "Chainlink::LINK"
+      "currencyId": "Chainlink::LINK",
+      "props": {}
     },
     "0x228c673cae7aad0f4d9f309616d6b546356b7777": {
       "chainId": "143",
@@ -908,7 +1150,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70902/thumb/Screenshot_2025-11-29_at_14.48.01.png?1764485818",
       "assetGroup": "Black Currency::BC",
       "currencyId": "Black Currency::BC",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x96043804d00dcec238718eedad9ac10719778380": {
       "chainId": "143",
@@ -918,7 +1165,8 @@
       "symbol": "SHUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/70906/thumb/Group_1321314974_%281%29.png?1764487804",
       "assetGroup": "Staked Sherpa USD::SHUSD",
-      "currencyId": "Staked Sherpa USD::SHUSD"
+      "currencyId": "Staked Sherpa USD::SHUSD",
+      "props": {}
     },
     "0xad96c3dffcd6374294e2573a7fbba96097cc8d7c": {
       "chainId": "143",
@@ -928,7 +1176,8 @@
       "symbol": "DUST",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/DUST/logo.svg",
       "assetGroup": "Pixie Dust::DUST",
-      "currencyId": "Pixie Dust::DUST"
+      "currencyId": "Pixie Dust::DUST",
+      "props": {}
     },
     "0x350035555e10d9afaf1566aaebfced5ba6c27777": {
       "chainId": "143",
@@ -938,7 +1187,8 @@
       "symbol": "CHOG",
       "logoURI": "https://assets.coingecko.com/coins/images/70930/thumb/chog.png?1764628221",
       "assetGroup": "Chog::CHOG",
-      "currencyId": "Chog::CHOG"
+      "currencyId": "Chog::CHOG",
+      "props": {}
     },
     "0x39b9e06f226ff6d7500c870b82333aacbd2f7777": {
       "chainId": "143",
@@ -948,7 +1198,8 @@
       "symbol": "NADS",
       "logoURI": "https://assets.coingecko.com/coins/images/70931/thumb/nads.png?1764628433",
       "assetGroup": "NADS::NADS",
-      "currencyId": "NADS::NADS"
+      "currencyId": "NADS::NADS",
+      "props": {}
     },
     "0x97401d48a80b15bc7291599e24b590eedcd7ce37": {
       "chainId": "143",
@@ -958,7 +1209,8 @@
       "symbol": "HST",
       "logoURI": "https://assets.coingecko.com/coins/images/70965/thumb/agBxURDU_400x400.jpg?1764865069",
       "assetGroup": "HYPERSTITIONS::HST",
-      "currencyId": "HYPERSTITIONS::HST"
+      "currencyId": "HYPERSTITIONS::HST",
+      "props": {}
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "143",
@@ -968,7 +1220,8 @@
       "symbol": "wsrUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/wsrusd.svg",
       "assetGroup": "Wrapped Savings rUSD::wsrUSD",
-      "currencyId": "Wrapped Savings rUSD::wsrUSD"
+      "currencyId": "Wrapped Savings rUSD::wsrUSD",
+      "props": {}
     },
     "0xd33f18d8d48cbbb2f8b47063de97f94de0d49b99": {
       "chainId": "143",
@@ -978,7 +1231,8 @@
       "symbol": "NXPC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/NXPC/logo.svg",
       "assetGroup": "NXPC::NXPC",
-      "currencyId": "NXPC::NXPC"
+      "currencyId": "NXPC::NXPC",
+      "props": {}
     },
     "0x2f2f2f74ab5db61ae8bd3c13ccd4dc8c9e8a2f2f": {
       "chainId": "143",
@@ -988,7 +1242,8 @@
       "symbol": "ZF",
       "logoURI": "https://assets.coingecko.com/coins/images/31633/thumb/200x200_Black.png?1747800050",
       "assetGroup": "zkSwap Finance::ZF",
-      "currencyId": "zkSwap Finance::ZF"
+      "currencyId": "zkSwap Finance::ZF",
+      "props": {}
     },
     "0x123468b48eadbc13c65cd9c66a9913cde4e94321": {
       "chainId": "143",
@@ -998,7 +1253,8 @@
       "symbol": "LONG",
       "logoURI": "https://assets.coingecko.com/coins/images/36497/thumb/Logo_Long_square.png?1717541650",
       "assetGroup": "Long::LONG",
-      "currencyId": "Long::LONG"
+      "currencyId": "Long::LONG",
+      "props": {}
     },
     "0x3db619ff72d877490699276061fb0fa0618fdf47": {
       "chainId": "143",
@@ -1008,7 +1264,8 @@
       "symbol": "EARN",
       "logoURI": "https://assets.coingecko.com/coins/images/32575/thumb/200.png?1698554742",
       "assetGroup": "HOLD::EARN",
-      "currencyId": "HOLD::EARN"
+      "currencyId": "HOLD::EARN",
+      "props": {}
     },
     "0xae4efbc7736f963982aacb17efa37fcbab924cb3": {
       "chainId": "143",
@@ -1018,7 +1275,8 @@
       "symbol": "SolvBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/SolvBTC/logo.svg",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {}
     },
     "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077": {
       "chainId": "143",
@@ -1028,7 +1286,8 @@
       "symbol": "xSolvBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/xSolvBTC/logo.svg",
       "assetGroup": "XSOLVBTC",
-      "currencyId": "xSolvBTC::xSolvBTC"
+      "currencyId": "xSolvBTC::xSolvBTC",
+      "props": {}
     },
     "0x1c8ee940b654bfced403f2a44c1603d5be0f50fa": {
       "chainId": "143",
@@ -1038,7 +1297,8 @@
       "symbol": "MEDGE",
       "logoURI": "https://assets.coingecko.com/coins/images/54591/thumb/medge_logo.png?1740565725",
       "assetGroup": "Midas mEDGE::MEDGE",
-      "currencyId": "Midas mEDGE::MEDGE"
+      "currencyId": "Midas mEDGE::MEDGE",
+      "props": {}
     },
     "0x095957ceb9f317ac1328f0ab3123622401766d71": {
       "chainId": "143",
@@ -1048,7 +1308,8 @@
       "symbol": "STONEUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/71084/thumb/STONEUSD-background_White.png?1765618232",
       "assetGroup": "StakeStone USD::STONEUSD",
-      "currencyId": "StakeStone USD::STONEUSD"
+      "currencyId": "StakeStone USD::STONEUSD",
+      "props": {}
     },
     "0xf59d81cd43f620e722e07f9cb3f6e41b031017a3": {
       "chainId": "143",
@@ -1058,7 +1319,8 @@
       "symbol": "Cake",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/Cake/logo.svg",
       "assetGroup": "CAKE",
-      "currencyId": "PancakeSwap Token::Cake"
+      "currencyId": "PancakeSwap Token::Cake",
+      "props": {}
     },
     "0x1001ff13bf368aa4fa85f21043648079f00e1001": {
       "chainId": "143",
@@ -1068,7 +1330,8 @@
       "symbol": "LV",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/LV/logo.svg",
       "assetGroup": "LeverUp::LV",
-      "currencyId": "LeverUp::LV"
+      "currencyId": "LeverUp::LV",
+      "props": {}
     },
     "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf": {
       "chainId": "143",
@@ -1078,7 +1341,8 @@
       "symbol": "WGC",
       "logoURI": "https://assets.coingecko.com/coins/images/37966/thumb/COIN_200x200.png?1716778831",
       "assetGroup": "Wild Goat Coin::WGC",
-      "currencyId": "Wild Goat Coin::WGC"
+      "currencyId": "Wild Goat Coin::WGC",
+      "props": {}
     },
     "0x8fa1365f6e39b7404737721a356b1d4a7b11ca7d": {
       "chainId": "143",
@@ -1088,7 +1352,8 @@
       "symbol": "earnMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/earnMON/logo.svg",
       "assetGroup": "earnMON::earnMON",
-      "currencyId": "earnMON::earnMON"
+      "currencyId": "earnMON::earnMON",
+      "props": {}
     },
     "0xd90f6bfed23ffde40106fc4498dd2e9edb95e4e7": {
       "chainId": "143",
@@ -1098,7 +1363,8 @@
       "symbol": "mHYPER",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/mHYPER/logo.svg",
       "assetGroup": "Midas Hyperithm::mHYPER",
-      "currencyId": "Midas Hyperithm::mHYPER"
+      "currencyId": "Midas Hyperithm::mHYPER",
+      "props": {}
     },
     "0x484be0540ad49f351eaa04eeb35df0f937d4e73f": {
       "chainId": "143",
@@ -1108,7 +1374,8 @@
       "symbol": "syzUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/syzUSD/logo.svg",
       "assetGroup": "Staked Yuzu USD::syzUSD",
-      "currencyId": "Staked Yuzu USD::syzUSD"
+      "currencyId": "Staked Yuzu USD::syzUSD",
+      "props": {}
     },
     "0xfdd22ce6d1f66bc0ec89b20bf16ccb6670f55a5a": {
       "chainId": "143",
@@ -1118,7 +1385,8 @@
       "symbol": "thBILL",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/thBILL/logo.svg",
       "assetGroup": "thBILL::thBILL",
-      "currencyId": "thBILL::thBILL"
+      "currencyId": "thBILL::thBILL",
+      "props": {}
     },
     "0xb37476cb1f6111cc682b107b747b8652f90b0984": {
       "chainId": "143",
@@ -1128,7 +1396,8 @@
       "symbol": "yzPP",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/yzPP/logo.svg",
       "assetGroup": "Yuzu Protection Pool::yzPP",
-      "currencyId": "Yuzu Protection Pool::yzPP"
+      "currencyId": "Yuzu Protection Pool::yzPP",
+      "props": {}
     },
     "0x9dcb0d17edde04d27f387c89fecb78654c373858": {
       "chainId": "143",
@@ -1138,7 +1407,8 @@
       "symbol": "yzUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/yzUSD/logo.svg",
       "assetGroup": "Yuzu USD::yzUSD",
-      "currencyId": "Yuzu USD::yzUSD"
+      "currencyId": "Yuzu USD::yzUSD",
+      "props": {}
     },
     "0x1808d4aa4d4a7cf66bb6515bf126edefa2b018c1": {
       "chainId": "143",
@@ -1148,7 +1418,8 @@
       "symbol": "USD*",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USD*/logo.svg",
       "assetGroup": "USD Star::USD*",
-      "currencyId": "USD Star::USD*"
+      "currencyId": "USD Star::USD*",
+      "props": {}
     },
     "0x7cd231120a60f500887444a9baf5e1bd753a5e59": {
       "chainId": "143",
@@ -1158,7 +1429,13 @@
       "symbol": "aHYPER",
       "logoURI": "https://cdn.morpho.org/assets/logos/ahyper.svg",
       "assetGroup": "Hyperithm Delta Neutral Vault::aHYPER",
-      "currencyId": "Hyperithm Delta Neutral Vault::aHYPER"
+      "currencyId": "Hyperithm Delta Neutral Vault::aHYPER",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 1
+        }
+      }
     },
     "0x8e94704607e857eb3e10bd21d90bf8c1ecba0452": {
       "chainId": "143",
@@ -1168,7 +1445,8 @@
       "symbol": "cAUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x8e94704607e857eb3e10bd21d90bf8c1ecba0452.png",
       "assetGroup": "Curvance AUSD::cAUSD",
-      "currencyId": "Curvance AUSD::cAUSD"
+      "currencyId": "Curvance AUSD::cAUSD",
+      "props": {}
     },
     "0xf473568b26b8c5aadca9fbc0ea17e1728d5ec925": {
       "chainId": "143",
@@ -1178,7 +1456,8 @@
       "symbol": "cWMON",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf473568b26b8c5aadca9fbc0ea17e1728d5ec925.png",
       "assetGroup": "Curvance Wrapped MON::cWMON",
-      "currencyId": "Curvance Wrapped MON::cWMON"
+      "currencyId": "Curvance Wrapped MON::cWMON",
+      "props": {}
     },
     "0x0fced51b526bfa5619f83d97b54a57e3327eb183": {
       "chainId": "143",
@@ -1188,7 +1467,8 @@
       "symbol": "cWMON",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x0fced51b526bfa5619f83d97b54a57e3327eb183.png",
       "assetGroup": "Curvance Wrapped MON::cWMON::143::0",
-      "currencyId": "Curvance Wrapped MON::cWMON"
+      "currencyId": "Curvance Wrapped MON::cWMON",
+      "props": {}
     },
     "0xd786f7569c39a9f64e6a54eb77db21364e90f279": {
       "chainId": "143",
@@ -1198,7 +1478,8 @@
       "symbol": "wnLOAZND",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xd786f7569c39a9f64e6a54eb77db21364e90f279.png",
       "assetGroup": "Wrapped Neverland loAZND::wnLOAZND",
-      "currencyId": "Wrapped Neverland loAZND::wnLOAZND"
+      "currencyId": "Wrapped Neverland loAZND::wnLOAZND",
+      "props": {}
     },
     "0x82c370ba90e38ef6acd8b1b078d34fd86fc6bac9": {
       "chainId": "143",
@@ -1208,7 +1489,8 @@
       "symbol": "wnAUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x82c370ba90e38ef6acd8b1b078d34fd86fc6bac9.png",
       "assetGroup": "Wrapped Neverland AUSD::wnAUSD",
-      "currencyId": "Wrapped Neverland AUSD::wnAUSD"
+      "currencyId": "Wrapped Neverland AUSD::wnAUSD",
+      "props": {}
     },
     "0x8d5c2df3eef09088fcccf3376d8ecd0dd505f642": {
       "chainId": "143",
@@ -1218,7 +1500,8 @@
       "symbol": "wnUSDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x8d5c2df3eef09088fcccf3376d8ecd0dd505f642.png",
       "assetGroup": "Wrapped Neverland USDC::wnUSDC",
-      "currencyId": "Wrapped Neverland USDC::wnUSDC"
+      "currencyId": "Wrapped Neverland USDC::wnUSDC",
+      "props": {}
     },
     "0x4e8aaecce10ad9394e96fe5f2bd4e587a7b04298": {
       "chainId": "143",
@@ -1228,7 +1511,8 @@
       "symbol": "wnUSDT0",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x4e8aaecce10ad9394e96fe5f2bd4e587a7b04298.png",
       "assetGroup": "Wrapped Neverland USDT0::wnUSDT0",
-      "currencyId": "Wrapped Neverland USDT0::wnUSDT0"
+      "currencyId": "Wrapped Neverland USDT0::wnUSDT0",
+      "props": {}
     },
     "0xdb39a9d4a1f1b4e93a5684d602207628ad60613c": {
       "chainId": "143",
@@ -1238,7 +1522,8 @@
       "symbol": "wnWMON",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xdb39a9d4a1f1b4e93a5684d602207628ad60613c.png",
       "assetGroup": "Wrapped Neverland WMON::wnWMON",
-      "currencyId": "Wrapped Neverland WMON::wnWMON"
+      "currencyId": "Wrapped Neverland WMON::wnWMON",
+      "props": {}
     },
     "0x46080f31351a6568f44575e3effde7f0c86867f9": {
       "chainId": "143",
@@ -1248,7 +1533,8 @@
       "symbol": "GILTS",
       "logoURI": "https://assets.coingecko.com/coins/images/102172091/thumb/GILTS_Image.png?1771517121",
       "assetGroup": "Etherfuse GILTS::GILTS",
-      "currencyId": "Etherfuse GILTS::GILTS"
+      "currencyId": "Etherfuse GILTS::GILTS",
+      "props": {}
     },
     "0xe9c082921dc3564e10196c5cc15db1250ac7d5c6": {
       "chainId": "143",
@@ -1258,7 +1544,8 @@
       "symbol": "KTB",
       "logoURI": "https://assets.coingecko.com/coins/images/102172092/thumb/KTB_Image.png?1771517177",
       "assetGroup": "Etherfuse KTB::KTB",
-      "currencyId": "Etherfuse KTB::KTB"
+      "currencyId": "Etherfuse KTB::KTB",
+      "props": {}
     },
     "0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9": {
       "chainId": "143",
@@ -1268,7 +1555,8 @@
       "symbol": "EBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/102172176/thumb/eBTC.png?1772034448",
       "assetGroup": "eBTC::EBTC",
-      "currencyId": "eBTC::EBTC"
+      "currencyId": "eBTC::EBTC",
+      "props": {}
     },
     "0x3a2c4aaae6776dc1c31316de559598f2f952e2cb": {
       "chainId": "143",
@@ -1278,7 +1566,8 @@
       "symbol": "YZM",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/YZM/logo.svg",
       "assetGroup": "Yuzu Money Vault::YZM",
-      "currencyId": "Yuzu Money Vault::YZM"
+      "currencyId": "Yuzu Money Vault::YZM",
+      "props": {}
     },
     "0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b": {
       "chainId": "143",
@@ -1288,7 +1577,8 @@
       "symbol": "cbBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/cbBTC/logo.svg",
       "assetGroup": "CBBTC",
-      "currencyId": "Coinbase Wrapped BTC::cbBTC"
+      "currencyId": "Coinbase Wrapped BTC::cbBTC",
+      "props": {}
     },
     "0x5e073494678fb7fa4a05bb17d45941dd9dc469c1": {
       "chainId": "143",
@@ -1298,7 +1588,8 @@
       "symbol": "wnSHMON",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x5e073494678fb7fa4a05bb17d45941dd9dc469c1.png",
       "assetGroup": "Wrapped Neverland shMON::wnSHMON",
-      "currencyId": "Wrapped Neverland shMON::wnSHMON"
+      "currencyId": "Wrapped Neverland shMON::wnSHMON",
+      "props": {}
     },
     "0x08139339dd9a480ceb84d9c7cce48be436db20b3": {
       "chainId": "143",
@@ -1308,7 +1599,8 @@
       "symbol": "wnSMON",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x08139339dd9a480ceb84d9c7cce48be436db20b3.png",
       "assetGroup": "Wrapped Neverland sMON::wnSMON",
-      "currencyId": "Wrapped Neverland sMON::wnSMON"
+      "currencyId": "Wrapped Neverland sMON::wnSMON",
+      "props": {}
     },
     "0x29d2075e5151b1a6863bdc40ea86bd5e8afd1705": {
       "chainId": "143",
@@ -1318,7 +1610,8 @@
       "symbol": "wnGMON",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x29d2075e5151b1a6863bdc40ea86bd5e8afd1705.png",
       "assetGroup": "Wrapped Neverland gMON::wnGMON",
-      "currencyId": "Wrapped Neverland gMON::wnGMON"
+      "currencyId": "Wrapped Neverland gMON::wnGMON",
+      "props": {}
     },
     "0x7a9990ffe3057edc18558ca4c8804430fe917456": {
       "chainId": "143",
@@ -1328,7 +1621,8 @@
       "symbol": "TESOURO",
       "logoURI": "https://assets.coingecko.com/coins/images/52383/thumb/stable.jpg?1733259572",
       "assetGroup": "Etherfuse TESOURO::TESOURO",
-      "currencyId": "Etherfuse TESOURO::TESOURO"
+      "currencyId": "Etherfuse TESOURO::TESOURO",
+      "props": {}
     },
     "0x834df4c1d8f51be24322e39e4766697be015512f": {
       "chainId": "143",
@@ -1338,7 +1632,8 @@
       "symbol": "CETES",
       "logoURI": "https://assets.coingecko.com/coins/images/37855/thumb/cetes.png?1715788161",
       "assetGroup": "Etherfuse CETES::CETES",
-      "currencyId": "Etherfuse CETES::CETES"
+      "currencyId": "Etherfuse CETES::CETES",
+      "props": {}
     },
     "0x39bb4e0a204412bb98e821d25e7d955e69d40fd1": {
       "chainId": "143",
@@ -1348,7 +1643,15 @@
       "symbol": "GBPm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/GBPm/logo.svg",
       "assetGroup": "Mento British Pound::GBPm",
-      "currencyId": "Mento British Pound::GBPm"
+      "currencyId": "Mento British Pound::GBPm",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0xbc69212b8e4d445b2307c9d32dd68e2a4df00115": {
       "chainId": "143",
@@ -1358,7 +1661,8 @@
       "symbol": "USDm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USDm/logo.svg",
       "assetGroup": "Mento Dollar::USDm",
-      "currencyId": "Mento Dollar::USDm"
+      "currencyId": "Mento Dollar::USDm",
+      "props": {}
     },
     "0x0a332311633c0625f63cfc51ee33fc49826e0a3c": {
       "chainId": "143",
@@ -1368,7 +1672,8 @@
       "symbol": "APR",
       "logoURI": "https://assets.coingecko.com/coins/images/70220/thumb/logo-icon-Gradient.png?1761118006",
       "assetGroup": "aPriori::APR",
-      "currencyId": "aPriori::APR"
+      "currencyId": "aPriori::APR",
+      "props": {}
     },
     "0xd2634e05ebed90bd0a6c0e93d48d7bd8036653b1": {
       "chainId": "143",
@@ -1378,7 +1683,8 @@
       "symbol": "triBTC",
       "logoURI": "https://cdn.morpho.org/assets/logos/tribtc.svg",
       "assetGroup": "cbBTC/WBTC/LBTC::triBTC",
-      "currencyId": "cbBTC/WBTC/LBTC::triBTC"
+      "currencyId": "cbBTC/WBTC/LBTC::triBTC",
+      "props": {}
     },
     "0xf7cf282ec810fded974f99c0163e792f432892bc": {
       "chainId": "143",
@@ -1388,7 +1694,8 @@
       "symbol": "MHYPERBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/71550/thumb/mhyperbtc-Bvh-K9IL.png?1768299091",
       "assetGroup": "Midas Hyperithm BTC::MHYPERBTC",
-      "currencyId": "Midas Hyperithm BTC::MHYPERBTC"
+      "currencyId": "Midas Hyperithm BTC::MHYPERBTC",
+      "props": {}
     },
     "0x150360c0efd098a6426060ee0cc4a0444c4b4b68": {
       "chainId": "143",
@@ -1397,7 +1704,8 @@
       "address": "0x150360c0efd098a6426060ee0cc4a0444c4b4b68",
       "symbol": "shMON-wnWMON",
       "assetGroup": "Fastlane Surge shMON / wnWMON::shMON-wnWMON",
-      "currencyId": "Fastlane Surge shMON / wnWMON::shMON-wnWMON"
+      "currencyId": "Fastlane Surge shMON / wnWMON::shMON-wnWMON",
+      "props": {}
     },
     "0x2daa146dfb7eaef0038f9f15b2ec1e4de003f72b": {
       "chainId": "143",
@@ -1406,7 +1714,8 @@
       "address": "0x2daa146dfb7eaef0038f9f15b2ec1e4de003f72b",
       "symbol": "wnAUSD-wnUSDC-wnUSDT0",
       "assetGroup": "wnAUSD / wnUSDC / wnUSDT0::wnAUSD-wnUSDC-wnUSDT0",
-      "currencyId": "wnAUSD / wnUSDC / wnUSDT0::wnAUSD-wnUSDC-wnUSDT0"
+      "currencyId": "wnAUSD / wnUSDC / wnUSDT0::wnAUSD-wnUSDC-wnUSDT0",
+      "props": {}
     },
     "0x32592610debefe0616bd29de21d6baf5cd6b3026": {
       "chainId": "143",
@@ -1415,7 +1724,8 @@
       "address": "0x32592610debefe0616bd29de21d6baf5cd6b3026",
       "symbol": "TUSD",
       "assetGroup": "Test USD::TUSD",
-      "currencyId": "Test USD::TUSD"
+      "currencyId": "Test USD::TUSD",
+      "props": {}
     },
     "0x3475ea1c3451a9a10aeb51bd8836312175b88bac": {
       "chainId": "143",
@@ -1424,7 +1734,8 @@
       "address": "0x3475ea1c3451a9a10aeb51bd8836312175b88bac",
       "symbol": "sMON-wnWMON",
       "assetGroup": "Kintsu Surge sMON / wnWMON::sMON-wnWMON",
-      "currencyId": "Kintsu Surge sMON / wnWMON::sMON-wnWMON"
+      "currencyId": "Kintsu Surge sMON / wnWMON::sMON-wnWMON",
+      "props": {}
     },
     "0x46ac36acb246eab59854ce746ea37cae4378971c": {
       "chainId": "143",
@@ -1433,7 +1744,8 @@
       "address": "0x46ac36acb246eab59854ce746ea37cae4378971c",
       "symbol": "TETH",
       "assetGroup": "Test ETH::TETH",
-      "currencyId": "Test ETH::TETH"
+      "currencyId": "Test ETH::TETH",
+      "props": {}
     },
     "0x7c86141e6c697ef043ab0ad781e25cbb07f69d1e": {
       "chainId": "143",
@@ -1442,7 +1754,8 @@
       "address": "0x7c86141e6c697ef043ab0ad781e25cbb07f69d1e",
       "symbol": "stTEST",
       "assetGroup": "Staked Test Token::stTEST",
-      "currencyId": "Staked Test Token::stTEST"
+      "currencyId": "Staked Test Token::stTEST",
+      "props": {}
     },
     "0x7c86b2437a91064dce69c4cb7e4bf3bc34932429": {
       "chainId": "143",
@@ -1451,7 +1764,8 @@
       "address": "0x7c86b2437a91064dce69c4cb7e4bf3bc34932429",
       "symbol": "TEST",
       "assetGroup": "Test Token::TEST",
-      "currencyId": "Test Token::TEST"
+      "currencyId": "Test Token::TEST",
+      "props": {}
     },
     "0x9f1269e2bba5732b95cef2bf1b22fccfe154e53c": {
       "chainId": "143",
@@ -1461,7 +1775,10 @@
       "symbol": "stTEST",
       "assetGroup": "Staked Test Token::stTEST::suspicious::9f1269e2",
       "currencyId": "Staked Test Token::stTEST",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true
+      }
     },
     "0xb15c5d53bf07a99b71f949feb1fe833573c270d6": {
       "chainId": "143",
@@ -1470,7 +1787,8 @@
       "address": "0xb15c5d53bf07a99b71f949feb1fe833573c270d6",
       "symbol": "LOAN",
       "assetGroup": "Loan Token::LOAN",
-      "currencyId": "Loan Token::LOAN"
+      "currencyId": "Loan Token::LOAN",
+      "props": {}
     },
     "0xb407675245d8ac6da2d95b5e84dc3b1b398e19a1": {
       "chainId": "143",
@@ -1480,7 +1798,10 @@
       "symbol": "TETH",
       "assetGroup": "Test ETH::TETH::suspicious::b4076752",
       "currencyId": "Test ETH::TETH",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true
+      }
     },
     "0xbaf20827ff9d715deb62531de682fa50493b8fe0": {
       "chainId": "143",
@@ -1489,7 +1810,8 @@
       "address": "0xbaf20827ff9d715deb62531de682fa50493b8fe0",
       "symbol": "COLLAT",
       "assetGroup": "Collateral Token::COLLAT",
-      "currencyId": "Collateral Token::COLLAT"
+      "currencyId": "Collateral Token::COLLAT",
+      "props": {}
     },
     "0xce6170ea245dc8d1f275a710a062b70f125f0110": {
       "chainId": "143",
@@ -1499,7 +1821,8 @@
       "symbol": "FXRP",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/FXRP/logo.svg",
       "assetGroup": "FXRP::FXRP",
-      "currencyId": "FXRP::FXRP"
+      "currencyId": "FXRP::FXRP",
+      "props": {}
     },
     "0xd328e74add15ac98275737a7c1c884ddc951f4d3": {
       "chainId": "143",
@@ -1508,7 +1831,8 @@
       "address": "0xd328e74add15ac98275737a7c1c884ddc951f4d3",
       "symbol": "wnLOAZND-AZND-wnAUSD",
       "assetGroup": "wnLOAZND / AZND / wnAUSD::wnLOAZND-AZND-wnAUSD",
-      "currencyId": "wnLOAZND / AZND / wnAUSD::wnLOAZND-AZND-wnAUSD"
+      "currencyId": "wnLOAZND / AZND / wnAUSD::wnLOAZND-AZND-wnAUSD",
+      "props": {}
     },
     "0xe6c608ebe6f5561260366c5ffcb4b2604ac92d87": {
       "chainId": "143",
@@ -1518,7 +1842,10 @@
       "symbol": "stTEST",
       "assetGroup": "Staked Test Token::stTEST::suspicious::e6c608eb",
       "currencyId": "Staked Test Token::stTEST",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true
+      }
     },
     "0xf13dacada8f45c2b2cbf60ecb1d412d0c57bf2f8": {
       "chainId": "143",
@@ -1527,7 +1854,8 @@
       "address": "0xf13dacada8f45c2b2cbf60ecb1d412d0c57bf2f8",
       "symbol": "eUSD",
       "assetGroup": "Euler USD::eUSD",
-      "currencyId": "Euler USD::eUSD"
+      "currencyId": "Euler USD::eUSD",
+      "props": {}
     },
     "0xf503d5d7b7d4927b4c4ab4f9b7498c6cfcfe9dfe": {
       "chainId": "143",
@@ -1537,7 +1865,10 @@
       "symbol": "TUSD",
       "assetGroup": "Test USD::TUSD::suspicious::f503d5d7",
       "currencyId": "Test USD::TUSD",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true
+      }
     },
     "0x81a224f8a62f52bde942dbf23a56df77a10b7777": {
       "chainId": "143",
@@ -1547,7 +1878,8 @@
       "symbol": "EMO",
       "logoURI": "https://assets.coingecko.com/coins/images/102172808/thumb/wi13repazwee6wximmko4nk8jfbo.?1775837251",
       "assetGroup": "emonad::EMO",
-      "currencyId": "emonad::EMO"
+      "currencyId": "emonad::EMO",
+      "props": {}
     },
     "0x42a4aa89864a794de135b23c6a8d2e05513d7777": {
       "chainId": "143",
@@ -1557,7 +1889,8 @@
       "symbol": "SHRAMP",
       "logoURI": "https://assets.coingecko.com/coins/images/102172809/thumb/ij9ijranevqkq1wp7kuhocuqpgbz.?1775837396",
       "assetGroup": "shramp::SHRAMP",
-      "currencyId": "shramp::SHRAMP"
+      "currencyId": "shramp::SHRAMP",
+      "props": {}
     },
     "0x3fea1cb36d2c5523c062d0e060eac253608b4daf": {
       "chainId": "143",
@@ -1567,7 +1900,8 @@
       "symbol": "FUSDLP",
       "logoURI": "https://cdn.morpho.org/assets/logos/fusdlp.svg",
       "assetGroup": "FinChain Dollar LP::FUSDLP",
-      "currencyId": "FinChain Dollar LP::FUSDLP"
+      "currencyId": "FinChain Dollar LP::FUSDLP",
+      "props": {}
     },
     "0x21e325b059cd83d4037c82f0f5998ba2df3d7777": {
       "chainId": "143",
@@ -1577,7 +1911,8 @@
       "symbol": "BOB",
       "logoURI": "https://assets.coingecko.com/coins/images/102173014/thumb/main_mascot.png?1777218464",
       "assetGroup": "Bob::BOB",
-      "currencyId": "Bob::BOB"
+      "currencyId": "Bob::BOB",
+      "props": {}
     },
     "0xd7acb868f97f8286d5d3a0fd5ef112a8a72ecd90": {
       "chainId": "143",
@@ -1587,7 +1922,8 @@
       "symbol": "enzoBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/enzoBTC/logo.svg",
       "assetGroup": "ENZOBTC",
-      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC"
+      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
+      "props": {}
     },
     "0xc6de1dc0b59682be906e5bca14e385e74ee88168": {
       "chainId": "143",
@@ -1597,7 +1933,8 @@
       "symbol": "aHyperBTC",
       "logoURI": "https://cdn.morpho.org/assets/logos/ahyperbtc.svg",
       "assetGroup": "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC",
-      "currencyId": "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC"
+      "currencyId": "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC",
+      "props": {}
     },
     "0xb3b850ac62b89fe9f4efb652b516108a8aeb8848": {
       "chainId": "143",
@@ -1607,7 +1944,8 @@
       "symbol": "wnWETH",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb3b850ac62b89fe9f4efb652b516108a8aeb8848.png",
       "assetGroup": "Wrapped Neverland WETH::wnWETH",
-      "currencyId": "Wrapped Neverland WETH::wnWETH"
+      "currencyId": "Wrapped Neverland WETH::wnWETH",
+      "props": {}
     },
     "0x02b34a02db24179ac2d77ae20aa6215c7153e7f8": {
       "chainId": "143",
@@ -1616,7 +1954,8 @@
       "address": "0x02b34a02db24179ac2d77ae20aa6215c7153e7f8",
       "symbol": "wnSMON-wnWMON",
       "assetGroup": "Kintsu Surge wnSMON / wnWMON::wnSMON-wnWMON",
-      "currencyId": "Kintsu Surge wnSMON / wnWMON::wnSMON-wnWMON"
+      "currencyId": "Kintsu Surge wnSMON / wnWMON::wnSMON-wnWMON",
+      "props": {}
     },
     "0x340fa62ae58e90473da64b0af622cdd6113106cb": {
       "chainId": "143",
@@ -1625,7 +1964,8 @@
       "address": "0x340fa62ae58e90473da64b0af622cdd6113106cb",
       "symbol": "wnSHMON-wnWMON",
       "assetGroup": "Fastlane Surge wnSHMON / wnWMON::wnSHMON-wnWMON",
-      "currencyId": "Fastlane Surge wnSHMON / wnWMON::wnSHMON-wnWMON"
+      "currencyId": "Fastlane Surge wnSHMON / wnWMON::wnSHMON-wnWMON",
+      "props": {}
     },
     "0xbddb004a6c393c3f83bcccf7f07ee9d409b214de": {
       "chainId": "143",
@@ -1634,7 +1974,8 @@
       "address": "0xbddb004a6c393c3f83bcccf7f07ee9d409b214de",
       "symbol": "wnLOAZND-AZND-wnAUSD",
       "assetGroup": "Mu Digital wnLOAZND/AZND/wnAUSD::wnLOAZND-AZND-wnAUSD",
-      "currencyId": "Mu Digital wnLOAZND/AZND/wnAUSD::wnLOAZND-AZND-wnAUSD"
+      "currencyId": "Mu Digital wnLOAZND/AZND/wnAUSD::wnLOAZND-AZND-wnAUSD",
+      "props": {}
     },
     "0x6a7e3f839382fbb6a6131d4aae864aaeb362292d": {
       "chainId": "143",
@@ -1644,7 +1985,8 @@
       "symbol": "APE",
       "logoURI": "https://assets.coingecko.com/coins/images/24383/thumb/APECOIN.png?1756551529",
       "assetGroup": "APE",
-      "currencyId": "ApeCoin::APE"
+      "currencyId": "ApeCoin::APE",
+      "props": {}
     },
     "0xaca92e438df0b2401ff60da7e4337b687a2435da": {
       "chainId": "143",
@@ -1654,7 +1996,8 @@
       "symbol": "MUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68451/thumb/MetaMask-mUSD-Icon-200x200.png?1755878384",
       "assetGroup": "MetaMask USD::MUSD",
-      "currencyId": "MetaMask USD::MUSD"
+      "currencyId": "MetaMask USD::MUSD",
+      "props": {}
     },
     "0x9648db94f1e6b19e7d755585542981f97dc806c6": {
       "chainId": "143",
@@ -1664,7 +2007,8 @@
       "symbol": "savUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/savUSD/logo.svg",
       "assetGroup": "Staked avUSD::savUSD",
-      "currencyId": "Staked avUSD::savUSD"
+      "currencyId": "Staked avUSD::savUSD",
+      "props": {}
     },
     "0xc9ea90692757831d98ac629f2a0140e02b80a7da": {
       "chainId": "143",
@@ -1674,7 +2018,8 @@
       "symbol": "YZPRIME",
       "logoURI": "https://assets.coingecko.com/coins/images/102173282/thumb/yPrime.png?1778824103",
       "assetGroup": "Yuzu Prime::YZPRIME",
-      "currencyId": "Yuzu Prime::YZPRIME"
+      "currencyId": "Yuzu Prime::YZPRIME",
+      "props": {}
     },
     "0x1111b3ded9f1fe1801ad4ebef8e2788183a24111": {
       "chainId": "143",
@@ -1684,7 +2029,21 @@
       "symbol": "EURW",
       "logoURI": "https://assets.coingecko.com/coins/images/102173287/thumb/newrails.jpeg?1778830747",
       "assetGroup": "Newrails Euro::EURW",
-      "currencyId": "Newrails Euro::EURW"
+      "currencyId": "Newrails Euro::EURW",
+      "props": {
+        "risk": {
+          "level": "red",
+          "score": 4,
+          "upgradeable": true,
+          "adminKind": "UNKNOWN",
+          "blacklist": true,
+          "pause": true,
+          "controller": {
+            "kind": null,
+            "tier": "unknown"
+          }
+        }
+      }
     },
     "0x0cc9b2e2acd7bacff79eb7db48f5662b622e7777": {
       "chainId": "143",
@@ -1694,7 +2053,8 @@
       "symbol": "MONI",
       "logoURI": "https://assets.coingecko.com/coins/images/102173446/thumb/reference_upload.png?1779544467",
       "assetGroup": "Moni::MONI",
-      "currencyId": "Moni::MONI"
+      "currencyId": "Moni::MONI",
+      "props": {}
     },
     "0x91d93dbd823221ea9e54fb3e447bd917ce41f2e8": {
       "chainId": "143",
@@ -1704,7 +2064,8 @@
       "symbol": "AA_FalconXUSDC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/AA_FalconXUSDC/logo.svg",
       "assetGroup": "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC",
-      "currencyId": "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC"
+      "currencyId": "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC",
+      "props": {}
     },
     "0x9f6714c302ffe3c3bafaf2ccb44201ff64f6371c": {
       "chainId": "143",
@@ -1714,7 +2075,8 @@
       "symbol": "FUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/FUSD/logo.svg",
       "assetGroup": "FinChain Dollar::FUSD",
-      "currencyId": "FinChain Dollar::FUSD"
+      "currencyId": "FinChain Dollar::FUSD",
+      "props": {}
     },
     "0xab6e5a0c3799d020c790d34f7b2c02639e238af7": {
       "chainId": "143",
@@ -1724,7 +2086,8 @@
       "symbol": "syrupUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/54658/thumb/syrup_logo-_200x200.jpg?1740895597",
       "assetGroup": "SYRUPUSDC",
-      "currencyId": "Syrup USDC::syrupUSDC"
+      "currencyId": "Syrup USDC::syrupUSDC",
+      "props": {}
     },
     "0x3842751a46d23b41a47e702473dff316e6237777": {
       "chainId": "143",
@@ -1734,7 +2097,8 @@
       "symbol": "143",
       "logoURI": "https://assets.coingecko.com/coins/images/102173490/thumb/143mascot.jpg?1779807128",
       "assetGroup": "143::143",
-      "currencyId": "143::143"
+      "currencyId": "143::143",
+      "props": {}
     },
     "0x3ec7310937281ca4bf89d5bb11704be9b7ff7777": {
       "chainId": "143",
@@ -1744,7 +2108,8 @@
       "symbol": "ANAGO",
       "logoURI": "https://assets.coingecko.com/coins/images/102173551/thumb/IMG_2749.PNG?1780155186",
       "assetGroup": "ANAGO::ANAGO",
-      "currencyId": "ANAGO::ANAGO"
+      "currencyId": "ANAGO::ANAGO",
+      "props": {}
     },
     "0xd10cf12099f5fb424bc77401df49f0c785657777": {
       "chainId": "143",
@@ -1754,7 +2119,8 @@
       "symbol": "EGG",
       "logoURI": "https://assets.coingecko.com/coins/images/102173492/thumb/pfp.png?1779807542",
       "assetGroup": "eggmon::EGG",
-      "currencyId": "eggmon::EGG"
+      "currencyId": "eggmon::EGG",
+      "props": {}
     },
     "0x11ed3b12d99d508f926c870fb44f472001842c96": {
       "chainId": "143",
@@ -1764,7 +2130,8 @@
       "symbol": "IGN",
       "logoURI": "https://assets.coingecko.com/coins/images/102173673/thumb/IGNLOGO.png?1780836328",
       "assetGroup": "Ignis::IGN",
-      "currencyId": "Ignis::IGN"
+      "currencyId": "Ignis::IGN",
+      "props": {}
     },
     "0xe1bca19baa63894d374578320551633320436523": {
       "chainId": "143",
@@ -1774,7 +2141,8 @@
       "symbol": "CSUSDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xe1bca19baa63894d374578320551633320436523.png",
       "assetGroup": "Clearstar Earn USDC::CSUSDC",
-      "currencyId": "Clearstar Earn USDC::CSUSDC"
+      "currencyId": "Clearstar Earn USDC::CSUSDC",
+      "props": {}
     },
     "0xc6221856e45ed806f8325a084bed3d69d32c526d": {
       "chainId": "143",
@@ -1784,7 +2152,8 @@
       "symbol": "EUROB",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/EUROB/logo.png",
       "assetGroup": "Etherfuse EUROB::EUROB",
-      "currencyId": "Etherfuse EUROB::EUROB"
+      "currencyId": "Etherfuse EUROB::EUROB",
+      "props": {}
     },
     "0x7cee47e7b7cd04cf984e8dd86c42595b5771a9b2": {
       "chainId": "143",
@@ -1794,7 +2163,8 @@
       "symbol": "USTRY",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USTRY/logo.png",
       "assetGroup": "Etherfuse USTRY::USTRY",
-      "currencyId": "Etherfuse USTRY::USTRY"
+      "currencyId": "Etherfuse USTRY::USTRY",
+      "props": {}
     },
     "0x9e2679eabff131b8b1b48ff7566140794e0eedc4": {
       "chainId": "143",
@@ -1804,7 +2174,8 @@
       "symbol": "deCRDX",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/deCRDX/logo.svg",
       "assetGroup": "DeFi Anemoy Tokenized Diversified Credit Fund Token::deCRDX",
-      "currencyId": "DeFi Anemoy Tokenized Diversified Credit Fund Token::deCRDX"
+      "currencyId": "DeFi Anemoy Tokenized Diversified Credit Fund Token::deCRDX",
+      "props": {}
     },
     "0xed5aa9b6eb62298492c7246fe724ee088a760155": {
       "chainId": "143",
@@ -1814,7 +2185,8 @@
       "symbol": "afi-rwaUSDi",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/afi-rwaUSDi/logo.svg",
       "assetGroup": "Artificial Financial Intelligence rwaUSDi::afi-rwaUSDi",
-      "currencyId": "Artificial Financial Intelligence rwaUSDi::afi-rwaUSDi"
+      "currencyId": "Artificial Financial Intelligence rwaUSDi::afi-rwaUSDi",
+      "props": {}
     },
     "0x650b616b46ff94000eb115926ab8393b90788d76": {
       "chainId": "143",
@@ -1824,7 +2196,8 @@
       "symbol": "rwaUSDi",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/rwaUSDi/logo.png",
       "assetGroup": "rwaUSDi::rwaUSDi",
-      "currencyId": "rwaUSDi::rwaUSDi"
+      "currencyId": "rwaUSDi::rwaUSDi",
+      "props": {}
     },
     "0xd74fb32112b1ef5b4c428fead8da8d85a0019009": {
       "chainId": "143",
@@ -1834,7 +2207,8 @@
       "symbol": "xUSDC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/xUSDC/logo.svg",
       "assetGroup": "xUSDC::xUSDC",
-      "currencyId": "xUSDC::xUSDC"
+      "currencyId": "xUSDC::xUSDC",
+      "props": {}
     },
     "0x5e49e1f85813f2b65858860a3fa231b4186f2e0e": {
       "chainId": "143",
@@ -1844,7 +2218,8 @@
       "symbol": "PENDLE",
       "logoURI": "https://assets.coingecko.com/coins/images/15069/thumb/Pendle_Logo_Normal-03.png?1696514728",
       "assetGroup": "PENDLE",
-      "currencyId": "Pendle::PENDLE"
+      "currencyId": "Pendle::PENDLE",
+      "props": {}
     },
     "0xf64e91ffef7ef43aa314f0bc2ac39f770797990c": {
       "chainId": "143",
@@ -1854,7 +2229,15 @@
       "symbol": "CHFm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/CHFm/logo.svg",
       "assetGroup": "Mento Swiss Franc::CHFm",
-      "currencyId": "Mento Swiss Franc::CHFm"
+      "currencyId": "Mento Swiss Franc::CHFm",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0x22f6a6752800eab67b84748fefc3cc658384af72": {
       "chainId": "143",
@@ -1864,7 +2247,15 @@
       "symbol": "JPYm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/JPYm/logo.svg",
       "assetGroup": "Mento Japanese Yen::JPYm",
-      "currencyId": "Mento Japanese Yen::JPYm"
+      "currencyId": "Mento Japanese Yen::JPYm",
+      "props": {
+        "risk": {
+          "level": "green",
+          "score": 2,
+          "upgradeable": true,
+          "adminKind": "SAFE"
+        }
+      }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
       "chainId": "143",
@@ -1874,7 +2265,8 @@
       "symbol": "rUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/rUSD/logo.svg",
       "assetGroup": "Reservoir Stablecoin::rUSD",
-      "currencyId": "Reservoir Stablecoin::rUSD"
+      "currencyId": "Reservoir Stablecoin::rUSD",
+      "props": {}
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
       "chainId": "143",
@@ -1884,7 +2276,8 @@
       "symbol": "ENA",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/ENA/logo.svg",
       "assetGroup": "ENA::ENA",
-      "currencyId": "ENA::ENA"
+      "currencyId": "ENA::ENA",
+      "props": {}
     },
     "0x4d502d735b4c574b487ed641ae87ceae884731c7": {
       "chainId": "143",
@@ -1894,7 +2287,8 @@
       "symbol": "EURm",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/EURm/logo.svg",
       "assetGroup": "Mento Euro::EURm",
-      "currencyId": "Mento Euro::EURm"
+      "currencyId": "Mento Euro::EURm",
+      "props": {}
     },
     "0xfc421ad3c883bf9e7c4f42de845c4e4405799e73": {
       "chainId": "143",
@@ -1904,7 +2298,8 @@
       "symbol": "GHO",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/GHO/logo.svg",
       "assetGroup": "GHO",
-      "currencyId": "Gho Token::GHO"
+      "currencyId": "Gho Token::GHO",
+      "props": {}
     },
     "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b": {
       "chainId": "143",
@@ -1914,7 +2309,8 @@
       "symbol": "M",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/M/logo.svg",
       "assetGroup": "M by M0::M",
-      "currencyId": "M by M0::M"
+      "currencyId": "M by M0::M",
+      "props": {}
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
       "chainId": "143",
@@ -1924,7 +2320,8 @@
       "symbol": "USDe",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USDe/logo.svg",
       "assetGroup": "USDE",
-      "currencyId": "USDe::USDe"
+      "currencyId": "USDe::USDe",
+      "props": {}
     },
     "0x0d9d741fe423cd5419e4bcb6cb2ffa87afa93ba4": {
       "chainId": "143",
@@ -1934,7 +2331,8 @@
       "symbol": "avUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/avUSD/logo.svg",
       "assetGroup": "avUSD::avUSD",
-      "currencyId": "avUSD::avUSD"
+      "currencyId": "avUSD::avUSD",
+      "props": {}
     },
     "0x61b29efef2e6f866ba4aaefdb87d2837c6a22b9c": {
       "chainId": "143",
@@ -1944,7 +2342,8 @@
       "symbol": "sLVMON",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sLVMON/logo.svg",
       "assetGroup": "Staked LVMON::sLVMON",
-      "currencyId": "Staked LVMON::sLVMON"
+      "currencyId": "Staked LVMON::sLVMON",
+      "props": {}
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "143",
@@ -1954,7 +2353,8 @@
       "symbol": "sUSDe",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sUSDe/logo.svg",
       "assetGroup": "SUSDE",
-      "currencyId": "Staked USDe::sUSDe"
+      "currencyId": "Staked USDe::sUSDe",
+      "props": {}
     },
     "0x437cc33344a0b27a429f795ff6b469c72698b291": {
       "chainId": "143",
@@ -1964,7 +2364,8 @@
       "symbol": "wM",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/wM/logo.svg",
       "assetGroup": "WrappedM by M0::wM",
-      "currencyId": "WrappedM by M0::wM"
+      "currencyId": "WrappedM by M0::wM",
+      "props": {}
     },
     "0x5e7109a755fd2b86361f95065cde07fbab50ca1d": {
       "chainId": "143",
@@ -1974,7 +2375,8 @@
       "symbol": "waMonUSDT0",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x5e7109a755fd2b86361f95065cde07fbab50ca1d.png",
       "assetGroup": "Wrapped Aave Monad USDT0::waMonUSDT0",
-      "currencyId": "Wrapped Aave Monad USDT0::waMonUSDT0"
+      "currencyId": "Wrapped Aave Monad USDT0::waMonUSDT0",
+      "props": {}
     },
     "0xc554affe2f581f5e0811e0d42d484ecac5c6b8e2": {
       "chainId": "143",
@@ -1984,7 +2386,8 @@
       "symbol": "waMonUSDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xc554affe2f581f5e0811e0d42d484ecac5c6b8e2.png",
       "assetGroup": "Wrapped Aave Monad USDC::waMonUSDC",
-      "currencyId": "Wrapped Aave Monad USDC::waMonUSDC"
+      "currencyId": "Wrapped Aave Monad USDC::waMonUSDC",
+      "props": {}
     },
     "0x9e1acc5bfbf34e2e579763ce14042d957719fe76": {
       "chainId": "143",
@@ -1994,7 +2397,8 @@
       "symbol": "waMonAUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x9e1acc5bfbf34e2e579763ce14042d957719fe76.png",
       "assetGroup": "Wrapped Aave Monad AUSD::waMonAUSD",
-      "currencyId": "Wrapped Aave Monad AUSD::waMonAUSD"
+      "currencyId": "Wrapped Aave Monad AUSD::waMonAUSD",
+      "props": {}
     },
     "0x967d427ef0eb4aeb7a1b523a98b04061f094276b": {
       "chainId": "143",
@@ -2004,7 +2408,8 @@
       "symbol": "waMonWETH",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x967d427ef0eb4aeb7a1b523a98b04061f094276b.png",
       "assetGroup": "Wrapped Aave Monad WETH::waMonWETH",
-      "currencyId": "Wrapped Aave Monad WETH::waMonWETH"
+      "currencyId": "Wrapped Aave Monad WETH::waMonWETH",
+      "props": {}
     },
     "0x6a7c826974994c4ce012b2fb32fe9d30d6366380": {
       "chainId": "143",
@@ -2014,7 +2419,8 @@
       "symbol": "waMonmUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x6a7c826974994c4ce012b2fb32fe9d30d6366380.png",
       "assetGroup": "Wrapped Aave Monad mUSD::waMonmUSD",
-      "currencyId": "Wrapped Aave Monad mUSD::waMonmUSD"
+      "currencyId": "Wrapped Aave Monad mUSD::waMonmUSD",
+      "props": {}
     },
     "0x7c9e74e6c6e5dafaf9b44f60bf8ebbe81ca70d4f": {
       "chainId": "143",
@@ -2024,7 +2430,8 @@
       "symbol": "waMonGHO",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x7c9e74e6c6e5dafaf9b44f60bf8ebbe81ca70d4f.png",
       "assetGroup": "Wrapped Aave Monad GHO::waMonGHO",
-      "currencyId": "Wrapped Aave Monad GHO::waMonGHO"
+      "currencyId": "Wrapped Aave Monad GHO::waMonGHO",
+      "props": {}
     },
     "0x76f257b1dda5cc71bee4ef637fbdde4c801310a9": {
       "chainId": "143",
@@ -2034,7 +2441,8 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
       "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "currencyId": "Chainlink::LINK",
+      "props": {}
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",
@@ -2061,5 +2469,6 @@
     "0xa3227c5969757783154c60bf0bc1944180ed81b9",
     "0x1b68626dca36c7fe922fd2d55e4f631d962de19c",
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a"
-  ]
+  ],
+  "riskAssessedAt": "2026-07-26T11:42:09.769Z"
 }
