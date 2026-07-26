@@ -13,6 +13,7 @@ import { lookupRisk } from './risk/riskMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
 import { lookupSavings } from './savings/savingsMap'
 import { lookupLstGroup } from './lst/lstGroupMap'
+import { lookupDenomination } from './denomination/denominationMap'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -286,6 +287,20 @@ async function readTokenLists(): Promise<{
                     // lst.json source list hasn't already classified this token.
                     const lstGroup = lookupLstGroup(assetGroup)
                     if (lstGroup && !tokenProps.lst) tokenProps = { ...tokenProps, lst: lstGroup }
+
+                    // Denomination overlay (canonical base ETH/BTC/native), keyed by assetGroup.
+                    // Only applied to base tokens — skipped when the token is a derivative
+                    // (lst/pendle/savings), so `denomination: 'ETH'` means "is ETH", not
+                    // "tracks ETH" (wstETH stays lst, not eth).
+                    const denomination = lookupDenomination(assetGroup)
+                    if (
+                      denomination &&
+                      !tokenProps.denomination &&
+                      !tokenProps.lst &&
+                      !tokenProps.pendle &&
+                      !tokenProps.savings
+                    )
+                      tokenProps = { ...tokenProps, denomination }
 
                     tags = AutoGenHelpers.uniq([...tags])
 

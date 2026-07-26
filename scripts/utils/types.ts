@@ -267,6 +267,15 @@ export interface TokenProps {
     /** fiat peg of the underlying when known, e.g. 'USD' | 'EUR' | 'GBP' */
     base?: string
   }
+  /**
+   * Canonical denomination for *base* assets — the underlying the token simply
+   * IS, for coarse "show me all ETH / BTC markets" filtering (e.g. WETH/ETH →
+   * `ETH`, WBTC/cbBTC/tBTC/FBTC → `BTC`). Set ONLY on canonical base tokens,
+   * never on derivatives — LST/LRT/Pendle/savings keep their own flags, so an
+   * `ETH` denomination filter returns WETH, not wstETH. Keyed by assetGroup in
+   * the denomination overlay so it carries across chains.
+   */
+  denomination?: 'ETH' | 'BTC' | 'BNB' | 'POL' | 'AVAX' | 'SOL' | string
   /** permit data if any */
   permit?: { type: 0 | 1; version: string }
   /** Default wrapped native token address */
