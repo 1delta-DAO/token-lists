@@ -904,28 +904,6 @@
         }
       }
     },
-    "0xb84cec1ab2af11b530ae0d8594b1493556be49cd": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "PT slisBNBx (BNB) BNB",
-      "address": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
-      "symbol": "PT-clisBNB-30OCT2025",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f82586ed-d4fd-4ba9-912a-0d62c1b114cc.svg",
-      "assetGroup": "PT slisBNBx (BNB) BNB::PT-clisBNB-30OCT2025",
-      "currencyId": "PT slisBNBx (BNB) BNB::PT-clisBNB-30OCT2025",
-      "props": {
-        "pendle": {
-          "tokenType": "PT",
-          "marketAddress": "0xbd577ddabb5a1672d3c786726b87a175de652b96",
-          "expiry": 1761782400,
-          "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
-          "ytAddress": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
-          "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
-          "expired": true
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0xbe436f6ed7ff7f747aae1912f88c59549df82158": {
       "chainId": "56",
       "decimals": 18,
@@ -942,6 +920,28 @@
           "expiry": 1761782400,
           "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
           "ptAddress": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
+          "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
+          "expired": true
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0xb84cec1ab2af11b530ae0d8594b1493556be49cd": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PT slisBNBx (BNB) BNB",
+      "address": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
+      "symbol": "PT-clisBNB-30OCT2025",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f82586ed-d4fd-4ba9-912a-0d62c1b114cc.svg",
+      "assetGroup": "PT slisBNBx (BNB) BNB::PT-clisBNB-30OCT2025",
+      "currencyId": "PT slisBNBx (BNB) BNB::PT-clisBNB-30OCT2025",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xbd577ddabb5a1672d3c786726b87a175de652b96",
+          "expiry": 1761782400,
+          "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+          "ytAddress": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
           "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
           "expired": true
         },
@@ -2192,6 +2192,17 @@
         "risk": { "score": 4, "source": "default" }
       }
     },
+    "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PT srUSDe (USDe) BNB",
+      "address": "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9",
+      "symbol": "PT-srUSDe-2APR2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
+      "assetGroup": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
+      "currencyId": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
+    },
     "0x67e84ba0196738a59ee58df848a2c16ed2a6a6f3": {
       "chainId": "56",
       "decimals": 18,
@@ -2205,17 +2216,6 @@
         "pendle": { "tokenType": "PT", "expired": true },
         "risk": { "score": 4, "source": "default" }
       }
-    },
-    "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "PT srUSDe (USDe) BNB",
-      "address": "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9",
-      "symbol": "PT-srUSDe-2APR2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
-      "assetGroup": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
-      "currencyId": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x7e318884f6f299031f4fa88d7a324e076d460a4b": {
       "chainId": "56",
@@ -56726,7 +56726,10 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x8bA9dA757d1D66c58b1ae7e2ED6c04087348A82d.png",
       "assetGroup": "Savings Usdd::sUSDD",
       "currencyId": "Savings Usdd::sUSDD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDD", "base": "USD" }
+      }
     },
     "0x45e51bc23d592eb2dba86da3985299f7895d66ba": {
       "chainId": "56",
@@ -61325,7 +61328,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69514/thumb/syrupUSDT.png?1761824990",
       "assetGroup": "SYRUPUSDT",
       "currencyId": "syrupUSDT::SYRUPUSDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDT", "base": "USD" }
+      }
     },
     "0x8a1d45e102e886510e891d2ec656a708991e2d76": {
       "chainId": "56",
@@ -64787,6 +64793,36 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102174851/thumb/aeon_logo.png?1785139024",
       "assetGroup": "AEON::AEON",
       "currencyId": "AEON::AEON"
+    },
+    "0xbcf6329a6a955dd9299f4766e670ec18467f1a2e": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Flaze Coin",
+      "address": "0xbcf6329a6a955dd9299f4766e670ec18467f1a2e",
+      "symbol": "FLAZE",
+      "logoURI": "https://assets.coingecko.com/coins/images/67816/thumb/IMG_0990.jpeg?1753941107",
+      "assetGroup": "Flaze Coin::FLAZE::56::0",
+      "currencyId": "Flaze Coin::FLAZE"
+    },
+    "0x4581ddc7617a32bf1e97646adb0537f01423868d": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "SINO",
+      "address": "0x4581ddc7617a32bf1e97646adb0537f01423868d",
+      "symbol": "SINO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174868/thumb/200_X_200.png?1785246151",
+      "assetGroup": "SINO::SINO",
+      "currencyId": "SINO::SINO"
+    },
+    "0x69633de1d26d6fbe7cf47b96bc12c410d50618d8": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "USDX",
+      "address": "0x69633de1d26d6fbe7cf47b96bc12c410d50618d8",
+      "symbol": "USDX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174863/thumb/usdx.png?1785235198",
+      "assetGroup": "USDX::USDX::56::0",
+      "currencyId": "USDX::USDX"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "56",

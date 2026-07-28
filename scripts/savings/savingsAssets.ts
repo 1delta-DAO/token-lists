@@ -18,45 +18,60 @@ import { SavingsGroupMap } from '../utils/types'
  */
 export const SAVINGS_CURATED: SavingsGroupMap = {
   // --- Sky (ex-Maker) — DSR / Sky Savings Rate ---
+  // Same token carries several assetGroup strings across chains (case + name prefix),
+  // so every variant must be listed for the overlay to cover all deployments.
   SDAI: { underlying: 'DAI', base: 'USD' },
+  'Savings Dai (PoS)::sDAI': { underlying: 'DAI', base: 'USD' },
   'sUSDS::SUSDS': { underlying: 'USDS', base: 'USD' },
+  'sUSDS::sUSDS': { underlying: 'USDS', base: 'USD' },
+  'Savings USDS::sUSDS': { underlying: 'USDS', base: 'USD' },
+  'Savings USDS from Ethereum::sUSDS': { underlying: 'USDS', base: 'USD' },
   'Staked USDS::stUSDS': { underlying: 'USDS', base: 'USD' },
   // --- Spark savings vault ---
   'Spark USDC Vault::sUSDC': { underlying: 'USDC', base: 'USD' },
+  'Spark USDC::SUSDC': { underlying: 'USDC', base: 'USD' },
   // --- Frax staked frxUSD ---
   'Staked Frax USD::sfrxUSD': { underlying: 'frxUSD', base: 'USD' },
   // --- Inverse Finance sDOLA ---
   'sDOLA::SDOLA': { underlying: 'DOLA', base: 'USD' },
   // --- Ethena sUSDe (7d cooldown; canonical savings wrapper) ---
   SUSDE: { underlying: 'USDe', base: 'USD' },
-  // --- Reservoir wsrUSD (wraps savings rUSD) ---
+  // --- Reservoir — savings rUSD (srUSD, rebasing) + wrapped (wsrUSD) ---
+  'Reservoir srUSD::SRUSD': { underlying: 'rUSD', base: 'USD' },
   'Wrapped Savings rUSD::WSRUSD': { underlying: 'rUSD', base: 'USD' },
+  'Wrapped Savings rUSD::wsrUSD': { underlying: 'rUSD', base: 'USD' },
   // --- Resolv wstUSR (non-rebasing wrapper of stUSR, over USR) ---
   'Resolv wstUSR::WSTUSR': { underlying: 'USR', base: 'USD' },
   // --- Falcon sUSDf ---
   'Staked Falcon USD::sUSDf': { underlying: 'USDf', base: 'USD' },
   // --- InfiniFi siUSD ---
   'Staked infiniFi USD::siUSD': { underlying: 'iUSD', base: 'USD' },
+  'Staked InfiniFi USD::siUSD': { underlying: 'iUSD', base: 'USD' },
   // --- Avant savUSD (Avalanche; 24h cooldown) ---
   'Staked avUSD::savUSD': { underlying: 'avUSD', base: 'USD' },
   // --- YieldFi yUSD (ERC-4626 over USDC) ---
   'YieldFi yUSD::yUSD': { underlying: 'USDC', base: 'USD' },
+  'YieldFi yToken::yUSD': { underlying: 'USDC', base: 'USD' },
+  'YieldFi yToken::YUSD': { underlying: 'USDC', base: 'USD' },
   // --- USD.ai sUSDAI — two assetGroup forms across chains (1/42161/9745 vs Base) ---
   'sUSDai::SUSDAI': { underlying: 'USDai', base: 'USD' },
   'Staked USDai::sUSDai': { underlying: 'USDai', base: 'USD' },
+  // --- TRON Savings USDD (sUSDD) ---
+  'Savings Usdd::sUSDD': { underlying: 'USDD', base: 'USD' },
   // --- Angle stUSD (over USDA) ---
   'Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
+  'Bridged Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
   // --- Angle stEUR (over EURA — EUR-pegged; three assetGroup forms across chains) ---
   'Angle Staked EURA::stEUR': { underlying: 'EURA', base: 'EUR' },
   'Angle Staked EURA::STEUR': { underlying: 'EURA', base: 'EUR' },
   STEUR: { underlying: 'EURA', base: 'EUR' },
+  // --- Maple syrup* — actively-managed credit pools (request-based redemption).
+  // Included per request despite the managed-fund caveat; the underlying is the deposit ticker.
+  SYRUPUSDC: { underlying: 'USDC', base: 'USD' },
+  SYRUPUSDT: { underlying: 'USDT', base: 'USD' },
+  SYRUPUSDG: { underlying: 'USDG', base: 'USD' },
 
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
-  // Maple syrup* are actively-managed credit pools (request-based redemption), not passive
-  // savings — kept out per the managed-fund caveat. Uncomment to include:
-  // SYRUPUSDC: { underlying: 'USDC', base: 'USD' },
-  // SYRUPUSDT: { underlying: 'USDT', base: 'USD' },
-  // SYRUPUSDG: { underlying: 'USDG', base: 'USD' },
   // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:
   // 'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
 }

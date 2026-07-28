@@ -160,28 +160,6 @@
         }
       }
     },
-    "0x420df605d062f8611efb3f203bf258159b8fffde": {
-      "chainId": "146",
-      "decimals": 18,
-      "name": "PT stS (Sonic) Sonic",
-      "address": "0x420df605d062f8611efb3f203bf258159b8fffde",
-      "symbol": "PT-stS-29MAY2025",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1bb28886-399a-484f-ac3d-19263a36ab73.svg",
-      "assetGroup": "PT stS (Sonic) Sonic::PT-stS-29MAY2025",
-      "currencyId": "PT stS (Sonic) Sonic::PT-stS-29MAY2025",
-      "props": {
-        "pendle": {
-          "tokenType": "PT",
-          "marketAddress": "0x3aef1d372d0a7a7e482f465bc14a42d78f920392",
-          "expiry": 1748476800,
-          "underlyingAsset": "0xe5da20f15420ad15de0fa650600afc998bbe3955",
-          "ytAddress": "0xd8f57b34e69270f7ba179e854020ee80f16eebf4",
-          "syAddress": "0x7076dee976098b444f68c6382e8f062237879a9f",
-          "expired": true
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0xd8f57b34e69270f7ba179e854020ee80f16eebf4": {
       "chainId": "146",
       "decimals": 18,
@@ -198,6 +176,28 @@
           "expiry": 1748476800,
           "underlyingAsset": "0xe5da20f15420ad15de0fa650600afc998bbe3955",
           "ptAddress": "0x420df605d062f8611efb3f203bf258159b8fffde",
+          "syAddress": "0x7076dee976098b444f68c6382e8f062237879a9f",
+          "expired": true
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0x420df605d062f8611efb3f203bf258159b8fffde": {
+      "chainId": "146",
+      "decimals": 18,
+      "name": "PT stS (Sonic) Sonic",
+      "address": "0x420df605d062f8611efb3f203bf258159b8fffde",
+      "symbol": "PT-stS-29MAY2025",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1bb28886-399a-484f-ac3d-19263a36ab73.svg",
+      "assetGroup": "PT stS (Sonic) Sonic::PT-stS-29MAY2025",
+      "currencyId": "PT stS (Sonic) Sonic::PT-stS-29MAY2025",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x3aef1d372d0a7a7e482f465bc14a42d78f920392",
+          "expiry": 1748476800,
+          "underlyingAsset": "0xe5da20f15420ad15de0fa650600afc998bbe3955",
+          "ytAddress": "0xd8f57b34e69270f7ba179e854020ee80f16eebf4",
           "syAddress": "0x7076dee976098b444f68c6382e8f062237879a9f",
           "expired": true
         },
@@ -3249,7 +3249,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53607/thumb/yUSD.png?1739862886",
       "assetGroup": "YieldFi yToken::YUSD",
       "currencyId": "YieldFi yToken::YUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDC", "base": "USD" }
+      }
     },
     "0xf6f87073cf8929c206a77b0694619dc776f89885": {
       "chainId": "146",

@@ -33,26 +33,6 @@
         }
       }
     },
-    "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
-      "chainId": "143",
-      "decimals": 6,
-      "name": "YT AUSD (AUSD) Monad",
-      "address": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
-      "symbol": "YT-AUSD-8OCT2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
-      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
-      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7",
-          "expiry": 1791417600,
-          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
-          "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
-          "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
-        }
-      }
-    },
     "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7": {
       "chainId": "143",
       "decimals": 6,
@@ -70,6 +50,26 @@
           "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
           "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89"
+        }
+      }
+    },
+    "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "YT AUSD (AUSD) Monad",
+      "address": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
+      "symbol": "YT-AUSD-8OCT2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
+      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
+      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7",
+          "expiry": 1791417600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
+          "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         }
       }
     },
@@ -1102,7 +1102,8 @@
       "symbol": "wsrUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/wsrusd.svg",
       "assetGroup": "Wrapped Savings rUSD::wsrUSD",
-      "currencyId": "Wrapped Savings rUSD::wsrUSD"
+      "currencyId": "Wrapped Savings rUSD::wsrUSD",
+      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
     },
     "0xd33f18d8d48cbbb2f8b47063de97f94de0d49b99": {
       "chainId": "143",
@@ -1883,7 +1884,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54658/thumb/syrup_logo-_200x200.jpg?1740895597",
       "assetGroup": "SYRUPUSDC",
       "currencyId": "Syrup USDC::syrupUSDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDC", "base": "USD" }
+      }
     },
     "0x3842751a46d23b41a47e702473dff316e6237777": {
       "chainId": "143",
