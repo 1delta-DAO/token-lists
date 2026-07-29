@@ -123,10 +123,63 @@
       "address": "0xb1afd04774c02ae84692619448b08ba79f19b1ff",
       "symbol": "FRXETH",
       "logoURI": "https://assets.coingecko.com/coins/images/28284/thumb/frxETH_icon.png?1696527284",
-      "assetGroup": "Frax Ether::FRXETH",
+      "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::FRXETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+      }
+    },
+    "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116": {
+      "chainId": "59144",
+      "decimals": 18,
+      "name": "StakeStone Ether",
+      "address": "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116",
+      "symbol": "STONE",
+      "logoURI": "https://static.shieldex.io/stone/stone-3.svg",
+      "assetGroup": "STONE",
+      "currencyId": "StakeStone Ether::STONE",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+      }
+    },
+    "0xd2671165570f41bbb3b0097893300b6eb6101e6c": {
+      "chainId": "59144",
+      "decimals": 18,
+      "name": "Wrapped rsETH",
+      "address": "0xd2671165570f41bbb3b0097893300b6eb6101e6c",
+      "symbol": "wrsETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
+      "assetGroup": "RSETH",
+      "currencyId": "Wrapped rsETH::wrsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 4, "source": "whitelist" }
+      }
+    },
+    "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
+      "chainId": "59144",
+      "decimals": 18,
+      "name": "KelpDAO Bridged rsETH",
+      "address": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
+      "symbol": "rsETH",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x4186BFC76E2E237523CBC30FD220FE055156b41F/logo.png",
+      "assetGroup": "RSETH",
+      "currencyId": "KelpDAO Bridged rsETH::rsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
+    "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
+      "chainId": "59144",
+      "decimals": 18,
+      "name": "xSolvBTC",
+      "address": "0xcc0966d8418d412c599a6421b760a847eb169a8c",
+      "symbol": "xSolvBTC",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/xSolvBTC.webp",
+      "assetGroup": "XSOLVBTC",
+      "currencyId": "xSolvBTC::xSolvBTC",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
       }
     },
     "0x3d4b2132ed4ea0aa93903713a4de9f98e625a5c7": {
@@ -522,16 +575,6 @@
       "currencyId": "Unfettered Ecosystem::SOULS",
       "props": { "permit": { "type": 1, "version": "1" } }
     },
-    "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116": {
-      "chainId": "59144",
-      "decimals": 18,
-      "name": "StakeStone Ether",
-      "address": "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116",
-      "symbol": "STONE",
-      "logoURI": "https://static.shieldex.io/stone/stone-3.svg",
-      "assetGroup": "STONE",
-      "currencyId": "StakeStone Ether::STONE"
-    },
     "0xa219439258ca9da29e9cc4ce5596924745e12b93": {
       "chainId": "59144",
       "decimals": 6,
@@ -831,34 +874,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31156/thumb/Circle_logo_black_%281%29.png?1696529983",
       "assetGroup": "Horizon::HZN",
       "currencyId": "Horizon::HZN"
-    },
-    "0xd2671165570f41bbb3b0097893300b6eb6101e6c": {
-      "chainId": "59144",
-      "decimals": 18,
-      "name": "Wrapped rsETH",
-      "address": "0xd2671165570f41bbb3b0097893300b6eb6101e6c",
-      "symbol": "wrsETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
-      "assetGroup": "RSETH",
-      "currencyId": "Wrapped rsETH::wrsETH",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "whitelist" },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
-    },
-    "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
-      "chainId": "59144",
-      "decimals": 18,
-      "name": "KelpDAO Bridged rsETH",
-      "address": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
-      "symbol": "rsETH",
-      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x4186BFC76E2E237523CBC30FD220FE055156b41F/logo.png",
-      "assetGroup": "RSETH",
-      "currencyId": "KelpDAO Bridged rsETH::rsETH",
-      "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
     },
     "0x1bf74c010e6320bab11e2e5a532b5ac15e0b8aa6": {
       "chainId": "59144",
@@ -1318,16 +1333,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/21401/thumb/SIDUS_coin_logo.png?1696520765",
       "assetGroup": "SIDUS",
       "currencyId": "Sidus::SIDUS"
-    },
-    "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
-      "chainId": "59144",
-      "decimals": 18,
-      "name": "xSolvBTC",
-      "address": "0xcc0966d8418d412c599a6421b760a847eb169a8c",
-      "symbol": "xSolvBTC",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/xSolvBTC.webp",
-      "assetGroup": "XSOLVBTC",
-      "currencyId": "xSolvBTC::xSolvBTC"
     },
     "0x5c7e299cf531eb66f2a1df637d37abb78e6200c7": {
       "chainId": "59144",

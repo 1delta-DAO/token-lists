@@ -169,7 +169,7 @@
       "address": "0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff",
       "symbol": "weETH",
       "logoURI": "https://assets.coingecko.com/coins/images/33033/thumb/weETH.png?1701438396",
-      "assetGroup": "Wrapped eETH::weETH",
+      "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
@@ -249,7 +249,7 @@
       "address": "0xecc68d0451e20292406967fe7c04280e5238ac7d",
       "symbol": "frxETH",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xecc68d0451e20292406967fe7c04280e5238ac7d/small/token-logo.png",
-      "assetGroup": "Bridged FRAX Ether (Axelar)::frxETH",
+      "assetGroup": "FRXETH",
       "currencyId": "Bridged FRAX Ether (Axelar)::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
@@ -313,7 +313,7 @@
       "name": "Frax Ether",
       "address": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
       "symbol": "frxETH",
-      "assetGroup": "Frax Ether::frxETH",
+      "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
@@ -326,7 +326,7 @@
       "address": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
       "symbol": "sfrxETH",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/sfrxETH.png",
-      "assetGroup": "Staked Frax Ether::sfrxETH",
+      "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
@@ -351,10 +351,36 @@
       "address": "0x76a50b8c7349ccddb7578c6627e79b5d99d24138",
       "symbol": "stETH",
       "logoURI": "https://assets.coingecko.com/coins/images/13442/standard/steth_logo.png",
-      "assetGroup": "Liquid staked Ether 2.0::stETH",
+      "assetGroup": "STETH",
       "currencyId": "Liquid staked Ether 2.0::stETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+      }
+    },
+    "0x80137510979822322193fc997d400d5a6c747bf7": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "StakeStone Ether",
+      "address": "0x80137510979822322193fc997d400d5a6c747bf7",
+      "symbol": "STONE",
+      "logoURI": "https://tokens.debridge.finance/Logo/10/0x80137510979822322193fc997d400d5a6c747bf7/small/token-logo.png",
+      "assetGroup": "STONE",
+      "currencyId": "StakeStone Ether::STONE",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+      }
+    },
+    "0x87eee96d50fb761ad85b1c982d28a042169d61b1": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Wrapped rsETH",
+      "address": "0x87eee96d50fb761ad85b1c982d28a042169d61b1",
+      "symbol": "wrsETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
+      "assetGroup": "RSETH",
+      "currencyId": "Wrapped rsETH::wrsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
       }
     },
     "0xe0bb0d3de8c10976511e5030ca403dbf4c25165b": {
@@ -736,20 +762,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/19592/large/soon.jpg?1681377764",
       "assetGroup": "OS",
       "currencyId": "Ethereans::OS"
-    },
-    "0x87eee96d50fb761ad85b1c982d28a042169d61b1": {
-      "chainId": "10",
-      "decimals": 18,
-      "name": "Wrapped rsETH",
-      "address": "0x87eee96d50fb761ad85b1c982d28a042169d61b1",
-      "symbol": "wrsETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
-      "assetGroup": "RSETH",
-      "currencyId": "Wrapped rsETH::wrsETH",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
     },
     "0x00f932f0fe257456b32deda4758922e56a4f4b42": {
       "chainId": "10",
@@ -3340,16 +3352,6 @@
       "assetGroup": "HappyAI::SMILE",
       "currencyId": "HappyAI::SMILE"
     },
-    "0x80137510979822322193fc997d400d5a6c747bf7": {
-      "chainId": "10",
-      "decimals": 18,
-      "name": "StakeStone Ether",
-      "address": "0x80137510979822322193fc997d400d5a6c747bf7",
-      "symbol": "STONE",
-      "logoURI": "https://tokens.debridge.finance/Logo/10/0x80137510979822322193fc997d400d5a6c747bf7/small/token-logo.png",
-      "assetGroup": "STONE",
-      "currencyId": "StakeStone Ether::STONE"
-    },
     "0xfe5b10f053871e66a319a57a16cf4e709f51367f": {
       "chainId": "10",
       "decimals": 18,
@@ -4537,7 +4539,7 @@
       "address": "0x6c2f7b6110a37b3b0fbdd811876be368df02e8b0",
       "symbol": "rETH",
       "logoURI": "https://ethereum-optimism.github.io/data/rETH_StaFi/logo.svg",
-      "assetGroup": "StaFi Staked ETH::rETH",
+      "assetGroup": "StaFi::rETH",
       "currencyId": "StaFi Staked ETH::rETH"
     },
     "0x61ccfe71d8ee67780320b0d990a02d702d99c271": {
@@ -5542,8 +5544,9 @@
       "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
       "symbol": "stEUR",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/stEUR.svg",
-      "assetGroup": "Staked EURA::stEUR",
-      "currencyId": "Staked EURA::stEUR"
+      "assetGroup": "STEUR",
+      "currencyId": "Staked EURA::stEUR",
+      "props": { "savings": { "underlying": "EURA", "base": "EUR" } }
     },
     "0x58441e37255b09f9f545e9dc957f1c41658ff665": {
       "chainId": "10",
@@ -6164,7 +6167,8 @@
       "symbol": "VYUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68253/thumb/vyUSD_image.png?1755201198",
       "assetGroup": "YieldFi vyUSD::VYUSD",
-      "currencyId": "YieldFi vyUSD::VYUSD"
+      "currencyId": "YieldFi vyUSD::VYUSD",
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0x7d3ce1265d5ea5848dc1c96aadbf754e2bad33b1": {
       "chainId": "10",
@@ -7045,15 +7049,6 @@
       "symbol": "GodX",
       "assetGroup": "GodX::GodX",
       "currencyId": "GodX::GodX"
-    },
-    "0x9dc6821ae74faae71dfd1016f14eadca7823faf4": {
-      "chainId": "10",
-      "decimals": 18,
-      "name": "wstEth",
-      "address": "0x9dc6821ae74faae71dfd1016f14eadca7823faf4",
-      "symbol": "wstEth",
-      "assetGroup": "wstEth::wstEth",
-      "currencyId": "wstEth::wstEth"
     },
     "0x9e57b3d7fd1a8f8fce8c4214cc1148d518d6f6fe": {
       "chainId": "10",

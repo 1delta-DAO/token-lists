@@ -73,3 +73,87 @@ const GROUP_TO_GROUP_MAPPER: Record<string, string> = {
 export function mapAssetGroup(gr: string) {
   return GROUP_TO_GROUP_MAPPER[gr] ?? gr
 }
+
+/**
+ * Merge specific split-off (currencyId `Name::SYMBOL`) groups back into a canonical group.
+ * Applied to the FINAL asset group after the same-chain dedup — for deployments whose name or
+ * casing splits them off from the shared group instead of unifying (e.g. Kelp wrsETH, whose
+ * `WRSETH → RSETH` mapping is defeated by names like "rsETHWrapper" and by the dedup when
+ * rsETH already occupies RSETH on that chain). Keyed on the exact group string.
+ */
+export const GROUP_ALIAS: Record<string, string> = {
+  // Only SAME-asset variants are merged here. Different tokens that merely share a ticker are
+  // deliberately NOT unified (StaFi rETH ≠ Rocket Pool RETH, PANGEA/Staked One ≠ StakeStone
+  // STONE, SOUL/YieldFi ≠ Synthetix SUSD, the mETH memes ≠ Mantle mETH, …).
+
+  // Ankr ankrETH
+  'Ankr Staked ETH::ANKRETH': 'ANKRETH',
+  // Bedrock brBTC
+  'Bedrock BTC::BRBTC': 'BRBTC',
+  // Coinbase cbETH
+  'Coinbase Wrapped Staked ETH on Gnosis::cbETH': 'CBETH',
+  // Renzo ezETH
+  'Renzo Restaked ETH::ezETH': 'EZETH',
+  // Frax frxETH
+  'Bridged FRAX Ether (Axelar)::AXLFRXETH': 'FRXETH',
+  'Bridged FRAX Ether (Axelar)::frxETH': 'FRXETH',
+  'Frax Ether::FRXETH': 'FRXETH',
+  'Frax Ether::frxETH': 'FRXETH',
+  'Frax Ether::frxETH::42161::0': 'FRXETH',
+  // Lombard LBTC
+  'Lombard Staked Bitcoin::LBTC': 'LBTC',
+  // Liquid Collective lsETH
+  'Liquid Staked ETH::LSETH': 'LSETH',
+  // NOTE: Manta mETH is a DIFFERENT asset from Mantle mETH — intentionally NOT unified.
+  // StakeWise osETH — no bare group exists; unify every variant to a clean OSETH
+  'StakeWise Staked ETH::OSETH': 'OSETH',
+  'StakeWise Staked ETH::osETH': 'OSETH',
+  'Staked ETH::osETH': 'OSETH',
+  'Staked ETH::osETH::42161::0': 'OSETH',
+  'Bridged Staked ETH::osETH': 'OSETH',
+  // Puffer pufETH
+  'PufferVault::PufETH': 'PUFETH',
+  // Kelp rsETH + wrsETH (WRSETH → RSETH)
+  'Kelp DAO Restaked ETH::RSETH': 'RSETH',
+  'KelpDAO Bridged rsETH::rsETH': 'RSETH',
+  'KelpDAO Restaked ETH::rsETH': 'RSETH',
+  'Wrapped rsETH::WRSETH': 'RSETH',
+  'Wrapped rsETH::wrsETH': 'RSETH',
+  'rsETHWrapper::wrsETH': 'RSETH',
+  // Sky sDAI
+  'Savings Dai (PoS)::sDAI': 'SDAI',
+  'Wrapped sDAI::sDAI': 'SDAI',
+  // Frax sfrxETH
+  'Staked Frax Ether::sfrxETH': 'SFRXETH',
+  'Staked Frax Ether::sfrxETH::42161::0': 'SFRXETH',
+  // Lido stETH
+  'Liquid staked Ether 2.0 on Gnosis::stETH': 'STETH',
+  'Liquid staked Ether 2.0::stETH': 'STETH',
+  // Angle stEUR
+  'Angle Staked EURA::STEUR': 'STEUR',
+  'Angle Staked EURA::stEUR': 'STEUR',
+  'Staked EURA::stEUR': 'STEUR',
+  // Noon sUSN
+  'Staked USN::sUSN': 'SUSN',
+  // EtherFi weETH
+  'Wrapped eETH::weETH': 'WEETH',
+  // Lido wstETH
+  'Bridged wstETH::wstETH': 'WSTETH',
+  'Wrapped Liquid Staked ETH::wstETH': 'WSTETH',
+  'Wrapped liquid staked Ether 2.0::wstETH': 'WSTETH',
+  // Solv xSolvBTC
+  'Solv Protocol Staked BTC::XSOLVBTC': 'XSOLVBTC',
+  // TapiocaBar wrapped BTC (previously a dead entry in GROUP_TO_GROUP_MAPPER)
+  'Wrapped BTC::TT-WBTC': 'WBTC',
+
+  // --- Distinct-asset unifications: a DIFFERENT asset that shares a ticker with a canonical
+  // one, whose own variants are merged together WITHOUT touching the canonical group. ---
+  // StaFi rETH — NOT Rocket Pool RETH; unify StaFi's variants into their own StaFi::rETH group.
+  'StaFi Staked ETH::RETH': 'StaFi::rETH',
+  'StaFi Staked ETH::rETH': 'StaFi::rETH',
+  'StaFi (PoS)::rETH': 'StaFi::rETH',
+}
+
+export function aliasAssetGroup(gr: string) {
+  return GROUP_ALIAS[gr] ?? gr
+}

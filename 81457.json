@@ -92,6 +92,32 @@
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
       }
     },
+    "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
+      "chainId": "81457",
+      "decimals": 18,
+      "name": "KelpDAO Bridged rsETH",
+      "address": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
+      "symbol": "rsETH",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x4186BFC76E2E237523CBC30FD220FE055156b41F/logo.png",
+      "assetGroup": "RSETH",
+      "currencyId": "KelpDAO Bridged rsETH::rsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
+    "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd": {
+      "chainId": "81457",
+      "decimals": 18,
+      "name": "Wrapped rsETH",
+      "address": "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd",
+      "symbol": "wrsETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
+      "assetGroup": "RSETH",
+      "currencyId": "Wrapped rsETH::wrsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
     "0x24cb308a4e2f3a4352f513681bd0c31a0bd3ba31": {
       "chainId": "81457",
       "decimals": 18,
@@ -274,19 +300,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/36459/thumb/pacmoon.png?1711501114",
       "assetGroup": "PacMoon::PAC",
       "currencyId": "PacMoon::PAC"
-    },
-    "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
-      "chainId": "81457",
-      "decimals": 18,
-      "name": "KelpDAO Bridged rsETH",
-      "address": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
-      "symbol": "rsETH",
-      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x4186BFC76E2E237523CBC30FD220FE055156b41F/logo.png",
-      "assetGroup": "RSETH",
-      "currencyId": "KelpDAO Bridged rsETH::rsETH",
-      "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
     },
     "0xb6e0d8a730c6e5c85c637b1cf7ad6fd07927b965": {
       "chainId": "81457",
@@ -893,19 +906,6 @@
       "assetGroup": "Anzen USDz::USDZ",
       "currencyId": "Anzen USDz::USDZ"
     },
-    "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd": {
-      "chainId": "81457",
-      "decimals": 18,
-      "name": "Wrapped rsETH",
-      "address": "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd",
-      "symbol": "wrsETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/37919/thumb/rseth.png?1715936438",
-      "assetGroup": "RSETH",
-      "currencyId": "Wrapped rsETH::wrsETH",
-      "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
-    },
     "0x73d23f3778a90be8846e172354a115543df2a7e4": {
       "chainId": "81457",
       "decimals": 18,
@@ -915,7 +915,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38040/thumb/susdz-symbol-200x200.png?1716334492",
       "assetGroup": "Anzen Staked USDz::SUSDZ",
       "currencyId": "Anzen Staked USDz::SUSDZ",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDz", "base": "USD" }
+      }
     },
     "0xc7edf7b7b3667a06992508e7b156eff794a9e1c8": {
       "chainId": "81457",

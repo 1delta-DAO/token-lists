@@ -5,7 +5,14 @@ import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { LstGroupMap, LstRegistry } from '../utils/types'
-import { CandidateRow, LabelToken, readChainLists, serializeRegistry, toLabelToken } from '../labels/labelUtils'
+import {
+  CandidateRow,
+  LabelToken,
+  computeMimicExclusions,
+  readChainLists,
+  serializeRegistry,
+  toLabelToken,
+} from '../labels/labelUtils'
 import { classifyRwaLst } from '../labels/rwaLstRules'
 import { LST_MANUAL } from './lstAssets'
 
@@ -23,6 +30,9 @@ function generateLstList() {
   console.log('Generating LST/LRT asset list...')
   try {
     const lists = readChainLists()
+    // Ticker-copy mimics of a canonical LST on the same chain (e.g. a fake "wstEth" where the
+    // real wstETH already exists) — never classify these. See computeMimicExclusions.
+    const mimics = computeMimicExclusions(lists)
     const tokens: LabelToken[] = []
     const generated: LstRegistry = {}
     const candidates: CandidateRow[] = []
@@ -37,6 +47,7 @@ function generateLstList() {
         scanned++
         const address = (t.address ?? '').toLowerCase()
         if (!address) continue
+        if (mimics.has(`${chainId}:${address}`)) continue
 
         const manual = LST_MANUAL[chainId]?.[address]
         const c = classifyRwaLst({ name: t.name, symbol: t.symbol })

@@ -14,6 +14,42 @@
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
       }
     },
+    "0x37d6382b6889ccef8d6871a8b60e667115eddbcf": {
+      "chainId": "239",
+      "decimals": 18,
+      "name": "pufETH",
+      "address": "0x37d6382b6889ccef8d6871a8b60e667115eddbcf",
+      "symbol": "pufETH",
+      "assetGroup": "PUFETH",
+      "currencyId": "pufETH::pufETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" }
+      }
+    },
+    "0x5448bbf60ee2edbcd32f032f3294982f4ad1119e": {
+      "chainId": "239",
+      "decimals": 18,
+      "name": "rsETHWrapper",
+      "address": "0x5448bbf60ee2edbcd32f032f3294982f4ad1119e",
+      "symbol": "wrsETH",
+      "assetGroup": "RSETH",
+      "currencyId": "rsETHWrapper::wrsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
+    "0xecac9c5f704e954931349da37f60e39f515c11c1": {
+      "chainId": "239",
+      "decimals": 8,
+      "name": "Lombard Staked Bitcoin",
+      "address": "0xecac9c5f704e954931349da37f60e39f515c11c1",
+      "symbol": "LBTC",
+      "assetGroup": "LBTC",
+      "currencyId": "Lombard Staked Bitcoin::LBTC",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+      }
+    },
     "0x057b5219486e8cbdfef65a0f090ad72b2d8fc81d": {
       "chainId": "239",
       "decimals": 9,
@@ -68,15 +104,6 @@
       "assetGroup": "Resolv Liquidity Provider Token::RLP",
       "currencyId": "Resolv Liquidity Provider Token::RLP"
     },
-    "0x37d6382b6889ccef8d6871a8b60e667115eddbcf": {
-      "chainId": "239",
-      "decimals": 18,
-      "name": "pufETH",
-      "address": "0x37d6382b6889ccef8d6871a8b60e667115eddbcf",
-      "symbol": "pufETH",
-      "assetGroup": "pufETH::pufETH",
-      "currencyId": "pufETH::pufETH"
-    },
     "0x4772d2e014f9fc3a820c444e3313968e9a5c8121": {
       "chainId": "239",
       "decimals": 18,
@@ -99,26 +126,15 @@
       "assetGroup": "USN::USN",
       "currencyId": "USN::USN"
     },
-    "0x5448bbf60ee2edbcd32f032f3294982f4ad1119e": {
-      "chainId": "239",
-      "decimals": 18,
-      "name": "rsETHWrapper",
-      "address": "0x5448bbf60ee2edbcd32f032f3294982f4ad1119e",
-      "symbol": "wrsETH",
-      "assetGroup": "RSETH",
-      "currencyId": "rsETHWrapper::wrsETH",
-      "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
-    },
     "0x5ced7f73b76a555ccb372cc0f0137bec5665f81e": {
       "chainId": "239",
       "decimals": 18,
       "name": "Staked USN",
       "address": "0x5ced7f73b76a555ccb372cc0f0137bec5665f81e",
       "symbol": "sUSN",
-      "assetGroup": "Staked USN::sUSN",
-      "currencyId": "Staked USN::sUSN"
+      "assetGroup": "SUSN",
+      "currencyId": "Staked USN::sUSN",
+      "props": { "savings": { "underlying": "USN", "base": "USD" } }
     },
     "0x61d66bc21fed820938021b06e9b2291f3fb91945": {
       "chainId": "239",
@@ -229,18 +245,6 @@
       "symbol": "fCBBTC",
       "assetGroup": "FakeCBBTC::fCBBTC",
       "currencyId": "FakeCBBTC::fCBBTC"
-    },
-    "0xecac9c5f704e954931349da37f60e39f515c11c1": {
-      "chainId": "239",
-      "decimals": 8,
-      "name": "Lombard Staked Bitcoin",
-      "address": "0xecac9c5f704e954931349da37f60e39f515c11c1",
-      "symbol": "LBTC",
-      "assetGroup": "LBTC",
-      "currencyId": "Lombard Staked Bitcoin::LBTC",
-      "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
-      }
     },
     "0xf9775085d726e782e83585033b58606f7731ab18": {
       "chainId": "239",

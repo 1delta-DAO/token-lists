@@ -35,10 +35,36 @@
       "address": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
       "symbol": "RSETH",
       "logoURI": "https://assets.coingecko.com/coins/images/33800/thumb/Icon___Dark.png?1702991855",
-      "assetGroup": "Kelp DAO Restaked ETH::RSETH",
+      "assetGroup": "RSETH",
       "currencyId": "Kelp DAO Restaked ETH::RSETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
+    "0xec901da9c68e90798bbbb74c11406a32a70652c3": {
+      "chainId": "169",
+      "decimals": 18,
+      "name": "StakeStone Ether",
+      "address": "0xec901da9c68e90798bbbb74c11406a32a70652c3",
+      "symbol": "STONE",
+      "logoURI": "https://assets.coingecko.com/coins/images/33103/thumb/200_200.png?1702602672",
+      "assetGroup": "STONE",
+      "currencyId": "StakeStone Ether::STONE",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+      }
+    },
+    "0xaccbc418a994a27a75644d8d591afc22faba594e": {
+      "chainId": "169",
+      "decimals": 18,
+      "name": "Manta mETH",
+      "address": "0xaccbc418a994a27a75644d8d591afc22faba594e",
+      "symbol": "METH",
+      "logoURI": "https://assets.coingecko.com/coins/images/38337/thumb/token_m_eth.png?1717126380",
+      "assetGroup": "Manta mETH::METH",
+      "currencyId": "Manta mETH::METH",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "mantle" }
       }
     },
     "0x6fae4d9935e2fcb11fc79a64e917fb2bf14dafaa": {
@@ -50,16 +76,6 @@
       "assetGroup": "TIA::TIA",
       "currencyId": "TIA::TIA",
       "props": { "risk": { "score": 4, "source": "default" } }
-    },
-    "0xec901da9c68e90798bbbb74c11406a32a70652c3": {
-      "chainId": "169",
-      "decimals": 18,
-      "name": "StakeStone Ether",
-      "address": "0xec901da9c68e90798bbbb74c11406a32a70652c3",
-      "symbol": "STONE",
-      "logoURI": "https://assets.coingecko.com/coins/images/33103/thumb/200_200.png?1702602672",
-      "assetGroup": "STONE",
-      "currencyId": "StakeStone Ether::STONE"
     },
     "0xb73603c5d87fa094b7314c74ace2e64d165016fb": {
       "chainId": "169",
@@ -200,16 +216,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51373/thumb/gulllogo.png?1730938086",
       "assetGroup": "GULL::GULL",
       "currencyId": "GULL::GULL"
-    },
-    "0xaccbc418a994a27a75644d8d591afc22faba594e": {
-      "chainId": "169",
-      "decimals": 18,
-      "name": "Manta mETH",
-      "address": "0xaccbc418a994a27a75644d8d591afc22faba594e",
-      "symbol": "METH",
-      "logoURI": "https://assets.coingecko.com/coins/images/38337/thumb/token_m_eth.png?1717126380",
-      "assetGroup": "Manta mETH::METH",
-      "currencyId": "Manta mETH::METH"
     },
     "0x00c6af82abfddc5e1b8f376f954eb4f4dfff31c5": {
       "chainId": "169",
@@ -382,7 +388,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38040/thumb/susdz-symbol-200x200.png?1716334492",
       "assetGroup": "Anzen Staked USDz::SUSDZ",
       "currencyId": "Anzen Staked USDz::SUSDZ",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDz", "base": "USD" }
+      }
     },
     "0x078f712f038a95beea94f036cadb49188a90604b": {
       "chainId": "169",

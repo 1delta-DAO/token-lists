@@ -7,15 +7,19 @@ import { BLACKLIST_PER_CHAIN, GENERAL_BLACKLIST, GROUP_BLACKLIST, GROUP_HARD_SET
 import { isAddress, zeroAddress } from 'viem'
 import { PRESET_SYMBOLS } from './presets'
 import { FUEL_MAPPEDS } from './utils/data/knownAssets'
+import { aliasAssetGroup } from './utils/data/assetGroupUnifier'
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
+import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
 import { lookupLstGroup } from './lst/lstGroupMap'
 import { lookupDenomination } from './denomination/denominationMap'
 // @ts-ignore-next-line
 import * as path from 'path'
+// @ts-ignore-next-line
+import * as crypto from 'crypto'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { Chain } from '@1delta/chain-registry'
@@ -54,6 +58,24 @@ type ChainIdAddressMetaMap = {
 type Register = { [assetEnum: string]: string }
 
 const ALL_NETWORKS = Object.values(Chain)
+
+/** CoinGecko-backed impostor predicate (lazy ticker-copy at a non-canonical address). */
+const isImpostor = makeImpostorCheck()
+
+/**
+ * External-list fetch cache. Every fresh run writes each fetched list here; running with
+ * `GEN_CACHE=1` reuses it (no network, no rate-limit waits) — for reprocessing minor generator
+ * changes (asset-group aliases, symbol overrides, …) without re-fetching ~100 sources.
+ */
+const LIST_CACHE_DIR = path.resolve(__dirname, '.list-cache')
+const USE_LIST_CACHE = process.env.GEN_CACHE === '1'
+function listCacheFile(list: { url: string; method?: string; body?: string }): string {
+  const h = crypto
+    .createHash('sha1')
+    .update(`${list.url}|${list.method ?? ''}|${list.body ?? ''}`)
+    .digest('hex')
+  return path.resolve(LIST_CACHE_DIR, `${h}.json`)
+}
 
 const BANNED_NETWORKS = [
   '167009', // taiko test
@@ -151,15 +173,26 @@ async function readTokenLists(): Promise<{
         const filePath = fileURLToPath(list.url)
         data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
       } else {
-        const listDataRaw = await fetch(list.url, {
-          method: list.method ?? 'GET',
-          headers: list.headers,
-          body: list.body,
-        })
-        if (list.wait) {
-          await AutoGenHelpers.sleep(list.wait)
+        const cacheFile = listCacheFile(list)
+        if (USE_LIST_CACHE && fs.existsSync(cacheFile)) {
+          // Cached mode (GEN_CACHE=1): reuse the last fetch — skips network AND the rate-limit waits.
+          data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
+        } else {
+          const listDataRaw = await fetch(list.url, {
+            method: list.method ?? 'GET',
+            headers: list.headers,
+            body: list.body,
+          })
+          if (list.wait) {
+            await AutoGenHelpers.sleep(list.wait)
+          }
+          data = await listDataRaw.json()
+          // Always populate the cache so a later GEN_CACHE=1 run is instant.
+          try {
+            fs.mkdirSync(LIST_CACHE_DIR, { recursive: true })
+            fs.writeFileSync(cacheFile, JSON.stringify(data))
+          } catch {}
         }
-        data = await listDataRaw.json()
       }
 
       if (data.mainTokens && data.chainId) {
@@ -272,20 +305,25 @@ async function readTokenLists(): Promise<{
                     const risk = lookupRisk(chainId, lcAddress)
                     if (risk) tokenProps = { ...tokenProps, risk }
 
+                    // CoinGecko impostor guard: a lazy ticker-copy (name===symbol) whose address is
+                    // NOT CoinGecko's canonical for that symbol/chain must never inherit an asset
+                    // label — not even via a shared assetGroup overlay (e.g. a fake "wstEth"/"USDD").
+                    const impostor = isImpostor(chainId, lcAddress, tokenInList.name, tokenInList.symbol)
+
                     // Stablecoin overlay (from risk-data). Keyed by assetGroup since the fiat
                     // base is chain-independent — covers every deployment of the group.
-                    const stablecoin = lookupStablecoin(assetGroup)
+                    const stablecoin = impostor ? undefined : lookupStablecoin(assetGroup)
                     if (stablecoin && !tokenProps.stablecoin) tokenProps = { ...tokenProps, stablecoin }
 
                     // Savings overlay (yield-bearing stablecoin wrappers, from risk-data). Keyed by
                     // assetGroup so the underlying/base carries across every chain deployment.
-                    const savings = lookupSavings(assetGroup)
+                    const savings = impostor ? undefined : lookupSavings(assetGroup)
                     if (savings && !tokenProps.savings) tokenProps = { ...tokenProps, savings }
 
                     // LST/LRT overlay, keyed by assetGroup so the classification carries x-chain to
                     // bridged deployments (wstETH, wrsETH, weETH, …). Only fills when the per-address
                     // lst.json source list hasn't already classified this token.
-                    const lstGroup = lookupLstGroup(assetGroup)
+                    const lstGroup = impostor ? undefined : lookupLstGroup(assetGroup)
                     if (lstGroup && !tokenProps.lst) tokenProps = { ...tokenProps, lst: lstGroup }
 
                     // Denomination overlay (canonical base ETH/BTC/native), keyed by assetGroup.
@@ -334,6 +372,11 @@ async function readTokenLists(): Promise<{
                       }
                       assetGroup = baseGroup
                     }
+
+                    // Merge curated split-off (currencyId) groups back into their canonical group
+                    // (e.g. Kelp wrsETH → RSETH, StakeWise osETH variants → OSETH). Runs AFTER the
+                    // dedup so the alias is the final word; only same-asset variants are listed.
+                    assetGroup = aliasAssetGroup(assetGroup)
 
                     let parsedEntry = {
                       chainId,

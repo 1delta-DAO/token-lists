@@ -333,7 +333,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/syusd.svg",
       "assetGroup": "Staked YUSD::sYUSD",
       "currencyId": "Staked YUSD::sYUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "YUSD", "base": "USD" }
+      }
     },
     "0xfba805659e5050544e185cccdf592fd77f8c7210": {
       "chainId": "747474",
@@ -576,7 +579,8 @@
       "address": "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de",
       "symbol": "vyUSD",
       "assetGroup": "YieldFi vyUSD::vyUSD",
-      "currencyId": "YieldFi vyUSD::vyUSD"
+      "currencyId": "YieldFi vyUSD::vyUSD",
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0xfcff2086192bd2f134b9bfa3acc4e7646b697d4b": {
       "chainId": "747474",
@@ -585,7 +589,8 @@
       "address": "0xfcff2086192bd2f134b9bfa3acc4e7646b697d4b",
       "symbol": "yUTY",
       "assetGroup": "Staked UTY::yUTY",
-      "currencyId": "Staked UTY::yUTY"
+      "currencyId": "Staked UTY::yUTY",
+      "props": { "savings": { "underlying": "UTY", "base": "USD" } }
     },
     "0x0ef68c1ab3c83cf11f9546faba385e8a1bd38d74": {
       "chainId": "747474",
@@ -615,7 +620,8 @@
       "symbol": "stcUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/stcusd.svg",
       "assetGroup": "Staked Cap USD::stcUSD",
-      "currencyId": "Staked Cap USD::stcUSD"
+      "currencyId": "Staked Cap USD::stcUSD",
+      "props": { "savings": { "underlying": "cUSD", "base": "USD" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "747474",

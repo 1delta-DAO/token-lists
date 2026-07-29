@@ -492,7 +492,7 @@
       "address": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
       "symbol": "sfrxETH",
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0xac3e018457b222d93114458476f3e3416abbe38f/b0802881acff20fd906a2e189a4ea882.png",
-      "assetGroup": "Staked Frax Ether::sfrxETH",
+      "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
@@ -505,10 +505,23 @@
       "address": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
       "symbol": "frxETH",
       "logoURI": "https://static.debank.com/image/matic_token/logo_url/0x43edd7f3831b08fe70b7555ddd373c8bf65a9050/4313f25f6c5196e8fce2c80fa34c73d0.png",
-      "assetGroup": "Frax Ether::frxETH",
+      "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+      }
+    },
+    "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077": {
+      "chainId": "137",
+      "decimals": 18,
+      "name": "xSolvBTC",
+      "address": "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077",
+      "symbol": "xSolvBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/39384/thumb/xSolvBTC.png?1744170824",
+      "assetGroup": "XSOLVBTC",
+      "currencyId": "xSolvBTC::xSolvBTC",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
       }
     },
     "0x71b821aa52a49f32eed535fca6eb5aa130085978": {
@@ -6147,17 +6160,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/11093/large/sora_logo_cg_white.png?1588284194",
       "assetGroup": "Sora::XOR",
       "currencyId": "Sora::XOR"
-    },
-    "0x769434dca303597c8fc4997bf3dab233e961eda2": {
-      "chainId": "137",
-      "decimals": 6,
-      "name": "XSGD",
-      "address": "0x769434dca303597c8fc4997bf3dab233e961eda2",
-      "symbol": "XSGD",
-      "logoURI": "https://assets.coingecko.com/coins/images/12832/large/StraitsX_Singapore_Dollar_%28XSGD%29_Token_Logo.png?1633936813",
-      "assetGroup": "XSGD::XSGD",
-      "currencyId": "XSGD::XSGD",
-      "props": { "stablecoin": { "base": "SGD" } }
     },
     "0x6811079e3c63ed96eb005384d7e7ec8810e3d521": {
       "chainId": "137",
@@ -21814,8 +21816,9 @@
       "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
       "symbol": "stEUR",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/stEUR.svg",
-      "assetGroup": "Staked EURA::stEUR",
-      "currencyId": "Staked EURA::stEUR"
+      "assetGroup": "STEUR",
+      "currencyId": "Staked EURA::stEUR",
+      "props": { "savings": { "underlying": "EURA", "base": "EUR" } }
     },
     "0x0022228a2cc5e7ef0274a7baa600d44da5ab5776": {
       "chainId": "137",
@@ -22036,16 +22039,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/36800/thumb/solvBTC.png?1719810684",
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC"
-    },
-    "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077": {
-      "chainId": "137",
-      "decimals": 18,
-      "name": "xSolvBTC",
-      "address": "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077",
-      "symbol": "xSolvBTC",
-      "logoURI": "https://assets.coingecko.com/coins/images/39384/thumb/xSolvBTC.png?1744170824",
-      "assetGroup": "XSOLVBTC",
-      "currencyId": "xSolvBTC::xSolvBTC"
     },
     "0x1bdf71ede1a4777db1eebe7232bcda20d6fc1610": {
       "chainId": "137",
@@ -22920,7 +22913,7 @@
       "address": "0x5736df66b4f8401d639ffa915a46b4c548c09ac1",
       "symbol": "rETH",
       "logoURI": "https://static.debank.com/image/matic_token/logo_url/0x5736df66b4f8401d639ffa915a46b4c548c09ac1/bac3f1450009f9c2fb7a043d9a0c8c27.png",
-      "assetGroup": "StaFi (PoS)::rETH",
+      "assetGroup": "StaFi::rETH",
       "currencyId": "StaFi (PoS)::rETH"
     },
     "0x648a372552725ee4abfc8e8f3006d80124d63b44": {
@@ -24489,7 +24482,7 @@
       "name": "Savings Dai (PoS)",
       "address": "0x18fb181ee70c20c68a7e7905e52830bf8b47c25d",
       "symbol": "sDAI",
-      "assetGroup": "Savings Dai (PoS)::sDAI",
+      "assetGroup": "SDAI",
       "currencyId": "Savings Dai (PoS)::sDAI",
       "props": { "savings": { "underlying": "DAI", "base": "USD" } }
     },

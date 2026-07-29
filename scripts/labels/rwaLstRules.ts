@@ -65,7 +65,6 @@ const EXCLUDED_SYMBOLS = new Set(
     'ANKR', // Ankr governance
     'RSR', // Reserve Rights
     'SSV',
-    'LSETH', // ambiguous — leave to registry
   ].map((s) => s.toUpperCase()),
 )
 
@@ -126,13 +125,35 @@ const LST_RULES: Rule[] = [
     id: 'lido',
     confidence: 'auto',
     lst: stake('ETH', 'lido'),
-    test: has('lido staked', 'liquid staked ether', 'wrapped liquid staked ether'),
+    // symbol match also covers bridged variants ("Bridged wstETH", "Wrapped Liquid Staked ETH", …)
+    test: (n, s) =>
+      has('lido staked', 'liquid staked ether', 'wrapped liquid staked ether')(n) ||
+      ['STETH', 'WSTETH'].includes(norm(s)),
   },
   { id: 'rocketpool', confidence: 'auto', lst: stake('ETH', 'rocketpool'), test: has('rocket pool eth') },
   { id: 'coinbase-eth', confidence: 'auto', lst: stake('ETH', 'coinbase'), test: has('coinbase wrapped staked eth') },
   { id: 'frax-eth', confidence: 'auto', lst: stake('ETH', 'frax'), test: has('frax ether', 'staked frax ether') },
-  { id: 'mantle-eth', confidence: 'auto', lst: stake('ETH', 'mantle'), test: has('mantle staked ether') },
-  { id: 'stakewise-eth', confidence: 'auto', lst: stake('ETH', 'stakewise'), test: has('stakewise staked eth') },
+  // Mantle mETH (liquid staking). Symbol METH collides with memes (ETH Monsta, "meme eth",
+  // a fuel "Meth"), so match the issuer name / case-exact "mETH", never the bare ticker.
+  {
+    id: 'mantle-eth',
+    confidence: 'auto',
+    lst: stake('ETH', 'mantle'),
+    test: (n) => has('mantle staked ether', 'manta meth', 'mantle meth')(n) || n.trim() === 'mETH',
+  },
+  // Mantle cmETH — restaked mETH (LRT)
+  {
+    id: 'mantle-cmeth',
+    confidence: 'auto',
+    lst: stake('ETH', 'mantle', 'restaking'),
+    test: (n, s) => norm(s) === 'CMETH' || has('cmeth')(n),
+  },
+  {
+    id: 'stakewise-eth',
+    confidence: 'auto',
+    lst: stake('ETH', 'stakewise'),
+    test: (n, s) => has('stakewise staked eth')(n) || norm(s) === 'OSETH',
+  },
   { id: 'stader-eth', confidence: 'auto', lst: stake('ETH', 'stader'), test: has('stader ethx') },
   { id: 'ankr-eth', confidence: 'auto', lst: stake('ETH', 'ankr'), test: has('ankr staked eth') },
   {
@@ -148,7 +169,8 @@ const LST_RULES: Rule[] = [
     id: 'kelp',
     confidence: 'auto',
     lst: stake('ETH', 'kelp', 'restaking'),
-    test: has('kelpdao restaked', 'kelp dao restaked'),
+    // symbol match covers bridged variants ("KelpDAO Bridged rsETH", bare "rsETH", wrapped)
+    test: (n, s) => has('kelpdao restaked', 'kelp dao restaked')(n) || ['RSETH', 'WRSETH'].includes(norm(s)),
   },
   {
     id: 'etherfi',
@@ -156,7 +178,12 @@ const LST_RULES: Rule[] = [
     lst: stake('ETH', 'etherfi', 'restaking'),
     test: has('wrapped eeth', 'ether.fi'),
   },
-  { id: 'puffer', confidence: 'auto', lst: stake('ETH', 'puffer', 'restaking'), test: has('puffer') },
+  {
+    id: 'puffer',
+    confidence: 'auto',
+    lst: stake('ETH', 'puffer', 'restaking'),
+    test: (n, s) => has('puffer')(n) || norm(s) === 'PUFETH',
+  },
   {
     id: 'swell-restaked',
     confidence: 'auto',
@@ -164,6 +191,31 @@ const LST_RULES: Rule[] = [
     test: has('swell restaked', 'rsweth'),
   },
   { id: 'inception', confidence: 'auto', lst: stake('ETH', 'inception', 'restaking'), test: has('inception restaked') },
+
+  // --- more ETH LSTs / LRTs. Name/symbol-keyed and guarded against symbol collisions
+  // (Test ETH=TETH, PANGEA/Staked One=STONE) — match the issuer name, not the bare ticker. ---
+  // StakeStone: STONE (liquid staking) vs beraSTONE (Berachain restaking vault)
+  { id: 'stakestone-eth', confidence: 'auto', lst: stake('ETH', 'stakestone'), test: has('stakestone ether') },
+  {
+    id: 'stakestone-bera',
+    confidence: 'auto',
+    lst: stake('ETH', 'stakestone', 'restaking'),
+    test: has('stakestone berachain'),
+  },
+  // Liquid Collective lsETH (symbol is unambiguous; name varies "Liquid Staked ETH[ Index]")
+  {
+    id: 'liquid-collective',
+    confidence: 'auto',
+    lst: stake('ETH', 'liquid-collective'),
+    test: (_n, s) => norm(s) === 'LSETH',
+  },
+  // Treehouse tETH (restaking) — NOT "Test ETH"
+  { id: 'treehouse-eth', confidence: 'auto', lst: stake('ETH', 'treehouse', 'restaking'), test: has('treehouse eth') },
+  // Avant savETH (staked avETH, restaking)
+  { id: 'avant-eth', confidence: 'auto', lst: stake('ETH', 'avant', 'restaking'), test: has('staked aveth') },
+  // Reserve ETH+ (ETHPlus — LSD basket) and Overnight ETH+
+  { id: 'reserve-ethplus', confidence: 'auto', lst: stake('ETH', 'reserve'), test: has('ethplus') },
+  { id: 'overnight-ethplus', confidence: 'auto', lst: stake('ETH', 'overnight'), test: has('ethereum overnight') },
 
   // --- non-ETH staking ---
   { id: 'stader-pol', confidence: 'auto', lst: stake('POL', 'stader'), test: has('stader maticx') },
@@ -175,8 +227,28 @@ const LST_RULES: Rule[] = [
   { id: 'marinade-sol', confidence: 'auto', lst: stake('SOL', 'marinade'), test: has('marinade staked sol') },
 
   // --- BTC staking ---
-  { id: 'lombard-btc', confidence: 'auto', lst: stake('BTC', 'lombard'), test: has('lombard staked btc') },
+  {
+    id: 'lombard-btc',
+    confidence: 'auto',
+    lst: stake('BTC', 'lombard'),
+    test: has('lombard staked btc', 'lombard staked bitcoin'),
+  },
   { id: 'lorenzo-btc', confidence: 'auto', lst: stake('BTC', 'lorenzo'), test: has('lorenzo stbtc') },
+  // Solv xSolvBTC (yield-bearing SolvBTC), Bedrock brBTC (restaking), pumpBTC — symbols are
+  // unambiguous; name backup covers the "Solv Protocol Staked BTC" / "Bedrock BTC" variants.
+  {
+    id: 'solv-xbtc',
+    confidence: 'auto',
+    lst: stake('BTC', 'solv'),
+    test: (n, s) => norm(s) === 'XSOLVBTC' || has('solv protocol staked btc')(n),
+  },
+  {
+    id: 'bedrock-brbtc',
+    confidence: 'auto',
+    lst: stake('BTC', 'bedrock', 'restaking'),
+    test: (n, s) => norm(s) === 'BRBTC' || has('bedrock btc')(n),
+  },
+  { id: 'pumpbtc', confidence: 'auto', lst: stake('BTC', 'pumpbtc'), test: (_n, s) => norm(s) === 'PUMPBTC' },
 ]
 
 /* -------------------------------------------------------------------------- */

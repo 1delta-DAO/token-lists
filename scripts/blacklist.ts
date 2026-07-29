@@ -3,13 +3,22 @@ import { Chain } from '@1delta/chain-registry'
 export const BLACKLIST_PER_CHAIN = {
   [Chain.ETHEREUM_MAINNET]: [
     '0x000ae314e2a2172a039b26378814c252734f556a', // ASTER _ EOA address
+    // impostors: name===symbol ticker-copies, not CoinGecko's canonical address for the symbol
+    '0x0c10bf8fcb7bf5412187a595ab97a3609160b5c6', // fake USDD
+    '0xdde3ec717f220fc6a29d6a4be73f91da5b718e55', // fake USDU
+    '0x20b3b07e9c0e37815e2892ab09496559f57c3603', // fake USDV
+    '0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef', // fake sUSDai
   ],
   [Chain.ARBITRUM_ONE]: [
     '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // fake WETH
+    '0x3d19a8b57e8082c4bbd5e068016295cfdb255e6a', // fake rsETH (impostor)
+    '0x47973ada5cd8ead11bfec6af139177d801dec0c2', // fake rswETH (impostor)
+    '0xa05245ade25cc1063ee50cf7c083b4524c1c4302', // fake XSGD (impostor)
   ],
   [Chain.POLYGON_MAINNET]: [
     // "0x0000000000000000000000000000000000001010", // MATIC
     '0xb8a1d66f1bf5a16a53945ec560ad027166c0d303', // syBTC
+    '0x769434dca303597c8fc4997bf3dab233e961eda2', // fake XSGD (impostor)
   ],
   [Chain.MANTLE]: [
     // "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // MNT
@@ -17,6 +26,13 @@ export const BLACKLIST_PER_CHAIN = {
   [Chain.OP_MAINNET]: [
     '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000', // legacy ETH
     '0x7bfd4ca2a6cf3a3fddd645d10b323031afe47ff0', // wrsETH _ eoa address
+    '0x9dc6821ae74faae71dfd1016f14eadca7823faf4', // fake wstETH (impostor, unverified on chain 10)
+  ],
+  [Chain.BNB_SMART_CHAIN_MAINNET]: [
+    '0xd17479997f34dd9156deef8f95a52d81d265be9c', // fake USDD (impostor)
+  ],
+  [Chain.FRAXTAL]: [
+    '0xb3a7862d7b29b8e3d235299128c6985e2cd44c33', // fake USDe (impostor)
   ],
   [Chain.BASE]: [
     '0x80eede496655fb9047dd39d9f418d5483ed600df', // frax usd _ eoa address

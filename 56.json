@@ -904,28 +904,6 @@
         }
       }
     },
-    "0xbe436f6ed7ff7f747aae1912f88c59549df82158": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "YT slisBNBx (BNB) BNB",
-      "address": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
-      "symbol": "YT-clisBNB-30OCT2025",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/46247a45-4b42-4c18-9261-dcaa6f841e32.svg",
-      "assetGroup": "YT slisBNBx (BNB) BNB::YT-clisBNB-30OCT2025",
-      "currencyId": "YT slisBNBx (BNB) BNB::YT-clisBNB-30OCT2025",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0xbd577ddabb5a1672d3c786726b87a175de652b96",
-          "expiry": 1761782400,
-          "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
-          "ptAddress": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
-          "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
-          "expired": true
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0xb84cec1ab2af11b530ae0d8594b1493556be49cd": {
       "chainId": "56",
       "decimals": 18,
@@ -942,6 +920,28 @@
           "expiry": 1761782400,
           "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
           "ytAddress": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
+          "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
+          "expired": true
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0xbe436f6ed7ff7f747aae1912f88c59549df82158": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "YT slisBNBx (BNB) BNB",
+      "address": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
+      "symbol": "YT-clisBNB-30OCT2025",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/46247a45-4b42-4c18-9261-dcaa6f841e32.svg",
+      "assetGroup": "YT slisBNBx (BNB) BNB::YT-clisBNB-30OCT2025",
+      "currencyId": "YT slisBNBx (BNB) BNB::YT-clisBNB-30OCT2025",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xbd577ddabb5a1672d3c786726b87a175de652b96",
+          "expiry": 1761782400,
+          "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+          "ptAddress": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
           "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
           "expired": true
         },
@@ -2192,17 +2192,6 @@
         "risk": { "score": 4, "source": "default" }
       }
     },
-    "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "PT srUSDe (USDe) BNB",
-      "address": "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9",
-      "symbol": "PT-srUSDe-2APR2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
-      "assetGroup": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
-      "currencyId": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
-    },
     "0x67e84ba0196738a59ee58df848a2c16ed2a6a6f3": {
       "chainId": "56",
       "decimals": 18,
@@ -2216,6 +2205,17 @@
         "pendle": { "tokenType": "PT", "expired": true },
         "risk": { "score": 4, "source": "default" }
       }
+    },
+    "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PT srUSDe (USDe) BNB",
+      "address": "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9",
+      "symbol": "PT-srUSDe-2APR2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
+      "assetGroup": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
+      "currencyId": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x7e318884f6f299031f4fa88d7a324e076d460a4b": {
       "chainId": "56",
@@ -6776,7 +6776,7 @@
       "name": "Frax Ether",
       "address": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
       "symbol": "frxETH",
-      "assetGroup": "Frax Ether::frxETH",
+      "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
@@ -6788,10 +6788,62 @@
       "name": "Staked Frax Ether",
       "address": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
       "symbol": "sfrxETH",
-      "assetGroup": "Staked Frax Ether::sfrxETH",
+      "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+      }
+    },
+    "0x80137510979822322193fc997d400d5a6c747bf7": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "StakeStone Ether",
+      "address": "0x80137510979822322193fc997d400d5a6c747bf7",
+      "symbol": "STONE",
+      "logoURI": "https://tokens.pancakeswap.finance/images/0x80137510979822322193FC997d400D5A6C747bf7.png",
+      "assetGroup": "STONE",
+      "currencyId": "StakeStone Ether::STONE",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+      }
+    },
+    "0x1346b618dc92810ec74163e4c27004c921d446a5": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "xSolvBTC",
+      "address": "0x1346b618dc92810ec74163e4c27004c921d446a5",
+      "symbol": "xSolvBTC",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/xSolvBTC.webp",
+      "assetGroup": "XSOLVBTC",
+      "currencyId": "xSolvBTC::xSolvBTC",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+      }
+    },
+    "0xf9c4ff105803a77ecb5dae300871ad76c2794fa4": {
+      "chainId": "56",
+      "decimals": 8,
+      "name": "pumpBTC",
+      "address": "0xf9c4ff105803a77ecb5dae300871ad76c2794fa4",
+      "symbol": "pumpBTC",
+      "logoURI": "https://tokens.debridge.finance/Logo/56/0xf9c4ff105803a77ecb5dae300871ad76c2794fa4/small/token-logo.png",
+      "assetGroup": "PUMPBTC",
+      "currencyId": "pumpBTC::pumpBTC",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+      }
+    },
+    "0x733a6c29eda4a58931ae81b8d91e29f2eaf01df3": {
+      "chainId": "56",
+      "decimals": 8,
+      "name": "brBTC",
+      "address": "0x733a6c29eda4a58931ae81b8d91e29f2eaf01df3",
+      "symbol": "brBTC",
+      "logoURI": "https://tokens.debridge.finance/Logo/56/0x733a6c29eda4a58931ae81b8d91e29f2eaf01df3/small/token-logo.png",
+      "assetGroup": "BRBTC",
+      "currencyId": "brBTC::brBTC",
+      "props": {
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" }
       }
     },
     "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c": {
@@ -13186,16 +13238,6 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC"
     },
-    "0x80137510979822322193fc997d400d5a6c747bf7": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "StakeStone Ether",
-      "address": "0x80137510979822322193fc997d400d5a6c747bf7",
-      "symbol": "STONE",
-      "logoURI": "https://tokens.pancakeswap.finance/images/0x80137510979822322193FC997d400D5A6C747bf7.png",
-      "assetGroup": "STONE",
-      "currencyId": "StakeStone Ether::STONE"
-    },
     "0xfceb31a79f71ac9cbdcf853519c1b12d379edc46": {
       "chainId": "56",
       "decimals": 18,
@@ -13282,16 +13324,6 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/0x837A130aED114300Bab4f9f1F4f500682f7efd48.png",
       "assetGroup": "WeSendit::WSI",
       "currencyId": "WeSendit::WSI"
-    },
-    "0x1346b618dc92810ec74163e4c27004c921d446a5": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "xSolvBTC",
-      "address": "0x1346b618dc92810ec74163e4c27004c921d446a5",
-      "symbol": "xSolvBTC",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/xSolvBTC.webp",
-      "assetGroup": "XSOLVBTC",
-      "currencyId": "xSolvBTC::xSolvBTC"
     },
     "0x654a32542a84bea7d2c2c1a1ed1aaaf26888e6bd": {
       "chainId": "56",
@@ -13493,17 +13525,6 @@
       "logoURI": "https://tokens.debridge.finance/Logo/56/0x4a2c860cec6471b9f5f5a336eb4f38bb21683c98/small/token-logo.png",
       "assetGroup": "Green Satoshi Token on BSC::GST-BSC",
       "currencyId": "Green Satoshi Token on BSC::GST-BSC"
-    },
-    "0xd17479997f34dd9156deef8f95a52d81d265be9c": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "USDD",
-      "address": "0xd17479997f34dd9156deef8f95a52d81d265be9c",
-      "symbol": "USDD",
-      "logoURI": "https://tokens.debridge.finance/Logo/56/0xd17479997f34dd9156deef8f95a52d81d265be9c/small/token-logo.png",
-      "assetGroup": "USDD",
-      "currencyId": "USDD::USDD",
-      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x738d96caf7096659db4c1afbf1e1bdfd281f388c": {
       "chainId": "56",
@@ -22405,16 +22426,6 @@
       "assetGroup": "CLP::CLP",
       "currencyId": "CLP::CLP"
     },
-    "0xf9c4ff105803a77ecb5dae300871ad76c2794fa4": {
-      "chainId": "56",
-      "decimals": 8,
-      "name": "pumpBTC",
-      "address": "0xf9c4ff105803a77ecb5dae300871ad76c2794fa4",
-      "symbol": "pumpBTC",
-      "logoURI": "https://tokens.debridge.finance/Logo/56/0xf9c4ff105803a77ecb5dae300871ad76c2794fa4/small/token-logo.png",
-      "assetGroup": "PUMPBTC",
-      "currencyId": "pumpBTC::pumpBTC"
-    },
     "0xdc49a53e1f15fd7fd522e0691cb570f442e9ca6c": {
       "chainId": "56",
       "decimals": 3,
@@ -22717,16 +22728,6 @@
       "assetGroup": "D",
       "currencyId": "Dar Open Network::D"
     },
-    "0x733a6c29eda4a58931ae81b8d91e29f2eaf01df3": {
-      "chainId": "56",
-      "decimals": 8,
-      "name": "brBTC",
-      "address": "0x733a6c29eda4a58931ae81b8d91e29f2eaf01df3",
-      "symbol": "brBTC",
-      "logoURI": "https://tokens.debridge.finance/Logo/56/0x733a6c29eda4a58931ae81b8d91e29f2eaf01df3/small/token-logo.png",
-      "assetGroup": "BRBTC",
-      "currencyId": "brBTC::brBTC"
-    },
     "0x631c2f0edabac799f07550aee4ff0bf7fd35212b": {
       "chainId": "56",
       "decimals": 18,
@@ -22822,7 +22823,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDF", "base": "USD" }
       }
     },
     "0x66d79b8f60ec93bfce0b56f5ac14a2714e509a99": {
@@ -50919,7 +50921,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USD1+", "base": "USD" }
       }
     },
     "0x539ae81a166e5e80aed211731563e549c411b140": {
@@ -64823,6 +64826,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102174863/thumb/usdx.png?1785235198",
       "assetGroup": "USDX::USDX::56::0",
       "currencyId": "USDX::USDX"
+    },
+    "0xcc1e29100a750a3e9165acc6ebff50595b5a7777": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PIG",
+      "address": "0xcc1e29100a750a3e9165acc6ebff50595b5a7777",
+      "symbol": "PIG",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174880/thumb/pig.jpg?1785313083",
+      "assetGroup": "PIG::PIG",
+      "currencyId": "PIG::PIG"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "56",

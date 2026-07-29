@@ -58,12 +58,37 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Staked USDai::sUSDai': { underlying: 'USDai', base: 'USD' },
   // --- TRON Savings USDD (sUSDD) ---
   'Savings Usdd::sUSDD': { underlying: 'USDD', base: 'USD' },
+  // --- Cap Staked USD (stcUSD, over cUSD) — case variant across chains ---
+  'Staked Cap USD::stcUSD': { underlying: 'cUSD', base: 'USD' },
+  'Staked cap USD::stcUSD': { underlying: 'cUSD', base: 'USD' },
+  // --- Staked YUSD (sYUSD) — NOT 'Synnax Stablecoin::SYUSD' (a different token) ---
+  'Staked YUSD::sYUSD': { underlying: 'YUSD', base: 'USD' },
+  // --- YieldFi vyUSD (vault yUSD) — NOT 'Vyro vyUSD' (different issuer) ---
+  'YieldFi vyUSD::VYUSD': { underlying: 'USDC', base: 'USD' },
+  'YieldFi vyUSD::vyUSD': { underlying: 'USDC', base: 'USD' },
+  // --- Staked UTY (yUTY) ---
+  'Staked UTY::YUTY': { underlying: 'UTY', base: 'USD' },
+  'Staked UTY::yUTY': { underlying: 'UTY', base: 'USD' },
+  // --- Surfaced via DeFiLlama yield-bearing-stablecoins cross-check (passive wrappers only;
+  // Midas mTBILL/mBASIS are RWA funds, and steakUSDC/YOUSD/USP are actively-managed → excluded) ---
+  'f(x) USD Saving::fxSAVE': { underlying: 'fxUSD', base: 'USD' },
+  SUSN: { underlying: 'USN', base: 'USD' },
+  'Staked USN::sUSN': { underlying: 'USN', base: 'USD' },
+  'Astherus Staked USDF::asUSDF': { underlying: 'USDF', base: 'USD' },
+  'Anzen Staked USDz::SUSDZ': { underlying: 'USDz', base: 'USD' },
+  'Anzen Staked USDz::sUSDz': { underlying: 'USDz', base: 'USD' },
+  'Staked USDz::sUSDz': { underlying: 'USDz', base: 'USD' },
+  'Staked Level USD::SLVLUSD': { underlying: 'lvlUSD', base: 'USD' },
+  'sUSD1+::sUSD1+': { underlying: 'USD1+', base: 'USD' },
+  'Strata Senior NUSD::srNUSD': { underlying: 'NUSD', base: 'USD' },
+  'YieldFi Stable Token::sUSD': { underlying: 'USDC', base: 'USD' },
   // --- Angle stUSD (over USDA) ---
   'Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
   'Bridged Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
   // --- Angle stEUR (over EURA — EUR-pegged; three assetGroup forms across chains) ---
   'Angle Staked EURA::stEUR': { underlying: 'EURA', base: 'EUR' },
   'Angle Staked EURA::STEUR': { underlying: 'EURA', base: 'EUR' },
+  'Staked EURA::stEUR': { underlying: 'EURA', base: 'EUR' },
   STEUR: { underlying: 'EURA', base: 'EUR' },
   // --- Maple syrup* — actively-managed credit pools (request-based redemption).
   // Included per request despite the managed-fund caveat; the underlying is the deposit ticker.

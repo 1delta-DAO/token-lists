@@ -14,6 +14,8 @@
     "onchain": "tsx onchain-fetch/fetch.ts",
     "format": "npx prettier .. -w --ignore-path .prettierignore",
     "generate": "tsx generateTokenMap.script.ts",
+    "generate:cached": "GEN_CACHE=1 tsx generateTokenMap.script.ts",
+    "regen": "GEN_CACHE=1 tsx generateTokenMap.script.ts && npm run format",
     "portal": "tsx portalTokens.script.ts",
     "generate:formatted": "npm run pendle && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run savings && npm run generate && npm run format"
   },
