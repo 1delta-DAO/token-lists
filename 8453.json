@@ -1820,7 +1820,7 @@
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
       "assetGroup": "PT TEST (TEST) Base::PT-TEST-30JUL2026",
       "currencyId": "PT TEST (TEST) Base::PT-TEST-30JUL2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x00c86452cd894e0aeaae7b81bce498ce3716c325": {
       "chainId": "8453",
@@ -1831,7 +1831,7 @@
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
       "assetGroup": "YT TEST (TEST) Base::YT-TEST-30JUL2026",
       "currencyId": "YT TEST (TEST) Base::YT-TEST-30JUL2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": { "pendle": { "tokenType": "YT", "expired": true } }
     },
     "0x5fdbc1502e1a3742110730272c61a208758317bc": {
       "chainId": "8453",
@@ -1860,7 +1860,8 @@
           "expiry": 1785369600,
           "underlyingAsset": "0x548d3b444da39686d1a6f1544781d154e7cd1ef7",
           "ytAddress": "0x45497c2063d9d87f840d1793424217caa9ba740e",
-          "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30"
+          "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
+          "expired": true
         }
       }
     },
@@ -1880,7 +1881,8 @@
           "expiry": 1785369600,
           "underlyingAsset": "0x548d3b444da39686d1a6f1544781d154e7cd1ef7",
           "ptAddress": "0x87244f834fc4f74266f6e1c247c7f0dfc8b21d81",
-          "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30"
+          "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
+          "expired": true
         }
       }
     },
@@ -14865,7 +14867,8 @@
       "symbol": "EUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/28445/thumb/0xa0d69e286b938e21cbf7e51d71f6a4c8918f482f.png?1696527441",
       "assetGroup": "Electronic USD::EUSD",
-      "currencyId": "Electronic USD::EUSD"
+      "currencyId": "Electronic USD::EUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x8888888888f004100c0353d657be6300587a6ccd": {
       "chainId": "8453",
@@ -42395,6 +42398,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102174823/thumb/cny.png?1785005999",
       "assetGroup": "Keeta CNY::KCNY",
       "currencyId": "Keeta CNY::KCNY"
+    },
+    "0xbbd27c575fb0e113219d610cc787b02eeff71d42": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Halo",
+      "address": "0xbbd27c575fb0e113219d610cc787b02eeff71d42",
+      "symbol": "HALO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174888/thumb/halo-token-mark-2048.png?1785372622",
+      "assetGroup": "Halo::HALO::8453::0",
+      "currencyId": "Halo::HALO"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",

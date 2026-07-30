@@ -5287,7 +5287,7 @@
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
       "assetGroup": "PT TEST (TEST) Arbitrum::PT-TEST-30JUL2026",
       "currencyId": "PT TEST (TEST) Arbitrum::PT-TEST-30JUL2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x7bbc8f43b2e66be7a6f37f1a8bdaf081fa0e1c4c": {
       "chainId": "42161",
@@ -5298,7 +5298,7 @@
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
       "assetGroup": "YT TEST (TEST) Arbitrum::YT-TEST-30JUL2026",
       "currencyId": "YT TEST (TEST) Arbitrum::YT-TEST-30JUL2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": { "pendle": { "tokenType": "YT", "expired": true } }
     },
     "0xbfe799a49add29573ded37f9a39672016ce82871": {
       "chainId": "42161",
@@ -13918,7 +13918,12 @@
       "currencyId": "Stables Labs USDX::USDX",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x7788a3538c5fc7f9c7c8a74eac4c898fc8d87d92": {
