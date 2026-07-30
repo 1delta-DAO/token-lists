@@ -30,6 +30,19 @@ function fiatBase(pegType?: string): string | undefined {
   return base && base !== 'VAR' ? base : undefined
 }
 
+/**
+ * Manual stablecoin overlays merged on top of the DeFiLlama feed — for pegged stablecoins the
+ * feed omits. Keyed by `assetGroup` (same shape as the generated map) and applied AFTER the feed
+ * so they can never be dropped on a refresh. Because the generator looks the overlay up on the
+ * PRE-alias group, list every pre-unification variant (cf. savingsAssets.ts wsrUSD case-split).
+ */
+const STABLECOIN_MANUAL: StablecoinGroupMap = {
+  // Reservoir rUSD — ERC-20 dollar-denominated stablecoin (1:1 vs USDC/USDT/USD1), also
+  // RWA-backed (reinsurance / real-world + digital assets). Not in the DeFiLlama feed.
+  'Reservoir rUSD::RUSD': { base: 'USD' },
+  'Reservoir Stablecoin::rUSD': { base: 'USD' },
+}
+
 function serialize(map: StablecoinGroupMap): string {
   const keys = Object.keys(map).sort()
   return JSON.stringify(
@@ -51,6 +64,9 @@ async function generateStablecoinMap() {
       const base = fiatBase(s.pegType)
       map[group] = base ? { base } : {}
     }
+
+    // Merge manual overlays last so they win and survive feed refreshes.
+    Object.assign(map, STABLECOIN_MANUAL)
 
     const withBase = Object.values(map).filter((v) => v.base).length
     fs.writeFileSync(path.resolve(__dirname, './stablecoin.json'), serialize(map))

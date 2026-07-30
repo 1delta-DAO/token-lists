@@ -32602,6 +32602,29 @@
         "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" }
       }
     },
+    "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Reservoir rUSD",
+      "address": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
+      "symbol": "RUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
+      "assetGroup": "Reservoir rUSD::RUSD",
+      "currencyId": "Reservoir rUSD::RUSD",
+      "props": {
+        "rwa": {
+          "type": "credit",
+          "subType": "reinsurance",
+          "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
     "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb": {
       "chainId": "1",
       "decimals": 18,
@@ -76705,7 +76728,12 @@
       "assetGroup": "Electronic USD::EUSD",
       "currencyId": "Electronic USD::EUSD",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x6d68015171eaa7af9a5a0a103664cf1e506ff699": {
@@ -77264,7 +77292,10 @@
       "logoURI": "https://etherscan.io/token/images/usdx_new_32.png",
       "assetGroup": "USDX",
       "currencyId": "Stables Labs USDX::USDX",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xa0385e7283c83e2871e9af49eec0966088421ddd": {
       "chainId": "1",
@@ -91742,23 +91773,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54116/thumb/ocnest_ai_200x200.png?1738311354",
       "assetGroup": "OcNest AI::OCAI",
       "currencyId": "OcNest AI::OCAI"
-    },
-    "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Reservoir rUSD",
-      "address": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
-      "symbol": "RUSD",
-      "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
-      "assetGroup": "Reservoir rUSD::RUSD",
-      "currencyId": "Reservoir rUSD::RUSD",
-      "props": {
-        "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
-          "source": "whitelist"
-        }
-      }
     },
     "0x738d1115b90efa71ae468f1287fc864775e23a31": {
       "chainId": "1",
@@ -141072,7 +141086,8 @@
       "symbol": "USDU",
       "logoURI": "https://assets.coingecko.com/coins/images/102173556/thumb/Watermark_200x200.png?1780160602",
       "assetGroup": "Universal USD::USDU",
-      "currencyId": "Universal USD::USDU"
+      "currencyId": "Universal USD::USDU",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xa7d12701385abb9814f220d2df705b9fe75bfdfa": {
       "chainId": "1",

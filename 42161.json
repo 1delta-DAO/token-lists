@@ -7783,6 +7783,24 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Reservoir rUSD",
+      "address": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
+      "symbol": "RUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
+      "assetGroup": "Reservoir rUSD::RUSD",
+      "currencyId": "Reservoir rUSD::RUSD",
+      "props": {
+        "rwa": {
+          "type": "credit",
+          "subType": "reinsurance",
+          "issuer": "reservoir"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
     "0x1debd73e752beaf79865fd6446b0c970eae7732f": {
       "chainId": "42161",
       "decimals": 18,
@@ -13918,7 +13936,12 @@
       "currencyId": "Stables Labs USDX::USDX",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x7788a3538c5fc7f9c7c8a74eac4c898fc8d87d92": {
@@ -28692,16 +28715,6 @@
       "assetGroup": "BOB::BOB",
       "currencyId": "BOB::BOB",
       "props": { "permit": { "type": 1, "version": "1" } }
-    },
-    "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
-      "chainId": "42161",
-      "decimals": 18,
-      "name": "Reservoir rUSD",
-      "address": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
-      "symbol": "RUSD",
-      "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
-      "assetGroup": "Reservoir rUSD::RUSD",
-      "currencyId": "Reservoir rUSD::RUSD"
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "42161",

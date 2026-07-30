@@ -6597,6 +6597,24 @@
         "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" }
       }
     },
+    "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Reservoir rUSD",
+      "address": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
+      "symbol": "RUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
+      "assetGroup": "Reservoir rUSD::RUSD",
+      "currencyId": "Reservoir rUSD::RUSD",
+      "props": {
+        "rwa": {
+          "type": "credit",
+          "subType": "reinsurance",
+          "issuer": "reservoir"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
     "0x52f24a5e03aee338da5fd9df68d2b6fae1178827": {
       "chainId": "56",
       "decimals": 18,
@@ -16548,7 +16566,12 @@
       "assetGroup": "USDX",
       "currencyId": "Stables Labs USDX::USDX",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x9356086146be5158e98ad827e21b5cf944699894": {
@@ -52212,16 +52235,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54811/thumb/SLAY-200x200.png?1754713489",
       "assetGroup": "SatLayer::SLAY",
       "currencyId": "SatLayer::SLAY"
-    },
-    "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "Reservoir rUSD",
-      "address": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
-      "symbol": "RUSD",
-      "logoURI": "https://assets.coingecko.com/coins/images/54117/thumb/rusd_bera2.png?1738311629",
-      "assetGroup": "Reservoir rUSD::RUSD",
-      "currencyId": "Reservoir rUSD::RUSD"
     },
     "0x825459139c897d769339f295e962396c4f9e4a4d": {
       "chainId": "56",

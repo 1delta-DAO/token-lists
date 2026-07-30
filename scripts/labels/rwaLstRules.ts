@@ -338,6 +338,16 @@ const RWA_RULES: Rule[] = [
     rwa: rwa('fund', 'private-credit', 'securitize'),
     test: has('securitize fund', 'apollo diversified credit', 'diversified credit securitize'),
   },
+  {
+    // Reservoir rUSD — USD stablecoin backed by a reinsurance / RWA portfolio.
+    // Matches ONLY the base rUSD (symbol RUSD + a Reservoir name); the savings wrappers
+    // srUSD/wsrUSD (symbols SRUSD/WSRUSD) stay savings, and the unrelated RUSD clones
+    // (f(x), Royal Dollar, Reya, Rose, generic "rUSD") lack the Reservoir name.
+    id: 'reservoir-rusd',
+    confidence: 'auto',
+    rwa: rwa('credit', 'reinsurance', 'reservoir'),
+    test: (n, s) => norm(s) === 'RUSD' && has('reservoir')(n),
+  },
 
   // --- Tokenized gold / commodities ---
   {

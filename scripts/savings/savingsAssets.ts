@@ -36,7 +36,10 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'sDOLA::SDOLA': { underlying: 'DOLA', base: 'USD' },
   // --- Ethena sUSDe (7d cooldown; canonical savings wrapper) ---
   SUSDE: { underlying: 'USDe', base: 'USD' },
-  // --- Reservoir — savings rUSD (srUSD, rebasing) + wrapped (wsrUSD) ---
+  // --- Reservoir — both minted from rUSD, both NON-rebasing (price appreciates in rUSD), both
+  // omnichain via LayerZero OFT. srUSD accrues daily (micro burn fee on redeem); wsrUSD accrues
+  // per-block (no fee) — distinct exchange rates, so they stay separate groups (NOT unified like
+  // wrsETH→RSETH, since srUSD bridges itself and wsrUSD is a separate wrapper, not srUSD's OFT). ---
   'Reservoir srUSD::SRUSD': { underlying: 'rUSD', base: 'USD' },
   'Wrapped Savings rUSD::WSRUSD': { underlying: 'rUSD', base: 'USD' },
   'Wrapped Savings rUSD::wsrUSD': { underlying: 'rUSD', base: 'USD' },

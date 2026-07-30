@@ -15,6 +15,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x06a0138f8c3e5110fd98e34a4473fb08f1304b87': { type: 'fund', subType: 'etf', issuer: 'backed' },
     '0x070d79021dd7e841123cb0cf554993bf683c511d': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
     '0x08d777b6a82c8dee715848702f72dad4c2504687': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x0b59fdb1a233a7477ea14061004b9dd776e73cb3': { type: 'equity', subType: 'stock', issuer: 'ondo' },
     '0x0ebe5fad0998765187fc695b75d4115c27c953a1': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x0f76d32cdccdcbd602a55af23eaf58fd1ee17245': { type: 'credit', subType: 'treasury', issuer: 'backed' },
@@ -325,6 +326,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x08a513779f46ffb7a34f16094a94016d010128a8': { type: 'equity', subType: 'stock', issuer: 'ondo' },
     '0x08ce97f3d5cf11e577d091ab048bc5e2eae3fabb': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
     '0x091fc7778e6932d4009b087b191d1ee3bac5729a': { type: 'equity', subType: 'stock', issuer: 'ondo' },
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x0bb3fa77e0809f42948e435f04883c25415e8263': { type: 'fund', subType: 'etf', issuer: 'ondo' },
     '0x0ca5d51d0277bd006fd9607d3e560785ebad8222': { type: 'equity', subType: 'stock', issuer: 'ondo' },
     '0x0d4f9b25f81163fb4840ba4f434672543823000c': { type: 'equity', subType: 'stock', issuer: 'ondo' },
@@ -655,6 +657,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0xebee37aaf2905b7bda7e3b928043862e982e8f32': { type: 'equity', subType: 'stock', issuer: 'backed' },
   },
   '130': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x89f7c0870794103744c8042630cc1c846a858e57': {
       type: 'commodity',
       subType: 'gold',
@@ -712,6 +715,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'tether',
       underlying: 'XAU',
     },
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x2fabf1c784b8583d63c00c5c9c0377d8cf1a3245': { type: 'fund', subType: 'private-credit', issuer: 'securitize' },
     '0x5a0f93d040de44e78f251b03c43be9cf317dcf64': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
     '0x5f8a1c74c112865bd05dbe4752c7608332719062': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
@@ -723,6 +727,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0xc18e6f730896971a79d748e8dea61067a9bc6040': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
   },
   '146': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x1e2c4fb7ede391d116e6b41cd0608260e8801d59': { type: 'fund', subType: 'etf', issuer: 'backed' },
   },
   '369': {
@@ -758,6 +763,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x81db0df77669b3be563e7a0591685a2c8c3ee1c5': { type: 'equity', subType: 'stock', issuer: 'ondo' },
     '0x81ebb420a81855f1bf1b0ff95eca9d3bd736ea89': { type: 'fund', subType: 'etf', issuer: 'ondo' },
     '0x83b01ac9e2d1632a70dd1c813c5b8edf29cd707f': { type: 'equity', subType: 'stock', issuer: 'ondo' },
+    '0x866d66f64fb81461903e1e38d998e747ecf35e78': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x8a64fdf0857c1c734a594cd1db20b3f8e3f133f6': { type: 'equity', subType: 'stock', issuer: 'ondo' },
     '0xad26b6048cc3682f67fe4c829b7ac99dbf95920e': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
     '0xb989ad9b91886b1aaed8daadb26f028b29b40945': { type: 'equity', subType: 'stock', issuer: 'ondo' },
@@ -780,9 +786,11 @@ export const RWA_GENERATED: RwaRegistry = {
     },
   },
   '1329': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x54cd901491aef397084453f4372b93c33260e2a6': { type: 'fund', subType: 'treasury', issuer: 'ondo' },
   },
   '1672': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0xc18e6f730896971a79d748e8dea61067a9bc6040': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
   },
   '4663': {
@@ -826,6 +834,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0xfbf2398df672cee4afcc2a4a733222331c742a6a': { type: 'equity', subType: 'stock', issuer: 'backed' },
   },
   '8453': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x0f76d32cdccdcbd602a55af23eaf58fd1ee17245': { type: 'credit', subType: 'treasury', issuer: 'backed' },
     '0x14a5f2872396802c3cc8942a39ab3e4118ee5038': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x19f89aaef8a93f38a974beca9776f09ab844887f': { type: 'equity', subType: 'stock', issuer: 'ondo' },
@@ -868,6 +877,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x03183ce31b1656b72a55fa6056e287f50c35bbeb': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x053c784cd87b74f42e0c089f98643e79c1a3ff16': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x0588e851ec0418d660bee81230d6c678daf21d46': { type: 'equity', subType: 'stock', issuer: 'backed' },
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x0afc19943fa98e9e9e90fc4ab4d4d3c13e162232': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x0d6fce45796d5c00689c0916b976645a0ff1f0ce': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x0f76d32cdccdcbd602a55af23eaf58fd1ee17245': { type: 'credit', subType: 'treasury', issuer: 'backed' },
@@ -1060,6 +1070,7 @@ export const RWA_GENERATED: RwaRegistry = {
     },
   },
   '43114': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x0f76d32cdccdcbd602a55af23eaf58fd1ee17245': { type: 'credit', subType: 'treasury', issuer: 'backed' },
     '0x14a5f2872396802c3cc8942a39ab3e4118ee5038': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x1e2c4fb7ede391d116e6b41cd0608260e8801d59': { type: 'fund', subType: 'etf', issuer: 'backed' },
@@ -1109,7 +1120,11 @@ export const RWA_GENERATED: RwaRegistry = {
       underlying: 'XAU',
     },
   },
+  '80094': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
+  },
   '98866': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x0c78ca789e826fe339de61934896f5d170b66d78': { type: 'fund', subType: 'treasury', issuer: 'midas' },
     '0x4c21b7577c8fe8b0b0669165ee7c8f67fa1454cf': { type: 'fund', subType: 'treasury', issuer: 'superstate' },
     '0x63810d7f1c7b4dbfb60c173ba120a2be98b59e13': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
@@ -1123,5 +1138,8 @@ export const RWA_GENERATED: RwaRegistry = {
     '0xa5d465251fbcc907f5dd6bb2145488dfc6a2627b': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
     '0xe4fa682f94610ccd170680cc3b045d77d9e528a8': { type: 'fund', subType: 'treasury', issuer: 'superstate' },
     '0xe85f2b707ec5ae8e07238f99562264f304e30109': { type: 'fund', subType: 'treasury', issuer: 'midas' },
+  },
+  '747474': {
+    '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
   },
 }

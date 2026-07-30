@@ -141,6 +141,14 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Bridged wstETH::wstETH': 'WSTETH',
   'Wrapped Liquid Staked ETH::wstETH': 'WSTETH',
   'Wrapped liquid staked Ether 2.0::wstETH': 'WSTETH',
+  // Reservoir rUSD — reinsurance-backed USD stablecoin (RWA). Unify its split deployments
+  // (canonical multichain OFT + the "Reservoir Stablecoin"-named variant) into one group.
+  // NOTE: the generic "rUSD::rUSD" clones (f(x) on Polygon, another on BNB) are DIFFERENT
+  // tokens and are intentionally left out.
+  'Reservoir Stablecoin::rUSD': 'Reservoir rUSD::RUSD',
+  // Reservoir wsrUSD (wrapped savings rUSD) — merge the lowercase-symbol case-split so every
+  // deployment matches the margin-fetcher yield key `Wrapped Savings rUSD::WSRUSD`.
+  'Wrapped Savings rUSD::wsrUSD': 'Wrapped Savings rUSD::WSRUSD',
   // Solv xSolvBTC
   'Solv Protocol Staked BTC::XSOLVBTC': 'XSOLVBTC',
   // TapiocaBar wrapped BTC (previously a dead entry in GROUP_TO_GROUP_MAPPER)
