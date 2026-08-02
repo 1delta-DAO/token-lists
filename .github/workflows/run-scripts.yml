@@ -73,7 +73,10 @@ jobs:
 
           if [[ -n "$(git status --porcelain)" ]]; then
             git checkout -b "$BRANCH_NAME"
-            git add -A
+            # Stage only the generated outputs — root chain JSONs + the scripts tree
+            # (recursively). Deliberately scoped so the nested `risk-data-src/` checkout
+            # (a separate repo in the workspace) is never staged as a gitlink.
+            git add *.json scripts || true
 
             if [[ -n "$(git diff --cached --name-only)" ]]; then
               git commit -m "chore: auto-generate token maps [skip ci]"
