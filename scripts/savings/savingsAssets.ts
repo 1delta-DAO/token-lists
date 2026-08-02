@@ -27,9 +27,22 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Savings USDS::sUSDS': { underlying: 'USDS', base: 'USD' },
   'Savings USDS from Ethereum::sUSDS': { underlying: 'USDS', base: 'USD' },
   'Staked USDS::stUSDS': { underlying: 'USDS', base: 'USD' },
-  // --- Spark savings vault ---
+  // --- Spark Savings V1 — sUSDC (PSM3 wrapper; a share IS an sUSDS, so the rate is the Sky
+  // Savings Rate verbatim). "Spark USDC::SUSDC" is aliased to the Vault form in
+  // `assetGroupUnifier.ts`; kept here so the overlay still resolves if that alias is ever
+  // dropped. ---
   'Spark USDC Vault::sUSDC': { underlying: 'USDC', base: 'USD' },
   'Spark USDC::SUSDC': { underlying: 'USDC', base: 'USD' },
+  // --- Spark Vaults V2 — `sp*`, a different product from sUSDC above: its own chi/rho/vsr
+  // accumulator rather than a PSM3 wrapper. Still a passive savings wrapper from the holder's
+  // side (deposit X → accrue an administered `vsr` → redeem X), so it belongs here; the fact
+  // that Spark lends the deposits out through the Liquidity Layer is a credit risk, not an
+  // active-management one on the depositor's position. ---
+  // spETH is deliberately absent: this allowlist is for stablecoin wrappers and `base` is a
+  // FIAT peg, which a WETH-underlying vault has none of. It is still a first-class savings
+  // vault in margin-fetcher's SAVINGS_REGISTRY — the two lists answer different questions.
+  'Spark Savings USDC::SPUSDC': { underlying: 'USDC', base: 'USD' },
+  'Spark Savings USDT::SPUSDT': { underlying: 'USDT', base: 'USD' },
   // --- Frax staked frxUSD ---
   'Staked Frax USD::sfrxUSD': { underlying: 'frxUSD', base: 'USD' },
   // --- Inverse Finance sDOLA ---

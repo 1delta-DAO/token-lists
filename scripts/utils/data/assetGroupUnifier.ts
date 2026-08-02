@@ -149,6 +149,16 @@ export const GROUP_ALIAS: Record<string, string> = {
   // Reservoir wsrUSD (wrapped savings rUSD) — merge the lowercase-symbol case-split so every
   // deployment matches the margin-fetcher yield key `Wrapped Savings rUSD::WSRUSD`.
   'Wrapped Savings rUSD::wsrUSD': 'Wrapped Savings rUSD::WSRUSD',
+  // Spark Savings V1 sUSDC — one asset, five deployments, split in two by a stale name on the
+  // Ethereum row. On-chain `name()` reads "Spark USDC Vault" on BOTH Ethereum
+  // (0xBc65ad17…) and the L2s (0xCF9326e2… / 0x940098b1… / 0x14d9143B…), so the "Spark USDC"
+  // variant is the odd one out and the Vault form is canonical. Merging matters beyond
+  // cosmetics: every deployment shares ONE share price (a sUSDC share IS an sUSDS, priced
+  // through PSM3 off the Sky Savings Rate), so a split group makes the same asset look like
+  // two, and the margin-fetcher yield key `Spark USDC Vault::sUSDC` only resolves for one of
+  // them. NOTE: "Wrapped sUSDC::sUSDC" (0xd7bc0dcb…) and "SUSDC::SUSDC" on Ink are DIFFERENT
+  // assets and are deliberately left alone.
+  'Spark USDC::SUSDC': 'Spark USDC Vault::sUSDC',
   // Solv xSolvBTC
   'Solv Protocol Staked BTC::XSOLVBTC': 'XSOLVBTC',
   // TapiocaBar wrapped BTC (previously a dead entry in GROUP_TO_GROUP_MAPPER)
