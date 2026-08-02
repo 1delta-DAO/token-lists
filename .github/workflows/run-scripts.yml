@@ -15,16 +15,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        # Use the built-in GITHUB_TOKEN for checkout + push (it always
+        # authenticates for this repo; the `permissions` block grants contents:write).
+        # GH_PAT is still needed for two things the built-in token can't do:
+        # the private risk-data checkout below (cross-repo), and PR creation (the
+        # org disables "Actions can create PRs").
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          token: ${{ secrets.GH_PAT }}
           ref: main
+          token: ${{ github.token }}
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
           cache: "npm"
           cache-dependency-path: "scripts/package-lock.json"
 
@@ -37,7 +42,7 @@ jobs:
       # those steps fall back to the GitHub API and then to the last committed snapshots.
       - name: Checkout risk-data
         continue-on-error: true
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: 1delta-DAO/risk-data
           token: ${{ secrets.GH_PAT }}
@@ -68,7 +73,7 @@ jobs:
 
           if [[ -n "$(git status --porcelain)" ]]; then
             git checkout -b "$BRANCH_NAME"
-            git add *.json scripts/** || true
+            git add -A
 
             if [[ -n "$(git diff --cached --name-only)" ]]; then
               git commit -m "chore: auto-generate token maps [skip ci]"
@@ -86,6 +91,9 @@ jobs:
 
       - name: Create Pull Request
         if: steps.commit.outputs.has_changes == 'true'
+        # Must use GH_PAT: the org disables "Actions can create PRs", so the
+        # built-in GITHUB_TOKEN is rejected by createPullRequest. A PAT acts as a
+        # user and is exempt. GH_PAT needs Pull requests → write on this repo.
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
           BRANCH_NAME: ${{ env.BRANCH_NAME }}
