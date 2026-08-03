@@ -45,6 +45,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Spark Savings USDT::SPUSDT': { underlying: 'USDT', base: 'USD' },
   // --- Frax staked frxUSD ---
   'Staked Frax USD::sfrxUSD': { underlying: 'frxUSD', base: 'USD' },
+  // --- OpenEden cUSDO — permissionless 4626 over rebasing USDO (T-bill yieldcoin);
+  // casing/spacing variants aliased to the canonical group in assetGroupUnifier, all
+  // listed here Sky-style so the overlay resolves either way. ---
+  'Compounding Open Dollar::CUSDO': { underlying: 'USDO', base: 'USD' },
+  'Compounding Open Dollar::cUSDO': { underlying: 'USDO', base: 'USD' },
+  'Compounding OpenDollar::CUSDO': { underlying: 'USDO', base: 'USD' },
   // --- Inverse Finance sDOLA ---
   'sDOLA::SDOLA': { underlying: 'DOLA', base: 'USD' },
   // --- Ethena sUSDe (7d cooldown; canonical savings wrapper) ---

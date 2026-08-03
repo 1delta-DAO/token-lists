@@ -270,6 +270,20 @@ export const GROUP_ALIAS: Record<string, string> = {
   'iShares Silver Trust Ondo Tokenized::SLVON': 'iShares Silver Trust (Ondo Tokenized Stock)::SLVON',
   'iShares TIPS Bond ETF Ondo Tokenized E::TIPON': 'iShares TIPS Bond ETF (Ondo Tokenized ETF)::TIPON',
 
+  // --- RWA fund cross-chain unification (2026-08). Same chain-1 name-truncation
+  // defect as the Ondo block above (BUIDL), an issuer rename (USYC: Hashnote →
+  // Circle; canonical follows the current issuer + the $2.9B BSC deployment),
+  // a naming split (USCC) and casing/spacing splits (cUSDO). Impostors are NOT
+  // aliased: `Re al US T Bill::USTB`, `BUIDL 404::BUIDL`, `dfohub::buidl`,
+  // `Benji Bean::BENJI`, `cUSDO Ethereum::cUSDO` (unverified), Base
+  // `US Yield Coin::USYC` (unverified).
+  'BlackRock USD Institutional Digital Liq::BUIDL':
+    'BlackRock USD Institutional Digital Liquidity Fund::BUIDL',
+  'Hashnote USYC::USYC': 'Circle USYC::USYC',
+  'Superstate Crypto Carry Fund::USCC': 'Superstate USCC::USCC',
+  'Compounding Open Dollar::cUSDO': 'Compounding Open Dollar::CUSDO',
+  'Compounding OpenDollar::CUSDO': 'Compounding Open Dollar::CUSDO',
+
   // --- Distinct-asset unifications: a DIFFERENT asset that shares a ticker with a canonical
   // one, whose own variants are merged together WITHOUT touching the canonical group. ---
   // StaFi rETH — NOT Rocket Pool RETH; unify StaFi's variants into their own StaFi::rETH group.
