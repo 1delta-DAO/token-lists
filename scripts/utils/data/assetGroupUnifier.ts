@@ -284,6 +284,16 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Compounding Open Dollar::cUSDO': 'Compounding Open Dollar::CUSDO',
   'Compounding OpenDollar::CUSDO': 'Compounding Open Dollar::CUSDO',
 
+  // --- Midas LYT cross-chain unification (2026-08). Casing/name splits of the
+  // canonical chain-1 groups, incl. Plasma's REVERSED `symbol::name` row for
+  // mHYPER. Canonical = the chain-1 form the midas fetcher keys against.
+  'Midas mBASIS::mBASIS': 'Midas mBASIS::MBASIS',
+  'Midas mEDGE::mEDGE': 'Midas mEDGE::MEDGE',
+  'Midas BTC Yield Token::mBTC': 'Midas mBTC::MBTC',
+  'mHYPER::Midas Hyperithm': 'Midas Hyperithm::mHYPER',
+  'Midas Hyperithm BTC::MHYPERBTC': 'Midas Hyperithm BTC::mHyperBTC',
+  'Midas Re7 Yield::mRe7YIELD': 'Midas mRe7YIELD::MRE7YIELD',
+
   // --- Distinct-asset unifications: a DIFFERENT asset that shares a ticker with a canonical
   // one, whose own variants are merged together WITHOUT touching the canonical group. ---
   // StaFi rETH — NOT Rocket Pool RETH; unify StaFi's variants into their own StaFi::rETH group.
