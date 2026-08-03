@@ -45,6 +45,10 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Spark Savings USDT::SPUSDT': { underlying: 'USDT', base: 'USD' },
   // --- Frax staked frxUSD ---
   'Staked Frax USD::sfrxUSD': { underlying: 'frxUSD', base: 'USD' },
+  // --- Parallel sUSDp — Angle-lineage Savings.sol over USDp (V3, keeper-set rate; passive
+  // from the holder's side, same administered-rate reasoning as Spark V2 above). Group is
+  // consistent on all five chains (1/146/999/8453/43114). ---
+  'Staked USDp::sUSDp': { underlying: 'USDp', base: 'USD' },
   // --- Inverse Finance sDOLA ---
   'sDOLA::SDOLA': { underlying: 'DOLA', base: 'USD' },
   // --- Ethena sUSDe (7d cooldown; canonical savings wrapper) ---
