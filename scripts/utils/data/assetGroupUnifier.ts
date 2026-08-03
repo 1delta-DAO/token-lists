@@ -293,6 +293,11 @@ export const GROUP_ALIAS: Record<string, string> = {
   'mHYPER::Midas Hyperithm': 'Midas Hyperithm::mHYPER',
   'Midas Hyperithm BTC::MHYPERBTC': 'Midas Hyperithm BTC::mHyperBTC',
   'Midas Re7 Yield::mRe7YIELD': 'Midas mRe7YIELD::MRE7YIELD',
+  // OpenEden USDO spacing split (56/8453 vs the chain-1 form). NB the Avalanche
+  // `MEV BTC::mevBTC` (0x1f8e769b…) is NOT aliased to Midas mevBTC — issuer
+  // unverifiable (Midas API is Cloudflare-walled); same rule as the other
+  // unverified rows.
+  'OpenEden OpenDollar::USDO': 'OpenEden Open Dollar::USDO',
 
   // --- Distinct-asset unifications: a DIFFERENT asset that shares a ticker with a canonical
   // one, whose own variants are merged together WITHOUT touching the canonical group. ---
