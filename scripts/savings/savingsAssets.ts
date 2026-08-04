@@ -106,6 +106,10 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // --- Neutrl sNUSD (over NUSD) — canonical + the pre-alias reversed stored form ---
   'Staked NUSD::sNUSD': { underlying: 'NUSD', base: 'USD' },
   'sNUSD::Staked NUSD': { underlying: 'NUSD', base: 'USD' },
+  // --- Apyx apyUSD (over apxUSD; STRC preferred-stock dividend yield) — canonical + the
+  // pre-alias chain-1 case-split ---
+  'apyUSD::APYUSD': { underlying: 'apxUSD', base: 'USD' },
+  'apyUSD::apyUSD': { underlying: 'apxUSD', base: 'USD' },
   // --- 3Jane USD3 (senior tranche over USDC) + sUSD3 (junior, over USD3) ---
   // Canonical qualified groups + the pre-alias bare stored forms. NB the bare
   // keys are 3Jane-specific: the unrelated USD3 tickers (Stable.com, Reserve)

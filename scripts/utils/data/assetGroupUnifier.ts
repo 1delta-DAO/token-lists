@@ -149,6 +149,10 @@ export const GROUP_ALIAS: Record<string, string> = {
   // Neutrl sNUSD — Ethereum + Plasma rows store the reversed symbol::name form (the mHYPER
   // shape); canonical matches the currencyId `Staked NUSD::sNUSD`.
   'sNUSD::Staked NUSD': 'Staked NUSD::sNUSD',
+  // Apyx apyUSD — the chain-1 row (Morpho-list ingest) is a lowercase-symbol case-split of
+  // the Base/BNB CoinGecko form; unify on the majority casing. apxUSD is already consistent
+  // (`apxUSD::APXUSD`) on all three chains.
+  'apyUSD::apyUSD': 'apyUSD::APYUSD',
   // 3Jane USD3 / sUSD3 — the credit-tranche pair (senior / junior first-loss) behind the
   // savings vaults in lending-sdks. The Morpho-list ingest stores the bare on-chain names
   // ("USD3", "sUSD3"), and TWO unrelated Ethereum tokens also carry the USD3 ticker

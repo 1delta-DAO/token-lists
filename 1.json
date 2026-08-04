@@ -137091,7 +137091,15 @@
       "symbol": "APXUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102172243/thumb/apxUSD.png?1772448502",
       "assetGroup": "apxUSD::APXUSD",
-      "currencyId": "apxUSD::APXUSD"
+      "currencyId": "apxUSD::APXUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "STABLECOIN",
+          "source": "whitelist"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x9f4acbb0617b4f2c6b92806b92348955c9a55a58": {
       "chainId": "1",
@@ -137140,8 +137148,16 @@
       "address": "0x38eeb52f0771140d10c4e9a9a72349a329fe8a6a",
       "symbol": "apyUSD",
       "logoURI": "https://cdn.morpho.org/assets/logos/apyusd.svg",
-      "assetGroup": "apyUSD::apyUSD",
-      "currencyId": "apyUSD::apyUSD"
+      "assetGroup": "apyUSD::APYUSD",
+      "currencyId": "apyUSD::apyUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
+        "savings": { "underlying": "apxUSD", "base": "USD" }
+      }
     },
     "0xcc5c22c7a6bcc25e66726aef011dde74289ed203": {
       "chainId": "1",
