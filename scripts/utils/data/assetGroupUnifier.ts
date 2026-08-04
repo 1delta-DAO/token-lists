@@ -149,6 +149,14 @@ export const GROUP_ALIAS: Record<string, string> = {
   // Neutrl sNUSD — Ethereum + Plasma rows store the reversed symbol::name form (the mHYPER
   // shape); canonical matches the currencyId `Staked NUSD::sNUSD`.
   'sNUSD::Staked NUSD': 'Staked NUSD::sNUSD',
+  // 3Jane USD3 / sUSD3 — the credit-tranche pair (senior / junior first-loss) behind the
+  // savings vaults in lending-sdks. The Morpho-list ingest stores the bare on-chain names
+  // ("USD3", "sUSD3"), and TWO unrelated Ethereum tokens also carry the USD3 ticker
+  // (Stable.com `Stable com USD3::USD3`, Reserve's `Web 3 Dollar::USD3`) — those are
+  // DIFFERENT assets with qualified groups already; qualify 3Jane's under the issuer.
+  // sUSD3's underlying is USD3 itself (ERC-4626 over the senior tranche).
+  'USD3::USD3': '3Jane USD3::USD3',
+  'sUSD3::sUSD3': '3Jane Staked USD3::sUSD3',
   // Reservoir rUSD — reinsurance-backed USD stablecoin (RWA). Unify its split deployments
   // (canonical multichain OFT + the "Reservoir Stablecoin"-named variant) into one group.
   // NOTE: the generic "rUSD::rUSD" clones (f(x) on Polygon, another on BNB) are DIFFERENT
@@ -285,8 +293,7 @@ export const GROUP_ALIAS: Record<string, string> = {
   // aliased: `Re al US T Bill::USTB`, `BUIDL 404::BUIDL`, `dfohub::buidl`,
   // `Benji Bean::BENJI`, `cUSDO Ethereum::cUSDO` (unverified), Base
   // `US Yield Coin::USYC` (unverified).
-  'BlackRock USD Institutional Digital Liq::BUIDL':
-    'BlackRock USD Institutional Digital Liquidity Fund::BUIDL',
+  'BlackRock USD Institutional Digital Liq::BUIDL': 'BlackRock USD Institutional Digital Liquidity Fund::BUIDL',
   'Hashnote USYC::USYC': 'Circle USYC::USYC',
   'Superstate Crypto Carry Fund::USCC': 'Superstate USCC::USCC',
   'Compounding Open Dollar::cUSDO': 'Compounding Open Dollar::CUSDO',
