@@ -277,8 +277,7 @@ export const GROUP_ALIAS: Record<string, string> = {
   // aliased: `Re al US T Bill::USTB`, `BUIDL 404::BUIDL`, `dfohub::buidl`,
   // `Benji Bean::BENJI`, `cUSDO Ethereum::cUSDO` (unverified), Base
   // `US Yield Coin::USYC` (unverified).
-  'BlackRock USD Institutional Digital Liq::BUIDL':
-    'BlackRock USD Institutional Digital Liquidity Fund::BUIDL',
+  'BlackRock USD Institutional Digital Liq::BUIDL': 'BlackRock USD Institutional Digital Liquidity Fund::BUIDL',
   'Hashnote USYC::USYC': 'Circle USYC::USYC',
   'Superstate Crypto Carry Fund::USCC': 'Superstate USCC::USCC',
   'Compounding Open Dollar::cUSDO': 'Compounding Open Dollar::CUSDO',
