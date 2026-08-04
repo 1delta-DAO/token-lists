@@ -141,6 +141,14 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Bridged wstETH::wstETH': 'WSTETH',
   'Wrapped Liquid Staked ETH::wstETH': 'WSTETH',
   'Wrapped liquid staked Ether 2.0::wstETH': 'WSTETH',
+  // Neutrl NUSD — the chain-1 row was ingested under the bare CoinGecko ticker ("NUSD::NUSD")
+  // while Plasma/Arbitrum carry the on-chain `name()` = "Neutrl USD"; the qualified form is
+  // canonical. NOTE: other NUSD-ticker tokens (Neutrino USD, etc.) are DIFFERENT assets —
+  // never bare-alias NUSD.
+  'NUSD::NUSD': 'Neutrl USD::NUSD',
+  // Neutrl sNUSD — Ethereum + Plasma rows store the reversed symbol::name form (the mHYPER
+  // shape); canonical matches the currencyId `Staked NUSD::sNUSD`.
+  'sNUSD::Staked NUSD': 'Staked NUSD::sNUSD',
   // Reservoir rUSD — reinsurance-backed USD stablecoin (RWA). Unify its split deployments
   // (canonical multichain OFT + the "Reservoir Stablecoin"-named variant) into one group.
   // NOTE: the generic "rUSD::rUSD" clones (f(x) on Polygon, another on BNB) are DIFFERENT
@@ -305,6 +313,12 @@ export const GROUP_ALIAS: Record<string, string> = {
   'StaFi Staked ETH::RETH': 'StaFi::rETH',
   'StaFi Staked ETH::rETH': 'StaFi::rETH',
   'StaFi (PoS)::rETH': 'StaFi::rETH',
+  // USDD 2.0 — the live Maker-fork stablecoin (docs.usdd.io), native-minted on Ethereum
+  // (0x4f8e5de4…) and BNB (0x45e51bc2…) and the asset under sUSDD. Its on-chain name DIFFERS
+  // per chain ("Usdd Stablecoin" on 1, "Decentralized USD" on 56), and the legacy v1 token
+  // holds `USDD::USDD` on both chains, so the Ethereum 2.0 deployment gets same-chain-deduped
+  // to the suffixed group. Unify 2.0 under the BNB-derived group; v1 keeps `USDD::USDD`.
+  'USDD::USDD::1::0': 'Decentralized USD::USDD',
 }
 
 export function aliasAssetGroup(gr: string) {

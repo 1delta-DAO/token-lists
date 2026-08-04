@@ -103,6 +103,9 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Staked Level USD::SLVLUSD': { underlying: 'lvlUSD', base: 'USD' },
   'sUSD1+::sUSD1+': { underlying: 'USD1+', base: 'USD' },
   'Strata Senior NUSD::srNUSD': { underlying: 'NUSD', base: 'USD' },
+  // --- Neutrl sNUSD (over NUSD) — canonical + the pre-alias reversed stored form ---
+  'Staked NUSD::sNUSD': { underlying: 'NUSD', base: 'USD' },
+  'sNUSD::Staked NUSD': { underlying: 'NUSD', base: 'USD' },
   'YieldFi Stable Token::sUSD': { underlying: 'USDC', base: 'USD' },
   // --- Angle stUSD (over USDA) ---
   'Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
