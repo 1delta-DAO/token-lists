@@ -102,7 +102,6 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Staked USDz::sUSDz': { underlying: 'USDz', base: 'USD' },
   'Staked Level USD::SLVLUSD': { underlying: 'lvlUSD', base: 'USD' },
   'sUSD1+::sUSD1+': { underlying: 'USD1+', base: 'USD' },
-  'Strata Senior NUSD::srNUSD': { underlying: 'NUSD', base: 'USD' },
   // --- Neutrl sNUSD (over NUSD) — canonical + the pre-alias reversed stored form ---
   'Staked NUSD::sNUSD': { underlying: 'NUSD', base: 'USD' },
   'sNUSD::Staked NUSD': { underlying: 'NUSD', base: 'USD' },
@@ -118,6 +117,40 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'USD3::USD3': { underlying: 'USDC', base: 'USD' },
   '3Jane Staked USD3::sUSD3': { underlying: 'USD3', base: 'USD' },
   'sUSD3::sUSD3': { underlying: 'USD3', base: 'USD' },
+  // --- Strata (docs.strata.markets) — risk-tranched CDOs over yield-bearing
+  // dollars, 5 listed markets × senior/junior. `underlying` is the tranche's
+  // ERC-4626 `asset()` (what you deposit), NOT the market's staked collateral:
+  // the mHYPER / mM1-USD markets account in USDC while holding mHYPER / mM1.
+  // Casing is per-token inconsistent in the stored list (SRUSDE vs srNUSD vs
+  // jrUSDe) and no GROUP_ALIAS normalises it, so each group is keyed verbatim
+  // — verified against the live chain-1 list 2026-08-04.
+  //
+  // The juniors are included deliberately, following the 3Jane sUSD3
+  // precedent above: this flag classifies the *shape* (a passive 4626 wrapper
+  // over a stable underlying), while risk lives in `props.risk`. Do NOT read
+  // `savings` as "principal-stable" — a junior tranche is first-loss capital
+  // and jrUSDat is the live proof, marked to ~0.36 absorbing the 2026-07 USDat
+  // depeg while its senior held par.
+  'Strata Senior USDe::SRUSDE': { underlying: 'USDe', base: 'USD' },
+  'Strata Junior USDe::jrUSDe': { underlying: 'USDe', base: 'USD' },
+  'Strata Senior NUSD::srNUSD': { underlying: 'NUSD', base: 'USD' },
+  'Strata Junior NUSD::JRNUSD': { underlying: 'NUSD', base: 'USD' },
+  'Strata Senior mHYPER::srmHYPER': { underlying: 'USDC', base: 'USD' },
+  'Strata Junior mHYPER::JRMHYPER': { underlying: 'USDC', base: 'USD' },
+  'Strata Senior mM1-USD::SRMM1-USD': { underlying: 'USDC', base: 'USD' },
+  'Strata Junior mM1-USD::JRMM1-USD': { underlying: 'USDC', base: 'USD' },
+  'Strata Senior USDat::SRUSDAT': { underlying: 'USDat', base: 'USD' },
+  'Strata Junior USDat::JRUSDAT': { underlying: 'USDat', base: 'USD' },
+  // srPRIME / jrPRIME (the Hastra PRIME market) are absent from the token
+  // list entirely, so keys for them would be inert — and PRIME itself is the
+  // flagged/whitelist-gated entry at the bottom of this file. Add both
+  // together if that call changes:
+  // 'Strata Senior PRIME::srPRIME': { underlying: 'USDC', base: 'USD' },
+  // 'Strata Junior PRIME::jrPRIME': { underlying: 'USDC', base: 'USD' },
+  // --- Tori strUSD — StakedUSDeV2 clone over trUSD, Tori's delta-neutral
+  // synthetic dollar. Missed when the vault shipped; trUSD itself is already
+  // in the stablecoin feed ('Tori trUSD::TRUSD'). ---
+  'Tori Staked trUSD::STRUSD': { underlying: 'trUSD', base: 'USD' },
   'YieldFi Stable Token::sUSD': { underlying: 'USDC', base: 'USD' },
   // --- Angle stUSD (over USDA) ---
   'Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
