@@ -53,27 +53,6 @@
         }
       }
     },
-    "0xe24a28fe8ecd859db4280d1291783a10017d6fc4": {
-      "chainId": "143",
-      "decimals": 6,
-      "name": "earnAUSD Monad",
-      "address": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4",
-      "symbol": "SY-earnAUSD",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/79d66825-3644-42d0-85d9-ab509c35f248.svg",
-      "assetGroup": "earnAUSD Monad::SY-earnAUSD",
-      "currencyId": "earnAUSD Monad::SY-earnAUSD",
-      "props": {
-        "pendle": {
-          "tokenType": "SY",
-          "marketAddress": "0x475b98c83aedbfdd0a0abaa930ec8cb501ac93b1",
-          "expiry": 1791417600,
-          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
-          "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
-          "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b"
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
       "chainId": "143",
       "decimals": 6,
@@ -132,6 +111,27 @@
           "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0xe24a28fe8ecd859db4280d1291783a10017d6fc4": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "earnAUSD Monad",
+      "address": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4",
+      "symbol": "SY-earnAUSD",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/79d66825-3644-42d0-85d9-ab509c35f248.svg",
+      "assetGroup": "earnAUSD Monad::SY-earnAUSD",
+      "currencyId": "earnAUSD Monad::SY-earnAUSD",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x475b98c83aedbfdd0a0abaa930ec8cb501ac93b1",
+          "expiry": 1791417600,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
+          "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b"
         },
         "risk": { "score": 4, "source": "default" }
       }
@@ -398,7 +398,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/fcee8c31-843f-476b-9c71-91fe457cb1a0.svg",
       "assetGroup": "PT srUSDat (USDat) Monad::PT-srUSDat-14JAN2027",
       "currencyId": "PT srUSDat (USDat) Monad::PT-srUSDat-14JAN2027",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xc945210f85b55946eb970f427e4b9150fff600de",
+          "expiry": 1799884800,
+          "underlyingAsset": "0x17b8f7373ecd556192abfc85be314e5d4fb6b3fa",
+          "ytAddress": "0x0435a599e3fcf2e53028760060499350e25c3dd2",
+          "syAddress": "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51"
+        }
+      }
     },
     "0x0435a599e3fcf2e53028760060499350e25c3dd2": {
       "chainId": "143",
@@ -409,7 +418,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3e13daf3-babf-4f65-9fb6-82815f8f8cbf.svg",
       "assetGroup": "YT srUSDat (USDat) Monad::YT-srUSDat-14JAN2027",
       "currencyId": "YT srUSDat (USDat) Monad::YT-srUSDat-14JAN2027",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xc945210f85b55946eb970f427e4b9150fff600de",
+          "expiry": 1799884800,
+          "underlyingAsset": "0x17b8f7373ecd556192abfc85be314e5d4fb6b3fa",
+          "ptAddress": "0x355e82c60d51d6942bdfd0f2b95a204acd068963",
+          "syAddress": "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51"
+        }
+      }
     },
     "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51": {
       "chainId": "143",
@@ -420,7 +438,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/fdb9a1c0-c1a4-4e60-9e0a-92950e564592.svg",
       "assetGroup": "srUSDat Monad::SY-srUSDat",
       "currencyId": "srUSDat Monad::SY-srUSDat",
-      "props": { "pendle": { "tokenType": "SY" } }
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xc945210f85b55946eb970f427e4b9150fff600de",
+          "expiry": 1799884800,
+          "underlyingAsset": "0x17b8f7373ecd556192abfc85be314e5d4fb6b3fa",
+          "ptAddress": "0x355e82c60d51d6942bdfd0f2b95a204acd068963",
+          "ytAddress": "0x0435a599e3fcf2e53028760060499350e25c3dd2"
+        }
+      }
     },
     "0x01bff41798a0bcf287b996046ca68b395dbc1071": {
       "chainId": "143",
