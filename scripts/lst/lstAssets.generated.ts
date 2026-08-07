@@ -352,6 +352,7 @@ export const LST_GENERATED: LstRegistry = {
     '0x3ec3849c33291a9ef4c5db86de593eb4a37fde45': { type: 'staking', asset: 'ETH', provider: 'frax' },
     '0x4186bfc76e2e237523cbc30fd220fe055156b41f': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0x43edd7f3831b08fe70b7555ddd373c8bf65a9050': { type: 'staking', asset: 'ETH', provider: 'frax' },
+    '0x51bc8e41cbec0aa97ec07c73597829c70b2eed46': { type: 'restaking', asset: 'ETH', provider: 'avant' },
     '0x5979d7b546e38e414f7e9822514be443a4800529': { type: 'staking', asset: 'ETH', provider: 'lido' },
     '0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d': { type: 'restaking', asset: 'ETH', provider: 'inception' },
     '0x657e8c867d8b37dcc18fa4caead9c45eb088c642': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
@@ -380,6 +381,7 @@ export const LST_GENERATED: LstRegistry = {
   },
   '43111': {
     '0x93919784c523f39cacaa98ee0a9d96c3f32b593e': { type: 'restaking', asset: 'BTC', provider: 'bedrock' },
+    '0xb5686c4f60904ec2bda6277d6fe1f7caa8d1b41a': { type: 'staking', asset: 'ETH', provider: 'rocketpool' },
     '0xc3eacf0612346366db554c991d7858716db09f58': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0xf469fbd2abcd6b9de8e169d128226c0fc90a012e': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' },
     '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
