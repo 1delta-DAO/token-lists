@@ -886,6 +886,10 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
     '0x1e2c4fb7ede391d116e6b41cd0608260e8801d59': { type: 'fund', subType: 'etf', issuer: 'backed' },
   },
+  '196': {
+    '0xa8ddb5cd96b5222afe198316e9a57caa642850d5': { type: 'equity', subType: 'stock', issuer: 'backed' },
+    '0xc845b2894dbddd03858fd2d643b4ef725fe0849d': { type: 'equity', subType: 'stock', issuer: 'backed' },
+  },
   '369': {
     '0xd31d5463991f61b6e53b9b5ca574fa731f94991e': {
       type: 'commodity',
@@ -962,9 +966,12 @@ export const RWA_GENERATED: RwaRegistry = {
     '0xc18e6f730896971a79d748e8dea61067a9bc6040': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
   },
   '4663': {
+    '0x1c690498150252222c275a5ced69d3a6b1f52d5e': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
     '0x7168563b0e70124f0c7c0cf2f13a8d1861baf4a5': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x75742c18bc1f1c5c5f448f4c9d9c6f66dafaaa38': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
     '0x92fd66527192e3e61d4ddd13322aa222de86f9b5': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
+    '0xacef2e09adb47ad6abebad9ff06689e60615c2b6': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
+    '0xbe274710bf3d9567e1b290ef6a5f9f90ca016fd8': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
   },
   '5000': {
     '0x12992613fdd35abe95dec5a4964331b1ee23b50d': { type: 'equity', subType: 'stock', issuer: 'backed' },
@@ -988,6 +995,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x766b0cd6ed6d90b5d49d2c36a3761e9728501ba9': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x7796f4e23a62ef3653829c21032a9e24beaf4cf5': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x8ad3c73f833d3f9a523ab01476625f269aeb7cf0': { type: 'equity', subType: 'stock', issuer: 'backed' },
+    '0x93e62845c1dd5822ebc807ab71a5fb750decd15a': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x96702be57cd9777f835117a809c7124fe4ec989a': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x9d275685dc284c8eb1c79f6aba7a63dc75ec890a': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0xa90424d5d3e770e8644103ab503ed775dd1318fd': { type: 'equity', subType: 'stock', issuer: 'backed' },

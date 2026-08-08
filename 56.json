@@ -904,28 +904,6 @@
         }
       }
     },
-    "0xbe436f6ed7ff7f747aae1912f88c59549df82158": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "YT slisBNB (BNB) BNB",
-      "address": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
-      "symbol": "YT-clisBNB-30OCT2025",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/46247a45-4b42-4c18-9261-dcaa6f841e32.svg",
-      "assetGroup": "YT slisBNB (BNB) BNB::YT-clisBNB-30OCT2025",
-      "currencyId": "YT slisBNB (BNB) BNB::YT-clisBNB-30OCT2025",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0xbd577ddabb5a1672d3c786726b87a175de652b96",
-          "expiry": 1761782400,
-          "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
-          "ptAddress": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
-          "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
-          "expired": true
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0xb84cec1ab2af11b530ae0d8594b1493556be49cd": {
       "chainId": "56",
       "decimals": 18,
@@ -942,6 +920,28 @@
           "expiry": 1761782400,
           "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
           "ytAddress": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
+          "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
+          "expired": true
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0xbe436f6ed7ff7f747aae1912f88c59549df82158": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "YT slisBNB (BNB) BNB",
+      "address": "0xbe436f6ed7ff7f747aae1912f88c59549df82158",
+      "symbol": "YT-clisBNB-30OCT2025",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/46247a45-4b42-4c18-9261-dcaa6f841e32.svg",
+      "assetGroup": "YT slisBNB (BNB) BNB::YT-clisBNB-30OCT2025",
+      "currencyId": "YT slisBNB (BNB) BNB::YT-clisBNB-30OCT2025",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xbd577ddabb5a1672d3c786726b87a175de652b96",
+          "expiry": 1761782400,
+          "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+          "ptAddress": "0xb84cec1ab2af11b530ae0d8594b1493556be49cd",
           "syAddress": "0x27faf900007b4cba7803000251ec96bc69ff1bea",
           "expired": true
         },
@@ -2192,17 +2192,6 @@
         "risk": { "score": 4, "source": "default" }
       }
     },
-    "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9": {
-      "chainId": "56",
-      "decimals": 18,
-      "name": "PT srUSDe (USDe) BNB",
-      "address": "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9",
-      "symbol": "PT-srUSDe-2APR2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
-      "assetGroup": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
-      "currencyId": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
-    },
     "0x67e84ba0196738a59ee58df848a2c16ed2a6a6f3": {
       "chainId": "56",
       "decimals": 18,
@@ -2216,6 +2205,17 @@
         "pendle": { "tokenType": "PT", "expired": true },
         "risk": { "score": 4, "source": "default" }
       }
+    },
+    "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PT srUSDe (USDe) BNB",
+      "address": "0x0ea46a4c257071352b57e9f6d054fc137f6e14b9",
+      "symbol": "PT-srUSDe-2APR2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
+      "assetGroup": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
+      "currencyId": "PT srUSDe (USDe) BNB::PT-srUSDe-2APR2026",
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x7e318884f6f299031f4fa88d7a324e076d460a4b": {
       "chainId": "56",
@@ -65084,6 +65084,116 @@
       "assetGroup": "Saturn Dollar::USDAT",
       "currencyId": "Saturn Dollar::USDAT",
       "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x58b6f5feeb8436489f5bf4a56619092b1fa8e777": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "AST SpaceMobile (bStocks Tokenized Stock)",
+      "address": "0x58b6f5feeb8436489f5bf4a56619092b1fa8e777",
+      "symbol": "ASTSB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175301/thumb/AST.png?1786082547",
+      "assetGroup": "AST SpaceMobile (bStocks Tokenized Stock)::ASTSB",
+      "currencyId": "AST SpaceMobile (bStocks Tokenized Stock)::ASTSB"
+    },
+    "0xfdc2f2cab77b28f7ef6c819a404706cfa9bca33b": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "IREN Limited (bStocks Tokenized Stock)",
+      "address": "0xfdc2f2cab77b28f7ef6c819a404706cfa9bca33b",
+      "symbol": "IRENB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175302/thumb/irenb.png?1786082915",
+      "assetGroup": "IREN Limited (bStocks Tokenized Stock)::IRENB",
+      "currencyId": "IREN Limited (bStocks Tokenized Stock)::IRENB"
+    },
+    "0xfbfb4f79cfb4c34dcd7c82bdee5a0fa199b2e7f9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "ASML (bStocks Tokenized Stock)",
+      "address": "0xfbfb4f79cfb4c34dcd7c82bdee5a0fa199b2e7f9",
+      "symbol": "ASMLB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175303/thumb/ASMLB.png?1786083167",
+      "assetGroup": "ASML (bStocks Tokenized Stock)::ASMLB",
+      "currencyId": "ASML (bStocks Tokenized Stock)::ASMLB"
+    },
+    "0x6e7d451f9d30327d32020f116fa79c23b24e9c8d": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Credo Technology (bStocks Tokenized Stock)",
+      "address": "0x6e7d451f9d30327d32020f116fa79c23b24e9c8d",
+      "symbol": "CRDOB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175304/thumb/CRDOB.png?1786083408",
+      "assetGroup": "Credo Technology (bStocks Tokenized Stock)::CRDOB",
+      "currencyId": "Credo Technology (bStocks Tokenized Stock)::CRDOB"
+    },
+    "0x3548da95a9effe481e8604664d75e95821e557f5": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "BitMine Immersion Technologies (bStocks Tokenized Stock)",
+      "address": "0x3548da95a9effe481e8604664d75e95821e557f5",
+      "symbol": "BMNRB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175305/thumb/BMNRB.png?1786083822",
+      "assetGroup": "BitMine Immersion Technologies (bStocks Tokenized Stock)::BMNRB",
+      "currencyId": "BitMine Immersion Technologies (bStocks Tokenized Stock)::BMNRB"
+    },
+    "0x5131859a059b2446abeefe0f5d313b3c54ff3d36": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Coherent (bStocks Tokenized Stock)",
+      "address": "0x5131859a059b2446abeefe0f5d313b3c54ff3d36",
+      "symbol": "COHRB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175306/thumb/COHRB.png?1786084098",
+      "assetGroup": "Coherent (bStocks Tokenized Stock)::COHRB",
+      "currencyId": "Coherent (bStocks Tokenized Stock)::COHRB"
+    },
+    "0xd6829ea836b6fa224d099d40e54b31262f874631": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Netflix (bStocks Tokenized Stock)",
+      "address": "0xd6829ea836b6fa224d099d40e54b31262f874631",
+      "symbol": "NFLXB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175307/thumb/nflxb.png?1786084295",
+      "assetGroup": "Netflix (bStocks Tokenized Stock)::NFLXB",
+      "currencyId": "Netflix (bStocks Tokenized Stock)::NFLXB"
+    },
+    "0x1282493ede6a22753d45cb2c0fdbd8d35e97555a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Astera Labs (bStocks Tokenized Stock)",
+      "address": "0x1282493ede6a22753d45cb2c0fdbd8d35e97555a",
+      "symbol": "ALABB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175308/thumb/ALABB.png?1786084563",
+      "assetGroup": "Astera Labs (bStocks Tokenized Stock)::ALABB",
+      "currencyId": "Astera Labs (bStocks Tokenized Stock)::ALABB"
+    },
+    "0xcd345d4450e04cdef422a60b97d9265d24e0bcee": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "USA Rare Earth (bStocks Tokenized Stock)",
+      "address": "0xcd345d4450e04cdef422a60b97d9265d24e0bcee",
+      "symbol": "USARB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175309/thumb/USARB.png?1786084833",
+      "assetGroup": "USA Rare Earth (bStocks Tokenized Stock)::USARB",
+      "currencyId": "USA Rare Earth (bStocks Tokenized Stock)::USARB"
+    },
+    "0x387dea1d2772d716d081a29116f3effa0ffe1f36": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Super Micro Computer (bStocks Tokenized Stock)",
+      "address": "0x387dea1d2772d716d081a29116f3effa0ffe1f36",
+      "symbol": "SMCIB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175310/thumb/SMCIB.png?1786085207",
+      "assetGroup": "Super Micro Computer (bStocks Tokenized Stock)::SMCIB",
+      "currencyId": "Super Micro Computer (bStocks Tokenized Stock)::SMCIB"
+    },
+    "0xfbbc6a4667f8818c2f9dc4d3a76c71af031bc649": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "GOXY",
+      "address": "0xfbbc6a4667f8818c2f9dc4d3a76c71af031bc649",
+      "symbol": "GOXY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175334/thumb/GOXY_200x200.png?1786102182",
+      "assetGroup": "GOXY::GOXY",
+      "currencyId": "GOXY::GOXY"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "56",

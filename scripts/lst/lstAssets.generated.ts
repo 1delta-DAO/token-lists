@@ -450,6 +450,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xcc0966d8418d412c599a6421b760a847eb169a8c': { type: 'staking', asset: 'BTC', provider: 'solv' },
     '0xec901da9c68e90798bbbb74c11406a32a70652c3': { type: 'staking', asset: 'ETH', provider: 'stakestone' },
     '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' },
+    '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
   },
   '81457': {
     '0x049e6a52e2c9b7814c8178908f3630726c134c92': { type: 'staking', asset: 'ETH', provider: 'ankr' },
