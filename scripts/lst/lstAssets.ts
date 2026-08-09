@@ -9,6 +9,28 @@ export const LST_MANUAL: LstRegistry = {
   // '1': {
   //   '0x1234...': { type: 'staking', asset: 'ETH', provider: 'lido' },
   // },
+
+  // Binance wBETH — plain ETH staking (not restaking). Needs to be manual on
+  // both chains: "Wrapped Binance Beacon ETH" trips no `classifyRwaLst` rule,
+  // so it never even reached the candidate queue despite being the 2nd-largest
+  // ETH LST (~$7.1B). Same token address on both chains, and both already
+  // share the `Wrapped Binance Beacon ETH::wBETH` assetGroup — listing both
+  // makes the group vote unanimous so the x-chain overlay in lst-groups.json
+  // picks up the same props.
+  '1': {
+    '0xa2e3356610840701bdf5611a53974510ae27e2e1': {
+      type: 'staking',
+      asset: 'ETH',
+      provider: 'binance',
+    },
+  },
+  '56': {
+    '0xa2e3356610840701bdf5611a53974510ae27e2e1': {
+      type: 'staking',
+      asset: 'ETH',
+      provider: 'binance',
+    },
+  },
 }
 
 /** Merge two registries; `override` wins per (chainId,address). */
