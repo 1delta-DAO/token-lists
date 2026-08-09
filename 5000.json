@@ -423,28 +423,6 @@
         "risk": { "score": 4, "source": "default" }
       }
     },
-    "0xaffe4b1b1eebe6dd1ee31ad27c88a918825c89f8": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "YT cmETH (WETH) Mantle",
-      "address": "0xaffe4b1b1eebe6dd1ee31ad27c88a918825c89f8",
-      "symbol": "YT-cmETH-18SEP2025",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/68f209f0-b7f0-48fb-b501-cf702cfcc61a.svg",
-      "assetGroup": "YT cmETH (WETH) Mantle::YT-cmETH-18SEP2025",
-      "currencyId": "YT cmETH (WETH) Mantle::YT-cmETH-18SEP2025",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0x6304ccbda63a7fb94919c705de54f9889f3ce047",
-          "expiry": 1758153600,
-          "underlyingAsset": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
-          "ptAddress": "0x698eb002a4ec013a33286f7f2ba0be3970e66455",
-          "syAddress": "0x2ab88ac7458faec2e952bb79cc1be6577bf63e70",
-          "expired": true
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0x698eb002a4ec013a33286f7f2ba0be3970e66455": {
       "chainId": "5000",
       "decimals": 18,
@@ -461,6 +439,28 @@
           "expiry": 1758153600,
           "underlyingAsset": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
           "ytAddress": "0xaffe4b1b1eebe6dd1ee31ad27c88a918825c89f8",
+          "syAddress": "0x2ab88ac7458faec2e952bb79cc1be6577bf63e70",
+          "expired": true
+        },
+        "risk": { "score": 4, "source": "default" }
+      }
+    },
+    "0xaffe4b1b1eebe6dd1ee31ad27c88a918825c89f8": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "YT cmETH (WETH) Mantle",
+      "address": "0xaffe4b1b1eebe6dd1ee31ad27c88a918825c89f8",
+      "symbol": "YT-cmETH-18SEP2025",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/68f209f0-b7f0-48fb-b501-cf702cfcc61a.svg",
+      "assetGroup": "YT cmETH (WETH) Mantle::YT-cmETH-18SEP2025",
+      "currencyId": "YT cmETH (WETH) Mantle::YT-cmETH-18SEP2025",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x6304ccbda63a7fb94919c705de54f9889f3ce047",
+          "expiry": 1758153600,
+          "underlyingAsset": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+          "ptAddress": "0x698eb002a4ec013a33286f7f2ba0be3970e66455",
           "syAddress": "0x2ab88ac7458faec2e952bb79cc1be6577bf63e70",
           "expired": true
         },
@@ -837,6 +837,19 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x93e62845c1dd5822ebc807ab71a5fb750decd15a": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "Wrapped NVIDIA xStock",
+      "address": "0x93e62845c1dd5822ebc807ab71a5fb750decd15a",
+      "symbol": "WNVDAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/55770/thumb/Ticker_NVDA__Company_Name_NVIDIA_Corp__size_200x200_2x.png?1747330806",
+      "assetGroup": "Wrapped NVIDIA xStock::WNVDAX",
+      "currencyId": "Wrapped NVIDIA xStock::WNVDAX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
     "0x458ed78eb972a369799fb278c0243b25e5242a83": {
       "chainId": "5000",
       "decimals": 18,
@@ -968,6 +981,18 @@
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
         "risk": { "score": 4, "source": "whitelist" }
+      }
+    },
+    "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "Dolomite Isolation: PT cmETH 13FEB2025",
+      "address": "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563",
+      "symbol": "dPT-cmETH-13FEB2025",
+      "assetGroup": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
+      "currencyId": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "mantle" }
       }
     },
     "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8": {
@@ -2354,31 +2379,6 @@
       "assetGroup": "Grove::GROVE",
       "currencyId": "Grove::GROVE"
     },
-    "0x93e62845c1dd5822ebc807ab71a5fb750decd15a": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "Wrapped NVIDIA xStock",
-      "address": "0x93e62845c1dd5822ebc807ab71a5fb750decd15a",
-      "symbol": "WNVDAX",
-      "logoURI": "https://assets.coingecko.com/coins/images/55770/thumb/Ticker_NVDA__Company_Name_NVIDIA_Corp__size_200x200_2x.png?1747330806",
-      "assetGroup": "Wrapped NVIDIA xStock::WNVDAX",
-      "currencyId": "Wrapped NVIDIA xStock::WNVDAX"
-    },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "Mantle",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "MNT",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/mnt.webp",
-      "assetGroup": "MNT",
-      "currencyId": "Mantle::MNT",
-      "props": {
-        "isNative": true,
-        "erc20": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000",
-        "wrapped": "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8"
-      }
-    },
     "0x5b12e419a57e3102ec1d47bd11ba5ec87ef264fb": {
       "chainId": "5000",
       "decimals": 18,
@@ -2396,15 +2396,6 @@
       "symbol": "dWMNT",
       "assetGroup": "Dolomite Isolation: Wrapped Mantle::dWMNT",
       "currencyId": "Dolomite Isolation: Wrapped Mantle::dWMNT"
-    },
-    "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "Dolomite Isolation: PT cmETH 13FEB2025",
-      "address": "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563",
-      "symbol": "dPT-cmETH-13FEB2025",
-      "assetGroup": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
-      "currencyId": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025"
     },
     "0xb3ff983d7927540b7f92602657a2a26977664e77": {
       "chainId": "5000",
@@ -2432,6 +2423,21 @@
       "symbol": "dPT-USDe-26DEC2024",
       "assetGroup": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024",
       "currencyId": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "Mantle",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "MNT",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/mnt.webp",
+      "assetGroup": "MNT",
+      "currencyId": "Mantle::MNT",
+      "props": {
+        "isNative": true,
+        "erc20": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000",
+        "wrapped": "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8"
+      }
     }
   },
   "mainTokens": [

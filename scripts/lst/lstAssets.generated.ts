@@ -283,6 +283,7 @@ export const LST_GENERATED: LstRegistry = {
     '0x4186bfc76e2e237523cbc30fd220fe055156b41f': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0x458ed78eb972a369799fb278c0243b25e5242a83': { type: 'staking', asset: 'ETH', provider: 'lido' },
     '0x636d4073738c071326aa70c9e5db7c334beb87be': { type: 'staking', asset: 'ETH', provider: 'lido' },
+    '0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563': { type: 'restaking', asset: 'ETH', provider: 'mantle' },
     '0x93e855643e940d025be2e529272e4dbd15a2cf74': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0xc75d7767f2edfbc6a5b18fc1fa5d51ffb57c2b37': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' },
     '0xcda86a272531e8640cd7f1a92c01839911b90bb0': { type: 'staking', asset: 'ETH', provider: 'mantle' },
@@ -345,6 +346,7 @@ export const LST_GENERATED: LstRegistry = {
     '0x178412e79c25968a32e89b11f63b33f733770c2a': { type: 'staking', asset: 'ETH', provider: 'frax' },
     '0x18c14c2d707b2212e17d1579789fc06010cfca23': { type: 'staking', asset: 'ETH', provider: 'reserve' },
     '0x1debd73e752beaf79865fd6446b0c970eae7732f': { type: 'staking', asset: 'ETH', provider: 'coinbase' },
+    '0x23e3df1196b3249c9b0a9476f990f105591872de': { type: 'restaking', asset: 'ETH', provider: 'avant' },
     '0x2416092f143378750bb29b79ed961ab195cceea5': { type: 'restaking', asset: 'ETH', provider: 'renzo' },
     '0x346c574c56e1a4aaa8dc88cda8f7eb12b39947ab': { type: 'staking', asset: 'BTC', provider: 'solv' },
     '0x35751007a407ca6feffe80b3cb397736d2cf4dbe': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
@@ -450,6 +452,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xcc0966d8418d412c599a6421b760a847eb169a8c': { type: 'staking', asset: 'BTC', provider: 'solv' },
     '0xec901da9c68e90798bbbb74c11406a32a70652c3': { type: 'staking', asset: 'ETH', provider: 'stakestone' },
     '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' },
+    '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
   },
   '81457': {
     '0x049e6a52e2c9b7814c8178908f3630726c134c92': { type: 'staking', asset: 'ETH', provider: 'ankr' },

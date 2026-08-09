@@ -13,15 +13,6 @@
       "currencyId": "PT cUSD (cUSD) Monad::PT-cUSD-23JUL2026",
       "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
-    "0x2abc42250154752273a4560e875c858623f83ecc": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "Agua Global Carry Vault",
-      "address": "0x2abc42250154752273a4560e875c858623f83ecc",
-      "symbol": "aguaUSDCgc",
-      "assetGroup": "Agua Global Carry Vault::aguaUSDCgc",
-      "currencyId": "Agua Global Carry Vault::aguaUSDCgc"
-    },
     "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1": {
       "chainId": "143",
       "decimals": 6,
@@ -38,6 +29,26 @@
           "expiry": 1791417600,
           "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
+          "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
+        }
+      }
+    },
+    "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "YT AUSD (AUSD) Monad",
+      "address": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
+      "symbol": "YT-AUSD-8OCT2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
+      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
+      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7",
+          "expiry": 1791417600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
           "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         }
       }
@@ -59,26 +70,6 @@
           "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
           "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89"
-        }
-      }
-    },
-    "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
-      "chainId": "143",
-      "decimals": 6,
-      "name": "YT AUSD (AUSD) Monad",
-      "address": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
-      "symbol": "YT-AUSD-8OCT2026",
-      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
-      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
-      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-8OCT2026",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0x6f99cf00ee7290ae78a072bb6910ef72d1129fe7",
-          "expiry": 1791417600,
-          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
-          "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
-          "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         }
       }
     },
@@ -710,6 +701,15 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
       }
+    },
+    "0x2abc42250154752273a4560e875c858623f83ecc": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Agua Global Carry Vault",
+      "address": "0x2abc42250154752273a4560e875c858623f83ecc",
+      "symbol": "aguaUSDCgc",
+      "assetGroup": "Agua Global Carry Vault::aguaUSDCgc",
+      "currencyId": "Agua Global Carry Vault::aguaUSDCgc"
     },
     "0x58ba69b289de313e66a13b7d1f822fc98b970554": {
       "chainId": "143",
@@ -2474,20 +2474,6 @@
       "assetGroup": "SPDR Bloomberg 1-3M T-Bill aStock::aBIL",
       "currencyId": "SPDR Bloomberg 1-3M T-Bill aStock::aBIL"
     },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "MON Token",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "MON",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/mon.webp",
-      "assetGroup": "MON",
-      "currencyId": "MON Token::MON",
-      "props": {
-        "isNative": true,
-        "wrapped": "0x3bd359c1119da7da1d913d1c4d2b7c461115433a"
-      }
-    },
     "0x74d80ee400d3026fdd2520265cc98300710b25d4": {
       "chainId": "143",
       "decimals": 18,
@@ -2523,6 +2509,20 @@
       "symbol": "mEDGErdUSDC",
       "assetGroup": "mEDGE redeemed to USDC::mEDGErdUSDC",
       "currencyId": "mEDGE redeemed to USDC::mEDGErdUSDC"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "MON Token",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "MON",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/mon.webp",
+      "assetGroup": "MON",
+      "currencyId": "MON Token::MON",
+      "props": {
+        "isNative": true,
+        "wrapped": "0x3bd359c1119da7da1d913d1c4d2b7c461115433a"
+      }
     }
   },
   "mainTokens": [
