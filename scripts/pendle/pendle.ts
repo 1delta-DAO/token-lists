@@ -10,7 +10,14 @@ async function generatePendleList() {
   console.log('Generating Pendle asset list...')
   try {
     const pendleAssets = await processPendleAssets()
-    const flatList = Object.values(pendleAssets).flatMap((chainAssets) => Object.values(chainAssets))
+
+    // Sort deterministically. The API returns assets in an unstable order, which propagates
+    // into every chain map (pendle is the first list, so it seeds the key order) and turns
+    // every regen into a huge reorder diff. Address is the only immutable key here — sorting
+    // on symbol/name would reshuffle whenever Pendle renames an asset upstream.
+    const flatList = Object.values(pendleAssets)
+      .flatMap((chainAssets) => Object.values(chainAssets))
+      .sort((a, b) => Number(a.chainId) - Number(b.chainId) || a.address.localeCompare(b.address))
 
     const outputPath = path.resolve(__dirname, './pendle.json')
     fs.writeFileSync(outputPath, JSON.stringify(flatList, null, 2))

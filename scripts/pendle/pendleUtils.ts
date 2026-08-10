@@ -16,6 +16,7 @@ export const PENDLE_CHAINS = [
   Chain.INK,
   Chain.AVALANCHE_C_CHAIN,
   Chain.KATANA,
+  Chain.X_LAYER_MAINNET,
 ]
 
 export interface PendleMarket {
