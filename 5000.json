@@ -837,6 +837,19 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x93e62845c1dd5822ebc807ab71a5fb750decd15a": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "Wrapped NVIDIA xStock",
+      "address": "0x93e62845c1dd5822ebc807ab71a5fb750decd15a",
+      "symbol": "WNVDAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/55770/thumb/Ticker_NVDA__Company_Name_NVIDIA_Corp__size_200x200_2x.png?1747330806",
+      "assetGroup": "Wrapped NVIDIA xStock::WNVDAX",
+      "currencyId": "Wrapped NVIDIA xStock::WNVDAX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
     "0x458ed78eb972a369799fb278c0243b25e5242a83": {
       "chainId": "5000",
       "decimals": 18,
@@ -968,6 +981,18 @@
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
         "risk": { "score": 4, "source": "whitelist" }
+      }
+    },
+    "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "Dolomite Isolation: PT cmETH 13FEB2025",
+      "address": "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563",
+      "symbol": "dPT-cmETH-13FEB2025",
+      "assetGroup": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
+      "currencyId": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "mantle" }
       }
     },
     "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8": {
@@ -2354,31 +2379,6 @@
       "assetGroup": "Grove::GROVE",
       "currencyId": "Grove::GROVE"
     },
-    "0x93e62845c1dd5822ebc807ab71a5fb750decd15a": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "Wrapped NVIDIA xStock",
-      "address": "0x93e62845c1dd5822ebc807ab71a5fb750decd15a",
-      "symbol": "WNVDAX",
-      "logoURI": "https://assets.coingecko.com/coins/images/55770/thumb/Ticker_NVDA__Company_Name_NVIDIA_Corp__size_200x200_2x.png?1747330806",
-      "assetGroup": "Wrapped NVIDIA xStock::WNVDAX",
-      "currencyId": "Wrapped NVIDIA xStock::WNVDAX"
-    },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "Mantle",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "MNT",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/mnt.webp",
-      "assetGroup": "MNT",
-      "currencyId": "Mantle::MNT",
-      "props": {
-        "isNative": true,
-        "erc20": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000",
-        "wrapped": "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8"
-      }
-    },
     "0x5b12e419a57e3102ec1d47bd11ba5ec87ef264fb": {
       "chainId": "5000",
       "decimals": 18,
@@ -2396,15 +2396,6 @@
       "symbol": "dWMNT",
       "assetGroup": "Dolomite Isolation: Wrapped Mantle::dWMNT",
       "currencyId": "Dolomite Isolation: Wrapped Mantle::dWMNT"
-    },
-    "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "Dolomite Isolation: PT cmETH 13FEB2025",
-      "address": "0x8eb2ef96a70a6ec4f3dde550b96969a6aa25a563",
-      "symbol": "dPT-cmETH-13FEB2025",
-      "assetGroup": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
-      "currencyId": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025"
     },
     "0xb3ff983d7927540b7f92602657a2a26977664e77": {
       "chainId": "5000",
@@ -2432,6 +2423,21 @@
       "symbol": "dPT-USDe-26DEC2024",
       "assetGroup": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024",
       "currencyId": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "Mantle",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "MNT",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/mnt.webp",
+      "assetGroup": "MNT",
+      "currencyId": "Mantle::MNT",
+      "props": {
+        "isNative": true,
+        "erc20": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000",
+        "wrapped": "0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8"
+      }
     }
   },
   "mainTokens": [
