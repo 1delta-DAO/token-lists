@@ -8,6 +8,19 @@ export const BLACKLIST_PER_CHAIN = {
     '0xdde3ec717f220fc6a29d6a4be73f91da5b718e55', // fake USDU
     '0x20b3b07e9c0e37815e2892ab09496559f57c3603', // fake USDV
     '0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef', // fake sUSDai
+    // Superseded Yield Basis markets. Every generation shares the
+    // `yb-<ASSET>` symbol AND produces the same `name::symbol` assetGroup,
+    // and the dead ones still answer every getter while holding real funds
+    // — so a list carrying both makes the live market indistinguishable
+    // from a withdraw-only one. Only the four current LTs (market indices
+    // 7-10, pulled in via onchain-fetch/coins.json) belong in the list.
+    '0xfbf3c16676055776ab9b286492d8f13e30e2e763', // yb-WBTC v2
+    '0xac0cfa7742069a8af0c63e14ffd0fe6b3e1bf8d2', // yb-cbBTC v2
+    '0xac0a340c1644321d0bbc6404946d828c1ebfac92', // yb-tBTC v2
+    '0x931d40dd07b25b91932b481b63631ea86d236e09', // yb-WETH legacy
+    '0xd6a1147666f6e4d7161caf436d9923d44d901112', // yb-cbBTC legacy
+    '0x6095a220c5567360d459462a25b1ad5aead45204', // yb-WBTC legacy
+    '0x2b513ebe7070cff91cf699a0bfe5075020c732ff', // yb-tBTC legacy
   ],
   [Chain.ARBITRUM_ONE]: [
     '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // fake WETH
