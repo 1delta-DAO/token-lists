@@ -11,10 +11,9 @@
  * Usage: node missing-underlyings.mjs [--origin URL] [--json]
  */
 
-const ORIGIN =
-  process.argv.includes('--origin')
-    ? process.argv[process.argv.indexOf('--origin') + 1]
-    : 'https://yields-r0.1delta.io'
+const ORIGIN = process.argv.includes('--origin')
+  ? process.argv[process.argv.indexOf('--origin') + 1]
+  : 'https://yields-r0.1delta.io'
 const AS_JSON = process.argv.includes('--json')
 
 /** Native sentinel — not a token, never "missing". */
@@ -40,14 +39,8 @@ async function allVaults() {
 }
 
 async function registryFor(chainId) {
-  const body = await getJson(
-    `/assets/available?chainId=${chainId}&count=5000&includeExpired=true`,
-  )
-  return new Set(
-    (body.items ?? [])
-      .map((a) => String(a.address ?? '').toLowerCase())
-      .filter(Boolean),
-  )
+  const body = await getJson(`/assets/available?chainId=${chainId}&count=5000&includeExpired=true`)
+  return new Set((body.items ?? []).map((a) => String(a.address ?? '').toLowerCase()).filter(Boolean))
 }
 
 const usd = (n) =>
@@ -88,10 +81,8 @@ const main = async () => {
       const label = v.displayName ?? v.name ?? v.symbol
       if (label) entry.vaults.push(String(label))
     }
-    if (entry.vaultAddresses.length < 3 && v.vaultAddress)
-      entry.vaultAddresses.push(String(v.vaultAddress))
-    if (!entry.reportedSymbol && v?.underlyingInfo?.asset?.symbol)
-      entry.reportedSymbol = v.underlyingInfo.asset.symbol
+    if (entry.vaultAddresses.length < 3 && v.vaultAddress) entry.vaultAddresses.push(String(v.vaultAddress))
+    if (!entry.reportedSymbol && v?.underlyingInfo?.asset?.symbol) entry.reportedSymbol = v.underlyingInfo.asset.symbol
     perChain.set(underlying, entry)
   }
 
@@ -111,20 +102,14 @@ const main = async () => {
    * bug instead of fixing it, so these are separated out.
    */
   const foundOnOtherChains = (chainId, address) =>
-    [...registries.entries()]
-      .filter(([c, set]) => c !== chainId && set.has(address))
-      .map(([c]) => c)
+    [...registries.entries()].filter(([c, set]) => c !== chainId && set.has(address)).map(([c]) => c)
 
   const out = {}
   let totalMissing = 0
 
-  for (const [chainId, perChain] of [...byChain].sort(
-    (a, b) => Number(a[0]) - Number(b[0]),
-  )) {
+  for (const [chainId, perChain] of [...byChain].sort((a, b) => Number(a[0]) - Number(b[0]))) {
     const registry = await registryFor(chainId)
-    const missing = [...perChain.values()]
-      .filter((e) => !registry.has(e.address))
-      .sort((a, b) => b.tvlUsd - a.tvlUsd)
+    const missing = [...perChain.values()].filter((e) => !registry.has(e.address)).sort((a, b) => b.tvlUsd - a.tvlUsd)
 
     if (missing.length === 0) continue
     totalMissing += missing.length
@@ -139,9 +124,7 @@ const main = async () => {
     }))
 
     if (!AS_JSON) {
-      console.log(
-        `\n── chain ${chainId} — ${missing.length} missing of ${perChain.size} distinct underlyings`,
-      )
+      console.log(`\n── chain ${chainId} — ${missing.length} missing of ${perChain.size} distinct underlyings`)
       for (const m of missing) {
         const other = foundOnOtherChains(chainId, m.address)
         console.log(
@@ -172,14 +155,10 @@ const main = async () => {
     }
 
     const suspect = Object.entries(out).flatMap(([chainId, rows]) =>
-      rows
-        .filter((r) => r.knownOnChains.length > 0)
-        .map((r) => ({ chainId, ...r })),
+      rows.filter((r) => r.knownOnChains.length > 0).map((r) => ({ chainId, ...r })),
     )
     if (suspect.length) {
-      console.log(
-        '\n── DO NOT ADD — wrong-chain underlying (ingest bug) ──',
-      )
+      console.log('\n── DO NOT ADD — wrong-chain underlying (ingest bug) ──')
       for (const r of suspect) {
         console.log(
           `  chain ${r.chainId}  ${r.address}  ${usd(r.tvlUsd)}  ` +
