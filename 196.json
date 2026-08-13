@@ -11,7 +11,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg",
       "assetGroup": "USDG X::SY-USDG",
       "currencyId": "USDG X::SY-USDG",
-      "props": { "pendle": { "tokenType": "SY" } }
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xcfb506cb34dd340e80d3df8764182a5187636032",
+          "expiry": 1793232000,
+          "underlyingAsset": "0x4ae46a509f6b1d9056937ba4500cb143933d2dc8",
+          "ptAddress": "0x9a09a9e491db3dd8ada5b1b889991ac9ad5fd362",
+          "ytAddress": "0x5e67c8d19eea0fd0d0da35e4008b56e87c931724"
+        }
+      }
     },
     "0x5e67c8d19eea0fd0d0da35e4008b56e87c931724": {
       "chainId": "196",
@@ -22,7 +31,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b62836c0-f848-4d73-829e-adce1aa38dea.svg",
       "assetGroup": "YT USDG (USDG) X::YT-USDG-29OCT2026",
       "currencyId": "YT USDG (USDG) X::YT-USDG-29OCT2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xcfb506cb34dd340e80d3df8764182a5187636032",
+          "expiry": 1793232000,
+          "underlyingAsset": "0x4ae46a509f6b1d9056937ba4500cb143933d2dc8",
+          "ptAddress": "0x9a09a9e491db3dd8ada5b1b889991ac9ad5fd362",
+          "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
+        }
+      }
     },
     "0x9a09a9e491db3dd8ada5b1b889991ac9ad5fd362": {
       "chainId": "196",
@@ -33,70 +51,15 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3c5c1e3f-6dd7-463d-a36c-244662c6f243.svg",
       "assetGroup": "PT USDG (USDG) X::PT-USDG-29OCT2026",
       "currencyId": "PT USDG (USDG) X::PT-USDG-29OCT2026",
-      "props": { "pendle": { "tokenType": "PT" } }
-    },
-    "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
-      "chainId": "196",
-      "decimals": 18,
-      "name": "Inception Restaked ETH",
-      "address": "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d",
-      "symbol": "INETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/34127/thumb/inETH.png?1715036464",
-      "assetGroup": "INETH",
-      "currencyId": "Inception Restaked ETH::INETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" }
-      }
-    },
-    "0x1b3a9a689ba7555f9d7984d7ad4025574ed5a0f9": {
-      "chainId": "196",
-      "decimals": 18,
-      "name": "Kelp DAO Restaked ETH",
-      "address": "0x1b3a9a689ba7555f9d7984d7ad4025574ed5a0f9",
-      "symbol": "RSETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/33800/thumb/Icon___Dark.png?1702991855",
-      "assetGroup": "RSETH",
-      "currencyId": "Kelp DAO Restaked ETH::RSETH",
-      "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
-    },
-    "0x80137510979822322193fc997d400d5a6c747bf7": {
-      "chainId": "196",
-      "decimals": 18,
-      "name": "StakeStone Ether",
-      "address": "0x80137510979822322193fc997d400d5a6c747bf7",
-      "symbol": "STONE",
-      "logoURI": "https://assets.coingecko.com/coins/images/33103/thumb/200_200.png?1702602672",
-      "assetGroup": "STONE",
-      "currencyId": "StakeStone Ether::STONE",
-      "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
-      }
-    },
-    "0x5a71f5888ee05b36ded9149e6d32ee93812ee5e9": {
-      "chainId": "196",
-      "decimals": 18,
-      "name": "rsETHWrapper",
-      "address": "0x5a71f5888ee05b36ded9149e6d32ee93812ee5e9",
-      "symbol": "wrsETH",
-      "assetGroup": "RSETH",
-      "currencyId": "rsETHWrapper::wrsETH",
-      "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
-      }
-    },
-    "0xa161132371c94299d215915d4cbc3b629e2059be": {
-      "chainId": "196",
-      "decimals": 8,
-      "name": "brBTC",
-      "address": "0xa161132371c94299d215915d4cbc3b629e2059be",
-      "symbol": "brBTC",
-      "logoURI": "https://assets.coingecko.com/coins/images/53039/thumb/brBTC_200.png?1735074374",
-      "assetGroup": "BRBTC",
-      "currencyId": "brBTC::brBTC",
-      "props": {
-        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" }
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xcfb506cb34dd340e80d3df8764182a5187636032",
+          "expiry": 1793232000,
+          "underlyingAsset": "0x4ae46a509f6b1d9056937ba4500cb143933d2dc8",
+          "ytAddress": "0x5e67c8d19eea0fd0d0da35e4008b56e87c931724",
+          "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
+        }
       }
     },
     "0xa8ddb5cd96b5222afe198316e9a57caa642850d5": {
@@ -175,6 +138,70 @@
       "currencyId": "Wrapped SpaceX xStock::WSPCXX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
+    "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
+      "chainId": "196",
+      "decimals": 18,
+      "name": "Inception Restaked ETH",
+      "address": "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d",
+      "symbol": "INETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/34127/thumb/inETH.png?1715036464",
+      "assetGroup": "INETH",
+      "currencyId": "Inception Restaked ETH::INETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" }
+      }
+    },
+    "0x1b3a9a689ba7555f9d7984d7ad4025574ed5a0f9": {
+      "chainId": "196",
+      "decimals": 18,
+      "name": "Kelp DAO Restaked ETH",
+      "address": "0x1b3a9a689ba7555f9d7984d7ad4025574ed5a0f9",
+      "symbol": "RSETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/33800/thumb/Icon___Dark.png?1702991855",
+      "assetGroup": "RSETH",
+      "currencyId": "Kelp DAO Restaked ETH::RSETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
+    "0x80137510979822322193fc997d400d5a6c747bf7": {
+      "chainId": "196",
+      "decimals": 18,
+      "name": "StakeStone Ether",
+      "address": "0x80137510979822322193fc997d400d5a6c747bf7",
+      "symbol": "STONE",
+      "logoURI": "https://assets.coingecko.com/coins/images/33103/thumb/200_200.png?1702602672",
+      "assetGroup": "STONE",
+      "currencyId": "StakeStone Ether::STONE",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+      }
+    },
+    "0x5a71f5888ee05b36ded9149e6d32ee93812ee5e9": {
+      "chainId": "196",
+      "decimals": 18,
+      "name": "rsETHWrapper",
+      "address": "0x5a71f5888ee05b36ded9149e6d32ee93812ee5e9",
+      "symbol": "wrsETH",
+      "assetGroup": "RSETH",
+      "currencyId": "rsETHWrapper::wrsETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+      }
+    },
+    "0xa161132371c94299d215915d4cbc3b629e2059be": {
+      "chainId": "196",
+      "decimals": 8,
+      "name": "brBTC",
+      "address": "0xa161132371c94299d215915d4cbc3b629e2059be",
+      "symbol": "brBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/53039/thumb/brBTC_200.png?1735074374",
+      "assetGroup": "BRBTC",
+      "currencyId": "brBTC::brBTC",
+      "props": {
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" }
       }
     },
     "0xe538905cf8410324e03a5a23c1c177a474d59b2b": {
@@ -737,6 +764,26 @@
       "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/USDC.png?1769615602",
       "assetGroup": "USDC::USDC",
       "currencyId": "USDC::USDC"
+    },
+    "0xc3fdbe3a68ee5de461d30415a8165cf9aefe1171": {
+      "chainId": "196",
+      "decimals": 18,
+      "name": "Wrapped Tesla xStock",
+      "address": "0xc3fdbe3a68ee5de461d30415a8165cf9aefe1171",
+      "symbol": "WTSLAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/55826/thumb/Ticker_TSLA__Company_Name_Tesla_Inc.__size_200x200_2x.png?1747384693",
+      "assetGroup": "Wrapped Tesla xStock::WTSLAX",
+      "currencyId": "Wrapped Tesla xStock::WTSLAX"
+    },
+    "0xf8c5308f80e459bb53d9ebe689854d9cbb2caa6f": {
+      "chainId": "196",
+      "decimals": 18,
+      "name": "Wrapped Alphabet xStock",
+      "address": "0xf8c5308f80e459bb53d9ebe689854d9cbb2caa6f",
+      "symbol": "WGOOGLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/55796/thumb/Ticker_GOOG__Company_Name_Alphabet_Inc.__size_200x200_2x.png?1747382754",
+      "assetGroup": "Wrapped Alphabet xStock::WGOOGLX",
+      "currencyId": "Wrapped Alphabet xStock::WGOOGLX"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "196",
