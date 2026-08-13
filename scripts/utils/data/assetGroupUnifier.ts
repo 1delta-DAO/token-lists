@@ -92,6 +92,12 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Bedrock BTC::BRBTC': 'BRBTC',
   // Coinbase cbETH
   'Coinbase Wrapped Staked ETH on Gnosis::cbETH': 'CBETH',
+  // Binance wBETH — one asset at ONE address on Ethereum and BNB, but the source
+  // lists disagree on the symbol's casing (`WBETH` on 1, `wBETH` on 56) and Fuel's
+  // bridged row carries a name==symbol group. Canonical = the chain-56 form, which
+  // is what the LST registry rows and `wbethFetcher` key their intrinsic APR on.
+  'Wrapped Binance Beacon ETH::WBETH': 'Wrapped Binance Beacon ETH::wBETH',
+  'wbETH::wbETH': 'Wrapped Binance Beacon ETH::wBETH',
   // Renzo ezETH
   'Renzo Restaked ETH::ezETH': 'EZETH',
   // Frax frxETH
