@@ -139,6 +139,20 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Angle Staked EURA::STEUR': 'STEUR',
   'Angle Staked EURA::stEUR': 'STEUR',
   'Staked EURA::stEUR': 'STEUR',
+  // Cap stcUSD — ONE asset at ONE vanity address on Ethereum, MegaETH (4326)
+  // and Katana (747474), split by a single character of `name()`: mainnet
+  // returns "Staked cap USD", the two bridged mirrors "Staked Cap USD".
+  // Canonical is the MAINNET form, because Ethereum holds the only real vault
+  // (the mirrors' `asset()` / `totalAssets()` / `convertToAssets()` all
+  // revert) and it is the key `capFetcher` and the SAVINGS_REGISTRY row use —
+  // the wBETH precedent. Left unaliased this cost the bridged chains their
+  // intrinsic yield entirely, and 21.6 % of the supply sits on MegaETH.
+  // The underlying cUSD does NOT need this: it already stores
+  // `Cap USD::CUSD` on every chain. Do not bare-alias to `STCUSD` without
+  // updating `capFetcher` — and note several unrelated tokens ship a `cUSD`
+  // ticker (Celo Dollar, Chips USD, Chad USD, SyntheX), so the qualified form
+  // is the safe one either way.
+  'Staked Cap USD::stcUSD': 'Staked cap USD::stcUSD',
   // Noon sUSN
   'Staked USN::sUSN': 'SUSN',
   // EtherFi weETH

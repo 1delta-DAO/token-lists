@@ -80,7 +80,13 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Staked USDai::sUSDai': { underlying: 'USDai', base: 'USD' },
   // --- TRON Savings USDD (sUSDD) ---
   'Savings Usdd::sUSDD': { underlying: 'USDD', base: 'USD' },
-  // --- Cap Staked USD (stcUSD, over cUSD) — case variant across chains ---
+  // --- Cap stcUSD (over cUSD) — one vanity address on Ethereum / MegaETH /
+  // Katana whose `name()` differs by a single character ("Staked cap USD" on
+  // mainnet, "Staked Cap USD" on the two bridged mirrors). Both forms are kept
+  // Sky-style so the overlay resolves either way, but the split is now fixed at
+  // the source: `assetGroupUnifier.ts` aliases the capitalised form to the
+  // mainnet one, which is the only chain with a real vault and the key
+  // margin-fetcher's `capFetcher` and SAVINGS_REGISTRY row use. ---
   'Staked Cap USD::stcUSD': { underlying: 'cUSD', base: 'USD' },
   'Staked cap USD::stcUSD': { underlying: 'cUSD', base: 'USD' },
   // --- Staked YUSD (sYUSD) — NOT 'Synnax Stablecoin::SYUSD' (a different token) ---
