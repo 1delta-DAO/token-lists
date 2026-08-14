@@ -151,6 +151,26 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // synthetic dollar. Missed when the vault shipped; trUSD itself is already
   // in the stablecoin feed ('Tori trUSD::TRUSD'). ---
   'Tori Staked trUSD::STRUSD': { underlying: 'trUSD', base: 'USD' },
+  // --- Brix wiTRY — StakedUSDeV2 clone over iTRY, a TURKISH LIRA stablecoin
+  // backed by shares in a regulated basket of Turkish money-market funds.
+  // Passive by the test this list applies: deposit iTRY → accrue an
+  // administered distribution → redeem iTRY, with no allocation decisions on
+  // the depositor's position.
+  //
+  // `base: 'TRY'` is load-bearing, not decoration. Every other row here is a
+  // dollar (or the two Angle euro rows), so a consumer that ignores `base`
+  // will render a ~37 % lira rate in the same column as a 4 % dollar one —
+  // and the lira pays 37 % precisely because it depreciates. This field is the
+  // only machine-readable signal that the two are not comparable. Same
+  // reasoning as `stEUR` above, one order of magnitude louder.
+  //
+  // One assetGroup covers both deployments (chain 1 and MegaETH 4326) and it
+  // is already canonical in the stored lists, so no GROUP_ALIAS is needed —
+  // but note only the chain-1 token is the actual vault; the MegaETH one is a
+  // LayerZero OFT whose 4626 surface reverts. That distinction lives in
+  // margin-fetcher's SAVINGS_REGISTRY, not here: this overlay classifies the
+  // ASSET, which is the same asset on both chains.
+  'Wrapped iTRY::WITRY': { underlying: 'iTRY', base: 'TRY' },
   'YieldFi Stable Token::sUSD': { underlying: 'USDC', base: 'USD' },
   // --- Angle stUSD (over USDA) ---
   'Angle Staked USDA::stUSD': { underlying: 'USDA', base: 'USD' },
