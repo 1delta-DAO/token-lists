@@ -98,6 +98,11 @@ export const GROUP_ALIAS: Record<string, string> = {
   // is what the LST registry rows and `wbethFetcher` key their intrinsic APR on.
   'Wrapped Binance Beacon ETH::WBETH': 'Wrapped Binance Beacon ETH::wBETH',
   'wbETH::wbETH': 'Wrapped Binance Beacon ETH::wBETH',
+  // Tokenised GBP — same deterministic address on 1/56/137/8453/43114, but the Polygon
+  // source row carries the on-chain casing (`tGBP`) while the rest carry `TGBP`, which
+  // split one asset into two groups. Canonical = the uppercase form, matching the
+  // majority of chains and the stablecoin overlay key.
+  'Tokenised GBP::tGBP': 'Tokenised GBP::TGBP',
   // Renzo ezETH
   'Renzo Restaked ETH::ezETH': 'EZETH',
   // Frax frxETH

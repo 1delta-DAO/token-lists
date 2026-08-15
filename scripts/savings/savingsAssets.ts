@@ -191,6 +191,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   SYRUPUSDC: { underlying: 'USDC', base: 'USD' },
   SYRUPUSDT: { underlying: 'USDT', base: 'USD' },
   SYRUPUSDG: { underlying: 'USDG', base: 'USD' },
+  // --- Wren wstGBP (over tGBP — GBP-pegged). `underlying` is PINNED because the wrapper
+  // exposes no 4626 surface at all (`asset()`/`underlying()`/`token()` all revert), so the
+  // on-chain resolver cannot fill it in. The link was verified by backing instead: the wstGBP
+  // contract holds 84,071.70 tGBP against 83,293.90 wstGBP outstanding (~1.0093 tGBP per share,
+  // i.e. accrued yield) — the signature of a passive savings wrapper. ---
+  'Wren Staked tGBP::wstGBP': { underlying: 'tGBP', base: 'GBP' },
 
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
   // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:

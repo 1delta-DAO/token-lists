@@ -41,6 +41,18 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   // RWA-backed (reinsurance / real-world + digital assets). Not in the DeFiLlama feed.
   'Reservoir rUSD::RUSD': { base: 'USD' },
   'Reservoir Stablecoin::rUSD': { base: 'USD' },
+  // Tokenised GBP (tGBP) — GBP-pegged ERC-20, not in the DeFiLlama feed. The generator looks
+  // the overlay up on the group it holds at that point, which for a `1delta`-tagged source is
+  // the stored (already collision-suffixed) string — hence both forms.
+  'Tokenised GBP::TGBP': { base: 'GBP' },
+  'Tokenised GBP::tGBP': { base: 'GBP' },
+  // Splinter groups the phantom address forced the real token into. They disappear once
+  // the blacklisted twin is out of the PUBLISHED lists (which the generator re-seeds from),
+  // so these are transitional — safe to drop after a full CI cycle.
+  'Tokenised GBP::TGBP::1::0': { base: 'GBP' },
+  'Tokenised GBP::TGBP::56::0': { base: 'GBP' },
+  'Tokenised GBP::TGBP::8453::0': { base: 'GBP' },
+  'Tokenised GBP::TGBP::43114::0': { base: 'GBP' },
 }
 
 function serialize(map: StablecoinGroupMap): string {

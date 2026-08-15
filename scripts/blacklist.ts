@@ -161,4 +161,12 @@ export const GENERAL_BLACKLIST = [
   '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   '0x2222222222222222222222222222222222222222',
   '0x0000000000000000000000000000000000000000',
+  // Phantom "Tokenised GBP" — a digit transposition of the real tGBP address
+  // (…bed1f519… mistyped as …bedf1519…). Verified undeployed via eth_getCode on
+  // 1/56/137/8453/43114: no code anywhere, while the real address carries the same
+  // 2739-byte deterministic deployment on all five. It is general (not per-chain)
+  // because the bad address was published for every one of those chains, and it
+  // squatted the canonical `Tokenised GBP::TGBP` group, forcing the REAL token into
+  // suffixed splinter groups (`::1::0`, `::56::0`, …).
+  '0x27f6c8289550fce67f6b50bedf1519966afe5287',
 ]
