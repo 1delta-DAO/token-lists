@@ -3996,7 +3996,12 @@
       "assetGroup": "Resolv USD::USR",
       "currencyId": "Resolv USD::USR",
       "props": {
-        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": {
+          "score": 5,
+          "category": "COMPROMISED",
+          "source": "whitelist"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x3b4575e689ded21caad31d64c4df1f10f3b2cedf": {
@@ -5303,7 +5308,10 @@
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/USDp.svg",
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x9b3a8f7cec208e247d97dee13313690977e24459": {
       "chainId": "999",
