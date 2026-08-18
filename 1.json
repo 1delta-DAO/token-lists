@@ -5768,7 +5768,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8fc96c8f-68b5-4e9c-9c12-6d7191f99fa1.svg",
       "assetGroup": "YT siUSD (iUSD) Ethereum::YT-siUSD-22OCT2026",
       "currencyId": "YT siUSD (iUSD) Ethereum::YT-siUSD-22OCT2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x1f34887b270bfaf56cf7973572654874c8ed740e",
+          "expiry": 1792627200,
+          "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+          "ptAddress": "0xe3cdf5b8d7aedfc9f768dbdcc334146fae989188",
+          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920"
+        }
+      }
     },
     "0x30ea2e13ffcdd9ec18335f4d10181eb14a6d5498": {
       "chainId": "1",
@@ -25906,7 +25915,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/4b010b4f-d77a-4386-ae32-cd22b30a8bb8.svg",
       "assetGroup": "PT siUSD (iUSD) Ethereum::PT-siUSD-22OCT2026",
       "currencyId": "PT siUSD (iUSD) Ethereum::PT-siUSD-22OCT2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x1f34887b270bfaf56cf7973572654874c8ed740e",
+          "expiry": 1792627200,
+          "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+          "ytAddress": "0x30aa5125e9f3d958911b180e1bbc83d7086e6a7e",
+          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920"
+        }
+      }
     },
     "0xe48bead425cdc399540e27a6335a2f8cdb4ab9bc": {
       "chainId": "1",
@@ -29298,12 +29316,7 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" }
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xca30c93b02514f86d5c86a6e375e3a330b435fb5": {
@@ -29462,12 +29475,7 @@
           "subType": "money-market",
           "issuer": "circle"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" }
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xac28c9178acc8ba4a11a29e013a3a2627086e422": {
@@ -35257,8 +35265,7 @@
           "score": 2,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        },
-        "stablecoin": { "base": "USD" }
+        }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -63040,7 +63047,8 @@
       "symbol": "PAR",
       "logoURI": "https://assets.coingecko.com/coins/images/14153/thumb/par_round_200.png?1696513872",
       "assetGroup": "Parallel::PAR",
-      "currencyId": "Parallel::PAR"
+      "currencyId": "Parallel::PAR",
+      "props": { "stablecoin": { "base": "EUR" } }
     },
     "0x049715c70fdbdd2be4814f76a53dc3d6f4367756": {
       "chainId": "1",
@@ -68628,7 +68636,8 @@
       "symbol": "EUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/31603/thumb/eusd.png?1696530419",
       "assetGroup": "eUSD::EUSD",
-      "currencyId": "eUSD::EUSD"
+      "currencyId": "eUSD::EUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x7ad16874759348f04b6b6119463d66c07ae54899": {
       "chainId": "1",
@@ -70125,7 +70134,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/35358/thumb/WUSD%282%29.png?1715042139",
       "assetGroup": "Worldwide USD::WUSD",
       "currencyId": "Worldwide USD::WUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xa922a70569a7555518bf4ded5094661a965e23ca": {
       "chainId": "1",
@@ -72594,7 +72606,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/28254/thumb/Xai_logo.png?1696527256",
       "assetGroup": "XAI Stablecoin::XAI",
       "currencyId": "XAI Stablecoin::XAI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xe469699f617bfd0fbffcd575970d34c2cecffa9f": {
       "chainId": "1",
@@ -80920,7 +80935,8 @@
           "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x6a159543abfc7baf816fdbc99efd48e4ee7acc63": {
@@ -87248,7 +87264,12 @@
       "currencyId": "Resolv USD::USR",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x9ce84f6a69986a83d92c324df10bc8e64771030f": {
@@ -88188,7 +88209,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xaeb3607ec434454ceb308f5cd540875efb54309a": {
       "chainId": "1",
@@ -88476,7 +88500,12 @@
       "assetGroup": "f(x) Protocol fxUSD::FXUSD",
       "currencyId": "f(x) Protocol fxUSD::FXUSD",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xb8690004604b0352b3832408ba7e02fe717e9cfd": {
@@ -88818,7 +88847,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38039/thumb/usdz-image-200x200.png?1716334412",
       "assetGroup": "Anzen USDz::USDZ",
       "currencyId": "Anzen USDz::USDZ",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x986ee2b944c42d017f52af21c4c69b84dbea35d8": {
       "chainId": "1",
@@ -91338,7 +91370,8 @@
       "symbol": "EUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/32422/thumb/eUSD.png?1733063494",
       "assetGroup": "ARYZE eUSD::EUSD",
-      "currencyId": "ARYZE eUSD::EUSD"
+      "currencyId": "ARYZE eUSD::EUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x83fedbc0b85c6e29b589aa6bdefb1cc581935ecd": {
       "chainId": "1",
@@ -98092,7 +98125,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/55085/thumb/Figma_Group_2087326928.png?1743664857",
       "assetGroup": "Aegis YUSD::YUSD",
       "currencyId": "Aegis YUSD::YUSD",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x8e0b3e3cb4468b6aa07a64e69deb72aea8eddc6f": {
       "chainId": "1",
@@ -101390,7 +101426,8 @@
       "symbol": "USDP",
       "logoURI": "https://assets.coingecko.com/coins/images/13234/large/USDP.png?1606579598",
       "assetGroup": "USDP Stablecoin::USDP",
-      "currencyId": "USDP Stablecoin::USDP"
+      "currencyId": "USDP Stablecoin::USDP",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x0fe629d1e84e171f8ff0c1ded2cc2221caa48a3f": {
       "chainId": "1",
@@ -104235,7 +104272,8 @@
       "symbol": "USP",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x97ccc1c046d067ab945d3cf3cc6920d3b1e54c88.png",
       "assetGroup": "Pareto synthetic dollar USP::USP",
-      "currencyId": "Pareto synthetic dollar USP::USP"
+      "currencyId": "Pareto synthetic dollar USP::USP",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x93b346b6bc2548da6a1e7d98e9a421b42541425b": {
       "chainId": "1",
@@ -128790,7 +128828,10 @@
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/USDp.svg",
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x0d45b129dc868963025db79a9074ea9c9e32cae4": {
       "chainId": "1",
@@ -131023,7 +131064,8 @@
       "symbol": "CUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68272/thumb/cUSD_ab_500%C3%97500.png?1755232868",
       "assetGroup": "Cap USD::CUSD",
-      "currencyId": "Cap USD::CUSD"
+      "currencyId": "Cap USD::CUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x58412ae274f2764b71c66315d97662d47d930d94": {
       "chainId": "1",
@@ -132591,7 +132633,8 @@
           "score": 2,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x2c431766e48ec4a17dc052d9d3fef6b6a9ae8d62": {
@@ -136127,7 +136170,8 @@
       "symbol": "JPYC",
       "logoURI": "https://assets.coingecko.com/coins/images/70314/thumb/JPYC_400x400.jpg?1761556080",
       "assetGroup": "JPY Coin::JPYC",
-      "currencyId": "JPY Coin::JPYC"
+      "currencyId": "JPY Coin::JPYC",
+      "props": { "stablecoin": { "base": "JPY" } }
     },
     "0xe90fe2de4a415ad48b6dcec08ba6ae98231948ac": {
       "chainId": "1",
@@ -137044,7 +137088,7 @@
       "address": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
       "symbol": "tGBP",
       "logoURI": "https://assets.coingecko.com/coins/images/70647/thumb/tgbp-square.png?1762953800",
-      "assetGroup": "Tokenised GBP::tGBP",
+      "assetGroup": "Tokenised GBP::TGBP",
       "currencyId": "Tokenised GBP::tGBP",
       "props": { "stablecoin": { "base": "GBP" } }
     },
@@ -137130,7 +137174,8 @@
       "symbol": "AUDM",
       "logoURI": "https://assets.coingecko.com/coins/images/70943/thumb/AUDM-Logo.png?1764718671",
       "assetGroup": "Macropod::AUDM",
-      "currencyId": "Macropod::AUDM"
+      "currencyId": "Macropod::AUDM",
+      "props": { "stablecoin": { "base": "AUD" } }
     },
     "0x6b419b281491473da2948b23fcb42f80e4ef2529": {
       "chainId": "1",
@@ -137396,7 +137441,8 @@
       "symbol": "DUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/71110/thumb/dusd.png?1765813034",
       "assetGroup": "Alto DUSD::DUSD",
-      "currencyId": "Alto DUSD::DUSD"
+      "currencyId": "Alto DUSD::DUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x76d935320123a60c9b22a19fdb3ae22a7e9b2152": {
       "chainId": "1",
@@ -137497,7 +137543,8 @@
       "symbol": "msUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x4ba01f22827018b4772cd326c7627fb4956a7c00.png",
       "assetGroup": "msUSD::msUSD",
-      "currencyId": "msUSD::msUSD"
+      "currencyId": "msUSD::msUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x890a5122aa1da30fec4286de7904ff808f0bd74a": {
       "chainId": "1",
@@ -138544,7 +138591,8 @@
       "symbol": "EUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/71602/thumb/eUSD.png?1768507474",
       "assetGroup": "eUSD::EUSD::1::0",
-      "currencyId": "eUSD::EUSD"
+      "currencyId": "eUSD::EUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x33b604f08500ef05a38e59c10dcc5a50928813e6": {
       "chainId": "1",
@@ -138594,7 +138642,8 @@
       "symbol": "DUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/53290/thumb/dUSD_Logo.png?1735997462",
       "assetGroup": "dTRINITY USD::DUSD",
-      "currencyId": "dTRINITY USD::DUSD"
+      "currencyId": "dTRINITY USD::DUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x7cb20517776636ed76b68edb3d99dcce356abf02": {
       "chainId": "1",
@@ -138673,7 +138722,8 @@
       "symbol": "AID",
       "logoURI": "https://assets.coingecko.com/coins/images/102171750/thumb/AID_2.png?1769549969",
       "assetGroup": "GAIB AID::AID",
-      "currencyId": "GAIB AID::AID"
+      "currencyId": "GAIB AID::AID",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xb3b3c527ba57cd61648e2ec2f5e006a0b390a9f8": {
       "chainId": "1",
@@ -138693,7 +138743,8 @@
       "symbol": "SOFID",
       "logoURI": "https://assets.coingecko.com/coins/images/71688/thumb/CRY25-3266080_StableCoinLogo.png?1768922282",
       "assetGroup": "SoFiUSD::SOFID",
-      "currencyId": "SoFiUSD::SOFID"
+      "currencyId": "SoFiUSD::SOFID",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xa3c1b11a1c788f41b7e3bd3afc45cdec87d31afb": {
       "chainId": "1",
@@ -139631,7 +139682,8 @@
       "symbol": "RUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102172367/thumb/RUSD_logo_200x200_px.png?1773310830",
       "assetGroup": "Royal Dollar::RUSD",
-      "currencyId": "Royal Dollar::RUSD"
+      "currencyId": "Royal Dollar::RUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xf7d85ec4e7710f71992752eac2111312e73e9c9c": {
       "chainId": "1",
@@ -139641,7 +139693,8 @@
       "symbol": "FTUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102172348/thumb/flyingtulip_ftusd_200.png?1773039176",
       "assetGroup": "Flying Tulip USD::FTUSD",
-      "currencyId": "Flying Tulip USD::FTUSD"
+      "currencyId": "Flying Tulip USD::FTUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xf1883461ec7bd883a3668749c5cf5f351080d059": {
       "chainId": "1",
@@ -140577,7 +140630,8 @@
       "symbol": "PUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102172705/thumb/Pusd.png?1774981810",
       "assetGroup": "Palm USD::PUSD",
-      "currencyId": "Palm USD::PUSD"
+      "currencyId": "Palm USD::PUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x6a547b25534234bb79ce6961a23db13de154b6f4": {
       "chainId": "1",
@@ -141807,7 +141861,8 @@
       "symbol": "U",
       "logoURI": "https://assets.coingecko.com/coins/images/71157/thumb/united-stables-logo.jpg?1766061640",
       "assetGroup": "United Stables::U",
-      "currencyId": "United Stables::U"
+      "currencyId": "United Stables::U",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x00836fe54625be242bcfa286207795405ca4fd10": {
       "chainId": "1",
@@ -142940,7 +142995,8 @@
       "symbol": "USDM",
       "logoURI": "https://assets.coingecko.com/coins/images/69955/thumb/USDm.png?1760170136",
       "assetGroup": "MegaUSD::USDM",
-      "currencyId": "MegaUSD::USDM"
+      "currencyId": "MegaUSD::USDM",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xfc347c996bd66c1d92e2045c80b413ef3fc84a90": {
       "chainId": "1",
@@ -146265,7 +146321,8 @@
       "symbol": "KRW1",
       "logoURI": "https://assets.coingecko.com/coins/images/71665/thumb/_KRW1_Logo_v1.1-01.png?1768820330",
       "assetGroup": "KRW1::KRW1",
-      "currencyId": "KRW1::KRW1"
+      "currencyId": "KRW1::KRW1",
+      "props": { "stablecoin": { "base": "KRW" } }
     },
     "0xba25d4a7106fd95dcb5ec9ce75b38fa8e75428d6": {
       "chainId": "1",
@@ -147168,6 +147225,37 @@
       "assetGroup": "FLOCK::FLOCK",
       "currencyId": "FLOCK::FLOCK"
     },
+    "0x57c3571f10767e49c9d7b60feb6c67804783b7ae": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Wren Staked tGBP",
+      "address": "0x57c3571f10767e49c9d7b60feb6c67804783b7ae",
+      "symbol": "wstGBP",
+      "logoURI": "https://etherscan.io/token/images/wren_staked_tgbp_wstgbp.svg",
+      "assetGroup": "Wren Staked tGBP::wstGBP",
+      "currencyId": "Wren Staked tGBP::wstGBP",
+      "props": { "savings": { "underlying": "tGBP", "base": "GBP" } }
+    },
+    "0xf9d82660828d8f5d121b14a9dc9c677d91f60065": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "STBL USST",
+      "address": "0xf9d82660828d8f5d121b14a9dc9c677d91f60065",
+      "symbol": "USST",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175554/thumb/USST_.jpg?1786822508",
+      "assetGroup": "STBL USST::USST",
+      "currencyId": "STBL USST::USST"
+    },
+    "0x3cdb41027d61c413e064e84d9c21812b6ef004f1": {
+      "chainId": "1",
+      "decimals": 9,
+      "name": "Prometheus",
+      "address": "0x3cdb41027d61c413e064e84d9c21812b6ef004f1",
+      "symbol": "PROMETHEUS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175555/thumb/WXxf6QWQ.jpg?1786822701",
+      "assetGroup": "Prometheus::PROMETHEUS",
+      "currencyId": "Prometheus::PROMETHEUS"
+    },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
       "decimals": 18,
@@ -147181,17 +147269,6 @@
         "isNative": true,
         "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
       }
-    },
-    "0x57c3571f10767e49c9d7b60feb6c67804783b7ae": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Wren Staked tGBP",
-      "address": "0x57c3571f10767e49c9d7b60feb6c67804783b7ae",
-      "symbol": "wstGBP",
-      "logoURI": "https://etherscan.io/token/images/wren_staked_tgbp_wstgbp.svg",
-      "assetGroup": "Wren Staked tGBP::wstGBP",
-      "currencyId": "Wren Staked tGBP::wstGBP",
-      "props": { "savings": { "underlying": "tGBP", "base": "GBP" } }
     }
   },
   "mainTokens": [
