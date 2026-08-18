@@ -98,8 +98,16 @@ const has =
 /** ETF / index vehicle detector (routes tokenized equities into the `fund` bucket). */
 const isEtf = has('etf', 's&p', 'nasdaq', 'msci', ' index', 'core s&p', 'ftse', 'russell', 'qqq', 'spdr', 'ucits')
 
-/** Pendle principal/yield/standardized-yield wrappers are handled by the pendle props. */
-function isPendleWrapper(_name: string, symbol: string): boolean {
+/**
+ * Principal / yield / standardized-yield wrappers, which carry their own props
+ * (`props.pendle`, `props.spectra`) and must not be auto-classified as RWA or
+ * LST from the underlying's name.
+ *
+ * The test is a symbol PREFIX and therefore protocol-agnostic: Spectra spells
+ * its legs `PT-…` / `YT-…` exactly as Pendle does, so both are covered by the
+ * one rule and neither needs an arm of its own.
+ */
+function isPrincipalTokenWrapper(_name: string, symbol: string): boolean {
   const s = symbol.toUpperCase()
   return s.startsWith('PT-') || s.startsWith('YT-') || s.startsWith('SY-')
 }
@@ -428,7 +436,7 @@ export function classifyRwaLst(token: { name?: string; symbol?: string }): RwaLs
   const symbol = token.symbol ?? ''
   if (!name && !symbol) return null
   if (EXCLUDED_SYMBOLS.has(norm(symbol))) return null
-  if (isPendleWrapper(name, symbol)) return null
+  if (isPrincipalTokenWrapper(name, symbol)) return null
   if (isDerivativeWrapper(name)) return null
 
   for (const rule of ALL_RULES) {

@@ -752,6 +752,14 @@ export const PENDLE_LIST: ArbitraryTokenList = {
   access: 'direct',
 }
 
+// Spectra PT/YT/IBT, same mechanism as PENDLE_LIST and placed beside it so its
+// `props.spectra` wins the first-list-wins props merge. The two never collide:
+// a principal token belongs to exactly one protocol.
+export const SPECTRA_LIST: ArbitraryTokenList = {
+  url: 'file://' + path.resolve(__dirname, 'spectra/spectra.json'),
+  access: 'direct',
+}
+
 // RWA and LST are categorically separate maps but handled identically. Both are placed
 // early so their `props.rwa` / `props.lst` win the first-list-wins props merge in the
 // generator (same pattern as PENDLE_LIST).
@@ -767,6 +775,7 @@ export const LST_LIST: ArbitraryTokenList = {
 
 export const ALL_LISTS: ArbitraryTokenList[] = [
   PENDLE_LIST,
+  SPECTRA_LIST,
   RWA_LIST,
   LST_LIST,
   ...ONE_DELTA_LISTS,

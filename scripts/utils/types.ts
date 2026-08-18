@@ -207,6 +207,31 @@ export interface TokenProps {
     /** Whether the token has expired */
     expired?: boolean
   }
+  /**
+   * Spectra V2 yield tokenisation — the same instrument family as
+   * {@link TokenProps.pendle}, over a rate-adjusted Curve StableSwap-NG pool.
+   *
+   * Note the deliberate asymmetry with `pendle`: there is **no `expired`
+   * flag**. A generated boolean is only as fresh as the last regeneration, so a
+   * PT that matures the day after a run keeps advertising itself as live —
+   * compare `maturity` against the clock instead.
+   */
+  spectra?: {
+    /** `PT` — the fixed-rate leg. `YT` — the floating leg. `IBT` — the wrapper. */
+    tokenType: 'PT' | 'YT' | 'IBT'
+    /** The Curve StableSwap-NG pool the PT trades on. */
+    poolAddress?: string
+    ptAddress?: string
+    ytAddress?: string
+    /** The interest-bearing token the PT is minted from (Pendle's SY analogue). */
+    ibtAddress?: string
+    /** The vault behind a `Spectra4626Wrapper` IBT. */
+    baseIbtAddress?: string
+    /** What the PT redeems for at maturity. */
+    underlyingAsset?: string
+    /** Maturity, unix SECONDS. */
+    maturity?: number
+  }
   /** Real-world-asset classification (tokenized off-chain assets) */
   rwa?: {
     /** coarse, stable class used for filtering */

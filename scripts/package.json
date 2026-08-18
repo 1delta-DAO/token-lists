@@ -5,6 +5,7 @@
   "scripts": {
     "permits": "tsx permit/scrape_permit.ts",
     "pendle": "tsx pendle/pendle.ts",
+    "spectra": "tsx spectra/spectra.ts",
     "rwa": "tsx rwa/rwa.ts",
     "lst": "tsx lst/lst.ts",
     "risk": "tsx risk/risk.ts",
@@ -17,7 +18,7 @@
     "generate:cached": "GEN_CACHE=1 tsx generateTokenMap.script.ts",
     "regen": "GEN_CACHE=1 tsx generateTokenMap.script.ts && npm run format",
     "portal": "tsx portalTokens.script.ts",
-    "generate:formatted": "npm run pendle && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run savings && npm run generate && npm run format"
+    "generate:formatted": "npm run pendle && npm run spectra && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run savings && npm run generate && npm run format"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
