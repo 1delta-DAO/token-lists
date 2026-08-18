@@ -72,11 +72,9 @@ export interface SpectraMarket {
   tags?: string[]
 }
 
-const isAddress = (v: unknown): v is string =>
-  typeof v === 'string' && /^0x[0-9a-fA-F]{40}$/.test(v)
+const isAddress = (v: unknown): v is string => typeof v === 'string' && /^0x[0-9a-fA-F]{40}$/.test(v)
 
-const lower = (v: unknown): string | undefined =>
-  isAddress(v) ? v.toLowerCase() : undefined
+const lower = (v: unknown): string | undefined => (isAddress(v) ? v.toLowerCase() : undefined)
 
 /**
  * Is this IBT Spectra's own `Spectra4626Wrapper`, rather than a third-party
