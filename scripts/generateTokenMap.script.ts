@@ -174,7 +174,12 @@ async function readTokenLists(): Promise<{
         data = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
       } else {
         const cacheFile = listCacheFile(list)
-        if (USE_LIST_CACHE && fs.existsSync(cacheFile)) {
+        // The repo's own published lists are NEVER served from cache. They are the only
+        // source carrying tokens added by `npm run onchain` or by hand — nothing else
+        // lists them — so a snapshot taken before the last push silently deletes them on
+        // the next `regen`. The cache exists for the ~100 slow, rate-limited third-party
+        // sources; re-fetching ~140 raw.githubusercontent files is cheap by comparison.
+        if (USE_LIST_CACHE && !is1delta && fs.existsSync(cacheFile)) {
           // Cached mode (GEN_CACHE=1): reuse the last fetch — skips network AND the rate-limit waits.
           data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
         } else {
