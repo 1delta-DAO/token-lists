@@ -21,6 +21,13 @@ export const BLACKLIST_PER_CHAIN = {
     '0xd6a1147666f6e4d7161caf436d9923d44d901112', // yb-cbBTC legacy
     '0x6095a220c5567360d459462a25b1ad5aead45204', // yb-WBTC legacy
     '0x2b513ebe7070cff91cf699a0bfe5075020c732ff', // yb-tBTC legacy
+    // Amino pre-migration contract. Identical name "Amino", symbol "AMINO" and
+    // decimals to the live token at 0x1ba3ccb9..., so both collapse into the same
+    // `Amino::AMINO` currencyId and are indistinguishable to a consumer. CoinGecko
+    // dropped this address when the project migrated (the live one is `amino-2`,
+    // carrying the migration notice); it is the same superseded-generation problem
+    // as the Yield Basis markets above.
+    '0x4dfd742c6e5e28f11bcbcf6c5e51a965d15ea315', // Amino (pre-migration)
   ],
   [Chain.ARBITRUM_ONE]: [
     // Not a token at all: only `decimals()` (=8) answers, while symbol(),
