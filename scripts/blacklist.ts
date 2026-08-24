@@ -23,6 +23,15 @@ export const BLACKLIST_PER_CHAIN = {
     '0x2b513ebe7070cff91cf699a0bfe5075020c732ff', // yb-tBTC legacy
   ],
   [Chain.ARBITRUM_ONE]: [
+    // Not a token at all: only `decimals()` (=8) answers, while symbol(),
+    // name() and totalSupply() all revert — the shape of a Chainlink-style
+    // price feed, not an ERC20. It was published as symbol/name "UNKNOWN",
+    // which made it squat the `UNKNOWN::UNKNOWN` group — a group key every
+    // future unnameable token would also land in, merging unrelated addresses
+    // into one pricing identity downstream (yield-tracer joins prices and
+    // intrinsic yields on assetGroup). Same failure mode as the phantom TGBP
+    // entry in GENERAL_BLACKLIST.
+    '0xf8b3fa720a9cd8abeed5a81f11f80cd8f93e6b57',
     '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', // fake WETH
     '0x3d19a8b57e8082c4bbd5e068016295cfdb255e6a', // fake rsETH (impostor)
     '0x47973ada5cd8ead11bfec6af139177d801dec0c2', // fake rswETH (impostor)
@@ -154,6 +163,52 @@ export const GROUP_HARD_SETTER: { [c: string | number]: { [a: string]: string[] 
       '0x0000000000000000000000000000000000001010', // MATIC
     ],
   },
+}
+
+/**
+ * Symbols that mean "metadata resolution failed", not a ticker. They must never
+ * reach a published list, and the reason is the GROUP, not the cosmetics:
+ * `currencyId`/`assetGroup` are built as `name::symbol`, so every token that
+ * fails to resolve collapses into the SAME key (`UNKNOWN::UNKNOWN`, `0x::0x`).
+ * Consumers group cross-chain identity by that key — yield-tracer joins prices
+ * and intrinsic yields on it — so two unrelated addresses sharing a placeholder
+ * group share one price.
+ *
+ * `"0x"` specifically is an upstream multicall stringifying the empty return
+ * data of a REVERTED `symbol()` call, so it marks a contract that is usually not
+ * an ERC20 at all (oracles and adapters answer `decimals()` and revert the rest).
+ *
+ * Matched on the SYMBOL only, and only as a whole-string, case-folded equality.
+ * Every looser formulation was tried against the 41k published entries and each
+ * one deleted real tokens:
+ *   - flagging placeholder NAMES would drop ELDE (name is a raw address) and
+ *     0x0.ai — a usable symbol with a bad name is a curation gap, not a
+ *     non-token, and the group key survives it;
+ *   - a `/^0x[0-9a-f]+$/` "hex blob" test matches the real tickers `0x0`,
+ *     `0x4444` and the name `0xDEFCAFE`;
+ *   - adding `null` would delete NULL MATRIX (4 chains) and Base's NULL, and
+ *     `test` / `tbd` are likewise live symbols.
+ * None of the words below currently appears as a symbol anywhere in the lists,
+ * so this rule removes nothing that exists today — it only stops the next one.
+ */
+const PLACEHOLDER_SYMBOLS = new Set([
+  'unknown',
+  'unknown token',
+  'unk',
+  'n/a',
+  'na',
+  'none',
+  'undefined',
+  '0x',
+  '?',
+  '-',
+])
+
+export function isUnnamedToken(symbol: unknown, name: unknown): boolean {
+  const s = String(symbol ?? '').trim()
+  const n = String(name ?? '').trim()
+  if (s === '' && n === '') return true
+  return PLACEHOLDER_SYMBOLS.has(s.toLowerCase())
 }
 
 /** Ether placeholders */

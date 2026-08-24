@@ -3,7 +3,14 @@ import * as fs from 'fs'
 import { AutoGenHelpers } from './utils'
 import { accessListUnfiltered, ALL_LISTS, defaultmutateEntry } from './externalLists'
 
-import { BLACKLIST_PER_CHAIN, GENERAL_BLACKLIST, GROUP_BLACKLIST, GROUP_HARD_SETTER, NATIVE_ERC20 } from './blacklist'
+import {
+  BLACKLIST_PER_CHAIN,
+  GENERAL_BLACKLIST,
+  GROUP_BLACKLIST,
+  GROUP_HARD_SETTER,
+  isUnnamedToken,
+  NATIVE_ERC20,
+} from './blacklist'
 import { isAddress, zeroAddress } from 'viem'
 import { PRESET_SYMBOLS } from './presets'
 import { FUEL_MAPPEDS } from './utils/data/knownAssets'
@@ -243,9 +250,19 @@ async function readTokenLists(): Promise<{
               const chainId = AutoGenHelpers.safeparseChainId(tokenInList.chainId)
               if (!BANNED_NETWORKS.includes(chainId))
                 if (ALL_NETWORKS.includes(chainId as any)) {
-                  /** Only proceed if asset is not blacklisted */
+                  /**
+                   * Only proceed if asset is not blacklisted, and is actually
+                   * NAMED. An unnamed token is dropped by rule rather than by
+                   * address because the failure keeps producing new ones — and
+                   * because what it costs is not cosmetic: its `name::symbol`
+                   * group key is shared by every other token that failed to
+                   * resolve. See isUnnamedToken.
+                   */
                   // @ts-ignore
-                  if (!BLACKLIST_PER_CHAIN[chainId]?.includes(lcAddress)) {
+                  if (
+                    !BLACKLIST_PER_CHAIN[chainId]?.includes(lcAddress) &&
+                    !isUnnamedToken(parsedSymbol, tokenInListName)
+                  ) {
                     // initialize lists
                     if (!listOfLists[chainId]) listOfLists[chainId] = {}
                     if (!listOfMainTokens[chainId]) listOfMainTokens[chainId] = []
