@@ -66,7 +66,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/93b44448-6f43-4cbe-8b33-8cbbf1573ecb.svg",
       "assetGroup": "PT aUSDG (USDG) Ethereum::PT-aEthUSDG-20AUG2026",
       "currencyId": "PT aUSDG (USDG) Ethereum::PT-aEthUSDG-20AUG2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": { "pendle": { "tokenType": "PT", "expired": true } }
     },
     "0x012badcc6e824c2ea32bd5367ebda3be3402c9c5": {
       "chainId": "1",
@@ -4254,7 +4254,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f8158220-2d2d-439c-87b4-b935b84cbc75.svg",
       "assetGroup": "YT aUSDG (USDG) Ethereum::YT-aEthUSDG-20AUG2026",
       "currencyId": "YT aUSDG (USDG) Ethereum::YT-aEthUSDG-20AUG2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": { "pendle": { "tokenType": "YT", "expired": true } }
     },
     "0x253008ba4ae2f3e6488dc998a5321d4eb1a0c905": {
       "chainId": "1",
@@ -4592,6 +4592,17 @@
         },
         "risk": { "score": 4, "source": "default" }
       }
+    },
+    "0x2875133b91909eb332fcf1e8664d0965a5fc5ca9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT STRCx (STRCx) Ethereum",
+      "address": "0x2875133b91909eb332fcf1e8664d0965a5fc5ca9",
+      "symbol": "YT-STRCx-26NOV2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/df7066db-0ddc-475e-b8d6-4f5ddaddbe46.svg",
+      "assetGroup": "YT STRCx (STRCx) Ethereum::YT-STRCx-26NOV2026",
+      "currencyId": "YT STRCx (STRCx) Ethereum::YT-STRCx-26NOV2026",
+      "props": { "pendle": { "tokenType": "YT" } }
     },
     "0x28ce264d0938c1051687febdcefacc2242ba9e0e": {
       "chainId": "1",
@@ -5072,7 +5083,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/050758db-a841-4ce4-9ebe-9af83d6ffd7d.svg",
       "assetGroup": "PT srUSDat (USDat) Ethereum::PT-srUSDat-14JAN2027",
       "currencyId": "PT srUSDat (USDat) Ethereum::PT-srUSDat-14JAN2027",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xdf2e3e0250f679d6284a39a0c1a16a850a9d7aa6",
+          "expiry": 1799884800,
+          "underlyingAsset": "0xfaa9a0e1db9e22ae3a20b2b58a68dc24d053d066",
+          "ytAddress": "0xf26e7953bab8b301945bb551b4607dffa8500de0",
+          "syAddress": "0x9d0fc59f88acb85520a8cfb74c7fe141d8563185"
+        }
+      }
     },
     "0x2c4413364623d6ac247e0af629cec8acc596f646": {
       "chainId": "1",
@@ -5606,7 +5626,8 @@
           "expiry": 1787184000,
           "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
           "ptAddress": "0xbb6cdb98a2f8a9fb431fd1073eaa0a51422ac30d",
-          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920"
+          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" }
       }
@@ -6743,7 +6764,7 @@
       "address": "0x39d979f73ced09b3e8821478e86f9498d9816d54",
       "symbol": "YT-STRCx-26NOV2026",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/df7066db-0ddc-475e-b8d6-4f5ddaddbe46.svg",
-      "assetGroup": "YT STRCx (STRCx) Ethereum::YT-STRCx-26NOV2026",
+      "assetGroup": "YT STRCx (STRCx) Ethereum::YT-STRCx-26NOV2026::1::0",
       "currencyId": "YT STRCx (STRCx) Ethereum::YT-STRCx-26NOV2026",
       "props": { "pendle": { "tokenType": "YT" } }
     },
@@ -6910,6 +6931,17 @@
       "assetGroup": "PT slpUSDC (lpUSD) Ethereum::PT-slpUSDC-25SEP2025",
       "currencyId": "PT slpUSDC (lpUSD) Ethereum::PT-slpUSDC-25SEP2025",
       "props": { "pendle": { "tokenType": "PT", "expired": true } }
+    },
+    "0x3aaaf43a1f8d327fdf24dc93654eb17e319883c5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "STRCx Ethereum",
+      "address": "0x3aaaf43a1f8d327fdf24dc93654eb17e319883c5",
+      "symbol": "SY-STRCx",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/aa64caa5-54ac-4d32-af13-b484a082d0fe.svg",
+      "assetGroup": "STRCx Ethereum::SY-STRCx::1::0",
+      "currencyId": "STRCx Ethereum::SY-STRCx",
+      "props": { "pendle": { "tokenType": "SY" } }
     },
     "0x3ade21ebcf2971e62a0155edfb9c7d16698debef": {
       "chainId": "1",
@@ -9035,16 +9067,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e462d1b6-0d73-4a93-b3f9-a8342a099270.svg",
       "assetGroup": "YT tmvUSDC (USDC) Ethereum::YT-tmvUSDC-29OCT2026",
       "currencyId": "YT tmvUSDC (USDC) Ethereum::YT-tmvUSDC-29OCT2026",
-      "props": {
-        "pendle": {
-          "tokenType": "YT",
-          "marketAddress": "0x9dbb0d00f965e22f51434c0ea2c2e09dfbcffb62",
-          "expiry": 1793232000,
-          "underlyingAsset": "0x697c54a84d83f37380d034e2bfc6f7ce8d89f4ee",
-          "ptAddress": "0xdc5c65c0ca7948fb3013f5ab9435bba02a2ac4e8",
-          "syAddress": "0xb4433d1bf3084e4e8ee1cf24ae2c580e6c45ebee"
-        }
-      }
+      "props": { "pendle": { "tokenType": "YT" } }
     },
     "0x4ca48e7dd3970f96ee74d6a573ca5678ea1eb31b": {
       "chainId": "1",
@@ -10156,6 +10179,17 @@
         "risk": { "score": 4, "source": "default" }
       }
     },
+    "0x54c398b3dff91759119f83965cfc2cd1c4f7bc75": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "NGI+ Ethereum",
+      "address": "0x54c398b3dff91759119f83965cfc2cd1c4f7bc75",
+      "symbol": "SY-NGI+",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/9e77e045-23bc-4eed-aa8e-6d7783cae949.svg",
+      "assetGroup": "NGI+ Ethereum::SY-NGI+",
+      "currencyId": "NGI+ Ethereum::SY-NGI+",
+      "props": { "pendle": { "tokenType": "SY" } }
+    },
     "0x5510b080449d5e3bf345b6635ed40a35b36b081f": {
       "chainId": "1",
       "decimals": 18,
@@ -10607,6 +10641,17 @@
         },
         "risk": { "score": 4, "source": "default" }
       }
+    },
+    "0x599ef448e1d3378ed2dd7982d4b00615d9e5bf77": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT STRCx (STRCx) Ethereum",
+      "address": "0x599ef448e1d3378ed2dd7982d4b00615d9e5bf77",
+      "symbol": "PT-STRCx-26NOV2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e05e1afd-3dbd-492e-9be0-9415ff6cdf72.svg",
+      "assetGroup": "PT STRCx (STRCx) Ethereum::PT-STRCx-26NOV2026",
+      "currencyId": "PT STRCx (STRCx) Ethereum::PT-STRCx-26NOV2026",
+      "props": { "pendle": { "tokenType": "PT" } }
     },
     "0x59bc9fae5d62b19d4f8d07d758047acb9ee19d34": {
       "chainId": "1",
@@ -16431,6 +16476,17 @@
         "risk": { "score": 4, "source": "default" }
       }
     },
+    "0x90b714cd95a09f555bb58f28316a80534a0c44ef": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "PT NGI+ (USDC) Ethereum",
+      "address": "0x90b714cd95a09f555bb58f28316a80534a0c44ef",
+      "symbol": "PT-NGI+-10DEC2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/33b51426-e7dc-4c6a-a4de-b1cd0030e904.svg",
+      "assetGroup": "PT NGI+ (USDC) Ethereum::PT-NGI+-10DEC2026",
+      "currencyId": "PT NGI+ (USDC) Ethereum::PT-NGI+-10DEC2026",
+      "props": { "pendle": { "tokenType": "PT" } }
+    },
     "0x90f1935f733dd8826dca2bd01ccfc600f20e978e": {
       "chainId": "1",
       "decimals": 18,
@@ -16549,6 +16605,17 @@
         },
         "risk": { "score": 4, "source": "default" }
       }
+    },
+    "0x92703a10c679fe7e1c8e9e454c0f597bcebd6d49": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "YT NGI+ (USDC) Ethereum",
+      "address": "0x92703a10c679fe7e1c8e9e454c0f597bcebd6d49",
+      "symbol": "YT-NGI+-10DEC2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ff432c2b-ca9f-4a52-bf43-49d37dcdac18.svg",
+      "assetGroup": "YT NGI+ (USDC) Ethereum::YT-NGI+-10DEC2026",
+      "currencyId": "YT NGI+ (USDC) Ethereum::YT-NGI+-10DEC2026",
+      "props": { "pendle": { "tokenType": "YT" } }
     },
     "0x92899026d06343929c61e0987e09caeea6873fe5": {
       "chainId": "1",
@@ -18026,11 +18093,11 @@
       "props": {
         "pendle": {
           "tokenType": "SY",
-          "marketAddress": "0x4237a8acbd0b5a2dec4aa83b1fd83f20162d02b8",
-          "expiry": 1787788800,
+          "marketAddress": "0xdf2e3e0250f679d6284a39a0c1a16a850a9d7aa6",
+          "expiry": 1799884800,
           "underlyingAsset": "0xfaa9a0e1db9e22ae3a20b2b58a68dc24d053d066",
-          "ptAddress": "0x2d433b943fb8c015ae409444b7f960ed288082b4",
-          "ytAddress": "0xe4ef2a128226bf026493ef40a189865acd1f0cd8"
+          "ptAddress": "0x2c3e7c0fab3d546ea0715d2a96fbdf598711a062",
+          "ytAddress": "0xf26e7953bab8b301945bb551b4607dffa8500de0"
         }
       }
     },
@@ -20566,16 +20633,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f66fd9aa-dfa7-4344-9500-17e0fc4518fd.svg",
       "assetGroup": "tmvUSDC Ethereum::SY-tmvUSDC",
       "currencyId": "tmvUSDC Ethereum::SY-tmvUSDC",
-      "props": {
-        "pendle": {
-          "tokenType": "SY",
-          "marketAddress": "0x9dbb0d00f965e22f51434c0ea2c2e09dfbcffb62",
-          "expiry": 1793232000,
-          "underlyingAsset": "0x697c54a84d83f37380d034e2bfc6f7ce8d89f4ee",
-          "ptAddress": "0xdc5c65c0ca7948fb3013f5ab9435bba02a2ac4e8",
-          "ytAddress": "0x4c9f973bea8f5a06240200deb2dd69e4bc380b46"
-        }
-      }
+      "props": { "pendle": { "tokenType": "SY" } }
     },
     "0xb44cdbef3145c1c1e772e8228e1154c80e70618e": {
       "chainId": "1",
@@ -21400,7 +21458,8 @@
           "expiry": 1787184000,
           "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
           "ytAddress": "0x3014b2942117742840d318917a17eb256b3ea777",
-          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920"
+          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" }
       }
@@ -22981,7 +23040,7 @@
       "address": "0xca8ce1dc82916bf90e2d5e68c3e47e6ce15553ed",
       "symbol": "PT-STRCx-26NOV2026",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e05e1afd-3dbd-492e-9be0-9415ff6cdf72.svg",
-      "assetGroup": "PT STRCx (STRCx) Ethereum::PT-STRCx-26NOV2026",
+      "assetGroup": "PT STRCx (STRCx) Ethereum::PT-STRCx-26NOV2026::1::0",
       "currencyId": "PT STRCx (STRCx) Ethereum::PT-STRCx-26NOV2026",
       "props": { "pendle": { "tokenType": "PT" } }
     },
@@ -24994,16 +25053,7 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1c23613b-b651-4558-90f9-9e87689002d0.svg",
       "assetGroup": "PT tmvUSDC (USDC) Ethereum::PT-tmvUSDC-29OCT2026",
       "currencyId": "PT tmvUSDC (USDC) Ethereum::PT-tmvUSDC-29OCT2026",
-      "props": {
-        "pendle": {
-          "tokenType": "PT",
-          "marketAddress": "0x9dbb0d00f965e22f51434c0ea2c2e09dfbcffb62",
-          "expiry": 1793232000,
-          "underlyingAsset": "0x697c54a84d83f37380d034e2bfc6f7ce8d89f4ee",
-          "ytAddress": "0x4c9f973bea8f5a06240200deb2dd69e4bc380b46",
-          "syAddress": "0xb4433d1bf3084e4e8ee1cf24ae2c580e6c45ebee"
-        }
-      }
+      "props": { "pendle": { "tokenType": "PT" } }
     },
     "0xdc88cc252230375833b1afcf7b16913c16b92e11": {
       "chainId": "1",
@@ -27480,7 +27530,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/649440df-a426-4fd0-88dd-d3d8a65b6545.svg",
       "assetGroup": "YT srUSDat (USDat) Ethereum::YT-srUSDat-14JAN2027",
       "currencyId": "YT srUSDat (USDat) Ethereum::YT-srUSDat-14JAN2027",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xdf2e3e0250f679d6284a39a0c1a16a850a9d7aa6",
+          "expiry": 1799884800,
+          "underlyingAsset": "0xfaa9a0e1db9e22ae3a20b2b58a68dc24d053d066",
+          "ptAddress": "0x2c3e7c0fab3d546ea0715d2a96fbdf598711a062",
+          "syAddress": "0x9d0fc59f88acb85520a8cfb74c7fe141d8563185"
+        }
+      }
     },
     "0xf2ad4ec58033be97ec3f4f61b660156fb38ecb30": {
       "chainId": "1",
@@ -35251,6 +35310,32 @@
       "currencyId": "Wrapped Meta xStock::wMETAx",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
+    "0x6e8568ba7b43138d9210959a9523155e274550c9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SK Hynix (Anchored Tokenized Stock)",
+      "address": "0x6e8568ba7b43138d9210959a9523155e274550c9",
+      "symbol": "ASKHY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175661/thumb/coingecko-aSKHY.png?1787279624",
+      "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
+      "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0x12473790e09d415abac7441401f7abec64fa959c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SpaceX (Anchored Tokenized Stock)",
+      "address": "0x12473790e09d415abac7441401f7abec64fa959c",
+      "symbol": "ASPCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175662/thumb/coingecko-aSPCX.png?1787279738",
+      "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
+      "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
       }
     },
     "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb": {
@@ -89235,16 +89320,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/30911/thumb/OSAK_LOGO_200x200.png?1723662197",
       "assetGroup": "OSAK",
       "currencyId": "Osaka Protocol::OSAK"
-    },
-    "0x4dfd742c6e5e28f11bcbcf6c5e51a965d15ea315": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Amino",
-      "address": "0x4dfd742c6e5e28f11bcbcf6c5e51a965d15ea315",
-      "symbol": "AMINO",
-      "logoURI": "https://assets.coingecko.com/coins/images/53626/thumb/amino.jpg?1736908953",
-      "assetGroup": "Amino::AMINO",
-      "currencyId": "Amino::AMINO"
     },
     "0x2ca9242c1810029efed539f1c60d68b63ad01bfc": {
       "chainId": "1",
@@ -147896,26 +147971,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175631/thumb/coingecko-aBIL.png?1787145231",
       "assetGroup": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL",
       "currencyId": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL"
-    },
-    "0x6e8568ba7b43138d9210959a9523155e274550c9": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "SK Hynix (Anchored Tokenized Stock)",
-      "address": "0x6e8568ba7b43138d9210959a9523155e274550c9",
-      "symbol": "ASKHY",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175661/thumb/coingecko-aSKHY.png?1787279624",
-      "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
-      "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY"
-    },
-    "0x12473790e09d415abac7441401f7abec64fa959c": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "SpaceX (Anchored Tokenized Stock)",
-      "address": "0x12473790e09d415abac7441401f7abec64fa959c",
-      "symbol": "ASPCX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175662/thumb/coingecko-aSPCX.png?1787279738",
-      "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
-      "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
