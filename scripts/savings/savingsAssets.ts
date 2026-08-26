@@ -215,6 +215,17 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // distinction lives in margin-fetcher's SAVINGS_REGISTRY — this overlay
   // classifies the ASSET, which is the same asset on both chains. ---
   'Staked thUSD::STHUSD': { underlying: 'thUSD', base: 'USD' },
+  // --- Curve scrvUSD (over crvUSD) — the savings wrapper for crvUSD borrow-fee
+  // revenue. Passive by the test this list applies: deposit crvUSD, accrue a
+  // distribution released through the vault's profit-unlocking rail, redeem
+  // crvUSD, with no allocation decisions on the depositor's position.
+  //
+  // One key covers all four deployments, via the GROUP_ALIAS that folds
+  // Arbitrum/XDC's case split and Base's bridge-branded name into the chain-1
+  // form. Only Ethereum is the vault; the other three are bare bridged
+  // ERC-20s, and that distinction lives in margin-fetcher's SAVINGS_REGISTRY
+  // — this overlay classifies the ASSET, which is the same on all four. ---
+  'Savings crvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
 
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
   // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:

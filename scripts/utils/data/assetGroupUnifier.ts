@@ -174,6 +174,17 @@ export const GROUP_ALIAS: Record<string, string> = {
   // `thbillFetcher` keys its APR on the canonical group, so Monad's thBILL
   // reads 0 % intrinsic yield today.
   'thBILL::thBILL': 'Theo Short Duration US Treasury Fund::THBILL',
+  // Curve scrvUSD (Savings crvUSD) — ONE asset, THREE spellings, and the two
+  // that are not canonical hold the bridged deployments:
+  //   chain 1      Savings crvUSD::SCRVUSD              ← canonical (the vault)
+  //   42161, 50    Savings crvUSD::scrvUSD              (pure case split)
+  //   8453         Superbridge Bridged scrvUSD::SCRVUSD (bridge-branded name)
+  // Canonical = the chain-1 form, which is what the savings registry row and
+  // `scrvusdFetcher` key their intrinsic APR on, and the only deployment that
+  // is actually a vault — the other three are bare ERC-20s whose `asset()`
+  // and `totalAssets()` revert. Without these the bridged rows read 0 %.
+  'Savings crvUSD::scrvUSD': 'Savings crvUSD::SCRVUSD',
+  'Superbridge Bridged scrvUSD::SCRVUSD': 'Savings crvUSD::SCRVUSD',
   // Noon sUSN
   'Staked USN::sUSN': 'SUSN',
   // EtherFi weETH
