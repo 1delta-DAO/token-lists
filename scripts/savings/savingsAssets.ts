@@ -197,6 +197,24 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // contract holds 84,071.70 tGBP against 83,293.90 wstGBP outstanding (~1.0093 tGBP per share,
   // i.e. accrued yield) — the signature of a passive savings wrapper. ---
   'Wren Staked tGBP::wstGBP': { underlying: 'tGBP', base: 'GBP' },
+  // --- Theo sthUSD (over thUSD) — a passive staked wrapper by the test this
+  // list applies: deposit thUSD, accrue a pushed distribution, redeem thUSD,
+  // with no allocation decisions on the depositor's position.
+  //
+  // `base: 'USD'` and it is worth being explicit about why, because the yield
+  // is GOLD: thUSD is a dollar stablecoin whose return comes from gold leasing
+  // and CME futures roll. The holder has no gold exposure — only the issuer
+  // does — so this row is comparable to the other dollars here in a way
+  // Brix's lira row above is not.
+  //
+  // One assetGroup covers both deployments, and only via the GROUP_ALIAS that
+  // folds Stable's OFT spelling into Ethereum's: chain 1 stores
+  // `Staked thUSD::STHUSD`, while the 988 token answers
+  // name() == symbol() == 'sthUSD'. Ethereum is the only actual vault; the
+  // Stable token is a LayerZero OFT holding 97 % of the supply, and that
+  // distinction lives in margin-fetcher's SAVINGS_REGISTRY — this overlay
+  // classifies the ASSET, which is the same asset on both chains. ---
+  'Staked thUSD::STHUSD': { underlying: 'thUSD', base: 'USD' },
 
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
   // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:

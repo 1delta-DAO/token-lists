@@ -158,6 +158,22 @@ export const GROUP_ALIAS: Record<string, string> = {
   // ticker (Celo Dollar, Chips USD, Chad USD, SyntheX), so the qualified form
   // is the safe one either way.
   'Staked Cap USD::stcUSD': 'Staked cap USD::stcUSD',
+  // Theo sthUSD — one asset at one address on Ethereum + Stable (988) +
+  // Arbitrum + BNB + Mantle, but only Ethereum is the vault; the rest are
+  // LayerZero OFTs whose `name()` is just the ticker, so they group as
+  // `sthUSD::sthUSD` while chain 1 groups as `Staked thUSD::STHUSD`. Exactly
+  // the stcUSD split above, and with the same consequence if left alone:
+  // Stable holds 97 % of the supply and is where sthUSD is the largest Morpho
+  // collateral, so the unaliased side is the side that matters. Canonical =
+  // the chain-1 form, which is what the savings registry rows and
+  // `sthusdFetcher` key their intrinsic APR on.
+  'sthUSD::sthUSD': 'Staked thUSD::STHUSD',
+  // Theo thBILL — same address on 1 / 143 / 988 / 999 / 42161 / 8453, but the
+  // Monad row carries `name() == symbol() == 'thBILL'` while every other chain
+  // carries the fund's full name. Live consequence, not hypothetical:
+  // `thbillFetcher` keys its APR on the canonical group, so Monad's thBILL
+  // reads 0 % intrinsic yield today.
+  'thBILL::thBILL': 'Theo Short Duration US Treasury Fund::THBILL',
   // Noon sUSN
   'Staked USN::sUSN': 'SUSN',
   // EtherFi weETH
