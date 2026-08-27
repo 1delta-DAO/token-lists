@@ -527,7 +527,8 @@
           "expiry": 1787788800,
           "underlyingAsset": "0xcd7079e32bf53093f60bf973c28e5d72937c12f2",
           "ytAddress": "0x5a9d6722994ef06612d27054fef365e8e61ad6c7",
-          "syAddress": "0xc2e639ca5fcb8583bd9c85b07e21919850390f05"
+          "syAddress": "0xc2e639ca5fcb8583bd9c85b07e21919850390f05",
+          "expired": true
         }
       }
     },
@@ -802,7 +803,8 @@
           "expiry": 1787788800,
           "underlyingAsset": "0xcd7079e32bf53093f60bf973c28e5d72937c12f2",
           "ptAddress": "0x3623567972ad7f44242ec354a38bdbacfc73aa42",
-          "syAddress": "0xc2e639ca5fcb8583bd9c85b07e21919850390f05"
+          "syAddress": "0xc2e639ca5fcb8583bd9c85b07e21919850390f05",
+          "expired": true
         }
       }
     },
@@ -2397,6 +2399,27 @@
         }
       }
     },
+    "0x27e6a48b2a686c1d23db12569ab4185c408e0703": {
+      "chainId": "8453",
+      "decimals": 10,
+      "name": "Yield Token: AAPLCT(AAPLc) 2026/09/30 Base",
+      "address": "0x27e6a48b2a686c1d23db12569ab4185c408e0703",
+      "symbol": "YT-AAPLCT(AAPLc)-2026/09/30",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0x31744e44d6af88225c1dbefbe5df8308faea641b.png",
+      "assetGroup": "Yield Token: AAPLCT(AAPLc) 2026/09/30 Base::YT-AAPLCT(AAPLc)-2026/09/30",
+      "currencyId": "Yield Token: AAPLCT(AAPLc) 2026/09/30 Base::YT-AAPLCT(AAPLc)-2026/09/30",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0xbff897282390cb3e76fbb831ee2fd815f3934cde",
+          "ptAddress": "0x9ebb9230276e858efb8209618055add25a2bf41b",
+          "ytAddress": "0x27e6a48b2a686c1d23db12569ab4185c408e0703",
+          "ibtAddress": "0x31744e44d6af88225c1dbefbe5df8308faea641b",
+          "underlyingAsset": "0xb200000000000000000000c2e324d24d7eecd1fb",
+          "maturity": 1790726410
+        }
+      }
+    },
     "0x39ca7acbe5c2ab4629c8d9dae21d82ed54c82b77": {
       "chainId": "8453",
       "decimals": 18,
@@ -2457,6 +2480,27 @@
           "ibtAddress": "0xa39d400b57ed1772e9b3ec982ac433389ed2f16a",
           "underlyingAsset": "0x64fcc3a02eeeba05ef701b7eed066c6ebd5d4e51",
           "maturity": 1813104005
+        }
+      }
+    },
+    "0x9ebb9230276e858efb8209618055add25a2bf41b": {
+      "chainId": "8453",
+      "decimals": 10,
+      "name": "Principal Token: AAPLCT(AAPLc) 2026/09/30 Base",
+      "address": "0x9ebb9230276e858efb8209618055add25a2bf41b",
+      "symbol": "PT-AAPLCT(AAPLc)-2026/09/30",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0x31744e44d6af88225c1dbefbe5df8308faea641b.png",
+      "assetGroup": "Principal Token: AAPLCT(AAPLc) 2026/09/30 Base::PT-AAPLCT(AAPLc)-2026/09/30",
+      "currencyId": "Principal Token: AAPLCT(AAPLc) 2026/09/30 Base::PT-AAPLCT(AAPLc)-2026/09/30",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0xbff897282390cb3e76fbb831ee2fd815f3934cde",
+          "ptAddress": "0x9ebb9230276e858efb8209618055add25a2bf41b",
+          "ytAddress": "0x27e6a48b2a686c1d23db12569ab4185c408e0703",
+          "ibtAddress": "0x31744e44d6af88225c1dbefbe5df8308faea641b",
+          "underlyingAsset": "0xb200000000000000000000c2e324d24d7eecd1fb",
+          "maturity": 1790726410
         }
       }
     },
@@ -4725,6 +4769,84 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175178/thumb/dinari-logo-green-with-margin.png?1785403479",
       "assetGroup": "Space Exploration Technologies (Dinari Tokenized Stock)::SPCX",
       "currencyId": "Space Exploration Technologies (Dinari Tokenized Stock)::SPCX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0xb200000000000000000000c2e324d24d7eecd1fb": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Apple (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000c2e324d24d7eecd1fb",
+      "symbol": "AAPLC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175597/thumb/aapl_200x200.png?1787068801",
+      "assetGroup": "Apple (Coinbase Tokenized Stock)::AAPLC",
+      "currencyId": "Apple (Coinbase Tokenized Stock)::AAPLC",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0xb2000000000000000000002d0ba3164cc74f58b7": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Alphabet (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002d0ba3164cc74f58b7",
+      "symbol": "GOOGLC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175598/thumb/goog_200x200.png?1787068802",
+      "assetGroup": "Alphabet (Coinbase Tokenized Stock)::GOOGLC",
+      "currencyId": "Alphabet (Coinbase Tokenized Stock)::GOOGLC",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0xb20000000000000000000078ee7ce2fe4908108c": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "NVIDIA (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000078ee7ce2fe4908108c",
+      "symbol": "NVDAC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175596/thumb/nvda_200x200.png?1787068801",
+      "assetGroup": "NVIDIA (Coinbase Tokenized Stock)::NVDAC",
+      "currencyId": "NVIDIA (Coinbase Tokenized Stock)::NVDAC",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0xb2000000000000000000008bc8786b856e61707c": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Meta (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000008bc8786b856e61707c",
+      "symbol": "METAC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175599/thumb/meta_200x200.png?1787068803",
+      "assetGroup": "Meta (Coinbase Tokenized Stock)::METAC",
+      "currencyId": "Meta (Coinbase Tokenized Stock)::METAC",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0x6e8568ba7b43138d9210959a9523155e274550c9": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SK Hynix (Anchored Tokenized Stock)",
+      "address": "0x6e8568ba7b43138d9210959a9523155e274550c9",
+      "symbol": "ASKHY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175661/thumb/coingecko-aSKHY.png?1787279624",
+      "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
+      "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0x12473790e09d415abac7441401f7abec64fa959c": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SpaceX (Anchored Tokenized Stock)",
+      "address": "0x12473790e09d415abac7441401f7abec64fa959c",
+      "symbol": "ASPCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175662/thumb/coingecko-aSPCX.png?1787279738",
+      "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
+      "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
       }
@@ -7477,7 +7599,7 @@
       "address": "0x646a737b9b6024e49f5908762b3ff73e65b5160c",
       "symbol": "SCRVUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/53088/thumb/scrvUSD200x200.webp?1735205920",
-      "assetGroup": "Superbridge Bridged scrvUSD::SCRVUSD",
+      "assetGroup": "Savings crvUSD::SCRVUSD",
       "currencyId": "Superbridge Bridged scrvUSD::SCRVUSD"
     },
     "0x506beb7965fc7053059006c7ab4c62c02c2d989f": {
@@ -45156,26 +45278,6 @@
       "assetGroup": "Cluster Protocol::CP",
       "currencyId": "Cluster Protocol::CP"
     },
-    "0xb200000000000000000000c2e324d24d7eecd1fb": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Apple (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000c2e324d24d7eecd1fb",
-      "symbol": "AAPLC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175597/thumb/aapl_200x200.png?1787068801",
-      "assetGroup": "Apple (Coinbase Tokenized Stock)::AAPLC",
-      "currencyId": "Apple (Coinbase Tokenized Stock)::AAPLC"
-    },
-    "0xb2000000000000000000002d0ba3164cc74f58b7": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Alphabet (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002d0ba3164cc74f58b7",
-      "symbol": "GOOGLC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175598/thumb/goog_200x200.png?1787068802",
-      "assetGroup": "Alphabet (Coinbase Tokenized Stock)::GOOGLC",
-      "currencyId": "Alphabet (Coinbase Tokenized Stock)::GOOGLC"
-    },
     "0xf1e9baa65d418a9025e1851dd2d37f1ad208bba3": {
       "chainId": "8453",
       "decimals": 18,
@@ -45185,26 +45287,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175756/thumb/ratspeak.jpg?1787469476",
       "assetGroup": "Ratspeak::RATSPEAK",
       "currencyId": "Ratspeak::RATSPEAK"
-    },
-    "0xb20000000000000000000078ee7ce2fe4908108c": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "NVIDIA (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000078ee7ce2fe4908108c",
-      "symbol": "NVDAC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175596/thumb/nvda_200x200.png?1787068801",
-      "assetGroup": "NVIDIA (Coinbase Tokenized Stock)::NVDAC",
-      "currencyId": "NVIDIA (Coinbase Tokenized Stock)::NVDAC"
-    },
-    "0xb2000000000000000000008bc8786b856e61707c": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Meta (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000008bc8786b856e61707c",
-      "symbol": "METAC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175599/thumb/meta_200x200.png?1787068803",
-      "assetGroup": "Meta (Coinbase Tokenized Stock)::METAC",
-      "currencyId": "Meta (Coinbase Tokenized Stock)::METAC"
     },
     "0xb2000000000000000000004c27f6523082f41d01": {
       "chainId": "8453",
@@ -45266,16 +45348,6 @@
       "assetGroup": "Base Juice::BASEJUICE",
       "currencyId": "Base Juice::BASEJUICE"
     },
-    "0x6e8568ba7b43138d9210959a9523155e274550c9": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "SK Hynix (Anchored Tokenized Stock)",
-      "address": "0x6e8568ba7b43138d9210959a9523155e274550c9",
-      "symbol": "ASKHY",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175661/thumb/coingecko-aSKHY.png?1787279624",
-      "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
-      "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY"
-    },
     "0x4fc5b9f8933597d3ecf84d0611687e1dc8dd576f": {
       "chainId": "8453",
       "decimals": 18,
@@ -45296,15 +45368,875 @@
       "assetGroup": "Corn::CORN",
       "currencyId": "Corn::CORN"
     },
-    "0x12473790e09d415abac7441401f7abec64fa959c": {
+    "0x5ab000ff9b9ffe0349ce5ffa5fd86f217c3680f5": {
       "chainId": "8453",
       "decimals": 18,
-      "name": "SpaceX (Anchored Tokenized Stock)",
-      "address": "0x12473790e09d415abac7441401f7abec64fa959c",
-      "symbol": "ASPCX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175662/thumb/coingecko-aSPCX.png?1787279738",
-      "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
-      "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX"
+      "name": "The Stonks Exchange",
+      "address": "0x5ab000ff9b9ffe0349ce5ffa5fd86f217c3680f5",
+      "symbol": "STONKEX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175858/thumb/3ch0d6jb3yebllqq0y9agkhzobeg.?1787807036",
+      "assetGroup": "The Stonks Exchange::STONKEX",
+      "currencyId": "The Stonks Exchange::STONKEX"
+    },
+    "0x56ab53b77f07da3af732150e8aec4783eb5bba7d": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Umia",
+      "address": "0x56ab53b77f07da3af732150e8aec4783eb5bba7d",
+      "symbol": "UMIA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175647/thumb/coingecko-F64-option-B-green-transparent-1000.png?1787245813",
+      "assetGroup": "Umia::UMIA",
+      "currencyId": "Umia::UMIA"
+    },
+    "0xcdc7b9c54c66ebdcd791ec128d2dcdaa960daf66": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "QUDO",
+      "address": "0xcdc7b9c54c66ebdcd791ec128d2dcdaa960daf66",
+      "symbol": "QUDO",
+      "logoURI": "https://assets.coingecko.com/coins/images/54602/thumb/QUDO_Icon_Colour_%282%29.png?1740638837",
+      "assetGroup": "QUDO::QUDO",
+      "currencyId": "QUDO::QUDO"
+    },
+    "0x2e9705d95f1624fab9caaba775234571bd557f24": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "zOPAL",
+      "address": "0x2e9705d95f1624fab9caaba775234571bd557f24",
+      "symbol": "ZOPAL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175843/thumb/Token_Image.jpeg?1787733579",
+      "assetGroup": "zOPAL::ZOPAL",
+      "currencyId": "zOPAL::ZOPAL"
+    },
+    "0xb2000000000000000000004453ac8d91a9348b01": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Owl1",
+      "address": "0xb2000000000000000000004453ac8d91a9348b01",
+      "symbol": "OWL1",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175811/thumb/logo.png?1787664412",
+      "assetGroup": "Owl1::OWL1",
+      "currencyId": "Owl1::OWL1"
+    },
+    "0xa87ee81b2c0bc659307ca2d9ffdc38514dd85263": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "AntSeed",
+      "address": "0xa87ee81b2c0bc659307ca2d9ffdc38514dd85263",
+      "symbol": "ANTS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176479/thumb/antseed-logo-light.png?1787826908",
+      "assetGroup": "AntSeed::ANTS",
+      "currencyId": "AntSeed::ANTS"
+    },
+    "0x19640000000ba88d36206beb10d0e86011c8d08c": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "RALLY",
+      "address": "0x19640000000ba88d36206beb10d0e86011c8d08c",
+      "symbol": "RALLY",
+      "logoURI": "https://assets.coingecko.com/coins/images/66842/thumb/rallytoken.png?1750764317",
+      "assetGroup": "RALLY::RALLY",
+      "currencyId": "RALLY::RALLY"
+    },
+    "0xf3081494b87e8d5fb7960f066e931d1d0e6e3d61": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Bittensor",
+      "address": "0xf3081494b87e8d5fb7960f066e931d1d0e6e3d61",
+      "symbol": "TAO",
+      "logoURI": "https://assets.coingecko.com/coins/images/28452/thumb/ARUsPeNQ_400x400.jpeg?1696527447",
+      "assetGroup": "Bittensor::TAO",
+      "currencyId": "Bittensor::TAO"
+    },
+    "0x315ff3afa71d345aefc4da8e2330305af59e2c0e": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "AegisAI",
+      "address": "0x315ff3afa71d345aefc4da8e2330305af59e2c0e",
+      "symbol": "AGAI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175803/thumb/gg6AK-Qf_400x400.jpg?1787661163",
+      "assetGroup": "AegisAI::AGAI",
+      "currencyId": "AegisAI::AGAI"
+    },
+    "0x17683e492d0c8910f7c0157d04af31cb7a23ad71": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Apple aStock",
+      "address": "0x17683e492d0c8910f7c0157d04af31cb7a23ad71",
+      "symbol": "AAAPL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175665/thumb/AAPL.png?1787292199",
+      "assetGroup": "Apple aStock::AAAPL",
+      "currencyId": "Apple aStock::AAAPL"
+    },
+    "0x1d236e2ef49bf8b425a5d81332230fdfdaa20aee": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Global X AI & Technology aStock",
+      "address": "0x1d236e2ef49bf8b425a5d81332230fdfdaa20aee",
+      "symbol": "AAIQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175666/thumb/AIQ.png?1787292203",
+      "assetGroup": "Global X AI & Technology aStock::AAIQ",
+      "currencyId": "Global X AI & Technology aStock::AAIQ"
+    },
+    "0x057a4712d82d83909b149f6e4390e5298ffdeb3c": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SPDR Bridgewater All Weather aStock",
+      "address": "0x057a4712d82d83909b149f6e4390e5298ffdeb3c",
+      "symbol": "AALLW",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175667/thumb/ALLW.png?1787292206",
+      "assetGroup": "SPDR Bridgewater All Weather aStock::AALLW",
+      "currencyId": "SPDR Bridgewater All Weather aStock::AALLW"
+    },
+    "0xbdf82c0dafcf73834d10639c0f0bf14b84808c43": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Advanced Micro Devices aStock",
+      "address": "0xbdf82c0dafcf73834d10639c0f0bf14b84808c43",
+      "symbol": "AAMD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175668/thumb/AMD.png?1787292209",
+      "assetGroup": "Advanced Micro Devices aStock::AAMD",
+      "currencyId": "Advanced Micro Devices aStock::AAMD"
+    },
+    "0x06f272082339a90e81e1dcb8ab892fd1a8c5e4c0": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Amazon aStock",
+      "address": "0x06f272082339a90e81e1dcb8ab892fd1a8c5e4c0",
+      "symbol": "AAMZN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175669/thumb/AMZN.png?1787292213",
+      "assetGroup": "Amazon aStock::AAMZN",
+      "currencyId": "Amazon aStock::AAMZN"
+    },
+    "0xb8e03ad48dddc2e415715f6dbefb51839e756c25": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Arista Networks aStock",
+      "address": "0xb8e03ad48dddc2e415715f6dbefb51839e756c25",
+      "symbol": "AANET",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175670/thumb/ANET.png?1787292216",
+      "assetGroup": "Arista Networks aStock::AANET",
+      "currencyId": "Arista Networks aStock::AANET"
+    },
+    "0x4ebaf539fb82f35d09f24c709b4c7b9a56777c03": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ARK Autonomous Technology aStock",
+      "address": "0x4ebaf539fb82f35d09f24c709b4c7b9a56777c03",
+      "symbol": "AARKQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175671/thumb/ARKQ.png?1787292219",
+      "assetGroup": "ARK Autonomous Technology aStock::AARKQ",
+      "currencyId": "ARK Autonomous Technology aStock::AARKQ"
+    },
+    "0x37bb22af99a6c2b23cfc2ea0ccb7151752a0fd5a": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Arm Holdings aStock",
+      "address": "0x37bb22af99a6c2b23cfc2ea0ccb7151752a0fd5a",
+      "symbol": "AARM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175672/thumb/ARM.png?1787292222",
+      "assetGroup": "Arm Holdings aStock::AARM",
+      "currencyId": "Arm Holdings aStock::AARM"
+    },
+    "0xfae6ba6d36a6388c5a944a9366e55b6597e4f8af": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ASML aStock",
+      "address": "0xfae6ba6d36a6388c5a944a9366e55b6597e4f8af",
+      "symbol": "AASML",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175673/thumb/ASML.png?1787292226",
+      "assetGroup": "ASML aStock::AASML",
+      "currencyId": "ASML aStock::AASML"
+    },
+    "0x4dfbcd033662bc41de8996886e751613c2b8e8e5": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Broadcom aStock",
+      "address": "0x4dfbcd033662bc41de8996886e751613c2b8e8e5",
+      "symbol": "AAVGO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175674/thumb/AVGO.png?1787292229",
+      "assetGroup": "Broadcom aStock::AAVGO",
+      "currencyId": "Broadcom aStock::AAVGO"
+    },
+    "0xc924b71a10c356c15e3d7cb76ac8efe8f5522347": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "US Brent Oil Fund aStock",
+      "address": "0xc924b71a10c356c15e3d7cb76ac8efe8f5522347",
+      "symbol": "ABNO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175675/thumb/BNO.png?1787292232",
+      "assetGroup": "US Brent Oil Fund aStock::ABNO",
+      "currencyId": "US Brent Oil Fund aStock::ABNO"
+    },
+    "0xfd8ae3a6e660efdfce2ae9bdcdcb81c9a959a846": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Global X Robotics & AI aStock",
+      "address": "0xfd8ae3a6e660efdfce2ae9bdcdcb81c9a959a846",
+      "symbol": "ABOTZ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175676/thumb/BOTZ.png?1787292235",
+      "assetGroup": "Global X Robotics & AI aStock::ABOTZ",
+      "currencyId": "Global X Robotics & AI aStock::ABOTZ"
+    },
+    "0xdaba319970c3502e152088e45e5a803e78cf51d8": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Cameco aStock",
+      "address": "0xdaba319970c3502e152088e45e5a803e78cf51d8",
+      "symbol": "ACCJ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175677/thumb/CCJ.png?1787292239",
+      "assetGroup": "Cameco aStock::ACCJ",
+      "currencyId": "Cameco aStock::ACCJ"
+    },
+    "0xd90007e68aa0557e3e9fbf17140d00611dc793ec": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Ciena aStock",
+      "address": "0xd90007e68aa0557e3e9fbf17140d00611dc793ec",
+      "symbol": "ACIEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175678/thumb/CIEN.png?1787292242",
+      "assetGroup": "Ciena aStock::ACIEN",
+      "currencyId": "Ciena aStock::ACIEN"
+    },
+    "0xd8c1dae1c55b2fa349f78ce34553e075aad6b8a2": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Coinbase Global aStock",
+      "address": "0xd8c1dae1c55b2fa349f78ce34553e075aad6b8a2",
+      "symbol": "ACOIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175679/thumb/COIN.png?1787292245",
+      "assetGroup": "Coinbase Global aStock::ACOIN",
+      "currencyId": "Coinbase Global aStock::ACOIN"
+    },
+    "0x2c82e424f8b36352bae1bcd585c82938b8b78ec8": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "GraniteShares 2x Short COIN Daily ETF aStock",
+      "address": "0x2c82e424f8b36352bae1bcd585c82938b8b78ec8",
+      "symbol": "ACONI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175680/thumb/CONI.png?1787292248",
+      "assetGroup": "GraniteShares 2x Short COIN Daily ETF aStock::ACONI",
+      "currencyId": "GraniteShares 2x Short COIN Daily ETF aStock::ACONI"
+    },
+    "0x72e4f625b68f8d7a08dfb5a88065d6bb90052098": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Circle aStock",
+      "address": "0x72e4f625b68f8d7a08dfb5a88065d6bb90052098",
+      "symbol": "ACRCL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175681/thumb/CRCL.png?1787292252",
+      "assetGroup": "Circle aStock::ACRCL",
+      "currencyId": "Circle aStock::ACRCL"
+    },
+    "0x8339d77b003589cf90f17729595afe05ad951ac5": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Salesforce aStock",
+      "address": "0x8339d77b003589cf90f17729595afe05ad951ac5",
+      "symbol": "ACRM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175682/thumb/CRM.png?1787292255",
+      "assetGroup": "Salesforce aStock::ACRM",
+      "currencyId": "Salesforce aStock::ACRM"
+    },
+    "0x991c1f370adbab08e1f7978b01cb1dc022b902bb": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Cisco aStock",
+      "address": "0x991c1f370adbab08e1f7978b01cb1dc022b902bb",
+      "symbol": "ACSCO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175683/thumb/CSCO.png?1787292258",
+      "assetGroup": "Cisco aStock::ACSCO",
+      "currencyId": "Cisco aStock::ACSCO"
+    },
+    "0x87db2ceac8b2321443d0bfef67340096867c91ba": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Dell Technologies aStock",
+      "address": "0x87db2ceac8b2321443d0bfef67340096867c91ba",
+      "symbol": "ADELL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175684/thumb/DELL.png?1787292262",
+      "assetGroup": "Dell Technologies aStock::ADELL",
+      "currencyId": "Dell Technologies aStock::ADELL"
+    },
+    "0x33f74ac6aa7a73aca8ab09c52d9158061f634ff3": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "eBay aStock",
+      "address": "0x33f74ac6aa7a73aca8ab09c52d9158061f634ff3",
+      "symbol": "AEBAY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175685/thumb/EBAY.png?1787292265",
+      "assetGroup": "eBay aStock::AEBAY",
+      "currencyId": "eBay aStock::AEBAY"
+    },
+    "0x678ed8ccc3f3d8ff2873d6beab5748e4321c1670": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Eaton aStock",
+      "address": "0x678ed8ccc3f3d8ff2873d6beab5748e4321c1670",
+      "symbol": "AETN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175686/thumb/ETN.png?1787292268",
+      "assetGroup": "Eaton aStock::AETN",
+      "currencyId": "Eaton aStock::AETN"
+    },
+    "0xa01a050440b8d77fc868ff33d290a2dab5b79366": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "iShares MSCI South Korea aStock",
+      "address": "0xa01a050440b8d77fc868ff33d290a2dab5b79366",
+      "symbol": "AEWY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175687/thumb/EWY.png?1787292271",
+      "assetGroup": "iShares MSCI South Korea aStock::AEWY",
+      "currencyId": "iShares MSCI South Korea aStock::AEWY"
+    },
+    "0x4f9b7d336b1972dd4c93ca250121aacaa6b083aa": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Franklin FTSE South Korea aStock",
+      "address": "0x4f9b7d336b1972dd4c93ca250121aacaa6b083aa",
+      "symbol": "AFLKR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175688/thumb/FLKR.png?1787292275",
+      "assetGroup": "Franklin FTSE South Korea aStock::AFLKR",
+      "currencyId": "Franklin FTSE South Korea aStock::AFLKR"
+    },
+    "0xbe10e0c583e46ff8d9a5a6ab578a89b7e49ad005": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "FormFactor aStock",
+      "address": "0xbe10e0c583e46ff8d9a5a6ab578a89b7e49ad005",
+      "symbol": "AFORM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175689/thumb/FORM.png?1787292278",
+      "assetGroup": "FormFactor aStock::AFORM",
+      "currencyId": "FormFactor aStock::AFORM"
+    },
+    "0x7b17054c9621930f3cdd38177217c2b73956856a": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "VanEck Gold Miners ETF aStock",
+      "address": "0x7b17054c9621930f3cdd38177217c2b73956856a",
+      "symbol": "AGDX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175690/thumb/GDX.png?1787292281",
+      "assetGroup": "VanEck Gold Miners ETF aStock::AGDX",
+      "currencyId": "VanEck Gold Miners ETF aStock::AGDX"
+    },
+    "0xdbd41398c970a1649c7eec1d72c9d50e0aa3b095": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "GE Vernova aStock",
+      "address": "0xdbd41398c970a1649c7eec1d72c9d50e0aa3b095",
+      "symbol": "AGEV",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175691/thumb/GEV.png?1787292285",
+      "assetGroup": "GE Vernova aStock::AGEV",
+      "currencyId": "GE Vernova aStock::AGEV"
+    },
+    "0x3e4a2f26fc4f92d92d7cd1e49ddade32869d00a4": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SPDR Gold Shares aStock",
+      "address": "0x3e4a2f26fc4f92d92d7cd1e49ddade32869d00a4",
+      "symbol": "AGLD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175692/thumb/GLD.png?1787292288",
+      "assetGroup": "SPDR Gold Shares aStock::AGLD",
+      "currencyId": "SPDR Gold Shares aStock::AGLD"
+    },
+    "0x8e18ac2b7ebdd781e7a15c333f3b80eed8de4a27": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "GameStop aStock",
+      "address": "0x8e18ac2b7ebdd781e7a15c333f3b80eed8de4a27",
+      "symbol": "AGME",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175693/thumb/GME.png?1787292291",
+      "assetGroup": "GameStop aStock::AGME",
+      "currencyId": "GameStop aStock::AGME"
+    },
+    "0xbde676cdf5564ef64ccd8555aa9b56867d8d1ad5": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Alphabet aStock",
+      "address": "0xbde676cdf5564ef64ccd8555aa9b56867d8d1ad5",
+      "symbol": "AGOOGL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175694/thumb/GOOGL.png?1787292295",
+      "assetGroup": "Alphabet aStock::AGOOGL",
+      "currencyId": "Alphabet aStock::AGOOGL"
+    },
+    "0x5a4860addcc094fce026384caeecb1e634dd9af4": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Robinhood aStock",
+      "address": "0x5a4860addcc094fce026384caeecb1e634dd9af4",
+      "symbol": "AHOOD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175695/thumb/HOOD.png?1787292298",
+      "assetGroup": "Robinhood aStock::AHOOD",
+      "currencyId": "Robinhood aStock::AHOOD"
+    },
+    "0x126250964e05b9e34d025e9d3b309349cf92402a": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Intel aStock",
+      "address": "0x126250964e05b9e34d025e9d3b309349cf92402a",
+      "symbol": "AINTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175696/thumb/INTC.png?1787292301",
+      "assetGroup": "Intel aStock::AINTC",
+      "currencyId": "Intel aStock::AINTC"
+    },
+    "0xc8c3bbd0af3f10293d75dd468c51f3f81fc22fee": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "IONQ aStock",
+      "address": "0xc8c3bbd0af3f10293d75dd468c51f3f81fc22fee",
+      "symbol": "AIONQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175697/thumb/IONQ.png?1787292305",
+      "assetGroup": "IONQ aStock::AIONQ",
+      "currencyId": "IONQ aStock::AIONQ"
+    },
+    "0xa1847139cbd660abc2f7b889d7cbcf18c56407fb": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Meta aStock",
+      "address": "0xa1847139cbd660abc2f7b889d7cbcf18c56407fb",
+      "symbol": "AMETA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175698/thumb/META.png?1787292309",
+      "assetGroup": "Meta aStock::AMETA",
+      "currencyId": "Meta aStock::AMETA"
+    },
+    "0xda230a7ec7aff66e62ff3e225c3d9c42093c23ae": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Moderna Inc aStock",
+      "address": "0xda230a7ec7aff66e62ff3e225c3d9c42093c23ae",
+      "symbol": "AMRNA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175699/thumb/MRNA.png?1787292312",
+      "assetGroup": "Moderna Inc aStock::AMRNA",
+      "currencyId": "Moderna Inc aStock::AMRNA"
+    },
+    "0x69825e4cf138fe7441a75af72da1ae8f9e720434": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Defiance Daily Target 2X Long MRNA ETF aStock",
+      "address": "0x69825e4cf138fe7441a75af72da1ae8f9e720434",
+      "symbol": "AMRNX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175700/thumb/MRNX.png?1787292316",
+      "assetGroup": "Defiance Daily Target 2X Long MRNA ETF aStock::AMRNX",
+      "currencyId": "Defiance Daily Target 2X Long MRNA ETF aStock::AMRNX"
+    },
+    "0x870e3495f5d7f0872ad7c0fbdd163016ae9122b5": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Marvell Technology aStock",
+      "address": "0x870e3495f5d7f0872ad7c0fbdd163016ae9122b5",
+      "symbol": "AMRVL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175701/thumb/MRVL.png?1787292319",
+      "assetGroup": "Marvell Technology aStock::AMRVL",
+      "currencyId": "Marvell Technology aStock::AMRVL"
+    },
+    "0x73e9eb2c7a4b4e8c68232b31ea0f1246963d0375": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Microsoft aStock",
+      "address": "0x73e9eb2c7a4b4e8c68232b31ea0f1246963d0375",
+      "symbol": "AMSFT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175702/thumb/MSFT.png?1787292323",
+      "assetGroup": "Microsoft aStock::AMSFT",
+      "currencyId": "Microsoft aStock::AMSFT"
+    },
+    "0x294f40996134d067b56dcbacbf6a36396bbbea7a": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Strategy aStock",
+      "address": "0x294f40996134d067b56dcbacbf6a36396bbbea7a",
+      "symbol": "AMSTR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175703/thumb/MSTR.png?1787292326",
+      "assetGroup": "Strategy aStock::AMSTR",
+      "currencyId": "Strategy aStock::AMSTR"
+    },
+    "0xc54ce75193a68602bc01ffd2b112da3948eb14a7": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Micron Technology aStock",
+      "address": "0xc54ce75193a68602bc01ffd2b112da3948eb14a7",
+      "symbol": "AMU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175704/thumb/MU.png?1787292329",
+      "assetGroup": "Micron Technology aStock::AMU",
+      "currencyId": "Micron Technology aStock::AMU"
+    },
+    "0x822594e4bc4c8237e77e5620744d3f383e77d4fe": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Nebius Group aStock",
+      "address": "0x822594e4bc4c8237e77e5620744d3f383e77d4fe",
+      "symbol": "ANBIS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175705/thumb/NBIS.png?1787292333",
+      "assetGroup": "Nebius Group aStock::ANBIS",
+      "currencyId": "Nebius Group aStock::ANBIS"
+    },
+    "0x6b97a52c6877faf6f3836377b37e4a0a27edde01": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ServiceNow aStock",
+      "address": "0x6b97a52c6877faf6f3836377b37e4a0a27edde01",
+      "symbol": "ANOW",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175706/thumb/NOW.png?1787292336",
+      "assetGroup": "ServiceNow aStock::ANOW",
+      "currencyId": "ServiceNow aStock::ANOW"
+    },
+    "0x9b4d9b20eac87c4da9912cdbdc111d991eef0681": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "GraniteShares 2x Short NVDA Daily ETF aStock",
+      "address": "0x9b4d9b20eac87c4da9912cdbdc111d991eef0681",
+      "symbol": "ANVD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175707/thumb/NVD.png?1787292339",
+      "assetGroup": "GraniteShares 2x Short NVDA Daily ETF aStock::ANVD",
+      "currencyId": "GraniteShares 2x Short NVDA Daily ETF aStock::ANVD"
+    },
+    "0x701193374879131f923532987c7ef363a91a80eb": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "NVIDIA aStock",
+      "address": "0x701193374879131f923532987c7ef363a91a80eb",
+      "symbol": "ANVDA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175708/thumb/NVDA.png?1787292343",
+      "assetGroup": "NVIDIA aStock::ANVDA",
+      "currencyId": "NVIDIA aStock::ANVDA"
+    },
+    "0x344fca3683cd01aa5833e67179f826080bda98fc": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Oruka Therapeutics Inc aStock",
+      "address": "0x344fca3683cd01aa5833e67179f826080bda98fc",
+      "symbol": "AORKA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175709/thumb/ORKA.png?1787292346",
+      "assetGroup": "Oruka Therapeutics Inc aStock::AORKA",
+      "currencyId": "Oruka Therapeutics Inc aStock::AORKA"
+    },
+    "0xb66340a2bc5f95b127534ba5f24827802b9bc7ee": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Palo Alto Networks Inc aStock",
+      "address": "0xb66340a2bc5f95b127534ba5f24827802b9bc7ee",
+      "symbol": "APANW",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175710/thumb/PANW.png?1787292349",
+      "assetGroup": "Palo Alto Networks Inc aStock::APANW",
+      "currencyId": "Palo Alto Networks Inc aStock::APANW"
+    },
+    "0xb95956daace89226185fb696c2cc3f0d9bbfd4e3": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Palantir aStock",
+      "address": "0xb95956daace89226185fb696c2cc3f0d9bbfd4e3",
+      "symbol": "APLTR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175711/thumb/PLTR.png?1787292353",
+      "assetGroup": "Palantir aStock::APLTR",
+      "currencyId": "Palantir aStock::APLTR"
+    },
+    "0xdfa678fa8d208ed3125e84a184fb39f2a22817a4": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "D-Wave Quantum aStock",
+      "address": "0xdfa678fa8d208ed3125e84a184fb39f2a22817a4",
+      "symbol": "AQBTS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175712/thumb/QBTS.png?1787292356",
+      "assetGroup": "D-Wave Quantum aStock::AQBTS",
+      "currencyId": "D-Wave Quantum aStock::AQBTS"
+    },
+    "0x1446501e886c7f830db9b494a1890cbccc072f57": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Invesco QQQ aStock",
+      "address": "0x1446501e886c7f830db9b494a1890cbccc072f57",
+      "symbol": "AQQQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175713/thumb/QQQ.png?1787292360",
+      "assetGroup": "Invesco QQQ aStock::AQQQ",
+      "currencyId": "Invesco QQQ aStock::AQQQ"
+    },
+    "0x472a83495b50ce62b124cabfef7a7c0db067c1e7": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Defiance Quantum aStock",
+      "address": "0x472a83495b50ce62b124cabfef7a7c0db067c1e7",
+      "symbol": "AQTUM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175714/thumb/QTUM.png?1787292364",
+      "assetGroup": "Defiance Quantum aStock::AQTUM",
+      "currencyId": "Defiance Quantum aStock::AQTUM"
+    },
+    "0x167ef0d9ae3d001146865ec8aa4a7a78b048b615": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Reddit aStock",
+      "address": "0x167ef0d9ae3d001146865ec8aa4a7a78b048b615",
+      "symbol": "ARDDT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175715/thumb/RDDT.png?1787292367",
+      "assetGroup": "Reddit aStock::ARDDT",
+      "currencyId": "Reddit aStock::ARDDT"
+    },
+    "0xc3b236fb3cd15e3d996f3b49c0ee034bc18accf9": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Rigetti Computing aStock",
+      "address": "0xc3b236fb3cd15e3d996f3b49c0ee034bc18accf9",
+      "symbol": "ARGTI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175716/thumb/RGTI.png?1787292370",
+      "assetGroup": "Rigetti Computing aStock::ARGTI",
+      "currencyId": "Rigetti Computing aStock::ARGTI"
+    },
+    "0x8bce7712ca1efc613ce73f9471ad2388dac09413": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Rocket Lab aStock",
+      "address": "0x8bce7712ca1efc613ce73f9471ad2388dac09413",
+      "symbol": "ARKLB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175717/thumb/RKLB.png?1787292374",
+      "assetGroup": "Rocket Lab aStock::ARKLB",
+      "currencyId": "Rocket Lab aStock::ARKLB"
+    },
+    "0x215cce3e783fc7fafbed758d55ef5b654fd69a34": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "GraniteShares 2x Short SK Hynix Daily ETF aStock",
+      "address": "0x215cce3e783fc7fafbed758d55ef5b654fd69a34",
+      "symbol": "ASKDD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175720/thumb/SKDD.png?1787292384",
+      "assetGroup": "GraniteShares 2x Short SK Hynix Daily ETF aStock::ASKDD",
+      "currencyId": "GraniteShares 2x Short SK Hynix Daily ETF aStock::ASKDD"
+    },
+    "0xa6d6d48d778539103d379a66697acc22dd7b1d3c": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "iShares Silver Trust aStock",
+      "address": "0xa6d6d48d778539103d379a66697acc22dd7b1d3c",
+      "symbol": "ASLV",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175721/thumb/SLV.png?1787292387",
+      "assetGroup": "iShares Silver Trust aStock::ASLV",
+      "currencyId": "iShares Silver Trust aStock::ASLV"
+    },
+    "0xfd38813a547b30155914383919cebe83a98435fa": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Super Micro Computer aStock",
+      "address": "0xfd38813a547b30155914383919cebe83a98435fa",
+      "symbol": "ASMCI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175722/thumb/SMCI.png?1787292390",
+      "assetGroup": "Super Micro Computer aStock::ASMCI",
+      "currencyId": "Super Micro Computer aStock::ASMCI"
+    },
+    "0x74110fb3858d91418227007851362672514925ef": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "VanEck Semiconductor aStock",
+      "address": "0x74110fb3858d91418227007851362672514925ef",
+      "symbol": "ASMH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175723/thumb/SMH.png?1787292393",
+      "assetGroup": "VanEck Semiconductor aStock::ASMH",
+      "currencyId": "VanEck Semiconductor aStock::ASMH"
+    },
+    "0x57e2613fa6193c11913299cbdc1c8cb4916c15e8": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SanDisk aStock",
+      "address": "0x57e2613fa6193c11913299cbdc1c8cb4916c15e8",
+      "symbol": "ASNDK",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175724/thumb/SNDK.png?1787292397",
+      "assetGroup": "SanDisk aStock::ASNDK",
+      "currencyId": "SanDisk aStock::ASNDK"
+    },
+    "0x6910acdc21a86dad4fde233764fdac4f4ce187e8": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Direxion Daily Semiconductor Bull 3x aStock",
+      "address": "0x6910acdc21a86dad4fde233764fdac4f4ce187e8",
+      "symbol": "ASOXL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175725/thumb/SOXL.png?1787292400",
+      "assetGroup": "Direxion Daily Semiconductor Bull 3x aStock::ASOXL",
+      "currencyId": "Direxion Daily Semiconductor Bull 3x aStock::ASOXL"
+    },
+    "0xa67f4594e3c8441a58d1df95f1ab7d3d65367afd": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Tradr 2X Short SpaceX Daily ETF aStock",
+      "address": "0xa67f4594e3c8441a58d1df95f1ab7d3d65367afd",
+      "symbol": "ASPCG",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175726/thumb/SPCG.png?1787292403",
+      "assetGroup": "Tradr 2X Short SpaceX Daily ETF aStock::ASPCG",
+      "currencyId": "Tradr 2X Short SpaceX Daily ETF aStock::ASPCG"
+    },
+    "0x4716cfb68c73bff797eea4f94ffad8d198aefc4b": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SPDR S&P 500 aStock",
+      "address": "0x4716cfb68c73bff797eea4f94ffad8d198aefc4b",
+      "symbol": "ASPY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175727/thumb/SPY.png?1787292406",
+      "assetGroup": "SPDR S&P 500 aStock::ASPY",
+      "currencyId": "SPDR S&P 500 aStock::ASPY"
+    },
+    "0x3d054231ed348b1c52684e2477f935fe06dafd85": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ProShares UltraPro Short QQQ aStock",
+      "address": "0x3d054231ed348b1c52684e2477f935fe06dafd85",
+      "symbol": "ASQQQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175728/thumb/SQQQ.png?1787292410",
+      "assetGroup": "ProShares UltraPro Short QQQ aStock::ASQQQ",
+      "currencyId": "ProShares UltraPro Short QQQ aStock::ASQQQ"
+    },
+    "0xc060d393df9ca0e96fb5434ff3223c085c4b2e2a": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Seagate Technology aStock",
+      "address": "0xc060d393df9ca0e96fb5434ff3223c085c4b2e2a",
+      "symbol": "ASTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175729/thumb/STX.png?1787292413",
+      "assetGroup": "Seagate Technology aStock::ASTX",
+      "currencyId": "Seagate Technology aStock::ASTX"
+    },
+    "0xc614d4ad49ec4f4854d70cb4fd788ddb5c3fe41e": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ProShares UltraShort 20+ Year Treasury aStock",
+      "address": "0xc614d4ad49ec4f4854d70cb4fd788ddb5c3fe41e",
+      "symbol": "ATBT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175730/thumb/TBT.png?1787292416",
+      "assetGroup": "ProShares UltraShort 20+ Year Treasury aStock::ATBT",
+      "currencyId": "ProShares UltraShort 20+ Year Treasury aStock::ATBT"
+    },
+    "0x5da938ad48c46bd22ca362a91517ce2c16367d09": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "iShares 20+ Year Treasury Bond aStock",
+      "address": "0x5da938ad48c46bd22ca362a91517ce2c16367d09",
+      "symbol": "ATLT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175731/thumb/TLT.png?1787292420",
+      "assetGroup": "iShares 20+ Year Treasury Bond aStock::ATLT",
+      "currencyId": "iShares 20+ Year Treasury Bond aStock::ATLT"
+    },
+    "0xb57b6c37526cecdddbf92da1783b7f4b4b53d45f": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ProShares UltraPro QQQ aStock",
+      "address": "0xb57b6c37526cecdddbf92da1783b7f4b4b53d45f",
+      "symbol": "ATQQQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175732/thumb/TQQQ.png?1787292423",
+      "assetGroup": "ProShares UltraPro QQQ aStock::ATQQQ",
+      "currencyId": "ProShares UltraPro QQQ aStock::ATQQQ"
+    },
+    "0x10fad4a60adb421f8f5ca6f9f2eaf2dbc110e146": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Tesla aStock",
+      "address": "0x10fad4a60adb421f8f5ca6f9f2eaf2dbc110e146",
+      "symbol": "ATSLA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175733/thumb/TSLA.png?1787292426",
+      "assetGroup": "Tesla aStock::ATSLA",
+      "currencyId": "Tesla aStock::ATSLA"
+    },
+    "0x3f670133caa4d10cf726028a68602114c1a3f15c": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Tradr 2X Short TSLA Daily ETF aStock",
+      "address": "0x3f670133caa4d10cf726028a68602114c1a3f15c",
+      "symbol": "ATSLZ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175734/thumb/TSLZ.png?1787292430",
+      "assetGroup": "Tradr 2X Short TSLA Daily ETF aStock::ATSLZ",
+      "currencyId": "Tradr 2X Short TSLA Daily ETF aStock::ATSLZ"
+    },
+    "0x7e952b8c28d855804c7fe8d64ecac30ace16c4da": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Global X Uranium aStock",
+      "address": "0x7e952b8c28d855804c7fe8d64ecac30ace16c4da",
+      "symbol": "AURA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175735/thumb/URA.png?1787292433",
+      "assetGroup": "Global X Uranium aStock::AURA",
+      "currencyId": "Global X Uranium aStock::AURA"
+    },
+    "0x7388ed3371407471d48637b4ad8445b8d4fc3f8f": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "US Oil Fund aStock",
+      "address": "0x7388ed3371407471d48637b4ad8445b8d4fc3f8f",
+      "symbol": "AUSO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175736/thumb/USO.png?1787292436",
+      "assetGroup": "US Oil Fund aStock::AUSO",
+      "currencyId": "US Oil Fund aStock::AUSO"
+    },
+    "0x0b45e5afea928030988704ef60995d8925b91cd6": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Vertiv aStock",
+      "address": "0x0b45e5afea928030988704ef60995d8925b91cd6",
+      "symbol": "AVRT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175737/thumb/VRT.png?1787292439",
+      "assetGroup": "Vertiv aStock::AVRT",
+      "currencyId": "Vertiv aStock::AVRT"
+    },
+    "0x49cccd75b2b0fb9ccd8c1d2a5d313e050c52fa89": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Vistra aStock",
+      "address": "0x49cccd75b2b0fb9ccd8c1d2a5d313e050c52fa89",
+      "symbol": "AVST",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175738/thumb/VST.png?1787292443",
+      "assetGroup": "Vistra aStock::AVST",
+      "currencyId": "Vistra aStock::AVST"
+    },
+    "0x49e30f2d4a1b9a1766f0675adaf04f70681fbb63": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Western Digital aStock",
+      "address": "0x49e30f2d4a1b9a1766f0675adaf04f70681fbb63",
+      "symbol": "AWDC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175739/thumb/WDC.png?1787292446",
+      "assetGroup": "Western Digital aStock::AWDC",
+      "currencyId": "Western Digital aStock::AWDC"
+    },
+    "0x4644fd1eab16a21969b4c16be8a2d5c986033f2a": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Wendy's aStock",
+      "address": "0x4644fd1eab16a21969b4c16be8a2d5c986033f2a",
+      "symbol": "AWEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175740/thumb/WEN.png?1787292449",
+      "assetGroup": "Wendy's aStock::AWEN",
+      "currencyId": "Wendy's aStock::AWEN"
+    },
+    "0xbdcd7e902861094164d4b4048ac62d3897a32721": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Walmart aStock",
+      "address": "0xbdcd7e902861094164d4b4048ac62d3897a32721",
+      "symbol": "AWMT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175741/thumb/WMT.png?1787292453",
+      "assetGroup": "Walmart aStock::AWMT",
+      "currencyId": "Walmart aStock::AWMT"
+    },
+    "0xf63ad58f1d4d1276ea0de2490689942303d2d446": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Technology Select Sector SPDR aStock",
+      "address": "0xf63ad58f1d4d1276ea0de2490689942303d2d446",
+      "symbol": "AXLK",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175742/thumb/XLK.png?1787292456",
+      "assetGroup": "Technology Select Sector SPDR aStock::AXLK",
+      "currencyId": "Technology Select Sector SPDR aStock::AXLK"
+    },
+    "0xa6233014b9b7aaa74f38fa1977ffc7a89642dc72": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "JTRSY deRWA",
+      "address": "0xa6233014b9b7aaa74f38fa1977ffc7a89642dc72",
+      "symbol": "DEJTRSY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175872/thumb/Centrifuge_Token_from_SVG_to_PNG.png?1787820266",
+      "assetGroup": "JTRSY deRWA::DEJTRSY",
+      "currencyId": "JTRSY deRWA::DEJTRSY"
+    },
+    "0x9b5803e173b3118d70a17c3be0babdd912a4000e": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "ProShares UltraShort S&P500 aStock",
+      "address": "0x9b5803e173b3118d70a17c3be0babdd912a4000e",
+      "symbol": "ASDS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175719/thumb/SDS.png?1787292380",
+      "assetGroup": "ProShares UltraShort S&P500 aStock::ASDS",
+      "currencyId": "ProShares UltraShort S&P500 aStock::ASDS"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",
