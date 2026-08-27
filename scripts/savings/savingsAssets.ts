@@ -214,7 +214,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // Stable token is a LayerZero OFT holding 97 % of the supply, and that
   // distinction lives in margin-fetcher's SAVINGS_REGISTRY — this overlay
   // classifies the ASSET, which is the same asset on both chains. ---
+  // Both stored spellings, for the pre-alias reason spelled out under scrvUSD
+  // below: chain 1 stores `Staked thUSD::STHUSD`, and the Stable (988) OFT —
+  // which holds 97 % of the supply — answers `name() == symbol() == 'sthUSD'`
+  // and so stores `sthUSD::sthUSD`. ---
   'Staked thUSD::STHUSD': { underlying: 'thUSD', base: 'USD' },
+  'sthUSD::sthUSD': { underlying: 'thUSD', base: 'USD' },
   // --- Curve scrvUSD (over crvUSD) — the savings wrapper for crvUSD borrow-fee
   // revenue. Passive by the test this list applies: deposit crvUSD, accrue a
   // distribution released through the vault's profit-unlocking rail, redeem
@@ -225,7 +230,15 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // form. Only Ethereum is the vault; the other three are bare bridged
   // ERC-20s, and that distinction lives in margin-fetcher's SAVINGS_REGISTRY
   // — this overlay classifies the ASSET, which is the same on all four. ---
-  'Savings crvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
+  //
+  // All THREE stored spellings are keyed, not just the canonical one, because
+  // `lookupSavings` runs on the PRE-alias group: the generator applies this
+  // overlay before `aliasAssetGroup` folds the variants, so a key that only
+  // matches the post-alias form silently misses every chain that stores
+  // another. Canonical is `Savings crvUSD::scrvUSD`. ---
+  'Savings crvUSD::scrvUSD': { underlying: 'crvUSD', base: 'USD' },
+  'Savings crvUSD::scrvUSD': { underlying: 'crvUSD', base: 'USD' },
+  'Superbridge Bridged scrvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
 
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
   // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:
