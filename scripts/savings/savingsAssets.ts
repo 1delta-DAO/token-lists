@@ -237,7 +237,7 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // matches the post-alias form silently misses every chain that stores
   // another. Canonical is `Savings crvUSD::scrvUSD`. ---
   'Savings crvUSD::scrvUSD': { underlying: 'crvUSD', base: 'USD' },
-  'Savings crvUSD::scrvUSD': { underlying: 'crvUSD', base: 'USD' },
+  'Savings crvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
   'Superbridge Bridged scrvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
 
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---

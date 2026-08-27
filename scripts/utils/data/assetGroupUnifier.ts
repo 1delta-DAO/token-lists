@@ -175,7 +175,7 @@ export const GROUP_ALIAS: Record<string, string> = {
   // reads 0 % intrinsic yield today.
   'thBILL::thBILL': 'Theo Short Duration US Treasury Fund::THBILL',
   // Curve scrvUSD (Savings crvUSD) — ONE asset, THREE stored spellings:
-  //   1            Savings crvUSD::scrvUSD              (the only real vault)
+  //   1            Savings crvUSD::SCRVUSD              (the only real vault)
   //   42161, 50    Savings crvUSD::scrvUSD              ← canonical
   //   8453         Superbridge Bridged scrvUSD::SCRVUSD (bridge-branded name)
   // Canonical is the on-chain casing the token itself answers (`scrvUSD`),
@@ -184,7 +184,7 @@ export const GROUP_ALIAS: Record<string, string> = {
   // `totalAssets()` revert — but that distinction belongs to margin-fetcher's
   // SAVINGS_REGISTRY, not to the group, which names an ASSET. Without these
   // the bridged rows read 0 % intrinsic yield.
-  'Savings crvUSD::scrvUSD': 'Savings crvUSD::scrvUSD',
+  'Savings crvUSD::SCRVUSD': 'Savings crvUSD::scrvUSD',
   'Superbridge Bridged scrvUSD::SCRVUSD': 'Savings crvUSD::scrvUSD',
   // Noon sUSN
   'Staked USN::sUSN': 'SUSN',
