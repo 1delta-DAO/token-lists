@@ -563,7 +563,16 @@ export const knownAssets: KnownAsset[] = [
   { symbol: 'DEUSDC', names: ['deBridge USD Coin'] },
   { symbol: 'ALU', names: ['Altura'] },
   { symbol: 'HEMIBTC', names: ['Hemi Bitcoin'], requireExactName: true },
-  { symbol: 'VUSD', names: ['Vesper V-Dollar'], requireExactName: true },
+  // Vesper rebranded to Vetro and migrated VUSD to new contracts. The old
+  // Vesper V-Dollar deployments (1: 0x677ddbd9…, 43111: 0x7a06c4ae…) stay
+  // listed as "Vesper V-Dollar (Legacy)" / VUSD.L with their own group so
+  // live lending markets on them keep resolving, but the bare VUSD group
+  // now belongs to Vetro. CG lists the mainnet token as "Vetro", on-chain
+  // name is "Vetro USD".
+  { symbol: 'VUSD', names: ['Vetro USD', 'Vetro'], requireExactName: true },
+  { symbol: 'SVUSD', names: ['Staked Vetro USD'], requireExactName: true },
+  { symbol: 'VETBTC', names: ['Vetro BTC'], requireExactName: true },
+  { symbol: 'SVETBTC', names: ['Staked Vetro BTC'], requireExactName: true },
   { symbol: 'BRBTC', names: ['brBTC'], requireExactName: true },
   { symbol: 'ENZOBTC', names: ['Lorenzo Wrapped Bitcoin'], requireExactName: true },
   { symbol: 'SUBTC', names: ['Sumerian BTC'], requireExactName: true },

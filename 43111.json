@@ -71,7 +71,11 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": {
+          "type": "staking",
+          "asset": "ETH",
+          "provider": "rocketpool"
+        }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -84,7 +88,11 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": {
+          "type": "staking",
+          "asset": "BTC",
+          "provider": "lorenzo"
+        }
       }
     },
     "0xc3eacf0612346366db554c991d7858716db09f58": {
@@ -97,7 +105,11 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": {
+          "type": "restaking",
+          "asset": "ETH",
+          "provider": "kelp"
+        }
       }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
@@ -110,8 +122,15 @@
       "assetGroup": "BRBTC",
       "currencyId": "brBTC::brBTC",
       "props": {
-        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
-        "risk": { "score": 4, "source": "default" }
+        "lst": {
+          "type": "restaking",
+          "asset": "BTC",
+          "provider": "bedrock"
+        },
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
       }
     },
     "0xf469fbd2abcd6b9de8e169d128226c0fc90a012e": {
@@ -124,7 +143,11 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": {
+          "type": "staking",
+          "asset": "BTC",
+          "provider": "pumpbtc"
+        }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -138,7 +161,11 @@
       "currencyId": "Wrapped Ether::WETH",
       "props": {
         "wnative": true,
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "risk": {
+          "score": 1,
+          "category": "NATIVE",
+          "source": "whitelist"
+        },
         "denomination": "ETH"
       }
     },
@@ -152,20 +179,24 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
-        "permit": { "type": 1, "version": "2" },
-        "stablecoin": { "base": "USD" }
+        "permit": {
+          "type": 1,
+          "version": "2"
+        },
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0x7a06c4aef988e7925575c50261297a946ad204a8": {
       "chainId": "43111",
       "decimals": 18,
-      "name": "Vesper V-Dollar",
+      "name": "Vesper V-Dollar (Legacy)",
       "address": "0x7a06c4aef988e7925575c50261297a946ad204a8",
-      "symbol": "VUSD",
+      "symbol": "VUSD.L",
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/vusd.png",
-      "assetGroup": "VUSD",
-      "currencyId": "Vesper V-Dollar::VUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "assetGroup": "Vesper V-Dollar (Legacy)::VUSD.L",
+      "currencyId": "Vesper V-Dollar (Legacy)::VUSD.L"
     },
     "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e": {
       "chainId": "43111",
@@ -177,8 +208,13 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "stablecoin": {
+          "base": "USD"
+        }
       }
     },
     "0xaa40c0c7644e0b2b224509571e10ad20d9c4ef28": {
@@ -190,7 +226,12 @@
       "logoURI": "https://raw.githubusercontent.com/hemilabs/token-list/master/src/logos/hemibtc.svg",
       "assetGroup": "HEMIBTC",
       "currencyId": "Hemi Bitcoin::hemiBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
+      }
     },
     "0x623f2774d9f27b59bc6b954544487532ce79d9df": {
       "chainId": "43111",
@@ -201,7 +242,12 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/bfBTC.webp",
       "assetGroup": "BitFi Bitcoin::bfBTC",
       "currencyId": "BitFi Bitcoin::bfBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
+      }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "43111",
@@ -212,7 +258,9 @@
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0xCAbAE6f6Ea1ecaB08Ad02fE02ce9A44F09aebfA2/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC"
+      }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
       "chainId": "43111",
@@ -233,7 +281,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/40143/standard/cbbtc.webp",
       "assetGroup": "CBBTC",
       "currencyId": "Coinbase Wrapped BTC::cbBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC"
+      }
     },
     "0x1b529b888d15711b4baeb5a3b12465dc3e2520a3": {
       "chainId": "43111",
@@ -244,7 +294,12 @@
       "logoURI": "https://passdex.s3.ap-southeast-1.amazonaws.com/43111/0x1B529B888d15711b4baeb5A3B12465DC3E2520A3.png",
       "assetGroup": "PassDex::PASS",
       "currencyId": "PassDex::PASS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0x71881974e96152643c74a8e0214b877cfb2a0aa1": {
       "chainId": "43111",
@@ -285,7 +340,12 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/iBTC.webp",
       "assetGroup": "IBTC",
       "currencyId": "iBTC::IBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
+      }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {
       "chainId": "43111",
@@ -326,7 +386,9 @@
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/60808/0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2.png",
       "assetGroup": "TBTC",
       "currencyId": "tBTC v2::tBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC"
+      }
     },
     "0xf9775085d726e782e83585033b58606f7731ab18": {
       "chainId": "43111",
@@ -376,7 +438,12 @@
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/egeth.png",
       "assetGroup": "Bridged egETH::Bridged egETH",
       "currencyId": "Bridged egETH::Bridged egETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": {
+          "type": 1,
+          "version": "1"
+        }
+      }
     },
     "0xbf7d0f62b64b23053949b3a88a03da5bfd35b2e2": {
       "chainId": "43111",
@@ -407,7 +474,11 @@
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_48/d_unknown.png/tokens/43111/0x3EA24E3727a85A479E29E02Cc70e792936FbBcaD.jpg",
       "assetGroup": "Metronome Synth USD::msUSD",
       "currencyId": "Metronome Synth USD::msUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0x1c22531aa9747d76fff8f0a43b37954ca67d28e0": {
       "chainId": "43111",
@@ -418,7 +489,12 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33265/thumb/Sumer_Money_Logo.jpg?1701321407",
       "assetGroup": "Sumerian ETH::suETH",
       "currencyId": "Sumerian ETH::suETH",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
+      }
     },
     "0xb4818bb69478730ef4e33cc068dd94278e2766cb": {
       "chainId": "43111",
@@ -430,7 +506,10 @@
       "assetGroup": "Satoshi Stablecoin V2::satUSD",
       "currencyId": "Satoshi Stablecoin V2::satUSD",
       "props": {
-        "permit": { "type": 1, "version": "1" },
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
         "risk": {
           "score": 3,
           "category": "YIELD_STABLE",
@@ -457,7 +536,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0x54df33333c78c13b1448cb35a0e49f75c3d4347f": {
       "chainId": "43111",
@@ -513,7 +596,11 @@
       "symbol": "FRAX",
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": {
+          "base": "USD"
+        }
+      }
     },
     "0xdf0e8f7b7fda30605ca5665161f9f3ddb489c870": {
       "chainId": "43111",
@@ -579,8 +666,14 @@
       "assetGroup": "SushiSwap LP Token (VUSD-hemiBTC)::SLP",
       "currencyId": "SushiSwap LP Token (VUSD-hemiBTC)::SLP",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
       }
     },
     "0xaf6ed58980b5a0732423469dd9f3f69d9dc6dab5": {
@@ -592,8 +685,14 @@
       "assetGroup": "SushiSwap LP Token (WETH-USDC.e)::SLP",
       "currencyId": "SushiSwap LP Token (WETH-USDC.e)::SLP",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
       }
     },
     "0xf23eec60263de9b0c8472c58be10feba28d9eb53": {
@@ -605,8 +704,14 @@
       "assetGroup": "SushiSwap LP Token (VUSD-USDC.e)::SLP",
       "currencyId": "SushiSwap LP Token (VUSD-USDC.e)::SLP",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
       }
     },
     "0xafb068838136358cfa6b54bea580b86df70bba7f": {
@@ -628,8 +733,14 @@
       "assetGroup": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
       }
     },
     "0x42ca6ae4d7f0ff042ae0796685e82b12899a392e": {
@@ -641,8 +752,14 @@
       "assetGroup": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "permit": {
+          "type": 1,
+          "version": "1"
+        },
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
       }
     },
     "0x99e3de3817f6081b2568208337ef83295b7f591d": {
@@ -654,7 +771,12 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/HEMI.webp",
       "assetGroup": "Hemi::HEMI",
       "currencyId": "Hemi::HEMI",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "source": "default"
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "43111",
@@ -669,6 +791,46 @@
         "isNative": true,
         "wrapped": "0x4200000000000000000000000000000000000006"
       }
+    },
+    "0xd3599ae62ee280709a22268a46d23164214e345b": {
+      "chainId": "43111",
+      "decimals": 18,
+      "name": "Vetro USD",
+      "address": "0xd3599ae62ee280709a22268a46d23164214e345b",
+      "symbol": "VUSD",
+      "logoURI": "https://static.vetro.org/brand/tokens/VUSD/vetro-token-VUSD.png",
+      "assetGroup": "VUSD",
+      "currencyId": "Vetro USD::VUSD"
+    },
+    "0xfe875cc86cc6bc2e93ab330d6b2c408c3cd79710": {
+      "chainId": "43111",
+      "decimals": 18,
+      "name": "Staked Vetro USD",
+      "address": "0xfe875cc86cc6bc2e93ab330d6b2c408c3cd79710",
+      "symbol": "sVUSD",
+      "logoURI": "https://static.vetro.org/brand/tokens/sVUSD-VUSDx/vetro-token-sVUSD-VUSDx.png",
+      "assetGroup": "SVUSD",
+      "currencyId": "Staked Vetro USD::sVUSD"
+    },
+    "0xff16e26b7ffcf24c378d57df536dc5ec104a7de4": {
+      "chainId": "43111",
+      "decimals": 18,
+      "name": "Vetro BTC",
+      "address": "0xff16e26b7ffcf24c378d57df536dc5ec104a7de4",
+      "symbol": "vetBTC",
+      "logoURI": "https://static.vetro.org/brand/tokens/vetBTC/vetro-token-vetBTC.png",
+      "assetGroup": "VETBTC",
+      "currencyId": "Vetro BTC::vetBTC"
+    },
+    "0xd8d63de3b64bd06d99f8f5ad8b78ed2fe7525ec0": {
+      "chainId": "43111",
+      "decimals": 18,
+      "name": "Staked Vetro BTC",
+      "address": "0xd8d63de3b64bd06d99f8f5ad8b78ed2fe7525ec0",
+      "symbol": "svetBTC",
+      "logoURI": "https://static.vetro.org/brand/tokens/svetBTC-vetBTCx/vetro-token-svetBTC-vetBTCx.png",
+      "assetGroup": "SVETBTC",
+      "currencyId": "Staked Vetro BTC::svetBTC"
     }
   },
   "mainTokens": [
@@ -680,7 +842,7 @@
     "0xad11a8beb98bbf61dbb1aa0f6d6f2ecd87b35afa",
     "0xafb068838136358cfa6b54bea580b86df70bba7f",
     "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e",
-    "0x7a06c4aef988e7925575c50261297a946ad204a8",
+    "0xd3599ae62ee280709a22268a46d23164214e345b",
     "0x71881974e96152643c74a8e0214b877cfb2a0aa1",
     "0x028de74e2fe336511a8e5fab0426d1cfd5110dbb",
     "0x5b774f563c902fa7b203fb7029ed6ed4ce274705",
