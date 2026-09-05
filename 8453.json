@@ -583,7 +583,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/04cb9974-d2a8-4053-884c-81ced01ada55.svg",
       "assetGroup": "YT yoETH (WETH) Base::YT-yoETH-24SEP2026",
       "currencyId": "YT yoETH (WETH) Base::YT-yoETH-24SEP2026",
-      "props": { "pendle": { "tokenType": "YT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x829a0d0b0261a3b96208631c19d5380422e2ca54",
+          "expiry": 1790208000,
+          "underlyingAsset": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
+          "ptAddress": "0xe9ea8a16398171d8113fe2b71f05dda6ac9b86a7",
+          "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64"
+        }
+      }
     },
     "0x42323a32a8fcc6fbd043dc570fa71ab2c9f2157c": {
       "chainId": "8453",
@@ -2231,7 +2240,16 @@
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/74372bd2-368e-4e01-aa4f-11420a5f14e3.svg",
       "assetGroup": "PT yoETH (WETH) Base::PT-yoETH-24SEP2026",
       "currencyId": "PT yoETH (WETH) Base::PT-yoETH-24SEP2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x829a0d0b0261a3b96208631c19d5380422e2ca54",
+          "expiry": 1790208000,
+          "underlyingAsset": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
+          "ytAddress": "0x3eb91557e41c19848c7725cb3279029073efaf8d",
+          "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64"
+        }
+      }
     },
     "0xec443e7e0e745348e500084892c89218b3ba4683": {
       "chainId": "8453",
@@ -5017,6 +5035,19 @@
       "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+      }
+    },
+    "0x5da938ad48c46bd22ca362a91517ce2c16367d09": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "iShares 20+ Year Treasury Bond aStock",
+      "address": "0x5da938ad48c46bd22ca362a91517ce2c16367d09",
+      "symbol": "ATLT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175731/thumb/TLT.png?1787292420",
+      "assetGroup": "iShares 20+ Year Treasury Bond aStock::ATLT",
+      "currencyId": "iShares 20+ Year Treasury Bond aStock::ATLT",
+      "props": {
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" }
       }
     },
     "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
@@ -45444,6 +45475,7 @@
       "name": "Cluster Protocol",
       "address": "0x001aad84c21a5cd4d696c56d44866e9703c43f77",
       "symbol": "CP",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176635/thumb/blue_%281%29_%281%29_%281%29-2.jpg?1788378721",
       "assetGroup": "Cluster Protocol::CP",
       "currencyId": "Cluster Protocol::CP"
     },
@@ -46315,16 +46347,6 @@
       "assetGroup": "ProShares UltraShort 20+ Year Treasury aStock::ATBT",
       "currencyId": "ProShares UltraShort 20+ Year Treasury aStock::ATBT"
     },
-    "0x5da938ad48c46bd22ca362a91517ce2c16367d09": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "iShares 20+ Year Treasury Bond aStock",
-      "address": "0x5da938ad48c46bd22ca362a91517ce2c16367d09",
-      "symbol": "ATLT",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175731/thumb/TLT.png?1787292420",
-      "assetGroup": "iShares 20+ Year Treasury Bond aStock::ATLT",
-      "currencyId": "iShares 20+ Year Treasury Bond aStock::ATLT"
-    },
     "0xb57b6c37526cecdddbf92da1783b7f4b4b53d45f": {
       "chainId": "8453",
       "decimals": 18,
@@ -46444,6 +46466,56 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175719/thumb/SDS.png?1787292380",
       "assetGroup": "ProShares UltraShort S&P500 aStock::ASDS",
       "currencyId": "ProShares UltraShort S&P500 aStock::ASDS"
+    },
+    "0xb200000000000000000000451d033a5000cb479e": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Coinbase Wrapped Hyperliquid",
+      "address": "0xb200000000000000000000451d033a5000cb479e",
+      "symbol": "cbHYPE",
+      "logoURI": "https://coin-images.coingecko.com/coins/images/102176592/large/Coinbase_Wrapped_Staked_Hype_%28cbHYPE%29.png?1788278142",
+      "assetGroup": "Coinbase Wrapped Hyperliquid::cbHYPE",
+      "currencyId": "Coinbase Wrapped Hyperliquid::cbHYPE"
+    },
+    "0xb2000000000000000000008501b13360000cb2ec": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Coinbase Wrapped ZEC",
+      "address": "0xb2000000000000000000008501b13360000cb2ec",
+      "symbol": "cbZEC",
+      "logoURI": "https://coin-images.coingecko.com/coins/images/102176591/large/Coinbase_Wrapped_ZEC_%28cbZEC%29.png?1788278133",
+      "assetGroup": "Coinbase Wrapped ZEC::cbZEC",
+      "currencyId": "Coinbase Wrapped ZEC::cbZEC"
+    },
+    "0xb2000000000000000000000ff4a547c891ab1b01": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "BaseUnc",
+      "address": "0xb2000000000000000000000ff4a547c891ab1b01",
+      "symbol": "BASEUNC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176583/thumb/IMG_2330.jpeg?1788268186",
+      "assetGroup": "BaseUnc::BASEUNC",
+      "currencyId": "BaseUnc::BASEUNC"
+    },
+    "0xcef8db49e456f872e288e1c042f916e9ced7c781": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Reserve Magnificent 7 DTF",
+      "address": "0xcef8db49e456f872e288e1c042f916e9ced7c781",
+      "symbol": "MAG7",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176650/thumb/mag7_200x200.png?1788418119",
+      "assetGroup": "Reserve Magnificent 7 DTF::MAG7",
+      "currencyId": "Reserve Magnificent 7 DTF::MAG7"
+    },
+    "0x119b63b1605be3a8ff4543c7f76f7f1f79eecd1f": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Opal",
+      "address": "0x119b63b1605be3a8ff4543c7f76f7f1f79eecd1f",
+      "symbol": "OPAL",
+      "logoURI": "https://assets.coingecko.com/coins/images/69738/thumb/Opal.jpg?1759477517",
+      "assetGroup": "Opal::OPAL",
+      "currencyId": "Opal::OPAL"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",
