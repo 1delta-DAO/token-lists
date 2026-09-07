@@ -14,6 +14,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # GH_PAT is needed twice below: the private risk-data checkout (whose
+      # failure silently degrades the overlays via continue-on-error) and the
+      # final PR creation, where an expired token otherwise only surfaces
+      # after ~6 minutes of generation. Prove it authenticates before doing
+      # any work — expired and revoked tokens both come back as HTTP 401.
+      # (Validity check only — it can't verify the token's granular
+      # permissions on this repo or risk-data.)
+      - name: Fail fast if GH_PAT is invalid
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if ! gh api user --jq .login; then
+            echo "::error::GH_PAT is invalid or expired. Rotate the secret (fine-grained PAT with Contents: read on risk-data and Pull requests: write on this repo) before re-running."
+            exit 1
+          fi
+
       - name: Checkout repository
         # Use the built-in GITHUB_TOKEN for checkout + push (it always
         # authenticates for this repo; the `permissions` block grants contents:write).
