@@ -302,6 +302,22 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
         const now = new Date()
         const isExpired = expiryDate < now
 
+        // Maturity comes from the MARKET above, which a bridged PT does not
+        // have on this chain — so all 31 of them carried `expired` and no
+        // `expiry`, even though the assets feed states the date. That is the
+        // worst of both: `expired` is frozen at GENERATION time (the trap
+        // PENDLE_PT.md names — a cached expired flag is never enough), and with
+        // no timestamp beside it a consumer cannot recompute maturity itself.
+        // `isPendlePositionMatured` reads an absent expiry as NOT MATURED, so a
+        // bridged PT past its date claimed to be live.
+        //
+        // The market's value still wins where there is one: it is the market
+        // this token actually settles against.
+        if (pendleProps.expiry === undefined) {
+          const seconds = Math.floor(expiryDate.getTime() / 1000)
+          if (Number.isFinite(seconds)) pendleProps.expiry = seconds
+        }
+
         if (isExpired) {
           pendleProps.expired = true
         }
