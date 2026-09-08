@@ -418,11 +418,13 @@
       "decimals": 6,
       "name": "PT thBILL (USDC) HyperEVM",
       "address": "0x33f7077b62fa30c865813708ebed535a5ef0a836",
-      "symbol": "PT-thBILL-19FEB2026",
+      "symbol": "PT-thBILL-19FEB2026-(ARB)",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6fbd3199-4d64-4610-a1b8-29faa5513404.svg",
-      "assetGroup": "PT thBILL (USDC) HyperEVM::PT-thBILL-19FEB2026",
-      "currencyId": "PT thBILL (USDC) HyperEVM::PT-thBILL-19FEB2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
+      "assetGroup": "PT thBILL (USDC) HyperEVM::PT-thBILL-19FEB2026-(ARB)",
+      "currencyId": "PT thBILL (USDC) HyperEVM::PT-thBILL-19FEB2026-(ARB)",
+      "props": {
+        "pendle": { "tokenType": "PT", "bridgedFrom": "ARB", "expired": true }
+      }
     },
     "0x3478bace12088c4088790cfe0a34aba96bfc5abe": {
       "chainId": "999",
@@ -2312,11 +2314,13 @@
       "decimals": 6,
       "name": "PT thBILL (USDC) HyperEVM",
       "address": "0xc678d381bcda9e13b509b3548ece839cddbd5863",
-      "symbol": "PT-thBILL-27NOV2025",
+      "symbol": "PT-thBILL-27NOV2025-(ARB)",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6fbd3199-4d64-4610-a1b8-29faa5513404.svg",
-      "assetGroup": "PT thBILL (USDC) HyperEVM::PT-thBILL-27NOV2025",
-      "currencyId": "PT thBILL (USDC) HyperEVM::PT-thBILL-27NOV2025",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
+      "assetGroup": "PT thBILL (USDC) HyperEVM::PT-thBILL-27NOV2025-(ARB)",
+      "currencyId": "PT thBILL (USDC) HyperEVM::PT-thBILL-27NOV2025-(ARB)",
+      "props": {
+        "pendle": { "tokenType": "PT", "bridgedFrom": "ARB", "expired": true }
+      }
     },
     "0xc6feeecb1f5375bb97448a99a9a69a443e4e24e1": {
       "chainId": "999",
@@ -11190,6 +11194,19 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "SHEIN xStock",
+      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
+      "symbol": "SHEINX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176611/thumb/sheinxstock.png?1788327462",
+      "assetGroup": "SHEIN xStock::SHEINX",
+      "currencyId": "SHEIN xStock::SHEINX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
     "0xd8fc8f0b03eba61f64d08b0bef69d80916e5dda9": {
       "chainId": "999",
       "decimals": 18,
@@ -11721,8 +11738,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "COMPROMISED",
-          "source": "whitelist"
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" }
       }
@@ -12452,7 +12469,8 @@
       "symbol": "feUSDhl",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x9c59a9389d8f72de2cdaf1126f36ea4790e2275e.png",
       "assetGroup": "Felix USDhl::feUSDhl",
-      "currencyId": "Felix USDhl::feUSDhl"
+      "currencyId": "Felix USDhl::feUSDhl",
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0x02379e4a55111d999ac18c367f5920119398b94b": {
       "chainId": "999",
@@ -12472,7 +12490,8 @@
       "symbol": "gtuETH",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x0571362ba5ea9784a97605f57483f865a37dbeaa.png",
       "assetGroup": "Gauntlet uETH Vault::gtuETH",
-      "currencyId": "Gauntlet uETH Vault::gtuETH"
+      "currencyId": "Gauntlet uETH Vault::gtuETH",
+      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
     },
     "0x0fe958d31c0aa613a0b08901fb26a7761c5b14f4": {
       "chainId": "999",
@@ -12492,7 +12511,8 @@
       "symbol": "feHYPE",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x2900abd73631b2f60747e687095537b673c06a76.png",
       "assetGroup": "Felix HYPE::feHYPE",
-      "currencyId": "Felix HYPE::feHYPE"
+      "currencyId": "Felix HYPE::feHYPE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x34b2b0de7d288e79bbcfcee6c2a222dae25ff88d": {
       "chainId": "999",
@@ -12655,7 +12675,8 @@
       "symbol": "mcHYPE",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xd19e3d00f8547f7d108abfd4bbb015486437b487.png",
       "assetGroup": "MEV Capital HYPE::mcHYPE",
-      "currencyId": "MEV Capital HYPE::mcHYPE"
+      "currencyId": "MEV Capital HYPE::mcHYPE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xe45e7272da7208c7a137505dfb9491e330bf1a4e": {
       "chainId": "999",
@@ -13272,7 +13293,8 @@
       "address": "0x66c71204b70ae27be6dc3eb41f9af5868e68fdb6",
       "symbol": "feUSDhl2",
       "assetGroup": "USDhl (Frontier)::feUSDhl2",
-      "currencyId": "USDhl (Frontier)::feUSDhl2"
+      "currencyId": "USDhl (Frontier)::feUSDhl2",
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0x7c1da6b60313d0b98cabe4e1331413d348ccf594": {
       "chainId": "999",
@@ -15247,7 +15269,8 @@
       "symbol": "purrHYPE",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xe8b10461ea0b04ff30f4cbfc3e93957cac00ded4.png",
       "assetGroup": "HypurrFi Earn HYPE::purrHYPE",
-      "currencyId": "HypurrFi Earn HYPE::purrHYPE"
+      "currencyId": "HypurrFi Earn HYPE::purrHYPE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xc200aab602cd7046389b5c8fb088884323f8dd0f": {
       "chainId": "999",
@@ -16086,15 +16109,15 @@
       "assetGroup": "Terminal::TERMINAL",
       "currencyId": "Terminal::TERMINAL"
     },
-    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
+    "0xa0e0ce74d20975b025260109ff3a27ab96640999": {
       "chainId": "999",
       "decimals": 18,
-      "name": "SHEIN xStock",
-      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
-      "symbol": "SHEINX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102176611/thumb/sheinxstock.png?1788327462",
-      "assetGroup": "SHEIN xStock::SHEINX",
-      "currencyId": "SHEIN xStock::SHEINX"
+      "name": "Hypercat",
+      "address": "0xa0e0ce74d20975b025260109ff3a27ab96640999",
+      "symbol": "HYPERCAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176813/thumb/cyezlbs25edb4ro61liptucvaccp.?1788774709",
+      "assetGroup": "Hypercat::HYPERCAT",
+      "currencyId": "Hypercat::HYPERCAT"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "999",

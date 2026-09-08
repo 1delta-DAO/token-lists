@@ -12,7 +12,8 @@
       "assetGroup": "Bridged RSWETH (Layerzero)::RSWETH",
       "currencyId": "Bridged RSWETH (Layerzero)::RSWETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -51,7 +52,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -63,7 +65,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x7c98e0779eb5924b3ba8ce3b17648539ed5b0ecc": {
@@ -75,7 +78,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x9cb41cd74d01ae4b4f640ec40f7a60ca1bcf83e7": {
@@ -87,7 +91,8 @@
       "assetGroup": "PZETH",
       "currencyId": "Renzo Restaked LST::pzETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
@@ -126,7 +131,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Bridged WEETH (Layerzero)::WEETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x2826d136f5630ada89c1678b64a61620aab77aea": {
@@ -207,7 +213,10 @@
       "symbol": "USDK",
       "logoURI": "https://assets.coingecko.com/coins/images/55912/thumb/Orki-Stablecoin-RGB-Blue.png?1747677290",
       "assetGroup": "Orki USDK::USDK",
-      "currencyId": "Orki USDK::USDK"
+      "currencyId": "Orki USDK::USDK",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xfa3198ecf05303a6d96e57a45e6c815055d255b1": {
       "chainId": "1923",
