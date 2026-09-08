@@ -12,7 +12,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x4fc44be15e9b6e30c1e774e2c87a21d3e8b5403f": {
@@ -24,7 +25,8 @@
       "assetGroup": "RSETH",
       "currencyId": "rsETHWrapper::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
@@ -58,7 +60,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102171886/thumb/weth.png?1770258060",
       "assetGroup": "ETH",
       "currencyId": "L2 Standard Bridged WETH (MegaETH)::WETH",
-      "props": { "wnative": true, "denomination": "ETH" }
+      "props": {
+        "wnative": true,
+        "denomination": "ETH",
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0x28b7e77f82b25b95953825f1e3ea0e36c1c29861": {
       "chainId": "4326",
@@ -171,7 +177,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restake ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xb0f70c0bd6fd87dbeb7c10dc692a2a6106817072": {

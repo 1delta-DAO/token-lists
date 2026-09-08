@@ -12,7 +12,8 @@
       "assetGroup": "ANKRETH",
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -25,7 +26,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
@@ -38,7 +40,8 @@
       "assetGroup": "INETH",
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a": {
@@ -51,7 +54,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -64,7 +68,8 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -76,7 +81,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -89,7 +95,8 @@
       "assetGroup": "Frax Ether::frxETH(axelar)",
       "currencyId": "Frax Ether::frxETH(axelar)",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -102,7 +109,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDAO Bridged rsETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd": {
@@ -115,7 +123,8 @@
       "assetGroup": "RSETH",
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x24cb308a4e2f3a4352f513681bd0c31a0bd3ba31": {
@@ -370,7 +379,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39627/thumb/usd_plus.png?1723181444",
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x963eec23618bbc8e1766661d5f263f18094ae4d5": {
       "chainId": "81457",
@@ -905,7 +917,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38039/thumb/usdz-image-200x200.png?1716334412",
       "assetGroup": "Anzen USDz::USDZ",
       "currencyId": "Anzen USDz::USDZ",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x73d23f3778a90be8846e172354a115543df2a7e4": {
       "chainId": "81457",
@@ -918,7 +933,8 @@
       "currencyId": "Anzen Staked USDz::SUSDZ",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDz", "base": "USD" }
+        "savings": { "underlying": "USDz", "base": "USD" },
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xc7edf7b7b3667a06992508e7b156eff794a9e1c8": {
@@ -1069,7 +1085,10 @@
       "symbol": "USDC+",
       "logoURI": "https://assets.coingecko.com/coins/images/34763/thumb/USDC_.png?1705990720",
       "assetGroup": "Overnight.fi USDC::USDC+",
-      "currencyId": "Overnight.fi USDC::USDC+"
+      "currencyId": "Overnight.fi USDC::USDC+",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x15d24de366f69b835be19f7cf9447e770315dd80": {
       "chainId": "81457",

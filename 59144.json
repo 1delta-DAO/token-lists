@@ -26,7 +26,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Bridged FRAX Ether (Axelar)::AXLFRXETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
@@ -53,7 +54,8 @@
       "assetGroup": "ANKRETH",
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x9b4971ac84054597eded7dc7b4b7e8a0c90753b5": {
@@ -65,7 +67,8 @@
       "assetGroup": "Mendi Wrapped eETH::meweETH",
       "currencyId": "Mendi Wrapped eETH::meweETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x8a90d208666deec08123444f67bf5b1836074a67": {
@@ -77,7 +80,8 @@
       "assetGroup": "Mendi Renzo Restaked ETH::meezETH",
       "currencyId": "Mendi Renzo Restaked ETH::meezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x0684fc172a0b8e6a65cf4684edb2082272fe9050": {
@@ -89,7 +93,8 @@
       "assetGroup": "ZeroLend Renzo Restaked ETH::z0ezETH",
       "currencyId": "ZeroLend Renzo Restaked ETH::z0ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xceed853798ff1c95ceb4dc48f68394eb7a86a782": {
@@ -101,7 +106,8 @@
       "assetGroup": "Mendi Wrapped liquid staked Ether 2.0::mewstETH",
       "currencyId": "Mendi Wrapped liquid staked Ether 2.0::mewstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x9eb8879231c71bd739967628ca26b72810beead8": {
@@ -113,7 +119,8 @@
       "assetGroup": "ZeroLend Lido Staked ETH::z0stETH",
       "currencyId": "ZeroLend Lido Staked ETH::z0stETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xb1afd04774c02ae84692619448b08ba79f19b1ff": {
@@ -126,7 +133,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::FRXETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116": {
@@ -139,7 +147,8 @@
       "assetGroup": "STONE",
       "currencyId": "StakeStone Ether::STONE",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xd2671165570f41bbb3b0097893300b6eb6101e6c": {
@@ -166,7 +175,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDAO Bridged rsETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -354,7 +364,10 @@
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/25337.png",
       "assetGroup": "GRAI",
       "currencyId": "Gravita Debt Token::GRAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x0e5f2ee8c29e7ebc14e45da7ff90566d8c407db7": {
       "chainId": "59144",
@@ -638,7 +651,10 @@
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/20317.png",
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x176211869ca2b568f2a7d4ee941e073a821ee1ff": {
       "chainId": "59144",
@@ -676,7 +692,10 @@
       "symbol": "USDT+",
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/24962.png",
       "assetGroup": "USDT+::USDT+",
-      "currencyId": "USDT+::USDT+"
+      "currencyId": "USDT+::USDT+",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x3aab2285ddcddad8edf438c1bab47e1a9d05a9b4": {
       "chainId": "59144",
@@ -1254,7 +1273,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33118/thumb/EURO3.png?1700732918",
       "assetGroup": "EURO3::EURO3",
       "currencyId": "EURO3::EURO3",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "risk": { "score": 4, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x5e15e8afc627397075ebe0a7c9dc14177429bbff": {
       "chainId": "59144",
@@ -1939,7 +1961,7 @@
       "currencyId": "MetaMask USD (Test)::mUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 2, "source": "whitelist" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xa18152629128738a5c081eb226335fed4b9c95e9": {
@@ -2216,7 +2238,8 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x5c247948fd58bb02b6c4678d9940f5e6b9af1127": {
@@ -2319,6 +2342,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/13469/thumb/1inch-logo.jpeg?1759404663",
       "assetGroup": "1INCH",
       "currencyId": "1INCH::1INCH"
+    },
+    "0x0ece76334fb560f2b1a49a60e38cf726b02203f0": {
+      "chainId": "59144",
+      "decimals": 18,
+      "name": "Compound",
+      "address": "0x0ece76334fb560f2b1a49a60e38cf726b02203f0",
+      "symbol": "COMP",
+      "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/5692.png",
+      "assetGroup": "COMP",
+      "currencyId": "Compound::COMP"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "59144",

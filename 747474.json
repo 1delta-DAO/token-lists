@@ -7,11 +7,11 @@
       "decimals": 18,
       "name": "PT sUSDai (USDai) Katana",
       "address": "0x29deaee5413a07c933c15b37d7deb6eb744ba9c8",
-      "symbol": "PT-sUSDai-15OCT2026",
+      "symbol": "PT-sUSDai-15OCT2026-(ARB)",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/21f9ad48-e8fc-4cdb-9a2a-b289320e005a.svg",
-      "assetGroup": "PT sUSDai (USDai) Katana::PT-sUSDai-15OCT2026",
-      "currencyId": "PT sUSDai (USDai) Katana::PT-sUSDai-15OCT2026",
-      "props": { "pendle": { "tokenType": "PT" } }
+      "assetGroup": "PT sUSDai (USDai) Katana::PT-sUSDai-15OCT2026-(ARB)",
+      "currencyId": "PT sUSDai (USDai) Katana::PT-sUSDai-15OCT2026-(ARB)",
+      "props": { "pendle": { "tokenType": "PT", "bridgedFrom": "ARB" } }
     },
     "0x3e801cb1da7aee8082683d47957397e6a279cb2d": {
       "chainId": "747474",
@@ -125,7 +125,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -151,7 +152,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x6c16e26013f2431e8b2e1ba7067ecccad0db6c52": {
@@ -277,7 +279,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/ausd.svg",
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x1e5efca3d0db2c6d5c67a4491845c43253eb9e4e": {
       "chainId": "747474",
@@ -522,9 +527,9 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
-          "source": "whitelist"
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" }
       }

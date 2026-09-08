@@ -141,7 +141,9 @@ export const LST_GENERATED: LstRegistry = {
   '143': {
     '0x10aeaf63194db8d453d4d85a06e5efe1dd0b5417': { type: 'staking', asset: 'ETH', provider: 'lido' },
     '0x2416092f143378750bb29b79ed961ab195cceea5': { type: 'restaking', asset: 'ETH', provider: 'renzo' },
+    '0x288f9d76019469bfeb56bb77d86afa2bf563b75b': { type: 'staking', asset: 'ETH', provider: 'frax' },
     '0x37d6382b6889ccef8d6871a8b60e667115eddbcf': { type: 'restaking', asset: 'ETH', provider: 'puffer' },
+    '0x3b4cf37a3335f21c945a40088404c715525fcb29': { type: 'staking', asset: 'ETH', provider: 'frax' },
     '0xa3d68b74bf0528fdd07263c60d6488749044914b': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
     '0xc50f2e735edd9dcd8ccd41ecfe9894e679e3195f': { type: 'staking', asset: 'ETH', provider: 'rocketpool' },
     '0xc99f5c922dae05b6e2ff83463ce705ef7c91f077': { type: 'staking', asset: 'BTC', provider: 'solv' },

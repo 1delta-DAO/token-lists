@@ -102,10 +102,7 @@ function isPlausibleSymbol(v: unknown): v is string {
  * we could not read is a worse answer than a slightly lossy one, but it is not
  * a reason to lose the token. See `isPlausibleSymbol` for what counts as read.
  */
-async function fetchOnChainSymbols(
-  chainId: string,
-  addresses: string[],
-): Promise<Record<string, string>> {
+async function fetchOnChainSymbols(chainId: string, addresses: string[]): Promise<Record<string, string>> {
   if (addresses.length === 0) return {}
   try {
     const res = (await multicallRetryUniversal({
@@ -235,16 +232,10 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
       // bridged PT. See `fetchOnChainSymbols`. Failing that, an origin suffix
       // recorded by an earlier run outranks the API's stripped symbol, so an
       // unreachable RPC cannot undo it — see `loadPreviousOriginSymbols`.
-      const symbol =
-        onChainSymbols[address] ??
-        previousOriginSymbols[`${chainId}:${address}`] ??
-        asset.symbol
+      const symbol = onChainSymbols[address] ?? previousOriginSymbols[`${chainId}:${address}`] ?? asset.symbol
       // Keep the name in step with the symbol, or the origin marker survives in
       // one field and not the other — and the name is what seeds `assetGroup`.
-      const name =
-        symbol !== asset.symbol && asset.name === asset.symbol
-          ? symbol
-          : asset.name
+      const name = symbol !== asset.symbol && asset.name === asset.symbol ? symbol : asset.name
 
       const tokenEntry: Token = {
         chainId,

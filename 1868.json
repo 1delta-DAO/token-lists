@@ -12,7 +12,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x0ce031aed457c870d74914ecaa7971dd3176cdaf": {
@@ -25,7 +26,8 @@
       "assetGroup": "STETH",
       "currencyId": "Liquid staked Ether 2.0::stETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x54e86315c03217b76a7466c302245fd10ebef25a": {
@@ -38,7 +40,8 @@
       "assetGroup": "Yay StakeStone Ether::YAYSTONE",
       "currencyId": "Yay StakeStone Ether::YAYSTONE",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x6c460b2c6d6719562d5da43e5152b375e79b9a8b": {
@@ -51,7 +54,8 @@
       "assetGroup": "PUFETH",
       "currencyId": "pufETH::PUFETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -396,8 +400,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "COMPROMISED",
-          "source": "whitelist"
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" }
       }

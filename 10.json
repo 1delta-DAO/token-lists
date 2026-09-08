@@ -147,6 +147,11 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -3739,6 +3744,7 @@
       "name": "Global X Uranium ETF xStock",
       "address": "0x0e6607ab45d2ca779068cd6d9426c409773969fd",
       "symbol": "URAx",
+      "logoURI": "https://tokens.debridge.finance/Logo/10/0x0e6607ab45d2ca779068cd6d9426c409773969fd/small/token-logo.png",
       "assetGroup": "Global X Uranium ETF xStock::URAx",
       "currencyId": "Global X Uranium ETF xStock::URAx",
       "props": {
@@ -7454,6 +7460,19 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "SHEIN xStock",
+      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
+      "symbol": "SHEINx",
+      "logoURI": "https://tokens.debridge.finance/Logo/10/0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6/small/token-logo.png",
+      "assetGroup": "SHEIN xStock::SHEINx",
+      "currencyId": "SHEIN xStock::SHEINx",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
     "0x346e03f8cce9fe01dcb3d0da3e9d00dc2c0e08f0": {
       "chainId": "10",
       "decimals": 18,
@@ -7464,7 +7483,8 @@
       "assetGroup": "WEETH",
       "currencyId": "OP Bridged Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5a7facb970d094b6c7ff1df0ea68d99e6e73cbff": {
@@ -7477,7 +7497,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -7490,7 +7511,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x9bcef72be871e61ed4fbbc7630889bee758eb81d": {
@@ -7531,7 +7553,8 @@
       "assetGroup": "CBETH",
       "currencyId": "Coinbase Wrapped Staked ETH::cbETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "coinbase" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "coinbase" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x6806411765af15bddd26f8f544a34cc40cb9838b": {
@@ -7544,7 +7567,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -7557,7 +7581,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Bridged FRAX Ether (Axelar)::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -7570,7 +7595,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x484c2d6e3cdd945a8b2df735e079178c1036578c": {
@@ -7583,7 +7609,8 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xe05a08226c49b636acf99c40da8dc6af83ce5bb3": {
@@ -7596,7 +7623,8 @@
       "assetGroup": "ANKRETH",
       "currencyId": "Ankr Staked ETH::ankrETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
@@ -7609,7 +7637,8 @@
       "assetGroup": "INETH",
       "currencyId": "Inception Restaked ETH::inETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -7621,7 +7650,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -7634,7 +7664,8 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x26aab17f27cd1c8d06a0ad8e4a1af8b1032171d5": {
@@ -7646,7 +7677,8 @@
       "assetGroup": "Sonne Wrapped liquid staked Ether 2.0::sowstETH",
       "currencyId": "Sonne Wrapped liquid staked Ether 2.0::sowstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x76a50b8c7349ccddb7578c6627e79b5d99d24138": {
@@ -7659,7 +7691,8 @@
       "assetGroup": "STETH",
       "currencyId": "Liquid staked Ether 2.0::stETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x80137510979822322193fc997d400d5a6c747bf7": {
@@ -7672,7 +7705,8 @@
       "assetGroup": "STONE",
       "currencyId": "StakeStone Ether::STONE",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x87eee96d50fb761ad85b1c982d28a042169d61b1": {
@@ -7685,7 +7719,8 @@
       "assetGroup": "RSETH",
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0xe0bb0d3de8c10976511e5030ca403dbf4c25165b": {
@@ -8782,7 +8817,10 @@
       "logoURI": "https://assets.smold.app/api/token/10/0x73cb180bf0521828d8849bc8CF2B920918e23032/logo-128.png",
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x920cf626a271321c151d027030d5d08af699456b": {
       "chainId": "10",
@@ -9486,7 +9524,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xbfd291da8a403daaf7e5e9dc1ec0aceacd4848b9/small/token-logo.png",
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x895e15020c3f52ddd4d8e9514eb83c39f53b1579": {
       "chainId": "10",
@@ -9497,7 +9538,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53607/thumb/IMG_2188.jpeg?1736873763",
       "assetGroup": "YieldFi yToken::yUSD",
       "currencyId": "YieldFi yToken::yUSD",
-      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x69420f9e38a4e60a62224c489be4bf7a94402496": {
       "chainId": "10",
@@ -9508,7 +9552,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x69420f9e38a4e60a62224c489be4bf7a94402496/small/token-logo.png",
       "assetGroup": "Defi.money::MONEY",
       "currencyId": "Defi.money::MONEY",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3": {
       "chainId": "10",
@@ -9521,7 +9568,8 @@
       "currencyId": "Glo Dollar::USDGLO",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x38f9bf9dce51833ec7f03c9dc218197999999999": {
@@ -9611,7 +9659,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -9648,7 +9696,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xb396b31599333739a97951b74652c117be86ee1d/small/token-logo.png",
       "assetGroup": "Davos.xyz USD::DUSD",
       "currencyId": "Davos.xyz USD::DUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xd0cf4de352ac8dcce00bd6b93ee73d3cb272edc3": {
       "chainId": "10",
@@ -9818,7 +9869,8 @@
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x59debed8d46a0cb823d8be8b957add987ead39aa": {
@@ -10520,7 +10572,10 @@
       "symbol": "DAI+",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x970d50d09f3a656b43e11b0d45241a84e3a6e011/small/token-logo.png",
       "assetGroup": "Overnight.fi DAI+::DAI+",
-      "currencyId": "Overnight.fi DAI+::DAI+"
+      "currencyId": "Overnight.fi DAI+::DAI+",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x1217bfe6c773eec6cc4a38b5dc45b92292b6e189": {
       "chainId": "10",
@@ -10544,7 +10599,8 @@
       "currencyId": "Savings Dai::sDAI",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "DAI", "base": "USD" }
+        "savings": { "underlying": "DAI", "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x8fc7c1109c08904160d6ae36482b79814d45eb78": {
@@ -11148,7 +11204,10 @@
       "symbol": "sEUR",
       "logoURI": "https://optimistic.etherscan.io/token/images/synthetixeuro_32.png",
       "assetGroup": "Synth sEUR::sEUR",
-      "currencyId": "Synth sEUR::sEUR"
+      "currencyId": "Synth sEUR::sEUR",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x326aec8d7d99d1d6022c57c5f6194d2a7867227d": {
       "chainId": "10",
@@ -11559,7 +11618,10 @@
       "symbol": "agEUR",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/optimism/0x9485aca5bbBE1667AD97c7fE7C4531a624C8b1ED.jpg",
       "assetGroup": "AGEUR",
-      "currencyId": "agEUR::agEUR"
+      "currencyId": "agEUR::agEUR",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x8637725ada78db0674a679cea2a5e0a0869ef4a1": {
       "chainId": "10",
@@ -12161,7 +12223,10 @@
       "logoURI": "https://static.debank.com/image/op_token/logo_url/0x9dabae7274d28a45f0b65bf8ed201a5731492ca0/90fd1cec7514a76d89fc46fff2a8ea2c.png",
       "assetGroup": "Metronome Synth USD::msUSD",
       "currencyId": "Metronome Synth USD::msUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
       "chainId": "10",
@@ -12342,7 +12407,10 @@
       "logoURI": "https://static.debank.com/image/era_token/logo_url/0x5fc44e95eaa48f9eb84be17bd3ac66b6a82af709/91700a6cc713e4086eb36696ecc0f9b4.png",
       "assetGroup": "GRAI",
       "currencyId": "Gravita Debt Token::GRAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x107dbf9c9c0ef2df114159e5c7dc2baf7c444cff": {
       "chainId": "10",
@@ -13115,7 +13183,8 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x4793405c2231d8646f8ee79e120c230c574b0c4b": {
@@ -13372,7 +13441,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x0a7b751fcdbbaa8bb988b9217ad5fb5cfe7bf7a0": {
@@ -13408,7 +13478,8 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xd4423795fd904d9b87554940a95fb7016f172773": {
@@ -13440,7 +13511,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37150/thumb/Coin_Logo_Frankencoin_1024px.png?1728679791",
       "assetGroup": "Frankencoin::ZCHF",
       "currencyId": "Frankencoin::ZCHF",
-      "props": { "stablecoin": { "base": "CHF" } }
+      "props": {
+        "stablecoin": { "base": "CHF" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {
       "chainId": "10",
@@ -13482,7 +13556,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68253/thumb/vyUSD_image.png?1755201198",
       "assetGroup": "YieldFi vyUSD::VYUSD",
       "currencyId": "YieldFi vyUSD::VYUSD",
-      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x7d3ce1265d5ea5848dc1c96aadbf754e2bad33b1": {
       "chainId": "10",
@@ -14728,16 +14805,6 @@
       "symbol": "QSRx",
       "assetGroup": "Restaurant Brands International xStock::QSRx",
       "currencyId": "Restaurant Brands International xStock::QSRx"
-    },
-    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
-      "chainId": "10",
-      "decimals": 18,
-      "name": "SHEIN xStock",
-      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
-      "symbol": "SHEINx",
-      "logoURI": "https://tokens.debridge.finance/Logo/10/0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6/small/token-logo.png",
-      "assetGroup": "SHEIN xStock::SHEINx",
-      "currencyId": "SHEIN xStock::SHEINx"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "10",
