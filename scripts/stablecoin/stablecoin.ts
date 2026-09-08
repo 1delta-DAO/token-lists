@@ -41,6 +41,13 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   // RWA-backed (reinsurance / real-world + digital assets). Not in the DeFiLlama feed.
   'Reservoir rUSD::RUSD': { base: 'USD' },
   'Reservoir Stablecoin::rUSD': { base: 'USD' },
+  // BitFi bfUSD — minted 1:1 against USDC/USDT through the protocol's minters and
+  // redeemable 1:1 (free through the StandardRedeemer, 0.5 % for the instant leg).
+  // Absent from the DeFiLlama feed, and no integrated lender quotes it, so without
+  // this overlay it has NO price at all — and the two staking pools over it
+  // (hbfUSD / pbfUSD) render with no share price and $0 TVL, which is the "$0 row"
+  // failure, not a small vault. See BITFI.md.
+  'BitFi USD::BFUSD': { base: 'USD' },
   // Tokenised GBP (tGBP) — GBP-pegged ERC-20, not in the DeFiLlama feed. The generator looks
   // the overlay up on the group it holds at that point, which for a `1delta`-tagged source is
   // the stored (already collision-suffixed) string — hence both forms.
