@@ -88,6 +88,38 @@ upstream, not gaps here.
 
 ---
 
+## Repairing `decimals` — `pnpm onchain:decimals`
+
+`fetch.ts` is **additive**: an address already in the list is skipped without an
+RPC call. That is what makes re-running cheap, and it also means it can never
+fix an entry that is already there and wrong.
+
+A source list can be wrong about `decimals` in particular, because the
+generator drops any entry whose `decimals` is falsy — so an adapter whose
+upstream omits the field has to invent one. `PHAROS_SOCIALSCAN_LIST` invents
+`18`, and that was wrong for **48 of chain 1672's 289 tokens**: USDC and USDC.e
+at 6, bfBTC and FBTC at 8, two rows at 24, two at 0. Nothing about such a row
+looks broken — it has a real address, a real symbol and a plausible number.
+
+```bash
+pnpm onchain:decimals            # the DECIMALS_UNVERIFIED_CHAINS default
+pnpm onchain:decimals 1672 239   # explicit chain ids
+```
+
+It re-reads `decimals()` for every listed token and rewrites only that field,
+only where the chain answers. It runs as part of `pnpm generate:formatted`, so
+the nightly regeneration re-invents the guess and this corrects it again.
+
+Two rules if you add another adapter that hardcodes `decimals`:
+
+- **register its chain in `DECIMALS_UNVERIFIED_CHAINS`** (in
+  [`verifyDecimals.ts`](./verifyDecimals.ts)) in the same change;
+- an address that **reverts** is reported and left untouched, never guessed at.
+  `0` is a legal answer and is not a failure — do not filter it out with the
+  reverts.
+
+---
+
 ## After the fetch: check the asset group
 
 `assetGroup` is auto-derived as `` `${name}::${symbol}` `` from whatever the
@@ -116,6 +148,11 @@ it merely looks similar.
   `<chainId>.json` outside this script can be lost. Prefer adding to
   `coins.json` and re-running; when a manual edit is unavoidable, make it a
   narrow string replacement rather than a rewrite of the file.
+- **Run `pnpm format` after a fetch, or the diff is unreviewable.** Both scripts
+  here write with `JSON.stringify(…, 2)`, which expands every short object the
+  lists store on one line — adding two tokens to `1.json` produced an 18,964-line
+  diff of pure whitespace. `pnpm format` passes `--object-wrap collapse`, which
+  restores the stored form and leaves only the real change.
 - **`coins.json` is a worklist, not a registry.** It is safe (and normal) to
   leave old entries in it — they are skipped once listed. There is no need to
   prune it after a successful run. `sugar.ts` appends to the same file, so it

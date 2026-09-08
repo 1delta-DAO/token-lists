@@ -103,6 +103,15 @@ export const GROUP_ALIAS: Record<string, string> = {
   // split one asset into two groups. Canonical = the uppercase form, matching the
   // majority of chains and the stablecoin overlay key.
   'Tokenised GBP::tGBP': 'Tokenised GBP::TGBP',
+  // BitFi bfBTC — ONE asset at two vanity addresses across eight chains (`0xCdFb…fb15`
+  // on 1/1116/200901, `0x623F…d9DF` on 56/8453/43111/1672/239/2345). The external lists
+  // uppercase the ticker (`BFBTC`) on 1/56/8453/1116/200901 while the on-chain `symbol()`
+  // — which is what `onchain-fetch` writes for 43111/1672/239/2345 — is `bfBTC`, so one
+  // asset arrived as two groups. Canonical = the uppercase form: it is the chain-1 form,
+  // it is the majority of deployments, and it is the key the margin-fetcher rows and the
+  // intrinsic-yield join must match (the Treehouse `tETH`/`TETH` lesson — that join is a
+  // case-sensitive index, so the split reads as 0 % yield on whichever side loses).
+  'BitFi Bitcoin::bfBTC': 'BitFi Bitcoin::BFBTC',
   // Renzo ezETH
   'Renzo Restaked ETH::ezETH': 'EZETH',
   // Frax frxETH

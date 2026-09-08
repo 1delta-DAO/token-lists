@@ -363,7 +363,17 @@ const HYPERSWAP_LIST: ArbitraryTokenList = {
   ignoreTags: true,
 }
 
-// socialscan response has no `decimals` field — default to 18 (EVM standard) for Pharos
+// socialscan's token response has no `decimals` field, and the generator DROPS any entry
+// whose `decimals` is falsy — so a number has to be invented here or Pharos has no token
+// list at all. 18 is the least-bad guess, and it is wrong for 48 of the 289 tokens
+// (USDC/USDC.e are 6, bfBTC and FBTC are 8, two rows are 24, two are 0).
+//
+// The guess is therefore NOT the answer: `onchain-fetch/verifyDecimals.ts` re-reads
+// `decimals()` from the chain and corrects the list afterwards, and 1672 is registered in
+// its `DECIMALS_UNVERIFIED_CHAINS`. It runs as part of `npm run generate:formatted`.
+// If you add another list that hardcodes `decimals`, register its chain there in the same
+// change — otherwise the chain ships with balances mis-scaled by orders of magnitude and
+// nothing looks broken.
 const PHAROS_SOCIALSCAN_LIST: ArbitraryTokenList = {
   url: 'https://api.socialscan.io/pharos-mainnet/v1/explorer/tokens?type=erc20&is_verified=false&page=1&size=30&sort=on_chain_market_cap&order=desc',
   access: 'data',

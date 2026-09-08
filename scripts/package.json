@@ -13,12 +13,13 @@
     "savings": "tsx savings/savings.ts",
     "sugar": "tsx onchain-fetch/sugar.ts",
     "onchain": "tsx onchain-fetch/fetch.ts",
-    "format": "npx prettier .. -w --ignore-path .prettierignore",
+    "onchain:decimals": "tsx onchain-fetch/verifyDecimals.ts",
+    "format": "npx prettier .. -w --object-wrap collapse --ignore-path .prettierignore",
     "generate": "tsx generateTokenMap.script.ts",
     "generate:cached": "GEN_CACHE=1 tsx generateTokenMap.script.ts",
     "regen": "GEN_CACHE=1 tsx generateTokenMap.script.ts && npm run format",
     "portal": "tsx portalTokens.script.ts",
-    "generate:formatted": "npm run pendle && npm run spectra && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run savings && npm run generate && npm run format"
+    "generate:formatted": "npm run pendle && npm run spectra && npm run rwa && npm run lst && npm run risk && npm run stablecoin && npm run savings && npm run generate && npm run onchain:decimals && npm run format"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
