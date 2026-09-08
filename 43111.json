@@ -71,7 +71,8 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -97,7 +98,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
@@ -164,7 +166,8 @@
       "symbol": "VUSD.L",
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/vusd.png",
       "assetGroup": "Vesper V-Dollar (Legacy)::VUSD.L",
-      "currencyId": "Vesper V-Dollar (Legacy)::VUSD.L"
+      "currencyId": "Vesper V-Dollar (Legacy)::VUSD.L",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e": {
       "chainId": "43111",
@@ -430,11 +433,7 @@
       "currencyId": "Satoshi Stablecoin V2::satUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
-          "source": "whitelist"
-        }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {

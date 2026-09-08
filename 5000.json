@@ -8751,6 +8751,19 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
+      "chainId": "5000",
+      "decimals": 18,
+      "name": "SHEIN xStock",
+      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
+      "symbol": "SHEINX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176611/thumb/sheinxstock.png?1788327462",
+      "assetGroup": "SHEIN xStock::SHEINX",
+      "currencyId": "SHEIN xStock::SHEINX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
     "0x458ed78eb972a369799fb278c0243b25e5242a83": {
       "chainId": "5000",
       "decimals": 18,
@@ -9182,7 +9195,8 @@
       "currencyId": "AUSD::AUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x9f0c013016e8656bc256f948cd4b79ab25c7b94d": {
@@ -9666,7 +9680,10 @@
       "logoURI": "https://cleopatra.exchange/_next/image?url=https%3A%2F%2Fraw.githubusercontent.com%2FRamsesExchange%2Framses-assets%2Fmain%2Fblockchains%2Fmantle%2Fassets%2F0x894134a25a5faC1c2C26F1d8fBf05111a3CB9487%2Flogo.png&w=32&q=75",
       "assetGroup": "GRAI",
       "currencyId": "Gravita Debt Token::GRAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x2598c30330d5771ae9f983979209486ae26de875": {
       "chainId": "5000",
@@ -10213,7 +10230,7 @@
       "currencyId": "Syrup USDT::syrupUSDT",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -10374,16 +10391,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102176353/thumb/SMOIHx.png?1787822657",
       "assetGroup": "Smoore International xStock::SMOIHX",
       "currencyId": "Smoore International xStock::SMOIHX"
-    },
-    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
-      "chainId": "5000",
-      "decimals": 18,
-      "name": "SHEIN xStock",
-      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
-      "symbol": "SHEINX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102176611/thumb/sheinxstock.png?1788327462",
-      "assetGroup": "SHEIN xStock::SHEINX",
-      "currencyId": "SHEIN xStock::SHEINX"
     },
     "0x063c1d1ef6e9099ce3e8e9ad5c6173d12c49c086": {
       "chainId": "5000",

@@ -392,7 +392,8 @@
           "underlyingAsset": "0x6695c0f8706c5ace3bdf8995073179cca47926dc",
           "ytAddress": "0x649c5d55c4cd4b2360e5d22f5dfa193de43ea88f",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
-        }
+        },
+        "risk": { "score": 2, "source": "vault_inherit" }
       }
     },
     "0x40acbcbc55d40500fc9d9da8204de972e441f809": {
@@ -659,7 +660,8 @@
           "underlyingAsset": "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6",
           "ytAddress": "0x6332c06829e08d1c465386e33cfcf95628ef07a8",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92"
-        }
+        },
+        "risk": { "score": 3, "source": "vault_inherit" }
       }
     },
     "0x5edcbc20cac67adc2e724d4348ff85132b085b82": {
@@ -741,7 +743,8 @@
           "underlyingAsset": "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6",
           "ptAddress": "0x5df425b024115ebd1721cc646e5dd0ae688846dd",
           "syAddress": "0x193b2f36957f7e9e498758bbf182273bc145bb92"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x641066fc5b4f53432c4ad9ad745a175af4da7233": {
@@ -786,7 +789,8 @@
           "underlyingAsset": "0x6695c0f8706c5ace3bdf8995073179cca47926dc",
           "ptAddress": "0x3c0eb94b4069aff0d9d76c751a64dcf0130ac0fa",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x64babfdda037010214d68fca6f896a8503be45de": {
@@ -1662,7 +1666,7 @@
           "ytAddress": "0x6214a4e602d145711a0bc0db22a9648e364a14bd",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
         },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 3, "source": "vault_inherit" }
       }
     },
     "0xff3ccc1245d59b21b6ec4a597557e748f8311e8c": {
@@ -1911,7 +1915,8 @@
       "currencyId": "sUSDai::SUSDAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "savings": { "underlying": "USDai", "base": "USD" }
+        "savings": { "underlying": "USDai", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x87e617c7484ade79fcd90db58beb82b057facb48": {
@@ -1925,7 +1930,8 @@
       "currencyId": "OpenEden Open Dollar::USDO",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xbeee5862649ef24c1f1d5e799505f67f1e7bab9a": {
@@ -1939,7 +1945,8 @@
       "currencyId": "Compounding Open Dollar::cUSDO",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "savings": { "underlying": "USDO", "base": "USD" }
+        "savings": { "underlying": "USDO", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x92a01ab7317ac318b39b00eb6704ba56f0245d7a": {
@@ -2079,8 +2086,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "COMPROMISED",
-          "source": "whitelist"
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" }
       }
@@ -2137,7 +2144,7 @@
       "currencyId": "Syrup USDT::syrupUSDT",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -2213,7 +2220,8 @@
       "symbol": "tcUSDT0",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xa9c251f8304b1b3fc2b9e8fcae78d94eff82ac66.png",
       "assetGroup": "TelosC Earn USDT0::tcUSDT0",
-      "currencyId": "TelosC Earn USDT0::tcUSDT0"
+      "currencyId": "TelosC Earn USDT0::tcUSDT0",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x616185600989bf8339b58ac9e539d49536598343": {
       "chainId": "9745",
@@ -2252,7 +2260,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x29ad7fe4516909b9e498b5a65339e54791293234.png",
       "assetGroup": "Metronome Synth USD::msUSD",
       "currencyId": "Metronome Synth USD::msUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xa29420057f3e3b9512d4786df135da1674bd74d4": {
       "chainId": "9745",
@@ -2286,7 +2297,8 @@
       "symbol": "246USDT0",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x9c46ee1f01d2b551048f5ff99a4659d98d04bed1.png",
       "assetGroup": "246Club TelosC Earn USDT0::246USDT0",
-      "currencyId": "246Club TelosC Earn USDT0::246USDT0"
+      "currencyId": "246Club TelosC Earn USDT0::246USDT0",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xc8a8df9b210243c55d31c73090f06787ad0a1bf6": {
       "chainId": "9745",
@@ -2323,7 +2335,10 @@
       "symbol": "ebUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xef7b1a03e0897c33b63159e38d779e3970c0e2fc.png",
       "assetGroup": "ebUSD Stablecoin::ebUSD",
-      "currencyId": "ebUSD Stablecoin::ebUSD"
+      "currencyId": "ebUSD Stablecoin::ebUSD",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x888888bab58a7bd3068110749bc7b63b62ce874d": {
       "chainId": "9745",
@@ -2538,7 +2553,7 @@
       "currencyId": "YieldFi vyUSD::vyUSD",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },

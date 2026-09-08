@@ -12,7 +12,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x11b3808a5c0b612bc284ef7c2c6034c77a66be7b": {
@@ -25,7 +26,8 @@
       "assetGroup": "BRBTC",
       "currencyId": "brBTC::brBTC",
       "props": {
-        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" }
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x2729868df87d062020e4a4867ff507fb52ee697c": {
@@ -190,7 +192,10 @@
       "address": "0x07373d112edc4570b46996ad1187bc4ac9fb5ed0",
       "symbol": "bitusd",
       "assetGroup": "BITUSD::bitusd",
-      "currencyId": "BITUSD::bitusd"
+      "currencyId": "BITUSD::bitusd",
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xe04d21d999faedf1e72ade6629e20a11a1ed14fa": {
       "chainId": "200901",

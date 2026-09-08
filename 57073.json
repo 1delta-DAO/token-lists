@@ -7,33 +7,39 @@
       "decimals": 6,
       "name": "PT sUSDat (USDat) Ink",
       "address": "0x00b0a5896daae9289169ca8f63a4d2fd94c8c1df",
-      "symbol": "PT-sUSDat-27AUG2026",
+      "symbol": "PT-USDat-27AUG2026-(ETH)",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c1f07b0-ae8d-4104-8ad2-8d21cd11fdf8.svg",
-      "assetGroup": "PT sUSDat (USDat) Ink::PT-sUSDat-27AUG2026",
-      "currencyId": "PT sUSDat (USDat) Ink::PT-sUSDat-27AUG2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
+      "assetGroup": "PT sUSDat (USDat) Ink::PT-USDat-27AUG2026-(ETH)",
+      "currencyId": "PT sUSDat (USDat) Ink::PT-USDat-27AUG2026-(ETH)",
+      "props": {
+        "pendle": { "tokenType": "PT", "bridgedFrom": "ETH", "expired": true }
+      }
     },
     "0x8f7e95b7c1a5994e1b0c4c9d71120c6b5f2afeeb": {
       "chainId": "57073",
       "decimals": 18,
       "name": "PT srUSDe (USDe) Ink",
       "address": "0x8f7e95b7c1a5994e1b0c4c9d71120c6b5f2afeeb",
-      "symbol": "PT-srUSDe-2APR2026",
+      "symbol": "PT-srUSDe-2APR2026-(ETH)",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ca53eb29-0df9-404b-a9c4-2a789c1fbf21.svg",
-      "assetGroup": "PT srUSDe (USDe) Ink::PT-srUSDe-2APR2026",
-      "currencyId": "PT srUSDe (USDe) Ink::PT-srUSDe-2APR2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
+      "assetGroup": "PT srUSDe (USDe) Ink::PT-srUSDe-2APR2026-(ETH)",
+      "currencyId": "PT srUSDe (USDe) Ink::PT-srUSDe-2APR2026-(ETH)",
+      "props": {
+        "pendle": { "tokenType": "PT", "bridgedFrom": "ETH", "expired": true }
+      }
     },
     "0xe5cb0f6479bf27155785f8d63d475c6fd8c650d8": {
       "chainId": "57073",
       "decimals": 6,
       "name": "PT sUSDat (USDat) Ink",
       "address": "0xe5cb0f6479bf27155785f8d63d475c6fd8c650d8",
-      "symbol": "PT-sUSDat-27AUG2026",
+      "symbol": "PT-sUSDat-27AUG2026-(ETH)",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c1f07b0-ae8d-4104-8ad2-8d21cd11fdf8.svg",
-      "assetGroup": "PT sUSDat (USDat) Ink::PT-sUSDat-27AUG2026::57073::0",
-      "currencyId": "PT sUSDat (USDat) Ink::PT-sUSDat-27AUG2026",
-      "props": { "pendle": { "tokenType": "PT", "expired": true } }
+      "assetGroup": "PT sUSDat (USDat) Ink::PT-sUSDat-27AUG2026-(ETH)",
+      "currencyId": "PT sUSDat (USDat) Ink::PT-sUSDat-27AUG2026-(ETH)",
+      "props": {
+        "pendle": { "tokenType": "PT", "bridgedFrom": "ETH", "expired": true }
+      }
     },
     "0x53ad50d3b6fcacb8965d3a49cb722917c7dae1f3": {
       "chainId": "57073",
@@ -8047,6 +8053,19 @@
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
       }
     },
+    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
+      "chainId": "57073",
+      "decimals": 18,
+      "name": "SHEIN xStock",
+      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
+      "symbol": "SHEINX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176611/thumb/sheinxstock.png?1788327462",
+      "assetGroup": "SHEIN xStock::SHEINX",
+      "currencyId": "SHEIN xStock::SHEINX",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+      }
+    },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
       "chainId": "57073",
       "decimals": 18,
@@ -8057,7 +8076,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -8070,7 +8090,8 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xa3d68b74bf0528fdd07263c60d6488749044914b": {
@@ -8083,7 +8104,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::WEETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -8096,7 +8118,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::EZETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xc3eacf0612346366db554c991d7858716db09f58": {
@@ -8109,7 +8132,8 @@
       "assetGroup": "RSETH",
       "currencyId": "Kelp DAO Restaked ETH::RSETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077": {
@@ -8161,7 +8185,8 @@
       "assetGroup": "RSETH",
       "currencyId": "rsETHWrapper::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x3b172e9c5488b17a0f4dc6ff4dc798055cc77281": {
@@ -9363,16 +9388,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102176648/thumb/Backgroundless_Beast_200x200.png?1788410365",
       "assetGroup": "Beast::BEAST",
       "currencyId": "Beast::BEAST"
-    },
-    "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6": {
-      "chainId": "57073",
-      "decimals": 18,
-      "name": "SHEIN xStock",
-      "address": "0x4d0ba049c430a7a80a61e7ebdf50b6daac6c3bd6",
-      "symbol": "SHEINX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102176611/thumb/sheinxstock.png?1788327462",
-      "assetGroup": "SHEIN xStock::SHEINX",
-      "currencyId": "SHEIN xStock::SHEINX"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "57073",
