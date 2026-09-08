@@ -142,6 +142,40 @@ it merely looks similar.
 
 ---
 
+## After the fetch: port the logo — `pnpm logos`
+
+`fetch.ts` writes `name` / `symbol` / `decimals` and nothing else, so **every
+token it adds arrives with no `logoURI`** and renders as a blank circle. The
+same happens whenever a chain's source list carries an asset the other sources
+carry with an icon — bfBTC had the icon on five chains and none on three,
+including the one holding 330 bfBTC.
+
+```bash
+pnpm logos                         # dry run over the whole repo
+pnpm logos --group BitFi           # dry run, filtered by asset group
+pnpm logos --group BitFi --apply
+```
+
+It groups by the **aliased** asset group (so a case-split group still sees its
+own donors), picks the icon by majority — self-hosted
+`1delta-DAO/asset-icons` breaks a tie, then the lowest chain id — HEADs it to
+confirm it is still a live image, and writes it **only into entries that have
+no logo at all**. It never replaces one: two chains disagreeing about an icon is
+cosmetic, overwriting a curated icon with a scraped one is a regression, and
+nothing here can tell the two apart.
+
+A group with no icon on ANY chain is reported and left alone. That is the right
+outcome rather than a placeholder — a share token with no icon of its own falls
+back to its UNDERLYING's in margin-fetcher's `stampVaultClassification`, which
+is how hbfUSD and pbfUSD correctly render BitFi's bfUSD mark.
+
+Deliberately NOT part of `generate:formatted`: it makes a network request per
+group with a gap, and skipping the check would let one dead CDN URL be copied
+onto every chain. Run it after `pnpm onchain`, then `pnpm format`. As of
+2026-09-08 a repo-wide run would fill **510 entries across 72 chain files**.
+
+---
+
 ## Gotchas
 
 - **The nightly regeneration overwrites the raw list JSON.** Hand edits to a
