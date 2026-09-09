@@ -15,8 +15,12 @@
  * here.
  *
  * Grouping is by the ALIASED asset group (`aliasAssetGroup`), the same key the
- * generator writes — otherwise a case-split group like
- * `BitFi Bitcoin::bfBTC` vs `::BFBTC` hides the very donors it needs.
+ * generator writes, CASE-FOLDED — otherwise a case-split group like
+ * `BitFi Bitcoin::bfBTC` vs `::BFBTC` hides the very donors it needs, and the
+ * alias map only covers the splits someone already noticed by hand. Two groups
+ * whose `name::symbol` differs only in case are the same asset; nothing else in
+ * the repo tells them apart. Folding found donors for 660 groups the alias map
+ * still had listed as having no icon anywhere.
  *
  *   npx tsx logos/backfillLogos.ts                    # dry run, whole repo
  *   npx tsx logos/backfillLogos.ts --group BitFi      # dry run, filtered
@@ -93,6 +97,8 @@ async function main() {
   // group → logoURI → holders that already carry it
   const donors = new Map<string, Map<string, Holder[]>>()
   const gaps = new Map<string, Holder[]>()
+  // case-folded key -> the spelling to print, so the log still reads naturally
+  const label = new Map<string, string>()
 
   for (const f of listFiles()) {
     const parsed: TokenListFile = JSON.parse(
@@ -100,9 +106,11 @@ async function main() {
     )
     files.set(f, parsed)
     for (const [address, t] of Object.entries(parsed.list ?? {})) {
-      const group = aliasAssetGroup(t.assetGroup ?? '')
-      if (!group) continue
-      if (filter && !group.toLowerCase().includes(filter)) continue
+      const groupName = aliasAssetGroup(t.assetGroup ?? '')
+      if (!groupName) continue
+      const group = groupName.toLowerCase()
+      if (filter && !group.includes(filter)) continue
+      if (!label.has(group)) label.set(group, groupName)
       const holder: Holder = {
         file: f,
         chainId: String(t.chainId ?? f.replace('.json', '')),
@@ -129,7 +137,7 @@ async function main() {
   for (const [group, missing] of [...gaps.entries()].sort()) {
     const byUri = donors.get(group)
     if (!byUri || byUri.size === 0) {
-      noDonor.push(`${group} (${missing.length})`)
+      noDonor.push(`${label.get(group)} (${missing.length})`)
       continue
     }
     // Majority wins; self-hosted breaks a tie; then the lowest chain id, so the
@@ -143,7 +151,7 @@ async function main() {
     if (verify && !(await resolves(winner[0]))) {
       unverifiable += missing.length
       console.log(
-        `SKIP  ${group} — the only candidate does not resolve as an image: ${winner[0]}`,
+        `SKIP  ${label.get(group)} — the only candidate does not resolve as an image: ${winner[0]}`,
       )
       continue
     }
@@ -151,7 +159,7 @@ async function main() {
     const from = winner[1].map((h) => h.chainId).join(',')
     const to = missing.map((h) => h.chainId).join(',')
     console.log(
-      `${apply ? 'FILL ' : 'would'} ${group}\n        ${winner[0]}\n        from chain(s) ${from} → ${to}` +
+      `${apply ? 'FILL ' : 'would'} ${label.get(group)}\n        ${winner[0]}\n        from chain(s) ${from} → ${to}` +
         (byUri.size > 1 ? `  [${byUri.size} candidates, majority ${winner[1].length}]` : ''),
     )
     filled += missing.length
