@@ -60,11 +60,7 @@ async function getAvailableChains(): Promise<ChainInfo[]> {
             }
           })
 
-          const tokenData: TokenListFile = {
-            chainId,
-            version: '1.0.0',
-            list: tokenMap,
-          }
+          const tokenData: TokenListFile = { chainId, version: '1.0.0', list: tokenMap }
 
           availableChains.push({
             chainId,
@@ -86,18 +82,10 @@ async function getAvailableChains(): Promise<ChainInfo[]> {
   return availableChains
 }
 
-async function processChainsInBatches(chains: ChainInfo[]): Promise<
-  {
-    chainId: string
-    success: boolean
-    permitCount: number
-  }[]
-> {
-  const results: {
-    chainId: string
-    success: boolean
-    permitCount: number
-  }[] = []
+async function processChainsInBatches(
+  chains: ChainInfo[],
+): Promise<{ chainId: string; success: boolean; permitCount: number }[]> {
+  const results: { chainId: string; success: boolean; permitCount: number }[] = []
 
   for (let i = 0; i < chains.length; i += MAX_CONCURRENT_CHAINS) {
     const batch = chains.slice(i, i + MAX_CONCURRENT_CHAINS)
@@ -112,10 +100,7 @@ async function processChainsInBatches(chains: ChainInfo[]): Promise<
 
         if (Object.keys(permitMap).length === 0) {
           console.log(`No tokens with permit support found for chain ${chainInfo.chainId}`)
-          const emptyResult = {
-            ...chainInfo.tokenData,
-            list: {},
-          }
+          const emptyResult = { ...chainInfo.tokenData, list: {} }
           fs.writeFileSync(permitFilePath, JSON.stringify(emptyResult, null, 2))
           return { chainId: chainInfo.chainId, success: true, permitCount: 0 }
         }
@@ -125,10 +110,7 @@ async function processChainsInBatches(chains: ChainInfo[]): Promise<
           list: Object.keys(permitMap).reduce((acc, address) => {
             const token = chainInfo.tokenData!.list[address]
             if (token) {
-              acc[address] = {
-                ...token,
-                permit: permitMap[address],
-              }
+              acc[address] = { ...token, permit: permitMap[address] }
             }
             return acc
           }, {} as any),

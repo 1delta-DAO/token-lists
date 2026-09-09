@@ -241,12 +241,7 @@ export namespace AutoGenHelpers {
       bl || // not blacklisted
       (String(token.chainId) == Chain.FUEL && !FUEL_MAPPEDS.includes(token.address)) // fuel and not explicitly mapped
     )
-      return {
-        currencyId,
-        group: currencyId,
-        tags: findMatchingKeywords(name, keyTags, baseTags),
-        tier: '5',
-      }
+      return { currencyId, group: currencyId, tags: findMatchingKeywords(name, keyTags, baseTags), tier: '5' }
     // Helper function to clean names and remove known bridges/keywords
     const cleanName = (name: string): string => {
       const regex = new RegExp(`\\b(${knownBridges.join('|')})\\b`, 'gi')
@@ -298,12 +293,7 @@ export namespace AutoGenHelpers {
       return { currencyId, group: mapAssetGroup(matchedAsset.symbol), tags, tier }
     }
     // If no match, return a fallback with symbol and name for clarity
-    return {
-      currencyId,
-      group: currencyId,
-      tags,
-      tier,
-    }
+    return { currencyId, group: currencyId, tags, tier }
   }
 
   export function transformMap(

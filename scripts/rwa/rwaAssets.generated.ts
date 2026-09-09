@@ -1676,9 +1676,7 @@ export const RWA_GENERATED: RwaRegistry = {
       underlying: 'XAU',
     },
   },
-  '30': {
-    '0xdd629e5241cbc5919847783e6c96b2de4754e438': { type: 'fund', subType: 'treasury', issuer: 'midas' },
-  },
+  '30': { '0xdd629e5241cbc5919847783e6c96b2de4754e438': { type: 'fund', subType: 'treasury', issuer: 'midas' } },
   '56': {
     '0x0024af2ca56e822ad487c0bedc52a82028a55f86': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x004de17f31eec9b7f601b662f234c6e484da8f77': { type: 'equity', subType: 'stock', issuer: 'backed' },

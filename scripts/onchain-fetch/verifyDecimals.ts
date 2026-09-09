@@ -98,7 +98,9 @@ async function verifyChain(chainId: string): Promise<void> {
       (fixed.length ? `\n  ${fixed.join('\n  ')}` : ''),
   )
   if (unreadable.length > 0) {
-    console.log(`  unreadable (left untouched): ${unreadable.slice(0, 20).join(', ')}${unreadable.length > 20 ? ', …' : ''}`)
+    console.log(
+      `  unreadable (left untouched): ${unreadable.slice(0, 20).join(', ')}${unreadable.length > 20 ? ', …' : ''}`,
+    )
   }
 }
 

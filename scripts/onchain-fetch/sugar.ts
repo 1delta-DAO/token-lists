@@ -94,10 +94,7 @@ const PAGE_LIMIT = 500n
 
 type SugarToken = { token_address: Address }
 
-type Variant = {
-  abi: any
-  args: readonly unknown[]
-}
+type Variant = { abi: any; args: readonly unknown[] }
 
 const buildVariants = (offset: bigint): Variant[] => [
   { abi: ABI_CURRENT, args: [PAGE_LIMIT, offset, ZERO, [] as Address[]] },
