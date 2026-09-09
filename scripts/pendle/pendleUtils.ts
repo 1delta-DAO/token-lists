@@ -136,9 +136,7 @@ export async function fetchMarketData(chainId: string): Promise<PendleMarketsRes
 
   console.log(`Found ${chainMarkets.length} markets for chain ${chainId}`)
 
-  return {
-    markets: chainMarkets,
-  }
+  return { markets: chainMarkets }
 }
 
 /**

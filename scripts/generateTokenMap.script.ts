@@ -58,9 +58,7 @@ const baseUrlChains = 'https://raw.githubusercontent.com/1delta-DAO/chains/main'
 
 const chainsURL = baseUrlChains + '/data.json'
 
-type ChainIdAddressMetaMap = {
-  [chainId: string]: { [address: string]: MinimalTokenNoChainId }
-}
+type ChainIdAddressMetaMap = { [chainId: string]: { [address: string]: MinimalTokenNoChainId } }
 
 type Register = { [assetEnum: string]: string }
 
@@ -127,14 +125,7 @@ interface List {
 type ListOfLists = { [chainId: string]: AssetList }
 type ListOfMainTokens = { [chainId: string]: string[] }
 type ListOfBridgeTokens = { [chainId: string]: string[] }
-type SymbolToNames = {
-  [symbol: string]: {
-    address: string
-    chainId: string
-    name: string
-    tags: string[]
-  }[]
-}
+type SymbolToNames = { [symbol: string]: { address: string; chainId: string; name: string; tags: string[] }[] }
 
 function checkUri(a?: string) {
   if (!a) return true
@@ -310,13 +301,7 @@ async function readTokenLists(): Promise<{
                     if (permitMaps[chainId]) {
                       if (permitMaps[chainId]?.[lcAddress]) {
                         const { type, version } = permitMaps[chainId]?.[lcAddress]
-                        tokenProps = {
-                          ...tokenProps,
-                          permit: {
-                            type: type === 'EIP2612' ? 1 : 0,
-                            version,
-                          },
-                        }
+                        tokenProps = { ...tokenProps, permit: { type: type === 'EIP2612' ? 1 : 0, version } }
                       }
                     }
                     if (tokenInList?.name?.startsWith('Vault Bridge'))
@@ -410,9 +395,7 @@ async function readTokenLists(): Promise<{
                       assetGroup,
                       currencyId,
                       // ...(tags.length > 0 ? { tags } : {}),
-                      ...(Object.values(tokenProps).length > 0 && {
-                        props: tokenProps,
-                      }),
+                      ...(Object.values(tokenProps).length > 0 && { props: tokenProps }),
                     }
 
                     const isWrappedNative =
@@ -423,10 +406,7 @@ async function readTokenLists(): Promise<{
                       // wnative always in mainlist
                       listOfMainTokens[chainId].push(lcAddress)
                       if (!parsedEntry.props) parsedEntry.props = {}
-                      parsedEntry.props = {
-                        ...parsedEntry.props,
-                        wnative: true,
-                      }
+                      parsedEntry.props = { ...parsedEntry.props, wnative: true }
                     }
 
                     const omniAssetEntry = {
@@ -438,9 +418,7 @@ async function readTokenLists(): Promise<{
                       chainId,
                       logoURI,
                       // ...(tags.length > 0 ? { tags: [...tags] } : {}),
-                      ...(Object.values(tokenProps).length > 0 && {
-                        props: tokenProps,
-                      }),
+                      ...(Object.values(tokenProps).length > 0 && { props: tokenProps }),
                     }
 
                     // all of this only for assets not yet mapped
@@ -467,11 +445,7 @@ async function readTokenLists(): Promise<{
                                   `wrapped-native ${lcAddress} added but no native asset injected for omni group ${assetGroup}`,
                               )
                             } else {
-                              let newCcy = {
-                                ...omniAssetEntry,
-                                ...info,
-                                tags: [],
-                              }
+                              let newCcy = { ...omniAssetEntry, ...info, tags: [] }
                               omnis[assetGroup].name = info.name
                               omnis[assetGroup].symbol = info.symbol
                               omnis[assetGroup].currencies.push({
@@ -485,10 +459,7 @@ async function readTokenLists(): Promise<{
                         }
                       } else {
                         // @ts-ignore
-                        omnis[assetGroup] = {
-                          id: assetGroup,
-                          currencies: [omniAssetEntry],
-                        }
+                        omnis[assetGroup] = { id: assetGroup, currencies: [omniAssetEntry] }
                         // add native
                         if (isWrappedNative) {
                           if (chainId !== Chain.FUEL) {
@@ -499,11 +470,7 @@ async function readTokenLists(): Promise<{
                                   `wrapped-native ${lcAddress} added but no native asset injected for omni group ${assetGroup}`,
                               )
                             } else {
-                              let newCcy = {
-                                ...omniAssetEntry,
-                                ...info,
-                                tags: [],
-                              }
+                              let newCcy = { ...omniAssetEntry, ...info, tags: [] }
                               omnis[assetGroup].name = info.name
                               omnis[assetGroup].symbol = info.symbol
                               omnis[assetGroup].currencies.push({
@@ -532,12 +499,7 @@ async function readTokenLists(): Promise<{
                     if (!listOfLists[chainId][lcAddress]) {
                       listOfLists[chainId][lcAddress] = parsedEntry
                       if (!symbolToNames[assetGroup]) symbolToNames[assetGroup] = []
-                      symbolToNames[assetGroup].push({
-                        chainId,
-                        address: lcAddress,
-                        name: tokenInListName,
-                        tags,
-                      })
+                      symbolToNames[assetGroup].push({ chainId, address: lcAddress, name: tokenInListName, tags })
 
                       chainIdAddressMetaMap[chainId][lcAddress] = {
                         decimals: Number(tokenInList.decimals),
@@ -593,10 +555,7 @@ async function readTokenLists(): Promise<{
                       !parsedEntry.name.toLowerCase().includes('(ice)') &&
                       !chainPreset[chainId]?.stable
                     ) {
-                      chainPreset[chainId] = {
-                        ...(chainPreset[chainId] ?? {}),
-                        stable: parsedEntry,
-                      }
+                      chainPreset[chainId] = { ...(chainPreset[chainId] ?? {}), stable: parsedEntry }
                     }
                     if (
                       parsedEntry.symbol == 'DAI' &&
@@ -604,10 +563,7 @@ async function readTokenLists(): Promise<{
                       !parsedEntry.name.toLowerCase().includes('ice bridge') &&
                       !chainPreset[chainId]?.dai
                     ) {
-                      chainPreset[chainId] = {
-                        ...(chainPreset[chainId] ?? {}),
-                        dai: parsedEntry,
-                      }
+                      chainPreset[chainId] = { ...(chainPreset[chainId] ?? {}), dai: parsedEntry }
                     }
                     if (
                       parsedEntry.symbol == 'USDT' &&
@@ -615,10 +571,7 @@ async function readTokenLists(): Promise<{
                       !parsedEntry.name.toLowerCase().includes('ice bridge') &&
                       !chainPreset[chainId]?.usdt
                     ) {
-                      chainPreset[chainId] = {
-                        ...(chainPreset[chainId] ?? {}),
-                        usdt: parsedEntry,
-                      }
+                      chainPreset[chainId] = { ...(chainPreset[chainId] ?? {}), usdt: parsedEntry }
                     }
                     if (
                       parsedEntry.symbol == 'USDC' &&
@@ -626,10 +579,7 @@ async function readTokenLists(): Promise<{
                       !parsedEntry.name.toLowerCase().includes('ice bridge') &&
                       !chainPreset[chainId]?.usdc
                     ) {
-                      chainPreset[chainId] = {
-                        ...(chainPreset[chainId] ?? {}),
-                        usdc: parsedEntry,
-                      }
+                      chainPreset[chainId] = { ...(chainPreset[chainId] ?? {}), usdc: parsedEntry }
                     }
                     if (
                       (assetGroup === 'BTC' || assetGroup === 'WBTC') &&
@@ -637,10 +587,7 @@ async function readTokenLists(): Promise<{
                       !parsedEntry.name.toLowerCase().includes('ice bridge') &&
                       !chainPreset[chainId]?.btc
                     ) {
-                      chainPreset[chainId] = {
-                        ...(chainPreset[chainId] ?? {}),
-                        btc: parsedEntry,
-                      }
+                      chainPreset[chainId] = { ...(chainPreset[chainId] ?? {}), btc: parsedEntry }
                     }
                     if (
                       (assetGroup === 'ETH' || assetGroup === 'WETH') &&
@@ -648,10 +595,7 @@ async function readTokenLists(): Promise<{
                       !parsedEntry.name.toLowerCase().includes('ice bridge') &&
                       !chainPreset[chainId]?.eth
                     ) {
-                      chainPreset[chainId] = {
-                        ...(chainPreset[chainId] ?? {}),
-                        eth: parsedEntry,
-                      }
+                      chainPreset[chainId] = { ...(chainPreset[chainId] ?? {}), eth: parsedEntry }
                     }
                     if (PRESET_SYMBOLS[chainId]?.includes(parsedEntry.symbol.toUpperCase())) {
                       chainPreset[chainId] = {
@@ -712,9 +656,7 @@ async function readTokenLists(): Promise<{
           ...info,
           props: {
             isNative: true,
-            ...(NATIVE_ERC20[chain] && {
-              erc20: NATIVE_ERC20[chain].toLowerCase(),
-            }),
+            ...(NATIVE_ERC20[chain] && { erc20: NATIVE_ERC20[chain].toLowerCase() }),
             ...(wnative && { wrapped: wnative.address.toLowerCase() }),
           },
         }
@@ -815,13 +757,7 @@ function filterForWNative(native: { decimals: number; symbol: string; name: stri
 
 const importSnippetWNativeData = `import {WrappedNativeInfo} from "../types";\n`
 /** Create js file for chainInfo */
-function createWnativeMap(
-  chainMap: ListOfLists,
-  CHAIN_INFO: any,
-): {
-  data: string
-  wNative: any
-} {
+function createWnativeMap(chainMap: ListOfLists, CHAIN_INFO: any): { data: string; wNative: any } {
   let wNative: any = {}
   let data = importSnippetWNativeData
   data += `export const WRAPPED_NATIVE_INFO:WrappedNativeInfo = {\n`
@@ -851,16 +787,10 @@ function createPresetMap(chainPreset: ChainPreset, wnative: { [c: string]: any }
     const nativeCurrency = CHAIN_INFO[chainId]?.nativeCurrency
 
     if (nativeCurrency) {
-      presets = {
-        ...presets,
-        nativeAsset: { ...nativeCurrency, isNative: true } as any,
-      }
+      presets = { ...presets, nativeAsset: { ...nativeCurrency, isNative: true } as any }
     }
     if (wnative[chainId] && nativeCurrency.symbol.toLowerCase() !== wnative[chainId].symbol.toLowerCase())
-      presets = {
-        ...presets,
-        [wnative[chainId].symbol.toLowerCase()]: wnative[chainId],
-      }
+      presets = { ...presets, [wnative[chainId].symbol.toLowerCase()]: wnative[chainId] }
     data += `"${chainId}": {\n`
     Object.entries(presets).map(([k, t]) => {
       if (t) {

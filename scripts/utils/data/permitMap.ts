@@ -1,130 +1,39 @@
 export const PERMIT_MAP = {
-  '137': {
-    '0x3c499c542cef5e3811e1192ce70d8cc03d5c3359': {
-      type: 1,
-      version: '2',
-    },
-  },
+  '137': { '0x3c499c542cef5e3811e1192ce70d8cc03d5c3359': { type: 1, version: '2' } },
   '5000': {
-    '0xcda86a272531e8640cd7f1a92c01839911b90bb0': {
-      type: 1,
-      version: '1',
-    },
-    '0x09bc4e0d864854c6afb6eb9a9cdf58ac190d0df9': {
-      type: 1,
-      version: '2',
-    },
-    '0x00000000efe302beaa2b3e6e1b18d08d69a9012a': {
-      type: 1,
-      version: '1',
-    },
-    '0x4515a45337f461a11ff0fe8abf3c606ae5dc00c9': {
-      type: 1,
-      version: '1',
-    },
-    '0xc1e0c8c30f251a07a894609616580ad2ceb547f2': {
-      type: 1,
-      version: '1',
-    },
-    '0xd2b4c9b0d70e3da1fbdd98f469bd02e77e12fc79': {
-      type: 1,
-      version: '1',
-    },
-    '0xc01a7ad7fb8a085a3cc16be8eaa10302c78a1783': {
-      type: 1,
-      version: '1',
-    },
-    '0x4b7f28397b4294277e7825f224172944f4f5a877': {
-      type: 1,
-      version: '1',
-    },
+    '0xcda86a272531e8640cd7f1a92c01839911b90bb0': { type: 1, version: '1' },
+    '0x09bc4e0d864854c6afb6eb9a9cdf58ac190d0df9': { type: 1, version: '2' },
+    '0x00000000efe302beaa2b3e6e1b18d08d69a9012a': { type: 1, version: '1' },
+    '0x4515a45337f461a11ff0fe8abf3c606ae5dc00c9': { type: 1, version: '1' },
+    '0xc1e0c8c30f251a07a894609616580ad2ceb547f2': { type: 1, version: '1' },
+    '0xd2b4c9b0d70e3da1fbdd98f469bd02e77e12fc79': { type: 1, version: '1' },
+    '0xc01a7ad7fb8a085a3cc16be8eaa10302c78a1783': { type: 1, version: '1' },
+    '0x4b7f28397b4294277e7825f224172944f4f5a877': { type: 1, version: '1' },
   },
-  '8453': {
-    '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913': {
-      type: 1,
-      version: '2',
-    },
-  },
+  '8453': { '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913': { type: 1, version: '2' } },
   '42161': {
-    '0xaf88d065e77c8cc2239327c5edb3a432268e5831': {
-      type: 1,
-      version: '2',
-    },
-    '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9': {
-      type: 1,
-      version: '1',
-    },
-    '0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8': {
-      type: 1,
-      version: '1',
-    },
-    '0xf0cb2dc0db5e6c66b9a70ac27b06b878da017028': {
-      type: 1,
-      version: '1',
-    },
-    '0x912ce59144191c1204e64559fe8253a0e49e6548': {
-      type: 1,
-      version: '1',
-    },
-    '0x35751007a407ca6feffe80b3cb397736d2cf4dbe': {
-      type: 1,
-      version: '1',
-    },
-    '0x2416092f143378750bb29b79ed961ab195cceea5': {
-      type: 1,
-      version: '1',
-    },
-    '0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f': {
-      type: 1,
-      version: '1',
-    },
-    '0xd4d42f0b6def4ce0383636770ef773390d85c61a': {
-      type: 1,
-      version: '1',
-    },
-    '0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33': {
-      type: 1,
-      version: '1',
-    },
+    '0xaf88d065e77c8cc2239327c5edb3a432268e5831': { type: 1, version: '2' },
+    '0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9': { type: 1, version: '1' },
+    '0x0c880f6761f1af8d9aa9c466984b80dab9a8c9e8': { type: 1, version: '1' },
+    '0xf0cb2dc0db5e6c66b9a70ac27b06b878da017028': { type: 1, version: '1' },
+    '0x912ce59144191c1204e64559fe8253a0e49e6548': { type: 1, version: '1' },
+    '0x35751007a407ca6feffe80b3cb397736d2cf4dbe': { type: 1, version: '1' },
+    '0x2416092f143378750bb29b79ed961ab195cceea5': { type: 1, version: '1' },
+    '0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f': { type: 1, version: '1' },
+    '0xd4d42f0b6def4ce0383636770ef773390d85c61a': { type: 1, version: '1' },
+    '0x7dff72693f6a4149b17e7c6314655f6a9f7c8b33': { type: 1, version: '1' },
   },
   '43111': {
-    '0xad11a8beb98bbf61dbb1aa0f6d6f2ecd87b35afa': {
-      type: 1,
-      version: '2',
-    },
-    '0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e': {
-      type: 1,
-      version: '1',
-    },
+    '0xad11a8beb98bbf61dbb1aa0f6d6f2ecd87b35afa': { type: 1, version: '2' },
+    '0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e': { type: 1, version: '1' },
   },
   '167000': {
-    '0x07d83526730c7438048d55a4fc0b850e2aab6f0b': {
-      type: 1,
-      version: '2',
-    },
-    '0x19e26b0638bf63aa9fa4d14c6baf8d52ebe86c5c': {
-      type: 1,
-      version: '2',
-    },
-    '0xa9d23408b9ba935c230493c40c73824df71a0975': {
-      type: 1,
-      version: '1',
-    },
-    '0x5217c8f3b7fb8b6501c8ff2a4c09b14b4b08c9f9': {
-      type: 1,
-      version: '1',
-    },
-    '0xda9a0fbce1b8b11fcbd8114354ec266594c0ff5a': {
-      type: 1,
-      version: '1',
-    },
-    '0x09413312b263fd252c16e592a45f4689f26cb79d': {
-      type: 1,
-      version: '1',
-    },
-    '0xc8f4518ed4bab9a972808a493107926ce8237068': {
-      type: 1,
-      version: '1',
-    },
+    '0x07d83526730c7438048d55a4fc0b850e2aab6f0b': { type: 1, version: '2' },
+    '0x19e26b0638bf63aa9fa4d14c6baf8d52ebe86c5c': { type: 1, version: '2' },
+    '0xa9d23408b9ba935c230493c40c73824df71a0975': { type: 1, version: '1' },
+    '0x5217c8f3b7fb8b6501c8ff2a4c09b14b4b08c9f9': { type: 1, version: '1' },
+    '0xda9a0fbce1b8b11fcbd8114354ec266594c0ff5a': { type: 1, version: '1' },
+    '0x09413312b263fd252c16e592a45f4689f26cb79d': { type: 1, version: '1' },
+    '0xc8f4518ed4bab9a972808a493107926ce8237068': { type: 1, version: '1' },
   },
 } as const
