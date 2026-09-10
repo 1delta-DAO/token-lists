@@ -30,10 +30,7 @@ export async function loadRiskDataFile<T = any>(relPath: string): Promise<T> {
   const url = `https://api.github.com/repos/1delta-DAO/risk-data/contents/${relPath}?ref=main`
   console.log(`Fetching risk-data via GitHub API (private repo): ${relPath}`)
   const res = await fetch(url, {
-    headers: {
-      Accept: 'application/vnd.github.raw',
-      ...(token ? { Authorization: `Bearer ${token}` } : {}),
-    },
+    headers: { Accept: 'application/vnd.github.raw', ...(token ? { Authorization: `Bearer ${token}` } : {}) },
   })
   if (!res.ok) {
     throw new Error(
