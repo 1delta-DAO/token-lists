@@ -112,6 +112,21 @@ export const GROUP_ALIAS: Record<string, string> = {
   // intrinsic-yield join must match (the Treehouse `tETH`/`TETH` lesson — that join is a
   // case-sensitive index, so the split reads as 0 % yield on whichever side loses).
   'BitFi Bitcoin::bfBTC': 'BitFi Bitcoin::BFBTC',
+  // Saturn USDat / sUSDat — one asset per row at ONE address across its chains
+  // (USDat `0x2323…` on 1 and `0x0Bb1…` on 56/143; sUSDat `0xd166…` on 1 and
+  // `0x9cd5…` on 56/143), split into two groups because the deployments do not
+  // agree on the NAME: Ethereum's USDat answers `name() == 'USDat'` while the
+  // OFTs answer `'Saturn USD'`, and Ethereum's share is listed as
+  // `Saturn sUSDat::SUSDAT` while the OFTs answer `'Staked Saturn USD'`.
+  //
+  // Canonical = the chain-1 form in both cases, because Ethereum is where the
+  // only real vault is (the mirrors' 4626 surface reverts entirely) and it is
+  // the key margin-fetcher's SAVINGS_REGISTRY row and `saturnFetcher` bind to.
+  // Without this, Monad's ~6.08 M sUSDat and 31.1 M USDat read 0 % intrinsic
+  // yield — the Cap `stcUSD` / Treehouse `tETH` lesson, since that join is a
+  // case-sensitive index and the losing side simply reports nothing.
+  'Staked Saturn USD::sUSDat': 'Saturn sUSDat::SUSDAT',
+  'Saturn USD::USDat': 'Saturn Dollar::USDAT',
   // Renzo ezETH
   'Renzo Restaked ETH::ezETH': 'EZETH',
   // Frax frxETH

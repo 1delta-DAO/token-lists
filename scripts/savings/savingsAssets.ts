@@ -123,6 +123,32 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'USD3::USD3': { underlying: 'USDC', base: 'USD' },
   '3Jane Staked USD3::sUSD3': { underlying: 'USD3', base: 'USD' },
   'sUSD3::sUSD3': { underlying: 'USD3', base: 'USD' },
+  // --- Saturn sUSDat (over USDat) — passive by the test this list applies:
+  // deposit USDat, accrue a distribution the protocol pays in every three
+  // days, redeem USDat, with no allocation decisions on the depositor's
+  // position.
+  //
+  // **Included with the loudest caveat on this list.** `base: 'USD'` is right
+  // — USDat is a dollar and holds its peg ($0.9997, and it round-trips the
+  // Curve pool at −3 bps) — but the SHARE is not principal-stable: sUSDat's
+  // assets are 96.5 % Strategy's STRC preferred stock, held outright and
+  // marked to an oracle, and the share price ran 1.0000 → 0.7792 → 1.0176
+  // over the vault's first five months. It paid a ~12 % dividend across that
+  // period and still returned 3.7 % annualised, after a 22.8 % drawdown.
+  //
+  // That is the same "shape vs risk" split the Strata juniors below are
+  // included under, and the same warning: `savings` classifies the WRAPPER,
+  // never the principal. margin-fetcher carries the machine-readable half as
+  // `yieldProfile: 'volatile'`; see SATURN.md in `lending-sdks`.
+  //
+  // BOTH stored spellings are keyed, for the pre-alias reason spelled out
+  // under scrvUSD: chain 1 stores `Saturn sUSDat::SUSDAT` while the BNB (56)
+  // and Monad (143) OFT mirrors store `Staked Saturn USD::sUSDat`, and
+  // `lookupSavings` runs before `aliasAssetGroup` folds them. Only Ethereum
+  // is the vault — the mirrors' entire 4626 surface reverts — and that
+  // distinction lives in margin-fetcher's SAVINGS_REGISTRY, not here. ---
+  'Saturn sUSDat::SUSDAT': { underlying: 'USDat', base: 'USD' },
+  'Staked Saturn USD::sUSDat': { underlying: 'USDat', base: 'USD' },
   // --- Strata (docs.strata.markets) — risk-tranched CDOs over yield-bearing
   // dollars, 5 listed markets × senior/junior. `underlying` is the tranche's
   // ERC-4626 `asset()` (what you deposit), NOT the market's staked collateral:
@@ -135,8 +161,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // precedent above: this flag classifies the *shape* (a passive 4626 wrapper
   // over a stable underlying), while risk lives in `props.risk`. Do NOT read
   // `savings` as "principal-stable" — a junior tranche is first-loss capital
-  // and jrUSDat is the live proof, marked to ~0.36 absorbing the 2026-07 USDat
-  // depeg while its senior held par.
+  // and jrUSDat is the live proof, marked to ~0.36 absorbing the 2026-06/07
+  // drawdown in its collateral while its senior held par. Note what that
+  // collateral is: Saturn's sUSDat, marked to Strategy's STRC preferred stock
+  // and down 22.8 % peak to trough. **USDat itself never lost its peg** — it
+  // traded at $0.9997 throughout — so "the USDat depeg", which this comment
+  // used to say, named the wrong token.
   'Strata Senior USDe::SRUSDE': { underlying: 'USDe', base: 'USD' },
   'Strata Junior USDe::jrUSDe': { underlying: 'USDe', base: 'USD' },
   'Strata Senior NUSD::srNUSD': { underlying: 'NUSD', base: 'USD' },
