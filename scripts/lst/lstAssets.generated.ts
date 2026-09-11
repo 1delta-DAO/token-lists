@@ -172,12 +172,8 @@ export const LST_GENERATED: LstRegistry = {
     '0x80137510979822322193fc997d400d5a6c747bf7': { type: 'staking', asset: 'ETH', provider: 'stakestone' },
     '0xa161132371c94299d215915d4cbc3b629e2059be': { type: 'restaking', asset: 'BTC', provider: 'bedrock' },
   },
-  '204': {
-    '0x0c0efea731e3e9810c2b4822d5497eac107808ab': { type: 'staking', asset: 'BNB', provider: 'ankr' },
-  },
-  '223': {
-    '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
-  },
+  '204': { '0x0c0efea731e3e9810c2b4822d5497eac107808ab': { type: 'staking', asset: 'BNB', provider: 'ankr' } },
+  '223': { '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' } },
   '239': {
     '0x37d6382b6889ccef8d6871a8b60e667115eddbcf': { type: 'restaking', asset: 'ETH', provider: 'puffer' },
     '0x5448bbf60ee2edbcd32f032f3294982f4ad1119e': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
@@ -204,9 +200,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
     '0xd4169e045bcf9a86cc00101225d9ed61d2f51af2': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
   },
-  '988': {
-    '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' },
-  },
+  '988': { '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' } },
   '999': {
     '0xa321d2a72db265c04d5c1318ed69a719681bbade': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0xa3d68b74bf0528fdd07263c60d6488749044914b': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
@@ -215,9 +209,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xdfc7d2d003a053b2e0490531e9317a59962b511e': { type: 'restaking', asset: 'BTC', provider: 'bedrock' },
     '0xe6829d9a7ee3040e1276fa75293bde931859e8fa': { type: 'restaking', asset: 'ETH', provider: 'mantle' },
   },
-  '1088': {
-    '0x80137510979822322193fc997d400d5a6c747bf7': { type: 'staking', asset: 'ETH', provider: 'stakestone' },
-  },
+  '1088': { '0x80137510979822322193fc997d400d5a6c747bf7': { type: 'staking', asset: 'ETH', provider: 'stakestone' } },
   '1101': {
     '0x12d8ce035c5de3ce39b1fdd4c1d5a745eaba3b8c': { type: 'staking', asset: 'ETH', provider: 'ankr' },
     '0x3ec3849c33291a9ef4c5db86de593eb4a37fde45': { type: 'staking', asset: 'ETH', provider: 'frax' },
@@ -233,9 +225,7 @@ export const LST_GENERATED: LstRegistry = {
     '0x5a2aa871954ebdf89b1547e75d032598356caad5': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' },
     '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
   },
-  '1135': {
-    '0x76d8de471f54aaa87784119c60df1bbfc852c415': { type: 'staking', asset: 'ETH', provider: 'lido' },
-  },
+  '1135': { '0x76d8de471f54aaa87784119c60df1bbfc852c415': { type: 'staking', asset: 'ETH', provider: 'lido' } },
   '1284': {
     '0x82bbd1b6f6de2b7bb63d3e1546e6b1553508be99': { type: 'staking', asset: 'ETH', provider: 'frax' },
     '0xecf91116348af1cffe335e9807f0051332be128d': { type: 'staking', asset: 'ETH', provider: 'frax' },
@@ -264,9 +254,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' },
     '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
   },
-  '2741': {
-    '0xc7ab797019156b543b7a3fbf5a99ecdab9eb4440': { type: 'staking', asset: 'ETH', provider: 'frax' },
-  },
+  '2741': { '0xc7ab797019156b543b7a3fbf5a99ecdab9eb4440': { type: 'staking', asset: 'ETH', provider: 'frax' } },
   '2818': {
     '0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' },
     '0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
@@ -292,9 +280,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xe6829d9a7ee3040e1276fa75293bde931859e8fa': { type: 'restaking', asset: 'ETH', provider: 'mantle' },
     '0xecc68d0451e20292406967fe7c04280e5238ac7d': { type: 'staking', asset: 'ETH', provider: 'frax' },
   },
-  '7000': {
-    '0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' },
-  },
+  '7000': { '0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' } },
   '8453': {
     '0x04c0599ae5a44757c0af6f9ec3b93da8976c150a': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
     '0x192e0c7cc9b263d93fa6d472de47bbefe1fb12ba': { type: 'staking', asset: 'ETH', provider: 'frax' },
@@ -380,9 +366,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xf469fbd2abcd6b9de8e169d128226c0fc90a012e': { type: 'staking', asset: 'BTC', provider: 'pumpbtc' },
     '0xf7d4e7273e5015c96728a6b02f31c505ee184603': { type: 'staking', asset: 'ETH', provider: 'stakewise' },
   },
-  '42793': {
-    '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' },
-  },
+  '42793': { '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' } },
   '43111': {
     '0x93919784c523f39cacaa98ee0a9d96c3f32b593e': { type: 'restaking', asset: 'BTC', provider: 'bedrock' },
     '0xb5686c4f60904ec2bda6277d6fe1f7caa8d1b41a': { type: 'staking', asset: 'ETH', provider: 'rocketpool' },
@@ -467,9 +451,7 @@ export const LST_GENERATED: LstRegistry = {
     '0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0xecc68d0451e20292406967fe7c04280e5238ac7d': { type: 'staking', asset: 'ETH', provider: 'frax' },
   },
-  '98866': {
-    '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' },
-  },
+  '98866': { '0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3': { type: 'staking', asset: 'BTC', provider: 'lorenzo' } },
   '167000': {
     '0x473c58b748156d3249ca31baa3cad9781eb6d97e': { type: 'staking', asset: 'ETH', provider: 'rocketpool' },
     '0x756b6574b3162077a630895995b443aa68cd2015': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },

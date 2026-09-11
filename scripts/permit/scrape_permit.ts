@@ -93,10 +93,7 @@ async function filterForPermits(
     ])
 
     try {
-      const multicallResults: MulticallResults<any[]> = await client.multicall({
-        contracts: calls,
-        allowFailure: true,
-      })
+      const multicallResults: MulticallResults<any[]> = await client.multicall({ contracts: calls, allowFailure: true })
 
       for (let j = 0; j < multicallResults.length; j += 2) {
         const token = chunk[Math.floor(j / 2)]
@@ -247,11 +244,7 @@ async function getDomainSeparatorVersion(
         } else if (token.domainSeparator.toLowerCase() === v2DomainHash.toLowerCase()) {
           token.version = '2'
         } else {
-          console.warn('no version or name or domain separator', {
-            v1DomainHash,
-            v2DomainHash,
-            token,
-          })
+          console.warn('no version or name or domain separator', { v1DomainHash, v2DomainHash, token })
         }
       }
     })
@@ -303,10 +296,7 @@ export async function scrapePermits(chainId: string, startIndex?: number, endInd
   const tokenList: TokenListFile = fileContent
   const tokens = Object.values(tokenList.list)
 
-  const client = createPublicClient({
-    chain: getEvmChain(chainId) as any,
-    transport: http(rpcUrl),
-  })
+  const client = createPublicClient({ chain: getEvmChain(chainId) as any, transport: http(rpcUrl) })
 
   const isRpcHealthy = await checkRpcHealth(client as any, chainId)
   if (!isRpcHealthy) {
@@ -336,11 +326,7 @@ export async function scrapePermits(chainId: string, startIndex?: number, endInd
 export async function scrapePermitsForTokens(
   tokens: Token[],
   chainId: string,
-  options?: {
-    client?: any
-    startIndex?: number
-    endIndex?: number
-  },
+  options?: { client?: any; startIndex?: number; endIndex?: number },
 ): Promise<{ [address: string]: { type: string; version: string } }> {
   if (!chainId || !getEvmChain(chainId)) {
     throw new Error(`Invalid chainId: ${chainId}`)
@@ -352,12 +338,7 @@ export async function scrapePermitsForTokens(
     throw new Error(`No rpc url found for chain ${chainId}`)
   }
 
-  const client =
-    options?.client ||
-    createPublicClient({
-      chain: getEvmChain(chainId) as any,
-      transport: http(rpcUrl),
-    })
+  const client = options?.client || createPublicClient({ chain: getEvmChain(chainId) as any, transport: http(rpcUrl) })
 
   // Check RPC health before proceeding
   const isRpcHealthy = await checkRpcHealth(client as any, chainId)
