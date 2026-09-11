@@ -101,9 +101,7 @@ async function main() {
   const label = new Map<string, string>()
 
   for (const f of listFiles()) {
-    const parsed: TokenListFile = JSON.parse(
-      fs.readFileSync(path.join(repoRoot, f), 'utf-8'),
-    )
+    const parsed: TokenListFile = JSON.parse(fs.readFileSync(path.join(repoRoot, f), 'utf-8'))
     files.set(f, parsed)
     for (const [address, t] of Object.entries(parsed.list ?? {})) {
       const groupName = aliasAssetGroup(t.assetGroup ?? '')
@@ -150,9 +148,7 @@ async function main() {
 
     if (verify && !(await resolves(winner[0]))) {
       unverifiable += missing.length
-      console.log(
-        `SKIP  ${label.get(group)} — the only candidate does not resolve as an image: ${winner[0]}`,
-      )
+      console.log(`SKIP  ${label.get(group)} — the only candidate does not resolve as an image: ${winner[0]}`)
       continue
     }
 
@@ -172,11 +168,7 @@ async function main() {
   }
 
   if (apply) {
-    for (const f of touched)
-      fs.writeFileSync(
-        path.join(repoRoot, f),
-        JSON.stringify(files.get(f), null, 2) + '\n',
-      )
+    for (const f of touched) fs.writeFileSync(path.join(repoRoot, f), JSON.stringify(files.get(f), null, 2) + '\n')
   }
 
   console.log(
