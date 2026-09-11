@@ -14165,6 +14165,26 @@
         "pendle": { "tokenType": "YT", "expiry": 1782950400, "expired": true }
       }
     },
+    "0x76543ac61ba84c6feeee76c6a918127bf0ca5fd1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT siUSD (iUSD) Ethereum",
+      "address": "0x76543ac61ba84c6feeee76c6a918127bf0ca5fd1",
+      "symbol": "PT-siUSD-7JAN2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/4b010b4f-d77a-4386-ae32-cd22b30a8bb8.svg",
+      "assetGroup": "PT siUSD (iUSD) Ethereum::PT-siUSD-7JAN2027",
+      "currencyId": "PT siUSD (iUSD) Ethereum::PT-siUSD-7JAN2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xd44f2630260ff3805d7cb317d4f6740b0044c408",
+          "expiry": 1799280000,
+          "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+          "ytAddress": "0xd42f23aa6d2b886524006c6aecb1ad80579e736c",
+          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920"
+        }
+      }
+    },
     "0x76f327150224393ff07aafa3449fbb23103fb279": {
       "chainId": "1",
       "decimals": 18,
@@ -18770,11 +18790,11 @@
       "props": {
         "pendle": {
           "tokenType": "SY",
-          "marketAddress": "0xcb975d7694295532b82529b175e14e233a36b22d",
-          "expiry": 1787184000,
+          "marketAddress": "0xd44f2630260ff3805d7cb317d4f6740b0044c408",
+          "expiry": 1799280000,
           "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
-          "ptAddress": "0xbb6cdb98a2f8a9fb431fd1073eaa0a51422ac30d",
-          "ytAddress": "0x3014b2942117742840d318917a17eb256b3ea777"
+          "ptAddress": "0x76543ac61ba84c6feeee76c6a918127bf0ca5fd1",
+          "ytAddress": "0xd42f23aa6d2b886524006c6aecb1ad80579e736c"
         },
         "risk": { "score": 4, "source": "default" }
       }
@@ -24780,6 +24800,26 @@
       "currencyId": "PT DUSD (USDC) Ethereum::PT-DUSD-23APR2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1776902400, "expired": true }
+      }
+    },
+    "0xd42f23aa6d2b886524006c6aecb1ad80579e736c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT siUSD (iUSD) Ethereum",
+      "address": "0xd42f23aa6d2b886524006c6aecb1ad80579e736c",
+      "symbol": "YT-siUSD-7JAN2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/8fc96c8f-68b5-4e9c-9c12-6d7191f99fa1.svg",
+      "assetGroup": "YT siUSD (iUSD) Ethereum::YT-siUSD-7JAN2027",
+      "currencyId": "YT siUSD (iUSD) Ethereum::YT-siUSD-7JAN2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xd44f2630260ff3805d7cb317d4f6740b0044c408",
+          "expiry": 1799280000,
+          "underlyingAsset": "0xdbdc1ef57537e34680b898e1febd3d68c7389bcb",
+          "ptAddress": "0x76543ac61ba84c6feeee76c6a918127bf0ca5fd1",
+          "syAddress": "0x9f30507c264cc6eb5be35b18ff9ad7b4539aa920"
+        }
       }
     },
     "0xd46fdff6d4d4e19c3e6d31ce2bf2239ba07bf71c": {
@@ -147915,7 +147955,8 @@
       "symbol": "BFUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/71603/thumb/bfUSD-logo-symbol-color_%281%29.png?1768507823",
       "assetGroup": "BitFi USD::BFUSD",
-      "currencyId": "BitFi USD::BFUSD"
+      "currencyId": "BitFi USD::BFUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x14913815bcfde78baead2111f463d038ac9c2949": {
       "chainId": "1",
@@ -158033,20 +158074,6 @@
       "assetGroup": "Tenor siUSD/USDC Collateral Vault::siUSD-USDC-collat::1::0x226ecbf4755a5f81ed721e18c3fda11f004ea9e0",
       "currencyId": "Tenor siUSD/USDC Collateral Vault::siUSD-USDC-collat"
     },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Ether",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "ETH",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
-      "assetGroup": "ETH",
-      "currencyId": "Ether::ETH",
-      "props": {
-        "isNative": true,
-        "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
-      }
-    },
     "0xde5d4ab42251ba9af6f247cf07c9a4793fa6ed88": {
       "chainId": "1",
       "decimals": 6,
@@ -158073,6 +158100,130 @@
       "symbol": "wstETH-WETH-collat",
       "assetGroup": "Tenor wstETH/WETH Collateral Vault::wstETH-WETH-collat",
       "currencyId": "Tenor wstETH/WETH Collateral Vault::wstETH-WETH-collat"
+    },
+    "0xdaa3b81a3acfcb60b875eba1d26852376bc38486": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Recursion Pharmaceuticals (Ondo Tokenized Stock)",
+      "address": "0xdaa3b81a3acfcb60b875eba1d26852376bc38486",
+      "symbol": "RXRXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176865/thumb/rxron.png?1788933201",
+      "assetGroup": "Recursion Pharmaceuticals (Ondo Tokenized Stock)::RXRXON",
+      "currencyId": "Recursion Pharmaceuticals (Ondo Tokenized Stock)::RXRXON"
+    },
+    "0x7e95779d2d7b4a654a4ac80cb6423ae8998cf1e7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Hertz Global Holdings (Ondo Tokenized Stock)",
+      "address": "0x7e95779d2d7b4a654a4ac80cb6423ae8998cf1e7",
+      "symbol": "HTZON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176866/thumb/htzon.png?1788933417",
+      "assetGroup": "Hertz Global Holdings (Ondo Tokenized Stock)::HTZON",
+      "currencyId": "Hertz Global Holdings (Ondo Tokenized Stock)::HTZON"
+    },
+    "0x613518b520241f90c3e023bb6006c63a5019ca7b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Wendy's (Ondo Tokenized Stock)",
+      "address": "0x613518b520241f90c3e023bb6006c63a5019ca7b",
+      "symbol": "WENON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176867/thumb/wendys.png?1788933700",
+      "assetGroup": "Wendy's (Ondo Tokenized Stock)::WENON",
+      "currencyId": "Wendy's (Ondo Tokenized Stock)::WENON"
+    },
+    "0xe109dfbf450ec2b9944900830b8da22eaa59f1a3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares High Yield Systematic Bond ETF (Ondo Tokenized ETF)",
+      "address": "0xe109dfbf450ec2b9944900830b8da22eaa59f1a3",
+      "symbol": "HYDBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176868/thumb/hybdon.png?1788933998",
+      "assetGroup": "iShares High Yield Systematic Bond ETF (Ondo Tokenized ETF)::HYDBON",
+      "currencyId": "iShares High Yield Systematic Bond ETF (Ondo Tokenized ETF)::HYDBON"
+    },
+    "0x6830f7bbfd274e393a32846918da9de210879ae4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares Broad USD High Yield Corporate Bond ETF (Ondo Tokeni",
+      "address": "0x6830f7bbfd274e393a32846918da9de210879ae4",
+      "symbol": "USHYON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176869/thumb/ushyon.png?1788934277",
+      "assetGroup": "iShares Broad USD High Yield Corporate Bond ETF (Ondo Tokeni::USHYON",
+      "currencyId": "iShares Broad USD High Yield Corporate Bond ETF (Ondo Tokeni::USHYON"
+    },
+    "0x36b90adcdc99be31bf39a3c031288baa0b457e10": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Alphabet Class C (Ondo Tokenized Stock)",
+      "address": "0x36b90adcdc99be31bf39a3c031288baa0b457e10",
+      "symbol": "GOOGON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176871/thumb/googleon.png?1788934734",
+      "assetGroup": "Alphabet Class C (Ondo Tokenized Stock)::GOOGON",
+      "currencyId": "Alphabet Class C (Ondo Tokenized Stock)::GOOGON"
+    },
+    "0x4554ad55cca5e7cb97b77813f486aaf6d4d9ab62": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "C3.ai (Ondo Tokenized Stock)",
+      "address": "0x4554ad55cca5e7cb97b77813f486aaf6d4d9ab62",
+      "symbol": "AION",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176872/thumb/aion.png?1788935037",
+      "assetGroup": "C3.ai (Ondo Tokenized Stock)::AION",
+      "currencyId": "C3.ai (Ondo Tokenized Stock)::AION"
+    },
+    "0xf86dc8e9668198af81231c342658808d7481bf8e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "ATOLLAR",
+      "address": "0xf86dc8e9668198af81231c342658808d7481bf8e",
+      "symbol": "ATOLLAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176827/thumb/Atolar_200px.png?1788861375",
+      "assetGroup": "ATOLLAR::ATOLLAR",
+      "currencyId": "ATOLLAR::ATOLLAR"
+    },
+    "0xdbd572502c554076e61fa31dcfef35e054f55150": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "ATOY",
+      "address": "0xdbd572502c554076e61fa31dcfef35e054f55150",
+      "symbol": "ATOY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176828/thumb/atoy_200px.png?1788861395",
+      "assetGroup": "ATOY::ATOY",
+      "currencyId": "ATOY::ATOY"
+    },
+    "0x7f450d4b135853aff06864d2677a1338bbb5ef9c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "ATOS(Verifying)",
+      "address": "0x7f450d4b135853aff06864d2677a1338bbb5ef9c",
+      "symbol": "ATOS(VERIFYING)",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176829/thumb/atoshhi2_200px.png?1788861511",
+      "assetGroup": "ATOS(Verifying)::ATOS(VERIFYING)",
+      "currencyId": "ATOS(Verifying)::ATOS(VERIFYING)"
+    },
+    "0xa6707a8a00e94d1834ccda2856c9cf948941078d": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Metal Dollar",
+      "address": "0xa6707a8a00e94d1834ccda2856c9cf948941078d",
+      "symbol": "XMD",
+      "logoURI": "https://assets.coingecko.com/coins/images/30898/thumb/icon-token-metal-dollar-200x.png?1696529744",
+      "assetGroup": "Metal Dollar::XMD",
+      "currencyId": "Metal Dollar::XMD"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ether",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
+      "assetGroup": "ETH",
+      "currencyId": "Ether::ETH",
+      "props": {
+        "isNative": true,
+        "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
     }
   },
   "mainTokens": [
