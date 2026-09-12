@@ -10230,7 +10230,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -10441,7 +10441,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x59debed8d46a0cb823d8be8b957add987ead39aa": {
@@ -12820,7 +12820,10 @@
       "symbol": "vaETH",
       "assetGroup": "vaETH Pool::vaETH",
       "currencyId": "vaETH Pool::vaETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 2, "source": "vault_inherit" }
+      }
     },
     "0x1d073cf59ae0c169cbc58b6fdd518822ae89173a": {
       "chainId": "10",
@@ -13454,7 +13457,10 @@
       "symbol": "vawstETH",
       "assetGroup": "vawstETH Pool::vawstETH",
       "currencyId": "vawstETH Pool::vawstETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2": {
       "chainId": "10",
@@ -15357,7 +15363,8 @@
       "address": "0x539505dde2b9771debe0898a84441c5e7fdf6bc0",
       "symbol": "vaUSDC",
       "assetGroup": "vaUSDC Pool::vaUSDC",
-      "currencyId": "vaUSDC Pool::vaUSDC"
+      "currencyId": "vaUSDC Pool::vaUSDC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd80840f51367e5f22d29c2de161d86fe992ebf77": {
       "chainId": "10",

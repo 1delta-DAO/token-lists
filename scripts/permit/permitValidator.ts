@@ -33,11 +33,7 @@ export async function checkPermit(
   chain: Chain,
   chunkSize: number = 100,
 ) {
-  const walletClient = createWalletClient({
-    account: ownerAccount,
-    chain,
-    transport: http(client.transport.url),
-  })
+  const walletClient = createWalletClient({ account: ownerAccount, chain, transport: http(client.transport.url) })
 
   const tokenChunks = chunk(tokens, chunkSize)
   let allResults: PermitSupportResult[] = []
@@ -56,12 +52,7 @@ export async function checkPermit(
 
         // DAI style permit
         if (token.type === 'DAI' && (token.version === '1' || !token.version)) {
-          const domainV1 = {
-            name: token.name,
-            version: '1',
-            chainId: chain.id,
-            verifyingContract: verifyingContract,
-          }
+          const domainV1 = { name: token.name, version: '1', chainId: chain.id, verifyingContract: verifyingContract }
           const typesV1 = {
             Permit: [
               { name: 'holder', type: 'address' },
@@ -106,12 +97,7 @@ export async function checkPermit(
         // EIP-2612 permit
         if (token.type === 'EIP2612') {
           if (token.version === '1' || !token.version) {
-            const domainV1 = {
-              name: token.name,
-              version: '1',
-              chainId: chain.id,
-              verifyingContract: verifyingContract,
-            }
+            const domainV1 = { name: token.name, version: '1', chainId: chain.id, verifyingContract: verifyingContract }
             const typesV1 = {
               Permit: [
                 { name: 'owner', type: 'address' },
@@ -152,12 +138,7 @@ export async function checkPermit(
             callCountForToken += 2
           }
           if (token.version === '2' || !token.version) {
-            const domainV2 = {
-              name: token.name,
-              version: '2',
-              chainId: chain.id,
-              verifyingContract: verifyingContract,
-            }
+            const domainV2 = { name: token.name, version: '2', chainId: chain.id, verifyingContract: verifyingContract }
             const typesV2 = {
               Permit: [
                 { name: 'owner', type: 'address' },
@@ -201,10 +182,7 @@ export async function checkPermit(
         tokenCallMappings.push({ tokenAddress: token.token.address, callCount: callCountForToken })
       }
 
-      const multicallResult = await client.multicall({
-        contracts: multicallContracts,
-        allowFailure: true,
-      })
+      const multicallResult = await client.multicall({ contracts: multicallContracts, allowFailure: true })
 
       let resultIndex = 0
       for (let i = 0; i < tokenChunk.length; i++) {

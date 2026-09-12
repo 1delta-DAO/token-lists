@@ -22,12 +22,7 @@ export type AaveLendingTokenMap = { [lender: string]: { [chainId: string]: { [ad
 
 /** lender -> chainId -> addressOfUnderlying -> aaveTokens(aToken,sToken,vToken)*/
 export type CompoundV3BaseTokenMap = {
-  [lender: string]: {
-    [chainId: string]: {
-      baseAsset: string
-      baseBorrowMin: bigint
-    }
-  }
+  [lender: string]: { [chainId: string]: { baseAsset: string; baseBorrowMin: bigint } }
 }
 
 type ModeEntry = { pool: string; underlying: string }
@@ -64,20 +59,14 @@ export interface ChainInfo {
   rpc: string[]
   features?: { name: string }[]
   faucets: string[]
-  nativeCurrency: {
-    name: string
-    symbol: string
-    decimals: number
-  }
+  nativeCurrency: { name: string; symbol: string; decimals: number }
   infoURL: string
   shortName: string
   key?: string
   chainId: number | string
   networkId: number | string
   slip44?: number
-  ens?: {
-    registry: string
-  }
+  ens?: { registry: string }
   explorers: {
     name: string
     url: string
@@ -93,39 +82,15 @@ export interface ChainInfo {
 /** chainId -> ChainInfo */
 export type ChainInfoMap = { [chainId: number | string]: ChainInfo }
 
-export type LenderPresets = {
-  [lender: string]: {
-    [chain: string | number]: {
-      debt: string[]
-      collateral: string[]
-    }
-  }
-}
+export type LenderPresets = { [lender: string]: { [chain: string | number]: { debt: string[]; collateral: string[] } } }
 
 export type SimpleAsset =
-  | {
-      decimals: number
-      isNative: true
-      name: string
-      symbol: string
-      props?: TokenProps
-    }
-  | {
-      decimals: number
-      name: string
-      address: string
-      symbol: string
-      props?: TokenProps
-    }
+  | { decimals: number; isNative: true; name: string; symbol: string; props?: TokenProps }
+  | { decimals: number; name: string; address: string; symbol: string; props?: TokenProps }
 
 /** chainId -> ChainInfo */
 export type WrappedNativeInfo = {
-  [chainId: number | string]: {
-    decimals: number
-    name: string
-    address: string
-    symbol: string
-  }
+  [chainId: number | string]: { decimals: number; name: string; address: string; symbol: string }
 }
 
 export interface AaveInfo {
@@ -147,9 +112,7 @@ type BasePreset = {
 
 type Preset = BasePreset & Record<string, SimpleAsset>
 
-export type ChainPreset = {
-  [chainId: string]: Preset
-}
+export type ChainPreset = { [chainId: string]: Preset }
 
 /** Instead of a native flag, we use zero address as Id for native assets */
 export type AbstractedAsset = {
