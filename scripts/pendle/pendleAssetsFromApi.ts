@@ -247,9 +247,7 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
         tags: [...asset.tags],
       }
 
-      const pendleProps: any = {
-        tokenType: isPT ? 'PT' : isYT ? 'YT' : isSY ? 'SY' : undefined,
-      }
+      const pendleProps: any = { tokenType: isPT ? 'PT' : isYT ? 'YT' : isSY ? 'SY' : undefined }
 
       // A PT whose contract names an ORIGIN chain was bridged here, and there
       // is no Pendle market for it on this chain: it can be traded, but it

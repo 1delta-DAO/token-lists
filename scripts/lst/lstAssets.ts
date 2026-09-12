@@ -17,20 +17,8 @@ export const LST_MANUAL: LstRegistry = {
   // share the `Wrapped Binance Beacon ETH::wBETH` assetGroup — listing both
   // makes the group vote unanimous so the x-chain overlay in lst-groups.json
   // picks up the same props.
-  '1': {
-    '0xa2e3356610840701bdf5611a53974510ae27e2e1': {
-      type: 'staking',
-      asset: 'ETH',
-      provider: 'binance',
-    },
-  },
-  '56': {
-    '0xa2e3356610840701bdf5611a53974510ae27e2e1': {
-      type: 'staking',
-      asset: 'ETH',
-      provider: 'binance',
-    },
-  },
+  '1': { '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' } },
+  '56': { '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' } },
 }
 
 /** Merge two registries; `override` wins per (chainId,address). */

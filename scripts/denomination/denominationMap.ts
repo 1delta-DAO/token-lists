@@ -51,10 +51,7 @@ function wrappedNativeDenominations(): Record<string, string> {
 }
 
 /** Full map: curated base ETH/BTC groups win over the derived native denominations. */
-export const DENOMINATION_GROUP_MAP: Record<string, string> = {
-  ...wrappedNativeDenominations(),
-  ...DENOMINATION_MAP,
-}
+export const DENOMINATION_GROUP_MAP: Record<string, string> = { ...wrappedNativeDenominations(), ...DENOMINATION_MAP }
 
 /** Lookup a token's denomination by its assetGroup. */
 export function lookupDenomination(assetGroup: string): string | undefined {

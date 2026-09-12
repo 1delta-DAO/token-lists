@@ -12,7 +12,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xc1fa6e2e8667d9be0ca938a54c7e0285e9df924a": {
@@ -25,7 +26,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x32fd44bb869620c0ef993754c8a00be67c464806": {
@@ -38,7 +40,8 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x75af292c1c9a37b3ea2e6041168b4e48875b9ed5": {
@@ -51,7 +54,8 @@
       "assetGroup": "CBETH",
       "currencyId": "Coinbase Wrapped Staked ETH::cbETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "coinbase" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "coinbase" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x6be2425c381eb034045b527780d2bf4e21ab7236": {
@@ -64,7 +68,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0xd4169e045bcf9a86cc00101225d9ed61d2f51af2": {
@@ -77,7 +82,8 @@
       "assetGroup": "RSETH",
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 5, "source": "default" }
       }
     },
     "0x2878295d69aa3bdcf9004fcf362f0959992d801c": {
@@ -720,7 +726,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39723/thumb/WETH.PNG?1723733967",
       "assetGroup": "ETH",
       "currencyId": "Bridged WETH::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+      }
     },
     "0xafe4ca0bbe6215cbda12857e723134bc3809f766": {
       "chainId": "324",

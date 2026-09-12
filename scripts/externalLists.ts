@@ -39,14 +39,8 @@ const ICECREAM_LIST: ArbitraryTokenList = {
   url: `https://icecreamswap.com/api/trpc/token.defaultList,token.defaultList?batch=1&input=%7B%7D`,
   access: '0.result.data.tokens',
 }
-const UNISWAP_EXTENDED_LIST: ArbitraryTokenList = {
-  url: `https://extendedtokens.uniswap.org/`,
-  access: 'tokens',
-}
-const UNISWAP_LIST: ArbitraryTokenList = {
-  url: 'https://tokens.uniswap.org',
-  access: 'tokens',
-}
+const UNISWAP_EXTENDED_LIST: ArbitraryTokenList = { url: `https://extendedtokens.uniswap.org/`, access: 'tokens' }
+const UNISWAP_LIST: ArbitraryTokenList = { url: 'https://tokens.uniswap.org', access: 'tokens' }
 const MONAD_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/tokenlist-mainnet.json',
   access: 'tokens',
@@ -59,10 +53,7 @@ const BASESWAP_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/baseswapfi/default-token-list/main/src/tokens/base.json',
   access: 'tokens',
 }
-const BLAST_LIST: ArbitraryTokenList = {
-  url: 'https://tokens.coingecko.com/blast/all.json',
-  access: 'tokens',
-}
+const BLAST_LIST: ArbitraryTokenList = { url: 'https://tokens.coingecko.com/blast/all.json', access: 'tokens' }
 const LINEA_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/Consensys/linea-token-list/main/json/linea-mainnet-token-shortlist.json',
   access: 'tokens',
@@ -86,10 +77,7 @@ const BULBASWAP_LIST: ArbitraryTokenList = {
   mutateEntry: ({ logo, ...rest }: { logo: string }) => [{ ...rest, logoURI: logo, chainId: '2818' }],
 }
 
-const GLOWSWAP_LIST: ArbitraryTokenList = {
-  url: 'https://tokenlist.glowswap.io/glow.json',
-  access: 'tokens',
-}
+const GLOWSWAP_LIST: ArbitraryTokenList = { url: 'https://tokenlist.glowswap.io/glow.json', access: 'tokens' }
 
 const MORPHO_LIST: ArbitraryTokenList = {
   url: `https://raw.githubusercontent.com/morpho-org/morpho-blue-api-metadata/main/data/tokens.json`,
@@ -378,14 +366,7 @@ const PHAROS_SOCIALSCAN_LIST: ArbitraryTokenList = {
   url: 'https://api.socialscan.io/pharos-mainnet/v1/explorer/tokens?type=erc20&is_verified=false&page=1&size=30&sort=on_chain_market_cap&order=desc',
   access: 'data',
   mutateEntry: ({ address, name, symbol, logo }: { address: string; name: string; symbol: string; logo: string }) => [
-    {
-      address,
-      name,
-      symbol,
-      logoURI: logo,
-      decimals: 18,
-      chainId: 1672,
-    },
+    { address, name, symbol, logoURI: logo, decimals: 18, chainId: 1672 },
   ],
 }
 
@@ -433,18 +414,10 @@ const KONA_ABSTRACT_SUBGRAPH_LIST: ArbitraryTokenList = {
   url: 'https://api.goldsky.com/api/public/project_cm33d1338c1jc010e715n1z6n/subgraphs/kona-v2-core-subgraph-abstract-mainnet/2.13.0/gn',
   method: 'POST',
   headers: { 'content-type': 'application/json' },
-  body: JSON.stringify({
-    query: '{ tokens(first: 1000) { id symbol name decimals } }',
-  }),
+  body: JSON.stringify({ query: '{ tokens(first: 1000) { id symbol name decimals } }' }),
   access: 'data.tokens',
   mutateEntry: ({ id, symbol, name, decimals }: { id: string; symbol: string; name: string; decimals: string }) => [
-    {
-      address: id,
-      symbol,
-      name,
-      decimals: Number(decimals),
-      chainId: 2741,
-    },
+    { address: id, symbol, name, decimals: Number(decimals), chainId: 2741 },
   ],
 }
 

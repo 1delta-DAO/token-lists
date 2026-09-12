@@ -77,9 +77,7 @@ export const GROUP_BLACKLIST: { [c: string | number]: { [a: string]: string[] } 
     AXL: ['0x25b24b3c47918b7962b3e49c4f468367f73cc0e0'],
     SOL: ['0x1f54638b7737193ffd86c19ec51907a7c41755d8'],
   },
-  [Chain.BNB_SMART_CHAIN_MAINNET]: {
-    FUEL: ['0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a'],
-  },
+  [Chain.BNB_SMART_CHAIN_MAINNET]: { FUEL: ['0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a'] },
   [Chain.OP_MAINNET]: {
     ETH: ['0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000'], // this one is disabled on OP
   },
@@ -94,9 +92,7 @@ export const GROUP_BLACKLIST: { [c: string | number]: { [a: string]: string[] } 
   [Chain.AVALANCHE_C_CHAIN]: {
     AUSD: ['0xabe7a9dfda35230ff60d1590a929ae0644c47dc1', '0x783c08b5f26e3daf8c4681f3bf49844e425b6393'],
   },
-  [Chain.SONIC_MAINNET]: {
-    MIM: ['0x65a3e654790a2b7ed80afca646caaebaa84db4df'],
-  },
+  [Chain.SONIC_MAINNET]: { MIM: ['0x65a3e654790a2b7ed80afca646caaebaa84db4df'] },
   [Chain.MOONBEAM]: {
     // multichain bridged tokens
     BEANS: ['0xe5cf1558a1470cb5c166c2e8651ed0f3c5fb8f42'],
@@ -130,9 +126,7 @@ export const NATIVE_ERC20: { [a: string]: string } = {
 
 export const GROUP_HARD_SETTER: { [c: string | number]: { [a: string]: string[] } } = {
   // metis native asset
-  [Chain.METIS_ANDROMEDA_MAINNET]: {
-    METIS: ['0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000'],
-  },
+  [Chain.METIS_ANDROMEDA_MAINNET]: { METIS: ['0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000'] },
   [Chain.MANTLE]: {
     // mantle as ERC20
     MNT: ['0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000'],
@@ -162,9 +156,7 @@ export const GROUP_HARD_SETTER: { [c: string | number]: { [a: string]: string[] 
       '0x22e89898a04eaf43379beb70bf4e38b1faf8a31e',
     ],
   },
-  [Chain.HYPEREVM]: {
-    HYPE: ['0x2222222222222222222222222222222222222222'],
-  },
+  [Chain.HYPEREVM]: { HYPE: ['0x2222222222222222222222222222222222222222'] },
   [Chain.POLYGON_MAINNET]: {
     POL: [
       '0x0000000000000000000000000000000000001010', // MATIC
