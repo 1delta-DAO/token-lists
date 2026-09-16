@@ -29,6 +29,12 @@ function loadRiskSnapshot(): RiskRegistry {
  */
 export const RISK_MANUAL: RiskRegistry = {
   // '1': { '0x1234...': { score: 1, category: 'BLUE_CHIP' } },
+
+  // Elixir Staked deUSD on World Chain. risk-data flags sdeUSD COMPROMISED on every
+  // chain it scores (mainnet, Plasma, Avalanche, …) via its asset whitelist, but chain
+  // 480 is not in risk-data's scored chain set, so the snapshot never carries this
+  // address. Mirror the Plasma entry here so the overlay matches x-chain.
+  '480': { '0x3f6c8f2efb8cc78c3bab5353e2ad5f19de56d856': { score: 5, category: 'COMPROMISED', source: 'whitelist' } },
 }
 
 const RISK_SNAPSHOT = loadRiskSnapshot()
