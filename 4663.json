@@ -1742,7 +1742,8 @@
       "currencyId": "Robinhood Wrapped ETH (Robinhood Chain)::WETH",
       "props": {
         "denomination": "ETH",
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "wnative": true
       }
     },
     "0xd4052415613b34af236024b895574c467f65b6dd": {
@@ -10883,13 +10884,17 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4663",
-      "address": "0x0000000000000000000000000000000000000000",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
-      "currencyId": "Ether::ETH",
-      "name": "Ether",
-      "symbol": "ETH",
       "decimals": 18,
-      "props": { "isNative": true }
+      "name": "Ether",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
+      "assetGroup": "ETH",
+      "currencyId": "Ether::ETH",
+      "props": {
+        "isNative": true,
+        "wrapped": "0x0bd7d308f8e1639fab988df18a8011f41eacad73"
+      }
     }
   },
   "mainTokens": [

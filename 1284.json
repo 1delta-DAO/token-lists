@@ -283,7 +283,8 @@
       "currencyId": "Frax::FRAX",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "denomination": "FRAX"
       }
     },
     "0xffffffff52c56a9257bb97f4b2b6f7b2d624ecda": {
@@ -385,7 +386,8 @@
       "currencyId": "Bridged USDC (Axelar)::AXLUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC"
       }
     },
     "0xdfa46478f9e5ea86d57387849598dbfb2e964b02": {
@@ -828,7 +830,8 @@
       "currencyId": "xcUSDC::XCUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC"
       }
     },
     "0xe8e8bd89a429526561e1283cb789719864ffd0b4": {
@@ -995,17 +998,15 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1284",
-      "decimals": 18,
-      "name": "Glimmer",
       "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "GLMR",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/glmr.webp",
-      "assetGroup": "GLMR",
       "currencyId": "Glimmer::GLMR",
+      "name": "Glimmer",
+      "symbol": "GLMR",
+      "decimals": 18,
       "props": {
         "isNative": true,
-        "erc20": "0x0000000000000000000000000000000000000802",
-        "wrapped": "0xacc15dc74880c9944775448304b263d191c6077f"
+        "erc20": "0x0000000000000000000000000000000000000802"
       }
     }
   },

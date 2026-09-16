@@ -594,7 +594,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/35262/thumb/USDC_Icon.png?1708008941",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
     },
     "0x31c2c031fdc9d33e974f327ab0d9883eae06ca4a": {
       "chainId": "324",
@@ -728,7 +728,8 @@
       "currencyId": "Bridged WETH::WETH",
       "props": {
         "denomination": "ETH",
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "wnative": true
       }
     },
     "0xafe4ca0bbe6215cbda12857e723134bc3809f766": {
@@ -993,7 +994,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/usdc.png?1696506694",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
     },
     "0x8e86e46278518efc1c5ced245cba2c7e3ef11557": {
       "chainId": "324",
@@ -1285,7 +1286,7 @@
       "logoURI": "https://static.debank.com/image/era_token/logo_url/0xb4c1544cb4163f4c2eca1ae9ce999f63892d912a/b51f74f3b0cd24c8d6e4e7297c20ac3d.png",
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "stablecoin": { "base": "USD" }, "denomination": "FRAX" }
     },
     "0xbbd1ba24d589c319c86519646817f2f153c9b716": {
       "chainId": "324",
@@ -1773,13 +1774,17 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "324",
-      "address": "0x0000000000000000000000000000000000000000",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
-      "currencyId": "Ether::ETH",
-      "name": "Ether",
-      "symbol": "ETH",
       "decimals": 18,
-      "props": { "isNative": true }
+      "name": "Ether",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
+      "assetGroup": "ETH",
+      "currencyId": "Ether::ETH",
+      "props": {
+        "isNative": true,
+        "wrapped": "0x5aea5775959fbc2557cc8789bc1bf90a239d9a91"
+      }
     }
   },
   "mainTokens": [

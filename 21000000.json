@@ -91,7 +91,7 @@
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/usdc.svg",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
     },
     "0x485bbc4f98c071c9bd74ac255262e61f866f071a": {
       "chainId": "21000000",
@@ -218,17 +218,13 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "21000000",
-      "decimals": 18,
-      "name": "Bitcorn",
       "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "BTCN",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/btcn.webp",
-      "assetGroup": "BTCN",
       "currencyId": "Bitcorn::BTCN",
-      "props": {
-        "isNative": true,
-        "wrapped": "0xda5ddd7270381a7c2717ad10d1c0ecb19e3cdfb2"
-      }
+      "name": "Bitcorn",
+      "symbol": "BTCN",
+      "decimals": 18,
+      "props": { "isNative": true }
     }
   },
   "mainTokens": [

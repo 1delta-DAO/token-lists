@@ -513,6 +513,7 @@ const COINGECKO_LISTS = [
   'plume-network',
   'flare-network',
   'robinhood',
+  'arc', // Circle Arc (5042)
 ].map((a) => ({
   url: `https://tokens.coingecko.com/${a}/all.json`,
   access: 'tokens',

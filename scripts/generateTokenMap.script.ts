@@ -10,6 +10,7 @@ import {
   GROUP_HARD_SETTER,
   isUnnamedToken,
   NATIVE_ERC20,
+  NATIVE_CURRENCY_FALLBACK,
 } from './blacklist'
 import { isAddress, zeroAddress } from 'viem'
 import { PRESET_SYMBOLS } from './presets'
@@ -57,6 +58,11 @@ function getNativeIcon(symb: string) {
 const baseUrlChains = 'https://raw.githubusercontent.com/1delta-DAO/chains/main'
 
 const chainsURL = baseUrlChains + '/data.json'
+
+/** Native currency from the chains feed, else the hand-maintained fallback (see NATIVE_CURRENCY_FALLBACK). */
+function nativeCurrencyOf(CHAIN_INFO: any, chainId: string) {
+  return CHAIN_INFO[chainId]?.nativeCurrency ?? NATIVE_CURRENCY_FALLBACK[chainId]
+}
 
 type ChainIdAddressMetaMap = { [chainId: string]: { [address: string]: MinimalTokenNoChainId } }
 
@@ -438,7 +444,7 @@ async function readTokenLists(): Promise<{
                         // add native
                         if (isWrappedNative) {
                           if (chainId !== Chain.FUEL) {
-                            const info = CHAIN_INFO[chainId]?.nativeCurrency
+                            const info = nativeCurrencyOf(CHAIN_INFO, chainId)
                             if (!info) {
                               console.warn(
                                 `[wnative-native-inject skipped] chain ${chainId} missing from chains data feed; ` +
@@ -463,7 +469,7 @@ async function readTokenLists(): Promise<{
                         // add native
                         if (isWrappedNative) {
                           if (chainId !== Chain.FUEL) {
-                            const info = CHAIN_INFO[chainId]?.nativeCurrency
+                            const info = nativeCurrencyOf(CHAIN_INFO, chainId)
                             if (!info) {
                               console.warn(
                                 `[wnative-native-inject skipped] chain ${chainId} missing from chains data feed; ` +
@@ -620,7 +626,8 @@ async function readTokenLists(): Promise<{
       // add zero as native to mains
       if (!listOfMainTokens[chain].includes(zeroAddress))
         listOfMainTokens[chain] = [zeroAddress, ...listOfMainTokens[chain]]
-      if (!CHAIN_INFO[chain]) {
+      const info = nativeCurrencyOf(CHAIN_INFO, chain)
+      if (!CHAIN_INFO[chain] && !info) {
         console.warn(
           `chain ${chain} is in @1delta/chain-registry but missing from chains data feed (${chainsURL}); skipping native injection. Tokens for this chain: ${
             Object.keys(data).length
@@ -628,7 +635,6 @@ async function readTokenLists(): Promise<{
         )
         return
       }
-      const info = CHAIN_INFO[chain].nativeCurrency
       if (!info) {
         console.warn(`chain ${chain} has no nativeCurrency in chains data feed; skipping native injection.`)
         return
@@ -762,7 +768,7 @@ function createWnativeMap(chainMap: ListOfLists, CHAIN_INFO: any): { data: strin
   let data = importSnippetWNativeData
   data += `export const WRAPPED_NATIVE_INFO:WrappedNativeInfo = {\n`
   Object.entries(chainMap).forEach(([chainId, assetList]) => {
-    const nativeCurrency = CHAIN_INFO[chainId]?.nativeCurrency
+    const nativeCurrency = nativeCurrencyOf(CHAIN_INFO, chainId)
     const wnative = filterForWNative(nativeCurrency, Object.values(assetList))
     wNative[chainId] = wnative
     if (wnative) {
@@ -784,7 +790,7 @@ function createPresetMap(chainPreset: ChainPreset, wnative: { [c: string]: any }
   let data = importSnippetPeesets
   data += `export const CHAIN_PRESETS:ChainPreset = {\n`
   Object.entries(chainPreset).forEach(([chainId, presets]) => {
-    const nativeCurrency = CHAIN_INFO[chainId]?.nativeCurrency
+    const nativeCurrency = nativeCurrencyOf(CHAIN_INFO, chainId)
 
     if (nativeCurrency) {
       presets = { ...presets, nativeAsset: { ...nativeCurrency, isNative: true } as any }

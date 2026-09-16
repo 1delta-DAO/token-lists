@@ -52,6 +52,11 @@ export const BLACKLIST_PER_CHAIN = {
   [Chain.MANTLE]: [
     // "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000" // MNT
   ],
+  [Chain.ARC]: [
+    // Meme token "UpSideDownCat" that took the USDC ticker on CoinGecko's Arc list.
+    // Circle's native USDC on Arc is 0x3600000000000000000000000000000000000000.
+    '0x8e98a62a995a50eca9979bfa016f91bf36a8f9d9', // fake USDC (impostor)
+  ],
   [Chain.OP_MAINNET]: [
     '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000', // legacy ETH
     '0x7bfd4ca2a6cf3a3fddd645d10b323031afe47ff0', // wrsETH _ eoa address
@@ -115,8 +120,22 @@ export const GROUP_BLACKLIST: { [c: string | number]: { [a: string]: string[] } 
   },
 }
 
+/**
+ * Native currency for chains that @1delta/chain-registry knows but the chains data feed
+ * (1delta-DAO/chains data.json) does not carry yet. Same shape as the feed's `nativeCurrency`;
+ * the feed wins when it has the chain, so an entry here can be deleted once the feed catches up.
+ */
+export const NATIVE_CURRENCY_FALLBACK: { [chainId: string]: { name: string; symbol: string; decimals: number } } = {
+  // Arc pays gas in USDC with 18-decimal precision; the 6-decimal ERC-20 view at
+  // 0x3600… (NATIVE_ERC20 below) shares the same balance. Sources: docs.arc.network
+  // contract-addresses page; verified 2026-09-16 via eth_getBalance == 1e12 * balanceOf(0x3600…).
+  [Chain.ARC]: { name: 'USDC', symbol: 'USDC', decimals: 18 },
+}
+
 export const NATIVE_ERC20: { [a: string]: string } = {
   [Chain.POLYGON_MAINNET]: '0x0000000000000000000000000000000000001010',
+  // Arc pays gas in USDC; this is the ERC-20 interface of the native token.
+  [Chain.ARC]: '0x3600000000000000000000000000000000000000',
   [Chain.METIS_ANDROMEDA_MAINNET]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
   [Chain.CELO_MAINNET]: '0x471ece3750da237f93b8e339c536989b8978a438',
   [Chain.STABLE_MAINNET]: '0x779ded0c9e1022225f8e0630b35a9b54be713736',

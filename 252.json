@@ -84,7 +84,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xdcc0f2d8f90fde85b10ac1c8ab57dc0ae946a543.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
     },
     "0xf6a011fac307f55cd4ba8e43b8b93f39808ddaa9": {
       "chainId": "252",
@@ -118,7 +118,8 @@
       "assetGroup": "Wrapped Frax::FXS",
       "currencyId": "Wrapped Frax::FXS",
       "props": {
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "wnative": true
       }
     },
     "0xfc00000000000000000000000000000000000008": {
@@ -242,7 +243,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/26476/thumb/uausdc_D_3x.png?1696525548",
       "assetGroup": "USDC",
       "currencyId": "Axelar Bridged USDC::AXLUSDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
     },
     "0x1217bfe6c773eec6cc4a38b5dc45b92292b6e189": {
       "chainId": "252",
@@ -380,13 +381,17 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "252",
-      "address": "0x0000000000000000000000000000000000000000",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/frax.webp",
-      "currencyId": "Frax::FRAX",
-      "name": "Frax",
-      "symbol": "FRAX",
       "decimals": 18,
-      "props": { "isNative": true }
+      "name": "Frax",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "FRAX",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/frax.webp",
+      "assetGroup": "Wrapped Frax::FXS",
+      "currencyId": "Frax::FRAX",
+      "props": {
+        "isNative": true,
+        "wrapped": "0xfc00000000000000000000000000000000000002"
+      }
     }
   },
   "mainTokens": [
