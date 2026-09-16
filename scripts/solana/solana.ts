@@ -78,6 +78,10 @@ const EXPONENT_LIST = path.resolve(__dirname, '../exponent/exponent.json')
 const SOLANA_MAPPEDS: { [mint: string]: string } = {
   EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v: 'USDC',
   Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB: 'USDT',
+  // Huma's PST: the Solana original of the CCIP mirrors on Ethereum
+  // (`0x22ae3d9a…`) and Arc (`0xa6db07eb…`), which carry this group. CoinGecko
+  // lists no PST coin at all, so the cross-chain map cannot join it.
+  '59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw': 'PayFi Strategy Token::PST',
 }
 
 interface JupToken {
