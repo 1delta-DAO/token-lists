@@ -4,6 +4,8 @@ import * as fs from 'fs'
 import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
+import { TokenProps } from '../utils/types'
+import { classifySolanaToken } from './solanaClassify'
 
 /**
  * Generates `solana.json`, the chain list for `Chain.SOLANA = 'solana'`.
@@ -26,6 +28,16 @@ import { fileURLToPath } from 'url'
  * WBTC, cbBTC, USDS, sUSDe, Ondo's USDY and its whole tokenized-equity book,
  * the xStocks, AAVE, LINK. Scoping those to `::solana` would sever every one of
  * them from its own group and show the user two unrelated rows for one asset.
+ *
+ * WHAT EACH ONE IS (lst / rwa / stablecoin / savings) is overlaid by
+ * `solanaClassify.ts` from Jupiter's own tags, the shared rule engine and the
+ * assetGroup-keyed snapshots — this list never passes through the generic
+ * generator, so the overlay step it would get there is applied here.
+ *
+ * EXPONENT PT/YT/SY (`exponent/exponent.json`, from `npm run exponent`) are
+ * merged in last. Jupiter does not verify them, so none of the 200-odd mints
+ * would otherwise be listed at all — and a holder of a matured PT needs it in
+ * the list to redeem it.
  */
 
 // @ts-ignore
@@ -51,6 +63,11 @@ const MAIN_TOKEN_COUNT = 30
 const SPL_TOKEN = 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA'
 const TOKEN_2022 = 'TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb'
 
+/** Wrapped SOL — the chain's wrapped native, flagged the way `WRAPPED_NATIVE_INFO` flags WETH. */
+const WSOL = 'So11111111111111111111111111111111111111112'
+
+const EXPONENT_LIST = path.resolve(__dirname, '../exponent/exponent.json')
+
 /**
  * Human override, applied BEFORE the CoinGecko resolution and beating it.
  *
@@ -73,6 +90,8 @@ interface JupToken {
   liquidity?: number
   tokenProgram?: string
   isVerified?: boolean
+  /** Jupiter's curation tags: `verified`, `lst`, `stable`, `yb`, `rwa`, `xstocks`, `ondo`, … */
+  tags?: string[]
 }
 
 interface ListEntry {
@@ -84,7 +103,27 @@ interface ListEntry {
   logoURI?: string
   assetGroup: string
   currencyId: string
-  props?: Record<string, unknown>
+  props?: TokenProps
+}
+
+interface ExponentListToken {
+  chainId: string
+  name: string
+  symbol: string
+  address: string
+  decimals: number
+  logoURI?: string
+  props: { exponent: NonNullable<TokenProps['exponent']> }
+}
+
+/** Tolerates a missing file so this list never hard-fails on the Exponent step. */
+function readExponentList(): ExponentListToken[] {
+  try {
+    return JSON.parse(fs.readFileSync(EXPONENT_LIST, 'utf8'))
+  } catch {
+    console.warn('[solana] exponent.json not found — run `npm run exponent`. Proceeding without Exponent PT/YT/SY.')
+    return []
+  }
 }
 
 async function getJson<T>(url: string): Promise<T> {
@@ -199,6 +238,9 @@ async function main() {
     return a.id < b.id ? -1 : 1
   })
 
+  const exponent = readExponentList()
+  const exponentByMint = new Map(exponent.map((e) => [e.address, e]))
+
   const list: { [address: string]: ListEntry } = {}
   const skippedNoDecimals: string[] = []
   const takenGroups = new Set<string>()
@@ -256,13 +298,17 @@ async function main() {
     }
     takenGroups.add(assetGroup.toLowerCase())
 
-    const props: Record<string, unknown> = {}
+    let props: TokenProps = {}
     // Token-2022 supports transfer FEES and transfer HOOKS, so a mint on this
     // program is the fee-on-transfer class the EVM side already treats
     // specially — a quote against one can under-deliver. Flagged rather than
     // excluded: several are majors.
     if (t.tokenProgram === TOKEN_2022) props.solana = { tokenProgram: 'token-2022' }
     else if (t.tokenProgram === SPL_TOKEN) props.solana = { tokenProgram: 'spl-token' }
+    if (t.id === WSOL) props = { ...props, wnative: true, denomination: 'SOL' }
+    if (exponentByMint.has(t.id)) props.exponent = exponentByMint.get(t.id)!.props.exponent
+
+    props = classifySolanaToken(t, assetGroup, props)
 
     list[t.id] = {
       chainId: 'solana',
@@ -275,6 +321,36 @@ async function main() {
       currencyId,
       ...(Object.keys(props).length ? { props } : {}),
     }
+  }
+
+  // Exponent mints Jupiter does not carry. Always chain-scoped: a PT/YT/SY
+  // exists on exactly one chain and joins no global group. A mint Jupiter DOES
+  // carry keeps its Jupiter identity and picked up `props.exponent` above.
+  let exponentAdded = 0
+  for (const e of exponent) {
+    if (list[e.address]) continue
+    if (typeof e.decimals !== 'number' || !Number.isInteger(e.decimals)) continue
+    const currencyId = `${e.name}::${e.symbol}`
+    let assetGroup = `${currencyId}::solana`
+    if (takenGroups.has(assetGroup.toLowerCase())) {
+      let n = 0
+      while (takenGroups.has(`${assetGroup}::${n}`.toLowerCase())) n++
+      assetGroup = `${assetGroup}::${n}`
+      suffixed++
+    }
+    takenGroups.add(assetGroup.toLowerCase())
+    list[e.address] = {
+      chainId: 'solana',
+      decimals: e.decimals,
+      name: e.name,
+      address: e.address,
+      symbol: e.symbol,
+      logoURI: e.logoURI,
+      assetGroup,
+      currencyId,
+      props: { exponent: e.props.exponent },
+    }
+    exponentAdded++
   }
 
   const sortedList: { [address: string]: ListEntry } = {}
@@ -312,7 +388,16 @@ async function main() {
   console.log(`chain-scoped (::solana)     : ${vals.filter((e) => e.assetGroup.includes('::solana')).length}`)
   console.log(`disambiguated with ::N      : ${suffixed}`)
   console.log(
-    `token-2022 mints            : ${vals.filter((e) => (e.props as any)?.solana?.tokenProgram === 'token-2022').length}`,
+    `token-2022 mints            : ${vals.filter((e) => e.props?.solana?.tokenProgram === 'token-2022').length}`,
+  )
+  const withProp = (k: keyof TokenProps) => vals.filter((e) => e.props?.[k]).length
+  console.log(`classified lst              : ${withProp('lst')}`)
+  console.log(`classified rwa              : ${withProp('rwa')}`)
+  console.log(`classified stablecoin       : ${withProp('stablecoin')}`)
+  console.log(`classified savings          : ${withProp('savings')}`)
+  console.log(`denomination set            : ${withProp('denomination')}`)
+  console.log(
+    `exponent PT/YT/SY           : ${withProp('exponent')}  (${exponentAdded} added, ${exponent.length - exponentAdded} already verified by Jupiter)`,
   )
   if (skippedNoDecimals.length) console.log(`DROPPED, no decimals        : ${skippedNoDecimals.length}`)
   if (doubleClaimed.length)

@@ -96,7 +96,19 @@ const has =
   }
 
 /** ETF / index vehicle detector (routes tokenized equities into the `fund` bucket). */
-const isEtf = has('etf', 's&p', 'nasdaq', 'msci', ' index', 'core s&p', 'ftse', 'russell', 'qqq', 'spdr', 'ucits')
+export const isEtf = has(
+  'etf',
+  's&p',
+  'nasdaq',
+  'msci',
+  ' index',
+  'core s&p',
+  'ftse',
+  'russell',
+  'qqq',
+  'spdr',
+  'ucits',
+)
 
 /**
  * Principal / yield / standardized-yield wrappers, which carry their own props
@@ -128,6 +140,39 @@ const stake = (asset: string, provider: string, type: LstProps['type'] = 'stakin
 })
 
 const LST_RULES: Rule[] = [
+  // --- SOL liquid (re)staking ---
+  // These come FIRST. Several ETH issuers run a SOL product under the very
+  // name-phrase their ETH rule keys on — "Lido Staked SOL" hits `lido`, "Renzo
+  // Restaked SOL" hits `renzo` — and first-match-wins then labelled both as
+  // ETH. Measured on Jupiter's verified set: exactly those two. The rest of
+  // Solana's ~150 stake-pool tokens are covered by Jupiter's `lst` tag in
+  // `solana/solanaClassify.ts`; only issuers worth a `provider` are named here.
+  { id: 'jito-sol', confidence: 'auto', lst: stake('SOL', 'jito'), test: has('jito staked sol') },
+  { id: 'marinade-sol', confidence: 'auto', lst: stake('SOL', 'marinade'), test: has('marinade staked sol') },
+  { id: 'lido-sol', confidence: 'auto', lst: stake('SOL', 'lido'), test: has('lido staked sol') },
+  { id: 'jupiter-sol', confidence: 'auto', lst: stake('SOL', 'jupiter'), test: has('jupiter staked sol') },
+  { id: 'binance-sol', confidence: 'auto', lst: stake('SOL', 'binance'), test: has('binance staked sol') },
+  { id: 'drift-sol', confidence: 'auto', lst: stake('SOL', 'drift'), test: has('drift staked sol') },
+  { id: 'helius-sol', confidence: 'auto', lst: stake('SOL', 'helius'), test: has('helius staked sol') },
+  { id: 'blaze-sol', confidence: 'auto', lst: stake('SOL', 'blaze'), test: has('blazestake staked sol') },
+  { id: 'sanctum-sol', confidence: 'auto', lst: stake('SOL', 'sanctum'), test: has('sanctum staked sol') },
+  { id: 'bybit-sol', confidence: 'auto', lst: stake('SOL', 'bybit'), test: (_n, s) => norm(s) === 'BBSOL' },
+  { id: 'phantom-sol', confidence: 'auto', lst: stake('SOL', 'phantom'), test: has('phantom staked sol') },
+  { id: 'renzo-sol', confidence: 'auto', lst: stake('SOL', 'renzo', 'restaking'), test: has('renzo restaked sol') },
+  { id: 'kyros-sol', confidence: 'auto', lst: stake('SOL', 'kyros', 'restaking'), test: has('kyros restaked sol') },
+  {
+    id: 'fragmetric-sol',
+    confidence: 'auto',
+    lst: stake('SOL', 'fragmetric', 'restaking'),
+    test: has('fragmetric restaked sol'),
+  },
+  {
+    id: 'solayer-sol',
+    confidence: 'auto',
+    lst: stake('SOL', 'solayer', 'restaking'),
+    test: (_n, s) => norm(s) === 'SSOL',
+  },
+
   // --- ETH liquid staking ---
   {
     id: 'lido',
@@ -231,8 +276,6 @@ const LST_RULES: Rule[] = [
   { id: 'benqi-avax', confidence: 'auto', lst: stake('AVAX', 'benqi'), test: has('staked avax') },
   { id: 'lista-bnb', confidence: 'auto', lst: stake('BNB', 'lista'), test: has('lista staked bnb') },
   { id: 'ankr-bnb', confidence: 'auto', lst: stake('BNB', 'ankr'), test: has('ankr staked bnb') },
-  { id: 'jito-sol', confidence: 'auto', lst: stake('SOL', 'jito'), test: has('jito staked sol') },
-  { id: 'marinade-sol', confidence: 'auto', lst: stake('SOL', 'marinade'), test: has('marinade staked sol') },
 
   // --- BTC staking ---
   {

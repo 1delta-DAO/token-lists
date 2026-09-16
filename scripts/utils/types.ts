@@ -195,6 +195,33 @@ export interface TokenProps {
     /** Maturity, unix SECONDS. */
     maturity?: number
   }
+  /**
+   * Exponent Finance yield tokenisation on Solana — the same instrument family
+   * as {@link TokenProps.pendle}. A VAULT (not a market) is the primary
+   * entity: it owns the PT/YT/SY mints and is where mint/redeem happen. The
+   * trading venues hang off it, and a vault may have none, one, or several.
+   *
+   * No `expired` flag, for the reason `spectra` gives: a generated boolean
+   * goes stale the day after a run — compare `maturity` against the clock.
+   */
+  exponent?: {
+    tokenType: 'PT' | 'YT' | 'SY'
+    /** The Exponent vault that issued this PT/YT. Absent on SY (one SY serves every maturity). */
+    vaultAddress?: string
+    ptAddress?: string
+    ytAddress?: string
+    syAddress?: string
+    /** Mint of the yield-bearing asset the SY wraps (what the PT redeems for at maturity). */
+    underlyingAsset?: string
+    /** Maturity, unix SECONDS. Absent on SY. */
+    maturity?: number
+    /** Legacy AMM market the PT trades on, if one exists. */
+    marketAddress?: string
+    /** Orderbook the PT trades on, if one exists. */
+    orderbookAddress?: string
+    /** Exponent's platform slug for the underlying, e.g. 'fragmetric' | 'hylo' | 'kamino'. */
+    platform?: string
+  }
   /** Real-world-asset classification (tokenized off-chain assets) */
   rwa?: {
     /** coarse, stable class used for filtering */
@@ -278,6 +305,11 @@ export interface TokenProps {
   suspicious?: boolean
   /** Flag for tokens that mimic another token's name/symbol on the same chain */
   mimic?: boolean
+  /**
+   * Solana-only. Token-2022 mints support transfer fees and hooks — the
+   * fee-on-transfer class — so the program is stated on every mint.
+   */
+  solana?: { tokenProgram: 'spl-token' | 'token-2022' }
 }
 
 export type OmniCurrencyList = { [assetId: string]: OmniCurrency }
