@@ -4,7 +4,9 @@ export const PRESET_SYMBOLS: { [ch: string | number]: string[] } = {
   [Chain.TAIKO_ALETHIA]: ['TAIKO'],
   [Chain.GNOSIS]: ['GNO', 'COW'],
   [Chain.HEMI_NETWORK]: ['HEMIBTC', 'USDC.E'],
-  [Chain.SONIC_MAINNET]: ['USDC.E', 'AXLETH', 'AXLUSDT', 'SOLVBTC'],
+  // Sonic's USDC (0x2921…) was Circle-upgraded to native: on-chain symbol is
+  // `USDC` now, so the old `USDC.E` preset key matched nothing.
+  [Chain.SONIC_MAINNET]: ['AXLETH', 'AXLUSDT', 'SOLVBTC'],
   [Chain.CORE_BLOCKCHAIN_MAINNET]: ['SOLVBTC.M', 'SOLVBTC.CORE'],
   [Chain.METIS_ANDROMEDA_MAINNET]: ['ARTMETIS', 'M.USDT'],
   [Chain.POLYGON_MAINNET]: ['HEMIBTC'],
