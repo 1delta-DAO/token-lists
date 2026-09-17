@@ -411,7 +411,12 @@
       "assetGroup": "zkUSD::ZKUSD",
       "currencyId": "zkUSD::ZKUSD",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x45656c02aae856443717c34159870b90d1288203": {
@@ -761,7 +766,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/30427/thumb/GRAI_Token.png?1696529315",
       "assetGroup": "GRAI",
       "currencyId": "Gravita Debt Token::GRAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x9e22d758629761fc5708c171d06c2fabb60b5159": {
       "chainId": "324",
@@ -1005,7 +1013,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/25757/thumb/USD__logo.png?1696524843",
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xb0588f9a9cade7cd5f194a5fe77acd6a58250f82": {
       "chainId": "324",
@@ -1086,7 +1097,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xa900cbe7739c96d2b153a273953620a701d5442b": {
       "chainId": "324",
@@ -1127,7 +1141,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53948/thumb/image_%289%29.png?1737788246",
       "assetGroup": "Noon USN::USN",
       "currencyId": "Noon USN::USN",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0xb72207e1fb50f341415999732a20b6d25d8127aa": {
       "chainId": "324",
@@ -1150,7 +1167,8 @@
       "currencyId": "Staked USN::SUSN",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USN", "base": "USD" }
+        "savings": { "underlying": "USN", "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x74ed17608cc2b5f30a59d6af07c9ad1b1ab3a5b1": {
