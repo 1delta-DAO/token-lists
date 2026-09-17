@@ -10,7 +10,7 @@ import {
   GROUP_HARD_SETTER,
   isUnnamedToken,
   NATIVE_ERC20,
-  NATIVE_CURRENCY_FALLBACK,
+  NATIVE_CURRENCY_OVERRIDE,
 } from './blacklist'
 import { isAddress, zeroAddress } from 'viem'
 import { PRESET_SYMBOLS } from './presets'
@@ -46,6 +46,14 @@ const WNATIVE_OVERRIDES: { [c: string]: string } = {
   [Chain.FUEL]: '0xf8f8b6283d7fa5b672b530cbb84fcccb4ff8dc40f8176ef4544ddb1f1952ad07', // fuelETh
 }
 
+/**
+ * Chains that have NO wrapped native at all (their gas asset is an ERC-20 — see NATIVE_ERC20 and
+ * the "DELIBERATELY ABSENT" note in @1delta/wnative). Distinct from chains the wnative package
+ * merely has not registered yet (Moonbeam's WGLMR, Flare's WFLR), which must not be treated as
+ * wnative-less.
+ */
+const NO_WNATIVE_CHAINS: string[] = [Chain.TEMPO_MAINNET_PRESTO, Chain.STABLE_MAINNET]
+
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -59,9 +67,9 @@ const baseUrlChains = 'https://raw.githubusercontent.com/1delta-DAO/chains/main'
 
 const chainsURL = baseUrlChains + '/data.json'
 
-/** Native currency from the chains feed, else the hand-maintained fallback (see NATIVE_CURRENCY_FALLBACK). */
+/** Hand-maintained native currency first (see NATIVE_CURRENCY_OVERRIDE), else the chains feed. */
 function nativeCurrencyOf(CHAIN_INFO: any, chainId: string) {
-  return CHAIN_INFO[chainId]?.nativeCurrency ?? NATIVE_CURRENCY_FALLBACK[chainId]
+  return NATIVE_CURRENCY_OVERRIDE[chainId] ?? CHAIN_INFO[chainId]?.nativeCurrency
 }
 
 type ChainIdAddressMetaMap = { [chainId: string]: { [address: string]: MinimalTokenNoChainId } }
@@ -413,6 +421,10 @@ async function readTokenLists(): Promise<{
                       listOfMainTokens[chainId].push(lcAddress)
                       if (!parsedEntry.props) parsedEntry.props = {}
                       parsedEntry.props = { ...parsedEntry.props, wnative: true }
+                    } else if (NO_WNATIVE_CHAINS.includes(chainId) && NATIVE_ERC20[chainId] === lcAddress) {
+                      // no wrapped native exists, so the gas asset's ERC-20 view takes its
+                      // place in the mainlist (but is NOT tagged wnative: nothing to deposit into)
+                      listOfMainTokens[chainId].push(lcAddress)
                     }
 
                     const omniAssetEntry = {
@@ -655,6 +667,7 @@ async function readTokenLists(): Promise<{
           ...dataBase,
           chainId: chain,
           address: zeroAddress,
+          // `...info` below overrides this when NATIVE_CURRENCY_OVERRIDE carries a logoURI
           logoURI: getNativeTokenIcon(info.symbol),
           currencyId: info.name + '::' + info.symbol,
           // tag native and wnative

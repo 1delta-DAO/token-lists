@@ -19,6 +19,13 @@ export const LST_MANUAL: LstRegistry = {
   // picks up the same props.
   '1': { '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' } },
   '56': { '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' } },
+
+  // Firelight stXRP (Flare 14) — FXRP (XRP's 1:1 FAsset) restaked to back
+  // Firelight's cover markets. `restaking` = LRT: the capital secures OTHER
+  // protocols, like weETH/ezETH/rsETH. `asset` is the base staked asset (XRP),
+  // not the wrapper (FXRP). Manual because "Firelight stXRP" trips no
+  // `classifyRwaLst` rule.
+  '14': { '0x4c18ff3c89632c3dd62e796c0afa5c07c4c1b2b3': { type: 'restaking', asset: 'XRP', provider: 'firelight' } },
 }
 
 /** Merge two registries; `override` wins per (chainId,address). */

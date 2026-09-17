@@ -60,6 +60,20 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   'Tokenised GBP::TGBP::56::0': { base: 'GBP' },
   'Tokenised GBP::TGBP::8453::0': { base: 'GBP' },
   'Tokenised GBP::TGBP::43114::0': { base: 'GBP' },
+  // Tempo pathUSD — fiat-backed USD stablecoin and the chain's default fee token. DeFiLlama
+  // lists it (id 385, peggedUSD) but the feed row carries no assetGroup until the lists do.
+  PATHUSD: { base: 'USD' },
+  // Tempo (4217) deployments that arrive with on-chain name/symbol casing. Each is aliased to
+  // the group the feed already covers (assetGroupUnifier.ts), but the lookup is pre-alias.
+  'Syrup USDC::syrupUSDC': { base: 'USD' },
+  'Cap USD::cUSD': { base: 'USD' },
+  'Re Protocol reUSD::reUSD': { base: 'USD' },
+  'InfiniFi USD::iUSD': { base: 'USD' },
+  // AllUnity's CHF/SEK siblings of EURAU (feed covers only the EUR one) and BRLA under its
+  // Tempo group (`BRLA Token::BRLA`; the feed keys the bare `BRLA`, pegType peggedREAL).
+  'AllUnity CHF::CHFAU': { base: 'CHF' },
+  'AllUnity SEK::SEKAU': { base: 'SEK' },
+  'BRLA Token::BRLA': { base: 'REAL' },
 }
 
 function serialize(map: StablecoinGroupMap): string {

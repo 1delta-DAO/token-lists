@@ -121,21 +121,42 @@ export const GROUP_BLACKLIST: { [c: string | number]: { [a: string]: string[] } 
 }
 
 /**
- * Native currency for chains that @1delta/chain-registry knows but the chains data feed
- * (1delta-DAO/chains data.json) does not carry yet. Same shape as the feed's `nativeCurrency`;
- * the feed wins when it has the chain, so an entry here can be deleted once the feed catches up.
+ * Hand-maintained native currency, consulted BEFORE the chains data feed (1delta-DAO/chains
+ * data.json). Same shape as the feed's `nativeCurrency`, plus an optional `logoURI` for chains
+ * whose native icon is not in 1delta-DAO/asset-icons. Two reasons to be here:
+ *   - the feed does not carry the chain yet (Arc) — delete once the feed catches up;
+ *   - the feed carries a placeholder ("No native currency") because the chain has no gas
+ *     token in the EVM sense and the real answer is an ERC-20 (Tempo) — permanent.
  */
-export const NATIVE_CURRENCY_FALLBACK: { [chainId: string]: { name: string; symbol: string; decimals: number } } = {
+export const NATIVE_CURRENCY_OVERRIDE: {
+  [chainId: string]: { name: string; symbol: string; decimals: number; logoURI?: string }
+} = {
   // Arc pays gas in USDC with 18-decimal precision; the 6-decimal ERC-20 view at
   // 0x3600… (NATIVE_ERC20 below) shares the same balance. Sources: docs.arc.network
   // contract-addresses page; verified 2026-09-16 via eth_getBalance == 1e12 * balanceOf(0x3600…).
   [Chain.ARC]: { name: 'USDC', symbol: 'USDC', decimals: 18 },
+  // Tempo has NO native token: CALLVALUE/SELFBALANCE/BALANCE return 0 and eth_getBalance
+  // returns a constant placeholder (0x9612…9b2) so wallets stop checking it. Fees are paid in
+  // TIP-20 stablecoins with pathUSD (0x20c0…0000, NATIVE_ERC20 below) as the fallback fee
+  // token, so pathUSD IS the native asset and the zero-address entry mirrors it 1:1 — 6
+  // decimals, not the feed's 18, because the only balance that exists is the ERC-20 one.
+  // There is deliberately no wrapped native (see @1delta/wnative). Sources:
+  // tempo.xyz/developers/docs/quickstart/evm-compatibility, .../protocol/fees; on-chain
+  // name()/symbol()/decimals() of 0x20c0…0000 verified 2026-09-17.
+  [Chain.TEMPO_MAINNET_PRESTO]: {
+    name: 'pathUSD',
+    symbol: 'pathUSD',
+    decimals: 6,
+    logoURI: 'https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000000000000000000000',
+  },
 }
 
 export const NATIVE_ERC20: { [a: string]: string } = {
   [Chain.POLYGON_MAINNET]: '0x0000000000000000000000000000000000001010',
   // Arc pays gas in USDC; this is the ERC-20 interface of the native token.
   [Chain.ARC]: '0x3600000000000000000000000000000000000000',
+  // Tempo pays gas in TIP-20 stablecoins; pathUSD is the fallback fee token (see NATIVE_CURRENCY_OVERRIDE).
+  [Chain.TEMPO_MAINNET_PRESTO]: '0x20c0000000000000000000000000000000000000',
   [Chain.METIS_ANDROMEDA_MAINNET]: '0xdeaddeaddeaddeaddeaddeaddeaddeaddead0000',
   [Chain.CELO_MAINNET]: '0x471ece3750da237f93b8e339c536989b8978a438',
   [Chain.STABLE_MAINNET]: '0x779ded0c9e1022225f8e0630b35a9b54be713736',

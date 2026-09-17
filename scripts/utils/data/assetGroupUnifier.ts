@@ -182,6 +182,15 @@ export const GROUP_ALIAS: Record<string, string> = {
   // ticker (Celo Dollar, Chips USD, Chad USD, SyntheX), so the qualified form
   // is the safe one either way.
   'Staked Cap USD::stcUSD': 'Staked cap USD::stcUSD',
+  // Tempo (4217) deployments of the same assets arrive from the chain's own registry with
+  // the on-chain `symbol()` casing (`cUSD`, `reUSD`) or a re-ordered `name()`
+  // ("InfiniFi Staked USD"), while every other chain stores the CoinGecko/majority form.
+  // Same-asset unification only; the overlays below list the Tempo form as well because
+  // they are looked up on the PRE-alias group.
+  'Cap USD::cUSD': 'Cap USD::CUSD',
+  'Re Protocol reUSD::reUSD': 'Re Protocol reUSD::REUSD',
+  'InfiniFi USD::iUSD': 'infiniFi USD::iUSD',
+  'InfiniFi Staked USD::siUSD': 'Staked infiniFi USD::siUSD',
   // Theo sthUSD — one asset at one address on Ethereum + Stable (988) +
   // Arbitrum + BNB + Mantle, but only Ethereum is the vault; the rest are
   // LayerZero OFTs whose `name()` is just the ticker, so they group as
@@ -407,6 +416,13 @@ export const GROUP_ALIAS: Record<string, string> = {
   // holds `USDD::USDD` on both chains, so the Ethereum 2.0 deployment gets same-chain-deduped
   // to the suffixed group. Unify 2.0 under the BNB-derived group; v1 keeps `USDD::USDD`.
   'USDD::USDD::1::0': 'Decentralized USD::USDD',
+  // Maple syrup* — the legacy Ethereum/Base/Arbitrum rows carry the March-2025 CoinGecko
+  // casing (`SYRUPUSDC`) as their group, which is also the key of the savings/stablecoin
+  // overlays. Newer deployments (Tempo) arrive with the on-chain name/symbol, and
+  // `normalizeSymbol` strips the `sy` "bridged prefix" so they never match by symbol either.
+  'Syrup USDC::syrupUSDC': 'SYRUPUSDC',
+  'Syrup USDT::syrupUSDT': 'SYRUPUSDT',
+  'Syrup USDG::syrupUSDG': 'SYRUPUSDG',
 }
 
 export function aliasAssetGroup(gr: string) {

@@ -514,6 +514,7 @@ const COINGECKO_LISTS = [
   'flare-network',
   'robinhood',
   'arc', // Circle Arc (5042)
+  'tempo', // Tempo (4217)
 ].map((a) => ({
   url: `https://tokens.coingecko.com/${a}/all.json`,
   access: 'tokens',
@@ -660,6 +661,7 @@ const listDirs = [
   '4663',
   '4689',
   '5000',
+  '4217',
   '5042',
   '5165',
   '7000',
@@ -753,6 +755,19 @@ export const RWA_LIST: ArbitraryTokenList = {
   access: 'direct',
 }
 
+// Tempo's own registry (github.com/tempoxyz/tempo-apps, apps/tokenlist) — the canonical source
+// for TIP-20 tokens (0x20c0… prefix). Placed right after the 1delta lists so its on-chain
+// name/symbol casing wins over CoinGecko's. Icons are served with a `?__response=…` sandbox
+// query that is not part of the asset's identity, so it is stripped.
+export const TEMPO_LIST: ArbitraryTokenList = {
+  url: 'https://tokenlist.tempo.xyz/list/4217',
+  access: 'tokens',
+  tag: 'tempo',
+  mutateEntry: ({ logoURI, ...rest }: { logoURI?: string }) => [
+    { ...rest, ...(logoURI && { logoURI: logoURI.split('?')[0] }) },
+  ],
+}
+
 export const LST_LIST: ArbitraryTokenList = {
   url: 'file://' + path.resolve(__dirname, 'lst/lst.json'),
   access: 'direct',
@@ -766,6 +781,7 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   ...ONE_DELTA_LISTS,
   ...ONE_DELTA_LISTS_OTHER,
   ...ONE_DELTA_LISTS_LENDING,
+  TEMPO_LIST,
   SOLARBEAM_LIST,
   STELLASWAP_LIST,
   ICECREAM_LIST,

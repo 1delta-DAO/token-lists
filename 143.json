@@ -2040,7 +2040,8 @@
       "symbol": "FXRP",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/FXRP/logo.svg",
       "assetGroup": "FXRP::FXRP",
-      "currencyId": "FXRP::FXRP"
+      "currencyId": "FXRP::FXRP",
+      "props": { "denomination": "XRP" }
     },
     "0xd328e74add15ac98275737a7c1c884ddc951f4d3": {
       "chainId": "143",
@@ -2792,10 +2793,15 @@
       "address": "0xd25f563e12ff616262f8c947fec108db934f8059",
       "symbol": "reUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/reUSD/logo.svg",
-      "assetGroup": "Re Protocol reUSD::reUSD",
+      "assetGroup": "Re Protocol reUSD::REUSD",
       "currencyId": "Re Protocol reUSD::reUSD",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x17b8f7373ecd556192abfc85be314e5d4fb6b3fa": {

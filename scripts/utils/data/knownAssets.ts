@@ -449,6 +449,10 @@ export const knownAssets: KnownAsset[] = [
   { symbol: 'UPI', names: ['Pawtocol'], requireExactName: true },
   { symbol: 'URUS', names: ['Aurox'] },
   { symbol: 'USDY', names: ['Ondo U.S. Dollar Yield'] },
+  // Tempo's default fee token (a TIP-20 at 0x20c0…0000). Its zero-address native mirror is
+  // grouped via mapAssetGroup('PATHUSD'), so the ERC-20 must land in the same group whichever
+  // list supplies it (Tempo registry: "PathUSD"/pathUSD; CoinGecko: "pathUSD"/PATHUSD).
+  { symbol: 'PATHUSD', names: ['PathUSD', 'pathUSD'] },
   { symbol: 'USHIBA', names: ['USHIBA', 'American Shiba'] },
   { symbol: 'USTC', names: ['Wrapped USTC'], requireExactName: true },
   { symbol: 'UTU', names: ['UTU Coin'] },

@@ -110,17 +110,414 @@
       "assetGroup": "USDT0::USDT0",
       "currencyId": "USDT0::USDT0"
     },
+    "0x20c0000000000000000000000000000000000000": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "PathUSD",
+      "address": "0x20c0000000000000000000000000000000000000",
+      "symbol": "pathUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000000000000000000000",
+      "assetGroup": "PATHUSD",
+      "currencyId": "PathUSD::pathUSD",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c0000000000000000000001621e21f71cf12fb": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Bridged EURC (Stargate)",
+      "address": "0x20c0000000000000000000001621e21f71cf12fb",
+      "symbol": "EURC.e",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000001621e21f71cf12fb",
+      "assetGroup": "Bridged EURC (Stargate)::EURC.e",
+      "currencyId": "Bridged EURC (Stargate)::EURC.e"
+    },
+    "0x20c0000000000000000000003554d28269e0f3c2": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Frax USD",
+      "address": "0x20c0000000000000000000003554d28269e0f3c2",
+      "symbol": "frxUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000003554d28269e0f3c2",
+      "assetGroup": "FRXUSD",
+      "currencyId": "Frax USD::frxUSD",
+      "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x20c0000000000000000000000520792dcccccccc": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Cap USD",
+      "address": "0x20c0000000000000000000000520792dcccccccc",
+      "symbol": "cUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000000520792dcccccccc",
+      "assetGroup": "Cap USD::CUSD",
+      "currencyId": "Cap USD::cUSD",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c0000000000000000000008ee4fcff88888888": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Staked Cap USD",
+      "address": "0x20c0000000000000000000008ee4fcff88888888",
+      "symbol": "stcUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000008ee4fcff88888888",
+      "assetGroup": "Staked cap USD::stcUSD",
+      "currencyId": "Staked Cap USD::stcUSD",
+      "props": { "savings": { "underlying": "cUSD", "base": "USD" } }
+    },
+    "0x20c0000000000000000000005c0bac7cef389a11": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Generic USD",
+      "address": "0x20c0000000000000000000005c0bac7cef389a11",
+      "symbol": "GUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000005c0bac7cef389a11",
+      "assetGroup": "Generic USD::GUSD",
+      "currencyId": "Generic USD::GUSD"
+    },
+    "0x20c0000000000000000000007f7ba549dd0251b9": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Reservoir Stablecoin",
+      "address": "0x20c0000000000000000000007f7ba549dd0251b9",
+      "symbol": "rUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000007f7ba549dd0251b9",
+      "assetGroup": "Reservoir rUSD::RUSD",
+      "currencyId": "Reservoir Stablecoin::rUSD",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c000000000000000000000aeed2ec36a54d0e5": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Wrapped Savings rUSD",
+      "address": "0x20c000000000000000000000aeed2ec36a54d0e5",
+      "symbol": "wsrUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000aeed2ec36a54d0e5",
+      "assetGroup": "Wrapped Savings rUSD::WSRUSD",
+      "currencyId": "Wrapped Savings rUSD::wsrUSD",
+      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
+    },
+    "0x20c0000000000000000000009a4a4b17e0dc6651": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "AllUnity EUR",
+      "address": "0x20c0000000000000000000009a4a4b17e0dc6651",
+      "symbol": "EURAU",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000009a4a4b17e0dc6651",
+      "assetGroup": "AllUnity EUR::EURAU",
+      "currencyId": "AllUnity EUR::EURAU",
+      "props": { "stablecoin": { "base": "EUR" } }
+    },
+    "0x20c000000000000000000000383a23bacb546ab9": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Re Protocol reUSD",
+      "address": "0x20c000000000000000000000383a23bacb546ab9",
+      "symbol": "reUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000383a23bacb546ab9",
+      "assetGroup": "Re Protocol reUSD::REUSD",
+      "currencyId": "Re Protocol reUSD::reUSD",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c000000000000000000000ab02d39df30bd17e": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "InfiniFi USD",
+      "address": "0x20c000000000000000000000ab02d39df30bd17e",
+      "symbol": "iUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000ab02d39df30bd17e",
+      "assetGroup": "infiniFi USD::iUSD",
+      "currencyId": "InfiniFi USD::iUSD",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c000000000000000000000048c8f36df1c9a4a": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "InfiniFi Staked USD",
+      "address": "0x20c000000000000000000000048c8f36df1c9a4a",
+      "symbol": "siUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000048c8f36df1c9a4a",
+      "assetGroup": "Staked infiniFi USD::siUSD",
+      "currencyId": "InfiniFi Staked USD::siUSD",
+      "props": { "savings": { "underlying": "iUSD", "base": "USD" } }
+    },
+    "0x20c0000000000000000000002f52d5cc21a3207b": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "USDe",
+      "address": "0x20c0000000000000000000002f52d5cc21a3207b",
+      "symbol": "USDe",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000002f52d5cc21a3207b",
+      "assetGroup": "USDE",
+      "currencyId": "USDe::USDe",
+      "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x20c000000000000000000000bd95bfb69fbe6ce3": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Staked USDe",
+      "address": "0x20c000000000000000000000bd95bfb69fbe6ce3",
+      "symbol": "sUSDe",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000bd95bfb69fbe6ce3",
+      "assetGroup": "SUSDE",
+      "currencyId": "Staked USDe::sUSDe",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDe", "base": "USD" }
+      }
+    },
+    "0x20c000000000000000000000ae247a1130450f09": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Stable Coin",
+      "address": "0x20c000000000000000000000ae247a1130450f09",
+      "symbol": "SBC",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000ae247a1130450f09",
+      "assetGroup": "Stable Coin::SBC",
+      "currencyId": "Stable Coin::SBC",
+      "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c0000000000000000000008191667423f70e67": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Syrup USDC",
+      "address": "0x20c0000000000000000000008191667423f70e67",
+      "symbol": "syrupUSDC",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000008191667423f70e67",
+      "assetGroup": "SYRUPUSDC",
+      "currencyId": "Syrup USDC::syrupUSDC",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDC", "base": "USD" }
+      }
+    },
+    "0x20c0000000000000000000003158081efd85bfc2": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "USDBridge",
+      "address": "0x20c0000000000000000000003158081efd85bfc2",
+      "symbol": "USDB",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000003158081efd85bfc2",
+      "assetGroup": "USDBridge::USDB",
+      "currencyId": "USDBridge::USDB",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
+    },
+    "0x20c000000000000000000000111111111e910f0f": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "USD1",
+      "address": "0x20c000000000000000000000111111111e910f0f",
+      "symbol": "USD1",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000111111111e910f0f",
+      "assetGroup": "USD1::USD1",
+      "currencyId": "USD1::USD1",
+      "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x20c0000000000000000000006fd9a167923ba194": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Deel USD",
+      "address": "0x20c0000000000000000000006fd9a167923ba194",
+      "symbol": "DLUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000006fd9a167923ba194",
+      "assetGroup": "Deel USD::DLUSD",
+      "currencyId": "Deel USD::DLUSD",
+      "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
+    },
+    "0x20c00000000000000000000042109aef2f8b28e1": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "AllUnity CHF",
+      "address": "0x20c00000000000000000000042109aef2f8b28e1",
+      "symbol": "CHFAU",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c00000000000000000000042109aef2f8b28e1",
+      "assetGroup": "AllUnity CHF::CHFAU",
+      "currencyId": "AllUnity CHF::CHFAU",
+      "props": { "stablecoin": { "base": "CHF" } }
+    },
+    "0x20c000000000000000000000f047dd7018e50367": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "BRLA Token",
+      "address": "0x20c000000000000000000000f047dd7018e50367",
+      "symbol": "BRLA",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000f047dd7018e50367",
+      "assetGroup": "BRLA Token::BRLA",
+      "currencyId": "BRLA Token::BRLA",
+      "props": { "stablecoin": { "base": "REAL" } }
+    },
+    "0x20c0000000000000000000000a6da882d075a4c3": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Agant GBP",
+      "address": "0x20c0000000000000000000000a6da882d075a4c3",
+      "symbol": "GBPA",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000000a6da882d075a4c3",
+      "assetGroup": "Agant GBP::GBPA",
+      "currencyId": "Agant GBP::GBPA",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "GBP" }
+      }
+    },
+    "0x20c0000000000000000000006d194f9810e6f886": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "goUSD",
+      "address": "0x20c0000000000000000000006d194f9810e6f886",
+      "symbol": "goUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000006d194f9810e6f886",
+      "assetGroup": "goUSD::goUSD",
+      "currencyId": "goUSD::goUSD"
+    },
+    "0x20c0000000000000000000002e2829d90e7da7fa": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "AllUnity SEK",
+      "address": "0x20c0000000000000000000002e2829d90e7da7fa",
+      "symbol": "SEKAU",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000002e2829d90e7da7fa",
+      "assetGroup": "AllUnity SEK::SEKAU",
+      "currencyId": "AllUnity SEK::SEKAU",
+      "props": { "stablecoin": { "base": "SEK" } }
+    },
+    "0x20c000000000000000000000d65b4808c85dbb81": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "CAD Digital",
+      "address": "0x20c000000000000000000000d65b4808c85dbb81",
+      "symbol": "CADD",
+      "logoURI": "https://cadd.unity.tetratrust.com/cadd-logo.svg",
+      "assetGroup": "CAD Digital::CADD",
+      "currencyId": "CAD Digital::CADD",
+      "props": { "stablecoin": { "base": "CAD" } }
+    },
+    "0x20c00000000000000000000030fdd4a919e93fcf": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Hastra wYLDS",
+      "address": "0x20c00000000000000000000030fdd4a919e93fcf",
+      "symbol": "wYLDS",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c00000000000000000000030fdd4a919e93fcf",
+      "assetGroup": "Hastra wYLDS::wYLDS",
+      "currencyId": "Hastra wYLDS::wYLDS"
+    },
+    "0x20c00000000000000000000058d0b8b2cfdb358c": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Hastra PRIME",
+      "address": "0x20c00000000000000000000058d0b8b2cfdb358c",
+      "symbol": "PRIME",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c00000000000000000000058d0b8b2cfdb358c",
+      "assetGroup": "Hastra PRIME::PRIME",
+      "currencyId": "Hastra PRIME::PRIME"
+    },
+    "0x20c000000000000000000000d479b9f6ec0ceff9": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Ondo U.S. Dollar Yield",
+      "address": "0x20c000000000000000000000d479b9f6ec0ceff9",
+      "symbol": "USDY",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000d479b9f6ec0ceff9",
+      "assetGroup": "USDY",
+      "currencyId": "Ondo U.S. Dollar Yield::USDY",
+      "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x20c000000000000000000000f37de3740adec032": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "MACH",
+      "address": "0x20c000000000000000000000f37de3740adec032",
+      "symbol": "MACH",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000f37de3740adec032",
+      "assetGroup": "MACH::MACH",
+      "currencyId": "MACH::MACH"
+    },
+    "0x20c000000000000000000000baac91f6ca72f768": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Sentora pathUSD (Earn)",
+      "address": "0x20c000000000000000000000baac91f6ca72f768",
+      "symbol": "senpathUSDE",
+      "assetGroup": "Sentora pathUSD (Earn)::senpathUSDE",
+      "currencyId": "Sentora pathUSD (Earn)::senpathUSDE"
+    },
+    "0x20c0000000000000000000003337951a5a9d94b2": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "YLDS",
+      "address": "0x20c0000000000000000000003337951a5a9d94b2",
+      "symbol": "YLDS",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000003337951a5a9d94b2",
+      "assetGroup": "YLDS::YLDS",
+      "currencyId": "YLDS::YLDS"
+    },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4217",
       "address": "0x0000000000000000000000000000000000000000",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/usd.webp",
-      "currencyId": "No native currency::USD",
-      "name": "No native currency",
-      "symbol": "USD",
-      "assetGroup": "USD",
-      "decimals": 18,
-      "props": { "isNative": true }
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000000000000000000000",
+      "currencyId": "pathUSD::pathUSD",
+      "name": "pathUSD",
+      "symbol": "pathUSD",
+      "decimals": 6,
+      "assetGroup": "PATHUSD",
+      "props": {
+        "isNative": true,
+        "erc20": "0x20c0000000000000000000000000000000000000"
+      }
     }
   },
-  "mainTokens": ["0x0000000000000000000000000000000000000000"]
+  "mainTokens": [
+    "0x0000000000000000000000000000000000000000",
+    "0x20c0000000000000000000000000000000000000"
+  ]
 }

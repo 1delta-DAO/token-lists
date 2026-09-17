@@ -25,10 +25,16 @@ const ETH_GROUPS = ['ETH', 'WETH'] as const
  *  BTC that is ~1:1 BTC and NOT a staking/yield derivative). */
 const BTC_GROUPS = ['WBTC', 'CBBTC', 'TBTC', 'FBTC', 'BTC'] as const
 
+/** assetGroup → denomination, for FXRP — Flare's 1:1 FAsset representation of
+ *  XRP, the canonical XRP base on the chains Flare serves. stXRP is its LST
+ *  (carries `props.lst`, so the generator skips denomination for it). */
+const XRP_GROUPS = ['FXRP::FXRP'] as const
+
 /** Curated assetGroup → denomination map. */
 export const DENOMINATION_MAP: Record<string, string> = {
   ...Object.fromEntries(ETH_GROUPS.map((g) => [g, 'ETH'])),
   ...Object.fromEntries(BTC_GROUPS.map((g) => [g, 'BTC'])),
+  ...Object.fromEntries(XRP_GROUPS.map((g) => [g, 'XRP'])),
 }
 
 /**

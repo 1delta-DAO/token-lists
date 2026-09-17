@@ -69,6 +69,7 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // --- InfiniFi siUSD ---
   'Staked infiniFi USD::siUSD': { underlying: 'iUSD', base: 'USD' },
   'Staked InfiniFi USD::siUSD': { underlying: 'iUSD', base: 'USD' },
+  'InfiniFi Staked USD::siUSD': { underlying: 'iUSD', base: 'USD' }, // Tempo name()
   // --- Avant savUSD (Avalanche; 24h cooldown) ---
   'Staked avUSD::savUSD': { underlying: 'avUSD', base: 'USD' },
   // --- YieldFi yUSD (ERC-4626 over USDC) ---
@@ -218,9 +219,14 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   STEUR: { underlying: 'EURA', base: 'EUR' },
   // --- Maple syrup* — actively-managed credit pools (request-based redemption).
   // Included per request despite the managed-fund caveat; the underlying is the deposit ticker.
+  // The bare-ticker keys are the legacy (March-2025 CoinGecko) groups on 1/8453/42161; newer
+  // deployments (Tempo) group by on-chain name/symbol and are aliased to them AFTER this lookup.
   SYRUPUSDC: { underlying: 'USDC', base: 'USD' },
   SYRUPUSDT: { underlying: 'USDT', base: 'USD' },
   SYRUPUSDG: { underlying: 'USDG', base: 'USD' },
+  'Syrup USDC::syrupUSDC': { underlying: 'USDC', base: 'USD' },
+  'Syrup USDT::syrupUSDT': { underlying: 'USDT', base: 'USD' },
+  'Syrup USDG::syrupUSDG': { underlying: 'USDG', base: 'USD' },
   // --- Wren wstGBP (over tGBP — GBP-pegged). `underlying` is PINNED because the wrapper
   // exposes no 4626 surface at all (`asset()`/`underlying()`/`token()` all revert), so the
   // on-chain resolver cannot fill it in. The link was verified by backing instead: the wstGBP
