@@ -15,7 +15,7 @@ import {
 import { isAddress, zeroAddress } from 'viem'
 import { PRESET_SYMBOLS } from './presets'
 import { FUEL_MAPPEDS } from './utils/data/knownAssets'
-import { aliasAssetGroup } from './utils/data/assetGroupUnifier'
+import { aliasAssetGroup, mapAssetGroup } from './utils/data/assetGroupUnifier'
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
@@ -660,6 +660,13 @@ async function readTokenLists(): Promise<{
           // tag native and wnative
           // tags: AutoGenHelpers.uniq(tags).filter((t) => t !== 'wnative'),
           ...info,
+          // Native asset group: prefer the wrapped-native's already-mapped
+          // group, else the native symbol mapped the same way `categorizeToken`
+          // maps a matched wnative. A chain whose wnative is NOT registered in
+          // @1delta/wnative (Flare's WFLR, among others) previously got no
+          // `assetGroup` at all, leaving its native token keyed nowhere — which
+          // is exactly the gap that let `prices[undefined]` collide.
+          assetGroup: dataBase?.assetGroup ?? mapAssetGroup(info.symbol.toUpperCase()),
           props: {
             isNative: true,
             ...(NATIVE_ERC20[chain] && { erc20: NATIVE_ERC20[chain].toLowerCase() }),
