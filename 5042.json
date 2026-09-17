@@ -12,11 +12,10 @@
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
       "props": {
-        "stablecoin": {
-          "base": "USD"
-        },
+        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
-        "wnative": true
+        "wnative": true,
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xbc43ce8dec648ea298c4275559b81d6261c90b67": {
@@ -38,9 +37,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178430/thumb/weth.png?1789552847",
       "assetGroup": "ETH",
       "currencyId": "Arc Bridged WETH (Arc)::WETH",
-      "props": {
-        "denomination": "ETH"
-      }
+      "props": { "denomination": "ETH" }
     },
     "0x0bffa97f774824e9da843699aedd2835cb1b8022": {
       "chainId": "5042",
@@ -161,11 +158,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68076/thumb/EURAU_blue.png?1782278504",
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
-      "props": {
-        "stablecoin": {
-          "base": "EUR"
-        }
-      }
+      "props": { "stablecoin": { "base": "EUR" } }
     },
     "0xc6df1b92a6ae61a27059c41e541a91ce8dcb1605": {
       "chainId": "5042",
@@ -197,6 +190,26 @@
       "assetGroup": "ZAR Universal::ZARU",
       "currencyId": "ZAR Universal::ZARU"
     },
+    "0xa6db07ebf438d91aa653746fc05523e435645525": {
+      "chainId": "5042",
+      "decimals": 6,
+      "name": "PayFi Strategy Token",
+      "address": "0xa6db07ebf438d91aa653746fc05523e435645525",
+      "symbol": "PST",
+      "logoURI": "https://meta.huma.finance/pst.svg",
+      "assetGroup": "PayFi Strategy Token::PST",
+      "currencyId": "PayFi Strategy Token::PST"
+    },
+    "0x1ea1e4f9a9975f1f6e9c0a9f6e8ada7a66e6de52": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "ArcTools",
+      "address": "0x1ea1e4f9a9975f1f6e9c0a9f6e8ada7a66e6de52",
+      "symbol": "ARCT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178457/thumb/ARCT-logo-200.png?1789572456",
+      "assetGroup": "ArcTools::ARCT",
+      "currencyId": "ArcTools::ARCT"
+    },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "5042",
       "decimals": 18,
@@ -211,16 +224,6 @@
         "erc20": "0x3600000000000000000000000000000000000000",
         "wrapped": "0x3600000000000000000000000000000000000000"
       }
-    },
-    "0xa6db07ebf438d91aa653746fc05523e435645525": {
-      "chainId": "5042",
-      "decimals": 6,
-      "name": "PayFi Strategy Token",
-      "address": "0xa6db07ebf438d91aa653746fc05523e435645525",
-      "symbol": "PST",
-      "logoURI": "https://meta.huma.finance/pst.svg",
-      "assetGroup": "PayFi Strategy Token::PST",
-      "currencyId": "PayFi Strategy Token::PST"
     }
   },
   "mainTokens": [

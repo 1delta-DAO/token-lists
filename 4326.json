@@ -50,7 +50,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69955/thumb/USDm.png?1760170136",
       "assetGroup": "MegaUSD::USDM",
       "currencyId": "MegaUSD::USDM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "4326",
@@ -212,7 +215,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68272/thumb/cUSD_ab_500%C3%97500.png?1755232868",
       "assetGroup": "Cap USD::CUSD",
       "currencyId": "Cap USD::CUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x88887be419578051ff9f4eb6c858a951921d8888": {
       "chainId": "4326",
@@ -223,7 +229,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/stcusd.svg",
       "assetGroup": "Staked cap USD::stcUSD",
       "currencyId": "Staked Cap USD::stcUSD",
-      "props": { "savings": { "underlying": "cUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "cUSD", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4326",

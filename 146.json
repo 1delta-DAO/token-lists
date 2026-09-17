@@ -3360,7 +3360,8 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xf6f87073cf8929c206a77b0694619dc776f89885": {
@@ -3407,9 +3408,9 @@
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" }
       }
@@ -3423,7 +3424,7 @@
       "assetGroup": "xETH::Staked Stream ETH",
       "currencyId": "Staked Stream ETH::xETH",
       "props": {
-        "risk": { "score": 5, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xd9d6f92df52716835594ab41ea6f3bb994da98b6": {
@@ -3842,7 +3843,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x3a7ba84bbe869ed318e654dd9b6ff3cf6d531e91": {
@@ -4088,7 +4089,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68253/thumb/vyUSD_image.png?1755201198",
       "assetGroup": "YieldFi vyUSD::VYUSD",
       "currencyId": "YieldFi vyUSD::VYUSD",
-      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x2f872623d1e1af5835b08b0e49aad2d81d649d30": {
       "chainId": "146",
