@@ -78,6 +78,43 @@
         "pendle": { "tokenType": "PT", "expiry": 1778112000, "expired": true }
       }
     },
+    "0x20c0000000000000000000007f7ba549dd0251b9": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Reservoir Stablecoin",
+      "address": "0x20c0000000000000000000007f7ba549dd0251b9",
+      "symbol": "rUSD",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000007f7ba549dd0251b9",
+      "assetGroup": "Reservoir rUSD::RUSD",
+      "currencyId": "Reservoir Stablecoin::rUSD",
+      "props": {
+        "rwa": {
+          "type": "credit",
+          "subType": "reinsurance",
+          "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x20c000000000000000000000d479b9f6ec0ceff9": {
+      "chainId": "4217",
+      "decimals": 6,
+      "name": "Ondo U.S. Dollar Yield",
+      "address": "0x20c000000000000000000000d479b9f6ec0ceff9",
+      "symbol": "USDY",
+      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000d479b9f6ec0ceff9",
+      "assetGroup": "USDY",
+      "currencyId": "Ondo U.S. Dollar Yield::USDY",
+      "props": {
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "ondo" },
+        "stablecoin": { "base": "USD" }
+      }
+    },
     "0x20c000000000000000000000c412ec89d0c08be5": {
       "chainId": "4217",
       "decimals": 6,
@@ -187,24 +224,6 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000005c0bac7cef389a11",
       "assetGroup": "Generic USD::GUSD",
       "currencyId": "Generic USD::GUSD"
-    },
-    "0x20c0000000000000000000007f7ba549dd0251b9": {
-      "chainId": "4217",
-      "decimals": 6,
-      "name": "Reservoir Stablecoin",
-      "address": "0x20c0000000000000000000007f7ba549dd0251b9",
-      "symbol": "rUSD",
-      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000007f7ba549dd0251b9",
-      "assetGroup": "Reservoir rUSD::RUSD",
-      "currencyId": "Reservoir Stablecoin::rUSD",
-      "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" }
-      }
     },
     "0x20c000000000000000000000aeed2ec36a54d0e5": {
       "chainId": "4217",
@@ -342,7 +361,12 @@
       "assetGroup": "USDBridge::USDB",
       "currencyId": "USDBridge::USDB",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x20c000000000000000000000111111111e910f0f": {
@@ -366,7 +390,12 @@
       "assetGroup": "Deel USD::DLUSD",
       "currencyId": "Deel USD::DLUSD",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x20c00000000000000000000042109aef2f8b28e1": {
@@ -460,17 +489,6 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c00000000000000000000058d0b8b2cfdb358c",
       "assetGroup": "Hastra PRIME::PRIME",
       "currencyId": "Hastra PRIME::PRIME"
-    },
-    "0x20c000000000000000000000d479b9f6ec0ceff9": {
-      "chainId": "4217",
-      "decimals": 6,
-      "name": "Ondo U.S. Dollar Yield",
-      "address": "0x20c000000000000000000000d479b9f6ec0ceff9",
-      "symbol": "USDY",
-      "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000d479b9f6ec0ceff9",
-      "assetGroup": "USDY",
-      "currencyId": "Ondo U.S. Dollar Yield::USDY",
-      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x20c000000000000000000000f37de3740adec032": {
       "chainId": "4217",
