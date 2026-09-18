@@ -222,6 +222,22 @@ export interface TokenProps {
     /** Exponent's platform slug for the underlying, e.g. 'fragmetric' | 'hylo' | 'kamino'. */
     platform?: string
   }
+  /**
+   * A protocol-internal RECEIPT over another listed token: not transferable,
+   * never held by a user, priced 1:1 through `underlying`. Dolomite's
+   * isolation-mode market tokens (`dGM`, `dsavETH`, `dGMX`, …) are
+   * `IsolationModeVaultFactory` contracts — the user deposits `underlying`
+   * into their per-market vault and the factory mints the receipt into the
+   * vault's DolomiteMargin account. Keyed per ADDRESS because twelve of them
+   * share the on-chain name/symbol "Dolomite Isolation: GMX Market" / "dGM":
+   * the row's name/symbol/assetGroup are curated from the underlying, and
+   * this prop is how a consumer gets back to it without the lender's table.
+   */
+  receipt?: {
+    protocol: 'dolomite-isolation'
+    /** the token the receipt wraps 1:1 (same chain, lowercase) */
+    underlying: string
+  }
   /** Real-world-asset classification (tokenized off-chain assets) */
   rwa?: {
     /** coarse, stable class used for filtering */
