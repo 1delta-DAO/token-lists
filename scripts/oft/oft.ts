@@ -285,7 +285,9 @@ async function generateOftMap() {
       routes.sort((a, b) => a.contract.localeCompare(b.contract))
       ;(out[chainId] ??= {})[token] = { eid, routes }
     }
-    console.log(`  ${chainId}: ${Object.keys(perToken).length} tokens, ${candidates.length} routes${ok ? '' : ' (UNREAD)'}`)
+    console.log(
+      `  ${chainId}: ${Object.keys(perToken).length} tokens, ${candidates.length} routes${ok ? '' : ' (UNREAD)'}`,
+    )
   })
 
   let next = 0

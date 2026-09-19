@@ -30,6 +30,13 @@ export const RWA_MANUAL: RwaRegistry = {
     '0x066d10e240999aea6798b2e2ca0bdac2923cbdff': { type: 'fund', subType: 'private-credit', issuer: 'nest' }, // nFALCON
     '0x63810d7f1c7b4dbfb60c173ba120a2be98b59e13': { type: 'fund', subType: 'etf', issuer: 'nest' }, // nCLOA
   },
+  // Arc (5042) — the same two Nest shares at their Plume addresses (verified on-chain:
+  // same name/symbol/decimals, live supply). The name carries no "Nest"-rule the
+  // classifier knows, so they need the manual row exactly like Plume's.
+  '5042': {
+    '0x119dd7daff816f29d7ee47596ae5e4bdc4299165': { type: 'fund', subType: 'private-credit', issuer: 'nest' }, // nOPAL
+    '0x066d10e240999aea6798b2e2ca0bdac2923cbdff': { type: 'fund', subType: 'private-credit', issuer: 'nest' }, // nFALCON
+  },
 }
 
 /** Merge two registries; `override` wins per (chainId,address). */
