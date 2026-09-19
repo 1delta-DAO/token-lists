@@ -317,6 +317,17 @@ const equityIssuer =
 
 const RWA_RULES: Rule[] = [
   // --- Tokenized equities / equity ETFs ---
+  // Dinari dShares — "<Name> (Dinari Tokenized Stock|ETF)". Must run before the generic
+  // 'tokenized stock' match below and before 'ishares-etf', or every dShare is attributed
+  // to Ondo and the iShares dShares (TLT, SLV, IWM, …) to BlackRock — the fund manager,
+  // not the tokenizer. Issuer is the party that mints/redeems the on-chain share.
+  // ('(dinari to' covers CoinGecko's 60-char truncation, e.g. "…CLO Active ETF (Dinari To".)
+  {
+    id: 'dinari-stock',
+    confidence: 'auto',
+    test: has('dinari tokenized', '(dinari to'),
+    build: equityIssuer('dinari'),
+  },
   {
     id: 'ondo-stock',
     confidence: 'auto',

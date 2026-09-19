@@ -326,6 +326,48 @@ export interface TokenProps {
    * fee-on-transfer class — so the program is stated on every mint.
    */
   solana?: { tokenProgram: 'spl-token' | 'token-2022' }
+  /**
+   * LayerZero V2 OFT overlay — how this deployment moves over LayerZero, from
+   * LayerZero's metadata registry cross-checked on-chain (see `oft/oft.ts`).
+   *
+   * A LIST of routes, not one contract: the same token can carry several OFT
+   * contracts on one chain, each belonging to a different mesh (Ethereum USDT
+   * has the USDT0 adapter plus one-corridor bridges to Citrea and Harmony;
+   * cbBTC has four). A route is a corridor only to the chains in its `peers`,
+   * which is what `peers(eid)` answered on-chain — `quoteSend` reverts
+   * `NoPeer` anywhere else. Stargate's own pools and hydra tokens are
+   * deliberately NOT here (they are a bridge with credit limits and pool
+   * fees, served by the Stargate configs), nor is anything on LayerZero V1.
+   */
+  oft?: {
+    /** LayerZero V2 endpoint id of THIS chain (the `dstEid` a sender targets to reach it) */
+    eid: number
+    routes: OftRoute[]
+  }
+}
+
+/**
+ * One LayerZero OFT contract that moves a token, with the corridors it was
+ * verified to have. Amounts are dust-truncated to `sharedDecimals` on send
+ * (an 18-decimal USDai moves in 6-decimal units).
+ */
+export interface OftRoute {
+  /** the contract that takes `quoteSend` / `send` — the token itself for a native OFT */
+  contract: string
+  /** `native`: the token IS the OFT (burn/mint). `adapter`: a contract over the token (lock-box or mint/burn) */
+  kind: 'native' | 'adapter'
+  /** the mesh this contract belongs to, as LayerZero's registry names it (`usdt0`, `usdai`, `ethena`, …) */
+  oapp?: string
+  /** decimals amounts are normalised to on the wire; `amountLD` loses anything below 10^(local − shared) */
+  sharedDecimals: number
+  /** `approvalRequired()` read on-chain: true = the route pulls the token and needs an ERC-20 approval to `contract` */
+  approvalRequired?: boolean
+  /**
+   * chainId -> the peer OFT contract on that chain, from `peers(eid)` on-chain over
+   * every chain this repo lists. ABSENT (not `{}`) means the chain could not be read
+   * when the snapshot was taken — an unverified route, not a route with no peers.
+   */
+  peers?: { [chainId: string]: string }
 }
 
 export type OmniCurrencyList = { [assetId: string]: OmniCurrency }
@@ -348,6 +390,10 @@ export type LstRegistry = { [chainId: string]: { [address: string]: LstProps } }
 export type LstGroupMap = { [assetGroup: string]: LstProps }
 /** chainId -> address(lowercase) -> risk overlay */
 export type RiskRegistry = { [chainId: string]: { [address: string]: RiskProps } }
+/** OFT props shape, derived from TokenProps */
+export type OftProps = NonNullable<TokenProps['oft']>
+/** chainId -> address(lowercase) -> LayerZero OFT overlay */
+export type OftRegistry = { [chainId: string]: { [address: string]: OftProps } }
 /** assetGroup -> stablecoin overlay (base is chain-independent) */
 export type StablecoinGroupMap = { [assetGroup: string]: StablecoinProps }
 /** assetGroup -> savings overlay (underlying/base is chain-independent) */

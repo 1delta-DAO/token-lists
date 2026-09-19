@@ -19,6 +19,7 @@ import { aliasAssetGroup, mapAssetGroup } from './utils/data/assetGroupUnifier'
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
+import { lookupOft } from './oft/oftMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
 import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
@@ -325,6 +326,13 @@ async function readTokenLists(): Promise<{
                     // it's merged here by address rather than carried on a source list.
                     const risk = lookupRisk(chainId, lcAddress)
                     if (risk) tokenProps = { ...tokenProps, risk }
+
+                    // LayerZero OFT overlay (LayerZero's registry cross-checked on-chain, see
+                    // oft/oft.ts). Address-keyed and unconditional: an OFT contract is a fact
+                    // about one deployment, never about the assetGroup, and it is asserted by
+                    // the contract's own `token()` / `peers()` rather than by a label.
+                    const oft = lookupOft(chainId, lcAddress)
+                    if (oft) tokenProps = { ...tokenProps, oft }
 
                     // CoinGecko impostor guard: a lazy ticker-copy (name===symbol) whose address is
                     // NOT CoinGecko's canonical for that symbol/chain must never inherit an asset

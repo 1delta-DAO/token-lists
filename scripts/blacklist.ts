@@ -7,7 +7,6 @@ export const BLACKLIST_PER_CHAIN = {
     '0x0c10bf8fcb7bf5412187a595ab97a3609160b5c6', // fake USDD
     '0xdde3ec717f220fc6a29d6a4be73f91da5b718e55', // fake USDU
     '0x20b3b07e9c0e37815e2892ab09496559f57c3603', // fake USDV
-    '0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef', // fake sUSDai
     // Superseded Yield Basis markets. Every generation shares the
     // `yb-<ASSET>` symbol AND produces the same `name::symbol` assetGroup,
     // and the dead ones still answer every getter while holding real funds
