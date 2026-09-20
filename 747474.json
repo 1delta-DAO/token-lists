@@ -15,6 +15,10 @@
         "pendle": {
           "tokenType": "PT",
           "bridgedFrom": "ARB",
+          "origin": {
+            "chainId": "42161",
+            "address": "0xb459db106f645d698e74027eef6019a26a0675cc"
+          },
           "expiry": 1792022400
         }
       }
@@ -118,6 +122,19 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": { "1": "0xf0e9f6d9ba5d1b3f76e0f82f9dcdb9ebeef4b4da" }
+            }
+          ]
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -173,7 +190,20 @@
       "currencyId": "Jito Staked SOL::JitoSOL",
       "props": {
         "lst": { "type": "staking", "asset": "SOL", "provider": "jito" },
-        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" },
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x6c16e26013f2431e8b2e1ba7067ecccad0db6c52",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "jito",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0x7f1f4b4b29f5058fa32cc7a97141b8d7e5abdc2d": {
@@ -231,7 +261,20 @@
         "permit": { "type": 1, "version": "1" },
         "wnative": true,
         "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
-        "denomination": "ETH"
+        "denomination": "ETH",
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x694d1697f6909361775139357d99fb60b5cab683",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "katana",
+              "approvalRequired": false,
+              "peers": { "1": "0x8f45f7acd4b9fc0b446902790f304d444dff949b" }
+            }
+          ]
+        }
       }
     },
     "0x203a662b0bd271a6ed5a60edfbd04bfce608fd36": {
@@ -246,7 +289,20 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x807275727dd3e640c5f2b5de7d1ec72b4dd293c0",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "katana",
+              "approvalRequired": false,
+              "peers": { "1": "0xb5bada33542a05395d504a25885e02503a957bb3" }
+            }
+          ]
+        }
       }
     },
     "0x2dca96907fde857dd3d816880a0df407eeb2d2f2": {
@@ -260,7 +316,20 @@
       "currencyId": "Vault Bridge USDT::vbUSDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x4690f346337ed8737bea462ac71ff16ef95b985e",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "katana",
+              "approvalRequired": false,
+              "peers": { "1": "0x839dc0cff5e263f56c9810560adf8ea40e95ab82" }
+            }
+          ]
+        }
       }
     },
     "0x0913da6da4b42f538b445599b46bb4622342cf52": {
@@ -274,7 +343,20 @@
       "currencyId": "Vault Bridge WBTC::vbWBTC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x8169e532bc781985e155037db1f96c267a520dfc",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "katana",
+              "approvalRequired": false,
+              "peers": { "1": "0x8d09c41229f07ad098ffb5fad239dd87d2c131d4" }
+            }
+          ]
+        }
       }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
@@ -471,7 +553,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66163/thumb/wsrUSD.png?1748500965",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
       "currencyId": "Wrapped Savings rUSD::WSRUSD",
-      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x4809010926aec940b550d34a46a52739f996d75d",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
+            }
+          ]
+        }
+      }
     },
     "0xe007ca01894c863d7898045ed5a3b4abf0b18f37": {
       "chainId": "747474",
@@ -549,7 +646,22 @@
       "symbol": "WFRAX",
       "logoURI": "https://assets.coingecko.com/coins/images/55432/thumb/wfrax_64.png?1745993624",
       "assetGroup": "Wrapped FRAX::WFRAX",
-      "currencyId": "Wrapped FRAX::WFRAX"
+      "currencyId": "Wrapped FRAX::WFRAX",
+      "props": {
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": { "252": "0xd86fbbd0c8715d2c1f40e451e5c3514e65e7576a" }
+            }
+          ]
+        }
+      }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "747474",
@@ -560,7 +672,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53963/thumb/frxUSD.png?1737792154",
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::FRXUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
+            }
+          ]
+        }
+      }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
       "chainId": "747474",
@@ -573,7 +700,20 @@
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "frxUSD", "base": "USD" }
+        "savings": { "underlying": "frxUSD", "base": "USD" },
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": { "252": "0x88aa7854d3b2daa5e37e7ce73a1f39669623a361" }
+            }
+          ]
+        }
       }
     },
     "0xc6135d59f8d10c9c035963ce9037b3635170d716": {
@@ -604,7 +744,22 @@
       "symbol": "mHYPER",
       "logoURI": "https://cdn.morpho.org/assets/logos/mhyper.svg",
       "assetGroup": "Midas Hyperithm::mHYPER",
-      "currencyId": "Midas Hyperithm::mHYPER"
+      "currencyId": "Midas Hyperithm::mHYPER",
+      "props": {
+        "oft": {
+          "eid": 30375,
+          "routes": [
+            {
+              "contract": "0x0516ded0209874fa9381ee721e8f1bcbe6ec2832",
+              "kind": "adapter",
+              "sharedDecimals": 9,
+              "oapp": "midas",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
+      }
     },
     "0x7231dbacdfc968e07656d12389ab20de82fbfceb": {
       "chainId": "747474",

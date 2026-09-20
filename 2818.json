@@ -13,7 +13,20 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30322,
+          "routes": [
+            {
+              "contract": "0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "etherfi",
+              "approvalRequired": false,
+              "peers": { "1": "0xcd2eb13d6831d4602d80e5db9230a57596cdca63" }
+            }
+          ]
+        }
       }
     },
     "0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e": {
@@ -228,7 +241,22 @@
       "logoURI": "https://assets.bulbaswap.io/icons/2818/address/0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34.png",
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30322,
+          "routes": [
+            {
+              "contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
+            }
+          ]
+        }
+      }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
       "chainId": "2818",
@@ -238,7 +266,25 @@
       "symbol": "enzoBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/enzoBTC.webp",
       "assetGroup": "ENZOBTC",
-      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC"
+      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
+      "props": {
+        "oft": {
+          "eid": 30322,
+          "routes": [
+            {
+              "contract": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "lorenzo",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
+                "56": "0xaa0d222436152050501e91dc07a45b1112f8b60f"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {
       "chainId": "2818",
@@ -261,7 +307,20 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "oft": {
+          "eid": 30322,
+          "routes": [
+            {
+              "contract": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
+            }
+          ]
+        }
       }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
@@ -1324,7 +1383,42 @@
       "symbol": "USDT0",
       "logoURI": "https://assets.bulbaswap.io/icons/2818/address/0xe7cd86e13ac4309349f30b3435a9d337750fc82d.png",
       "assetGroup": "USDT0::USDT0",
-      "currencyId": "USDT0::USDT0"
+      "currencyId": "USDT0::USDT0",
+      "props": {
+        "oft": {
+          "eid": 30322,
+          "routes": [
+            {
+              "contract": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "usdt0",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
+                "10": "0xf03b4d9ac1d5d1e7c4cef54c2a313b9fe051a0ad",
+                "14": "0x567287d2a9829215a37e3b88843d32f9221e7588",
+                "30": "0x1a594d5d5d1c426281c1064b07f23f57b2716b61",
+                "130": "0xc07be8994d035631c36fb4a89c918cefb2f03ec3",
+                "137": "0x6ba10300f0dc58b7a1e4c0e41f5dabb7d7829e13",
+                "143": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "196": "0x94bcca6bdfd6a61817ab0e960bfede4984505554",
+                "988": "0xedaba024be4d87974d5ab11c6dd586963cccb027",
+                "999": "0x904861a24f30ec96ea7cfc3be9ea4b476d237e98",
+                "1030": "0xc57efa1c7113d98bda6f9f249471704ece5dd84a",
+                "1329": "0x56fe74a2e3b484b921c447357203431a3485cc60",
+                "4217": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+                "4326": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "5000": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+                "9745": "0x02ca37966753bdddf11216b73b16c1de756a7cf9",
+                "42161": "0x14e4a1b13bf7f943c8ff7c51fb60fa964a298d92",
+                "57073": "0x1cb6de532588fca4a21b7209de7c456af8434a65",
+                "80094": "0x3dc96399109df5ceb2c226664a086140bd0379cb"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xcfb1186f4e93d60e60a8bdd997427d1f33bc372b": {
       "chainId": "2818",

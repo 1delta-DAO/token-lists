@@ -35,7 +35,20 @@
       "props": {
         "wnative": true,
         "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
-        "denomination": "IP"
+        "denomination": "IP",
+        "oft": {
+          "eid": 30364,
+          "routes": [
+            {
+              "contract": "0xa0a3d349e532d6f2d4ccfe2284bb10288739698c",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "data",
+              "approvalRequired": true,
+              "peers": { "56": "0x4d6394bc3031f751edce368c189b0e060b527107" }
+            }
+          ]
+        }
       }
     },
     "0xa4f5c615f72ddeb2220471694fff1c0c3de051e1": {
@@ -156,7 +169,22 @@
       "symbol": "ARIAIP",
       "logoURI": "https://assets.coingecko.com/coins/images/70388/thumb/logo-abberation-token-white.png?1762454816",
       "assetGroup": "Aria::ARIAIP",
-      "currencyId": "Aria::ARIAIP"
+      "currencyId": "Aria::ARIAIP",
+      "props": {
+        "oft": {
+          "eid": 30364,
+          "routes": [
+            {
+              "contract": "0x328fd76ce33cf72cbbc206515ab58d7101104ba7",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "aria",
+              "approvalRequired": true,
+              "peers": { "56": "0x2a7e3392458307493c86388d5e544aad93286836" }
+            }
+          ]
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1514",

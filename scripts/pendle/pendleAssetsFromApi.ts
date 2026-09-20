@@ -16,6 +16,144 @@ const SYMBOL_ABI = [
 ] as const
 
 /**
+ * LayerZero V2 OFT surface — what a BRIDGED Pendle PT actually is.
+ *
+ * Every PT bridged off its issuing chain is a LayerZero OFT (verified on all 31
+ * tokens across 10 chains, 2026-09-20): the token on the destination chain
+ * answers `endpoint()` / `peers(eid)` / `oftVersion()`, and its peer on the
+ * origin chain is an OFT ADAPTER whose `token()` is the origin PT — the one
+ * with the SY, the YT and the Pendle market. So the identity of a bridged PT
+ * is fully derivable on-chain: `peers(originEid)` → adapter → `token()`.
+ */
+const OFT_ABI = [
+  {
+    inputs: [{ internalType: 'uint32', name: 'eid', type: 'uint32' }],
+    name: 'peers',
+    outputs: [{ internalType: 'bytes32', name: '', type: 'bytes32' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'token',
+    outputs: [{ internalType: 'address', name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+] as const
+
+/**
+ * Pendle's origin code (the `-(…)` suffix) → the chain that issued the PT.
+ * Only the codes observed on live tokens; an unknown code is logged and the
+ * token keeps `bridgedFrom` with no `origin` pointer.
+ */
+const ORIGIN_CHAIN_BY_CODE: Record<string, string> = {
+  ETH: Chain.ETHEREUM_MAINNET,
+  ARB: Chain.ARBITRUM_ONE,
+  PLASMA: Chain.PLASMA_MAINNET,
+}
+
+/** LayerZero V2 endpoint ids for the origin chains above. */
+const LZ_EID_BY_CHAIN: Record<string, number> = {
+  [Chain.ETHEREUM_MAINNET]: 30101,
+  [Chain.ARBITRUM_ONE]: 30110,
+  [Chain.PLASMA_MAINNET]: 30383,
+}
+
+interface PendleOrigin {
+  chainId: string
+  address: string
+}
+
+function bytes32ToAddress(v: unknown): string | undefined {
+  if (typeof v !== 'string' || !/^0x0{24}[0-9a-fA-F]{40}$/.test(v)) return undefined
+  const a = '0x' + v.slice(26).toLowerCase()
+  return /^0x0{40}$/.test(a) ? undefined : a
+}
+
+function isAddressString(v: unknown): v is string {
+  return typeof v === 'string' && /^0x[0-9a-fA-F]{40}$/.test(v) && !/^0x0{40}$/.test(v)
+}
+
+/**
+ * Resolve the ORIGIN PT of every bridged token on `chainId`, keyed by the
+ * bridged token's lower-cased address.
+ *
+ * Two reads: `peers(originEid)` on the bridged OFT (this chain), then `token()`
+ * on that peer — the OFT adapter — on the origin chain. Both are best-effort and
+ * fail per token, never per chain; the caller applies the same FLOOR rule as
+ * the symbol read, so a pointer already recorded survives an unreachable RPC.
+ *
+ * Why this exists: the Pendle API serves a bridged PT with no link to its
+ * origin — same name, same symbol (stripped), same expiry, same icon, and
+ * nothing else — so a consumer wanting the origin market's yield, maturity
+ * mechanics or mint/redeem surface has nothing to key on but a symbol match,
+ * which the API's own Ink collision (USDat vs sUSDat, one symbol) shows is not
+ * safe. The peer link is the contract's own statement of what it wraps.
+ */
+async function fetchBridgedOrigins(
+  chainId: string,
+  bridged: { address: string; originCode: string }[],
+): Promise<Record<string, PendleOrigin>> {
+  const out: Record<string, PendleOrigin> = {}
+  const resolvable = bridged.filter((b) => {
+    const originChain = ORIGIN_CHAIN_BY_CODE[b.originCode]
+    if (!originChain || LZ_EID_BY_CHAIN[originChain] === undefined) {
+      console.warn(`  pendle: unknown origin code ${b.originCode} on ${chainId}:${b.address} — no origin pointer`)
+      return false
+    }
+    return true
+  })
+  if (resolvable.length === 0) return out
+
+  // 1. peers(originEid) on the bridged token, on THIS chain
+  let peers: unknown[]
+  try {
+    peers = (await multicallRetryUniversal({
+      chain: chainId,
+      calls: resolvable.map((b) => ({
+        address: b.address,
+        name: 'peers',
+        args: [LZ_EID_BY_CHAIN[ORIGIN_CHAIN_BY_CODE[b.originCode]]],
+      })),
+      abi: OFT_ABI,
+      allowFailure: true,
+    })) as unknown[]
+  } catch (e) {
+    console.warn(`  pendle: peers() read failed on chain ${chainId} — keeping previous origin pointers`, e)
+    return out
+  }
+
+  // 2. token() on the adapter, on the ORIGIN chain — grouped per origin chain
+  const byOrigin: Record<string, { bridged: string; adapter: string }[]> = {}
+  peers.forEach((r, i) => {
+    const v = r && typeof r === 'object' && 'result' in (r as any) ? (r as any).result : r
+    const adapter = bytes32ToAddress(v)
+    if (!adapter) return
+    const originChain = ORIGIN_CHAIN_BY_CODE[resolvable[i].originCode]
+    ;(byOrigin[originChain] ??= []).push({ bridged: resolvable[i].address.toLowerCase(), adapter })
+  })
+
+  for (const [originChain, rows] of Object.entries(byOrigin)) {
+    try {
+      const res = (await multicallRetryUniversal({
+        chain: originChain,
+        calls: rows.map((r) => ({ address: r.adapter, name: 'token', args: [] })),
+        abi: OFT_ABI,
+        allowFailure: true,
+      })) as unknown[]
+      res.forEach((r, i) => {
+        const v = r && typeof r === 'object' && 'result' in (r as any) ? (r as any).result : r
+        if (isAddressString(v)) out[rows[i].bridged] = { chainId: originChain, address: v.toLowerCase() }
+      })
+    } catch (e) {
+      console.warn(`  pendle: token() read failed on origin chain ${originChain} — keeping previous origin pointers`, e)
+    }
+  }
+  return out
+}
+
+/**
  * A failed read must never be mistaken for an answer.
  *
  * `multicallRetryUniversal` hands back the RAW return data when it cannot decode
@@ -43,20 +181,26 @@ const SYMBOL_ABI = [
  * a successful read may change a symbol. (Same rule as the oracle-roster merge
  * in lender-metadata: a refresh may add or change information, never delete it.)
  */
-function loadPreviousOriginSymbols(): Record<string, string> {
+function loadPreviousOriginSymbols(): { symbols: Record<string, string>; origins: Record<string, PendleOrigin> } {
   try {
     const dir = path.dirname(fileURLToPath(import.meta.url))
     const prev = JSON.parse(fs.readFileSync(path.resolve(dir, './pendle.json'), 'utf8'))
-    const out: Record<string, string> = {}
+    const symbols: Record<string, string> = {}
+    const origins: Record<string, PendleOrigin> = {}
     for (const t of prev) {
+      const key = `${t.chainId}:${String(t.address).toLowerCase()}`
       if (typeof t?.symbol === 'string' && ORIGIN_SUFFIX.test(t.symbol)) {
-        out[`${t.chainId}:${String(t.address).toLowerCase()}`] = t.symbol
+        symbols[key] = t.symbol
+      }
+      const o = t?.props?.pendle?.origin
+      if (o && typeof o.chainId === 'string' && isAddressString(o.address)) {
+        origins[key] = { chainId: o.chainId, address: o.address.toLowerCase() }
       }
     }
-    return out
+    return { symbols, origins }
   } catch {
     // No previous list (first run) — nothing to protect.
-    return {}
+    return { symbols: {}, origins: {} }
   }
 }
 
@@ -148,7 +292,7 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
 
   const [assetsData, marketsData] = await Promise.all([fetchAllAssetsData(), fetchAllMarketsData()])
 
-  const previousOriginSymbols = loadPreviousOriginSymbols()
+  const { symbols: previousOriginSymbols, origins: previousOrigins } = loadPreviousOriginSymbols()
   const assetList: PendleAssetList = {}
   const marketsByChain = marketsData
 
@@ -212,6 +356,19 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
       assets.filter((a: any) => !a.tags?.includes('PENDLE_LP')).map((a: any) => a.address),
     )
 
+    // Origin PT of every bridged token on this chain, via the LayerZero peer
+    // link. Needs the symbols first: the suffix is what says a token is bridged.
+    const bridgedOnChain: { address: string; originCode: string }[] = []
+    // @ts-ignore
+    for (const asset of assets) {
+      if (asset.tags?.includes('PENDLE_LP')) continue
+      const address = asset.address.toLowerCase()
+      const symbol = onChainSymbols[address] ?? previousOriginSymbols[`${chainId}:${address}`] ?? asset.symbol
+      const origin = ORIGIN_SUFFIX.exec(symbol)
+      if (origin) bridgedOnChain.push({ address, originCode: origin[1] })
+    }
+    const onChainOrigins = await fetchBridgedOrigins(chainId, bridgedOnChain)
+
     // @ts-ignore
     for (const asset of assets) {
       if (!assetList[chainId]) {
@@ -257,7 +414,24 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
       // so a caller can gate a mint/redeem route on a fact instead of on the
       // absence of one.
       const origin = ORIGIN_SUFFIX.exec(symbol)
-      if (origin) pendleProps.bridgedFrom = origin[1]
+      if (origin) {
+        pendleProps.bridgedFrom = origin[1]
+        // The ORIGIN PT — same asset, on the chain that issued it, where the SY,
+        // the YT and the market live. A consumer joins yield, maturity mechanics
+        // and the mint/redeem surface through this, never through the symbol.
+        // Read now if the chain answered, else what the last run recorded.
+        const resolved = onChainOrigins[address] ?? previousOrigins[`${chainId}:${address}`]
+        if (resolved) {
+          pendleProps.origin = resolved
+          if (!assetsData[resolved.chainId]?.some((a: any) => a.address.toLowerCase() === resolved.address)) {
+            console.warn(
+              `  pendle: origin ${resolved.chainId}:${resolved.address} of ${chainId}:${address} is not a Pendle asset`,
+            )
+          }
+        } else {
+          console.warn(`  pendle: could not resolve origin of bridged PT ${chainId}:${address} (${symbol})`)
+        }
+      }
 
       let marketData: PendleMarketMapping | undefined
 

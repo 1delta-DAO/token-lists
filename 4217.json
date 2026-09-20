@@ -145,7 +145,20 @@
       "symbol": "USDT0",
       "logoURI": "https://coin-images.coingecko.com/coins/images/53705/large/usdt0.jpg?1737086183",
       "assetGroup": "USDT0::USDT0",
-      "currencyId": "USDT0::USDT0"
+      "currencyId": "USDT0::USDT0",
+      "props": {
+        "oft": {
+          "eid": 30410,
+          "routes": [
+            {
+              "contract": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "usdt0"
+            }
+          ]
+        }
+      }
     },
     "0x20c0000000000000000000000000000000000000": {
       "chainId": "4217",
@@ -201,7 +214,18 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30410,
+          "routes": [
+            {
+              "contract": "0xbd12e50bfaa25735d074dbfdcf73208b9ccd2e43",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "cap"
+            }
+          ]
+        }
       }
     },
     "0x20c0000000000000000000008ee4fcff88888888": {

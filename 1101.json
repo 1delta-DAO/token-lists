@@ -97,7 +97,18 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30158,
+          "routes": [
+            {
+              "contract": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance"
+            }
+          ]
+        }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -111,7 +122,18 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30158,
+          "routes": [
+            {
+              "contract": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance"
+            }
+          ]
+        }
       }
     },
     "0x8c7d118b5c47a5bcbd47cc51789558b98dad17c5": {
@@ -618,7 +640,20 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0xcacd6fd266af91b8aed52accc382b4e165586e29/7610ebe75cb08ff21ee6dfb7e1592e25.png",
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30158,
+          "routes": [
+            {
+              "contract": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance"
+            }
+          ]
+        }
+      }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
       "chainId": "1101",
@@ -631,7 +666,18 @@
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "frxUSD", "base": "USD" }
+        "savings": { "underlying": "frxUSD", "base": "USD" },
+        "oft": {
+          "eid": 30158,
+          "routes": [
+            {
+              "contract": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance"
+            }
+          ]
+        }
       }
     },
     "0x6a92b1e99de09f71cd96bc91f934826d96b8b26e": {
@@ -672,7 +718,20 @@
       "symbol": "WFRAX",
       "logoURI": "https://assets.coingecko.com/coins/images/55432/thumb/wfrax_64.png?1745993624",
       "assetGroup": "Wrapped FRAX::WFRAX",
-      "currencyId": "Wrapped FRAX::WFRAX"
+      "currencyId": "Wrapped FRAX::WFRAX",
+      "props": {
+        "oft": {
+          "eid": 30158,
+          "routes": [
+            {
+              "contract": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance"
+            }
+          ]
+        }
+      }
     },
     "0x11175910c6f02913782777840ac008f30720046f": {
       "chainId": "1101",

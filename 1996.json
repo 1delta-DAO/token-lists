@@ -13,7 +13,18 @@
       "currencyId": "Wrapped DMT::wDMT",
       "props": {
         "wnative": true,
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "oft": {
+          "eid": 30278,
+          "routes": [
+            {
+              "contract": "0x96c25882275b9d40aff45ce01ae0d5bd65c89e62",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "sanko-gamecorp"
+            }
+          ]
+        }
       }
     },
     "0x13d675bc5e659b11cfa331594cf35a20815dcf02": {
@@ -136,7 +147,20 @@
       "symbol": "SP",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/sp.png",
       "assetGroup": "Smoovie Phone::SP",
-      "currencyId": "Smoovie Phone::SP"
+      "currencyId": "Smoovie Phone::SP",
+      "props": {
+        "oft": {
+          "eid": 30278,
+          "routes": [
+            {
+              "contract": "0xea6b990f3d767cfd4bbdfb7fced163818bfa8e31",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "smoovie-phone"
+            }
+          ]
+        }
+      }
     },
     "0x699bfe71910d14b8560f65d5bd370fc65d0c3b64": {
       "chainId": "1996",

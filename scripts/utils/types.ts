@@ -151,6 +151,177 @@ export interface OmniCurrency {
   currencies: AbstractedAsset[]
 }
 
+/**
+ * ---------------------------------------------------------------------------
+ * Underlying / base vocabulary (BASE_UNDERLYING_PLAN.md in lending-sdks, phase 0).
+ *
+ * Three axes, deliberately kept apart because they diverge on every
+ * strategy token:
+ *
+ *   `underlying` — the NEXT HOP: the token this contract ACCOUNTS in and pays
+ *                  redemptions in (`asset()`, `UNDERLYING_TOKEN()`,
+ *                  `SY.yieldToken()`, a registry `underlying`). A hop is a
+ *                  CLAIM on `to`. The mint input is never a hop.
+ *   `terminal`   — where the walk ends: a gas/BTC base, a PEG (with the
+ *                  mechanism that holds it), a basket, an RWA instrument, or
+ *                  the token itself.
+ *   `entry`      — what a holder on THIS chain can pay to mint / receives on
+ *                  redeem, and how gated that is. Per chain: the same
+ *                  assetGroup mints on Ethereum, bridges to Plasma and is
+ *                  PSM-enterable on Base.
+ *
+ * A synthetic has NO hop: msETH is minted as debt against collateral and is
+ * never redeemable into ETH, USDe's USDT is not kept by Ethena, apxUSD's USDC
+ * buys STRC preferred stock. All three end in a `peg` terminal and their mint
+ * input lives on `entry`.
+ * ---------------------------------------------------------------------------
+ */
+
+/** A token reference inside a resolution. `chainId` differs from the host token's only across a `bridge` hop. */
+export interface UnderlyingRef {
+  chainId: string
+  /** lowercase */
+  address: string
+  assetGroup: string
+  symbol: string
+}
+
+/** How value moves between a token and the token it is a claim on. */
+export type UnderlyingRelation =
+  /** 1:1, protocol-internal (dGM → GM, lisAster → ASTER) */
+  | 'receipt'
+  /** 1:1 non-yield wrap (WETH → ETH, sw-sFLR → sFLR) */
+  | 'wrapper'
+  /** same assetGroup on another chain; this chain has no local surface */
+  | 'bridge'
+  /** share price over `to` (ERC-4626 or bespoke: sUSDe → USDe, savETH → avETH, syrupUSDC → USDC) */
+  | 'vault'
+  /** LST exchange rate over `to` (wstETH → stETH, tETH → wstETH, kHYPE → HYPE) */
+  | 'staking'
+  /** Pendle / Spectra / Exponent PT → the SY / IBT it redeems into at maturity */
+  | 'principal'
+  /** SY / IBT → its accounting asset (SY-sUSDS → USDS via `assetInfo()`) */
+  | 'accounting'
+
+/** Where a hop came from — every hop is attributable. */
+export type UnderlyingSource =
+  | 'onchain:erc4626.asset'
+  | 'onchain:sy.yieldToken'
+  | 'onchain:sy.assetInfo'
+  | 'onchain:UNDERLYING_TOKEN'
+  | 'onchain:wsteth.stETH'
+  | 'onchain:vault.getUnderlying'
+  | 'registry:lst'
+  | 'registry:savings'
+  | 'registry:dolomite-isolation'
+  | 'tokenlist:pendle'
+  | 'tokenlist:spectra'
+  | 'tokenlist:exponent'
+  | 'tokenlist:receipt'
+  /** curated — rebasing LSTs and bespoke vaults that expose no getter */
+  | 'declared'
+
+/** One hop down. */
+export interface UnderlyingHop {
+  to: UnderlyingRef
+  relation: UnderlyingRelation
+  source: UnderlyingSource
+  /** 1:1 by construction (receipt, wrapper, bridge, principal at maturity) vs priced (vault, staking). */
+  exact: boolean
+}
+
+/**
+ * What holds a peg. This is the fact a risk consumer needs and the whole
+ * difference between USDe, apxUSD and USDC, which all say "USD".
+ */
+export type PegMechanism =
+  /** custodied fiat / T-bills: USDC, USDT, USDG, tGBP, iTRY */
+  | 'fiat-reserve'
+  /**
+   * minted as DEBT against collateral, held at peg by liquidation + arbitrage,
+   * NO redemption into the base: msETH / msUSD, crvUSD, lisUSD, GHO, DOLA,
+   * BOLD, satUSD, ZCHF, USG, MIM, MAI, USDD 2.0, feUSD, USDH — and DAI / USDS
+   * (mixed with a PSM)
+   */
+  | 'cdp-debt'
+  /** issuer-minted 1:1 against a vault of listed tokens, redeemable: dUSD, pUSD, USR, HONEY (PSM) */
+  | 'reserve'
+  /** hedged spot + derivatives book: USDe, avUSD, avETH, NUSD, bfUSD, USDat */
+  | 'delta-neutral'
+  /** oracle-marked claim on an off-chain book: apxUSD, PST, reUSD, USPC */
+  | 'nav'
+  /** 1:1 mint / redeem against the base through an issuer: SolvBTC, uniBTC, LBTC, FXRP */
+  | 'mint-redeem'
+
+/**
+ * Where a walk ends. A peg is a TERMINAL, never a hop — there is no token it is
+ * a claim on.
+ */
+export type UnderlyingTerminal =
+  /**
+   * The canonical form of a gas / BTC base on THIS chain: WETH ⇒ ETH,
+   * WBTC / cbBTC / BTCB ⇒ BTC, WHYPE ⇒ HYPE. `token` is that canonical form,
+   * absent when the base is native-only on the chain.
+   */
+  | { kind: 'base'; base: string; token?: { chainId: string; address: string } }
+  /**
+   * A pegged claim with no token hop. `base` is a fiat or gas symbol
+   * ('USD' | 'EUR' | 'CHF' | 'TRY' | 'ETH' | 'BTC' | …). `backing` lists the
+   * assetGroups it is collateralised by, informational only and allowed to rot
+   * (crvUSD: ['WETH', 'WSTETH', …]; dUSD: ['USDC', 'USDS']).
+   */
+  | { kind: 'peg'; base: string; mechanism: PegMechanism; backing?: string[] }
+  /**
+   * LP-shaped: GM, GLV, Lista SmartLP, Fluid smart legs. Folds to one `base`
+   * only when every leg agrees (GM [WETH-WETH] ⇒ ETH; GM [WETH-USDC] ⇒ none).
+   */
+  | { kind: 'basket'; legs: { weight?: number; resolution: UnderlyingResolution }[] }
+  /** A tokenised real-world instrument: NVDAon ⇒ 'NVDA', XAUt ⇒ 'XAU'. */
+  | { kind: 'rwa'; instrument: string }
+  /** LINK, ARB, BGT — the token is its own base. */
+  | { kind: 'self' }
+
+/** The full walk for one (chain, address). */
+export interface UnderlyingResolution {
+  /** `[]` for a base token AND for a synthetic (see msETH). */
+  chain: UnderlyingHop[]
+  terminal: UnderlyingTerminal
+  /**
+   * The fold: the terminal's base, or the shared base of every basket leg,
+   * else absent. Always a fiat / gas symbol, never an identity — USDC ⇒ 'USD',
+   * not 'USDC'. For a `self` terminal it is the token's own assetGroup.
+   */
+  base?: string
+  /** Index into `chain` of the first hop whose `exact` is false — where "tracks 1:1" stops being a contract fact. */
+  firstPricedHop?: number
+}
+
+/**
+ * The third axis, per chain. Never folded into `chain`: USDC on apxUSD and
+ * USDT on USDe are entries, not underlyings. Mostly already known elsewhere
+ * (margin-fetcher registry `mintContract` / `isMintable` /
+ * `secondaryMarketOnly`, the mint-composition roster, the CCTP roster) and
+ * published beside the walk.
+ */
+export interface EntryTerms {
+  /** what a holder on this chain can PAY to mint, and whether that is allowlist / KYC / minter-role gated */
+  mint?: { assets: string[]; gated: boolean; via?: 'native' | 'psm' | 'issuer' }
+  /** what redemption on this chain pays out, and how */
+  redeem?: { assets: string[]; gated: boolean; via?: 'instant' | 'queued' | 'market' | 'issuer' }
+  /** minted by borrowing (`cdp-debt`) — there is no "pay to mint" at all */
+  asDebt?: boolean
+  /**
+   * Chains where this assetGroup has a REAL surface (accounting + mint /
+   * redeem). Only set on a chain that has none itself. A chain is a surface
+   * chain iff a registry row or a non-decoy getter exists there — derived,
+   * never declared, so adding a registry row flips a mirror to local
+   * resolution with no further edit. Non-EVM homes are allowed ('solana').
+   */
+  surfaceChains?: string[]
+  /** How a holder on THIS chain reaches a surface when there is none locally. */
+  reach?: ('bridge' | 'market')[]
+}
+
 export interface TokenProps {
   pendle?: {
     /** Market address for PT tokens */
@@ -169,6 +340,19 @@ export interface TokenProps {
     tokenType?: 'PT' | 'YT' | 'SY'
     /** Whether the token has expired */
     expired?: boolean
+    /**
+     * Origin chain code (`ETH` / `ARB` / `PLASMA`) of a PT BRIDGED to this
+     * chain, from the contract's own symbol suffix. Present ⇒ no Pendle market
+     * here: tradeable, not mintable or redeemable except back on the origin.
+     */
+    bridgedFrom?: string
+    /**
+     * The origin PT itself — same asset on the issuing chain, where the SY,
+     * YT and market live. Resolved on-chain from the bridged token's LayerZero
+     * peer link (`peers(originEid)` → OFT adapter → `token()`), never from the
+     * symbol. Consumers join yield / maturity / mint surface through it.
+     */
+    origin?: { chainId: string; address: string }
   }
   /**
    * Spectra V2 yield tokenisation — the same instrument family as
@@ -238,6 +422,43 @@ export interface TokenProps {
     /** the token the receipt wraps 1:1 (same chain, lowercase) */
     underlying: string
   }
+  /**
+   * The next hop down — what this contract accounts in and pays redemptions
+   * in (see {@link UnderlyingHop}). Per (chain, address); a bridged mirror's
+   * hop is a `bridge` to a surface chain of the same assetGroup. Absent on a
+   * base token and on a synthetic (those carry `peg` / a terminal instead).
+   * Emitted by the phase-4 walker; phase 0 only declares the shape.
+   */
+  underlying?: UnderlyingHop
+  /**
+   * Where the walk from this token ends (see {@link UnderlyingTerminal}).
+   * A `peg` here is the generalisation of {@link TokenProps.stablecoin} past
+   * USD — `stablecoin` stays and is DERIVED from a `peg` whose `base` is a
+   * fiat, because too many consumers read it.
+   */
+  terminal?: UnderlyingTerminal
+  /**
+   * Shorthand for `terminal` when it is a peg: the one block a synthetic
+   * carries. msETH: `{ base: 'ETH', mechanism: 'cdp-debt' }`; USDe:
+   * `{ base: 'USD', mechanism: 'delta-neutral' }`. Declared per assetGroup
+   * (PEG_DECLARATIONS), never derived.
+   */
+  peg?: { base: string; mechanism: PegMechanism; backing?: string[] }
+  /**
+   * The fold of the walk — the fiat / gas symbol this token's value
+   * denominates in: dsavETH ⇒ 'ETH', PT-sUSDS ⇒ 'USD', wiTRY ⇒ 'TRY'. Never an
+   * identity (`denomination` is the identity: "IS USDC"). Absent when the
+   * terminal is a basket whose legs disagree.
+   */
+  base?: string
+  /**
+   * The canonical token `base` maps to on THIS chain, lowercase (WETH for
+   * 'ETH' on 42161, WBTC / cbBTC by chain for 'BTC'). Absent for fiat bases
+   * and native-only gas bases.
+   */
+  baseToken?: string
+  /** Mint / redeem terms on THIS chain (see {@link EntryTerms}). */
+  entry?: EntryTerms
   /** Real-world-asset classification (tokenized off-chain assets) */
   rwa?: {
     /** coarse, stable class used for filtering */
@@ -380,6 +601,10 @@ export type LstProps = NonNullable<TokenProps['lst']>
 export type RiskProps = NonNullable<TokenProps['risk']>
 /** Stablecoin props shape, derived from TokenProps */
 export type StablecoinProps = NonNullable<TokenProps['stablecoin']>
+/** Peg props shape, derived from TokenProps */
+export type PegProps = NonNullable<TokenProps['peg']>
+/** assetGroup -> peg terminal (chain-independent; the mechanism is a property of the asset) */
+export type PegGroupMap = { [assetGroup: string]: PegProps }
 /** Savings props shape, derived from TokenProps */
 export type SavingsProps = NonNullable<TokenProps['savings']>
 /** chainId -> address(lowercase) -> RWA classification */

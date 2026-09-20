@@ -41,7 +41,22 @@
       "symbol": "USDF",
       "logoURI": "https://tokens.debridge.finance/Logo/100000009/0x2aabea2058b5ac2d339b163c6ab6f2b6d53aabed/small/token-logo.png",
       "assetGroup": "Flow Bridged PYUSD (Flow)::USDF",
-      "currencyId": "Flow Bridged PYUSD (Flow)::USDF"
+      "currencyId": "Flow Bridged PYUSD (Flow)::USDF",
+      "props": {
+        "oft": {
+          "eid": 30336,
+          "routes": [
+            {
+              "contract": "0x2aabea2058b5ac2d339b163c6ab6f2b6d53aabed",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "flow",
+              "approvalRequired": false,
+              "peers": { "1": "0xfa0e06b54986ad96de87a8c56fea76fbd8d493f8" }
+            }
+          ]
+        }
+      }
     },
     "0xd3bf53dac106a0290b0483ecbc89d40fcc961f3e": {
       "chainId": "747",
@@ -85,7 +100,31 @@
       "symbol": "PYUSD0",
       "logoURI": "https://tokens.debridge.finance/Logo/100000009/0x99af3eea856556646c98c8b9b2548fe815240750/small/token-logo.png",
       "assetGroup": "PYUSD0::PYUSD0",
-      "currencyId": "PYUSD0::PYUSD0"
+      "currencyId": "PYUSD0::PYUSD0",
+      "props": {
+        "oft": {
+          "eid": 30336,
+          "routes": [
+            {
+              "contract": "0x26d27d5af2f6f1c14f40013c8619d97aaf015509",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "paypal",
+              "approvalRequired": false,
+              "peers": {
+                "10": "0x4edc2460b0891955e2d11ee3103cd705a6d6288a",
+                "252": "0x26d27d5af2f6f1c14f40013c8619d97aaf015509",
+                "988": "0x26d27d5af2f6f1c14f40013c8619d97aaf015509",
+                "1329": "0x3cd2b89c49d130c08f1d683225b2e5deb63ff876",
+                "2741": "0x3cd2b89c49d130c08f1d683225b2e5deb63ff876",
+                "42161": "0x3cd2b89c49d130c08f1d683225b2e5deb63ff876",
+                "43114": "0x3cd2b89c49d130c08f1d683225b2e5deb63ff876",
+                "98866": "0x3cd2b89c49d130c08f1d683225b2e5deb63ff876"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "747",

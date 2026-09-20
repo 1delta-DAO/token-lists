@@ -53,7 +53,18 @@
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" }
+        "risk": { "score": 5, "source": "default" },
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0xc3eacf0612346366db554c991d7858716db09f58",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "kelpdao"
+            }
+          ]
+        }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -107,7 +118,20 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54751/thumb/usde.jpg?1741337054",
       "assetGroup": "USDE",
       "currencyId": "Bridged USDE (Layerzero)::USDE",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena"
+            }
+          ]
+        }
+      }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "1923",
@@ -135,7 +159,18 @@
       "currencyId": "Bridged WEETH (Layerzero)::WEETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0xa6cb988942610f6731e664379d15ffcfbf282b44",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "etherfi"
+            }
+          ]
+        }
       }
     },
     "0x2826d136f5630ada89c1678b64a61620aab77aea": {
@@ -186,7 +221,20 @@
       "symbol": "WGC",
       "logoURI": "https://assets.coingecko.com/coins/images/37966/thumb/COIN_200x200.png?1716778831",
       "assetGroup": "Wild Goat Coin::WGC",
-      "currencyId": "Wild Goat Coin::WGC"
+      "currencyId": "Wild Goat Coin::WGC",
+      "props": {
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "wildgoatcoin"
+            }
+          ]
+        }
+      }
     },
     "0x9ab96a4668456896d45c301bc3a15cee76aa7b8d": {
       "chainId": "1923",
@@ -253,7 +301,20 @@
       "symbol": "ENA",
       "logoURI": "https://static.debank.com/image/frax_token/logo_url/0x58538e6a46e07434d7e7375bc268d3cb839c0133/20d567bc301b43d0d2131731f7ac4736.png",
       "assetGroup": "ENA::ENA",
-      "currencyId": "ENA::ENA"
+      "currencyId": "ENA::ENA",
+      "props": {
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena"
+            }
+          ]
+        }
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "1923",
@@ -264,7 +325,20 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x2260fac5e5542a773aa44fbcfedf7c193bc2c599/d3c52e7c7449afa8bd4fad1c93f50d93.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+              "kind": "native",
+              "sharedDecimals": 8,
+              "oapp": "wbtc"
+            }
+          ]
+        }
+      }
     },
     "0x102d758f688a4c1c5a80b116bd945d4455460282": {
       "chainId": "1923",
@@ -285,7 +359,20 @@
       "symbol": "EUL",
       "logoURI": "https://assets.coingecko.com/coins/images/26149/thumb/Coingecko_logo_%281%29.png?1706026067",
       "assetGroup": "EUL",
-      "currencyId": "Euler::EUL"
+      "currencyId": "Euler::EUL",
+      "props": {
+        "oft": {
+          "eid": 30335,
+          "routes": [
+            {
+              "contract": "0xd0148ddb69f4d8182ef863d6f81ed6519d8c83a2",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "euler"
+            }
+          ]
+        }
+      }
     },
     "0x49c077b74292aa8f589d39034bf9c1ed1825a608": {
       "chainId": "1923",

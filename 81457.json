@@ -55,7 +55,23 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "etherfi",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xcd2eb13d6831d4602d80e5db9230a57596cdca63",
+                "48900": "0x88a19f30e1254b37b66899893ab1f73ad82bd2c3"
+              }
+            }
+          ]
+        }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -69,7 +85,32 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xbbc424e58ed38dd911309611ae2d7a23014bd960",
+                "10": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "56": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "137": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "146": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "196": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "1329": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "8453": "0x192e0c7cc9b263d93fa6d472de47bbefe1fb12ba",
+                "42161": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "43114": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+                "57073": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45"
+              }
+            }
+          ]
+        }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -83,7 +124,32 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x1c1649a38f4a3c5a0c4a24070f688c525ab7d6e6",
+                "10": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "56": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "137": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "146": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "196": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "1329": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "8453": "0x7eb8d1e4e2d0c8b9beda7a97b305cf49f3eee8da",
+                "42161": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "43114": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050",
+                "57073": "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050"
+              }
+            }
+          ]
+        }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -111,7 +177,20 @@
       "currencyId": "KelpDAO Bridged rsETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" }
+        "risk": { "score": 5, "source": "default" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "kelpdao",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd": {
@@ -393,7 +472,25 @@
       "symbol": "CYBRO",
       "logoURI": "https://assets.coingecko.com/coins/images/36941/thumb/3xhsAKWd_400x400.jpg?1712853902",
       "assetGroup": "CYBRO",
-      "currencyId": "CYBRO::CYBRO"
+      "currencyId": "CYBRO::CYBRO",
+      "props": {
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x7bb6cac7e47e8149c4ef62b759ee8b2e56c0304f",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "cybro",
+              "approvalRequired": true,
+              "peers": {
+                "1": "0xd58826d2c0babf1a60d8b508160b52e9c19aff07",
+                "56": "0xa9972b1fac35fdd8cbdbaa315a002b2ad91d2ad6"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x7135b32e9903bdb4e19a8b1d22fc2038964b8451": {
       "chainId": "81457",
@@ -886,7 +983,27 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53060/thumb/frax.jpg?1735171829",
       "assetGroup": "FRAX",
       "currencyId": "Bridged FRAX::FRAX",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "FRAX" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "FRAX",
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x909dbde1ebe906af95660033e478d59efe831fed",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x909dbde1ebe906af95660033e478d59efe831fed",
+                "1088": "0x909dbde1ebe906af95660033e478d59efe831fed",
+                "8453": "0x909dbde1ebe906af95660033e478d59efe831fed"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xf53c57338a304558709ef69fe53b518c5f62733e": {
       "chainId": "81457",
@@ -960,7 +1077,31 @@
       "symbol": "MAHA",
       "logoURI": "https://assets.coingecko.com/coins/images/13404/thumb/black.png?1724679606",
       "assetGroup": "Maha::MAHA",
-      "currencyId": "Maha::MAHA"
+      "currencyId": "Maha::MAHA",
+      "props": {
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x6a661312938d22a2a0e27f585073e4406903990a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "maha",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x3a7b708e71ff72506afa674ea14881e39ce9fde2",
+                "10": "0x6a661312938d22a2a0e27f585073e4406903990a",
+                "56": "0x6a661312938d22a2a0e27f585073e4406903990a",
+                "196": "0xbc3186b68d1a7b771288122386288aca9c1561a9",
+                "8453": "0x554bba833518793056cf105e66abea330672c0de",
+                "42161": "0xdd2f41340a1ffcf1c22c7a8be4e525d7a2de642b",
+                "59144": "0x6a661312938d22a2a0e27f585073e4406903990a",
+                "534352": "0x6a661312938d22a2a0e27f585073e4406903990a"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xbb4e01b8940e8e2b3a95ced7941969d033786ff7": {
       "chainId": "81457",
@@ -1964,7 +2105,33 @@
       "symbol": "YNETHX",
       "logoURI": "https://assets.coingecko.com/coins/images/51623/thumb/ynETHx.png?1731659494",
       "assetGroup": "ynETH MAX::YNETHX",
-      "currencyId": "ynETH MAX::YNETHX"
+      "currencyId": "ynETH MAX::YNETHX",
+      "props": {
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "yieldnest",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x79a5959cc1cbe4d08e7800bd16759d82e64169a1",
+                "10": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "56": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "252": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "5000": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "8453": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "42161": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "80094": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "167000": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "534352": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x30c7b9f4cd589203d250ad165651e82e338cb5bb": {
       "chainId": "81457",
@@ -2281,7 +2448,26 @@
       "symbol": "sFRAX",
       "logoURI": "https://static.debank.com/image/bsc_token/logo_url/0xa63f56985f9c7f3bc9ffc5685535649e0c1a55f3/299b936c860a0a2efc2ce3216b855871.png",
       "assetGroup": "Staked FRAX::sFRAX",
-      "currencyId": "Staked FRAX::sFRAX"
+      "currencyId": "Staked FRAX::sFRAX",
+      "props": {
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0xe4796ccb6bb5de2290c417ac337f2b66ca2e770e",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xe4796ccb6bb5de2290c417ac337f2b66ca2e770e",
+                "1088": "0xe4796ccb6bb5de2290c417ac337f2b66ca2e770e",
+                "8453": "0xe4796ccb6bb5de2290c417ac337f2b66ca2e770e"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x95f513a9401cfea56ae7824ab4992313566fa9f1": {
       "chainId": "81457",
@@ -2331,7 +2517,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68281/thumb/usde.jpg?1755239722",
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
+            }
+          ]
+        }
+      }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
       "chainId": "81457",
@@ -2341,7 +2542,22 @@
       "symbol": "ENA",
       "logoURI": "https://ethena.fi/shared/ecosystem/ENA.svg",
       "assetGroup": "ENA::ENA",
-      "currencyId": "ENA::ENA"
+      "currencyId": "ENA::ENA",
+      "props": {
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
+            }
+          ]
+        }
+      }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
       "chainId": "81457",
@@ -2354,7 +2570,32 @@
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "frxUSD", "base": "USD" }
+        "savings": { "underlying": "frxUSD", "base": "USD" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x7311cea93ccf5f4f7b789ee31eba5d9b9290e126",
+                "10": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "56": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "137": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "146": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "196": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "1329": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "8453": "0x91a3f8a8d7a881fbdfcfecd7a2dc92a46dcfa14e",
+                "42161": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "43114": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0",
+                "57073": "0x5bff88ca1442c2496f7e475e9e7786383bc070c0"
+              }
+            }
+          ]
+        }
       }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
@@ -2366,7 +2607,34 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0xcacd6fd266af91b8aed52accc382b4e165586e29/7610ebe75cb08ff21ee6dfb7e1592e25.png",
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x566a6442a5a6e9895b9dca97cc7879d632c6e4b0",
+                "10": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "56": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "137": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "146": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "196": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "1329": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "8453": "0xe5020a6d073a794b6e7f05678707de47986fb0b6",
+                "42161": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "43114": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+                "57073": "0x80eede496655fb9047dd39d9f418d5483ed600df"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x93202ec683288a9ea75bb829c6bacfb2bfea9013": {
       "chainId": "81457",
@@ -2389,7 +2657,20 @@
       "currencyId": "sUSDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
+            }
+          ]
+        }
       }
     },
     "0x4b246c4c41c4e5ec1d4a8453c313cbc57bf0993a": {
@@ -2500,7 +2781,33 @@
       "symbol": "WFRAX",
       "logoURI": "https://assets.coingecko.com/coins/images/55432/thumb/wfrax_64.png?1745993624",
       "assetGroup": "Wrapped FRAX::WFRAX",
-      "currencyId": "Wrapped FRAX::WFRAX"
+      "currencyId": "Wrapped FRAX::WFRAX",
+      "props": {
+        "oft": {
+          "eid": 30243,
+          "routes": [
+            {
+              "contract": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {
+                "10": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "56": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "137": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "146": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "196": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "1329": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "8453": "0x0ceac003b0d2479bebec9f4b2ebad0a803759bbf",
+                "42161": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "43114": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+                "57073": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "81457",
