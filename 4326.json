@@ -39,7 +39,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66163/thumb/wsrUSD.png?1748500965",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
       "currencyId": "Wrapped Savings rUSD::WSRUSD",
-      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "oft": {
+          "eid": 30398,
+          "routes": [
+            {
+              "contract": "0x4809010926aec940b550d34a46a52739f996d75d",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
+            }
+          ]
+        }
+      }
     },
     "0xfafddbb3fc7688494971a79cc65dca3ef82079e7": {
       "chainId": "4326",
@@ -52,7 +67,24 @@
       "currencyId": "MegaUSD::USDM",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "oft": {
+          "eid": 30398,
+          "routes": [
+            {
+              "contract": "0xfafddbb3fc7688494971a79cc65dca3ef82079e7",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "megaeth",
+              "approvalRequired": false,
+              "peers": { "1": "0xec2af1c8b110a61fd9c3fa6a554a031ca9943926" }
+            }
+          ]
+        }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -88,7 +120,42 @@
       "symbol": "USDT0",
       "logoURI": "https://assets.coingecko.com/coins/images/53705/thumb/usdt0.jpg?1737086183",
       "assetGroup": "USDT0::USDT0",
-      "currencyId": "USDT0::USDT0"
+      "currencyId": "USDT0::USDT0",
+      "props": {
+        "oft": {
+          "eid": 30398,
+          "routes": [
+            {
+              "contract": "0x9151434b16b9763660705744891fa906f660ecc5",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "usdt0",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
+                "10": "0xf03b4d9ac1d5d1e7c4cef54c2a313b9fe051a0ad",
+                "14": "0x567287d2a9829215a37e3b88843d32f9221e7588",
+                "30": "0x1a594d5d5d1c426281c1064b07f23f57b2716b61",
+                "130": "0xc07be8994d035631c36fb4a89c918cefb2f03ec3",
+                "137": "0x6ba10300f0dc58b7a1e4c0e41f5dabb7d7829e13",
+                "143": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "196": "0x94bcca6bdfd6a61817ab0e960bfede4984505554",
+                "988": "0xedaba024be4d87974d5ab11c6dd586963cccb027",
+                "999": "0x904861a24f30ec96ea7cfc3be9ea4b476d237e98",
+                "1030": "0xc57efa1c7113d98bda6f9f249471704ece5dd84a",
+                "1329": "0x56fe74a2e3b484b921c447357203431a3485cc60",
+                "2818": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+                "4217": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+                "5000": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+                "9745": "0x02ca37966753bdddf11216b73b16c1de756a7cf9",
+                "42161": "0x14e4a1b13bf7f943c8ff7c51fb60fa964a298d92",
+                "57073": "0x1cb6de532588fca4a21b7209de7c456af8434a65",
+                "80094": "0x3dc96399109df5ceb2c226664a086140bd0379cb"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x551dfe38994ec53c9e7e18084d73893225eea3bf": {
       "chainId": "4326",
@@ -170,7 +237,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33613/thumb/usde.png?1733810059",
       "assetGroup": "USDE",
       "currencyId": "Ethena USDe::USDE",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30398,
+          "routes": [
+            {
+              "contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
+            }
+          ]
+        }
+      }
     },
     "0x09601a65e7de7bc8a19813d263dd9e98bfdc3c57": {
       "chainId": "4326",
@@ -217,7 +299,28 @@
       "currencyId": "Cap USD::CUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "oft": {
+          "eid": 30398,
+          "routes": [
+            {
+              "contract": "0xcccc62962d17b8914c62d74ffb843d73b2a3cccc",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "cap",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xa62571ebdffabc3051a2e5b9e1f57b23d830c8fd",
+                "4217": "0xbd12e50bfaa25735d074dbfdcf73208b9ccd2e43",
+                "747474": "0xcccc62962d17b8914c62d74ffb843d73b2a3cccc"
+              }
+            }
+          ]
+        }
       }
     },
     "0x88887be419578051ff9f4eb6c858a951921d8888": {
@@ -231,7 +334,24 @@
       "currencyId": "Staked Cap USD::stcUSD",
       "props": {
         "savings": { "underlying": "cUSD", "base": "USD" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30398,
+          "routes": [
+            {
+              "contract": "0x88887be419578051ff9f4eb6c858a951921d8888",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "cap",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x983aeaaa0d0426839158435c43725ea7f45d4137",
+                "4217": "0x4eec5b8fdfbcdd45dfb29f666d9c34ad38c7afa5",
+                "747474": "0x88887be419578051ff9f4eb6c858a951921d8888"
+              }
+            }
+          ]
+        }
       }
     },
     "0x0000000000000000000000000000000000000000": {

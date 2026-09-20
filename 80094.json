@@ -974,6 +974,23 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xf0e9f6d9ba5d1b3f76e0f82f9dcdb9ebeef4b4da",
+                "8453": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34",
+                "98866": "0x09d4214c03d01f49544c0448dbe3a27f768f2b34"
+              }
+            }
+          ]
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -987,7 +1004,20 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "etherfi",
+              "approvalRequired": false,
+              "peers": { "1": "0xcd2eb13d6831d4602d80e5db9230a57596cdca63" }
+            }
+          ]
+        }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -1000,7 +1030,20 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x630e12d53d4e041b8c5451ad035ea841e08391d7",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "lombard",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0x850cdf416668210ed0c36bfff5d21921c7ada3b8": {
@@ -1014,7 +1057,28 @@
       "currencyId": "rswETH::rswETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
-        "risk": { "score": 3, "category": "LRT", "source": "whitelist" }
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x850cdf416668210ed0c36bfff5d21921c7ada3b8",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "swell-network",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x1486d39646cdee84619bd05997319545a8575079",
+                "1923": "0x18d33689ae5d02649a859a1cf16c9f0563975258",
+                "8453": "0x850cdf416668210ed0c36bfff5d21921c7ada3b8",
+                "42161": "0xb1fe27b32ffb5ce54e272c096547f1e86c19e72f",
+                "48900": "0xd8b29106d4cebad087c30b10c0e41baa3a9ea703",
+                "59144": "0xb1fe27b32ffb5ce54e272c096547f1e86c19e72f",
+                "534352": "0x89f17ab70cafb1468d633056161573efefea0713"
+              }
+            }
+          ]
+        }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -1027,7 +1091,20 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "kelpdao",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -1053,7 +1130,20 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0xec901da9c68e90798bbbb74c11406a32a70652c3": {
@@ -1092,7 +1182,20 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x94dabd84cd36c4d364fcdd5cdabf41e73dbc99e6",
+              "kind": "adapter",
+              "sharedDecimals": 8,
+              "oapp": "solv-protocol",
+              "approvalRequired": true,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
@@ -1118,7 +1221,23 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xbce9988376c6b9c0c035bdbc9060568031d51130",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "lorenzo",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xbce9988376c6b9c0c035bdbc9060568031d51130",
+                "56": "0xbce9988376c6b9c0c035bdbc9060568031d51130"
+              }
+            }
+          ]
+        }
       }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
@@ -1130,7 +1249,38 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x0555E30da8f98308EdB960aa94C0Db47230d2B9c/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+              "kind": "native",
+              "sharedDecimals": 8,
+              "oapp": "wbtc",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "10": "0xc3f854b2970f8727d28527ece33176fac67fef48",
+                "40": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "56": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "130": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "143": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "146": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "747": "0x717dae2baf7656be9a9b01dee31d571a9d4c9579",
+                "999": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "1329": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "1868": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "1923": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "8453": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "43114": "0x0555e30da8f98308edb960aa94c0db47230d2b9c",
+                "60808": "0x0555e30da8f98308edb960aa94c0db47230d2b9c"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590": {
       "chainId": "80094",
@@ -1172,6 +1322,19 @@
           "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
+        },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x688e72142674041f8f6af4c808a4045ca1d6ac82",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "byusd",
+              "approvalRequired": false,
+              "peers": { "1": "0x688e72142674041f8f6af4c808a4045ca1d6ac82" }
+            }
+          ]
         }
       }
     },
@@ -1224,7 +1387,42 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x779Ded0c9e1022225f8E0630b35a9b54bE713736/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x3dc96399109df5ceb2c226664a086140bd0379cb",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "usdt0",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
+                "10": "0xf03b4d9ac1d5d1e7c4cef54c2a313b9fe051a0ad",
+                "14": "0x567287d2a9829215a37e3b88843d32f9221e7588",
+                "30": "0x1a594d5d5d1c426281c1064b07f23f57b2716b61",
+                "130": "0xc07be8994d035631c36fb4a89c918cefb2f03ec3",
+                "137": "0x6ba10300f0dc58b7a1e4c0e41f5dabb7d7829e13",
+                "143": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "196": "0x94bcca6bdfd6a61817ab0e960bfede4984505554",
+                "988": "0xedaba024be4d87974d5ab11c6dd586963cccb027",
+                "999": "0x904861a24f30ec96ea7cfc3be9ea4b476d237e98",
+                "1030": "0xc57efa1c7113d98bda6f9f249471704ece5dd84a",
+                "1329": "0x56fe74a2e3b484b921c447357203431a3485cc60",
+                "2818": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+                "4217": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+                "4326": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "5000": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+                "9745": "0x02ca37966753bdddf11216b73b16c1de756a7cf9",
+                "42161": "0x14e4a1b13bf7f943c8ff7c51fb60fa964a298d92",
+                "57073": "0x1cb6de532588fca4a21b7209de7c456af8434a65"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x1ce0a25d13ce4d52071ae7e02cf1f6606f4c79d3": {
       "chainId": "80094",
@@ -1273,7 +1471,22 @@
       "symbol": "SolvBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SolvBTC.webp",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xb12979ff302ac903849948037a51792cf7186e8e",
+              "kind": "adapter",
+              "sharedDecimals": 8,
+              "oapp": "solv-protocol",
+              "approvalRequired": true,
+              "peers": {}
+            }
+          ]
+        }
+      }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
       "chainId": "80094",
@@ -1284,7 +1497,25 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0xff12470a969Dd362EB6595FFB44C82c959Fe9ACc/logo.png",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xff12470a969dd362eb6595ffb44c82c959fe9acc",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "avalon",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x8a60e489004ca22d775c5f2c657598278d17d9c2",
+                "56": "0x9356086146be5158e98ad827e21b5cf944699894"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f": {
       "chainId": "80094",
@@ -1294,7 +1525,25 @@
       "symbol": "sUSDa",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "avalon",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x2b66aade1e9c062ff411bd47c44e0ad696d43bd9",
+                "56": "0x73a325103935b0b5e7aa3aca6dba74ad22f82b03"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
       "chainId": "80094",
@@ -1305,7 +1554,22 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x5d3a1Ff2b6BAb83b63cd9AD0787074081a52ef34/logo.png",
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
+            }
+          ]
+        }
+      }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "80094",
@@ -1318,7 +1582,20 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
+            }
+          ]
+        }
       }
     },
     "0xc3827a4bc8224ee2d116637023b124ced6db6e90": {
@@ -1329,7 +1606,22 @@
       "symbol": "uniBTC",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0xC3827A4BC8224ee2D116637023b124CED6db6e90/logo.png",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xdf1925b7a0f56a3ed7f74be2a813ae8bba756e59",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "bedrock",
+              "approvalRequired": true,
+              "peers": { "1": "0x50fa1411201e2ac0361fb893e903b80f141b8190" }
+            }
+          ]
+        }
+      }
     },
     "0xe85411c030fb32a9d8b14bbbc6cb19417391f711": {
       "chainId": "80094",
@@ -1380,7 +1672,25 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x5B82028cfc477C4E7ddA7FF33d59A23FA7Be002a/logo.png",
       "assetGroup": "MIM",
       "currencyId": "Magic Internet Money::MIM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x5b82028cfc477c4e7dda7ff33d59a23fa7be002a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "abracadabra-money",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xe5169f892000fc3bed5660f62c67faee7f97718b",
+                "999": "0xe33ec16788d0cdc1c707553cb7c5bcc93ef0a779"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x8f06863df59a042bcc2c86cc8ca1709ec1ee316b": {
       "chainId": "80094",
@@ -1594,7 +1904,33 @@
       "symbol": "YNETHX",
       "logoURI": "https://assets.coingecko.com/coins/images/51623/thumb/ynETHx.png?1731659494",
       "assetGroup": "ynETH MAX::YNETHX",
-      "currencyId": "ynETH MAX::YNETHX"
+      "currencyId": "ynETH MAX::YNETHX",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "yieldnest",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x79a5959cc1cbe4d08e7800bd16759d82e64169a1",
+                "10": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "56": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "252": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "5000": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "8453": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "42161": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "81457": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "167000": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "534352": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xbaadcc2962417c01af99fb2b7c75706b9bd6babe": {
       "chainId": "80094",
@@ -1676,7 +2012,20 @@
       "currencyId": "Reservoir srUSD::SRUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "rUSD", "base": "USD" }
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x5475611dffb8ef4d697ae39df9395513b6e947d7",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": { "1": "0x316cd39632cac4f4cdfc21757c4500fe12f64514" }
+            }
+          ]
+        }
       }
     },
     "0x147c9a7f5265d7ca9a671c3817b212a0cf88856e": {
@@ -1767,7 +2116,52 @@
       "symbol": "WGC",
       "logoURI": "https://assets.coingecko.com/coins/images/37966/thumb/COIN_200x200.png?1716778831",
       "assetGroup": "Wild Goat Coin::WGC",
-      "currencyId": "Wild Goat Coin::WGC"
+      "currencyId": "Wild Goat Coin::WGC",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "wildgoatcoin",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "10": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "56": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "130": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "137": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "143": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "146": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "196": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "204": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "324": "0x05b65997ff7cb7976b43000ad376f91108b30d40",
+                "480": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "999": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "1135": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "1329": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "1868": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "1923": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "5000": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "8217": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "8453": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "9745": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "34443": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "42161": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "42220": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "43114": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "57073": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "59144": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "60808": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "534352": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "7777777": "0x3d63825b0d8669307366e6c8202f656b9e91d368"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xcc6a16bcfda7d0ebe168f69ef7b946e96a90e67f": {
       "chainId": "80094",
@@ -1807,7 +2201,22 @@
       "symbol": "LAIR",
       "logoURI": "https://assets.coingecko.com/coins/images/55181/thumb/Lair_token.png?1744616096",
       "assetGroup": "Lair::LAIR",
-      "currencyId": "Lair::LAIR"
+      "currencyId": "Lair::LAIR",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xeeed1e4d748e80bea27f03ea4143374f9effc2e2",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "lair-finance",
+              "approvalRequired": false,
+              "peers": { "8217": "0x17d9939af659dc3fd1898c0d783ed07347de345f" }
+            }
+          ]
+        }
+      }
     },
     "0xd352dc6e5f0c45e2f2b38eb5565eb286a1ea4087": {
       "chainId": "80094",
@@ -1917,7 +2326,20 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC.bera::pumpBTC.bera",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e",
+              "kind": "native",
+              "sharedDecimals": 8,
+              "oapp": "pumpbtc",
+              "approvalRequired": false,
+              "peers": { "1": "0xadc9c900b05f39f48bb6f402a1bae60929f4f9a8" }
+            }
+          ]
+        }
       }
     },
     "0xe946dd7d03f6f5c440f68c84808ca88d26475fc5": {
@@ -1977,7 +2399,26 @@
       "symbol": "PENDLE",
       "logoURI": "https://assets.coingecko.com/coins/images/15069/thumb/Pendle_Logo_Normal-03.png?1696514728",
       "assetGroup": "PENDLE",
-      "currencyId": "Pendle::PENDLE"
+      "currencyId": "Pendle::PENDLE",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xff9c599d51c407a45d631c6e89cb047efb88aef6",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "pendle",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xd7e67c97cc48253b28737ec3981b0a7ad6d7e0e4",
+                "999": "0xd6eb81136884713e843936843e286fd2a85a205a",
+                "9745": "0x17bac5f906c9a0282ac06a59958d85796c831f24"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x0000382fbb422b4f593931fc6f2d25cc16600000": {
       "chainId": "80094",
@@ -2004,7 +2445,29 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x2492d0006411af6c8bbb1c8afc1b0197350a79e9",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "resolv",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xd2ee2776f34ef4e7325745b06e6d464b08d4be0e",
+                "56": "0x2492d0006411af6c8bbb1c8afc1b0197350a79e9",
+                "239": "0xb1b385542b6e80f77b94393ba8342c3af699f15c",
+                "999": "0x0ad339d66bf4aed5ce31c64bc37b3244b6394a77",
+                "1868": "0xb1b385542b6e80f77b94393ba8342c3af699f15c",
+                "8453": "0x35e5db674d8e93a03d814fa0ada70731efe8a4b9",
+                "9745": "0xb1b385542b6e80f77b94393ba8342c3af699f15c",
+                "42161": "0x2492d0006411af6c8bbb1c8afc1b0197350a79e9"
+              }
+            }
+          ]
+        }
       }
     },
     "0x40a8d9efe6a2c6c9d193cc0a4476767748e68133": {
@@ -2064,7 +2527,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66163/thumb/wsrUSD.png?1748500965",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
       "currencyId": "Wrapped Savings rUSD::WSRUSD",
-      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x316cd39632cac4f4cdfc21757c4500fe12f64514",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
+            }
+          ]
+        }
+      }
     },
     "0x6698ede14709a9dd8379744cc2d28f276e3d2eac": {
       "chainId": "80094",
@@ -2094,7 +2572,22 @@
       "symbol": "WFRAX",
       "logoURI": "https://assets.coingecko.com/coins/images/55432/thumb/wfrax_64.png?1745993624",
       "assetGroup": "Wrapped FRAX::WFRAX",
-      "currencyId": "Wrapped FRAX::WFRAX"
+      "currencyId": "Wrapped FRAX::WFRAX",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x64445f0aecc51e94ad52d8ac56b7190e764e561a",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
+      }
     },
     "0x1b25ca174c158440621ff96e4b1262cb5cc8942f": {
       "chainId": "80094",
@@ -2115,7 +2608,22 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53963/thumb/frxUSD.png?1737792154",
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x80eede496655fb9047dd39d9f418d5483ed600df",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "frax-finance",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
+      }
     },
     "0x118d2ceee9785eaf70c15cd74cd84c9f8c3eec9a": {
       "chainId": "80094",
@@ -2137,7 +2645,33 @@
       "assetGroup": "Resolv RLP::RLP",
       "currencyId": "Resolv RLP::RLP",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
+        },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x35e5db674d8e93a03d814fa0ada70731efe8a4b9",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "resolv",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x234c908e749961d0329a0ed5916d55a99d1ad06c",
+                "56": "0x35e5db674d8e93a03d814fa0ada70731efe8a4b9",
+                "239": "0x35533f54740f1f1aa4179e57ba37039dfa16868b",
+                "999": "0x0a3d8466f5de586fa5f6de117301e2f90bcc5c48",
+                "1868": "0x35533f54740f1f1aa4179e57ba37039dfa16868b",
+                "8453": "0xc31389794ffac23331e0d9f611b7953f90aa5fdc",
+                "9745": "0x35533f54740f1f1aa4179e57ba37039dfa16868b",
+                "42161": "0x35e5db674d8e93a03d814fa0ada70731efe8a4b9"
+              }
+            }
+          ]
+        }
       }
     },
     "0x2a5fc05f71cfc54ddcad19457cee79e3aaf415c9": {
@@ -2395,7 +2929,29 @@
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
-        "savings": { "underlying": "USR", "base": "USD" }
+        "savings": { "underlying": "USR", "base": "USD" },
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xcc601605dc5011616934b6fdac8a14d51b791a94",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "resolv",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xab17c1fe647c37ceb9b96d1c27dd189bf8451978",
+                "56": "0x4254813524695def4163a169e901f3d7a1a55429",
+                "239": "0x2a52b289ba68bbd02676640aa9f605700c9e5699",
+                "999": "0x46c1c168ca597b9e5423aa7081a0dce782caeaab",
+                "1868": "0x2a52b289ba68bbd02676640aa9f605700c9e5699",
+                "8453": "0xb67675158b412d53fe6b68946483ba920b135ba1",
+                "9745": "0x2a52b289ba68bbd02676640aa9f605700c9e5699",
+                "42161": "0x66cfbd79257dc5217903a36293120282548e2254"
+              }
+            }
+          ]
+        }
       }
     },
     "0x0f6f337b09cb5131cf0ce9df3beb295b8e728f3b": {
@@ -2416,7 +2972,22 @@
       "symbol": "EUL",
       "logoURI": "https://assets.coingecko.com/coins/images/26149/thumb/Coingecko_logo_%281%29.png?1706026067",
       "assetGroup": "EUL",
-      "currencyId": "Euler::EUL"
+      "currencyId": "Euler::EUL",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xc1d31b2812cc920341349a717d14badfb1bcab11",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "euler",
+              "approvalRequired": true,
+              "peers": { "1": "0x4d7e09f73843bd4735aaf7a74b6d877bac75a531" }
+            }
+          ]
+        }
+      }
     },
     "0x71356761fd23e77e5d78c37c70fe78229ca75a72": {
       "chainId": "80094",
@@ -2426,7 +2997,35 @@
       "symbol": "DAM",
       "logoURI": "https://assets.coingecko.com/coins/images/68267/thumb/dam.png?1755228740",
       "assetGroup": "Reservoir::DAM",
-      "currencyId": "Reservoir::DAM"
+      "currencyId": "Reservoir::DAM",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0x71356761fd23e77e5d78c37c70fe78229ca75a72",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "reservoir",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x40a341b76a766c56f54985285987dfe52fea237a",
+                "56": "0xf9ca3fe094212ffa705742d3626a8ab96aababf8",
+                "130": "0x79187c0894435715ee9d1c68575ac35a6e56f526",
+                "146": "0x147e5189b14b688eb69c5d877622e47d9839d37b",
+                "480": "0x79187c0894435715ee9d1c68575ac35a6e56f526",
+                "999": "0xc6eab56426ae6e0dfe72ec1ce2aaf73dae0e4ff4",
+                "1329": "0x866d66f64fb81461903e1e38d998e747ecf35e78",
+                "8453": "0x71356761fd23e77e5d78c37c70fe78229ca75a72",
+                "42161": "0x6c19e25bd34d063829dd05e2a5fae165ddf2c8dd",
+                "43114": "0xf9ca3fe094212ffa705742d3626a8ab96aababf8",
+                "98866": "0xf9aa0fdfa7c8b40e844a09b0e6f0260df120c2e8",
+                "747474": "0x866d66f64fb81461903e1e38d998e747ecf35e78"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x5bad2b7a0a2eee88a4ef05d5470cdedb0ff948ea": {
       "chainId": "80094",
@@ -2466,7 +3065,22 @@
       "symbol": "IR",
       "logoURI": "https://assets.coingecko.com/coins/images/71127/thumb/infrared_finance.png?1765894946",
       "assetGroup": "Infrared Finance::IR",
-      "currencyId": "Infrared Finance::IR"
+      "currencyId": "Infrared Finance::IR",
+      "props": {
+        "oft": {
+          "eid": 30362,
+          "routes": [
+            {
+              "contract": "0xfd0fa49f8aa1d61da390e10ead23c650b0f9c2b5",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "infrared",
+              "approvalRequired": true,
+              "peers": { "56": "0xace9de5af92eb82a97a5973b00eff85024bdcb39" }
+            }
+          ]
+        }
+      }
     },
     "0x59a61b8d3064a51a95a5d6393c03e2152b1a2770": {
       "chainId": "80094",

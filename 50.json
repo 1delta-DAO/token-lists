@@ -250,7 +250,27 @@
       "logoURI": "https://assets.coingecko.com/coins/images/55355/thumb/Prime_Numbers_Icon_%281%29.png?1745589445",
       "assetGroup": "PrimeFi::PRFI",
       "currencyId": "PrimeFi::PRFI",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30365,
+          "routes": [
+            {
+              "contract": "0x81b244d0be055ef3bef1b09b7826cc2b108b2cbd",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "primefi",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x7bbcf1b600565ae023a1806ef637af4739de3255",
+                "999": "0x7bbcf1b600565ae023a1806ef637af4739de3255",
+                "8453": "0x7bbcf1b600565ae023a1806ef637af4739de3255",
+                "42161": "0x7bbcf1b600565ae023a1806ef637af4739de3255"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xcc0587aebda397146cc828b445db130a94486e74": {
       "chainId": "50",
@@ -496,7 +516,22 @@
       "symbol": "GAINS",
       "logoURI": "https://assets.coingecko.com/coins/images/14681/thumb/200x200.png?1696514354",
       "assetGroup": "GAINS",
-      "currencyId": "Gains::GAINS"
+      "currencyId": "Gains::GAINS",
+      "props": {
+        "oft": {
+          "eid": 30365,
+          "routes": [
+            {
+              "contract": "0xd9b312d77bc7bed9b9cecb56636300bed4fe5ce9",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "gains-associates",
+              "approvalRequired": false,
+              "peers": { "1": "0x7a209cdf97d0d86d6ac4973b97c90dcaee77e45a" }
+            }
+          ]
+        }
+      }
     },
     "0x3d8eadb739d1ef95dd53d718e4810721837c69c1": {
       "chainId": "50",

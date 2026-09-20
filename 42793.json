@@ -40,7 +40,20 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "oft": {
+          "eid": 30292,
+          "routes": [
+            {
+              "contract": "0xc832183d4d5fc5831daac892a93dbbfd798034e3",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "lombard",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0x9121b153bbcf8c23f20ee43b494f08760b91ad64": {
@@ -65,7 +78,25 @@
       "props": {
         "wnative": true,
         "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
-        "denomination": "XTZ"
+        "denomination": "XTZ",
+        "oft": {
+          "eid": 30292,
+          "routes": [
+            {
+              "contract": "0xc9b53ab2679f573e480d01e0f49e2b5cfb7a3eab",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "wxtz",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xc9b53ab2679f573e480d01e0f49e2b5cfb7a3eab",
+                "56": "0x91f9cc2649ac70a071602cade9b0c1a5868af51d",
+                "8453": "0x91f9cc2649ac70a071602cade9b0c1a5868af51d",
+                "42161": "0x7424f00845777a06e21f0bd8873f814a8a814b2d"
+              }
+            }
+          ]
+        }
       }
     },
     "0x2c03058c8afc06713be23e58d2febc8337dbfe6a": {
@@ -172,7 +203,22 @@
       "symbol": "CNDY",
       "logoURI": "https://static.debank.com/image/ethlink_token/logo_url/0x6b43732a9ae9f8654d496c0a075aa4aa43057a0b/f05befb1cb616d84b999d7096f266e50.png",
       "assetGroup": "Sugarverse::CNDY",
-      "currencyId": "Sugarverse::CNDY"
+      "currencyId": "Sugarverse::CNDY",
+      "props": {
+        "oft": {
+          "eid": 30292,
+          "routes": [
+            {
+              "contract": "0x6b43732a9ae9f8654d496c0a075aa4aa43057a0b",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "sugarverse",
+              "approvalRequired": false,
+              "peers": { "42161": "0x6b43732a9ae9f8654d496c0a075aa4aa43057a0b" }
+            }
+          ]
+        }
+      }
     },
     "0x79052ab3c166d4899a1e0dd033ac3b379af0b1fd": {
       "chainId": "42793",

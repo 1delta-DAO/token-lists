@@ -100,7 +100,20 @@
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" }
+        "risk": { "score": 5, "source": "default" },
+        "oft": {
+          "eid": 30329,
+          "routes": [
+            {
+              "contract": "0xc3eacf0612346366db554c991d7858716db09f58",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "kelpdao",
+              "approvalRequired": false,
+              "peers": {}
+            }
+          ]
+        }
       }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
@@ -194,7 +207,29 @@
       "logoURI": "https://raw.githubusercontent.com/hemilabs/token-list/master/src/logos/hemibtc.svg",
       "assetGroup": "HEMIBTC",
       "currencyId": "Hemi Bitcoin::hemiBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30329,
+          "routes": [
+            {
+              "contract": "0xdefa4a253a0ec96a2e6d74a409b3b348924bf390",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "hemi",
+              "approvalRequired": true,
+              "peers": {
+                "1": "0x06ea695b91700071b161a434fed42d1dcbad9f00",
+                "10": "0xb5259c05764468c33c9c36e327caad020a8e5fe1",
+                "56": "0x64b5bb3b7ef0267019fee5b826c60cb9b7609373",
+                "143": "0x4f2acd70a590736bb6185a7aab503971e61bd83e",
+                "8453": "0xc6fffa0e234e5ec80b8654cb351da90a092f6c95",
+                "42161": "0x1855911ab07ed5cd056008f409b709dfa9d01183"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x623f2774d9f27b59bc6b954544487532ce79d9df": {
       "chainId": "43111",
@@ -226,7 +261,25 @@
       "symbol": "enzoBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/enzoBTC.webp",
       "assetGroup": "ENZOBTC",
-      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC"
+      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
+      "props": {
+        "oft": {
+          "eid": 30329,
+          "routes": [
+            {
+              "contract": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "lorenzo",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
+                "56": "0xaa0d222436152050501e91dc07a45b1112f8b60f"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x1596be338b999e2376675c908168a7548c8b0525": {
       "chainId": "43111",
@@ -435,7 +488,32 @@
       "currencyId": "Satoshi Stablecoin V2::satUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "oft": {
+          "eid": 30329,
+          "routes": [
+            {
+              "contract": "0xb4818bb69478730ef4e33cc068dd94278e2766cb",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "river",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x1958853a8be062dc4f401750eb233f5850f0d0d2",
+                "56": "0xb4818bb69478730ef4e33cc068dd94278e2766cb",
+                "146": "0xb4818bb69478730ef4e33cc068dd94278e2766cb",
+                "196": "0xcef6c74ce218c0e1f48ca2430635d0a65cd3737a",
+                "8453": "0x70654aad8b7734dc319d0c3608ec7b32e03fa162",
+                "42161": "0xb4818bb69478730ef4e33cc068dd94278e2766cb",
+                "60808": "0xecf21b335b41f9d5a89f6186a99c19a3c467871f"
+              }
+            }
+          ]
+        }
       }
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {
@@ -663,7 +741,27 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/HEMI.webp",
       "assetGroup": "Hemi::HEMI",
       "currencyId": "Hemi::HEMI",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30329,
+          "routes": [
+            {
+              "contract": "0xf14a494fb66927df0b1495e5f09b410e5d8517c3",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "hemi",
+              "approvalRequired": true,
+              "peers": {
+                "10": "0x1ad02cd579c7668d50e0003f428701b70a1b42b7",
+                "56": "0x5ffd0eadc186af9512542d0d5e5eafc65d5afc5b",
+                "8453": "0xbcaba0bac0f4bff8cc8659f2218c6d5324b46061",
+                "42161": "0x1f278b7eff04add48ff81ae1a01cbc178b3dd351"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xd3599ae62ee280709a22268a46d23164214e345b": {
       "chainId": "43111",

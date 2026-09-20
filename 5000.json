@@ -486,6 +486,26 @@
       "currencyId": "Ondo U.S. Dollar Yield::USDY",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "ondo" },
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x0be393dc46248e4285dc5caca3084bc7e9bfbb41",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "ondo",
+              "approvalRequired": true,
+              "peers": {
+                "1": "0xa6275720b3fb1efe3e6ef2b5bf2293148852307d",
+                "56": "0xae6a049cdda7536af3875b3daaf34f24be5cf00c",
+                "1329": "0x6f04b655d5209e85e47d3920a2ef407a66e83f6c",
+                "4217": "0xd45c2377241f1da765570e0d57920f1cf4855bcb",
+                "42161": "0x0be393dc46248e4285dc5caca3084bc7e9bfbb41",
+                "98866": "0x944acfc05062339c6862555b42f12d3fb03f8122"
+              }
+            }
+          ]
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -8808,7 +8828,20 @@
       "assetGroup": "RSETH",
       "currencyId": "Kelp DAO Restaked ETH::RSETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x4186bfc76e2e237523cbc30fd220fe055156b41f",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "kelpdao",
+              "approvalRequired": false,
+              "peers": { "1": "0x85d456b2dff1fd8245387c0bfb64dfb700e98ef3" }
+            }
+          ]
+        }
       }
     },
     "0x2fde62942759d7c0aaf25952da4098423bc1264c": {
@@ -8849,7 +8882,23 @@
       "currencyId": "cmETH::cmETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "mantle" },
-        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" },
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "meth-protocol",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x4afa9620d0b79137383a7a9ab3477837d475e948",
+                "999": "0xe6829d9a7ee3040e1276fa75293bde931859e8fa"
+              }
+            }
+          ]
+        }
       }
     },
     "0xc75d7767f2edfbc6a5b18fc1fa5d51ffb57c2b37": {
@@ -9084,7 +9133,20 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
+            }
+          ]
+        }
       }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
@@ -9095,7 +9157,22 @@
       "symbol": "ENA",
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0x58538e6A46E07434d7E7375Bc268D3cb839C0133/logo.png",
       "assetGroup": "Ethena::ENA",
-      "currencyId": "Ethena::ENA"
+      "currencyId": "Ethena::ENA",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x58538e6a46e07434d7e7375bc268d3cb839c0133",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
+            }
+          ]
+        }
+      }
     },
     "0x26a6b0dcdcfb981362afa56d581e4a7dba3be140": {
       "chainId": "5000",
@@ -9105,7 +9182,25 @@
       "symbol": "PUFF",
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0x26a6b0dcdCfb981362aFA56D581e4A7dBA3Be140/logo.png",
       "assetGroup": "Puff::PUFF",
-      "currencyId": "Puff::PUFF"
+      "currencyId": "Puff::PUFF",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xe6fa1be9daa660c99268f3f47fc193ba066a3aac",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "puff-dragon",
+              "approvalRequired": true,
+              "peers": {
+                "1": "0x31b6100f5f4466e6daeb1edb2f2ce6e548cf8938",
+                "8453": "0x823c9e9f4c51c1a169cef4bf7922f46beb493d11"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x8a3ed1f2d15b5015396f494cc1da977da38a6773": {
       "chainId": "5000",
@@ -9156,7 +9251,27 @@
       "symbol": "COQ",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x420FcA0121DC28039145009570975747295f2329/logo.png",
       "assetGroup": "COQ",
-      "currencyId": "COQINU::COQ"
+      "currencyId": "COQINU::COQ",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x420fca0121dc28039145009570975747295f2329",
+              "kind": "native",
+              "sharedDecimals": 4,
+              "oapp": "coq-inu",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x420fca0121dc28039145009570975747295f2329",
+                "8453": "0x420fca0121dc28039145009570975747295f2329",
+                "42161": "0x420fca0121dc28039145009570975747295f2329",
+                "43114": "0x347f7268ad43f3f7b68c4d64a8c0523830100c8b"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xc96de26018a54d51c097160568752c4e3bd6c364": {
       "chainId": "5000",
@@ -9180,7 +9295,25 @@
       "symbol": "PCH",
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0xBE5ACfd64358805616b5cbD5277B9A85011d7Cf1/logo.png",
       "assetGroup": "Pichi::PCH",
-      "currencyId": "Pichi::PCH"
+      "currencyId": "Pichi::PCH",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xbe5acfd64358805616b5cbd5277b9a85011d7cf1",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "pichi-finance",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xbe5acfd64358805616b5cbd5277b9a85011d7cf1",
+                "42161": "0xbe5acfd64358805616b5cbd5277b9a85011d7cf1"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x1bdd8878252daddd3af2ba30628813271294edc0": {
       "chainId": "5000",
@@ -9216,7 +9349,25 @@
       "symbol": "COOK",
       "logoURI": "https://token-list.mantle.xyz/data/COOK/logo.svg",
       "assetGroup": "COOK",
-      "currencyId": "COOK::COOK"
+      "currencyId": "COOK::COOK",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x9f0c013016e8656bc256f948cd4b79ab25c7b94d",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "meth-protocol",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xc14459931cf666dccad582d63288aefb9f0bdca9",
+                "999": "0x9f0c013016e8656bc256f948cd4b79ab25c7b94d"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xd2b4c9b0d70e3da1fbdd98f469bd02e77e12fc79": {
       "chainId": "5000",
@@ -9245,7 +9396,20 @@
           "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "ethena",
+              "approvalRequired": false,
+              "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
+            }
+          ]
+        }
       }
     },
     "0x96630b0d78d29e7e8d87f8703de7c14b2d5ae413": {
@@ -9959,7 +10123,33 @@
       "symbol": "YNETHX",
       "logoURI": "https://assets.coingecko.com/coins/images/51623/thumb/ynETHx.png?1731659494",
       "assetGroup": "ynETH MAX::YNETHX",
-      "currencyId": "ynETH MAX::YNETHX"
+      "currencyId": "ynETH MAX::YNETHX",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "yieldnest",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x79a5959cc1cbe4d08e7800bd16759d82e64169a1",
+                "10": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "56": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "252": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "8453": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "42161": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "80094": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "81457": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "167000": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c",
+                "534352": "0xbe82cbe217bf4e0a87dd88c552e93054f4ef2c7c"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf": {
       "chainId": "5000",
@@ -9969,7 +10159,52 @@
       "symbol": "WGC",
       "logoURI": "https://assets.coingecko.com/coins/images/37966/thumb/COIN_200x200.png?1716778831",
       "assetGroup": "Wild Goat Coin::WGC",
-      "currencyId": "Wild Goat Coin::WGC"
+      "currencyId": "Wild Goat Coin::WGC",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "wildgoatcoin",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "10": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "56": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "130": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "137": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "143": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "146": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "196": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "204": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "324": "0x05b65997ff7cb7976b43000ad376f91108b30d40",
+                "480": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "999": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "1135": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "1329": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "1868": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "1923": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "8217": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "8453": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "9745": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "34443": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "42161": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "42220": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "43114": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "57073": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "59144": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "60808": "0x3d63825b0d8669307366e6c8202f656b9e91d368",
+                "80094": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "534352": "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf",
+                "7777777": "0x3d63825b0d8669307366e6c8202f656b9e91d368"
+              }
+            }
+          ]
+        }
+      }
     },
     "0xd0728f5b1f53a834f8dcd1b86f62ceb8726eb0a0": {
       "chainId": "5000",
@@ -10160,7 +10395,22 @@
       "symbol": "BOX",
       "logoURI": "https://assets.coingecko.com/coins/images/50224/thumb/v6TSd2dN_400x400.jpg?1726521525",
       "assetGroup": "DeBox::BOX",
-      "currencyId": "DeBox::BOX"
+      "currencyId": "DeBox::BOX",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x3d142cdb27b537af57a55ee8f54ada953b4b9ecd",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "debox",
+              "approvalRequired": false,
+              "peers": { "56": "0x6386adc4bc9c21984e34fd916bb349dd861742af" }
+            }
+          ]
+        }
+      }
     },
     "0x779ded0c9e1022225f8e0630b35a9b54be713736": {
       "chainId": "5000",
@@ -10177,7 +10427,40 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "usdt0",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0x6c96de32cea08842dcc4058c14d3aaad7fa41dee",
+                "10": "0xf03b4d9ac1d5d1e7c4cef54c2a313b9fe051a0ad",
+                "14": "0x567287d2a9829215a37e3b88843d32f9221e7588",
+                "30": "0x1a594d5d5d1c426281c1064b07f23f57b2716b61",
+                "130": "0xc07be8994d035631c36fb4a89c918cefb2f03ec3",
+                "137": "0x6ba10300f0dc58b7a1e4c0e41f5dabb7d7829e13",
+                "143": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "196": "0x94bcca6bdfd6a61817ab0e960bfede4984505554",
+                "988": "0xedaba024be4d87974d5ab11c6dd586963cccb027",
+                "999": "0x904861a24f30ec96ea7cfc3be9ea4b476d237e98",
+                "1030": "0xc57efa1c7113d98bda6f9f249471704ece5dd84a",
+                "1329": "0x56fe74a2e3b484b921c447357203431a3485cc60",
+                "2818": "0xcb768e263fb1c62214e7cab4aa8d036d76dc59cc",
+                "4217": "0xaf37e8b6c9ed7f6318979f56fc287d76c30847ff",
+                "4326": "0x9151434b16b9763660705744891fa906f660ecc5",
+                "9745": "0x02ca37966753bdddf11216b73b16c1de756a7cf9",
+                "42161": "0x14e4a1b13bf7f943c8ff7c51fb60fa964a298d92",
+                "57073": "0x1cb6de532588fca4a21b7209de7c456af8434a65",
+                "80094": "0x3dc96399109df5ceb2c226664a086140bd0379cb"
+              }
+            }
+          ]
+        }
       }
     },
     "0xdefa1d21c5f1cbeac00eeb54b44c7d86467cc3a3": {
@@ -10188,7 +10471,27 @@
       "symbol": "ALMANAK",
       "logoURI": "https://assets.coingecko.com/coins/images/68466/thumb/almanak.png?1755828664",
       "assetGroup": "Almanak::ALMANAK",
-      "currencyId": "Almanak::ALMANAK"
+      "currencyId": "Almanak::ALMANAK",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0xdefa1d21c5f1cbeac00eeb54b44c7d86467cc3a3",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "almanak",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xcd291a8b325e6adb423a5f72e1bc67de9d19256e",
+                "56": "0xdefa1d21c5f1cbeac00eeb54b44c7d86467cc3a3",
+                "8453": "0xdefa1d21c5f1cbeac00eeb54b44c7d86467cc3a3",
+                "42161": "0xdefa1d21c5f1cbeac00eeb54b44c7d86467cc3a3"
+              }
+            }
+          ]
+        }
+      }
     },
     "0x111111d2bf19e43c34263401e0cad979ed1cdb61": {
       "chainId": "5000",
@@ -10229,7 +10532,22 @@
       "symbol": "ELSA",
       "logoURI": "https://assets.coingecko.com/coins/images/71623/thumb/Red_circle_white_logo_512x512_%281%29.png?1768570174",
       "assetGroup": "Elsa::ELSA",
-      "currencyId": "Elsa::ELSA"
+      "currencyId": "Elsa::ELSA",
+      "props": {
+        "oft": {
+          "eid": 30181,
+          "routes": [
+            {
+              "contract": "0x29cc30f9d113b356ce408667aa6433589cecbdca",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "heyelsa",
+              "approvalRequired": false,
+              "peers": { "8453": "0x92db5a14a520eee59499261e83c27fa135f43bc8" }
+            }
+          ]
+        }
+      }
     },
     "0x051665f2455116e929b9972c36d23070f5054ce0": {
       "chainId": "5000",
