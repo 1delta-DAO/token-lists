@@ -12,7 +12,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0x5a2aa871954ebdf89b1547e75d032598356caad5": {
@@ -25,7 +26,8 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0xa20b3b97df3a02f9185175760300a06b4e0a2c05": {
@@ -73,7 +75,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0x6120725cfa1062b0596c48d356e4bec6a44feece": {
@@ -198,7 +201,10 @@
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/1116/0x1f82d787a1186c67360E62869C46eADbc192846a.png",
       "assetGroup": "DAI",
       "currencyId": "Dai (ICE)::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x7de0bc2cf736f0a307299a0acff1e89843c109a2": {
       "chainId": "1116",
@@ -348,7 +354,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/34423/thumb/usdc.png?1704857726",
       "assetGroup": "USDC",
       "currencyId": "USD Coin (Layer0 Bridge)::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xcfd38184c30832917a2871695f91e5e61bbd41ff": {
       "chainId": "1116",
@@ -399,7 +409,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/34424/thumb/usdt_logo.png?1704857706",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x81bcea03678d1cef4830942227720d542aa15817": {
       "chainId": "1116",
@@ -962,7 +975,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39284/thumb/Circle_Agora_White_on_Olive_1080px.png?1722961274",
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
+      }
     },
     "0x5832f53d147b3d6cd4578b9cbd62425c7ea9d0bd": {
       "chainId": "1116",
@@ -973,7 +989,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x000734cf9e469bad78c8ec1b0deed83d0a03c1f8": {
       "chainId": "1116",

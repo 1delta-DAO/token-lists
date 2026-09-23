@@ -12,7 +12,8 @@
       "assetGroup": "Jito Staked SOL::JitoSOL",
       "currencyId": "Jito Staked SOL::JitoSOL",
       "props": {
-        "lst": { "type": "staking", "asset": "SOL", "provider": "jito" }
+        "lst": { "type": "staking", "asset": "SOL", "provider": "jito" },
+        "issuer": { "id": "jito", "name": "Jito", "kind": "protocol" }
       }
     },
     "0x6effb385713f22df4846d8156451a5efec22a4c8": {
@@ -25,7 +26,8 @@
       "assetGroup": "Marinade staked SOL (mSOL)::mSOL",
       "currencyId": "Marinade staked SOL (mSOL)::mSOL",
       "props": {
-        "lst": { "type": "staking", "asset": "SOL", "provider": "marinade" }
+        "lst": { "type": "staking", "asset": "SOL", "provider": "marinade" },
+        "issuer": { "id": "marinade", "name": "Marinade", "kind": "protocol" }
       }
     },
     "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f": {
@@ -81,7 +83,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000001/0x5f0155d08ef4aae2b500aefb64a3419da8bb611a/small/token-logo.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xea6b04272f9f62f997f666f07d3a974134f7ffb9": {
       "chainId": "245022934",
@@ -92,7 +97,11 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000001/0xea6b04272f9f62f997f666f07d3a974134f7ffb9/small/token-logo.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xae9c742807da5ec06a634319cc018ae5c3c18187": {
       "chainId": "245022934",
@@ -113,7 +122,10 @@
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/245022934/0xc0E49f8C615d3d4c245970F6Dc528E4A47d69a44.png",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (ICE)::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x3f16bf1931674af4d28d7ab37ef639a18c4ae99e": {
       "chainId": "245022934",
@@ -235,7 +247,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000001/0x16a3fe59080d6944a42b441e44450432c1445372/small/token-logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC (Wormhole)::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "245022934",

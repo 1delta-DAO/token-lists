@@ -135,7 +135,8 @@
             }
           ]
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x7fb4d0f51544f24f385a421db6e7d4fc71ad8e5c": {
@@ -149,7 +150,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -162,7 +164,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x9893989433e7a383cb313953e4c2365107dc19a7": {
@@ -176,7 +179,8 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x6c16e26013f2431e8b2e1ba7067ecccad0db6c52": {
@@ -203,7 +207,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "jito", "name": "Jito", "kind": "protocol" }
       }
     },
     "0x7f1f4b4b29f5058fa32cc7a97141b8d7e5abdc2d": {
@@ -302,7 +307,8 @@
               "peers": { "1": "0xb5bada33542a05395d504a25885e02503a957bb3" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x2dca96907fde857dd3d816880a0df407eeb2d2f2": {
@@ -329,7 +335,8 @@
               "peers": { "1": "0x839dc0cff5e263f56c9810560adf8ea40e95ab82" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x0913da6da4b42f538b445599b46bb4622342cf52": {
@@ -356,7 +363,8 @@
               "peers": { "1": "0x8d09c41229f07ad098ffb5fad239dd87d2c131d4" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
@@ -370,7 +378,12 @@
       "currencyId": "AUSD::AUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
     },
     "0x1e5efca3d0db2c6d5c67a4491845c43253eb9e4e": {
@@ -437,7 +450,8 @@
       "currencyId": "Vault Bridge USDS::vbUSDS",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0xb0505e5a99abd03d94a1169e638b78edfed26ea4": {
@@ -517,7 +531,8 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0xfcef626de4a0175ac962dd43eb0a002819faaefe": {
@@ -567,7 +582,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0xe007ca01894c863d7898045ed5a3b4abf0b18f37": {
@@ -660,7 +676,8 @@
               "peers": { "252": "0xd86fbbd0c8715d2c1f40e451e5c3514e65e7576a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
@@ -686,7 +703,8 @@
               "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
@@ -713,7 +731,8 @@
               "peers": { "252": "0x88aa7854d3b2daa5e37e7ce73a1f39669623a361" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xc6135d59f8d10c9c035963ce9037b3635170d716": {
@@ -883,7 +902,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/stcusd.svg",
       "assetGroup": "Staked cap USD::stcUSD",
       "currencyId": "Staked Cap USD::stcUSD",
-      "props": { "savings": { "underlying": "cUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "cUSD", "base": "USD" },
+        "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
+      }
     },
     "0xba515304d8153c4b162dc79f867e152df9c127eb": {
       "chainId": "747474",

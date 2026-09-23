@@ -13,7 +13,8 @@
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -27,7 +28,8 @@
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
@@ -41,7 +43,8 @@
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
     "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a": {
@@ -71,7 +74,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -110,7 +114,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -149,7 +154,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -163,7 +169,8 @@
       "currencyId": "Frax Ether::frxETH(axelar)",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -190,7 +197,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xe7903b1f75c534dd8159b313d92cdcfbc62cb3cd": {
@@ -204,7 +212,8 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" }
+        "risk": { "score": 5, "source": "default" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x24cb308a4e2f3a4352f513681bd0c31a0bd3ba31": {
@@ -631,7 +640,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37657/thumb/mim.png?1715162647",
       "assetGroup": "MIM",
       "currencyId": "Magic Internet Money::MIM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "abracadabra",
+          "name": "Abracadabra",
+          "kind": "protocol"
+        }
+      }
     },
     "0x837fe561e9c5dfa73f607fda679295dbc2be5e40": {
       "chainId": "81457",
@@ -1002,7 +1018,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xf53c57338a304558709ef69fe53b518c5f62733e": {
@@ -2232,7 +2249,11 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/blast/0xEB466342C4d449BC9f53A865D5Cb90586f405215.jpg",
       "assetGroup": "USDC",
       "currencyId": "Axelar Wrapped USDC::axlUSDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x84fc0e1dca50cf341b497a56f843d4dd7d818b84": {
       "chainId": "81457",
@@ -2401,7 +2422,10 @@
       "logoURI": "https://static.debank.com/image/blast_token/logo_url/0xf7bc58b8d8f97adc129cfc4c9f45ce3c0e1d2692/e58455cbeb72be75c798588eb6f2cda3.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xf8797db8a9eed416ca14e8dfaede2bf4e1aabfc3": {
       "chainId": "81457",
@@ -2466,7 +2490,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x95f513a9401cfea56ae7824ab4992313566fa9f1": {
@@ -2531,7 +2556,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
@@ -2556,7 +2582,8 @@
               "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
@@ -2595,7 +2622,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
@@ -2633,7 +2661,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x93202ec683288a9ea75bb829c6bacfb2bfea9013": {
@@ -2670,7 +2699,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x4b246c4c41c4e5ec1d4a8453c313cbc57bf0993a": {
@@ -2806,7 +2836,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x0000000000000000000000000000000000000000": {

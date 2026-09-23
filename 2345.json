@@ -11,7 +11,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Bridged stgUSDT::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x3022b87ac063de95b1570f46f5e470f8b53112d8": {
       "chainId": "2345",
@@ -22,7 +25,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xbc10000000000000000000000000000000000000": {
       "chainId": "2345",
@@ -154,7 +161,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0x78e26e8b953c7c78a58d69d8b9a91745c2bbb258": {

@@ -640,7 +640,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365": {
@@ -653,7 +654,8 @@
       "assetGroup": "RWA Backed Lending by Valos::vUSD",
       "currencyId": "RWA Backed Lending by Valos::vUSD",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
     "0x8c213ee79581ff4984583c6a801e5263418c4b86": {
@@ -666,7 +668,8 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "currencyId": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x5a0f93d040de44e78f251b03c43be9cf317dcf64": {
@@ -679,7 +682,8 @@
       "assetGroup": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x9477724bb54ad5417de8baff29e59df3fb4da74f": {
@@ -696,6 +700,11 @@
           "type": "fund",
           "subType": "private-credit",
           "issuer": "securitize"
+        },
+        "issuer": {
+          "id": "securitize",
+          "name": "Securitize",
+          "kind": "institution"
         }
       }
     },
@@ -709,7 +718,8 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund::JTRSY::143::0",
       "currencyId": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x2fabf1c784b8583d63c00c5c9c0377d8cf1a3245": {
@@ -726,6 +736,11 @@
           "type": "fund",
           "subType": "private-credit",
           "issuer": "securitize"
+        },
+        "issuer": {
+          "id": "securitize",
+          "name": "Securitize",
+          "kind": "institution"
         }
       }
     },
@@ -739,7 +754,8 @@
       "assetGroup": "Janus Henderson Anemoy AAA CLO Fund::JAAA::143::0",
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x5f8a1c74c112865bd05dbe4752c7608332719062": {
@@ -752,7 +768,8 @@
       "assetGroup": "DeFi Janus Henderson Anemoy AAA CLO Fund Token::deJAAA",
       "currencyId": "DeFi Janus Henderson Anemoy AAA CLO Fund Token::deJAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x8de0f3295b9e42b29e7617bada7c603277420451": {
@@ -765,7 +782,8 @@
       "assetGroup": "DeFi Janus Henderson Anemoy Treasury Fund Token::deJTRSY",
       "currencyId": "DeFi Janus Henderson Anemoy Treasury Fund Token::deJTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
@@ -796,7 +814,8 @@
             }
           ]
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x5da938ad48c46bd22ca362a91517ce2c16367d09": {
@@ -809,7 +828,12 @@
       "assetGroup": "iShares 20+ Year Treasury Bond aStock::ATLT",
       "currencyId": "iShares 20+ Year Treasury Bond aStock::ATLT",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" }
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
+        "issuer": {
+          "id": "blackrock",
+          "name": "Blackrock",
+          "kind": "institution"
+        }
       }
     },
     "0x6e8568ba7b43138d9210959a9523155e274550c9": {
@@ -822,7 +846,8 @@
       "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0x12473790e09d415abac7441401f7abec64fa959c": {
@@ -835,7 +860,8 @@
       "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -848,7 +874,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x10aeaf63194db8d453d4d85a06e5efe1dd0b5417": {
@@ -861,7 +888,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xa3d68b74bf0528fdd07263c60d6488749044914b": {
@@ -890,7 +918,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -903,7 +932,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0xc50f2e735edd9dcd8ccd41ecfe9894e679e3195f": {
@@ -916,7 +946,12 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "issuer": {
+          "id": "rocketpool",
+          "name": "Rocket Pool",
+          "kind": "protocol"
+        }
       }
     },
     "0x37d6382b6889ccef8d6871a8b60e667115eddbcf": {
@@ -942,7 +977,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
     "0xc99f5c922dae05b6e2ff83463ce705ef7c91f077": {
@@ -955,7 +991,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x288f9d76019469bfeb56bb77d86afa2bf563b75b": {
@@ -968,7 +1005,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x3b4cf37a3335f21c945a40088404c715525fcb29": {
@@ -981,8 +1019,42 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
+    },
+    "0x211edf350b927c6eae808a63d5f6318bac5a7e5e": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "YT AUSD (AUSD) Monad",
+      "address": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e",
+      "symbol": "YT-AUSD-17DEC2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86d43f51-4e9e-4174-82eb-a9806df63df3.svg",
+      "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-17DEC2026",
+      "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-17DEC2026",
+      "props": { "pendle": { "tokenType": "YT", "expiry": 1797465600 } }
+    },
+    "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "PT AUSD (AUSD) Monad",
+      "address": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
+      "symbol": "PT-AUSD-17DEC2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/dc276caf-4aa7-4ea0-8a32-5bc60d82028f.svg",
+      "assetGroup": "PT AUSD (AUSD) Monad::PT-AUSD-17DEC2026",
+      "currencyId": "PT AUSD (AUSD) Monad::PT-AUSD-17DEC2026",
+      "props": { "pendle": { "tokenType": "PT", "expiry": 1797465600 } }
+    },
+    "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "AUSD Monad",
+      "address": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24",
+      "symbol": "SY-AUSD",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/76f6d205-f76b-4a2a-b0d7-656802ecd8d0.svg",
+      "assetGroup": "AUSD Monad::SY-AUSD::143::0",
+      "currencyId": "AUSD Monad::SY-AUSD",
+      "props": { "pendle": { "tokenType": "SY" } }
     },
     "0x2abc42250154752273a4560e875c858623f83ecc": {
       "chainId": "143",
@@ -1060,7 +1132,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xe7cd86e13ac4309349f30b3435a9d337750fc82d": {
       "chainId": "143",
@@ -1106,7 +1182,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
@@ -1148,7 +1225,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0xee8c0e9f1bffb4eb878d8f15f368a02a35481242": {
@@ -1198,7 +1276,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
     },
     "0x4917a5ec9fcb5e10f47cbb197abe6ab63be81fe8": {
@@ -1286,7 +1365,16 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": {
+          "id": "world-liberty",
+          "name": "World Liberty Financial",
+          "kind": "institution"
+        }
       }
     },
     "0x3bd359c1119da7da1d913d1c4d2b7c461115433a": {
@@ -1702,7 +1790,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0xd33f18d8d48cbbb2f8b47063de97f94de0d49b99": {
@@ -1753,7 +1842,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/SolvBTC/logo.svg",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x1c8ee940b654bfced403f2a44c1603d5be0f50fa": {
       "chainId": "143",
@@ -2141,7 +2233,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/cbBTC/logo.svg",
       "assetGroup": "CBBTC",
       "currencyId": "Coinbase Wrapped BTC::cbBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
     },
     "0x5e073494678fb7fa4a05bb17d45941dd9dc469c1": {
       "chainId": "143",
@@ -2471,7 +2566,8 @@
       "symbol": "enzoBTC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/enzoBTC/logo.svg",
       "assetGroup": "ENZOBTC",
-      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC"
+      "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
+      "props": { "issuer": { "id": "lorenzo", "name": "Lorenzo" } }
     },
     "0xc6de1dc0b59682be906e5bca14e385e74ee88168": {
       "chainId": "143",
@@ -2654,7 +2750,8 @@
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
     },
     "0x3842751a46d23b41a47e702473dff316e6237777": {
@@ -2825,7 +2922,10 @@
       "symbol": "ENA",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/ENA/logo.svg",
       "assetGroup": "ENA::ENA",
-      "currencyId": "ENA::ENA"
+      "currencyId": "ENA::ENA",
+      "props": {
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
+      }
     },
     "0x4d502d735b4c574b487ed641ae87ceae884731c7": {
       "chainId": "143",
@@ -2850,7 +2950,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/GHO/logo.svg",
       "assetGroup": "GHO",
       "currencyId": "Gho Token::GHO",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
+      }
     },
     "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b": {
       "chainId": "143",
@@ -2871,7 +2974,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/USDe/logo.svg",
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
+      }
     },
     "0x0d9d741fe423cd5419e4bcb6cb2ffa87afa93ba4": {
       "chainId": "143",
@@ -2905,7 +3011,8 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x437cc33344a0b27a429f795ff6b469c72698b291": {
@@ -3165,7 +3272,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
       }
     },
     "0x17b8f7373ecd556192abfc85be314e5d4fb6b3fa": {
@@ -3987,7 +4095,10 @@
       "symbol": "WFRAX",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/WFRAX/logo.png",
       "assetGroup": "Wrapped Frax::WFRAX",
-      "currencyId": "Wrapped Frax::WFRAX"
+      "currencyId": "Wrapped Frax::WFRAX",
+      "props": {
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x58e3ee6accd124642ddb5d3f91928816be8d8ed3": {
       "chainId": "143",
@@ -3998,7 +4109,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/frxUSD/logo.png",
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x9abb5aaaa4c63abee1b6617843fd818c99c52c69": {
       "chainId": "143",
@@ -4025,7 +4139,8 @@
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "frxUSD", "base": "USD" }
+        "savings": { "underlying": "frxUSD", "base": "USD" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x22139a346b6312eb0a9812c67cfce4a694676d59": {

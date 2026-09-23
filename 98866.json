@@ -17,6 +17,11 @@
           "subType": "gold",
           "issuer": "matrixdock",
           "underlying": "XAU"
+        },
+        "issuer": {
+          "id": "matrixdock",
+          "name": "Matrixdock",
+          "kind": "institution"
         }
       }
     },
@@ -30,7 +35,16 @@
       "assetGroup": "Superstate USCC::USCC",
       "currencyId": "Superstate Crypto Carry Fund::USCC",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "superstate" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "superstate"
+        },
+        "issuer": {
+          "id": "superstate",
+          "name": "Superstate",
+          "kind": "institution"
+        }
       }
     },
     "0xe4fa682f94610ccd170680cc3b045d77d9e528a8": {
@@ -43,7 +57,16 @@
       "assetGroup": "Superstate Short Duration US Government Securities Fund::USTB",
       "currencyId": "Superstate Short Duration US Government Securities Fund::USTB",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "superstate" }
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "superstate"
+        },
+        "issuer": {
+          "id": "superstate",
+          "name": "Superstate",
+          "kind": "institution"
+        }
       }
     },
     "0x0c78ca789e826fe339de61934896f5d170b66d78": {
@@ -56,7 +79,8 @@
       "assetGroup": "Midas mBASIS::MBASIS",
       "currencyId": "Midas mBASIS::mBASIS",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0xa5d465251fbcc907f5dd6bb2145488dfc6a2627b": {
@@ -69,7 +93,8 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "currencyId": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0xe85f2b707ec5ae8e07238f99562264f304e30109": {
@@ -83,7 +108,8 @@
       "currencyId": "Midas mTBILL::MTBILL",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0x9477724bb54ad5417de8baff29e59df3fb4da74f": {
@@ -100,6 +126,11 @@
           "type": "fund",
           "subType": "private-credit",
           "issuer": "securitize"
+        },
+        "issuer": {
+          "id": "securitize",
+          "name": "Securitize",
+          "kind": "institution"
         }
       }
     },
@@ -112,7 +143,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102174050/thumb/nCLOA_Token.png?1782113586",
       "assetGroup": "Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA",
       "currencyId": "Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA",
-      "props": { "rwa": { "type": "fund", "subType": "etf", "issuer": "nest" } }
+      "props": {
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "nest" },
+        "issuer": {
+          "id": "blackrock",
+          "name": "Blackrock",
+          "kind": "institution"
+        }
+      }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
       "chainId": "98866",
@@ -146,7 +184,8 @@
             }
           ]
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9": {
@@ -159,7 +198,8 @@
       "assetGroup": "Nest Treasuries Vault::nTBILL",
       "currencyId": "Nest Treasuries Vault::nTBILL",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "nest" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "nest" },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x593ccca4c4bf58b7526a4c164ceef4003c6388db": {
@@ -172,7 +212,12 @@
       "assetGroup": "Nest ALPHA Vault::nALPHA",
       "currencyId": "Nest ALPHA Vault::nALPHA",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x11113ff3a60c2450f4b22515cb760417259ee94b": {
@@ -185,7 +230,8 @@
       "assetGroup": "Nest Basis Vault::nBASIS",
       "currencyId": "Nest Basis Vault::nBASIS",
       "props": {
-        "rwa": { "type": "fund", "subType": "basis-trade", "issuer": "nest" }
+        "rwa": { "type": "fund", "subType": "basis-trade", "issuer": "nest" },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0xa5f78b2a0ab85429d2dfbf8b60abc70f4cec066c": {
@@ -198,7 +244,12 @@
       "assetGroup": "Nest Credit Vault::nCREDIT",
       "currencyId": "Nest Credit Vault::nCREDIT",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0xdf45b8322ea4ce898331602e2d1f3d1a67ae0ee8": {
@@ -211,7 +262,12 @@
       "assetGroup": "Nest Liquid Credit Vault::nLCRD",
       "currencyId": "Nest Liquid Credit Vault::nLCRD",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x7488b23f4c26b44eef2e0766896be47443e86d79": {
@@ -224,7 +280,12 @@
       "assetGroup": "Nest USDC PayFi Lending Vault::nAXI",
       "currencyId": "Nest USDC PayFi Lending Vault::nAXI",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x2a3e301dbd45c143dfbb7b1ce1c55bf0bbf161cb": {
@@ -237,7 +298,12 @@
       "assetGroup": "Nest Apollo ACRDX Vault::nACRDX",
       "currencyId": "Nest Apollo ACRDX Vault::nACRDX",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x29bf22381a5811dec89dc7b46a5ce57ad02c0240": {
@@ -250,7 +316,12 @@
       "assetGroup": "Nest WisdomTree Vault::nWISDOM",
       "currencyId": "Nest WisdomTree Vault::nWISDOM",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x119dd7daff816f29d7ee47596ae5e4bdc4299165": {
@@ -263,7 +334,12 @@
       "assetGroup": "Nest BlackOpal LiquidStone II Vault::nOPAL",
       "currencyId": "Nest BlackOpal LiquidStone II Vault::nOPAL",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x066d10e240999aea6798b2e2ca0bdac2923cbdff": {
@@ -276,7 +352,12 @@
       "assetGroup": "Nest FalconX CLO::nFALCON",
       "currencyId": "Nest FalconX CLO::nFALCON",
       "props": {
-        "rwa": { "type": "fund", "subType": "private-credit", "issuer": "nest" }
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -289,7 +370,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0xca59ca09e5602fae8b629dee83ffa819741f14be": {
@@ -312,7 +394,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0xda6087e69c51e7d31b6dbad276a3c44703dfdcad/small/token-logo.svg",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Stargate)::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x69020311836d29ba7d38c1d3578736fd3ded03ed": {
       "chainId": "98866",
@@ -370,7 +455,12 @@
       "currencyId": "f(x) USD Saving::fxSAVE",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "fxUSD", "base": "USD" }
+        "savings": { "underlying": "fxUSD", "base": "USD" },
+        "issuer": {
+          "id": "fx-protocol",
+          "name": "f(x) Protocol",
+          "kind": "protocol"
+        }
       }
     },
     "0x9fbc367b9bb966a2a537989817a088afcaffdc4c": {
@@ -442,7 +532,11 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0x78add880a697070c1e765ac44d65323a0dcce913/small/token-logo.png",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xbfc5770631641719cd1cf809d8325b146aed19de": {
       "chainId": "98866",
@@ -568,7 +662,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54977/thumb/USD1_1000x1000_transparent.png?1749297002",
       "assetGroup": "USD1::USD1",
       "currencyId": "USD1::USD1",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "world-liberty",
+          "name": "World Liberty Financial",
+          "kind": "institution"
+        }
+      }
     },
     "0xd3bfd6e6187444170a1674c494e55171587b5641": {
       "chainId": "98866",
@@ -619,7 +720,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39284/thumb/AUSD_1024px.png?1764684132",
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
+      }
     },
     "0x4772d2e014f9fc3a820c444e3313968e9a5c8121": {
       "chainId": "98866",
@@ -632,7 +736,8 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0x64445f0aecc51e94ad52d8ac56b7190e764e561a": {
@@ -657,7 +762,8 @@
               "peers": { "252": "0xd86fbbd0c8715d2c1f40e451e5c3514e65e7576a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
@@ -683,7 +789,8 @@
               "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xdd73ea766b80417c0607a3f08e34a0c415d89d56": {
@@ -729,7 +836,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335": {
@@ -761,7 +869,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/USDC.png?1769615602",
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xb549b375da0c76f8b3877b9adfdd28378f087a64": {
       "chainId": "98866",
@@ -802,7 +914,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31700/thumb/usdy_%281%29.png?1696530524",
       "assetGroup": "USDY",
       "currencyId": "Ondo US Dollar Yield::USDY",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc96de26018a54d51c097160568752c4e3bd6c364": {
       "chainId": "98866",
@@ -883,7 +998,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/USDa.webp",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x656f38e2fb1521c873929f2138e28d288b4fd976": {
       "chainId": "98866",
@@ -893,7 +1011,8 @@
       "symbol": "SUSDA",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::SUSDA"
+      "currencyId": "sUSDa::SUSDA",
+      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "98866",

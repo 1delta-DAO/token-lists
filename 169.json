@@ -13,7 +13,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x01d27580c464d5b3b26f78bee12e684901dbc02a": {
@@ -26,7 +27,8 @@
       "assetGroup": "MATICX",
       "currencyId": "Stader MaticX::MATICX",
       "props": {
-        "lst": { "type": "staking", "asset": "POL", "provider": "stader" }
+        "lst": { "type": "staking", "asset": "POL", "provider": "stader" },
+        "issuer": { "id": "stader", "name": "Stader", "kind": "protocol" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -53,7 +55,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xec901da9c68e90798bbbb74c11406a32a70652c3": {
@@ -67,7 +70,12 @@
       "currencyId": "StakeStone Ether::STONE",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0xaccbc418a994a27a75644d8d591afc22faba594e": {
@@ -94,7 +102,8 @@
               "peers": { "1": "0x8cdf550c04bc9b9f10938368349c9c8051a772b6" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "mantle", "name": "Mantle", "kind": "protocol" }
       }
     },
     "0x6fae4d9935e2fcb11fc79a64e917fb2bf14dafaa": {
@@ -117,7 +126,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xf417f5a458ec102b90352f697d6e2ac3a3d2851f": {
       "chainId": "169",
@@ -128,7 +141,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x305e88d809c9dc03179554bfbf85ac05ce8f18d6": {
       "chainId": "169",
@@ -139,7 +155,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x0dc808adce2099a9f62aa87d9670745aba741746": {
       "chainId": "169",
@@ -401,7 +420,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0xb385e52903c802b3bdca7c4d0c78460a8988e1ce": {
@@ -504,7 +524,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
@@ -529,7 +550,8 @@
               "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x0000000000000000000000000000000000000000": {

@@ -42,7 +42,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -55,7 +56,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked Bitcoin::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x81073467cc5d100517931f0da8ec0ff3209cea01": {
@@ -121,7 +123,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xfdd22ce6d1f66bc0ec89b20bf16ccb6670f55a5a": {
@@ -179,7 +182,8 @@
               "peers": { "252": "0x88aa7854d3b2daa5e37e7ce73a1f39669623a361" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xa89db01a37e4aae4161b621445a647ff24ca3c21": {
@@ -264,7 +268,8 @@
               "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x8a2b28364102bea189d99a475c494330ef2bdd0b": {
@@ -276,7 +281,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69316/thumb/usdc.jpg?1758186473",
       "assetGroup": "USDC",
       "currencyId": "Stargate Bridged USDC::USDC.E",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x783129e4d7ba0af0c896c239e57c06df379aae8c": {
       "chainId": "988",
@@ -320,7 +329,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "paypal", "name": "Paypal" }
       }
     },
     "0xeaf7ac0fdf150cdd89340fb762d83848de6a7b83": {

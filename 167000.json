@@ -13,7 +13,12 @@
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "rocketpool",
+          "name": "Rocket Pool",
+          "kind": "protocol"
+        }
       }
     },
     "0x756b6574b3162077a630895995b443aa68cd2015": {
@@ -27,7 +32,8 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -40,7 +46,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -53,7 +60,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xa51894664a773981c6c112c43ce576f315d5b1b6": {
@@ -83,7 +91,8 @@
       "props": {
         "permit": { "type": 1, "version": "2" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x19e26b0638bf63aa9fa4d14c6baf8d52ebe86c5c": {
@@ -98,7 +107,8 @@
       "props": {
         "permit": { "type": 1, "version": "2" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x9c2dc7377717603eb92b2655c5f2e7997a4945bd": {
@@ -110,7 +120,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Stargate)::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x2def195713cf4a606b49d07e520e22c17899a736": {
       "chainId": "167000",
@@ -121,7 +134,10 @@
       "logoURI": "https://raw.githubusercontent.com/kodo-exchange/tokenlist/main/assets/usdt.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xc4c410459fbaf8f7f86b6cee52b4fa1282ff9704": {
       "chainId": "167000",
@@ -132,7 +148,10 @@
       "logoURI": "https://raw.githubusercontent.com/swapsicledex/swapsicle-token-list/master/logos/mantle/0xCAbAE6f6Ea1ecaB08Ad02fE02ce9A44F09aebfA2/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xa9d23408b9ba935c230493c40c73824df71a0975": {
       "chainId": "167000",
@@ -237,7 +256,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SolvBTC.webp",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0xf7fb2df9280eb0a76427dc3b34761db8b1441a49": {
       "chainId": "167000",
@@ -284,7 +306,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {
@@ -318,7 +341,8 @@
       "currencyId": "Curve.Fi USD Stablecoin::crvUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
       }
     },
     "0x09413312b263fd252c16e592a45f4689f26cb79d": {
@@ -371,7 +395,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/USDa.webp",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x5d5c8aec46661f029a5136a4411c73647a5714a7": {
       "chainId": "167000",
@@ -381,7 +408,8 @@
       "symbol": "sUSDa",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "167000",

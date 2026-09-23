@@ -1472,7 +1472,8 @@
       "assetGroup": "BCSPX",
       "currencyId": "Backed CSPX Core S&P 500::BCSPX",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "backed" }
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "backed" },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
@@ -1503,7 +1504,8 @@
             }
           ]
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -1516,7 +1518,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -1542,7 +1545,8 @@
               "peers": { "252": "0x9abfe1f8a999b0011ecd6116649aee8d575f5604" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -1568,7 +1572,8 @@
               "peers": { "252": "0x999dfabe3b1cc2ef66eb032eea42fea329bba168" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xd75787ba9aba324420d522bda84c08c87e5099b1": {
@@ -1594,7 +1599,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xa3d68b74bf0528fdd07263c60d6488749044914b": {
@@ -1620,7 +1626,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -1633,7 +1640,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x7c050be1dded733bd44116b60a8a35125ba47459": {
@@ -1646,7 +1654,8 @@
       "assetGroup": "RSETH",
       "currencyId": "rsETHWrapper::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x64cd73f835b8df04e29ae08e778bf21fcca069e1": {
@@ -1729,7 +1738,8 @@
           "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x50c42deacd8fc9773493ed674b675be577f2634b": {
@@ -2345,7 +2355,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36800/thumb/solvBTC.png?1719810684",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "146",
@@ -2370,7 +2383,8 @@
               "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xd3dce716f3ef535c5ff8d041c1a41c3bd89b97ae": {
@@ -2416,7 +2430,8 @@
               "peers": { "252": "0x88aa7854d3b2daa5e37e7ce73a1f39669623a361" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xe4a4353cd8f008f1a70f1a564535990479e8ceb7": {
@@ -3217,7 +3232,8 @@
       "currencyId": "Tether USD::USDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x9bcea390ff97e0d3362bf726820776a4df8add9a": {
@@ -3328,7 +3344,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0xb97af8cbd08d182cc118439ff5d4b547ec16258c": {
@@ -3360,7 +3377,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/USDa.webp",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f": {
       "chainId": "146",
@@ -3370,7 +3390,8 @@
       "symbol": "sUSDa",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
     },
     "0x6646248971427b80ce531bdd793e2eb859347e55": {
       "chainId": "146",
@@ -3615,7 +3636,8 @@
       "props": {
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0xf6f87073cf8929c206a77b0694619dc776f89885": {
@@ -4019,7 +4041,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/crvUSD.webp",
       "assetGroup": "CRVUSD",
       "currencyId": "Curve.Fi USD Stablecoin::crvUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
+      }
     },
     "0xe5fb2ed6832def99dde57c0b9d9a56537c89121d": {
       "chainId": "146",
@@ -4063,7 +4088,8 @@
               "peers": { "252": "0xd86fbbd0c8715d2c1f40e451e5c3514e65e7576a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x97a10beebb25e0ebfa55ca0a7d00e37afe957dea": {
@@ -4209,7 +4235,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "river", "name": "River", "kind": "protocol" }
       }
     },
     "0x3a7ba84bbe869ed318e654dd9b6ff3cf6d531e91": {
@@ -4473,7 +4500,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de": {
@@ -4541,7 +4569,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf05a207442f14e446b0e32b12d2043bfc68cb1c9.png",
       "assetGroup": "BOLD Stablecoin::BOLD",
       "currencyId": "BOLD Stablecoin::BOLD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+      }
     },
     "0x8ed344e89527c6ce382fd1e23b4d6d4c2865b6a9": {
       "chainId": "146",

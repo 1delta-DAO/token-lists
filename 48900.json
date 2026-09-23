@@ -12,7 +12,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -25,7 +26,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -51,7 +53,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x80137510979822322193fc997d400d5a6c747bf7": {
@@ -64,7 +67,12 @@
       "assetGroup": "STONE",
       "currencyId": "StakeStone Ether::STONE",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0xf0e673bc224a8ca3ff67a61605814666b1234833": {
@@ -77,7 +85,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped Liquid Staked ETH::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x58024021fe3ef613fa76e2f36a3da97eb1454c36": {
@@ -110,7 +119,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/52629/thumb/USDT.png?1733824032",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xa608512bbc9934e4b1ddecf0f5fb38b6ad93308d": {
       "chainId": "48900",
@@ -155,7 +167,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x3b952c8c9c44e8fe201e2b26f6b2200203214cff": {
@@ -167,7 +180,11 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000015/0x3b952c8c9c44e8fe201e2b26f6b2200203214cff/small/token-logo.svg",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x5b77baa28e134444ca5cbb67e4e5691087ed28fa": {
       "chainId": "48900",
@@ -188,7 +205,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000015/0x19df5689cfce64bc2a55f7220b0cd522659955ef/small/token-logo.svg",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x4b03831043082e3e5191218ad5331e99aaac4a81": {
       "chainId": "48900",
@@ -252,7 +272,8 @@
               "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0xd8b29106d4cebad087c30b10c0e41baa3a9ea703": {
@@ -285,7 +306,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },
     "0x0000000000000000000000000000000000000000": {

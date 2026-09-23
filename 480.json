@@ -13,7 +13,8 @@
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
@@ -39,7 +40,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x79a02482a880bce3f13e09da970dc34db4cd24d1": {
@@ -51,7 +53,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/35218/large/USDC_Icon.png?1707908537",
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "480",
@@ -62,7 +68,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/7598/large/wrapped_bitcoin_wbtc.png?1696507857",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "480",
@@ -117,7 +126,10 @@
       "symbol": "EURC",
       "logoURI": "https://cdn.morpho.org/assets/logos/eurc.svg",
       "assetGroup": "EURC::EURC",
-      "currencyId": "EURC::EURC"
+      "currencyId": "EURC::EURC",
+      "props": {
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d": {
       "chainId": "480",

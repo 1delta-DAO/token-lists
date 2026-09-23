@@ -13,7 +13,8 @@
       "currencyId": "Midas mBASIS::MBASIS",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0xdd629e5241cbc5919847783e6c96b2de4754e438": {
@@ -27,7 +28,8 @@
       "currencyId": "Midas mTBILL::MTBILL",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -53,7 +55,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x9121b153bbcf8c23f20ee43b494f08760b91ad64": {
@@ -108,7 +111,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39662/thumb/tether.png?1723525619",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Etherlink)::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x796ea11fa2dd751ed01b53c372ffdb4aaa8f00f9": {
       "chainId": "42793",
@@ -119,7 +125,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39584/thumb/USDC-icon.webp?1723013425",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Etherlink)::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xfc24f770f94edbca6d6f885e12d4317320bcb401": {
       "chainId": "42793",
@@ -141,7 +151,10 @@
       "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xaa40a1cc1561c584b675cbd12f1423a32e2a0d8c": {
       "chainId": "42793",

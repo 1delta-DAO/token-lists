@@ -12,7 +12,8 @@
       "assetGroup": "puffer cat::pcat::fuel",
       "currencyId": "puffer cat::pcat",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
+        "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
     "0x239ed6e12b7ce4089ee245244e3bf906999a6429c2a9a445a1e1faf56914a4ab": {
@@ -25,7 +26,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xbae80f7fb8aa6b90d9b01ef726ec847cc4f59419c4d5f2ea88fec785d1b0e849": {
@@ -38,7 +40,8 @@
       "assetGroup": "RSETH",
       "currencyId": "KelpDAO Restaked ETH::rsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xf3f9a0ed0ce8eac5f89d6b83e41b3848212d5b5f56108c54a205bb228ca30c16": {
@@ -51,7 +54,12 @@
       "assetGroup": "RETH",
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "issuer": {
+          "id": "rocketpool",
+          "name": "Rocket Pool",
+          "kind": "protocol"
+        }
       }
     },
     "0x1a7815cc9f75db5c24a5b0814bfb706bb9fe485333e98254015de8f48f84c67b": {
@@ -64,7 +72,8 @@
       "assetGroup": "WSTETH",
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x91b3559edb2619cde8ffb2aa7b3c3be97efd794ea46700db7092abeee62281b0": {
@@ -77,7 +86,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x1493d4ec82124de8f9b625682de69dcccda79e882b89a55a8c737b12de67bd68": {
@@ -90,7 +100,8 @@
       "assetGroup": "PZETH",
       "currencyId": "Renzo Restaked LST::pzETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0xafd219f513317b1750783c6581f55530d6cf189a5863fd18bd1b3ffcec1714b4": {
@@ -103,7 +114,8 @@
       "assetGroup": "Manta mETH::Manta mETH",
       "currencyId": "Manta mETH::Manta mETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "mantle" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "mantle" },
+        "issuer": { "id": "mantle", "name": "Mantle", "kind": "protocol" }
       }
     },
     "0x0aa5eb2bb97ca915288b653a2529355d4dc66de2b37533213f0e4aeee3d3421f": {
@@ -116,7 +128,8 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0x7a4f087c957d30218223c2baaaa365355c9ca81b6ea49004cfb1590a5399216f": {
@@ -129,7 +142,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x642a5db59ec323c2f846d4d4cf3e58d78aff64accf4f8f6455ba0aa3ef000a3b": {
@@ -142,7 +156,8 @@
       "assetGroup": "METH",
       "currencyId": "mETH::mETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "mantle" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "mantle" },
+        "issuer": { "id": "mantle", "name": "Mantle", "kind": "protocol" }
       }
     },
     "0x54c24f6299c5483f4bf347f3c4a06169a259b3b11f4f4d1a5fedb5330b224a9e": {
@@ -8487,7 +8502,8 @@
       "assetGroup": "Wrapped Binance Beacon ETH::wBETH",
       "currencyId": "wbETH::wbETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "binance" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "binance" },
+        "issuer": { "id": "binance", "name": "Binance", "kind": "cex" }
       }
     },
     "0x962792286fbc9b1d5860b4551362a12249362c21594c77abf4b3fe2bbe8d977a": {
@@ -8549,7 +8565,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SolvBTC.webp",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x9e46f919fbf978f3cad7cd34cca982d5613af63ff8aab6c379e4faa179552958": {
       "chainId": "fuel",
@@ -8562,7 +8581,8 @@
       "currencyId": "Savings Dai::sDAI",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "DAI", "base": "USD" }
+        "savings": { "underlying": "DAI", "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0xa0265fb5c32f6e8db3197af3c7eb05c48ae373605b8165b6f4a51c5b0ba4812e": {
@@ -8574,7 +8594,10 @@
       "logoURI": "https://verified-assets.fuel.network/images/usdt.svg",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x286c479da40dc953bddc3bb4c453b608bba2e0ac483b077bd475174115395e6b": {
       "chainId": "fuel",
@@ -8585,7 +8608,11 @@
       "logoURI": "https://verified-assets.fuel.network/images/usdc.svg",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xb6133b2ef9f6153eb869125d23dcf20d1e735331b5e41b15a6a7a6cec70e8651": {
       "chainId": "fuel",
@@ -8596,7 +8623,10 @@
       "logoURI": "https://verified-assets.fuel.network/images/USDe.svg",
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
+      }
     },
     "0xd05563025104fc36496c15c7021ad6b31034b0e89a356f4f818045d1f48808bc": {
       "chainId": "fuel",
@@ -8609,7 +8639,8 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x78d4522ec607f6e8efb66ea49439d1ee48623cf763f9688a8eada025def033d9": {

@@ -25,6 +25,7 @@ import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
 import { lookupLstGroup } from './lst/lstGroupMap'
 import { lookupDenomination } from './denomination/denominationMap'
+import { lookupIssuer } from './issuer/issuerMap'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -354,6 +355,15 @@ async function readTokenLists(): Promise<{
                     // lst.json source list hasn't already classified this token.
                     const lstGroup = impostor ? undefined : lookupLstGroup(assetGroup)
                     if (lstGroup && !tokenProps.lst) tokenProps = { ...tokenProps, lst: lstGroup }
+
+                    // Issuer overlay — WHOSE credit this is, keyed by assetGroup because a
+                    // desk does not change per chain (bridged USDC is still Circle's). Orthogonal
+                    // to every other overlay here: `stablecoin.base` says what money it is worth,
+                    // `lst.provider` only covers staking, and neither answers it for the dollar
+                    // menu. Impostor-guarded like the other group-keyed overlays — a ticker-copy
+                    // must never inherit a real desk's name through a shared group.
+                    const issuer = impostor ? undefined : lookupIssuer(assetGroup)
+                    if (issuer && !tokenProps.issuer) tokenProps = { ...tokenProps, issuer }
 
                     // Denomination overlay (canonical base ETH/BTC/native), keyed by assetGroup.
                     // Only applied to base tokens — skipped when the token is a derivative

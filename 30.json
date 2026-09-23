@@ -13,7 +13,8 @@
       "currencyId": "Midas mTBILL::MTBILL",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -26,7 +27,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -52,7 +54,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xf1376bcef0f78459c0ed0ba5ddce976f1ddf51f4": {
@@ -65,7 +68,8 @@
       "assetGroup": "BRBTC",
       "currencyId": "Bedrock BTC::BRBTC",
       "props": {
-        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" }
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
     "0x2acc95758f8b5f583470ba265eb685a8f45fc9d5": {
@@ -257,7 +261,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0xc1411567d2670e24d9c4daaa7cda95686e1250aa": {
@@ -369,7 +374,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70631/thumb/usdt.jpg?1762857609",
       "assetGroup": "USDT",
       "currencyId": "USDT::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xb52e582263c1d0189b3cc1402c1b7205b7f2e9ba": {
       "chainId": "30",
@@ -391,7 +399,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69316/thumb/usdc.jpg?1758186473",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590": {
       "chainId": "30",
@@ -446,7 +458,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xd3c8da379d71a33bfee8875f87ac2748beb1d58d": {
@@ -501,7 +514,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x938d84942f5d924070a6bb82f8e56a5e2b3098a4": {

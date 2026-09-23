@@ -13,7 +13,12 @@
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "rocketpool",
+          "name": "Rocket Pool",
+          "kind": "protocol"
+        }
       }
     },
     "0x85008ae6198bc91ac0735cb5497cf125ddaac528": {
@@ -27,7 +32,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xa45d4121b3d47719ff57a947a9d961539ba33204": {
@@ -40,7 +46,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x96147a9ae9a42d7da551fd2322ca15b71032f342": {
@@ -54,7 +61,12 @@
       "currencyId": "StakeStone Ether::STONE",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -67,7 +79,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e": {
@@ -80,7 +93,8 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -107,7 +121,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000021/0x05d032ac25d322df992303dca074ee7392c117b9/small/token-logo.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "60808",
@@ -118,7 +135,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000021/0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3/small/token-logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xbba2ef945d523c4e2608c9e1214c2cc64d4fc2e2": {
       "chainId": "60808",
@@ -140,7 +160,11 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000021/0xe75d0fb2c24a55ca1e3f96781a2bcc7bdba058f0/small/token-logo.png",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x6c851f501a3f24e29a8e39a29591cddf09369080": {
       "chainId": "60808",
@@ -151,7 +175,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000021/0x6c851f501a3f24e29a8e39a29591cddf09369080/small/token-logo.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0xba20a5e63eeefffa6fd365e7e540628f8fc61474": {
       "chainId": "60808",
@@ -218,7 +245,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "river", "name": "River", "kind": "protocol" }
       }
     },
     "0xc96de26018a54d51c097160568752c4e3bd6c364": {
@@ -240,7 +268,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://tokens.debridge.finance/Logo/100000021/0x541fd749419ca806a8bc7da8ac23d346f2df8b77/small/token-logo.png",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x9998e05030aee3af9ad3df35a34f5c51e1628779": {
       "chainId": "60808",
@@ -399,7 +430,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0x4cbe838e2bd3b46247f80519b6ac79363298aa09": {

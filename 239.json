@@ -25,7 +25,8 @@
               "peers": { "1": "0x6cea302b297bb8c49e56d04cc080480822795848" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x37d6382b6889ccef8d6871a8b60e667115eddbcf": {
@@ -51,7 +52,8 @@
               "peers": { "1": "0xa4931a9f9aaf79057334371d6f62164743f97b18" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
     "0x5448bbf60ee2edbcd32f032f3294982f4ad1119e": {
@@ -64,7 +66,8 @@
       "assetGroup": "RSETH",
       "currencyId": "rsETHWrapper::wrsETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -90,7 +93,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x057b5219486e8cbdfef65a0f090ad72b2d8fc81d": {
@@ -160,7 +164,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv" }
       }
     },
     "0x35533f54740f1f1aa4179e57ba37039dfa16868b": {
@@ -193,7 +198,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv" }
       }
     },
     "0x4772d2e014f9fc3a820c444e3313968e9a5c8121": {
@@ -207,7 +213,8 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0x51a30e647d33a044967fa3dbb04d6ed6f45455f6": {
@@ -276,7 +283,8 @@
               "peers": { "1": "0x59ea2825d8ad7d60cc6aa77ffbdd0e89c0fbf539" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0x83235a46726803c1980a28ce283d90f6281b2530": {
@@ -297,7 +305,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USD₮",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xb1b385542b6e80f77b94393ba8342c3af699f15c": {
       "chainId": "239",
@@ -330,7 +341,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0xb63b9f0eb4a6e6f191529d71d4d88cc8900df2c9": {

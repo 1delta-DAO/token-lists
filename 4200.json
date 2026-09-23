@@ -12,7 +12,12 @@
       "assetGroup": "STONE",
       "currencyId": "StakeStone Ether::STONE",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0x1760900aca15b90fa2eca70ce4b4ec441c2cf6c5": {
@@ -26,7 +31,8 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x825e2cfbb71a92e09ef73d9e96d15ce2e0f63e9f": {
@@ -68,7 +74,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37382/thumb/usdt_%281%29.png?1714215585",
       "assetGroup": "USDT",
       "currencyId": "Merlin USDT::M-USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x6b4ecada640f1b30dbdb68f77821a03a5f282ebe": {
       "chainId": "4200",
@@ -79,7 +88,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37380/thumb/usdc.jpeg?1714215042",
       "assetGroup": "USDC",
       "currencyId": "Merlin USDC::M-USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x4fd67c2d9e8c4fdd9c66954bafe124ca50fc1819": {
       "chainId": "4200",
@@ -173,7 +186,8 @@
       "props": {
         "wnative": true,
         "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0x480e158395cc5b41e5584347c495584ca2caf78d": {
@@ -255,7 +269,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SolvBTC.webp",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x4dcb91cc19aadfe5a6672781eb09abad00c19e4c": {
       "chainId": "4200",

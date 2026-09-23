@@ -59,7 +59,8 @@
           "subType": "gold",
           "issuer": "tether",
           "underlying": "XAU"
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xb5686c4f60904ec2bda6277d6fe1f7caa8d1b41a": {
@@ -73,7 +74,12 @@
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "rocketpool",
+          "name": "Rocket Pool",
+          "kind": "protocol"
+        }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -86,7 +92,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0xc3eacf0612346366db554c991d7858716db09f58": {
@@ -113,7 +120,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
@@ -127,7 +135,8 @@
       "currencyId": "brBTC::brBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
     "0xf469fbd2abcd6b9de8e169d128226c0fc90a012e": {
@@ -140,7 +149,8 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -170,7 +180,8 @@
       "props": {
         "permit": { "type": 1, "version": "2" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x7a06c4aef988e7925575c50261297a946ad204a8": {
@@ -195,7 +206,8 @@
       "currencyId": "Tether USD::USDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xaa40c0c7644e0b2b224509571e10ad20d9c4ef28": {
@@ -251,7 +263,10 @@
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0xCAbAE6f6Ea1ecaB08Ad02fE02ce9A44F09aebfA2/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
       "chainId": "43111",
@@ -278,7 +293,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0x1596be338b999e2376675c908168a7548c8b0525": {
@@ -290,7 +306,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/40143/standard/cbbtc.webp",
       "assetGroup": "CBBTC",
       "currencyId": "Coinbase Wrapped BTC::cbBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
     },
     "0x1b529b888d15711b4baeb5a3b12465dc3e2520a3": {
       "chainId": "43111",
@@ -513,7 +532,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "river", "name": "River", "kind": "protocol" }
       }
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {
@@ -535,7 +555,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x54df33333c78c13b1448cb35a0e49f75c3d4347f": {
       "chainId": "43111",
@@ -596,7 +619,11 @@
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x45c32fa6df82ead1e2ef74d17b76547eddfaff89/small/token-logo.png",
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "FRAX" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "FRAX",
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0xdf0e8f7b7fda30605ca5665161f9f3ddb489c870": {
       "chainId": "43111",

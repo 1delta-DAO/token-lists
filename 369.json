@@ -17,7 +17,8 @@
           "subType": "gold",
           "issuer": "tether",
           "underlying": "XAU"
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xa1077a294dde1b09bb078844df40758a5d0f9a27": {
@@ -64,7 +65,11 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x15D38573d2feeb82e7ad5187aB8c1D52810B1f07.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin from Ethereum::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x02dcdd04e3f455d838cd1249292c58f3b79e3c3c": {
       "chainId": "369",
@@ -86,7 +91,10 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0xb17D901469B9208B17d916112988A3FeD19b5cA1.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC from Ethereum::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xefd766ccb38eaf1dfd701853bfce31359239f305": {
       "chainId": "369",
@@ -97,7 +105,10 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0xefD766cCb38EaF1dfd701853BFCe31359239F305.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin from Ethereum::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x0cb6f5a34ad42ec934882a05265a7d5f59b51a2f": {
       "chainId": "369",
@@ -108,7 +119,10 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x0Cb6F5a34ad42ec934882A05265A7d5F59b51A2f.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD from Ethereum::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x2fa878ab3f87cc1c9737fc071108f904c0b0c95d": {
       "chainId": "369",
@@ -540,7 +554,10 @@
       "symbol": "USDT",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0xdAC17F958D2ee523a2206206994597C13D831ec7.png",
       "assetGroup": "Tether USD::USDT",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xec7caf2f5b4ec2574f214824d7f1ecef6fe6032b": {
       "chainId": "369",
@@ -860,7 +877,10 @@
       "symbol": "LUSD",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0x5f98805A4E8be255a32880FDeC7F6728C6568bA0.png",
       "assetGroup": "LUSD Stablecoin::LUSD",
-      "currencyId": "LUSD Stablecoin::LUSD"
+      "currencyId": "LUSD Stablecoin::LUSD",
+      "props": {
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+      }
     },
     "0xc669928185dbce49d2230cc9b0979be6dc797957": {
       "chainId": "369",
@@ -5163,7 +5183,10 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x8b84bE5ED8071F6ACA12aF3311cf41C3bc673B84.png",
       "assetGroup": "Savings USDS from Ethereum::sUSDS",
       "currencyId": "Savings USDS from Ethereum::sUSDS",
-      "props": { "savings": { "underlying": "USDS", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "USDS", "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x1109d54a43c17c3b3d7613b0e0d0e02c984153e1": {
       "chainId": "369",

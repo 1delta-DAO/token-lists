@@ -13,7 +13,8 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x12d8ce035c5de3ce39b1fdd4c1d5a745eaba3b8c": {
@@ -27,7 +28,8 @@
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
     "0xb23c20efce6e24acca0cef9b7b7aa196b84ec942": {
@@ -41,7 +43,12 @@
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "rocketpool",
+          "name": "Rocket Pool",
+          "kind": "protocol"
+        }
       }
     },
     "0x5d8cff95d7a57c0bf50b30b43c7cc0d52825d4a9": {
@@ -55,7 +62,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x7c2af1fb79d0b1c67d4eb802d44c673d0a1d2c04": {
@@ -69,7 +77,8 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xcd68dff4415358c35a28f96fd5bf7083b22de1d6": {
@@ -83,7 +92,8 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -108,7 +118,8 @@
               "oapp": "frax-finance"
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x43edd7f3831b08fe70b7555ddd373c8bf65a9050": {
@@ -133,7 +144,8 @@
               "oapp": "frax-finance"
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x8c7d118b5c47a5bcbd47cc51789558b98dad17c5": {
@@ -147,7 +159,8 @@
       "currencyId": "rsETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" }
+        "risk": { "score": 5, "source": "default" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x4f9a0e7fd2bf6067db6994cf12e4495df938e6e9": {
@@ -174,7 +187,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/35143/thumb/usdt_logo.png?1707467554",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xa8ce8aee21bc2a48a5ef670afcc9274c7bbbc035": {
       "chainId": "1101",
@@ -185,7 +201,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/35263/thumb/USDC_Icon.png?1708009475",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xea034fb02eb1808c2cc3adbc15f447b93cbe08e1": {
       "chainId": "1101",
@@ -196,7 +216,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39593/thumb/wbtc.png?1723016350",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xc5015b9d9161dca7e18e32f6f25c4ad850731fd4": {
       "chainId": "1101",
@@ -207,7 +230,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39806/thumb/dai.png?1724126469",
       "assetGroup": "DAI",
       "currencyId": "Bridged DAI (Polygon zkEVM)::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x696c0ba235444607a1c4b93e6b34ba14928c1b60": {
       "chainId": "1101",
@@ -278,7 +304,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/13422/thumb/frax-logo.png?1739780303",
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "FRAX" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "FRAX",
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x68286607a1d43602d880d349187c3c48c0fd05e6": {
       "chainId": "1101",
@@ -298,7 +328,10 @@
       "symbol": "FXS",
       "logoURI": "https://assets.coingecko.com/coins/images/13423/thumb/Frax_Shares_icon.png?1696513183",
       "assetGroup": "FXS",
-      "currencyId": "Frax Share::FXS"
+      "currencyId": "Frax Share::FXS",
+      "props": {
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x40df0c3bbaae5ea3a509d8f2aa9e086776c98e6c": {
       "chainId": "1101",
@@ -486,7 +519,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x1509706a6c66ca549ff0cb464de88231ddbe213b": {
       "chainId": "1101",
@@ -652,7 +688,8 @@
               "oapp": "frax-finance"
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
@@ -677,7 +714,8 @@
               "oapp": "frax-finance"
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x6a92b1e99de09f71cd96bc91f934826d96b8b26e": {
@@ -730,7 +768,8 @@
               "oapp": "frax-finance"
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x11175910c6f02913782777840ac008f30720046f": {

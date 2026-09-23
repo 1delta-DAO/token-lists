@@ -50,7 +50,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xfc00000000000000000000000000000000000006": {
@@ -101,7 +102,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x157743261c3ba961e92421b268a881aece450d41": {
@@ -114,7 +116,8 @@
       "assetGroup": "Inception Restaked sFRAX::INSFRAX",
       "currencyId": "Inception Restaked sFRAX::INSFRAX",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
+        "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -127,7 +130,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::EZETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x2fc7447f6cf71f9aa9e7ff8814b37e55b268ec91": {
@@ -149,7 +153,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x4d15ea9c2573addaed814e48c148b5262694646a.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xdcc0f2d8f90fde85b10ac1c8ab57dc0ae946a543": {
       "chainId": "252",
@@ -160,7 +167,11 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xdcc0f2d8f90fde85b10ac1c8ab57dc0ae946a543.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xf6a011fac307f55cd4ba8e43b8b93f39808ddaa9": {
       "chainId": "252",
@@ -171,7 +182,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf6a011fac307f55cd4ba8e43b8b93f39808ddaa9.png",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0xfc00000000000000000000000000000000000001": {
       "chainId": "252",
@@ -221,7 +235,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xfc00000000000000000000000000000000000002": {
@@ -273,7 +288,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xfc00000000000000000000000000000000000008": {
@@ -325,7 +341,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
@@ -350,7 +367,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x09eadcbaa812a4c076c3a6cde765dc4a22e0d775": {
@@ -364,7 +382,8 @@
       "currencyId": "Savings Dai::sDAI",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "DAI", "base": "USD" }
+        "savings": { "underlying": "DAI", "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
@@ -391,7 +410,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0xdebb8a79b025b2fc2ca506f0c69497b60b91235c": {
@@ -463,7 +483,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/26476/thumb/uausdc_D_3x.png?1696525548",
       "assetGroup": "USDC",
       "currencyId": "Axelar Bridged USDC::AXLUSDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x1217bfe6c773eec6cc4a38b5dc45b92292b6e189": {
       "chainId": "252",
@@ -556,7 +580,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
@@ -568,7 +593,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39284/thumb/Circle_Agora_White_on_Olive_1080px.png?1722961274",
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
+      }
     },
     "0xfc00000000000000000000000000000000000004": {
       "chainId": "252",
@@ -632,7 +660,8 @@
               "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x368ec3d7c755abea7d48b0c006d282a1aba2f898": {

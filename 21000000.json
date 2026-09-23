@@ -12,7 +12,8 @@
       "assetGroup": "WEETH",
       "currencyId": "Wrapped eETH::weETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -25,7 +26,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x657e8c867d8b37dcc18fa4caead9c45eb088c642": {
@@ -38,7 +40,8 @@
       "assetGroup": "ether.fi BTC::eBTC",
       "currencyId": "ether.fi BTC::eBTC",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xf469fbd2abcd6b9de8e169d128226c0fc90a012e": {
@@ -51,7 +54,8 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -75,7 +79,8 @@
               "oapp": "solv-protocol"
             }
           ]
-        }
+        },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xda5ddd7270381a7c2717ad10d1c0ecb19e3cdfb2": {
@@ -102,7 +107,11 @@
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/usdc.svg",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x485bbc4f98c071c9bd74ac255262e61f866f071a": {
       "chainId": "21000000",
@@ -165,7 +174,8 @@
               "oapp": "solv-protocol"
             }
           ]
-        }
+        },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f": {
@@ -176,7 +186,8 @@
       "symbol": "sUSDa",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/susda.svg",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
       "chainId": "21000000",
@@ -187,7 +198,10 @@
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/usda.svg",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
       "chainId": "21000000",
@@ -243,7 +257,8 @@
               "oapp": "usdt0"
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x9cf9f00f3498c2ac856097087e041523dfdd71ff": {

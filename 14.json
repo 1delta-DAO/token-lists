@@ -808,7 +808,8 @@
       "assetGroup": "Firelight stXRP::stXRP",
       "currencyId": "Firelight stXRP::stXRP",
       "props": {
-        "lst": { "type": "restaking", "asset": "XRP", "provider": "firelight" }
+        "lst": { "type": "restaking", "asset": "XRP", "provider": "firelight" },
+        "issuer": { "id": "firelight", "name": "Firelight", "kind": "protocol" }
       }
     },
     "0x772c974ff4f947f490627b6668450d3a6e0564e7": {
@@ -960,7 +961,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x22757fb83836e3f9f0f353126cacd3b1dc82a387": {
@@ -1133,7 +1135,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69316/thumb/usdc.jpg?1758186473",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x6cd3a5ba46fa254d4d2e3c2b37350ae337e94a0f": {
       "chainId": "14",

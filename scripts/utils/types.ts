@@ -486,6 +486,48 @@ export interface TokenProps {
     provider?: string
   }
   /**
+   * WHOSE PROMISE the holder is carrying: the protocol, company or institution
+   * whose solvency, administration and redemption terms the asset depends on.
+   * `sky` for USDS / sUSDS / DAI, `ethena` for USDe / sUSDe / USDtb, `circle`
+   * for USDC / EURC.
+   *
+   * Deliberately NOT any of the axes that already exist and are routinely
+   * confused with it:
+   *   - the MONEY it is worth (`stablecoin.base` / `savings.base` /
+   *     `denomination`) — USDe and USDC are both 'USD' and are not the same
+   *     credit;
+   *   - the VENUE that hosts it (a Morpho vault holding sUSDe is Ethena's
+   *     credit on Morpho's rails) or its curator — both are lender-side
+   *     dimensions, never a property of the token;
+   *   - the CHAIN or the bridge it arrived over — USDC.e stays `circle`, the
+   *     bridge belongs in the risk overlay.
+   *
+   * Keyed by assetGroup in the issuer overlay (issuer/issuerMap.ts), because an
+   * issuer is chain-independent: every deployment of the group carries it.
+   * Absent on assets that have no issuer at all — WETH, BNB, AVAX and the other
+   * gas bases are nobody's liability.
+   */
+  issuer?: {
+    /** stable lowercase slug, the filter/group key: 'sky' | 'ethena' | 'circle' | … */
+    id: string
+    /** display name, the only thing a chip can render: 'Sky' | 'Ethena' | 'Ether.fi' */
+    name: string
+    /**
+     * What KIND of promise it is. Circle and Tether are issuers in a different
+     * sense than Sky: a redemption desk vs a governance process.
+     *   `protocol`    — on-chain, governed by a DAO / contracts (sky, ethena, curve)
+     *   `institution` — an off-chain legal entity with a redemption desk (circle, tether, paxos)
+     *   `cex`         — an exchange's own wrapper (coinbase, binance)
+     */
+    kind?: 'protocol' | 'institution' | 'cex'
+    /**
+     * Parent issuer id when this is a product line rather than the desk itself
+     * (`spark` → `sky`). Facets group on `id`; a consumer that wants the family
+     * folds by `parent`.
+     */
+    parent?: string
+  }
+  /**
    * Asset risk overlay, sourced from the risk-data repository (data/asset-risks.json).
    * This is a lagging annotation — risk-data is computed downstream of token-lists.
    * Volatile fields (e.g. liquidityUsd) are intentionally excluded to avoid list churn.
@@ -623,3 +665,7 @@ export type OftRegistry = { [chainId: string]: { [address: string]: OftProps } }
 export type StablecoinGroupMap = { [assetGroup: string]: StablecoinProps }
 /** assetGroup -> savings overlay (underlying/base is chain-independent) */
 export type SavingsGroupMap = { [assetGroup: string]: SavingsProps }
+/** Issuer props shape, derived from TokenProps */
+export type IssuerProps = NonNullable<TokenProps['issuer']>
+/** assetGroup -> issuer attribution (chain-independent: the desk does not change per chain) */
+export type IssuerGroupMap = { [assetGroup: string]: IssuerProps }

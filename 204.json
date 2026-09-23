@@ -13,7 +13,8 @@
       "currencyId": "Ankr Staked BNB::ANKRBNB",
       "props": {
         "lst": { "type": "staking", "asset": "BNB", "provider": "ankr" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -71,7 +72,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/32613/thumb/usdt_opbnb_bridged.png?1698734789",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xaf9fe3b5ccdae78188b1f8b9a49da7ae9510f151": {
       "chainId": "204",
@@ -227,7 +231,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31079/thumb/FDUSD_icon_black.png?1731097953",
       "assetGroup": "FDUSD",
       "currencyId": "First Digital USD::FDUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "first-digital",
+          "name": "First Digital",
+          "kind": "institution"
+        }
+      }
     },
     "0x7c6b91d9be155a6db01f749217d76ff02a7227f2": {
       "chainId": "204",

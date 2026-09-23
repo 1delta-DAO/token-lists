@@ -114,7 +114,10 @@
       "logoURI": "https://ss.new.klayswap.com/data/img/token/0x5c13e303a62fc5dedf5b52d66873f2e59fedadc2/icon.svg?v=1709703032569",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x608792deb376cce1c9fa4d0e6b7b44f507cffa6a": {
       "chainId": "8217",
@@ -125,7 +128,11 @@
       "logoURI": "https://ss.new.klayswap.com/data/img/token/0x608792deb376cce1c9fa4d0e6b7b44f507cffa6a/icon.svg?v=1709794012177",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x19aac5f612f524b754ca7e7c41cbfa2e981a4432": {
       "chainId": "8217",
@@ -237,7 +244,10 @@
       "logoURI": "https://api.swapscanner.io/v0/tokens/0xcb2c7998696ef7a582dfd0aafadcd008d03e791a/icon",
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0xac9c1e4787139af4c751b1c0fadfb513c44ed833": {
       "chainId": "8217",
@@ -542,7 +552,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Stargate)::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xe2053bcf56d2030d2470fb454574237cf9ee3d4b": {
       "chainId": "8217",
@@ -553,7 +566,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x6009950e4b05fba0f95fe799ce47b56e2de4a34f": {
       "chainId": "8217",
@@ -4557,7 +4574,8 @@
       "currencyId": "Bridged DAI (Synapse)::DAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0x6270b58be569a7c0b8f47594f191631ae5b2c86c": {
@@ -7947,7 +7965,10 @@
       "symbol": "USDT",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x673547482afa5b629e53f90d6bb94d097e6da0ca/icon",
       "assetGroup": "Tether USD::USDT",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": {
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x0a7d3f0ebf8d3386d5bde41156a23b585dcfc5ca": {
       "chainId": "8217",
@@ -8246,7 +8267,8 @@
       "currencyId": "Wrapped BTC (Synapse)::WBTC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0xcd8fe44a29db9159db36f96570d7a4d91986f528": {
@@ -9078,7 +9100,8 @@
       "symbol": "sUSDa",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
     },
     "0xdc3cf1961b08da169b078f7df6f26676bf6a4ff6": {
       "chainId": "8217",
@@ -9089,7 +9112,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/USDa.webp",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x7132f567e833e7bf633265223e74f3be99be0762": {
       "chainId": "8217",
@@ -9410,7 +9436,10 @@
       "symbol": "WBTC",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x981846be8d2d697f4dfef6689a161a25ffbab8f9/icon",
       "assetGroup": "Wrapped BTC::WBTC",
-      "currencyId": "Wrapped BTC::WBTC"
+      "currencyId": "Wrapped BTC::WBTC",
+      "props": {
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xc1a0e1cb257dcca2265f453d0b60ce7c46261780": {
       "chainId": "8217",
@@ -10906,7 +10935,10 @@
       "symbol": "USDT",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0xb605fa8637afd74ce53986910e7915c9cb48f23f/icon",
       "assetGroup": "USD Tether::USDT",
-      "currencyId": "USD Tether::USDT"
+      "currencyId": "USD Tether::USDT",
+      "props": {
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x684a2aaf3d98bc8ed2c07988e8da9023026ad511": {
       "chainId": "8217",
@@ -10989,7 +11021,8 @@
       "currencyId": "Tether USD::USD₮",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x47cc74d34b6832105c2eb240059f8c16ed29c75f": {

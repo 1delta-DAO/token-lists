@@ -13,7 +13,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 2, "source": "whitelist" }
+        "risk": { "score": 2, "source": "whitelist" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xecc68d0451e20292406967fe7c04280e5238ac7d": {
@@ -27,7 +28,8 @@
       "currencyId": "Bridged FRAX Ether (Axelar)::AXLFRXETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x5a7a183b6b44dc4ec2e3d2ef43f98c5152b1d76d": {
@@ -41,7 +43,8 @@
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
-        "risk": { "score": 3, "category": "LRT", "source": "whitelist" }
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" },
+        "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
     "0x11d8680c7f8f82f623e840130eb06c33d9f90c89": {
@@ -55,7 +58,8 @@
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
     "0x9b4971ac84054597eded7dc7b4b7e8a0c90753b5": {
@@ -68,7 +72,8 @@
       "currencyId": "Mendi Wrapped eETH::meweETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x8a90d208666deec08123444f67bf5b1836074a67": {
@@ -81,7 +86,8 @@
       "currencyId": "Mendi Renzo Restaked ETH::meezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x0684fc172a0b8e6a65cf4684edb2082272fe9050": {
@@ -94,7 +100,8 @@
       "currencyId": "ZeroLend Renzo Restaked ETH::z0ezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0xceed853798ff1c95ceb4dc48f68394eb7a86a782": {
@@ -107,7 +114,8 @@
       "currencyId": "Mendi Wrapped liquid staked Ether 2.0::mewstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x9eb8879231c71bd739967628ca26b72810beead8": {
@@ -120,7 +128,8 @@
       "currencyId": "ZeroLend Lido Staked ETH::z0stETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xb1afd04774c02ae84692619448b08ba79f19b1ff": {
@@ -147,7 +156,8 @@
               "peers": { "252": "0x9abfe1f8a999b0011ecd6116649aee8d575f5604" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116": {
@@ -161,7 +171,12 @@
       "currencyId": "StakeStone Ether::STONE",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0xd2671165570f41bbb3b0097893300b6eb6101e6c": {
@@ -175,7 +190,8 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "whitelist" }
+        "risk": { "score": 4, "source": "whitelist" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -202,7 +218,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -215,7 +232,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x3d4b2132ed4ea0aa93903713a4de9f98e625a5c7": {
@@ -290,7 +308,8 @@
       "currencyId": "Dai Stablecoin::DAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0x4acde18acde7f195e6fb928e15dc8d83d67c1f3a": {
@@ -357,7 +376,10 @@
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/6953.png",
       "assetGroup": "FXS",
       "currencyId": "Frax Share::FXS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x42d4eb291c00a243c7cbc2759b47892ed1852a9d": {
       "chainId": "59144",
@@ -630,7 +652,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xc84f2ce21272f17d92d2a450f1c8567bf0ff448e": {
@@ -698,7 +721,8 @@
           "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x68592c5c98c4f4a8a4bc6da2121e65da3d1c0917": {
@@ -736,7 +760,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": { "score": 2, "source": "whitelist" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f": {
@@ -975,7 +1000,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xdd3b8084af79b9bae3d1b668c0de08ccc2c9429a": {
@@ -989,7 +1015,12 @@
       "currencyId": "Magic Internet Money::MIM",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "abracadabra",
+          "name": "Abracadabra",
+          "kind": "protocol"
+        }
       }
     },
     "0x1f63d0ec7193964142ef6b13d901462d0e5cbb50": {
@@ -1046,7 +1077,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": { "score": 2, "source": "whitelist" },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x7a087e75807f2e5143c161a817e64df6dc5eafe0": {
@@ -1113,7 +1145,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "denomination": "FRAX"
+        "denomination": "FRAX",
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x796000fad0d00b003b9dd8e531ba90cff39e01e0": {
@@ -1173,7 +1206,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0xa334884bf6b0a066d553d19e507315e839409e62": {
@@ -1394,7 +1428,12 @@
       "currencyId": "Monerium EUR emoney::EURE",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "EUR" }
+        "stablecoin": { "base": "EUR" },
+        "issuer": {
+          "id": "monerium",
+          "name": "Monerium",
+          "kind": "institution"
+        }
       }
     },
     "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf": {
@@ -1463,7 +1502,8 @@
       "currencyId": "Liquity USD::LUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0xd96536b77ae5500fe850add2253bcf640e7824c1": {
@@ -1487,7 +1527,8 @@
       "currencyId": "Axelar Wrapped DAI::axlDAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0x2140ea50bc3b6ac3971f9e9ea93a1442665670e4": {
@@ -1613,7 +1654,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0xb838eb4f224c2454f2529213721500faf732bf4d": {
@@ -1917,7 +1959,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x541fd749419ca806a8bc7da8ac23d346f2df8b77": {
@@ -1928,7 +1971,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://static.debank.com/image/bob_token/logo_url/0x59889b7021243db5b1e065385f918316cd90d46c/31a6cb7216c2b772a41a8913cc36f2c0.png",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
       "chainId": "59144",
@@ -1952,7 +1998,8 @@
               "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x0c7921ab4888fd06731898b3ffffeb06781d5f4f": {
@@ -2038,7 +2085,8 @@
               "peers": { "252": "0xd86fbbd0c8715d2c1f40e451e5c3514e65e7576a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x539ae81a166e5e80aed211731563e549c411b140": {
@@ -2112,7 +2160,8 @@
               "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xefd81eec32b9a8222d1842ec3d99c7532c31e348": {
@@ -2234,7 +2283,8 @@
       "currencyId": "Axelar Wrapped USDT::USDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x6c6470898882b65e0275723d883a0d877aade43f": {
@@ -2248,7 +2298,8 @@
       "currencyId": "Bridged USDT (deBridge)::USDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xb448ec505c924944ca8b2c55ef05c299ee0781df": {
@@ -2271,7 +2322,10 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x3432b6a60d23ca0dfca7761b7ab56459d9c964d0/eeccdc91b87a4e2db914d0290eea8e6d.png",
       "assetGroup": "Frax Share::FXS",
       "currencyId": "Frax Share::FXS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x023617babed6cef5da825bea8363a5a9862e120f": {
       "chainId": "59144",
@@ -2449,7 +2503,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x4e559dbccbe87de66c6a9f3f25231096f24c2e28": {
@@ -2464,7 +2519,12 @@
       "props": {
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0x5c247948fd58bb02b6c4678d9940f5e6b9af1127": {

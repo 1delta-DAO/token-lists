@@ -13,7 +13,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x0ce031aed457c870d74914ecaa7971dd3176cdaf": {
@@ -27,7 +28,8 @@
       "currencyId": "Liquid staked Ether 2.0::stETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x54e86315c03217b76a7466c302245fd10ebef25a": {
@@ -41,7 +43,12 @@
       "currencyId": "Yay StakeStone Ether::YAYSTONE",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0x6c460b2c6d6719562d5da43e5152b375e79b9a8b": {
@@ -55,7 +62,8 @@
       "currencyId": "pufETH::PUFETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -68,7 +76,8 @@
       "assetGroup": "XSOLVBTC",
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xba9986d2381edf1da03b0b9c1f8b00dc4aacc369": {
@@ -87,7 +96,8 @@
           "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x3a337a6ada9d885b6ad95ec48f9b75f197b5ae35": {
@@ -105,7 +115,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -132,7 +143,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54974/thumb/wrapped_bitcoin_wbtc.png?1742962734",
       "assetGroup": "WBTC",
       "currencyId": "Bridged WBTC (LayerZero)::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x3b0dc2dac9498a024003609031d973b1171de09e": {
       "chainId": "1868",
@@ -263,7 +277,10 @@
       "symbol": "SolvBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36800/thumb/solvBTC.png?1719810684",
       "assetGroup": "SOLVBTC",
-      "currencyId": "Solv BTC::SolvBTC"
+      "currencyId": "Solv BTC::SolvBTC",
+      "props": {
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x8cd846c404c7267350a2920576816603cd5c6539": {
       "chainId": "1868",
@@ -356,7 +373,8 @@
       "currencyId": "Stargate Bridged USDT0::USDT0",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x139450c2dcef827c9a2a0bb1cb5506260940c9fd": {
@@ -386,7 +404,12 @@
       "assetGroup": "Resolv RLP::RLP",
       "currencyId": "Resolv RLP::RLP",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
+        },
+        "issuer": { "id": "resolv", "name": "Resolv" }
       }
     },
     "0xb1b385542b6e80f77b94393ba8342c3af699f15c": {
@@ -404,7 +427,8 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0x2a52b289ba68bbd02676640aa9f605700c9e5699": {
@@ -422,7 +446,8 @@
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
-        "savings": { "underlying": "USR", "base": "USD" }
+        "savings": { "underlying": "USR", "base": "USD" },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0xf765356c901a064a74fa4560622f21c91048c3d7": {

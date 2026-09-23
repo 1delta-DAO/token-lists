@@ -11,7 +11,11 @@
       "logoURI": "https://raw.githubusercontent.com/protofire/token-list/main/assets/USDC.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" },
+        "denomination": "USDC"
+      }
     },
     "0xac98b49576b1c892ba6bfae08fe1bb0d80cf599c": {
       "chainId": "543210",
@@ -33,7 +37,10 @@
       "logoURI": "https://raw.githubusercontent.com/protofire/token-list/main/assets/USDT.png",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xf1f9e08a0818594fde4713ae0db1e46672ca960e": {
       "chainId": "543210",
@@ -44,7 +51,10 @@
       "logoURI": "https://raw.githubusercontent.com/protofire/token-list/main/assets/WBTC.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" },
+        "denomination": "BTC"
+      }
     },
     "0x1a90dd3dd89e2d2095ed1b40ecc1fe2bbb7614a1": {
       "chainId": "543210",

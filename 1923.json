@@ -13,7 +13,8 @@
       "currencyId": "Bridged RSWETH (Layerzero)::RSWETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -26,7 +27,8 @@
       "assetGroup": "LBTC",
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -39,7 +41,8 @@
       "assetGroup": "STBTC",
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0xc3eacf0612346366db554c991d7858716db09f58": {
@@ -64,7 +67,8 @@
               "oapp": "kelpdao"
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -78,7 +82,8 @@
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x7c98e0779eb5924b3ba8ce3b17648539ed5b0ecc": {
@@ -92,7 +97,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x9cb41cd74d01ae4b4f640ec40f7a60ca1bcf83e7": {
@@ -106,7 +112,8 @@
       "currencyId": "Renzo Restaked LST::pzETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
@@ -130,7 +137,8 @@
               "oapp": "ethena"
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x4200000000000000000000000000000000000006": {
@@ -170,7 +178,8 @@
               "oapp": "etherfi"
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x2826d136f5630ada89c1678b64a61620aab77aea": {
@@ -290,7 +299,8 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
@@ -313,7 +323,8 @@
               "oapp": "ethena"
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
@@ -337,7 +348,8 @@
               "oapp": "wbtc"
             }
           ]
-        }
+        },
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0x102d758f688a4c1c5a80b116bd945d4455460282": {
@@ -349,7 +361,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69528/thumb/usdt0.jpg?1758873945",
       "assetGroup": "USDT",
       "currencyId": "Stargate Bridged USDT0::USDT0",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x80ccfbec4b8c82265abdc226ad3df84c0726e7a3": {
       "chainId": "1923",

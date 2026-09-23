@@ -991,7 +991,8 @@
             }
           ]
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x7dcc39b4d1c53cb31e1abc0e358b43987fef80f7": {
@@ -1017,7 +1018,8 @@
               "peers": { "1": "0xcd2eb13d6831d4602d80e5db9230a57596cdca63" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
@@ -1043,7 +1045,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
     "0x850cdf416668210ed0c36bfff5d21921c7ada3b8": {
@@ -1078,7 +1081,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },
     "0x4186bfc76e2e237523cbc30fd220fe055156b41f": {
@@ -1104,7 +1108,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
@@ -1117,7 +1122,8 @@
       "assetGroup": "EZETH",
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
     "0x3ec3849c33291a9ef4c5db86de593eb4a37fde45": {
@@ -1143,7 +1149,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xec901da9c68e90798bbbb74c11406a32a70652c3": {
@@ -1156,7 +1163,12 @@
       "assetGroup": "STONE",
       "currencyId": "StakeStone Ether::STONE",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stakestone" },
+        "issuer": {
+          "id": "stakestone",
+          "name": "Stakestone",
+          "kind": "protocol"
+        }
       }
     },
     "0x417b0ff8358eb72867da92225cab99bcd5e6f205": {
@@ -1169,7 +1181,8 @@
       "assetGroup": "PUFETH",
       "currencyId": "pufETH::pufETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" }
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
+        "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
     "0xcc0966d8418d412c599a6421b760a847eb169a8c": {
@@ -1195,7 +1208,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
@@ -1208,7 +1222,8 @@
       "assetGroup": "BRBTC",
       "currencyId": "brBTC::brBTC",
       "props": {
-        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" }
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
@@ -1237,7 +1252,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
@@ -1279,7 +1295,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0x2f6f07cdcf3588944bf4c42ac74ff24bf56e7590": {
@@ -1347,7 +1364,11 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x549943e04f40284185054145c6E4e9568C1D3241/logo.png",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x9b6761bf2397bb5a6624a856cc84a3a14dcd3fe5": {
       "chainId": "80094",
@@ -1421,7 +1442,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x1ce0a25d13ce4d52071ae7e02cf1f6606f4c79d3": {
@@ -1485,7 +1507,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
@@ -1514,7 +1537,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "avalon", "name": "Avalon" }
       }
     },
     "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f": {
@@ -1542,7 +1566,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "avalon", "name": "Avalon" }
       }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
@@ -1568,7 +1593,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
@@ -1595,7 +1621,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0xc3827a4bc8224ee2d116637023b124ced6db6e90": {
@@ -1689,6 +1716,11 @@
               }
             }
           ]
+        },
+        "issuer": {
+          "id": "abracadabra",
+          "name": "Abracadabra",
+          "kind": "protocol"
         }
       }
     },
@@ -2025,7 +2057,8 @@
               "peers": { "1": "0x316cd39632cac4f4cdfc21757c4500fe12f64514" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x147c9a7f5265d7ca9a671c3817b212a0cf88856e": {
@@ -2339,7 +2372,8 @@
               "peers": { "1": "0xadc9c900b05f39f48bb6f402a1bae60929f4f9a8" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0xe946dd7d03f6f5c440f68c84808ca88d26475fc5": {
@@ -2467,7 +2501,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0x40a8d9efe6a2c6c9d193cc0a4476767748e68133": {
@@ -2541,7 +2576,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x6698ede14709a9dd8379744cc2d28f276e3d2eac": {
@@ -2586,7 +2622,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x1b25ca174c158440621ff96e4b1262cb5cc8942f": {
@@ -2622,7 +2659,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0x118d2ceee9785eaf70c15cd74cd84c9f8c3eec9a": {
@@ -2671,7 +2709,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv" }
       }
     },
     "0x2a5fc05f71cfc54ddcad19457cee79e3aaf415c9": {
@@ -2951,7 +2990,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0x0f6f337b09cb5131cf0ce9df3beb295b8e728f3b": {
@@ -3024,7 +3064,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x5bad2b7a0a2eee88a4ef05d5470cdedb0ff948ea": {
@@ -3159,7 +3200,8 @@
       "symbol": "USD0++",
       "logoURI": "https://assets.coingecko.com/coins/images/39169/thumb/0x35d8949372d46b7a3d5a56006ae77b215fc69bc0.png?1720798057",
       "assetGroup": "Staked USD0::USD0++",
-      "currencyId": "USD0 Liquid Bond::USD0++"
+      "currencyId": "USD0 Liquid Bond::USD0++",
+      "props": { "issuer": { "id": "usual", "name": "Usual" } }
     },
     "0x589b3b5e75d5475908c6c2ebd1f2f68eeca52ee4": {
       "chainId": "80094",
@@ -3188,7 +3230,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39494/thumb/deUSD_Logo_%281%29.png?1723689002",
       "assetGroup": "Elixir deUSD::DEUSD",
       "currencyId": "deUSD::deUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
+      }
     },
     "0x91a6af4c8cb1673ab0d776828b6b271ac3da9dcb": {
       "chainId": "80094",
@@ -3199,7 +3244,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38272/thumb/USD0LOGO.png?1716962811",
       "assetGroup": "Usual USD::USD0",
       "currencyId": "Usual USD::USD0",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "usual", "name": "Usual" }
+      }
     },
     "0x93f4d0ab6a8b4271f4a28db399b5e30612d21116": {
       "chainId": "80094",
@@ -3233,7 +3281,10 @@
       "symbol": "sdeUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/52847/thumb/Staked_deUSD_%28sdeUSD%29_Logo.png?1734473339",
       "assetGroup": "Elixir Staked deUSD::SDEUSD",
-      "currencyId": "Staked deUSD::sdeUSD"
+      "currencyId": "Staked deUSD::sdeUSD",
+      "props": {
+        "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "80094",

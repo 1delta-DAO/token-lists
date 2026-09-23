@@ -12,7 +12,8 @@
       "assetGroup": "ANKRETH",
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
+        "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
     "0x9e73f99ee061c8807f69f9c6ccc44ea3d8c373ee": {
@@ -25,7 +26,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xb90ccd563918ff900928dc529aa01046795ccb4a": {
@@ -38,7 +40,8 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xef4b763385838fffc708000f884026b8c0434275": {
@@ -95,7 +98,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37606/thumb/mim.png?1714992629",
       "assetGroup": "MIM",
       "currencyId": "Magic Internet Money::MIM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "abracadabra",
+          "name": "Abracadabra",
+          "kind": "protocol"
+        }
+      }
     },
     "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e": {
       "chainId": "250",
@@ -280,7 +290,10 @@
       "symbol": "FXS",
       "logoURI": "https://assets.coingecko.com/coins/images/13423/thumb/Frax_Shares_icon.png?1696513183",
       "assetGroup": "FXS",
-      "currencyId": "Frax Share::FXS"
+      "currencyId": "Frax Share::FXS",
+      "props": {
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x188a168280589bc3e483d77aae6b4a1d26bd22dc": {
       "chainId": "250",
@@ -543,7 +556,11 @@
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x45c32fa6df82ead1e2ef74d17b76547eddfaff89/small/token-logo.png",
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "FRAX" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "FRAX",
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x85dec8c4b2680793661bca91a8f129607571863d": {
       "chainId": "250",
@@ -915,7 +932,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x695921034f0387eac4e11620ee91b1b15a6a09fe": {
       "chainId": "250",
@@ -1072,7 +1092,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/26476/thumb/uausdc_D_3x.png?1696525548",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Axelar)::axlUSDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x44f7237df00e386af8e79b817d05ed9f6fe0f296": {
       "chainId": "250",
@@ -1303,7 +1327,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31185/thumb/anyusdt_32.png?1696530013",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Stargate)::USDT.e",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0x117db78176c8ede4f12fcd29d85cd96b91a4cbbb": {
       "chainId": "250",
@@ -1324,7 +1351,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39848/thumb/USDC.png?1724299290",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Wormhole)::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x28a92dde19d9989f39a49905d7c9c2fac7799bdf": {
       "chainId": "250",
@@ -1550,7 +1581,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31179/thumb/wBTC_32.png?1696530007",
       "assetGroup": "WBTC",
       "currencyId": "Bridged WBTC (Stargate)::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0x49894fcc07233957c35462cfc3418ef0cc26129f": {
       "chainId": "250",
@@ -1721,7 +1755,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31002/thumb/uusdt_D_3x.png?1696529840",
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Axelar)::axlUSDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xffabb85adb5c25d57343547a8b32b62f03814b12": {
       "chainId": "250",
@@ -3737,7 +3774,10 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/fantom/0xD5d5350F42CB484036A1C1aF5F2DF77eAFadcAFF.jpg",
       "assetGroup": "DAI",
       "currencyId": "Axelar Wrapped DAI::axlDAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0x078eef5a2fb533e1a4d487ef64b27df113d12c32": {
       "chainId": "250",
@@ -4093,7 +4133,10 @@
       "symbol": "LUSD",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/arbitrum/0x93b346b6BC2548dA6A1E7d98E9a421B42541425b.jpg",
       "assetGroup": "LUSD Stablecoin::LUSD",
-      "currencyId": "LUSD Stablecoin::LUSD"
+      "currencyId": "LUSD Stablecoin::LUSD",
+      "props": {
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+      }
     },
     "0xd02a30d33153877bc20e5721ee53dedee0422b2f": {
       "chainId": "250",

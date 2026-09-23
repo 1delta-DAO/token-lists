@@ -98,7 +98,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x20c000000000000000000000d479b9f6ec0ceff9": {
@@ -112,7 +113,8 @@
       "currencyId": "Ondo U.S. Dollar Yield::USDY",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "ondo" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0x20c000000000000000000000c412ec89d0c08be5": {
@@ -124,7 +126,10 @@
       "logoURI": "https://coin-images.coingecko.com/coins/images/40143/large/cbbtc.webp?1726136727",
       "assetGroup": "CBBTC",
       "currencyId": "Coinbase Wrapped BTC::cbBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
     },
     "0x20c000000000000000000000b9537d11c60e8b50": {
       "chainId": "4217",
@@ -135,7 +140,11 @@
       "logoURI": "https://esm.sh/gh/tempoxyz/tempo-apps/apps/tokenlist/data/4217/icons/0x20c000000000000000000000b9537d11c60e8b50.svg",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x20c00000000000000000000014f22ca97301eb73": {
       "chainId": "4217",
@@ -157,7 +166,8 @@
               "oapp": "usdt0"
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x20c0000000000000000000000000000000000000": {
@@ -197,7 +207,10 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000003554d28269e0f3c2",
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x20c0000000000000000000000520792dcccccccc": {
       "chainId": "4217",
@@ -225,7 +238,8 @@
               "oapp": "cap"
             }
           ]
-        }
+        },
+        "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
       }
     },
     "0x20c0000000000000000000008ee4fcff88888888": {
@@ -237,7 +251,10 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000008ee4fcff88888888",
       "assetGroup": "Staked cap USD::stcUSD",
       "currencyId": "Staked Cap USD::stcUSD",
-      "props": { "savings": { "underlying": "cUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "cUSD", "base": "USD" },
+        "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
+      }
     },
     "0x20c0000000000000000000005c0bac7cef389a11": {
       "chainId": "4217",
@@ -258,7 +275,10 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000aeed2ec36a54d0e5",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
       "currencyId": "Wrapped Savings rUSD::wsrUSD",
-      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
+      }
     },
     "0x20c0000000000000000000009a4a4b17e0dc6651": {
       "chainId": "4217",
@@ -286,7 +306,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
       }
     },
     "0x20c000000000000000000000ab02d39df30bd17e": {
@@ -304,7 +325,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
       }
     },
     "0x20c000000000000000000000048c8f36df1c9a4a": {
@@ -327,7 +349,10 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c0000000000000000000002f52d5cc21a3207b",
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
+      }
     },
     "0x20c000000000000000000000bd95bfb69fbe6ce3": {
       "chainId": "4217",
@@ -340,7 +365,8 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDe", "base": "USD" }
+        "savings": { "underlying": "USDe", "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x20c000000000000000000000ae247a1130450f09": {
@@ -372,7 +398,8 @@
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
     },
     "0x20c0000000000000000000003158081efd85bfc2": {
@@ -402,7 +429,14 @@
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c000000000000000000000111111111e910f0f",
       "assetGroup": "USD1::USD1",
       "currencyId": "USD1::USD1",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "world-liberty",
+          "name": "World Liberty Financial",
+          "kind": "institution"
+        }
+      }
     },
     "0x20c0000000000000000000006fd9a167923ba194": {
       "chainId": "4217",

@@ -11,7 +11,8 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund Token::JTRSY",
       "currencyId": "Janus Henderson Anemoy Treasury Fund Token::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
@@ -29,7 +30,8 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x4b01436d82dff601281f7ebdf44e73a47d77ee3d": {
@@ -65,7 +67,11 @@
       "logoURI": "https://storage.googleapis.com/socialscan-public-asset/explorer/monad/tokens/USDC.svg",
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x078640a1af5c634a5c9b59644ea9db2bbf4b67c7": {
       "chainId": "1672",
@@ -1048,7 +1054,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66163/thumb/wsrUSD.png?1748500965",
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
       "currencyId": "Wrapped Savings rUSD::wsrUSD",
-      "props": { "savings": { "underlying": "rUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
+      }
     },
     "0x7ab037cc617acd7922a67996d1ba872153aaaed0": {
       "chainId": "1672",
@@ -2191,7 +2200,11 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x745e91ced27d2157f73a9fe5ef36be7c0061701a": {
       "chainId": "1672",
@@ -3077,15 +3090,6 @@
       "assetGroup": "gseh::pgseh",
       "currencyId": "gseh::pgseh"
     },
-    "0x0c8ffe952189db2b217c146424962ab585d8b494": {
-      "chainId": "1672",
-      "decimals": 0,
-      "name": "SK Hynix Inc.",
-      "address": "0x0c8ffe952189db2b217c146424962ab585d8b494",
-      "symbol": "SKHYs",
-      "assetGroup": "SK Hynix Inc.::SKHYs",
-      "currencyId": "SK Hynix Inc.::SKHYs"
-    },
     "0x2967e0f1693c8a078d66deb95ab48d707ddd2b72": {
       "chainId": "1672",
       "decimals": 18,
@@ -3148,6 +3152,51 @@
       "symbol": "UNI-V2",
       "assetGroup": "Uniswap V2::UNI-V2::1672::64",
       "currencyId": "Uniswap V2::UNI-V2"
+    },
+    "0x17e741e1dbeac275b44bac4f0e3727c8f42b724d": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "gseh",
+      "address": "0x17e741e1dbeac275b44bac4f0e3727c8f42b724d",
+      "symbol": "pgseh",
+      "assetGroup": "gseh::pgseh::1672::0",
+      "currencyId": "gseh::pgseh"
+    },
+    "0x1f9495621dfd227a9128718be7a49b489ce95157": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "dfh",
+      "address": "0x1f9495621dfd227a9128718be7a49b489ce95157",
+      "symbol": "pdfh",
+      "assetGroup": "dfh::pdfh",
+      "currencyId": "dfh::pdfh"
+    },
+    "0x1194928fb50a1f3cbe0c2ea11efa32730e98f223": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "GFELG",
+      "address": "0x1194928fb50a1f3cbe0c2ea11efa32730e98f223",
+      "symbol": "pGFEL",
+      "assetGroup": "GFELG::pGFEL",
+      "currencyId": "GFELG::pGFEL"
+    },
+    "0x717180b7401cc9b3246796cfffb5827e9161793d": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Hyper Safe Vault Shares",
+      "address": "0x717180b7401cc9b3246796cfffb5827e9161793d",
+      "symbol": "HYSA",
+      "assetGroup": "Hyper Safe Vault Shares::HYSA",
+      "currencyId": "Hyper Safe Vault Shares::HYSA"
+    },
+    "0x68ffdcf234af059ed846cb05dbd8e3c951621a05": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "pt004",
+      "address": "0x68ffdcf234af059ed846cb05dbd8e3c951621a05",
+      "symbol": "pt004",
+      "assetGroup": "pt004::pt004",
+      "currencyId": "pt004::pt004"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1672",

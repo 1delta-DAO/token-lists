@@ -12,7 +12,8 @@
       "assetGroup": "FRXETH",
       "currencyId": "Frax Ether::frxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xecf91116348af1cffe335e9807f0051332be128d": {
@@ -25,7 +26,8 @@
       "assetGroup": "SFRXETH",
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" }
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xffffffff63d24ecc8eb8a7b5d0803e900f7b6ced": {
@@ -107,7 +109,8 @@
       "currencyId": "xcUSDT::XCUSDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x765277eebeca2e31912c9946eae1021199b39c61": {
@@ -284,7 +287,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "denomination": "FRAX"
+        "denomination": "FRAX",
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
     "0xffffffff52c56a9257bb97f4b2b6f7b2d624ecda": {
@@ -387,7 +391,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0xdfa46478f9e5ea86d57387849598dbfb2e964b02": {
@@ -422,7 +427,8 @@
       "currencyId": "Axelar Wrapped DAI::axlDAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
     "0x85a8b472d116585e2cc10eb1e0e3e3127e1f5d3f": {
@@ -447,7 +453,8 @@
       "currencyId": "Axelar Wrapped USDT::axlUSDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xc234a67a4f840e61ade794be47de455361b52413": {
@@ -469,7 +476,10 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/fxs.jpg",
       "assetGroup": "FXS",
       "currencyId": "Frax Share::FXS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x931715fee2d06333043d11f658c8ce934ac61d0c": {
       "chainId": "1284",
@@ -831,7 +841,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "denomination": "USDC"
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0xe8e8bd89a429526561e1283cb789719864ffd0b4": {

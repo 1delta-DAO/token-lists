@@ -1764,7 +1764,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xa3d68b74bf0528fdd07263c60d6488749044914b": {
@@ -1794,7 +1795,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x9ecaf80c1303cca8791afbc0ad405c8a35e8d9f1": {
@@ -1820,7 +1822,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0xe48d935e6c9e735463cccf29a7f11e32bc09136e": {
@@ -1834,7 +1837,8 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 2, "source": "whitelist" }
+        "risk": { "score": 2, "source": "whitelist" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xe561fe05c39075312aa9bc6af79ddae981461359": {
@@ -1848,7 +1852,8 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "whitelist" }
+        "risk": { "score": 4, "source": "whitelist" },
+        "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
     "0x6100e367285b01f48d07953803a2d8dca5d19873": {
@@ -1915,7 +1920,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x9895d81bb462a195b4922ed7de0e3acd007c32cb": {
@@ -1960,7 +1966,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
@@ -1992,7 +1999,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x58538e6a46e07434d7e7375bc268d3cb839c0133": {
@@ -2018,7 +2026,8 @@
               "peers": { "1": "0x58538e6a46e07434d7e7375bc268d3cb839c0133" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef": {
@@ -2053,7 +2062,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
       }
     },
     "0x0b2b2b2076d95dda7817e785989fe353fe955ef9": {
@@ -2084,7 +2094,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
       }
     },
     "0x87e617c7484ade79fcd90db58beb82b057facb48": {
@@ -2215,7 +2226,8 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
       }
     },
     "0x98658bd74ef231158cadc21d8aba733a4e947e6a": {
@@ -2258,7 +2270,12 @@
       "assetGroup": "Elixir Staked deUSD::SDEUSD",
       "currencyId": "Elixir Staked deUSD::SDEUSD",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
+        },
+        "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
       }
     },
     "0xb1b385542b6e80f77b94393ba8342c3af699f15c": {
@@ -2295,7 +2312,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0x35533f54740f1f1aa4179e57ba37039dfa16868b": {
@@ -2331,7 +2349,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv" }
       }
     },
     "0x2a52b289ba68bbd02676640aa9f605700c9e5699": {
@@ -2368,7 +2387,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000": {
@@ -2397,7 +2417,8 @@
           "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDT", "base": "USD" }
+        "savings": { "underlying": "USDT", "base": "USD" },
+        "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
     },
     "0xe13e223116b9f53238a228d7dc9159786fff502a": {
@@ -2689,7 +2710,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
       }
     },
     "0x9d86b4fc23d8438fc4aba58642dc35d5f64fe941": {
@@ -2796,7 +2818,8 @@
           "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
@@ -2827,7 +2850,8 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0xfdf91362b7e9330f232e500c0236a02b0de3e492": {
@@ -2995,7 +3019,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
       }
     },
     "0x2d661c89d812261039af9764eceaaee884f5f67f": {
@@ -3007,7 +3032,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/USDC.png?1769615602",
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "9745",

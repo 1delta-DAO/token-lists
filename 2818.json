@@ -26,7 +26,8 @@
               "peers": { "1": "0xcd2eb13d6831d4602d80e5db9230a57596cdca63" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x1fcca65fb6ae3b2758b9b2b394cb227eae404e1e": {
@@ -39,7 +40,8 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" }
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
     "0x31011317764e097b28d159a8145b92bfa453f606": {
@@ -86,7 +88,10 @@
       "logoURI": "https://assets.bulbaswap.io/icons/2818/address/0xc7d67a9cbb121b3b0b9c053dd9f469523243379a.svg",
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+      }
     },
     "0xfd940682b73ad25d7758636983a6f22074a4995a": {
       "chainId": "2818",
@@ -107,7 +112,10 @@
       "logoURI": "https://assets.bulbaswap.io/icons/2818/address/0x803dce4d3f4ae2e17af6c51343040dee320c149d.svg",
       "assetGroup": "WBTC",
       "currencyId": "Wrapped BTC::WBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
+      }
     },
     "0xe34c91815d7fc18a9e2148bcd4241d0a5848b693": {
       "chainId": "2818",
@@ -118,7 +126,11 @@
       "logoURI": "https://assets.bulbaswap.io/icons/2818/address/0xe34c91815d7fc18a9e2148bcd4241d0a5848b693.svg",
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xc2ff77be38d55b5e8c7c6e5935dfe52ab26ea896": {
       "chainId": "2818",
@@ -255,7 +267,8 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x6a9a65b84843f5fd4ac9a0471c4fc11afffbce4a": {
@@ -283,7 +296,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {
@@ -320,7 +334,8 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
@@ -332,7 +347,10 @@
       "logoURI": "https://assets.bulbaswap.io/icons/2818/address/0xff12470a969dd362eb6595ffb44c82c959fe9acc.png",
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f": {
       "chainId": "2818",
@@ -342,7 +360,8 @@
       "symbol": "sUSDa",
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
-      "currencyId": "sUSDa::sUSDa"
+      "currencyId": "sUSDa::sUSDa",
+      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
     },
     "0x0f204582f30c5f896cd3260a0181cf5838c93c0b": {
       "chainId": "2818",
@@ -593,7 +612,11 @@
       "logoURI": "https://assets.bulbaswap.io/icons/default.svg",
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xde372c87a91c95fe1e447a4bfdcf60239aeea3a1": {
       "chainId": "2818",
@@ -1417,7 +1440,8 @@
               }
             }
           ]
-        }
+        },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xcfb1186f4e93d60e60a8bdd997427d1f33bc372b": {
@@ -1429,7 +1453,11 @@
       "logoURI": "https://cdn.bitkeep.vip/u_b_92c0df50-de47-11eb-8c08-ff617688b8f3.png",
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" }, "denomination": "USDC" }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "denomination": "USDC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0xe898e1cffa565aae8bacc364aa7d65d6a2d20f16": {
       "chainId": "2818",
