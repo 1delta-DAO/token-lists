@@ -7384,7 +7384,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14287/large/dola.png?1667738374",
       "assetGroup": "DOLA",
       "currencyId": "Dola USD Stablecoin::DOLA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "inverse",
+          "name": "Inverse Finance",
+          "kind": "protocol"
+        }
+      }
     },
     "0x455234ab787665a219125235fb01b22b512dfcaa": {
       "chainId": "8453",
@@ -34557,7 +34564,16 @@
       "currencyId": "Frankencoin::ZCHF",
       "props": {
         "stablecoin": { "base": "CHF" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": {
+          "id": "frankencoin",
+          "name": "Frankencoin",
+          "kind": "protocol"
+        }
       }
     },
     "0x93757336de76f24f7eee15e6150e4ec42fbdaa21": {

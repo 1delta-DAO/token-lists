@@ -598,7 +598,10 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "beets", "name": "Beets", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x44c804675c57c515f606979a26f7aec5183e8697": {
@@ -822,7 +825,10 @@
           "ytAddress": "0xd8f57b34e69270f7ba179e854020ee80f16eebf4"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "beets", "name": "Beets", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x77d8f09053c28faf1e00df6511b23125d438616f": {
@@ -1419,7 +1425,10 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "beets", "name": "Beets", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xdb7b0ca74c76d3b2449057b54b699d6ba04a4e70": {
@@ -2272,7 +2281,8 @@
       "currencyId": "Beets Staked Sonic::STS",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" },
+        "issuer": { "id": "beets", "name": "Beets", "kind": "protocol" }
       }
     },
     "0x068e9e009fda970fa953e1f6a43d982ca991f4ba": {
@@ -2589,7 +2599,10 @@
       "symbol": "uniBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39599/thumb/uniBTC_200px.png?1723064455",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
     },
     "0x7a5c61047ad8fa4a743c75eb46a01300c7c9dada": {
       "chainId": "146",
@@ -4566,7 +4579,16 @@
       "currencyId": "Frankencoin::ZCHF",
       "props": {
         "stablecoin": { "base": "CHF" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": {
+          "id": "frankencoin",
+          "name": "Frankencoin",
+          "kind": "protocol"
+        }
       }
     },
     "0x41a5477364bf60d8936b90310fecfda79593304e": {

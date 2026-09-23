@@ -96,7 +96,10 @@
           "ptAddress": "0x5fd66835a3d6a5eed719ea80b744cda6d84bc41f",
           "ytAddress": "0xee977e26c44152df1254bf237250c59449c2270a"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0af2b242a526447fefd6e29cd531ecb89616afd2": {
@@ -423,7 +426,10 @@
           "syAddress": "0x09f317b127bcc9d16f5dd17cadbeda9d034c0f8c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x23a052dfcabd4fa7bd52e7e67e0fb0ee596e7383": {
@@ -837,7 +843,10 @@
           "syAddress": "0x09f317b127bcc9d16f5dd17cadbeda9d034c0f8c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x44264c7be2d92f010b20b29c4531fc09381c56f3": {
@@ -1438,7 +1447,10 @@
           "syAddress": "0x09f317b127bcc9d16f5dd17cadbeda9d034c0f8c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x607c834cfb7fcbbb341cbe23f77a6e83bcf3f55c": {
@@ -2654,7 +2666,10 @@
           "syAddress": "0x09f317b127bcc9d16f5dd17cadbeda9d034c0f8c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd76ec0a96eaffe1cca33313352deda1cd3cfa7ee": {
@@ -2876,7 +2891,10 @@
           "syAddress": "0x09f317b127bcc9d16f5dd17cadbeda9d034c0f8c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe8f1c9804770e11ab73395be54686ad656601e9e": {
@@ -2968,7 +2986,10 @@
           "syAddress": "0x09f317b127bcc9d16f5dd17cadbeda9d034c0f8c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf2810f8ec028576354c4388d8b347ac1921c63a2": {
@@ -19520,7 +19541,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14287/large/dola.png?1667738374",
       "assetGroup": "DOLA",
       "currencyId": "Dola USD Stablecoin::DOLA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "inverse",
+          "name": "Inverse Finance",
+          "kind": "protocol"
+        }
+      }
     },
     "0x86b3f23b6e90f5bbfac59b5b2661134ef8ffd255": {
       "chainId": "56",
@@ -21977,7 +22005,8 @@
               "peers": { "2345": "0xfe41e7e5cb3460c483ab2a38eb605cda9e2d248e" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "binance", "name": "Binance", "kind": "cex" }
       }
     },
     "0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51": {
@@ -24289,7 +24318,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "lista", "name": "Lista", "kind": "protocol" }
       }
     },
     "0x6aa217312960a21adbde1478dc8cbcf828110a67": {
@@ -25431,7 +25461,10 @@
       "symbol": "uniBTC",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x6B2a01A5f79dEb4c2f3c0eDa7b01DF456FbD726a.png",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "56",

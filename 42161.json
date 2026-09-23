@@ -397,7 +397,10 @@
           "syAddress": "0x5b56f4bf94807b547eb5e7eba5cd8c033af83aed",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0fc042b32a9a6191834ea12ffa04f2044d0eb302": {
@@ -749,7 +752,10 @@
           "syAddress": "0x5b56f4bf94807b547eb5e7eba5cd8c033af83aed",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1cdde40e29da213f42a7fa109ccadca372d9ee1b": {
@@ -998,7 +1004,10 @@
           "syAddress": "0x5b56f4bf94807b547eb5e7eba5cd8c033af83aed",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x23231848ec8acd3a108c6a61049fbc25a697b594": {
@@ -2425,7 +2434,10 @@
           "ptAddress": "0xd8d5fbbaad1e80aa0352b2029a594caeff6cf1ec",
           "ytAddress": "0x0fb95ec4086b3007c894ad78703bc634150a1d50"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5c4110ed760470f79e469a901bd6fb45a65be0f4": {
@@ -4276,7 +4288,10 @@
           "syAddress": "0x5b56f4bf94807b547eb5e7eba5cd8c033af83aed",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa972fb7828f0bff8a22f7f8c63b17cfb971bfc0a": {
@@ -4629,7 +4644,10 @@
           "syAddress": "0x5b56f4bf94807b547eb5e7eba5cd8c033af83aed",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xb459db106f645d698e74027eef6019a26a0675cc": {
@@ -5557,7 +5575,10 @@
           "syAddress": "0x5b56f4bf94807b547eb5e7eba5cd8c033af83aed",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd90e7b9ff165dc10033896ea86194b4bbce070bb": {
@@ -21973,7 +21994,12 @@
       "currencyId": "Dola USD Stablecoin::DOLA",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "inverse",
+          "name": "Inverse Finance",
+          "kind": "protocol"
+        }
       }
     },
     "0x4667cf53c4edf659e402b733bea42b18b68dd74c": {
@@ -26575,7 +26601,10 @@
       "symbol": "uniETH",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/unieth.png",
       "assetGroup": "Universal ETH::uniETH",
-      "currencyId": "Universal ETH::uniETH"
+      "currencyId": "Universal ETH::uniETH",
+      "props": {
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
     },
     "0x0002bcdaf53f4889bf2f43a3252d7c03fe1b80bc": {
       "chainId": "42161",
@@ -26759,7 +26788,10 @@
       "symbol": "uniBTC",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/unibtc.svg",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
     },
     "0x3212dc0f8c834e4de893532d27cc9b6001684db0": {
       "chainId": "42161",
@@ -36685,7 +36717,8 @@
               "peers": { "1": "0x5f2106bb2a5aba6a783dbf29c8d3b09c175bc3c0" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
       }
     },
     "0xa7907b6b6169d66012bf1c36f27a72c06aec065c": {
@@ -40529,7 +40562,12 @@
       "currencyId": "Frankencoin::ZCHF",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "CHF" }
+        "stablecoin": { "base": "CHF" },
+        "issuer": {
+          "id": "frankencoin",
+          "name": "Frankencoin",
+          "kind": "protocol"
+        }
       }
     },
     "0xc708b6887db46005da033501f8aebee72d191a5d": {
@@ -42637,7 +42675,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "nerite", "name": "Nerite", "kind": "protocol" }
       }
     },
     "0xb638f8eb4f242eb1883de8553998aa89624e9e81": {

@@ -143,6 +143,34 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   SAVAX: { id: 'benqi', name: 'BENQI', kind: 'protocol' },
   'Lista Staked BNB::slisBNB': { id: 'lista', name: 'Lista', kind: 'protocol' },
 
+  // --- Found by running the axis against live market data -----------------
+  //
+  // Each of these backs real lending markets and was arriving unattributed.
+  // Ranked by the markets they back in a dev ingest of chains
+  // 1/42161/56/8453/137/146/...: BTCB 68, U 39, stS 19, DOLA 18, USND 17,
+  // eBTC 16, lisUSD 15, ZCHF 15, siUSD 14.
+  //
+  // Deliberately NOT added from that same scan: WETH/ETH (245 markets), WBNB,
+  // ARB, LINK, UNI, AERO, wS, ASTER. A gas base and a governance token have no
+  // issuer, and their market count is not a reason to invent one.
+  BTCB: { id: 'binance', name: 'Binance', kind: 'cex' },
+  DOLA: { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
+  'Beets Staked Sonic::STS': { id: 'beets', name: 'Beets', kind: 'protocol' },
+  'Beets Staked Sonic::stS': { id: 'beets', name: 'Beets', kind: 'protocol' },
+  'US Nerite Dollar::USND': { id: 'nerite', name: 'Nerite', kind: 'protocol' },
+  'Ether fi Staked BTC::EBTC': { id: 'etherfi', name: 'Ether.fi', kind: 'protocol' },
+  'Lista USD::lisUSD': { id: 'lista', name: 'Lista', kind: 'protocol' },
+  'Frankencoin::ZCHF': { id: 'frankencoin', name: 'Frankencoin', kind: 'protocol' },
+  'Staked infiniFi USD::siUSD': { id: 'infinifi', name: 'InfiniFi', kind: 'protocol' },
+
+  // --- Top wrapper blockers (§9.11's curation worklist) --------------------
+  // Each of these is an UNDERLYING that dead-ends a pile of PTs, so one line
+  // lights up every wrapper over it on the next run: uniBTC 27, uniETH 18,
+  // sENA 13.
+  UNIBTC: { id: 'bedrock', name: 'Bedrock', kind: 'protocol' },
+  'Universal ETH::uniETH': { id: 'bedrock', name: 'Bedrock', kind: 'protocol' },
+  'Ethena Staked ENA::SENA': { id: 'ethena', name: 'Ethena', kind: 'protocol' },
+
   // --- BTC wrappers --------------------------------------------------------
   WBTC: { id: 'bitgo', name: 'BitGo', kind: 'institution' },
   'Wrapped BTC::WBTC': { id: 'bitgo', name: 'BitGo', kind: 'institution' },

@@ -9213,7 +9213,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14287/large/dola.png?1667738374",
       "assetGroup": "DOLA",
       "currencyId": "Dola USD Stablecoin::DOLA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "inverse",
+          "name": "Inverse Finance",
+          "kind": "protocol"
+        }
+      }
     },
     "0x65559aa14915a70190438ef90104769e5e890a00": {
       "chainId": "10",
@@ -10868,7 +10875,10 @@
       "symbol": "uniBTC",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x93919784c523f39cacaa98ee0a9d96c3f32b593e/small/token-logo.png",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
     },
     "0xb5090d514bcaca7dafb7e52763658844121f346d": {
       "chainId": "10",
@@ -15293,7 +15303,16 @@
       "currencyId": "Frankencoin::ZCHF",
       "props": {
         "stablecoin": { "base": "CHF" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": {
+          "id": "frankencoin",
+          "name": "Frankencoin",
+          "kind": "protocol"
+        }
       }
     },
     "0x8d010bf9c26881788b4e6bf5fd1bdc358c8f90b8": {

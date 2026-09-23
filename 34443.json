@@ -531,7 +531,10 @@
       "symbol": "uniBTC",
       "logoURI": "https://raw.githubusercontent.com/Bedrock-Technology/bedrock-static/39b68b34ecef136a7f57720ac6ac8773606539da/logo/unibtc.svg",
       "assetGroup": "UNIBTC",
-      "currencyId": "uniBTC::uniBTC"
+      "currencyId": "uniBTC::uniBTC",
+      "props": {
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
     },
     "0x02f92800f57bcd74066f5709f1daa1a4302df875": {
       "chainId": "34443",
@@ -944,7 +947,14 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x865377367054516e17014ccded1e7d814edc9ce4/0c348eedfa7f89d3db2919e0a18988ea.png",
       "assetGroup": "DOLA",
       "currencyId": "Dola USD Stablecoin::DOLA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "inverse",
+          "name": "Inverse Finance",
+          "kind": "protocol"
+        }
+      }
     },
     "0x19f245782b1258cf3e11eda25784a378cc18c108": {
       "chainId": "34443",
