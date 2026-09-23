@@ -1,5 +1,5 @@
 /** wrapped assets to overarching group */
-const GROUP_TO_GROUP_MAPPER: Record<string, string> = {
+export const GROUP_TO_GROUP_MAPPER: Record<string, string> = {
   // wnatives
   WBNB: 'BNB',
   WETH: 'ETH',
