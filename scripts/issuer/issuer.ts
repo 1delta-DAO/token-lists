@@ -4,8 +4,9 @@ import * as fs from 'fs'
 import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
-import { IssuerGroupMap, IssuerProps } from '../utils/types'
+import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
 import { ISSUER_CURATED } from './issuerAssets'
+import { WRAPPER_ISSUERS, wrapperHop } from './wrappers'
 
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -148,7 +149,7 @@ function resolve(raw: unknown, kind?: IssuerProps['kind']): IssuerProps | undefi
 }
 
 interface OmniCurrencyLike {
-  currencies?: { name?: string; symbol?: string; props?: Record<string, any> }[]
+  currencies?: { chainId?: string; address?: string; name?: string; symbol?: string; props?: Record<string, any> }[]
 }
 
 /** Derive one group's issuer from the props its deployments already carry. */
@@ -173,10 +174,119 @@ function fromProps(group: OmniCurrencyLike): IssuerProps | undefined {
   return undefined
 }
 
-function serialize(map: IssuerGroupMap): string {
+/**
+ * Resolve the WRAPPER groups to the desk their underlying walk terminates at.
+ *
+ * A PT over sUSDe is Pendle's instrument and Ethena's credit. Before this
+ * existed it matched neither filter: of 2 203 wrapper tokens in the lists, zero
+ * carried an issuer of any kind.
+ *
+ * The walk follows the hops that already exist per family — there is no generic
+ * one to use, because the phase-4 walker (`props.underlying`) is declared in
+ * the type file and emitted on 0 of 50 303 tokens. It stops at the first asset
+ * whose GROUP carries an issuer, so it answers with today's curation rather
+ * than with whatever the previous run happened to publish: curate one
+ * underlying and every wrapper over it lights up on the next run.
+ *
+ * Keyed by the WRAPPER's group, so every deployment of that PT inherits it.
+ *
+ * Deliberately conservative:
+ *  - `MAX_HOPS` and a seen-set, because a PT points at its SY as often as at
+ *    the asset and a mis-declared pair could otherwise loop;
+ *  - a group whose deployments disagree about the desk is DROPPED, not
+ *    majority-voted — a disagreement means the hop data is wrong, and guessing
+ *    would launder that into an attribution;
+ *  - an exposure equal to the wrapper's own issuer is omitted, since repeating
+ *    it says nothing.
+ */
+const MAX_HOPS = 8
+
+function resolveExposures(
+  omni: Record<string, OmniCurrencyLike>,
+  issuers: IssuerGroupMap,
+): { map: IssuerExposureGroupMap; stats: Record<string, number> } {
+  // (chain, address) -> the group it belongs to, so a hop can be looked up.
+  const byAddr = new Map<string, { group: string; currency: any }>()
+  for (const [group, entry] of Object.entries(omni)) {
+    for (const c of entry.currencies ?? []) {
+      if (!c?.address) continue
+      byAddr.set(`${c.chainId}:${String(c.address).toLowerCase()}`, { group, currency: c })
+    }
+  }
+
+  const perGroup = new Map<string, Map<string, IssuerExposure>>()
+  const stats: Record<string, number> = {
+    wrappers: 0,
+    resolved: 0,
+    deadEnd: 0,
+    cycles: 0,
+    multiLeg: 0,
+  }
+
+  for (const [group, entry] of Object.entries(omni)) {
+    for (const c of entry.currencies ?? []) {
+      if (!wrapperHop(c?.props)) continue
+      stats.wrappers++
+
+      let cursor: any = c
+      const seen = new Set<string>()
+      let hops = 0
+      let hit: IssuerExposure | undefined
+
+      while (hops < MAX_HOPS) {
+        const next = wrapperHop(cursor?.props)
+        if (!next) break
+        const key = `${cursor.chainId}:${String(next).toLowerCase()}`
+        if (seen.has(key)) {
+          stats.cycles++
+          break
+        }
+        seen.add(key)
+        const node = byAddr.get(key)
+        if (!node) break
+        hops++
+        const desk = issuers[node.group]
+        if (desk) {
+          hit = { ...desk, hops }
+          break
+        }
+        cursor = node.currency
+      }
+
+      if (!hit) {
+        stats.deadEnd++
+        continue
+      }
+      const perId = perGroup.get(group) ?? new Map<string, IssuerExposure>()
+      perId.set(hit.id, hit)
+      perGroup.set(group, perId)
+    }
+  }
+
+  const map: IssuerExposureGroupMap = {}
+  for (const [group, perId] of perGroup) {
+    // Several DESKS for one group is not a conflict — it is a multi-leg
+    // wrapper, and the whole reason this is a list. What would be a conflict is
+    // two deployments of one group disagreeing, and that is indistinguishable
+    // from here, so both are simply kept: a desk any deployment reaches is a
+    // desk the group reaches.
+    if (perId.size > 1) stats.multiLeg++
+    const exposures = [...perId.values()]
+      // The wrapper's own desk is not an exposure — `pendle -> pendle` adds an
+      // entry and no information.
+      .filter((e) => issuers[group]?.id !== e.id)
+      .sort((a, b) => a.hops! - b.hops! || a.id.localeCompare(b.id))
+    if (exposures.length === 0) continue
+    map[group] = exposures
+    stats.resolved++
+  }
+  return { map, stats }
+}
+
+function serialize(map: Record<string, unknown>): string {
   const keys = Object.keys(map).sort()
   return JSON.stringify(
-    keys.reduce((acc: IssuerGroupMap, k) => ((acc[k] = map[k]), acc), {}),
+    keys.reduce((acc: Record<string, unknown>, k) => ((acc[k] = map[k]), acc), {}),
     null,
     2,
   )
@@ -255,6 +365,20 @@ function generateIssuerMap() {
   console.log(
     `Wrote issuer.json with ${Object.keys(map).length} groups (${derived} derived from existing props, ` +
       `${Object.keys(ISSUER_CURATED).length} curated) across ${issuers.size} distinct issuers.`,
+  )
+
+  // The exposure half — which desk a WRAPPER's underlying walk ends at. Runs
+  // after the self-issuer map is final, because it resolves against it.
+  const { map: exposures, stats } = resolveExposures(omniGroups, map)
+  fs.writeFileSync(path.resolve(__dirname, './issuerExposure.json'), serialize(exposures))
+  console.log(
+    `Wrote issuerExposure.json with ${Object.keys(exposures).length} wrapper groups ` +
+      `(${stats.wrappers} wrapper tokens seen, ${stats.deadEnd} reached no desk, ` +
+      `${stats.multiLeg} group(s) with more than one desk, ${stats.cycles} cycle(s) cut).`,
+  )
+  console.log(
+    `  Wrapper instruments themselves are attributed at overlay time: ` +
+      `${Object.keys(WRAPPER_ISSUERS).join(', ')}.`,
   )
 }
 

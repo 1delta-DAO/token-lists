@@ -528,6 +528,41 @@ export interface TokenProps {
     parent?: string
   }
   /**
+   * The desks the holder is ULTIMATELY exposed to, when this token is a wrapper
+   * over something else: `ethena` on a `PT-sUSDE`, whose own {@link
+   * TokenProps.issuer} is `pendle`.
+   *
+   * Both are true and neither replaces the other. A PT's redemption depends on
+   * Pendle's contracts, admin and oracle AND on Ethena's solvency, so a
+   * consumer filtering for Ethena must see the PT, and one filtering for Pendle
+   * must see it too. One field cannot say both — before this existed, a PT over
+   * sUSDe matched NEITHER filter.
+   *
+   * **A LIST, not one desk.** Every wrapper the token lists can describe today
+   * resolves to exactly one, but the concept is plural and the shape has to
+   * admit it: a basket (`terminal.kind === 'basket'`, GM / GLV / Fluid smart
+   * legs) is several claims at once, and downstream a curated VAULT is many —
+   * one production Fluid USDC vault allocates across eight collaterals spanning
+   * six desks. A scalar here would force every consumer to rewrite its
+   * handling the day the first multi-leg token lands, and would quietly pick
+   * whichever leg the walk happened to reach first.
+   *
+   * Derived, not curated: resolved by walking the wrapper hops that already
+   * exist (`pendle.underlyingAsset`, `spectra.underlyingAsset`,
+   * `exponent.underlyingAsset`, `receipt.underlying`) to the first asset whose
+   * group carries an issuer. ABSENT — not `[]` — when the walk ends nowhere,
+   * which is the honest answer for a PT over an unattributed asset, and absent
+   * when the only desk found is the token's own.
+   *
+   * NOTE the deliberate asymmetry with a vault's allocation: this belongs on
+   * the TOKEN because it is a property of the instrument. A curated vault's
+   * exposure set is a property of its current ALLOCATION — it changes when the
+   * curator rebalances, not when the lists regenerate — so it does not live
+   * here and must never be inferred from a share token.
+   */
+  issuerExposures?: IssuerExposure[]
+
+  /**
    * Asset risk overlay, sourced from the risk-data repository (data/asset-risks.json).
    * This is a lagging annotation — risk-data is computed downstream of token-lists.
    * Volatile fields (e.g. liquidityUsd) are intentionally excluded to avoid list churn.
@@ -667,5 +702,22 @@ export type StablecoinGroupMap = { [assetGroup: string]: StablecoinProps }
 export type SavingsGroupMap = { [assetGroup: string]: SavingsProps }
 /** Issuer props shape, derived from TokenProps */
 export type IssuerProps = NonNullable<TokenProps['issuer']>
+/**
+ * One desk a wrapper exposes its holder to. `hops` is how far the walk went
+ * (1 = the direct underlying, 2 = through the SY); a two-hop attribution is a
+ * weaker claim than a one-hop one and a consumer may want to say so. `weight`
+ * is the share of the position, 0..1, and is ABSENT when the legs are not
+ * weighted — which is every case the token lists can express today.
+ */
+export interface IssuerExposure {
+  id: string
+  name: string
+  kind?: 'protocol' | 'institution' | 'cex'
+  parent?: string
+  hops?: number
+  weight?: number
+}
 /** assetGroup -> issuer attribution (chain-independent: the desk does not change per chain) */
 export type IssuerGroupMap = { [assetGroup: string]: IssuerProps }
+/** assetGroup (of the WRAPPER) -> the desks its underlying walk terminates at */
+export type IssuerExposureGroupMap = { [assetGroup: string]: IssuerExposure[] }

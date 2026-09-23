@@ -4,7 +4,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
-import { IssuerGroupMap, IssuerProps } from '../utils/types'
+import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
 import { ISSUER_CURATED } from './issuerAssets'
 
 // @ts-ignore
@@ -32,4 +32,30 @@ export const ISSUER_MAP: IssuerGroupMap = { ...loadSnapshot(), ...ISSUER_CURATED
 /** Lookup a token's issuer by its assetGroup. */
 export function lookupIssuer(assetGroup: string): IssuerProps | undefined {
   return ISSUER_MAP[assetGroup]
+}
+
+/**
+ * The exposure snapshot (issuerExposure.json, produced by the same
+ * `npm run issuer`): the desk a WRAPPER group's underlying walk terminates at.
+ *
+ * Not layered with a curated map, unlike the self-issuer above: an exposure is
+ * derived from a hop the token itself declares, so the way to fix a wrong one
+ * is to fix the hop or curate the UNDERLYING, never to hand-write the answer
+ * here. Tolerates a missing snapshot for the same reason as the other loaders.
+ */
+function loadExposures(): IssuerExposureGroupMap {
+  try {
+    return JSON.parse(fs.readFileSync(path.resolve(__dirname, './issuerExposure.json'), 'utf-8'))
+  } catch {
+    console.warn('[issuer] issuerExposure.json not found — run `npm run issuer`. No exposure overlay.')
+    return {}
+  }
+}
+
+export const ISSUER_EXPOSURE_MAP: IssuerExposureGroupMap = loadExposures()
+
+/** Lookup the desks a wrapper's underlying resolves to, by the WRAPPER's assetGroup. */
+export function lookupIssuerExposures(assetGroup: string): IssuerExposure[] | undefined {
+  const hit = ISSUER_EXPOSURE_MAP[assetGroup]
+  return hit && hit.length > 0 ? hit : undefined
 }

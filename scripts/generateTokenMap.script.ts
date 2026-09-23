@@ -25,7 +25,8 @@ import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
 import { lookupLstGroup } from './lst/lstGroupMap'
 import { lookupDenomination } from './denomination/denominationMap'
-import { lookupIssuer } from './issuer/issuerMap'
+import { lookupIssuer, lookupIssuerExposures } from './issuer/issuerMap'
+import { wrapperIssuer } from './issuer/wrappers'
 // @ts-ignore-next-line
 import * as path from 'path'
 // @ts-ignore-next-line
@@ -362,8 +363,30 @@ async function readTokenLists(): Promise<{
                     // `lst.provider` only covers staking, and neither answers it for the dollar
                     // menu. Impostor-guarded like the other group-keyed overlays — a ticker-copy
                     // must never inherit a real desk's name through a shared group.
-                    const issuer = impostor ? undefined : lookupIssuer(assetGroup)
+                    //
+                    // Two halves, because a wrapper has two desks. `issuer` is
+                    // whose instrument this IS — a curated group first, else the
+                    // protocol that minted the wrapper (a PT is Pendle's, on any
+                    // chain, asserted by the token's own `props.pendle`).
+                    // `issuerExposure` is whose credit it leaves you holding,
+                    // walked from the wrapper's hop. A PT over sUSDe is
+                    // `pendle` + `ethena`; before both existed it matched
+                    // NEITHER filter.
+                    const issuer = impostor
+                      ? undefined
+                      : (lookupIssuer(assetGroup) ?? wrapperIssuer(tokenProps))
                     if (issuer && !tokenProps.issuer) tokenProps = { ...tokenProps, issuer }
+
+                    // A LIST: one entry for every desk the wrapper's walk
+                    // reaches. Single-entry today for everything the lists can
+                    // describe, plural by construction because a basket is
+                    // several claims and a consumer must not have to change
+                    // shape the day one lands.
+                    const exposures = impostor ? undefined : lookupIssuerExposures(assetGroup)
+                    const ownDesk = (tokenProps.issuer ?? issuer)?.id
+                    const issuerExposures = exposures?.filter((e) => e.id !== ownDesk)
+                    if (issuerExposures?.length && !tokenProps.issuerExposures)
+                      tokenProps = { ...tokenProps, issuerExposures }
 
                     // Denomination overlay (canonical base ETH/BTC/native), keyed by assetGroup.
                     // Only applied to base tokens — skipped when the token is a derivative

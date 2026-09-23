@@ -18,8 +18,93 @@ That is `props.issuer`:
 ```
 
 `sky` for USDS / sUSDS / DAI. `ethena` for USDe / sUSDe / USDtb. `circle` for
-USDC / EURC. At the 2026-09-23 regeneration this reached **8 385 tokens across
-81 issuers**.
+USDC / EURC. At the 2026-09-23 regeneration this reached **11 102 tokens across
+84 issuers**, of which **699 also carry a second desk** — see below.
+
+## Two desks, because a wrapper has two
+
+A `PT-sUSDE` is **Pendle's instrument**: its redemption depends on Pendle's
+contracts, admin and oracle. It is also **Ethena's credit**. Both are true, and
+one field cannot say both — so there are two:
+
+```jsonc
+"props": {
+  "issuer":          { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+  "issuerExposures": [{ "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }]
+}
+```
+
+| | `issuer` | `issuerExposures` |
+|---|---|---|
+| question | whose **instrument** is this? | whose **credit** does it leave me holding? |
+| `PT-sUSDE` | `pendle` | `[ethena]` |
+| spot `sUSDe` | `ethena` | *absent* |
+| `WETH` | *absent* | *absent* |
+
+**A LIST, not one desk.** Every wrapper these lists can describe today resolves
+to exactly one, but the concept is plural: a basket (`terminal.kind ===
+'basket'` — GM, GLV, Fluid smart legs) is several claims at once, and a scalar
+would silently keep whichever leg the walk reached first. Consumers write
+set-handling code from day one rather than rewriting it when the first
+multi-leg token lands.
+
+Absent on a spot token on purpose: sUSDe has no exposure beyond itself, and
+repeating `ethena` there would say nothing. Absent — never `[]` — when the walk
+reaches no desk, which is the honest answer for a PT over an unattributed asset.
+
+### What this field is NOT: a vault's allocation
+
+A curated vault holds **many** exposures at once — one production Fluid USDC
+vault sits across eight collaterals spanning six desks — and none of that
+belongs here:
+
+* it changes when the **curator rebalances**, not when these lists regenerate;
+* a MetaMorpho share token is usually not in the lists at all;
+* the deposit token is plain USDC, which names Circle and nothing else.
+
+That set is a property of the POSITION, and it lives downstream in
+yield-tracer's `earn_issuer_exposure` table, keyed by earn row and rebuilt
+hourly from each provider's published allocation. Do not try to infer it from a
+share token here.
+
+**Why this exists.** Before it, a PT over sUSDe matched *no* issuer filter at
+all — 2 203 wrapper tokens in the lists, zero attributions between them. A
+consumer filtering for Ethena could not see the PT menu, and a consumer
+filtering for Pendle could not see it either.
+
+### How the exposure is resolved
+
+`issuer.ts` walks the hop each wrapper family already declares —
+`pendle.underlyingAsset`, `spectra.underlyingAsset`,
+`exponent.underlyingAsset`, `receipt.underlying` — to the first asset whose
+group names a desk, then keys the answer by the WRAPPER's group
+(`issuerExposure.json`, 697 groups, 46 desks).
+
+There is deliberately no generic hop in use: `props.underlying` (the phase-4
+walker in `utils/types.ts`) is declared and emitted on **0 of 50 303 tokens**,
+so these per-family fields are the whole mechanism. The walk is capped at 8 hops
+with a seen-set, because a PT points at its SY as often as at the asset — 11 of
+the 697 needed two hops, which is why `hops` is published rather than assumed
+to be 1.
+
+A group whose deployments disagree about the desk is **dropped, not
+majority-voted**: disagreement means the hop data is wrong, and voting would
+launder that into an attribution. (Currently 0 such groups.)
+
+Because the walk resolves against *today's* curated map rather than against
+whatever the last run published, **curating one underlying lights up every
+wrapper over it on the next run**. That is the highest-leverage curation there
+is: the dead ends concentrate on 238 groups, and the top 10 alone would unlock
+170 wrappers (`UNIBTC` 27, `FLR` 23, `uniETH` 18, `siUSD` 16, `FXRP` 16 …).
+
+### Wrapper instruments
+
+The `issuer` half of a wrapper is not curated by group — it is read off the
+family prop the token already carries (`WRAPPER_ISSUERS` in `wrappers.ts`:
+`pendle`, `spectra`, `exponent`, `receipt` → Dolomite). That prop *is* the fact:
+a token with `props.pendle` was minted by Pendle, on any chain, including a
+bridged mirror, with no list to keep in sync. A curated entry still wins over
+it.
 
 ## What it is NOT
 
@@ -49,14 +134,19 @@ ticker.
 issuerAssets.ts  (curated, 97 entries, assetGroup -> issuer)
                                 │
 omni-list.json ──► issuer.ts ───┤  derive from props already published:
-  (previous run)                │    rwa.issuer  ·  lst.provider  ·  oft.routes[].oapp (allowlisted)
+  (previous run)                │    rwa.issuer · lst.provider · oft.routes[].oapp (allowlisted)
                                 │  + pre-alias expansion (Name::SYMBOL keys)
-                                ▼
-                          issuer.json          2 580 groups, 82 issuers
                                 │
-                        issuerMap.ts  →  lookupIssuer(assetGroup)
+                                ├──► issuer.json           2 580 groups, 82 issuers
                                 │
-                  generateTokenMap.script.ts  →  props.issuer on every token of the group
+                                └──► issuerExposure.json     697 wrapper groups, 46 desks
+                                       (walk pendle/spectra/exponent/receipt hops
+                                        to the first group that names a desk)
+                                │
+              issuerMap.ts  →  lookupIssuer()  ·  lookupIssuerExposure()
+              wrappers.ts   →  wrapperIssuer()   (pendle/spectra/exponent/dolomite)
+                                │
+       generateTokenMap.script.ts  →  props.issuer  +  props.issuerExposure
 ```
 
 Three properties worth knowing:
@@ -188,11 +278,19 @@ format. The output is the resolution.
 
 ## Downstream
 
-The overlay is consumed by `yield-tracer`, which lifts `id` and `name` into
-`assets.issuer` / `assets.issuer_name` (migration 0150) on its lending ingest,
-and serves them as filters on `/assets/available`, `/pools`, `/pairs/optimize`
-and `/earn/latest`, plus an `issuers` facet with counts. `kind` and `parent` stay
-in the stored props blob for whoever wants them.
+The overlay is consumed by `yield-tracer`, which lifts both desks into
+`assets.issuer` / `assets.issuer_name` (migration 0150) and the
+`assets.issuer_exposures` jsonb set (0151) on its lending ingest, and adds a
+third, row-level set of its own in `earn_issuer_exposure` (0152) for what a
+vault's allocation sits behind. Its
+filters match **either** desk by default — `?issuers=ethena` returns spot sUSDe
+and every PT over it in one call, `?issuerMatch=direct|exposure` narrows — on
+`/assets/available`, `/pools`, `/pairs/optimize` and `/earn/latest`, whose
+`issuers` facet also reports how many rows reach a desk only through a wrapper
+(`Ethena 17 · 6 via`). `kind` and `parent` stay in the stored props blob.
+
+That repo never walks a PT's underlying at query time; resolving one needs the
+address index over every chain that only this overlay has.
 
 Nothing downstream infers an issuer of its own. If this overlay does not name a
 desk, the row is honestly unattributed everywhere — which is the point.
