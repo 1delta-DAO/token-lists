@@ -3314,7 +3314,16 @@
     "decimals": 6,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3c5c1e3f-6dd7-463d-a36c-244662c6f243.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1805932800 } }
+    "props": {
+      "pendle": {
+        "tokenType": "PT",
+        "marketAddress": "0xb986fe3f6ecf16c13e769b0d6d2a0bc41449d54f",
+        "expiry": 1805932800,
+        "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+        "ytAddress": "0x8e5ae33b762076244fb4ebbd15ba837a176726f4",
+        "syAddress": "0x2b4715bc201375aea9f55866473aa99d8321b71a"
+      }
+    }
   },
   {
     "chainId": "1",
@@ -3700,7 +3709,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/de79dda9-73e4-488a-8999-37883b13c3ae.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -4620,7 +4629,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6b75d644-2391-4f82-b3e9-a603e9b6e729.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -4630,7 +4639,16 @@
     "decimals": 6,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg",
     "tags": ["SY"],
-    "props": { "pendle": { "tokenType": "SY" } }
+    "props": {
+      "pendle": {
+        "tokenType": "SY",
+        "marketAddress": "0xb986fe3f6ecf16c13e769b0d6d2a0bc41449d54f",
+        "expiry": 1805932800,
+        "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+        "ptAddress": "0x203a918321f920763c2b8ccc2cbf5b3a5ba748d1",
+        "ytAddress": "0x8e5ae33b762076244fb4ebbd15ba837a176726f4"
+      }
+    }
   },
   {
     "chainId": "1",
@@ -4858,7 +4876,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c0eec3e-5a3c-4e12-913c-09eaae125e0f.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -5284,7 +5302,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x7cf9dec92ca9fd46f8d86e7798b72624bc116c05",
         "ytAddress": "0x57947d28d4dd1873ad20cc717d866d078a677c08",
-        "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58"
+        "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58",
+        "expired": true
       }
     }
   },
@@ -5343,7 +5362,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x9b5528528656dbc094765e2abb79f293c21191b9",
         "ptAddress": "0xfae86383d512722a50192d9e6b414dc3f067519c",
-        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6"
+        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
+        "expired": true
       }
     }
   },
@@ -7317,7 +7337,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xfe0ccc9942e98c963fe6b4e5194eb6e3baa4cb64",
         "ytAddress": "0xfa780e1c8169c83dd63ccd22a4b89e2fefdb97b2",
-        "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c"
+        "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c",
+        "expired": true
       }
     }
   },
@@ -9716,7 +9737,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x7cf9dec92ca9fd46f8d86e7798b72624bc116c05",
         "ptAddress": "0x3069a30121dbbf37c88003b41204d6afaac7acbd",
-        "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58"
+        "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58",
+        "expired": true
       }
     }
   },
@@ -10607,7 +10629,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xc8495eaff71d3a563b906295fcf2f685b1783085",
         "ptAddress": "0xc8ff5a1d899c2a453c6f10f4ea87978726cf9f63",
-        "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0"
+        "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0",
+        "expired": true
       }
     }
   },
@@ -10945,7 +10968,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3a1c5489-185f-4212-b400-4789ba0dffed.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -12273,7 +12296,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/24ddc4b9-413e-46eb-9f4c-7d4b88913aea.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -13558,7 +13581,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x9be9294722f8aad37b11a9792be2c782182cafa2",
         "ptAddress": "0xec583f0b31d71a6b661f857391865174d8035778",
-        "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f"
+        "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f",
+        "expired": true
       }
     }
   },
@@ -14546,7 +14570,16 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2348f80c-3308-476c-b839-3f0e2a7759e9.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1799884800 } }
+    "props": {
+      "pendle": {
+        "tokenType": "PT",
+        "marketAddress": "0xb94f1423b4a95b0115f913daa6c4b8744a74e3b2",
+        "expiry": 1799884800,
+        "underlyingAsset": "0x093df218d70ea6036afa26704a1c70d12010b908",
+        "ytAddress": "0xc082266de75051cc13042d45461a1f5781f5df88",
+        "syAddress": "0xd9a5a7ba8094daf3af47e8e4af4bd13f96fdc7ab"
+      }
+    }
   },
   {
     "chainId": "1",
@@ -15039,7 +15072,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6539f410-f232-4855-bcf7-17f4db831fd9.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -15158,7 +15191,16 @@
     "decimals": 6,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b62836c0-f848-4d73-829e-adce1aa38dea.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1805932800 } }
+    "props": {
+      "pendle": {
+        "tokenType": "YT",
+        "marketAddress": "0xb986fe3f6ecf16c13e769b0d6d2a0bc41449d54f",
+        "expiry": 1805932800,
+        "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+        "ptAddress": "0x203a918321f920763c2b8ccc2cbf5b3a5ba748d1",
+        "syAddress": "0x2b4715bc201375aea9f55866473aa99d8321b71a"
+      }
+    }
   },
   {
     "chainId": "1",
@@ -18000,7 +18042,7 @@
     "decimals": 6,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/47b18af9-3062-4548-ba36-9b8b37131634.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -19401,7 +19443,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
         "ptAddress": "0xc1906aecf868749a2dee203f59b904c0cf212140",
-        "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+        "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927",
+        "expired": true
       }
     }
   },
@@ -19885,7 +19928,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x8be3460a480c80728a8c4d7a5d5303c85ba7b3b9",
         "ytAddress": "0xd29025e0665774f66355656732cbec826d4425ab",
-        "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d"
+        "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d",
+        "expired": true
       }
     }
   },
@@ -20548,7 +20592,16 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/537786ec-9297-447c-afe2-a209a917b061.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1799884800 } }
+    "props": {
+      "pendle": {
+        "tokenType": "YT",
+        "marketAddress": "0xb94f1423b4a95b0115f913daa6c4b8744a74e3b2",
+        "expiry": 1799884800,
+        "underlyingAsset": "0x093df218d70ea6036afa26704a1c70d12010b908",
+        "ptAddress": "0x87f3a8c7b3db5d342163b078d02deeb1ea56af05",
+        "syAddress": "0xd9a5a7ba8094daf3af47e8e4af4bd13f96fdc7ab"
+      }
+    }
   },
   {
     "chainId": "1",
@@ -20701,7 +20754,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
         "ytAddress": "0xb4d8860895dff6e30c6872075a7bdfff53b5e772",
-        "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+        "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927",
+        "expired": true
       }
     }
   },
@@ -21465,7 +21519,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xc8495eaff71d3a563b906295fcf2f685b1783085",
         "ytAddress": "0x5ec5f15917275469dc009deaaa3d00538a45f187",
-        "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0"
+        "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0",
+        "expired": true
       }
     }
   },
@@ -22390,7 +22445,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x8be3460a480c80728a8c4d7a5d5303c85ba7b3b9",
         "ptAddress": "0xb9b3a5823dfdb39389f50742ee7bb81cf0be56cb",
-        "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d"
+        "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d",
+        "expired": true
       }
     }
   },
@@ -23150,7 +23206,16 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b1498baa-f5f5-40ad-924f-49b9fe3e55ac.svg",
     "tags": ["SY"],
-    "props": { "pendle": { "tokenType": "SY" } }
+    "props": {
+      "pendle": {
+        "tokenType": "SY",
+        "marketAddress": "0xb94f1423b4a95b0115f913daa6c4b8744a74e3b2",
+        "expiry": 1799884800,
+        "underlyingAsset": "0x093df218d70ea6036afa26704a1c70d12010b908",
+        "ptAddress": "0x87f3a8c7b3db5d342163b078d02deeb1ea56af05",
+        "ytAddress": "0xc082266de75051cc13042d45461a1f5781f5df88"
+      }
+    }
   },
   {
     "chainId": "1",
@@ -25194,7 +25259,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x9be9294722f8aad37b11a9792be2c782182cafa2",
         "ytAddress": "0x7ba8e04f6c01e0f1d60398bbecdf6b6f7d8ed419",
-        "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f"
+        "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f",
+        "expired": true
       }
     }
   },
@@ -26768,7 +26834,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xfe0ccc9942e98c963fe6b4e5194eb6e3baa4cb64",
         "ptAddress": "0x42959e174fe28029de5ce250b58699229a3362b0",
-        "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c"
+        "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c",
+        "expired": true
       }
     }
   },
@@ -26827,7 +26894,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x9b5528528656dbc094765e2abb79f293c21191b9",
         "ytAddress": "0x30a199e71f1b9b546e9fac63ab2512c05e661161",
-        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6"
+        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
+        "expired": true
       }
     }
   },
@@ -26958,7 +27026,7 @@
     "decimals": 6,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/462e7776-9473-4f01-b192-77df2e7da4f8.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "1",
@@ -32438,7 +32506,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x9ba2edc44e0a4632eb4723e81d4142353e1bb160",
         "ptAddress": "0x3a40803d98ea0463041a3e0cd7fd293165f7fa01",
-        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6"
+        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
+        "expired": true
       }
     }
   },
@@ -32735,7 +32804,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x9ba2edc44e0a4632eb4723e81d4142353e1bb160",
         "ytAddress": "0x1f602d38e83c12facd2c71ba6a0aecaf24fe7cb8",
-        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6"
+        "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
+        "expired": true
       }
     }
   },
@@ -33130,7 +33200,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xfd739d4e423301ce9385c1fb8850539d657c296d",
         "ytAddress": "0xe45162d03e0475dab556ef1cccefeea2ec27ade2",
-        "syAddress": "0x57fc55dff8ceca86ee94a6bf255af2f0ed90eb9e"
+        "syAddress": "0x57fc55dff8ceca86ee94a6bf255af2f0ed90eb9e",
+        "expired": true
       }
     }
   },
@@ -34927,7 +34998,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xfd739d4e423301ce9385c1fb8850539d657c296d",
         "ptAddress": "0x50fc4edc6346f36993bb30fe60e932504ed17391",
-        "syAddress": "0x57fc55dff8ceca86ee94a6bf255af2f0ed90eb9e"
+        "syAddress": "0x57fc55dff8ceca86ee94a6bf255af2f0ed90eb9e",
+        "expired": true
       }
     }
   },
@@ -35207,7 +35279,16 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d186808e-34f9-420a-b1a1-e5771bdf3e3a.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1791417600 } }
+    "props": {
+      "pendle": {
+        "tokenType": "YT",
+        "marketAddress": "0x25f241538bc3de8f7130706827b3f6946db51f5d",
+        "expiry": 1791417600,
+        "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
+        "ptAddress": "0x20636ab8f3dea231f30396eeba184eff2f3ba72b",
+        "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+      }
+    }
   },
   {
     "chainId": "4663",
@@ -35255,7 +35336,26 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/0e6ac589-3fad-4b47-814e-916ff03357ad.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1791417600 } }
+    "props": {
+      "pendle": {
+        "tokenType": "PT",
+        "marketAddress": "0x25f241538bc3de8f7130706827b3f6946db51f5d",
+        "expiry": 1791417600,
+        "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
+        "ytAddress": "0x06b6c573f0f138a4d2731a8c96ea14f63c6c4a62",
+        "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+      }
+    }
+  },
+  {
+    "chainId": "4663",
+    "name": "SY-USDG Robinhood",
+    "symbol": "SY-USDG",
+    "address": "0x44a4ff3934cf3833903a04261bd0d962f008d2c3",
+    "decimals": 6,
+    "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
+    "tags": ["SY"],
+    "props": { "pendle": { "tokenType": "SY" } }
   },
   {
     "chainId": "4663",
@@ -35272,7 +35372,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
         "ytAddress": "0xaed999467896127c83ef0e08cf41d0b29705494d",
-        "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4",
+        "expired": true
       }
     }
   },
@@ -35322,7 +35423,17 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/02e700f6-2975-445a-b423-909bf300602b.svg",
     "tags": ["PT"],
-    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true } }
+  },
+  {
+    "chainId": "4663",
+    "name": "PT USDG (USDG) Robinhood",
+    "symbol": "PT-USDG-25MAR2027",
+    "address": "0x6982e39521a070a3c40782548bfbed6dc8f566ef",
+    "decimals": 6,
+    "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3c5c1e3f-6dd7-463d-a36c-244662c6f243.svg",
+    "tags": ["PT"],
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1805932800 } }
   },
   {
     "chainId": "4663",
@@ -35362,6 +35473,16 @@
         "syAddress": "0x8c7454d4d64abd04fbf5f5ffe0dbcd5e3abcecf6"
       }
     }
+  },
+  {
+    "chainId": "4663",
+    "name": "PT-USDG-25MAR2027 Robinhood",
+    "symbol": "PT-USDG-25MAR2027",
+    "address": "0x79ea6792f7cd6f65b90898798e2413a027445879",
+    "decimals": 6,
+    "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
+    "tags": ["PT"],
+    "props": { "pendle": { "tokenType": "PT", "expiry": 1805932800 } }
   },
   {
     "chainId": "4663",
@@ -35419,6 +35540,16 @@
         "ytAddress": "0x7600d0a61f83d7e4c4154c4664b19be6d9acf180"
       }
     }
+  },
+  {
+    "chainId": "4663",
+    "name": "USDG Robinhood",
+    "symbol": "SY-USDG",
+    "address": "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286",
+    "decimals": 6,
+    "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg",
+    "tags": ["SY"],
+    "props": { "pendle": { "tokenType": "SY" } }
   },
   {
     "chainId": "4663",
@@ -35511,7 +35642,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xd5f1afea47b1a9eab414d2ee740cf1d6d039e725",
         "ytAddress": "0xfe1f976d3111a89fd4ff71fbd2f5e5734602a79c",
-        "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176"
+        "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176",
+        "expired": true
       }
     }
   },
@@ -35530,7 +35662,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
         "ptAddress": "0x46d64dc152279e645e4fccecef0aae4e2ebdc077",
-        "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4",
+        "expired": true
       }
     }
   },
@@ -35542,7 +35675,7 @@
     "decimals": 18,
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d85f163c-c834-4a2c-accb-a1ac16322899.svg",
     "tags": ["YT"],
-    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000 } }
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true } }
   },
   {
     "chainId": "4663",
@@ -35559,9 +35692,20 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xae8fc9288685516d2eca717056ca69303b348752",
         "ytAddress": "0xe32a6d0356d080d9dd8c0bd8e7ab3f464b3f1dbc",
-        "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73"
+        "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73",
+        "expired": true
       }
     }
+  },
+  {
+    "chainId": "4663",
+    "name": "YT-USDG-25MAR2027 Robinhood",
+    "symbol": "YT-USDG-25MAR2027",
+    "address": "0xc5f92ffc0f0ee08e161b275926b07fe01620137c",
+    "decimals": 6,
+    "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
+    "tags": ["YT"],
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1805932800 } }
   },
   {
     "chainId": "4663",
@@ -35597,7 +35741,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xae8fc9288685516d2eca717056ca69303b348752",
         "ptAddress": "0xb06180609b22973bee751a6c833db4821f8476fb",
-        "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73"
+        "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73",
+        "expired": true
       }
     }
   },
@@ -35619,6 +35764,16 @@
         "ytAddress": "0xfe1f976d3111a89fd4ff71fbd2f5e5734602a79c"
       }
     }
+  },
+  {
+    "chainId": "4663",
+    "name": "YT USDG (USDG) Robinhood",
+    "symbol": "YT-USDG-25MAR2027",
+    "address": "0xf35ee6bd9a93fe42bc7e628bfc4ddbdc6de1f615",
+    "decimals": 6,
+    "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b62836c0-f848-4d73-829e-adce1aa38dea.svg",
+    "tags": ["YT"],
+    "props": { "pendle": { "tokenType": "YT", "expiry": 1805932800 } }
   },
   {
     "chainId": "4663",
@@ -35674,7 +35829,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0xd5f1afea47b1a9eab414d2ee740cf1d6d039e725",
         "ptAddress": "0xa53a07a4ae1ceff14dd9345030e1f01ecbb79733",
-        "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176"
+        "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176",
+        "expired": true
       }
     }
   },
@@ -36426,7 +36582,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x0000000f2eb9f69274678c76222b35eec7588a65",
         "ytAddress": "0x35fbdbd598445a7cbb08dc114fe9feece20e2c67",
-        "syAddress": "0xe181aed8e14469231618504df46e8c069314589b"
+        "syAddress": "0xe181aed8e14469231618504df46e8c069314589b",
+        "expired": true
       }
     }
   },
@@ -36595,7 +36752,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x0000000f2eb9f69274678c76222b35eec7588a65",
         "ptAddress": "0x1fec97ca2817da87f266fd1741bba61caf7cde29",
-        "syAddress": "0xe181aed8e14469231618504df46e8c069314589b"
+        "syAddress": "0xe181aed8e14469231618504df46e8c069314589b",
+        "expired": true
       }
     }
   },
@@ -36674,7 +36832,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
         "ptAddress": "0xe9ea8a16398171d8113fe2b71f05dda6ac9b86a7",
-        "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64"
+        "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64",
+        "expired": true
       }
     }
   },
@@ -38317,7 +38476,8 @@
         "expiry": 1790208000,
         "underlyingAsset": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
         "ytAddress": "0x3eb91557e41c19848c7725cb3279029073efaf8d",
-        "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64"
+        "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64",
+        "expired": true
       }
     }
   },

@@ -1963,11 +1963,6 @@
       "currencyId": "PT jrNUSD (NUSD) Ethereum::PT-jrNUSD-17SEP2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1789603200, "expired": true },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "vault_inherit"
-        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -4104,7 +4099,14 @@
       "assetGroup": "PT USDG (USDG) Ethereum::PT-USDG-25MAR2027",
       "currencyId": "PT USDG (USDG) Ethereum::PT-USDG-25MAR2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1805932800 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xb986fe3f6ecf16c13e769b0d6d2a0bc41449d54f",
+          "expiry": 1805932800,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ytAddress": "0x8e5ae33b762076244fb4ebbd15ba837a176726f4",
+          "syAddress": "0x2b4715bc201375aea9f55866473aa99d8321b71a"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -4472,7 +4474,6 @@
       "currencyId": "YT ynRWAx (USDC) Ethereum::YT-ynRWAx-15OCT2026",
       "props": {
         "pendle": { "tokenType": "YT", "expiry": 1792022400 },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -4595,7 +4596,7 @@
       "assetGroup": "YT sNUSD (NUSD) Ethereum::YT-sNUSD-24SEP2026",
       "currencyId": "YT sNUSD (NUSD) Ethereum::YT-sNUSD-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -5751,7 +5752,7 @@
       "assetGroup": "YT asdPENDLE (sdPENDLE) Ethereum::YT-asdPENDLE-24SEP2026",
       "currencyId": "YT asdPENDLE (sdPENDLE) Ethereum::YT-asdPENDLE-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -5765,7 +5766,14 @@
       "assetGroup": "USDG Ethereum::SY-USDG",
       "currencyId": "USDG Ethereum::SY-USDG",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xb986fe3f6ecf16c13e769b0d6d2a0bc41449d54f",
+          "expiry": 1805932800,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ptAddress": "0x203a918321f920763c2b8ccc2cbf5b3a5ba748d1",
+          "ytAddress": "0x8e5ae33b762076244fb4ebbd15ba837a176726f4"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -6042,7 +6050,7 @@
       "assetGroup": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-24SEP2026",
       "currencyId": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
         "risk": {
           "score": 5,
           "category": "STABLECOIN",
@@ -6565,7 +6573,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x7cf9dec92ca9fd46f8d86e7798b72624bc116c05",
           "ytAddress": "0x57947d28d4dd1873ad20cc717d866d078a677c08",
-          "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58"
+          "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58",
+          "expired": true
         },
         "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -6635,7 +6644,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x9b5528528656dbc094765e2abb79f293c21191b9",
           "ptAddress": "0xfae86383d512722a50192d9e6b414dc3f067519c",
-          "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6"
+          "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -8587,7 +8597,7 @@
         "risk": {
           "score": 5,
           "category": "STABLECOIN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -9072,7 +9082,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xfe0ccc9942e98c963fe6b4e5194eb6e3baa4cb64",
           "ytAddress": "0xfa780e1c8169c83dd63ccd22a4b89e2fefdb97b2",
-          "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c"
+          "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c",
+          "expired": true
         },
         "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -11368,7 +11379,6 @@
       "currencyId": "ynRWAx Ethereum::SY-ynRWAx",
       "props": {
         "pendle": { "tokenType": "SY" },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -11956,7 +11966,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x7cf9dec92ca9fd46f8d86e7798b72624bc116c05",
           "ptAddress": "0x3069a30121dbbf37c88003b41204d6afaac7acbd",
-          "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58"
+          "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -13048,7 +13059,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xc8495eaff71d3a563b906295fcf2f685b1783085",
           "ptAddress": "0xc8ff5a1d899c2a453c6f10f4ea87978726cf9f63",
-          "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0"
+          "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -13458,7 +13470,7 @@
       "assetGroup": "PT asdPENDLE (sdPENDLE) Ethereum::PT-asdPENDLE-24SEP2026",
       "currencyId": "PT asdPENDLE (sdPENDLE) Ethereum::PT-asdPENDLE-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -15082,7 +15094,7 @@
       "assetGroup": "PT NUSD (NUSD) Ethereum::PT-NUSD-24SEP2026",
       "currencyId": "PT NUSD (NUSD) Ethereum::PT-NUSD-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
         "risk": {
           "score": 5,
           "category": "STABLECOIN",
@@ -15109,7 +15121,11 @@
           "ptAddress": "0x9b02ca5685e9c332b158c01459562a161c8e8adf",
           "ytAddress": "0xfac0a88f74570478367ba1a52b4a30cfec6ec431"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -16225,6 +16241,11 @@
           "syAddress": "0xdb8f1d15880b97dc38edfa46d8a5a7e5b506c45f",
           "expired": true
         },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -16675,7 +16696,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x9be9294722f8aad37b11a9792be2c782182cafa2",
           "ptAddress": "0xec583f0b31d71a6b661f857391865174d8035778",
-          "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f"
+          "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -17877,7 +17899,14 @@
       "assetGroup": "PT aptUSD (alqUSD) Ethereum::PT-aptUSD-14JAN2027",
       "currencyId": "PT aptUSD (alqUSD) Ethereum::PT-aptUSD-14JAN2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1799884800 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xb94f1423b4a95b0115f913daa6c4b8744a74e3b2",
+          "expiry": 1799884800,
+          "underlyingAsset": "0x093df218d70ea6036afa26704a1c70d12010b908",
+          "ytAddress": "0xc082266de75051cc13042d45461a1f5781f5df88",
+          "syAddress": "0xd9a5a7ba8094daf3af47e8e4af4bd13f96fdc7ab"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -18473,7 +18502,7 @@
       "assetGroup": "YT NUSD (NUSD) Ethereum::YT-NUSD-24SEP2026",
       "currencyId": "YT NUSD (NUSD) Ethereum::YT-NUSD-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -18610,7 +18639,14 @@
       "assetGroup": "YT USDG (USDG) Ethereum::YT-USDG-25MAR2027",
       "currencyId": "YT USDG (USDG) Ethereum::YT-USDG-25MAR2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1805932800 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xb986fe3f6ecf16c13e769b0d6d2a0bc41449d54f",
+          "expiry": 1805932800,
+          "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
+          "ptAddress": "0x203a918321f920763c2b8ccc2cbf5b3a5ba748d1",
+          "syAddress": "0x2b4715bc201375aea9f55866473aa99d8321b71a"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -20440,7 +20476,11 @@
           "syAddress": "0x6fc5b9eebf6f19556db8c8fdcc8d4a52e6dc106d",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -22095,7 +22135,7 @@
       "assetGroup": "YT syrupUSDC (USDC) Ethereum::YT-syrupUSDC-24SEP2026",
       "currencyId": "YT syrupUSDC (USDC) Ethereum::YT-syrupUSDC-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -23856,7 +23896,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
           "ptAddress": "0xc1906aecf868749a2dee203f59b904c0cf212140",
-          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -24119,7 +24160,11 @@
           "syAddress": "0x6fc5b9eebf6f19556db8c8fdcc8d4a52e6dc106d",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -24444,7 +24489,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x8be3460a480c80728a8c4d7a5d5303c85ba7b3b9",
           "ytAddress": "0xd29025e0665774f66355656732cbec826d4425ab",
-          "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d"
+          "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -24609,7 +24655,7 @@
           "ytAddress": "0x480c3c9470fa4bbda030f6396fa4b17adefc1ce0",
           "syAddress": "0x7a7de491e1be5287874904e2b7c8488249a4d0a9"
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 3, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -24752,7 +24798,11 @@
           "syAddress": "0x6fc5b9eebf6f19556db8c8fdcc8d4a52e6dc106d",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -25272,7 +25322,14 @@
       "assetGroup": "YT aptUSD (alqUSD) Ethereum::YT-aptUSD-14JAN2027",
       "currencyId": "YT aptUSD (alqUSD) Ethereum::YT-aptUSD-14JAN2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1799884800 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xb94f1423b4a95b0115f913daa6c4b8744a74e3b2",
+          "expiry": 1799884800,
+          "underlyingAsset": "0x093df218d70ea6036afa26704a1c70d12010b908",
+          "ptAddress": "0x87f3a8c7b3db5d342163b078d02deeb1ea56af05",
+          "syAddress": "0xd9a5a7ba8094daf3af47e8e4af4bd13f96fdc7ab"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -25448,7 +25505,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xe343167631d89b6ffc58b88d6b7fb0228795491d",
           "ytAddress": "0xb4d8860895dff6e30c6872075a7bdfff53b5e772",
-          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927"
+          "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927",
+          "expired": true
         },
         "risk": { "score": 3, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -26368,7 +26426,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xc8495eaff71d3a563b906295fcf2f685b1783085",
           "ytAddress": "0x5ec5f15917275469dc009deaaa3d00538a45f187",
-          "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0"
+          "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0",
+          "expired": true
         },
         "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -27494,7 +27553,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x8be3460a480c80728a8c4d7a5d5303c85ba7b3b9",
           "ptAddress": "0xb9b3a5823dfdb39389f50742ee7bb81cf0be56cb",
-          "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d"
+          "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -28419,7 +28479,14 @@
       "assetGroup": "aptUSD Ethereum::SY-aptUSD",
       "currencyId": "aptUSD Ethereum::SY-aptUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xb94f1423b4a95b0115f913daa6c4b8744a74e3b2",
+          "expiry": 1799884800,
+          "underlyingAsset": "0x093df218d70ea6036afa26704a1c70d12010b908",
+          "ptAddress": "0x87f3a8c7b3db5d342163b078d02deeb1ea56af05",
+          "ytAddress": "0xc082266de75051cc13042d45461a1f5781f5df88"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -28488,6 +28555,7 @@
           "ytAddress": "0xf503c7af30ff1813de175c43429763315e299e45",
           "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58"
         },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -30928,7 +30996,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x9be9294722f8aad37b11a9792be2c782182cafa2",
           "ytAddress": "0x7ba8e04f6c01e0f1d60398bbecdf6b6f7d8ed419",
-          "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f"
+          "syAddress": "0x0280c2534ff412086c64ad46df873ef86605bb6f",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -32106,6 +32175,7 @@
           "ptAddress": "0xd9fa32c4a0d9d58d1e75e8159b9c4b1c545143d8",
           "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -32868,7 +32938,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xfe0ccc9942e98c963fe6b4e5194eb6e3baa4cb64",
           "ptAddress": "0x42959e174fe28029de5ce250b58699229a3362b0",
-          "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c"
+          "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -32919,7 +32990,11 @@
           "syAddress": "0x6fc5b9eebf6f19556db8c8fdcc8d4a52e6dc106d",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -32939,7 +33014,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x9b5528528656dbc094765e2abb79f293c21191b9",
           "ytAddress": "0x30a199e71f1b9b546e9fac63ab2512c05e661161",
-          "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6"
+          "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
+          "expired": true
         },
         "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -33104,7 +33180,7 @@
       "assetGroup": "PT syrupUSDC (USDC) Ethereum::PT-syrupUSDC-24SEP2026",
       "currencyId": "PT syrupUSDC (USDC) Ethereum::PT-syrupUSDC-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -82817,7 +82893,7 @@
       "currencyId": "BOB Token::BOB",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -101908,7 +101984,7 @@
       "currencyId": "Gauntlet USDC Prime Morpho Vault::GTUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 1, "source": "vault_inherit" }
+        "risk": { "score": 2, "source": "vault_inherit" }
       }
     },
     "0x644192291cc835a93d6330b24ea5f5fedd0eef9e": {
@@ -102076,7 +102152,7 @@
       "currencyId": "Steakhouse ETH Morpho Vault::STEAKETH",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 1, "source": "vault_inherit" }
+        "risk": { "score": 2, "source": "vault_inherit" }
       }
     },
     "0xac1d3d7a8878e655cbb063d58e453540641f4117": {
@@ -113966,7 +114042,7 @@
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -116904,7 +116980,7 @@
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -123090,7 +123166,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x2371e134e3455e0593363cbf89d3b6cf53740618.png",
       "assetGroup": "Gauntlet WETH Prime::gtWETH",
       "currencyId": "Gauntlet WETH Prime::gtWETH",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x5f9d59db355b4a60501544637b00e94082ca575b": {
       "chainId": "1",
@@ -123131,7 +123207,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x1e6ffa4e9f63d10b8820a3ab52566af881dab53c.png",
       "assetGroup": "Gauntlet WETH Ecosystem::gtWETHe",
       "currencyId": "Gauntlet WETH Ecosystem::gtWETHe",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x01bf66becdcfd6d59a5ca18869f494fea086cdfd": {
       "chainId": "1",
@@ -149447,7 +149523,7 @@
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
         "risk": {
-          "score": 3,
+          "score": 5,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -160582,7 +160658,7 @@
       "currencyId": "GAIB AID::AID",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xb3b3c527ba57cd61648e2ec2f5e006a0b390a9f8": {
@@ -162589,7 +162665,12 @@
             }
           ]
         },
-        "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
+        "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
       }
     },
     "0x6af487beb661ccecd1d045e9561a0dac9aa5c7db": {
@@ -163729,7 +163810,7 @@
       "logoURI": "https://cdn.morpho.org/v2/assets/images/gauntlet.svg",
       "assetGroup": "Gauntlet WETH Core::gtLRTcore",
       "currencyId": "Gauntlet WETH Core::gtLRTcore",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59": {
       "chainId": "1",
@@ -165605,7 +165686,7 @@
       "currencyId": "Universal USD::USDU",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xa7d12701385abb9814f220d2df705b9fe75bfdfa": {
@@ -165951,7 +166032,8 @@
       "symbol": "PST",
       "logoURI": "https://meta.huma.finance/pst.svg",
       "assetGroup": "PayFi Strategy Token::PST",
-      "currencyId": "PayFi Strategy Token::PST"
+      "currencyId": "PayFi Strategy Token::PST",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xfe6eb3b609a7c8352a241f7f3a21cea4e9209b8f": {
       "chainId": "1",
@@ -166026,7 +166108,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173704/thumb/USDC.png?1781018831",
       "assetGroup": "Galaxy USDC Quality (Ethereum)::ETH:GUSDCQ",
       "currencyId": "Galaxy USDC Quality (Ethereum)::ETH:GUSDCQ",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
     },
     "0x71ffb6a81786ec285d429d531cf655107b9d878d": {
       "chainId": "1",
@@ -166037,7 +166119,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173705/thumb/image_%285%29.png?1781018945",
       "assetGroup": "Galaxy USDT Quality::ETH:GUSDTQ",
       "currencyId": "Galaxy USDT Quality::ETH:GUSDTQ",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
     },
     "0xc06036793272219179f846ef6bfc3b16e820df0b": {
       "chainId": "1",
@@ -166058,7 +166140,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173706/thumb/image_%286%29.png?1781018965",
       "assetGroup": "Galaxy WETH Quality::ETH:GWETHQ",
       "currencyId": "Galaxy WETH Quality::ETH:GWETHQ",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x526526528f35ac738177003b8773b402b8df8143": {
       "chainId": "1",
@@ -166081,7 +166163,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -171159,6 +171241,1166 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102174093/thumb/nesa.png?1782284722",
       "assetGroup": "Nesa::NES::1::0",
       "currencyId": "Nesa::NES"
+    },
+    "0xad093c62a57b5e5023e1d0bbeddc7e4cf563703d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Staked uWatt",
+      "address": "0xad093c62a57b5e5023e1d0bbeddc7e4cf563703d",
+      "symbol": "C-UWATT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178738/thumb/c-uwatt-token-logo-256.png?1790173072",
+      "assetGroup": "Staked uWatt::C-UWATT",
+      "currencyId": "Staked uWatt::C-UWATT"
+    },
+    "0xdf1c8e71cbdf48af50b36f96ad2eb6f5094ba72a": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "ARK Venture Fund",
+      "address": "0xdf1c8e71cbdf48af50b36f96ad2eb6f5094ba72a",
+      "symbol": "ARKVX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178749/thumb/02cb0b62-2874-4cb3-8a5d-762ee54627cb-token-icon.png?1790183923",
+      "assetGroup": "ARK Venture Fund::ARKVX",
+      "currencyId": "ARK Venture Fund::ARKVX"
+    },
+    "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Waterdrop Inc aStock",
+      "address": "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0",
+      "symbol": "AWDH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178731/thumb/aWDH-logo.png?1790168204",
+      "assetGroup": "Waterdrop Inc aStock::AWDH",
+      "currencyId": "Waterdrop Inc aStock::AWDH"
+    },
+    "0xce1c7dc7d320a5e11d8921c0124efea4b577c47c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "AXT xStock",
+      "address": "0xce1c7dc7d320a5e11d8921c0124efea4b577c47c",
+      "symbol": "AXTIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178625/thumb/AXTIx.png?1790152529",
+      "assetGroup": "AXT xStock::AXTIX",
+      "currencyId": "AXT xStock::AXTIX"
+    },
+    "0x957d422ab6dd484c01f84b40b5a0b00bcf742d09": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Baxter International xStock",
+      "address": "0x957d422ab6dd484c01f84b40b5a0b00bcf742d09",
+      "symbol": "BAXX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178626/thumb/BAXx.png?1790152533",
+      "assetGroup": "Baxter International xStock::BAXX",
+      "currencyId": "Baxter International xStock::BAXX"
+    },
+    "0xf90653ea8c2f1dbd69c8ce6d4360a4c31d867534": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Advanced Energy Industries xStock",
+      "address": "0xf90653ea8c2f1dbd69c8ce6d4360a4c31d867534",
+      "symbol": "AEISX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178611/thumb/AEISx.png?1790152478",
+      "assetGroup": "Advanced Energy Industries xStock::AEISX",
+      "currencyId": "Advanced Energy Industries xStock::AEISX"
+    },
+    "0xd45b9ffcf15744476e5e7b79d4266818177e1a34": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "American Financial xStock",
+      "address": "0xd45b9ffcf15744476e5e7b79d4266818177e1a34",
+      "symbol": "AFGX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178612/thumb/AFGx.png?1790152482",
+      "assetGroup": "American Financial xStock::AFGX",
+      "currencyId": "American Financial xStock::AFGX"
+    },
+    "0xdb0245163fda906f27dc5813d2d2b51673c33bde": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Affirm xStock",
+      "address": "0xdb0245163fda906f27dc5813d2d2b51673c33bde",
+      "symbol": "AFRMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178613/thumb/AFRMx.png?1790152486",
+      "assetGroup": "Affirm xStock::AFRMX",
+      "currencyId": "Affirm xStock::AFRMX"
+    },
+    "0xc9fa9d22fd52a634f395260e921aa06044e19d09": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "AGNC Investment xStock",
+      "address": "0xc9fa9d22fd52a634f395260e921aa06044e19d09",
+      "symbol": "AGNCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178614/thumb/AGNCx.png?1790152489",
+      "assetGroup": "AGNC Investment xStock::AGNCX",
+      "currencyId": "AGNC Investment xStock::AGNCX"
+    },
+    "0x8d53fb379e89d2e2d772a79923a0bd093a03a011": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "American Healthcare REIT xStock",
+      "address": "0x8d53fb379e89d2e2d772a79923a0bd093a03a011",
+      "symbol": "AHRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178615/thumb/AHRx.png?1790152493",
+      "assetGroup": "American Healthcare REIT xStock::AHRX",
+      "currencyId": "American Healthcare REIT xStock::AHRX"
+    },
+    "0xf95823d1f58bd633cd51e407c20f8ce7f50becb9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "C3.ai xStock",
+      "address": "0xf95823d1f58bd633cd51e407c20f8ce7f50becb9",
+      "symbol": "AIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178616/thumb/AIx.png?1790152496",
+      "assetGroup": "C3.ai xStock::AIX",
+      "currencyId": "C3.ai xStock::AIX"
+    },
+    "0xa4e2cd78c1d50cfd00b6606d7e0ffc54742fcbfa": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Allison Transmission xStock",
+      "address": "0xa4e2cd78c1d50cfd00b6606d7e0ffc54742fcbfa",
+      "symbol": "ALSNX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178617/thumb/ALSNx.png?1790152500",
+      "assetGroup": "Allison Transmission xStock::ALSNX",
+      "currencyId": "Allison Transmission xStock::ALSNX"
+    },
+    "0xf751b35bb44f4b03b12262cef112fcaf0307f406": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "American Homes 4 Rent xStock",
+      "address": "0xf751b35bb44f4b03b12262cef112fcaf0307f406",
+      "symbol": "AMHX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178618/thumb/AMHx.png?1790152503",
+      "assetGroup": "American Homes 4 Rent xStock::AMHX",
+      "currencyId": "American Homes 4 Rent xStock::AMHX"
+    },
+    "0x1a7ad9dc7e1dc6873c7c47504aad8c99b86ce114": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "BridgeBio Pharma xStock",
+      "address": "0x1a7ad9dc7e1dc6873c7c47504aad8c99b86ce114",
+      "symbol": "BBIOX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178627/thumb/BBIOx.png?1790152537",
+      "assetGroup": "BridgeBio Pharma xStock::BBIOX",
+      "currencyId": "BridgeBio Pharma xStock::BBIOX"
+    },
+    "0xb100ee83b2f3e591c84354db63850677925b704f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Franklin Templeton xStock",
+      "address": "0xb100ee83b2f3e591c84354db63850677925b704f",
+      "symbol": "BENX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178628/thumb/BENx.png?1790152541",
+      "assetGroup": "Franklin Templeton xStock::BENX",
+      "currencyId": "Franklin Templeton xStock::BENX"
+    },
+    "0x8cda4d1d08250ce22faf49879fddbd2bba55fcfc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Better Home & Finance xStock",
+      "address": "0x8cda4d1d08250ce22faf49879fddbd2bba55fcfc",
+      "symbol": "BETRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178629/thumb/BETRx.png?1790152544",
+      "assetGroup": "Better Home & Finance xStock::BETRX",
+      "currencyId": "Better Home & Finance xStock::BETRX"
+    },
+    "0xf4c5ab39067a38b4e01b35d128f3d2bd6bc7298c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "BioMarin Pharmaceutical xStock",
+      "address": "0xf4c5ab39067a38b4e01b35d128f3d2bd6bc7298c",
+      "symbol": "BMRNX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178630/thumb/BMRNx.png?1790152548",
+      "assetGroup": "BioMarin Pharmaceutical xStock::BMRNX",
+      "currencyId": "BioMarin Pharmaceutical xStock::BMRNX"
+    },
+    "0x5866f125b00bf3d123586d26681362c110553262": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Popular xStock",
+      "address": "0x5866f125b00bf3d123586d26681362c110553262",
+      "symbol": "BPOPX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178631/thumb/BPOPx.png?1790152552",
+      "assetGroup": "Popular xStock::BPOPX",
+      "currencyId": "Popular xStock::BPOPX"
+    },
+    "0xf208153ba23df793b9a9a5ef1517cd4644d04889": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Amkor Technology xStock",
+      "address": "0xf208153ba23df793b9a9a5ef1517cd4644d04889",
+      "symbol": "AMKRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178619/thumb/AMKRx.png?1790152507",
+      "assetGroup": "Amkor Technology xStock::AMKRX",
+      "currencyId": "Amkor Technology xStock::AMKRX"
+    },
+    "0x711710400e35283e7c59e9398006ac687ffd8fb8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Antero Midstream xStock",
+      "address": "0x711710400e35283e7c59e9398006ac687ffd8fb8",
+      "symbol": "AMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178620/thumb/AMx.png?1790152511",
+      "assetGroup": "Antero Midstream xStock::AMX",
+      "currencyId": "Antero Midstream xStock::AMX"
+    },
+    "0x26e58f0d3c6e211d6e30d9f5a016c4883670acb7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Arrowhead Pharmaceuticals xStock",
+      "address": "0x26e58f0d3c6e211d6e30d9f5a016c4883670acb7",
+      "symbol": "ARWRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178621/thumb/ARWRx.png?1790152515",
+      "assetGroup": "Arrowhead Pharmaceuticals xStock::ARWRX",
+      "currencyId": "Arrowhead Pharmaceuticals xStock::ARWRX"
+    },
+    "0x70853c88915b95efaa7bb5c15413d3c841bfe807": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Antero Resources xStock",
+      "address": "0x70853c88915b95efaa7bb5c15413d3c841bfe807",
+      "symbol": "ARX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178622/thumb/ARx.png?1790152519",
+      "assetGroup": "Antero Resources xStock::ARX",
+      "currencyId": "Antero Resources xStock::ARX"
+    },
+    "0xd5b5f0613f9f3d6a670eb32d59dd5bedbb444426": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Aurora Innovation xStock",
+      "address": "0xd5b5f0613f9f3d6a670eb32d59dd5bedbb444426",
+      "symbol": "AURX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178623/thumb/AURx.png?1790152522",
+      "assetGroup": "Aurora Innovation xStock::AURX",
+      "currencyId": "Aurora Innovation xStock::AURX"
+    },
+    "0xce39e4fb8e9e415f60869a5ea3467091ae115e15": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Axsome Therapeutics xStock",
+      "address": "0xce39e4fb8e9e415f60869a5ea3467091ae115e15",
+      "symbol": "AXSMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178624/thumb/AXSMx.png?1790152526",
+      "assetGroup": "Axsome Therapeutics xStock::AXSMX",
+      "currencyId": "Axsome Therapeutics xStock::AXSMX"
+    },
+    "0xbe57c33d1278f5dbda142f328d805353b94aa6ca": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Bentley Systems xStock",
+      "address": "0xbe57c33d1278f5dbda142f328d805353b94aa6ca",
+      "symbol": "BSYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178632/thumb/BSYx.png?1790152555",
+      "assetGroup": "Bentley Systems xStock::BSYX",
+      "currencyId": "Bentley Systems xStock::BSYX"
+    },
+    "0xca7e36bee157f2de07610d331fd76d826e054573": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "BXP xStock",
+      "address": "0xca7e36bee157f2de07610d331fd76d826e054573",
+      "symbol": "BXPX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178633/thumb/BXPx.png?1790152559",
+      "assetGroup": "BXP xStock::BXPX",
+      "currencyId": "BXP xStock::BXPX"
+    },
+    "0x02a6f0539da50e2ef5365eea214495c5cd42f127": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "CACI International xStock",
+      "address": "0x02a6f0539da50e2ef5365eea214495c5cd42f127",
+      "symbol": "CACIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178634/thumb/CACIx.png?1790152563",
+      "assetGroup": "CACI International xStock::CACIX",
+      "currencyId": "CACI International xStock::CACIX"
+    },
+    "0xd7b67b7fc787fbce0adeac16c2ccb1c8047d8cca": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Crown xStock",
+      "address": "0xd7b67b7fc787fbce0adeac16c2ccb1c8047d8cca",
+      "symbol": "CCKX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178635/thumb/CCKx.png?1790152566",
+      "assetGroup": "Crown xStock::CCKX",
+      "currencyId": "Crown xStock::CCKX"
+    },
+    "0x769621695d9c1b8d1c88c9b973fcac6f2067a0a3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Coeur Mining xStock",
+      "address": "0x769621695d9c1b8d1c88c9b973fcac6f2067a0a3",
+      "symbol": "CDEX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178636/thumb/CDEx.png?1790152570",
+      "assetGroup": "Coeur Mining xStock::CDEX",
+      "currencyId": "Coeur Mining xStock::CDEX"
+    },
+    "0xd41e61bfddfa78af89d82b3d1b3007899a1e3393": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "CNA Financial xStock",
+      "address": "0xd41e61bfddfa78af89d82b3d1b3007899a1e3393",
+      "symbol": "CNAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178637/thumb/CNAx.png?1790152574",
+      "assetGroup": "CNA Financial xStock::CNAX",
+      "currencyId": "CNA Financial xStock::CNAX"
+    },
+    "0x8b1c0548d402b860eaadf6da598f754e7ab60d1a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Corcept Therapeutics xStock",
+      "address": "0x8b1c0548d402b860eaadf6da598f754e7ab60d1a",
+      "symbol": "CORTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178638/thumb/CORTx.png?1790152578",
+      "assetGroup": "Corcept Therapeutics xStock::CORTX",
+      "currencyId": "Corcept Therapeutics xStock::CORTX"
+    },
+    "0x139bc1d061cc62be1c1f9ab7b2d7ce722e54cc9b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Corebridge Financial xStock",
+      "address": "0x139bc1d061cc62be1c1f9ab7b2d7ce722e54cc9b",
+      "symbol": "CRBGX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178639/thumb/CRBGx.png?1790152582",
+      "assetGroup": "Corebridge Financial xStock::CRBGX",
+      "currencyId": "Corebridge Financial xStock::CRBGX"
+    },
+    "0x8a51d83ebd03e381515724fb3493fdfd149710ec": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Crane xStock",
+      "address": "0x8a51d83ebd03e381515724fb3493fdfd149710ec",
+      "symbol": "CRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178640/thumb/CRx.png?1790152586",
+      "assetGroup": "Crane xStock::CRX",
+      "currencyId": "Crane xStock::CRX"
+    },
+    "0x1bbae6c80e40b44bc36e63d592eece9440ad5c7b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Donaldson xStock",
+      "address": "0x1bbae6c80e40b44bc36e63d592eece9440ad5c7b",
+      "symbol": "DCIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178641/thumb/DCIx.png?1790152590",
+      "assetGroup": "Donaldson xStock::DCIX",
+      "currencyId": "Donaldson xStock::DCIX"
+    },
+    "0x23889fa78da8e454e72f2b19bd331d19a27040bf": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "HF Sinclair xStock",
+      "address": "0x23889fa78da8e454e72f2b19bd331d19a27040bf",
+      "symbol": "DINOX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178642/thumb/DINOx.png?1790152593",
+      "assetGroup": "HF Sinclair xStock::DINOX",
+      "currencyId": "HF Sinclair xStock::DINOX"
+    },
+    "0x90216e923d43b8840d7164634aa9267313058e42": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Trump Media & Technology Group xStock",
+      "address": "0x90216e923d43b8840d7164634aa9267313058e42",
+      "symbol": "DJTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178643/thumb/DJTx.png?1790152596",
+      "assetGroup": "Trump Media & Technology Group xStock::DJTX",
+      "currencyId": "Trump Media & Technology Group xStock::DJTX"
+    },
+    "0xed258844f20a0162d476d98cf370508088755c29": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "DigitalOcean xStock",
+      "address": "0xed258844f20a0162d476d98cf370508088755c29",
+      "symbol": "DOCNX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178644/thumb/DOCNx.png?1790152600",
+      "assetGroup": "DigitalOcean xStock::DOCNX",
+      "currencyId": "DigitalOcean xStock::DOCNX"
+    },
+    "0x876ac27dbaa175411d53b269f70146acd1e2baba": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Docusign xStock",
+      "address": "0x876ac27dbaa175411d53b269f70146acd1e2baba",
+      "symbol": "DOCUX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178645/thumb/DOCUx.png?1790152603",
+      "assetGroup": "Docusign xStock::DOCUX",
+      "currencyId": "Docusign xStock::DOCUX"
+    },
+    "0x14e7901b89158e80a953cfef3cebe065f9cb8eef": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Domino's Pizza xStock",
+      "address": "0x14e7901b89158e80a953cfef3cebe065f9cb8eef",
+      "symbol": "DPZX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178646/thumb/DPZx.png?1790152607",
+      "assetGroup": "Domino's Pizza xStock::DPZX",
+      "currencyId": "Domino's Pizza xStock::DPZX"
+    },
+    "0xf44234dec21985feb41e37b86fda923cb046f114": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Storage ETF (Roundhill) xStock",
+      "address": "0xf44234dec21985feb41e37b86fda923cb046f114",
+      "symbol": "DRAMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178647/thumb/DRAMx.png?1790152610",
+      "assetGroup": "Storage ETF (Roundhill) xStock::DRAMX",
+      "currencyId": "Storage ETF (Roundhill) xStock::DRAMX"
+    },
+    "0x4efb7f42a381a115fe375438e85da301d6fd1b71": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Leonardo DRS xStock",
+      "address": "0x4efb7f42a381a115fe375438e85da301d6fd1b71",
+      "symbol": "DRSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178648/thumb/DRSx.png?1790152614",
+      "assetGroup": "Leonardo DRS xStock::DRSX",
+      "currencyId": "Leonardo DRS xStock::DRSX"
+    },
+    "0xb5638d3ccf90d90b9ec38bd876d406f4f92df70c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "DaVita xStock",
+      "address": "0xb5638d3ccf90d90b9ec38bd876d406f4f92df70c",
+      "symbol": "DVAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178649/thumb/DVAx.png?1790152617",
+      "assetGroup": "DaVita xStock::DVAX",
+      "currencyId": "DaVita xStock::DVAX"
+    },
+    "0xddbef1639261daa6f4d629bec8a5b9f831410cce": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Dycom Industries xStock",
+      "address": "0xddbef1639261daa6f4d629bec8a5b9f831410cce",
+      "symbol": "DYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178650/thumb/DYx.png?1790152621",
+      "assetGroup": "Dycom Industries xStock::DYX",
+      "currencyId": "Dycom Industries xStock::DYX"
+    },
+    "0x8932858213007adb2119fbddbafcadf330dd0feb": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "EastGroup Properties xStock",
+      "address": "0x8932858213007adb2119fbddbafcadf330dd0feb",
+      "symbol": "EGPX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178651/thumb/EGPx.png?1790152624",
+      "assetGroup": "EastGroup Properties xStock::EGPX",
+      "currencyId": "EastGroup Properties xStock::EGPX"
+    },
+    "0xd2de202c1dbc8915ab431773d50a10a256da9b6c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Encompass Health xStock",
+      "address": "0xd2de202c1dbc8915ab431773d50a10a256da9b6c",
+      "symbol": "EHCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178652/thumb/EHCx.png?1790152628",
+      "assetGroup": "Encompass Health xStock::EHCX",
+      "currencyId": "Encompass Health xStock::EHCX"
+    },
+    "0x98b69f6e1770d4f34ebff27be8238849ce8e039d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "FactSet Research Systems xStock",
+      "address": "0x98b69f6e1770d4f34ebff27be8238849ce8e039d",
+      "symbol": "FDSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178653/thumb/FDSx.png?1790152631",
+      "assetGroup": "FactSet Research Systems xStock::FDSX",
+      "currencyId": "FactSet Research Systems xStock::FDSX"
+    },
+    "0xd920c8ed3f6d7ade6bba3c336f47aeb57ef93e89": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Five Below xStock",
+      "address": "0xd920c8ed3f6d7ade6bba3c336f47aeb57ef93e89",
+      "symbol": "FIVEX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178654/thumb/FIVEx.png?1790152635",
+      "assetGroup": "Five Below xStock::FIVEX",
+      "currencyId": "Five Below xStock::FIVEX"
+    },
+    "0x4aaf56c5c9a04d6af855d3c963026d9e4bdd0ab6": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Fluence Energy xStock",
+      "address": "0x4aaf56c5c9a04d6af855d3c963026d9e4bdd0ab6",
+      "symbol": "FLNCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178655/thumb/FLNCx.png?1790152638",
+      "assetGroup": "Fluence Energy xStock::FLNCX",
+      "currencyId": "Fluence Energy xStock::FLNCX"
+    },
+    "0xa83697f63962e780246290460c841c3afbef6527": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Fabrinet xStock",
+      "address": "0xa83697f63962e780246290460c841c3afbef6527",
+      "symbol": "FNX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178656/thumb/FNx.png?1790152642",
+      "assetGroup": "Fabrinet xStock::FNX",
+      "currencyId": "Fabrinet xStock::FNX"
+    },
+    "0x857a7d561d6a25a38013fc111332339b3ea520a0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Freedom xStock",
+      "address": "0x857a7d561d6a25a38013fc111332339b3ea520a0",
+      "symbol": "FRHCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178657/thumb/FRHCx.png?1790152645",
+      "assetGroup": "Freedom xStock::FRHCX",
+      "currencyId": "Freedom xStock::FRHCX"
+    },
+    "0x63b0507283b2a58ce149396afefc92fa38ea587c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "GoDaddy xStock",
+      "address": "0x63b0507283b2a58ce149396afefc92fa38ea587c",
+      "symbol": "GDDYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178658/thumb/GDDYx.png?1790152649",
+      "assetGroup": "GoDaddy xStock::GDDYX",
+      "currencyId": "GoDaddy xStock::GDDYX"
+    },
+    "0x516be05b00cc2f897fd3f8bbecb54990d206658b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "GFL Environmental xStock",
+      "address": "0x516be05b00cc2f897fd3f8bbecb54990d206658b",
+      "symbol": "GFLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178659/thumb/GFLx.png?1790152652",
+      "assetGroup": "GFL Environmental xStock::GFLX",
+      "currencyId": "GFL Environmental xStock::GFLX"
+    },
+    "0x477344c0f2973595693226568a89712a8bbded5f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "GLOBALFOUNDRIES xStock",
+      "address": "0x477344c0f2973595693226568a89712a8bbded5f",
+      "symbol": "GFSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178660/thumb/GFSx.png?1790152656",
+      "assetGroup": "GLOBALFOUNDRIES xStock::GFSX",
+      "currencyId": "GLOBALFOUNDRIES xStock::GFSX"
+    },
+    "0x9aafe57dda4f5de83b644cbd97d2b45dc4e8672c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Globus Medical xStock",
+      "address": "0x9aafe57dda4f5de83b644cbd97d2b45dc4e8672c",
+      "symbol": "GMEDX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178661/thumb/GMEDx.png?1790152659",
+      "assetGroup": "Globus Medical xStock::GMEDX",
+      "currencyId": "Globus Medical xStock::GMEDX"
+    },
+    "0xf0938b2dfec267f439b55dff0523fbe741f95b02": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Globalstar xStock",
+      "address": "0xf0938b2dfec267f439b55dff0523fbe741f95b02",
+      "symbol": "GSATX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178662/thumb/GSATx.png?1790152663",
+      "assetGroup": "Globalstar xStock::GSATX",
+      "currencyId": "Globalstar xStock::GSATX"
+    },
+    "0x7d72510babc131d74440392c0f249aaa2bed3e7f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Guidewire Software xStock",
+      "address": "0x7d72510babc131d74440392c0f249aaa2bed3e7f",
+      "symbol": "GWREX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178663/thumb/GWREx.png?1790152666",
+      "assetGroup": "Guidewire Software xStock::GWREX",
+      "currencyId": "Guidewire Software xStock::GWREX"
+    },
+    "0xcde01af7fbe0d7b8526252320d7dbd183566297d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Halozyme Therapeutics xStock",
+      "address": "0xcde01af7fbe0d7b8526252320d7dbd183566297d",
+      "symbol": "HALOX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178664/thumb/HALOx.png?1790152670",
+      "assetGroup": "Halozyme Therapeutics xStock::HALOX",
+      "currencyId": "Halozyme Therapeutics xStock::HALOX"
+    },
+    "0x0062331a5a1627704b912bc5299bb604ea3ab825": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Huntington Ingalls Industries xStock",
+      "address": "0x0062331a5a1627704b912bc5299bb604ea3ab825",
+      "symbol": "HIIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178665/thumb/HIIx.png?1790152673",
+      "assetGroup": "Huntington Ingalls Industries xStock::HIIX",
+      "currencyId": "Huntington Ingalls Industries xStock::HIIX"
+    },
+    "0x3965a40f56f166bee144a110ffe44ae452623e19": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Hecla Mining xStock",
+      "address": "0x3965a40f56f166bee144a110ffe44ae452623e19",
+      "symbol": "HLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178666/thumb/HLx.png?1790152677",
+      "assetGroup": "Hecla Mining xStock::HLX",
+      "currencyId": "Hecla Mining xStock::HLX"
+    },
+    "0x51494064481cba017ba920bf1058933e7c6a1bb4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Hormel Foods xStock",
+      "address": "0x51494064481cba017ba920bf1058933e7c6a1bb4",
+      "symbol": "HRLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178667/thumb/HRLx.png?1790152680",
+      "assetGroup": "Hormel Foods xStock::HRLX",
+      "currencyId": "Hormel Foods xStock::HRLX"
+    },
+    "0x5b58319888c70eec5880f513240b365243562df8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "HubSpot xStock",
+      "address": "0x5b58319888c70eec5880f513240b365243562df8",
+      "symbol": "HUBSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178668/thumb/HUBSx.png?1790152684",
+      "assetGroup": "HubSpot xStock::HUBSX",
+      "currencyId": "HubSpot xStock::HUBSX"
+    },
+    "0x634fd9cdab5444813630b190eea1f477ff367f4c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Hyatt Hotels xStock",
+      "address": "0x634fd9cdab5444813630b190eea1f477ff367f4c",
+      "symbol": "HX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178669/thumb/Hx.png?1790152688",
+      "assetGroup": "Hyatt Hotels xStock::HX",
+      "currencyId": "Hyatt Hotels xStock::HX"
+    },
+    "0x9a1c32b87d0367daac48f784e480e14d66cea8e5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "IES xStock",
+      "address": "0x9a1c32b87d0367daac48f784e480e14d66cea8e5",
+      "symbol": "IESCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178670/thumb/IESCx.png?1790152691",
+      "assetGroup": "IES xStock::IESCX",
+      "currencyId": "IES xStock::IESCX"
+    },
+    "0xdf4e8de684eab404a46af6140369d7905f3f2821": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Indie Semiconductor xStock",
+      "address": "0xdf4e8de684eab404a46af6140369d7905f3f2821",
+      "symbol": "INDIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178671/thumb/INDIx.png?1790152695",
+      "assetGroup": "Indie Semiconductor xStock::INDIX",
+      "currencyId": "Indie Semiconductor xStock::INDIX"
+    },
+    "0xf9afa9dacbe613696e2747c29b930a51ada284e5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "INTC 2x Long ETF xStock",
+      "address": "0xf9afa9dacbe613696e2747c29b930a51ada284e5",
+      "symbol": "INTWX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178672/thumb/INTWx.png?1790152698",
+      "assetGroup": "INTC 2x Long ETF xStock::INTWX",
+      "currencyId": "INTC 2x Long ETF xStock::INTWX"
+    },
+    "0x7dcdbb780db10a9a0f8d2a0b6ab00f02b1974df4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "IonQ xStock",
+      "address": "0x7dcdbb780db10a9a0f8d2a0b6ab00f02b1974df4",
+      "symbol": "IONQX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178673/thumb/IONQx.png?1790152702",
+      "assetGroup": "IonQ xStock::IONQX",
+      "currencyId": "IonQ xStock::IONQX"
+    },
+    "0x267a0a7ddcf0a7802fea1cd806f4ffc311a3cfa9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Samsara xStock",
+      "address": "0x267a0a7ddcf0a7802fea1cd806f4ffc311a3cfa9",
+      "symbol": "IOTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178674/thumb/IOTx.png?1790152705",
+      "assetGroup": "Samsara xStock::IOTX",
+      "currencyId": "Samsara xStock::IOTX"
+    },
+    "0x4aafeaeeea18dc613be2ec9a057e64a1df2cb6dd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Gartner xStock",
+      "address": "0x4aafeaeeea18dc613be2ec9a057e64a1df2cb6dd",
+      "symbol": "ITX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178675/thumb/ITx.png?1790152709",
+      "assetGroup": "Gartner xStock::ITX",
+      "currencyId": "Gartner xStock::ITX"
+    },
+    "0xb3c2e973d85deec0ceed18fa13b02e6a1a1bb60c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Invesco xStock",
+      "address": "0xb3c2e973d85deec0ceed18fa13b02e6a1a1bb60c",
+      "symbol": "IVZX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178676/thumb/IVZx.png?1790152712",
+      "assetGroup": "Invesco xStock::IVZX",
+      "currencyId": "Invesco xStock::IVZX"
+    },
+    "0x215f08575c1033c171563e64923e70a050310055": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Jefferies Financial xStock",
+      "address": "0x215f08575c1033c171563e64923e70a050310055",
+      "symbol": "JEFX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178677/thumb/JEFx.png?1790152716",
+      "assetGroup": "Jefferies Financial xStock::JEFX",
+      "currencyId": "Jefferies Financial xStock::JEFX"
+    },
+    "0x10ef8902319697c91ff513ece57c23996a5c254f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Jack Henry & Associates xStock",
+      "address": "0x10ef8902319697c91ff513ece57c23996a5c254f",
+      "symbol": "JKHYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178678/thumb/JKHYx.png?1790152719",
+      "assetGroup": "Jack Henry & Associates xStock::JKHYX",
+      "currencyId": "Jack Henry & Associates xStock::JKHYX"
+    },
+    "0xfe9e8fcd0990c9170254fe1d3c28f5cd730cd03b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Korea 3x Long ETF xStock",
+      "address": "0xfe9e8fcd0990c9170254fe1d3c28f5cd730cd03b",
+      "symbol": "KORUX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178679/thumb/KORUx.png?1790152723",
+      "assetGroup": "Korea 3x Long ETF xStock::KORUX",
+      "currencyId": "Korea 3x Long ETF xStock::KORUX"
+    },
+    "0x2efc8e610632cf9c483be6628f674a3d08d37a7f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Kratos Defense & Security Solutions xStock",
+      "address": "0x2efc8e610632cf9c483be6628f674a3d08d37a7f",
+      "symbol": "KTOSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178680/thumb/KTOSx.png?1790152726",
+      "assetGroup": "Kratos Defense & Security Solutions xStock::KTOSX",
+      "currencyId": "Kratos Defense & Security Solutions xStock::KTOSX"
+    },
+    "0x89d657e98e08c7585304024d5c786b96e8ed275c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Manhattan Associates xStock",
+      "address": "0x89d657e98e08c7585304024d5c786b96e8ed275c",
+      "symbol": "MANHX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178681/thumb/MANHx.png?1790152730",
+      "assetGroup": "Manhattan Associates xStock::MANHX",
+      "currencyId": "Manhattan Associates xStock::MANHX"
+    },
+    "0x9e90ce16085ea1c58ad8689948c071c8799bcec5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Madrigal Pharmaceuticals xStock",
+      "address": "0x9e90ce16085ea1c58ad8689948c071c8799bcec5",
+      "symbol": "MDGLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178682/thumb/MDGLx.png?1790152733",
+      "assetGroup": "Madrigal Pharmaceuticals xStock::MDGLX",
+      "currencyId": "Madrigal Pharmaceuticals xStock::MDGLX"
+    },
+    "0x3400f8b9852537feadc778f66629d7b5002593e2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Medpace xStock",
+      "address": "0x3400f8b9852537feadc778f66629d7b5002593e2",
+      "symbol": "MEDPX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178683/thumb/MEDPx.png?1790152737",
+      "assetGroup": "Medpace xStock::MEDPX",
+      "currencyId": "Medpace xStock::MEDPX"
+    },
+    "0xc8c119606d13c780840b8ce48ed4ad8f3bde42f5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ramaco Resources xStock",
+      "address": "0xc8c119606d13c780840b8ce48ed4ad8f3bde42f5",
+      "symbol": "METCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178684/thumb/METCx.png?1790152741",
+      "assetGroup": "Ramaco Resources xStock::METCX",
+      "currencyId": "Ramaco Resources xStock::METCX"
+    },
+    "0xd67019c50d6c26da108eb6327b100132177ceccd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "MGM Resorts International xStock",
+      "address": "0xd67019c50d6c26da108eb6327b100132177ceccd",
+      "symbol": "MGMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178685/thumb/MGMx.png?1790152744",
+      "assetGroup": "MGM Resorts International xStock::MGMX",
+      "currencyId": "MGM Resorts International xStock::MGMX"
+    },
+    "0x75d3c07dce9f1424dce574f78242e7ef1696b8a2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "MP Materials xStock",
+      "address": "0x75d3c07dce9f1424dce574f78242e7ef1696b8a2",
+      "symbol": "MPX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178686/thumb/MPx.png?1790152748",
+      "assetGroup": "MP Materials xStock::MPX",
+      "currencyId": "MP Materials xStock::MPX"
+    },
+    "0x485012aebb4827b01cf307a055406c90f3ce19e5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Micron 2x Long ETF xStock",
+      "address": "0x485012aebb4827b01cf307a055406c90f3ce19e5",
+      "symbol": "MUUX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178687/thumb/MUUx.png?1790152751",
+      "assetGroup": "Micron 2x Long ETF xStock::MUUX",
+      "currencyId": "Micron 2x Long ETF xStock::MUUX"
+    },
+    "0xd4272b4d50ffed57da20c02ab6d3ea3324bdcae2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Marvell 2x Long ETF xStock",
+      "address": "0xd4272b4d50ffed57da20c02ab6d3ea3324bdcae2",
+      "symbol": "MVLLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178688/thumb/MVLLx.png?1790152755",
+      "assetGroup": "Marvell 2x Long ETF xStock::MVLLX",
+      "currencyId": "Marvell 2x Long ETF xStock::MVLLX"
+    },
+    "0xd580bec1fa67535a889bb25114635d4f1e739ba3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "NVR xStock",
+      "address": "0xd580bec1fa67535a889bb25114635d4f1e739ba3",
+      "symbol": "NVRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178689/thumb/NVRx.png?1790152758",
+      "assetGroup": "NVR xStock::NVRX",
+      "currencyId": "NVR xStock::NVRX"
+    },
+    "0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "NatWest xStock",
+      "address": "0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6",
+      "symbol": "NWGX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178690/thumb/NWGx.png?1790152762",
+      "assetGroup": "NatWest xStock::NWGX",
+      "currencyId": "NatWest xStock::NWGX"
+    },
+    "0x44028a82cead1efaf12c43dd41caf14877872d84": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "News Class A xStock",
+      "address": "0x44028a82cead1efaf12c43dd41caf14877872d84",
+      "symbol": "NWSAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178691/thumb/NWSAx.png?1790152765",
+      "assetGroup": "News Class A xStock::NWSAX",
+      "currencyId": "News Class A xStock::NWSAX"
+    },
+    "0xc31bc46de7750a61da61a16de55777c0ce2d62be": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "News xStock",
+      "address": "0xc31bc46de7750a61da61a16de55777c0ce2d62be",
+      "symbol": "NWSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178692/thumb/NWSx.png?1790152769",
+      "assetGroup": "News xStock::NWSX",
+      "currencyId": "News xStock::NWSX"
+    },
+    "0x16c283ac8f4789fb3d707308e69fd96ade45837a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Owens-Corning xStock",
+      "address": "0x16c283ac8f4789fb3d707308e69fd96ade45837a",
+      "symbol": "OCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178693/thumb/OCx.png?1790152772",
+      "assetGroup": "Owens-Corning xStock::OCX",
+      "currencyId": "Owens-Corning xStock::OCX"
+    },
+    "0xebd96effc88cef240a35d8223008a7f788695608": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Blue Owl Capital xStock",
+      "address": "0xebd96effc88cef240a35d8223008a7f788695608",
+      "symbol": "OWLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178694/thumb/OWLx.png?1790152776",
+      "assetGroup": "Blue Owl Capital xStock::OWLX",
+      "currencyId": "Blue Owl Capital xStock::OWLX"
+    },
+    "0x665c220ecd70f390a61cb5149336461438c2827c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Penske Automotive xStock",
+      "address": "0x665c220ecd70f390a61cb5149336461438c2827c",
+      "symbol": "PAGX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178695/thumb/PAGx.png?1790152780",
+      "assetGroup": "Penske Automotive xStock::PAGX",
+      "currencyId": "Penske Automotive xStock::PAGX"
+    },
+    "0x667d0001065df1a94bc19e54497e9aa6cf6b6dfa": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PureCycle Technologies xStock",
+      "address": "0x667d0001065df1a94bc19e54497e9aa6cf6b6dfa",
+      "symbol": "PCTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178696/thumb/PCTx.png?1790152783",
+      "assetGroup": "PureCycle Technologies xStock::PCTX",
+      "currencyId": "PureCycle Technologies xStock::PCTX"
+    },
+    "0xccf2c9bf9e97554080bf899105454419bfe8c930": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Quantum Computing xStock",
+      "address": "0xccf2c9bf9e97554080bf899105454419bfe8c930",
+      "symbol": "QUBTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178697/thumb/QUBTx.png?1790152787",
+      "assetGroup": "Quantum Computing xStock::QUBTX",
+      "currencyId": "Quantum Computing xStock::QUBTX"
+    },
+    "0x9d45fde5bb853066963884b2532204ccf536965f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Rubrik xStock",
+      "address": "0x9d45fde5bb853066963884b2532204ccf536965f",
+      "symbol": "RBRKX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178698/thumb/RBRKx.png?1790152790",
+      "assetGroup": "Rubrik xStock::RBRKX",
+      "currencyId": "Rubrik xStock::RBRKX"
+    },
+    "0x5ceff2729e1873d2d45e9e51745b91ef8d14a405": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Revvity xStock",
+      "address": "0x5ceff2729e1873d2d45e9e51745b91ef8d14a405",
+      "symbol": "RVTYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178699/thumb/RVTYx.png?1790152794",
+      "assetGroup": "Revvity xStock::RVTYX",
+      "currencyId": "Revvity xStock::RVTYX"
+    },
+    "0x09ab6d34642be26e346b52e392874150507f5ce9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ryan Specialty xStock",
+      "address": "0x09ab6d34642be26e346b52e392874150507f5ce9",
+      "symbol": "RYANX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178700/thumb/RYANx.png?1790152797",
+      "assetGroup": "Ryan Specialty xStock::RYANX",
+      "currencyId": "Ryan Specialty xStock::RYANX"
+    },
+    "0xca8deaa2d80e6bfdb4581d34647ea73d9799c36d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SailPoint xStock",
+      "address": "0xca8deaa2d80e6bfdb4581d34647ea73d9799c36d",
+      "symbol": "SAILX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178701/thumb/SAILx.png?1790152801",
+      "assetGroup": "SailPoint xStock::SAILX",
+      "currencyId": "SailPoint xStock::SAILX"
+    },
+    "0x93132a761807f8dbd5d8c9b6d31f544d3deb8e1d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Service Corp International xStock",
+      "address": "0x93132a761807f8dbd5d8c9b6d31f544d3deb8e1d",
+      "symbol": "SCIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178702/thumb/SCIx.png?1790152805",
+      "assetGroup": "Service Corp International xStock::SCIX",
+      "currencyId": "Service Corp International xStock::SCIX"
+    },
+    "0x095aeda2e3a971ae4e283c557852cc1eee641547": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SEI Investments xStock",
+      "address": "0x095aeda2e3a971ae4e283c557852cc1eee641547",
+      "symbol": "SEICX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178703/thumb/SEICx.png?1790152808",
+      "assetGroup": "SEI Investments xStock::SEICX",
+      "currencyId": "SEI Investments xStock::SEICX"
+    },
+    "0xb6ca5e1cdbe37d5b87ff92e424702a2af803a54a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Stifel Financial xStock",
+      "address": "0xb6ca5e1cdbe37d5b87ff92e424702a2af803a54a",
+      "symbol": "SFX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178704/thumb/SFx.png?1790152812",
+      "assetGroup": "Stifel Financial xStock::SFX",
+      "currencyId": "Stifel Financial xStock::SFX"
+    },
+    "0x860e267ee6db9d38256a46eabd56bf1f133ca4ae": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Semtech xStock",
+      "address": "0x860e267ee6db9d38256a46eabd56bf1f133ca4ae",
+      "symbol": "SMTCX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178705/thumb/SMTCx.png?1790152816",
+      "assetGroup": "Semtech xStock::SMTCX",
+      "currencyId": "Semtech xStock::SMTCX"
+    },
+    "0x868339e39489139f9cd27f279819886c1d352d1d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SNDK 2x Long ETF xStock",
+      "address": "0x868339e39489139f9cd27f279819886c1d352d1d",
+      "symbol": "SNXXX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178706/thumb/SNXXx.png?1790152819",
+      "assetGroup": "SNDK 2x Long ETF xStock::SNXXX",
+      "currencyId": "SNDK 2x Long ETF xStock::SNXXX"
+    },
+    "0x0782a5fae365eba67a6f6b688e415211c618f8d4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "3x Short Semiconductor ETF xStock",
+      "address": "0x0782a5fae365eba67a6f6b688e415211c618f8d4",
+      "symbol": "SOXSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178707/thumb/SOXSx.png?1790152823",
+      "assetGroup": "3x Short Semiconductor ETF xStock::SOXSX",
+      "currencyId": "3x Short Semiconductor ETF xStock::SOXSX"
+    },
+    "0xcdf976c44cb357977712c362407a823825e33e2a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Sterling Infrastructure xStock",
+      "address": "0xcdf976c44cb357977712c362407a823825e33e2a",
+      "symbol": "STRLX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178708/thumb/STRLx.png?1790152826",
+      "assetGroup": "Sterling Infrastructure xStock::STRLX",
+      "currencyId": "Sterling Infrastructure xStock::STRLX"
+    },
+    "0x47ee09a9b5c7c98eb2768b91596bcaa2ba9dd2b8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Toast xStock",
+      "address": "0x47ee09a9b5c7c98eb2768b91596bcaa2ba9dd2b8",
+      "symbol": "TOSTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178709/thumb/TOSTx.png?1790152830",
+      "assetGroup": "Toast xStock::TOSTX",
+      "currencyId": "Toast xStock::TOSTX"
+    },
+    "0xe1c691e2366c26ec357444daadde253fbed85d70": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "TTM Technologies xStock",
+      "address": "0xe1c691e2366c26ec357444daadde253fbed85d70",
+      "symbol": "TTMIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178710/thumb/TTMIx.png?1790152833",
+      "assetGroup": "TTM Technologies xStock::TTMIX",
+      "currencyId": "TTM Technologies xStock::TTMIX"
+    },
+    "0x013678d2039f27ac8531dd994411b6f6c502d889": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Texas Roadhouse xStock",
+      "address": "0x013678d2039f27ac8531dd994411b6f6c502d889",
+      "symbol": "TXRHX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178711/thumb/TXRHx.png?1790152837",
+      "assetGroup": "Texas Roadhouse xStock::TXRHX",
+      "currencyId": "Texas Roadhouse xStock::TXRHX"
+    },
+    "0xad987735fb5f2d7b26c7cfd3b34a2d19f4f3c8e0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "U-Haul xStock",
+      "address": "0xad987735fb5f2d7b26c7cfd3b34a2d19f4f3c8e0",
+      "symbol": "UHALX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178712/thumb/UHALx.png?1790152840",
+      "assetGroup": "U-Haul xStock::UHALX",
+      "currencyId": "U-Haul xStock::UHALX"
+    },
+    "0x17ebf5aef19876885f25a1531aa3b97c8cf75ffc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ubiquiti xStock",
+      "address": "0x17ebf5aef19876885f25a1531aa3b97c8cf75ffc",
+      "symbol": "UIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178713/thumb/UIx.png?1790152844",
+      "assetGroup": "Ubiquiti xStock::UIX",
+      "currencyId": "Ubiquiti xStock::UIX"
+    },
+    "0xf0a2bfea902fde8c3b83b017ceccde39d5428d34": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "UL Solutions xStock",
+      "address": "0xf0a2bfea902fde8c3b83b017ceccde39d5428d34",
+      "symbol": "ULSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178714/thumb/ULSx.png?1790152847",
+      "assetGroup": "UL Solutions xStock::ULSX",
+      "currencyId": "UL Solutions xStock::ULSX"
+    },
+    "0x1a65a334918c39c00e5ad99ebe936c1bd681d95e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Unity Software xStock",
+      "address": "0x1a65a334918c39c00e5ad99ebe936c1bd681d95e",
+      "symbol": "UX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178715/thumb/Ux.png?1790152851",
+      "assetGroup": "Unity Software xStock::UX",
+      "currencyId": "Unity Software xStock::UX"
+    },
+    "0xf7d9260f004283c386ba5706ee035561560ffa97": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Viper Energy xStock",
+      "address": "0xf7d9260f004283c386ba5706ee035561560ffa97",
+      "symbol": "VNOMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178716/thumb/VNOMx.png?1790152855",
+      "assetGroup": "Viper Energy xStock::VNOMX",
+      "currencyId": "Viper Energy xStock::VNOMX"
+    },
+    "0x81f87eaf62c1ac8e5e55c5c5e014e1b7d99fec1b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Advanced Drainage Systems xStock",
+      "address": "0x81f87eaf62c1ac8e5e55c5c5e014e1b7d99fec1b",
+      "symbol": "WMSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178717/thumb/WMSx.png?1790152858",
+      "assetGroup": "Advanced Drainage Systems xStock::WMSX",
+      "currencyId": "Advanced Drainage Systems xStock::WMSX"
+    },
+    "0x8777b4870ebdd0ba90eeb165ae154d1398eae1fd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "World Acceptance xStock",
+      "address": "0x8777b4870ebdd0ba90eeb165ae154d1398eae1fd",
+      "symbol": "WRLDX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178718/thumb/WRLDx.png?1790152862",
+      "assetGroup": "World Acceptance xStock::WRLDX",
+      "currencyId": "World Acceptance xStock::WRLDX"
+    },
+    "0xad2fec6ba14a5b0b56f8ad7efdcaf3629a03ffa3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Essential Utilities xStock",
+      "address": "0xad2fec6ba14a5b0b56f8ad7efdcaf3629a03ffa3",
+      "symbol": "WTRGX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178719/thumb/WTRGx.png?1790152865",
+      "assetGroup": "Essential Utilities xStock::WTRGX",
+      "currencyId": "Essential Utilities xStock::WTRGX"
+    },
+    "0xe73ccffe6e8f07993c33b50dd4f118089f67a342": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Watts Water Technologies xStock",
+      "address": "0xe73ccffe6e8f07993c33b50dd4f118089f67a342",
+      "symbol": "WTSX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178720/thumb/WTSx.png?1790152869",
+      "assetGroup": "Watts Water Technologies xStock::WTSX",
+      "currencyId": "Watts Water Technologies xStock::WTSX"
+    },
+    "0x142bf1f505fed39338897bc9f165a1dd505d9f55": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Wayfair xStock",
+      "address": "0x142bf1f505fed39338897bc9f165a1dd505d9f55",
+      "symbol": "WX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178721/thumb/Wx.png?1790152872",
+      "assetGroup": "Wayfair xStock::WX",
+      "currencyId": "Wayfair xStock::WX"
+    },
+    "0x9861604f392f025f69a7ff1f5c8044d0f15c8c35": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Whitefiber xStock",
+      "address": "0x9861604f392f025f69a7ff1f5c8044d0f15c8c35",
+      "symbol": "WYFIX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178722/thumb/WYFIx.png?1790152877",
+      "assetGroup": "Whitefiber xStock::WYFIX",
+      "currencyId": "Whitefiber xStock::WYFIX"
+    },
+    "0x19b7680118fd54b8d52ef922afb3bbb13e3ad47f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Xerox xStock",
+      "address": "0x19b7680118fd54b8d52ef922afb3bbb13e3ad47f",
+      "symbol": "XRXX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178723/thumb/XRXx.png?1790152880",
+      "assetGroup": "Xerox xStock::XRXX",
+      "currencyId": "Xerox xStock::XRXX"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

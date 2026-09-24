@@ -231,6 +231,7 @@
           "syAddress": "0x5dfbeaea9e41f85c334075482a20afb7031207ae",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -396,7 +397,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x0000000f2eb9f69274678c76222b35eec7588a65",
           "ytAddress": "0x35fbdbd598445a7cbb08dc114fe9feece20e2c67",
-          "syAddress": "0xe181aed8e14469231618504df46e8c069314589b"
+          "syAddress": "0xe181aed8e14469231618504df46e8c069314589b",
+          "expired": true
         },
         "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -602,7 +604,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x0000000f2eb9f69274678c76222b35eec7588a65",
           "ptAddress": "0x1fec97ca2817da87f266fd1741bba61caf7cde29",
-          "syAddress": "0xe181aed8e14469231618504df46e8c069314589b"
+          "syAddress": "0xe181aed8e14469231618504df46e8c069314589b",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -690,7 +693,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
           "ptAddress": "0xe9ea8a16398171d8113fe2b71f05dda6ac9b86a7",
-          "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64"
+          "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64",
+          "expired": true
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -1094,6 +1098,7 @@
           "ptAddress": "0x194b8fed256c02ef1036ed812cae0c659ee6f7fd",
           "ytAddress": "0x1490516d8391e4d0bcbd13b7a56b4fe4996478be"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -2703,7 +2708,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
           "ytAddress": "0x3eb91557e41c19848c7725cb3279029073efaf8d",
-          "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64"
+          "syAddress": "0xe574de45b4ea2c5db7dd6f4074349f270ee97c64",
+          "expired": true
         },
         "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -9906,7 +9912,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/52414/thumb/steak-usdc-flushed.png?1733305792",
       "assetGroup": "Steakhouse USDC Base Morpho Vault::STEAKUSDC",
       "currencyId": "Steakhouse USDC Base Morpho Vault::STEAKUSDC",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x000096630066820566162c94874a776532705231": {
       "chainId": "8453",
@@ -23475,7 +23481,8 @@
             }
           ]
         },
-        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x6d2b49608a716e30bc7abcfe00181bf261bf6fc5": {
@@ -27681,7 +27688,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66267/thumb/Coinbase_Wrapped_XPR_%28cbXRP%29.png?1749023398",
       "assetGroup": "Coinbase Wrapped XRP::CBXRP",
       "currencyId": "Coinbase Wrapped XRP::CBXRP",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0xcbd06e5a2b0c65597161de254aa074e489deb510": {
       "chainId": "8453",
@@ -27692,7 +27701,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66268/thumb/Coinbase_Wrapped_Doge_%28cbDOGE%29.png?1749023465",
       "assetGroup": "Coinbase Wrapped DOGE::CBDOGE",
       "currencyId": "Coinbase Wrapped DOGE::CBDOGE",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0x17906b1cd88aa8efaefc5e82891b52a22219bd45": {
       "chainId": "8453",
@@ -30031,7 +30042,8 @@
             }
           ]
         },
-        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" },
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x8619986e425bb1a78b3facfb1f2086aca91b6088": {
@@ -32745,7 +32757,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66646/thumb/Coinbase_Wrapped_Litecoin_%28cbLTC%29.png?1750129508",
       "assetGroup": "Coinbase Wrapped LTC::CBLTC",
       "currencyId": "Coinbase Wrapped LTC::CBLTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0xcbada732173e39521cdbe8bf59a6dc85a9fc7b8c": {
       "chainId": "8453",
@@ -32756,7 +32770,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66647/thumb/Coinbase_Wrapped_Ada_%28cbADA%29.png?1750129533",
       "assetGroup": "Coinbase Wrapped ADA::CBADA",
       "currencyId": "Coinbase Wrapped ADA::CBADA",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0x01e75e59eabf83c85360351a100d22e025a75bc2": {
       "chainId": "8453",
@@ -39360,7 +39376,7 @@
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -39973,7 +39989,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/steakusdc.svg",
       "assetGroup": "Steakhouse Prime USDC::steakUSDC",
       "currencyId": "Steakhouse Prime USDC::steakUSDC",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x65d88916d9fa10762e62d26592610fe52de31d5a": {
       "chainId": "8453",
@@ -48925,7 +48941,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173707/thumb/USDC.png?1781019013",
       "assetGroup": "Galaxy USDC Quality (Base)::BASEETH:GUSDCQ",
       "currencyId": "Galaxy USDC Quality (Base)::BASEETH:GUSDCQ",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
     },
     "0x50c072b2a42bb43787c09912ccb59f47e304380f": {
       "chainId": "8453",
@@ -48958,7 +48974,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x5be98f7084814ec1d53d2ba364c8bc8201ab05f7": {
@@ -49820,7 +49836,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175547/thumb/prime-usdc.png?1786738034",
       "assetGroup": "jvhhVault::JVHHUSDC",
       "currencyId": "jvhhVault::JVHHUSDC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x53f39e5c53ee40bbc3da97c3b47bd2968d110a8d": {
       "chainId": "8453",
@@ -51525,6 +51541,36 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69681/thumb/0g.png?1759289984",
       "assetGroup": "Wrapped 0G::W0G",
       "currencyId": "Wrapped 0G::W0G"
+    },
+    "0xb20000000000000000000070f6c1a66d7c1e4d01": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SPIKE",
+      "address": "0xb20000000000000000000070f6c1a66d7c1e4d01",
+      "symbol": "SPIKE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178759/thumb/spike.jpg?1790220697",
+      "assetGroup": "SPIKE::SPIKE::8453::0",
+      "currencyId": "SPIKE::SPIKE"
+    },
+    "0xddde5965d49e69b6362bd8743e139a45dbfeb7b3": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Pareton",
+      "address": "0xddde5965d49e69b6362bd8743e139a45dbfeb7b3",
+      "symbol": "SN10",
+      "logoURI": "https://assets.coingecko.com/coins/images/66310/thumb/icon.png?1787813856",
+      "assetGroup": "Pareton::SN10",
+      "currencyId": "Pareton::SN10"
+    },
+    "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Waterdrop Inc aStock",
+      "address": "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0",
+      "symbol": "AWDH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178731/thumb/aWDH-logo.png?1790168204",
+      "assetGroup": "Waterdrop Inc aStock::AWDH",
+      "currencyId": "Waterdrop Inc aStock::AWDH"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",

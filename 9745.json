@@ -776,6 +776,7 @@
           "ptAddress": "0xedac81b27790e0728f54dea3b7718e5437e85353",
           "ytAddress": "0xf043ab55e8abac03fa4eeaa5102d8ca89e31fbe3"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -1783,6 +1784,7 @@
           "syAddress": "0x601afacd8fbdbf44e71201b13d449441621332b9",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -2268,7 +2270,11 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "savings": { "underlying": "USDai", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "oft": {
           "eid": 30383,
           "routes": [
@@ -2680,7 +2686,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xa9c251f8304b1b3fc2b9e8fcae78d94eff82ac66.png",
       "assetGroup": "TelosC Earn USDT0::tcUSDT0",
       "currencyId": "TelosC Earn USDT0::tcUSDT0",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 5, "source": "vault_inherit" } }
     },
     "0x616185600989bf8339b58ac9e539d49536598343": {
       "chainId": "9745",

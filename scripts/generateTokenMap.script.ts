@@ -372,9 +372,7 @@ async function readTokenLists(): Promise<{
                     // walked from the wrapper's hop. A PT over sUSDe is
                     // `pendle` + `ethena`; before both existed it matched
                     // NEITHER filter.
-                    const issuer = impostor
-                      ? undefined
-                      : (lookupIssuer(assetGroup) ?? wrapperIssuer(tokenProps))
+                    const issuer = impostor ? undefined : (lookupIssuer(assetGroup) ?? wrapperIssuer(tokenProps))
                     if (issuer && !tokenProps.issuer) tokenProps = { ...tokenProps, issuer }
 
                     // A LIST: one entry for every desk the wrapper's walk
