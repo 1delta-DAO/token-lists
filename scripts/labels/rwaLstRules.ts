@@ -225,11 +225,16 @@ const LST_RULES: Rule[] = [
     // symbol match covers bridged variants ("KelpDAO Bridged rsETH", bare "rsETH", wrapped)
     test: (n, s) => has('kelpdao restaked', 'kelp dao restaked')(n) || ['RSETH', 'WRSETH'].includes(norm(s)),
   },
+  // ether.fi runs more than ETH under its brand: "ether.fi BTC" (eBTC) is a
+  // BTC LRT, "ether.fi USD" (eUSD) is a dollar, and "hyperbeat x ether.fi
+  // HYPE" (beHYPE) is a HYPE LST. The bare brand therefore only names ETH when
+  // the name also says ETH; it used to stamp all four `asset: 'ETH'`.
+  { id: 'etherfi-btc', confidence: 'auto', lst: stake('BTC', 'etherfi', 'restaking'), test: has('ether.fi btc') },
   {
     id: 'etherfi',
     confidence: 'auto',
     lst: stake('ETH', 'etherfi', 'restaking'),
-    test: has('wrapped eeth', 'ether.fi'),
+    test: (n) => has('wrapped eeth')(n) || (has('ether.fi')(n) && /\beth\b/i.test(n)),
   },
   {
     id: 'puffer',
