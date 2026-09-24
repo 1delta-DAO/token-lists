@@ -215,13 +215,7 @@ function resolveExposures(
   }
 
   const perGroup = new Map<string, Map<string, IssuerExposure>>()
-  const stats: Record<string, number> = {
-    wrappers: 0,
-    resolved: 0,
-    deadEnd: 0,
-    cycles: 0,
-    multiLeg: 0,
-  }
+  const stats: Record<string, number> = { wrappers: 0, resolved: 0, deadEnd: 0, cycles: 0, multiLeg: 0 }
 
   for (const [group, entry] of Object.entries(omni)) {
     for (const c of entry.currencies ?? []) {
@@ -377,8 +371,7 @@ function generateIssuerMap() {
       `${stats.multiLeg} group(s) with more than one desk, ${stats.cycles} cycle(s) cut).`,
   )
   console.log(
-    `  Wrapper instruments themselves are attributed at overlay time: ` +
-      `${Object.keys(WRAPPER_ISSUERS).join(', ')}.`,
+    `  Wrapper instruments themselves are attributed at overlay time: ` + `${Object.keys(WRAPPER_ISSUERS).join(', ')}.`,
   )
 }
 
