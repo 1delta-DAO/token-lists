@@ -12,7 +12,14 @@
       "assetGroup": "YT SHROOM (SHROOM) Robinhood::YT-SHROOM-8OCT2026",
       "currencyId": "YT SHROOM (SHROOM) Robinhood::YT-SHROOM-8OCT2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1791417600 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x25f241538bc3de8f7130706827b3f6946db51f5d",
+          "expiry": 1791417600,
+          "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
+          "ptAddress": "0x20636ab8f3dea231f30396eeba184eff2f3ba72b",
+          "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -66,6 +73,20 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x11f52ee4ce0c220b268b8b833e51c28699097ced": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "PT ORBIO (ORBIO) Robinhood",
+      "address": "0x11f52ee4ce0c220b268b8b833e51c28699097ced",
+      "symbol": "PT-ORBIO-8OCT2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5205f4db-9b34-4ea4-ab93-8158d166c977.svg",
+      "assetGroup": "PT ORBIO (ORBIO) Robinhood::PT-ORBIO-8OCT2026",
+      "currencyId": "PT ORBIO (ORBIO) Robinhood::PT-ORBIO-8OCT2026",
+      "props": {
+        "pendle": { "tokenType": "PT", "expiry": 1791417600 },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x20636ab8f3dea231f30396eeba184eff2f3ba72b": {
       "chainId": "4663",
       "decimals": 18,
@@ -76,7 +97,42 @@
       "assetGroup": "PT SHROOM (SHROOM) Robinhood::PT-SHROOM-8OCT2026",
       "currencyId": "PT SHROOM (SHROOM) Robinhood::PT-SHROOM-8OCT2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1791417600 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x25f241538bc3de8f7130706827b3f6946db51f5d",
+          "expiry": 1791417600,
+          "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
+          "ytAddress": "0x06b6c573f0f138a4d2731a8c96ea14f63c6c4a62",
+          "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x346ae4fc5134f13655c65abb6dfd8728a6eb1235": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "ORBIO Robinhood",
+      "address": "0x346ae4fc5134f13655c65abb6dfd8728a6eb1235",
+      "symbol": "SY-ORBIO",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/4c3e1698-fdc6-450e-9406-0feff685172d.svg",
+      "assetGroup": "ORBIO Robinhood::SY-ORBIO",
+      "currencyId": "ORBIO Robinhood::SY-ORBIO",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x44a4ff3934cf3833903a04261bd0d962f008d2c3": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "SY-USDG Robinhood",
+      "address": "0x44a4ff3934cf3833903a04261bd0d962f008d2c3",
+      "symbol": "SY-USDG",
+      "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
+      "assetGroup": "SY-USDG Robinhood::SY-USDG",
+      "currencyId": "SY-USDG Robinhood::SY-USDG",
+      "props": {
+        "pendle": { "tokenType": "SY" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -96,7 +152,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
           "ytAddress": "0xaed999467896127c83ef0e08cf41d0b29705494d",
-          "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+          "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -153,7 +210,21 @@
       "assetGroup": "PT sNET (NET) Robinhood::PT-sNET-24SEP2026",
       "currencyId": "PT sNET (NET) Robinhood::PT-sNET-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x6982e39521a070a3c40782548bfbed6dc8f566ef": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "PT USDG (USDG) Robinhood",
+      "address": "0x6982e39521a070a3c40782548bfbed6dc8f566ef",
+      "symbol": "PT-USDG-25MAR2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/3c5c1e3f-6dd7-463d-a36c-244662c6f243.svg",
+      "assetGroup": "PT USDG (USDG) Robinhood::PT-USDG-25MAR2027",
+      "currencyId": "PT USDG (USDG) Robinhood::PT-USDG-25MAR2027",
+      "props": {
+        "pendle": { "tokenType": "PT", "expiry": 1805932800 },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -197,6 +268,20 @@
           "ptAddress": "0xf9cd484f7e7799ae32b7f9a75e60c478fd1f0b6e",
           "syAddress": "0x8c7454d4d64abd04fbf5f5ffe0dbcd5e3abcecf6"
         },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x79ea6792f7cd6f65b90898798e2413a027445879": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "PT-USDG-25MAR2027 Robinhood",
+      "address": "0x79ea6792f7cd6f65b90898798e2413a027445879",
+      "symbol": "PT-USDG-25MAR2027",
+      "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
+      "assetGroup": "PT-USDG-25MAR2027 Robinhood::PT-USDG-25MAR2027",
+      "currencyId": "PT-USDG-25MAR2027 Robinhood::PT-USDG-25MAR2027",
+      "props": {
+        "pendle": { "tokenType": "PT", "expiry": 1805932800 },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -268,6 +353,20 @@
           "ptAddress": "0xf9cd484f7e7799ae32b7f9a75e60c478fd1f0b6e",
           "ytAddress": "0x7600d0a61f83d7e4c4154c4664b19be6d9acf180"
         },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "USDG Robinhood",
+      "address": "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286",
+      "symbol": "SY-USDG",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg",
+      "assetGroup": "USDG Robinhood::SY-USDG",
+      "currencyId": "USDG Robinhood::SY-USDG",
+      "props": {
+        "pendle": { "tokenType": "SY" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -379,7 +478,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xd5f1afea47b1a9eab414d2ee740cf1d6d039e725",
           "ytAddress": "0xfe1f976d3111a89fd4ff71fbd2f5e5734602a79c",
-          "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176"
+          "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -400,7 +500,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xab093def657f15df31b33922a95e047add645b29",
           "ptAddress": "0x46d64dc152279e645e4fccecef0aae4e2ebdc077",
-          "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
+          "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -415,7 +516,7 @@
       "assetGroup": "YT sNET (NET) Robinhood::YT-sNET-24SEP2026",
       "currencyId": "YT sNET (NET) Robinhood::YT-sNET-24SEP2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1790208000 },
+        "pendle": { "tokenType": "YT", "expiry": 1790208000, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -435,8 +536,37 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xae8fc9288685516d2eca717056ca69303b348752",
           "ytAddress": "0xe32a6d0356d080d9dd8c0bd8e7ab3f464b3f1dbc",
-          "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73"
+          "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73",
+          "expired": true
         },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xc5f92ffc0f0ee08e161b275926b07fe01620137c": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "YT-USDG-25MAR2027 Robinhood",
+      "address": "0xc5f92ffc0f0ee08e161b275926b07fe01620137c",
+      "symbol": "YT-USDG-25MAR2027",
+      "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
+      "assetGroup": "YT-USDG-25MAR2027 Robinhood::YT-USDG-25MAR2027",
+      "currencyId": "YT-USDG-25MAR2027 Robinhood::YT-USDG-25MAR2027",
+      "props": {
+        "pendle": { "tokenType": "YT", "expiry": 1805932800 },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xc9fef9f1a200ba8f663792b795eaf2ab8d8b627a": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "YT ORBIO (ORBIO) Robinhood",
+      "address": "0xc9fef9f1a200ba8f663792b795eaf2ab8d8b627a",
+      "symbol": "YT-ORBIO-8OCT2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ebf6dc1d-c748-4a1d-b905-8fa92b7f8eb9.svg",
+      "assetGroup": "YT ORBIO (ORBIO) Robinhood::YT-ORBIO-8OCT2026",
+      "currencyId": "YT ORBIO (ORBIO) Robinhood::YT-ORBIO-8OCT2026",
+      "props": {
+        "pendle": { "tokenType": "YT", "expiry": 1791417600 },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -477,7 +607,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xae8fc9288685516d2eca717056ca69303b348752",
           "ptAddress": "0xb06180609b22973bee751a6c833db4821f8476fb",
-          "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73"
+          "syAddress": "0x9e9093a12b343c0f4d519ab093bef989b1936f73",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -500,6 +631,20 @@
           "ptAddress": "0xa53a07a4ae1ceff14dd9345030e1f01ecbb79733",
           "ytAddress": "0xfe1f976d3111a89fd4ff71fbd2f5e5734602a79c"
         },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xf35ee6bd9a93fe42bc7e628bfc4ddbdc6de1f615": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "YT USDG (USDG) Robinhood",
+      "address": "0xf35ee6bd9a93fe42bc7e628bfc4ddbdc6de1f615",
+      "symbol": "YT-USDG-25MAR2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b62836c0-f848-4d73-829e-adce1aa38dea.svg",
+      "assetGroup": "YT USDG (USDG) Robinhood::YT-USDG-25MAR2027",
+      "currencyId": "YT USDG (USDG) Robinhood::YT-USDG-25MAR2027",
+      "props": {
+        "pendle": { "tokenType": "YT", "expiry": 1805932800 },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -562,7 +707,8 @@
           "expiry": 1790208000,
           "underlyingAsset": "0xd5f1afea47b1a9eab414d2ee740cf1d6d039e725",
           "ptAddress": "0xa53a07a4ae1ceff14dd9345030e1f01ecbb79733",
-          "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176"
+          "syAddress": "0xf001572d32df8ef80850a2c90fb66f313fa82176",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -12497,6 +12643,196 @@
       "logoURI": "https://assets.coingecko.com/coins/images/27568/thumb/MELEGA_logo_halo_200x200px.png?1696526602",
       "assetGroup": "MELEGA::MARCO",
       "currencyId": "MELEGA::MARCO"
+    },
+    "0xc25c966168a8e933b0aba0dc8a25cac4a2b2b91d": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Arcus BTC (1x Short)",
+      "address": "0xc25c966168a8e933b0aba0dc8a25cac4a2b2b91d",
+      "symbol": "SBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178743/thumb/1xBTC_Short.png?1790173736",
+      "assetGroup": "Arcus BTC (1x Short)::SBTC",
+      "currencyId": "Arcus BTC (1x Short)::SBTC"
+    },
+    "0x925f92f055edb79c42b5d45e64a1b74143b90ea0": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Arcus BTC (1x Long)",
+      "address": "0x925f92f055edb79c42b5d45e64a1b74143b90ea0",
+      "symbol": "PBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178742/thumb/1xBTC_Long.png?1790173730",
+      "assetGroup": "Arcus BTC (1x Long)::PBTC",
+      "currencyId": "Arcus BTC (1x Long)::PBTC"
+    },
+    "0x4472c69d299382f8847ebce4fc6ed8e295510e3e": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Arcus BTC (3x Long)",
+      "address": "0x4472c69d299382f8847ebce4fc6ed8e295510e3e",
+      "symbol": "PBTC3X",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178744/thumb/3xBTC_Long.png?1790173748",
+      "assetGroup": "Arcus BTC (3x Long)::PBTC3X",
+      "currencyId": "Arcus BTC (3x Long)::PBTC3X"
+    },
+    "0xe24cabdf76dd1c2576049167eb1755c84b985c36": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Arcus HOOD (3x Long)",
+      "address": "0xe24cabdf76dd1c2576049167eb1755c84b985c36",
+      "symbol": "PHOOD3X",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178746/thumb/3xHOOD_Long.png?1790173769",
+      "assetGroup": "Arcus HOOD (3x Long)::PHOOD3X",
+      "currencyId": "Arcus HOOD (3x Long)::PHOOD3X"
+    },
+    "0xadcceee8e422050f890522fa798f8a93a4857083": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Arcus BTC (3x Short)",
+      "address": "0xadcceee8e422050f890522fa798f8a93a4857083",
+      "symbol": "SBTC3X",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178745/thumb/3xBTC_Short.png?1790173758",
+      "assetGroup": "Arcus BTC (3x Short)::SBTC3X",
+      "currencyId": "Arcus BTC (3x Short)::SBTC3X"
+    },
+    "0xca75082b85bb7bec8325d513f615b16bda260020": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "HASHCATS",
+      "address": "0xca75082b85bb7bec8325d513f615b16bda260020",
+      "symbol": "HASH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178733/thumb/hashcats-mark-1000.png?1790170607",
+      "assetGroup": "HASHCATS::HASH",
+      "currencyId": "HASHCATS::HASH"
+    },
+    "0x6eacc0461fdf3bd446634ccd0ed774a1ead028cc": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Shuffle",
+      "address": "0x6eacc0461fdf3bd446634ccd0ed774a1ead028cc",
+      "symbol": "SHUFFLE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178767/thumb/F4351F21-2AD2-434B-B078-95A08C5EF531.jpeg?1790233760",
+      "assetGroup": "Shuffle::SHUFFLE",
+      "currencyId": "Shuffle::SHUFFLE"
+    },
+    "0x39679b59289cce7c7f6e0feacdf39a1e543de751": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "CREDITS",
+      "address": "0x39679b59289cce7c7f6e0feacdf39a1e543de751",
+      "symbol": "CREDITS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178757/thumb/credits.png?1790220413",
+      "assetGroup": "CREDITS::CREDITS",
+      "currencyId": "CREDITS::CREDITS"
+    },
+    "0xd23f772ea2b912c98603ca89d189be098eee6abb": {
+      "chainId": "4663",
+      "decimals": 6,
+      "name": "PVP",
+      "address": "0xd23f772ea2b912c98603ca89d189be098eee6abb",
+      "symbol": "PVP",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178739/thumb/PVP_200x200.jpg?1790173240",
+      "assetGroup": "PVP::PVP",
+      "currencyId": "PVP::PVP"
+    },
+    "0x3458e003f6ed93df0f537b8acac6fbe08e41247f": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Roo",
+      "address": "0x3458e003f6ed93df0f537b8acac6fbe08e41247f",
+      "symbol": "ROO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178753/thumb/s37lk6dz5vrxo6kiip3g8d24gdfd.?1790219509",
+      "assetGroup": "Roo::ROO",
+      "currencyId": "Roo::ROO"
+    },
+    "0x2153b6e2e40c2d511a383f2536bcb256698f4be2": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Fly Inu",
+      "address": "0x2153b6e2e40c2d511a383f2536bcb256698f4be2",
+      "symbol": "FLY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178754/thumb/flyinu.jpg?1790219764",
+      "assetGroup": "Fly Inu::FLY",
+      "currencyId": "Fly Inu::FLY"
+    },
+    "0x9411673acad2ff68810713cbc04e029c8d636fe6": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "catwiffeather",
+      "address": "0x9411673acad2ff68810713cbc04e029c8d636fe6",
+      "symbol": "CATWIFFEATHER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178607/thumb/27k2ozi06ey0vwyxu9ugr076wio9.?1790140320",
+      "assetGroup": "catwiffeather::CATWIFFEATHER",
+      "currencyId": "catwiffeather::CATWIFFEATHER"
+    },
+    "0xfde368debe9e80f80785064a65719cec1f809dec": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Pepons",
+      "address": "0xfde368debe9e80f80785064a65719cec1f809dec",
+      "symbol": "PEPONS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178736/thumb/Pepons.png?1790171569",
+      "assetGroup": "Pepons::PEPONS::4663::0",
+      "currencyId": "Pepons::PEPONS"
+    },
+    "0xdc45b71d7203c2e8baafc43a19bca0eb993bb54e": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Darkwoods",
+      "address": "0xdc45b71d7203c2e8baafc43a19bca0eb993bb54e",
+      "symbol": "DARK",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178762/thumb/9kepyh97lvtf9bziwupbjgze6zdc.?1790221201",
+      "assetGroup": "Darkwoods::DARK",
+      "currencyId": "Darkwoods::DARK"
+    },
+    "0x060a0600abe74166e629f6749de284910ff8d8a3": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Rovyn.fi",
+      "address": "0x060a0600abe74166e629f6749de284910ff8d8a3",
+      "symbol": "RVN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178773/thumb/1ecba284-937c-4aa2-a825-e10b4d1e15b8.png?1790235363",
+      "assetGroup": "Rovyn.fi::RVN",
+      "currencyId": "Rovyn.fi::RVN"
+    },
+    "0x2037e55cff7e635bd982689ff408f5aad97bbb9b": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Ponshare",
+      "address": "0x2037e55cff7e635bd982689ff408f5aad97bbb9b",
+      "symbol": "PONSHARE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178772/thumb/1000023602.jpg?1790235264",
+      "assetGroup": "Ponshare::PONSHARE",
+      "currencyId": "Ponshare::PONSHARE"
+    },
+    "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Waterdrop Inc aStock",
+      "address": "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0",
+      "symbol": "AWDH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178731/thumb/aWDH-logo.png?1790168204",
+      "assetGroup": "Waterdrop Inc aStock::AWDH",
+      "currencyId": "Waterdrop Inc aStock::AWDH"
+    },
+    "0xddde5965d49e69b6362bd8743e139a45dbfeb7b3": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Pareton",
+      "address": "0xddde5965d49e69b6362bd8743e139a45dbfeb7b3",
+      "symbol": "SN10",
+      "logoURI": "https://assets.coingecko.com/coins/images/66310/thumb/icon.png?1787813856",
+      "assetGroup": "Pareton::SN10",
+      "currencyId": "Pareton::SN10"
+    },
+    "0x6f63d869011f95274498023b4abfc00b30c34378": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "OpenRoboto",
+      "address": "0x6f63d869011f95274498023b4abfc00b30c34378",
+      "symbol": "SN80",
+      "logoURI": "https://assets.coingecko.com/coins/images/66445/thumb/Image_Container.png?1789264897",
+      "assetGroup": "OpenRoboto::SN80",
+      "currencyId": "OpenRoboto::SN80"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4663",

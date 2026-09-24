@@ -189,7 +189,7 @@
       "currencyId": "PathUSD::pathUSD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -261,7 +261,8 @@
       "currencyId": "Staked Cap USD::stcUSD",
       "props": {
         "savings": { "underlying": "cUSD", "base": "USD" },
-        "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
+        "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x20c0000000000000000000005c0bac7cef389a11": {
@@ -285,7 +286,12 @@
       "currencyId": "Wrapped Savings rUSD::wsrUSD",
       "props": {
         "savings": { "underlying": "rUSD", "base": "USD" },
-        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
+        "issuer": {
+          "id": "reservoir",
+          "name": "Reservoir",
+          "kind": "protocol"
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x20c0000000000000000000009a4a4b17e0dc6651": {
@@ -348,7 +354,8 @@
       "currencyId": "InfiniFi Staked USD::siUSD",
       "props": {
         "savings": { "underlying": "iUSD", "base": "USD" },
-        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
+        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x20c0000000000000000000002f52d5cc21a3207b": {

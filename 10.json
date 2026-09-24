@@ -8707,7 +8707,7 @@
       "currencyId": "OP Bridged Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -8722,7 +8722,7 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "oft": {
           "eid": 30111,
           "routes": [
@@ -8758,7 +8758,7 @@
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
@@ -8807,7 +8807,7 @@
       "currencyId": "Coinbase Wrapped Staked ETH::cbETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "coinbase" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
@@ -8822,7 +8822,7 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -8837,7 +8837,7 @@
       "currencyId": "Bridged FRAX Ether (Axelar)::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -8880,7 +8880,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -8895,7 +8895,7 @@
       "currencyId": "Ankr Staked ETH::ankrETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
@@ -8925,7 +8925,7 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "oft": {
           "eid": 30111,
           "routes": [
@@ -8953,7 +8953,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "oft": {
           "eid": 30111,
           "routes": [
@@ -8995,7 +8995,7 @@
       "currencyId": "Liquid staked Ether 2.0::stETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
@@ -14494,7 +14494,7 @@
       "currencyId": "vawstETH Pool::vawstETH",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0x7b50775383d3d6f0215a8f290f2c9e2eebbeceb2": {
@@ -16606,7 +16606,7 @@
       "symbol": "vaUSDC",
       "assetGroup": "vaUSDC Pool::vaUSDC",
       "currencyId": "vaUSDC Pool::vaUSDC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0xd80840f51367e5f22d29c2de161d86fe992ebf77": {
       "chainId": "10",
@@ -16667,6 +16667,1023 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x1f22279c89b213944b7ea41dacb0a868ddcdfd13/small/token-logo.png",
       "assetGroup": "SODAX::SODA",
       "currencyId": "SODAX::SODA"
+    },
+    "0x5ceff2729e1873d2d45e9e51745b91ef8d14a405": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Revvity xStock",
+      "address": "0x5ceff2729e1873d2d45e9e51745b91ef8d14a405",
+      "symbol": "RVTYx",
+      "assetGroup": "Revvity xStock::RVTYx",
+      "currencyId": "Revvity xStock::RVTYx"
+    },
+    "0x93132a761807f8dbd5d8c9b6d31f544d3deb8e1d": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Service Corp International xStock",
+      "address": "0x93132a761807f8dbd5d8c9b6d31f544d3deb8e1d",
+      "symbol": "SCIx",
+      "assetGroup": "Service Corp International xStock::SCIx",
+      "currencyId": "Service Corp International xStock::SCIx"
+    },
+    "0x8cda4d1d08250ce22faf49879fddbd2bba55fcfc": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Better Home & Finance xStock",
+      "address": "0x8cda4d1d08250ce22faf49879fddbd2bba55fcfc",
+      "symbol": "BETRx",
+      "assetGroup": "Better Home & Finance xStock::BETRx",
+      "currencyId": "Better Home & Finance xStock::BETRx"
+    },
+    "0xc31bc46de7750a61da61a16de55777c0ce2d62be": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "News xStock",
+      "address": "0xc31bc46de7750a61da61a16de55777c0ce2d62be",
+      "symbol": "NWSx",
+      "assetGroup": "News xStock::NWSx",
+      "currencyId": "News xStock::NWSx"
+    },
+    "0xb6ca5e1cdbe37d5b87ff92e424702a2af803a54a": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Stifel Financial xStock",
+      "address": "0xb6ca5e1cdbe37d5b87ff92e424702a2af803a54a",
+      "symbol": "SFx",
+      "assetGroup": "Stifel Financial xStock::SFx",
+      "currencyId": "Stifel Financial xStock::SFx"
+    },
+    "0x8d53fb379e89d2e2d772a79923a0bd093a03a011": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "American Healthcare REIT xStock",
+      "address": "0x8d53fb379e89d2e2d772a79923a0bd093a03a011",
+      "symbol": "AHRx",
+      "assetGroup": "American Healthcare REIT xStock::AHRx",
+      "currencyId": "American Healthcare REIT xStock::AHRx"
+    },
+    "0xca8deaa2d80e6bfdb4581d34647ea73d9799c36d": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "SailPoint xStock",
+      "address": "0xca8deaa2d80e6bfdb4581d34647ea73d9799c36d",
+      "symbol": "SAILx",
+      "assetGroup": "SailPoint xStock::SAILx",
+      "currencyId": "SailPoint xStock::SAILx"
+    },
+    "0xf0a2bfea902fde8c3b83b017ceccde39d5428d34": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "UL Solutions xStock",
+      "address": "0xf0a2bfea902fde8c3b83b017ceccde39d5428d34",
+      "symbol": "ULSx",
+      "assetGroup": "UL Solutions xStock::ULSx",
+      "currencyId": "UL Solutions xStock::ULSx"
+    },
+    "0x3400f8b9852537feadc778f66629d7b5002593e2": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Medpace xStock",
+      "address": "0x3400f8b9852537feadc778f66629d7b5002593e2",
+      "symbol": "MEDPx",
+      "assetGroup": "Medpace xStock::MEDPx",
+      "currencyId": "Medpace xStock::MEDPx"
+    },
+    "0x3965a40f56f166bee144a110ffe44ae452623e19": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Hecla Mining xStock",
+      "address": "0x3965a40f56f166bee144a110ffe44ae452623e19",
+      "symbol": "HLx",
+      "assetGroup": "Hecla Mining xStock::HLx",
+      "currencyId": "Hecla Mining xStock::HLx"
+    },
+    "0xddbef1639261daa6f4d629bec8a5b9f831410cce": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Dycom Industries xStock",
+      "address": "0xddbef1639261daa6f4d629bec8a5b9f831410cce",
+      "symbol": "DYx",
+      "assetGroup": "Dycom Industries xStock::DYx",
+      "currencyId": "Dycom Industries xStock::DYx"
+    },
+    "0x17ebf5aef19876885f25a1531aa3b97c8cf75ffc": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Ubiquiti xStock",
+      "address": "0x17ebf5aef19876885f25a1531aa3b97c8cf75ffc",
+      "symbol": "UIx",
+      "assetGroup": "Ubiquiti xStock::UIx",
+      "currencyId": "Ubiquiti xStock::UIx"
+    },
+    "0xe1c691e2366c26ec357444daadde253fbed85d70": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "TTM Technologies xStock",
+      "address": "0xe1c691e2366c26ec357444daadde253fbed85d70",
+      "symbol": "TTMIx",
+      "assetGroup": "TTM Technologies xStock::TTMIx",
+      "currencyId": "TTM Technologies xStock::TTMIx"
+    },
+    "0x75d3c07dce9f1424dce574f78242e7ef1696b8a2": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "MP Materials xStock",
+      "address": "0x75d3c07dce9f1424dce574f78242e7ef1696b8a2",
+      "symbol": "MPx",
+      "assetGroup": "MP Materials xStock::MPx",
+      "currencyId": "MP Materials xStock::MPx"
+    },
+    "0x98b69f6e1770d4f34ebff27be8238849ce8e039d": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "FactSet Research Systems xStock",
+      "address": "0x98b69f6e1770d4f34ebff27be8238849ce8e039d",
+      "symbol": "FDSx",
+      "assetGroup": "FactSet Research Systems xStock::FDSx",
+      "currencyId": "FactSet Research Systems xStock::FDSx"
+    },
+    "0xd67019c50d6c26da108eb6327b100132177ceccd": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "MGM Resorts International xStock",
+      "address": "0xd67019c50d6c26da108eb6327b100132177ceccd",
+      "symbol": "MGMx",
+      "assetGroup": "MGM Resorts International xStock::MGMx",
+      "currencyId": "MGM Resorts International xStock::MGMx"
+    },
+    "0x9d45fde5bb853066963884b2532204ccf536965f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Rubrik xStock",
+      "address": "0x9d45fde5bb853066963884b2532204ccf536965f",
+      "symbol": "RBRKx",
+      "assetGroup": "Rubrik xStock::RBRKx",
+      "currencyId": "Rubrik xStock::RBRKx"
+    },
+    "0x8a51d83ebd03e381515724fb3493fdfd149710ec": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Crane xStock",
+      "address": "0x8a51d83ebd03e381515724fb3493fdfd149710ec",
+      "symbol": "CRx",
+      "assetGroup": "Crane xStock::CRx",
+      "currencyId": "Crane xStock::CRx"
+    },
+    "0x8932858213007adb2119fbddbafcadf330dd0feb": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "EastGroup Properties xStock",
+      "address": "0x8932858213007adb2119fbddbafcadf330dd0feb",
+      "symbol": "EGPx",
+      "assetGroup": "EastGroup Properties xStock::EGPx",
+      "currencyId": "EastGroup Properties xStock::EGPx"
+    },
+    "0x1bbae6c80e40b44bc36e63d592eece9440ad5c7b": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Donaldson xStock",
+      "address": "0x1bbae6c80e40b44bc36e63d592eece9440ad5c7b",
+      "symbol": "DCIx",
+      "assetGroup": "Donaldson xStock::DCIx",
+      "currencyId": "Donaldson xStock::DCIx"
+    },
+    "0x2efc8e610632cf9c483be6628f674a3d08d37a7f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Kratos Defense & Security Solutions xStock",
+      "address": "0x2efc8e610632cf9c483be6628f674a3d08d37a7f",
+      "symbol": "KTOSx",
+      "assetGroup": "Kratos Defense & Security Solutions xStock::KTOSx",
+      "currencyId": "Kratos Defense & Security Solutions xStock::KTOSx"
+    },
+    "0xd580bec1fa67535a889bb25114635d4f1e739ba3": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "NVR xStock",
+      "address": "0xd580bec1fa67535a889bb25114635d4f1e739ba3",
+      "symbol": "NVRx",
+      "assetGroup": "NVR xStock::NVRx",
+      "currencyId": "NVR xStock::NVRx"
+    },
+    "0x095aeda2e3a971ae4e283c557852cc1eee641547": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "SEI Investments xStock",
+      "address": "0x095aeda2e3a971ae4e283c557852cc1eee641547",
+      "symbol": "SEICx",
+      "assetGroup": "SEI Investments xStock::SEICx",
+      "currencyId": "SEI Investments xStock::SEICx"
+    },
+    "0x876ac27dbaa175411d53b269f70146acd1e2baba": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Docusign xStock",
+      "address": "0x876ac27dbaa175411d53b269f70146acd1e2baba",
+      "symbol": "DOCUx",
+      "assetGroup": "Docusign xStock::DOCUx",
+      "currencyId": "Docusign xStock::DOCUx"
+    },
+    "0xed258844f20a0162d476d98cf370508088755c29": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "DigitalOcean xStock",
+      "address": "0xed258844f20a0162d476d98cf370508088755c29",
+      "symbol": "DOCNx",
+      "assetGroup": "DigitalOcean xStock::DOCNx",
+      "currencyId": "DigitalOcean xStock::DOCNx"
+    },
+    "0xc8c119606d13c780840b8ce48ed4ad8f3bde42f5": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Ramaco Resources xStock",
+      "address": "0xc8c119606d13c780840b8ce48ed4ad8f3bde42f5",
+      "symbol": "METCx",
+      "assetGroup": "Ramaco Resources xStock::METCx",
+      "currencyId": "Ramaco Resources xStock::METCx"
+    },
+    "0x9aafe57dda4f5de83b644cbd97d2b45dc4e8672c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Globus Medical xStock",
+      "address": "0x9aafe57dda4f5de83b644cbd97d2b45dc4e8672c",
+      "symbol": "GMEDx",
+      "assetGroup": "Globus Medical xStock::GMEDx",
+      "currencyId": "Globus Medical xStock::GMEDx"
+    },
+    "0x868339e39489139f9cd27f279819886c1d352d1d": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "SNDK 2x Long ETF xStock",
+      "address": "0x868339e39489139f9cd27f279819886c1d352d1d",
+      "symbol": "SNXXx",
+      "assetGroup": "SNDK 2x Long ETF xStock::SNXXx",
+      "currencyId": "SNDK 2x Long ETF xStock::SNXXx"
+    },
+    "0xb100ee83b2f3e591c84354db63850677925b704f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Franklin Templeton xStock",
+      "address": "0xb100ee83b2f3e591c84354db63850677925b704f",
+      "symbol": "BENx",
+      "assetGroup": "Franklin Templeton xStock::BENx",
+      "currencyId": "Franklin Templeton xStock::BENx"
+    },
+    "0xca7e36bee157f2de07610d331fd76d826e054573": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "BXP xStock",
+      "address": "0xca7e36bee157f2de07610d331fd76d826e054573",
+      "symbol": "BXPx",
+      "assetGroup": "BXP xStock::BXPx",
+      "currencyId": "BXP xStock::BXPx"
+    },
+    "0x70853c88915b95efaa7bb5c15413d3c841bfe807": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Antero Resources xStock",
+      "address": "0x70853c88915b95efaa7bb5c15413d3c841bfe807",
+      "symbol": "ARx",
+      "assetGroup": "Antero Resources xStock::ARx",
+      "currencyId": "Antero Resources xStock::ARx"
+    },
+    "0x957d422ab6dd484c01f84b40b5a0b00bcf742d09": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Baxter International xStock",
+      "address": "0x957d422ab6dd484c01f84b40b5a0b00bcf742d09",
+      "symbol": "BAXx",
+      "assetGroup": "Baxter International xStock::BAXx",
+      "currencyId": "Baxter International xStock::BAXx"
+    },
+    "0x857a7d561d6a25a38013fc111332339b3ea520a0": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Freedom xStock",
+      "address": "0x857a7d561d6a25a38013fc111332339b3ea520a0",
+      "symbol": "FRHCx",
+      "assetGroup": "Freedom xStock::FRHCx",
+      "currencyId": "Freedom xStock::FRHCx"
+    },
+    "0x23889fa78da8e454e72f2b19bd331d19a27040bf": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "HF Sinclair xStock",
+      "address": "0x23889fa78da8e454e72f2b19bd331d19a27040bf",
+      "symbol": "DINOx",
+      "assetGroup": "HF Sinclair xStock::DINOx",
+      "currencyId": "HF Sinclair xStock::DINOx"
+    },
+    "0x5b58319888c70eec5880f513240b365243562df8": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "HubSpot xStock",
+      "address": "0x5b58319888c70eec5880f513240b365243562df8",
+      "symbol": "HUBSx",
+      "assetGroup": "HubSpot xStock::HUBSx",
+      "currencyId": "HubSpot xStock::HUBSx"
+    },
+    "0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "NatWest xStock",
+      "address": "0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6",
+      "symbol": "NWGx",
+      "assetGroup": "NatWest xStock::NWGx",
+      "currencyId": "NatWest xStock::NWGx"
+    },
+    "0xe73ccffe6e8f07993c33b50dd4f118089f67a342": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Watts Water Technologies xStock",
+      "address": "0xe73ccffe6e8f07993c33b50dd4f118089f67a342",
+      "symbol": "WTSx",
+      "assetGroup": "Watts Water Technologies xStock::WTSx",
+      "currencyId": "Watts Water Technologies xStock::WTSx"
+    },
+    "0x667d0001065df1a94bc19e54497e9aa6cf6b6dfa": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "PureCycle Technologies xStock",
+      "address": "0x667d0001065df1a94bc19e54497e9aa6cf6b6dfa",
+      "symbol": "PCTx",
+      "assetGroup": "PureCycle Technologies xStock::PCTx",
+      "currencyId": "PureCycle Technologies xStock::PCTx"
+    },
+    "0x4aaf56c5c9a04d6af855d3c963026d9e4bdd0ab6": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Fluence Energy xStock",
+      "address": "0x4aaf56c5c9a04d6af855d3c963026d9e4bdd0ab6",
+      "symbol": "FLNCx",
+      "assetGroup": "Fluence Energy xStock::FLNCx",
+      "currencyId": "Fluence Energy xStock::FLNCx"
+    },
+    "0x0782a5fae365eba67a6f6b688e415211c618f8d4": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "3x Short Semiconductor ETF xStock",
+      "address": "0x0782a5fae365eba67a6f6b688e415211c618f8d4",
+      "symbol": "SOXSx",
+      "assetGroup": "3x Short Semiconductor ETF xStock::SOXSx",
+      "currencyId": "3x Short Semiconductor ETF xStock::SOXSx"
+    },
+    "0x8b1c0548d402b860eaadf6da598f754e7ab60d1a": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Corcept Therapeutics xStock",
+      "address": "0x8b1c0548d402b860eaadf6da598f754e7ab60d1a",
+      "symbol": "CORTx",
+      "assetGroup": "Corcept Therapeutics xStock::CORTx",
+      "currencyId": "Corcept Therapeutics xStock::CORTx"
+    },
+    "0xf7d9260f004283c386ba5706ee035561560ffa97": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Viper Energy xStock",
+      "address": "0xf7d9260f004283c386ba5706ee035561560ffa97",
+      "symbol": "VNOMx",
+      "assetGroup": "Viper Energy xStock::VNOMx",
+      "currencyId": "Viper Energy xStock::VNOMx"
+    },
+    "0x63b0507283b2a58ce149396afefc92fa38ea587c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "GoDaddy xStock",
+      "address": "0x63b0507283b2a58ce149396afefc92fa38ea587c",
+      "symbol": "GDDYx",
+      "assetGroup": "GoDaddy xStock::GDDYx",
+      "currencyId": "GoDaddy xStock::GDDYx"
+    },
+    "0xad987735fb5f2d7b26c7cfd3b34a2d19f4f3c8e0": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "U-Haul xStock",
+      "address": "0xad987735fb5f2d7b26c7cfd3b34a2d19f4f3c8e0",
+      "symbol": "UHALx",
+      "assetGroup": "U-Haul xStock::UHALx",
+      "currencyId": "U-Haul xStock::UHALx"
+    },
+    "0x9e90ce16085ea1c58ad8689948c071c8799bcec5": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Madrigal Pharmaceuticals xStock",
+      "address": "0x9e90ce16085ea1c58ad8689948c071c8799bcec5",
+      "symbol": "MDGLx",
+      "assetGroup": "Madrigal Pharmaceuticals xStock::MDGLx",
+      "currencyId": "Madrigal Pharmaceuticals xStock::MDGLx"
+    },
+    "0x485012aebb4827b01cf307a055406c90f3ce19e5": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Micron 2x Long ETF xStock",
+      "address": "0x485012aebb4827b01cf307a055406c90f3ce19e5",
+      "symbol": "MUUx",
+      "assetGroup": "Micron 2x Long ETF xStock::MUUx",
+      "currencyId": "Micron 2x Long ETF xStock::MUUx"
+    },
+    "0x516be05b00cc2f897fd3f8bbecb54990d206658b": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "GFL Environmental xStock",
+      "address": "0x516be05b00cc2f897fd3f8bbecb54990d206658b",
+      "symbol": "GFLx",
+      "assetGroup": "GFL Environmental xStock::GFLx",
+      "currencyId": "GFL Environmental xStock::GFLx"
+    },
+    "0xb5638d3ccf90d90b9ec38bd876d406f4f92df70c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "DaVita xStock",
+      "address": "0xb5638d3ccf90d90b9ec38bd876d406f4f92df70c",
+      "symbol": "DVAx",
+      "assetGroup": "DaVita xStock::DVAx",
+      "currencyId": "DaVita xStock::DVAx"
+    },
+    "0xdb0245163fda906f27dc5813d2d2b51673c33bde": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Affirm xStock",
+      "address": "0xdb0245163fda906f27dc5813d2d2b51673c33bde",
+      "symbol": "AFRMx",
+      "assetGroup": "Affirm xStock::AFRMx",
+      "currencyId": "Affirm xStock::AFRMx"
+    },
+    "0x711710400e35283e7c59e9398006ac687ffd8fb8": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Antero Midstream xStock",
+      "address": "0x711710400e35283e7c59e9398006ac687ffd8fb8",
+      "symbol": "AMx",
+      "assetGroup": "Antero Midstream xStock::AMx",
+      "currencyId": "Antero Midstream xStock::AMx"
+    },
+    "0x10ef8902319697c91ff513ece57c23996a5c254f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Jack Henry & Associates xStock",
+      "address": "0x10ef8902319697c91ff513ece57c23996a5c254f",
+      "symbol": "JKHYx",
+      "assetGroup": "Jack Henry & Associates xStock::JKHYx",
+      "currencyId": "Jack Henry & Associates xStock::JKHYx"
+    },
+    "0x8777b4870ebdd0ba90eeb165ae154d1398eae1fd": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "World Acceptance xStock",
+      "address": "0x8777b4870ebdd0ba90eeb165ae154d1398eae1fd",
+      "symbol": "WRLDx",
+      "assetGroup": "World Acceptance xStock::WRLDx",
+      "currencyId": "World Acceptance xStock::WRLDx"
+    },
+    "0xd41e61bfddfa78af89d82b3d1b3007899a1e3393": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "CNA Financial xStock",
+      "address": "0xd41e61bfddfa78af89d82b3d1b3007899a1e3393",
+      "symbol": "CNAx",
+      "assetGroup": "CNA Financial xStock::CNAx",
+      "currencyId": "CNA Financial xStock::CNAx"
+    },
+    "0xf44234dec21985feb41e37b86fda923cb046f114": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Storage ETF (Roundhill) xStock",
+      "address": "0xf44234dec21985feb41e37b86fda923cb046f114",
+      "symbol": "DRAMx",
+      "assetGroup": "Storage ETF (Roundhill) xStock::DRAMx",
+      "currencyId": "Storage ETF (Roundhill) xStock::DRAMx"
+    },
+    "0xce1c7dc7d320a5e11d8921c0124efea4b577c47c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "AXT xStock",
+      "address": "0xce1c7dc7d320a5e11d8921c0124efea4b577c47c",
+      "symbol": "AXTIx",
+      "assetGroup": "AXT xStock::AXTIx",
+      "currencyId": "AXT xStock::AXTIx"
+    },
+    "0xf751b35bb44f4b03b12262cef112fcaf0307f406": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "American Homes 4 Rent xStock",
+      "address": "0xf751b35bb44f4b03b12262cef112fcaf0307f406",
+      "symbol": "AMHx",
+      "assetGroup": "American Homes 4 Rent xStock::AMHx",
+      "currencyId": "American Homes 4 Rent xStock::AMHx"
+    },
+    "0x634fd9cdab5444813630b190eea1f477ff367f4c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Hyatt Hotels xStock",
+      "address": "0x634fd9cdab5444813630b190eea1f477ff367f4c",
+      "symbol": "Hx",
+      "assetGroup": "Hyatt Hotels xStock::Hx",
+      "currencyId": "Hyatt Hotels xStock::Hx"
+    },
+    "0x81f87eaf62c1ac8e5e55c5c5e014e1b7d99fec1b": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Advanced Drainage Systems xStock",
+      "address": "0x81f87eaf62c1ac8e5e55c5c5e014e1b7d99fec1b",
+      "symbol": "WMSx",
+      "assetGroup": "Advanced Drainage Systems xStock::WMSx",
+      "currencyId": "Advanced Drainage Systems xStock::WMSx"
+    },
+    "0x7d72510babc131d74440392c0f249aaa2bed3e7f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Guidewire Software xStock",
+      "address": "0x7d72510babc131d74440392c0f249aaa2bed3e7f",
+      "symbol": "GWREx",
+      "assetGroup": "Guidewire Software xStock::GWREx",
+      "currencyId": "Guidewire Software xStock::GWREx"
+    },
+    "0x665c220ecd70f390a61cb5149336461438c2827c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Penske Automotive xStock",
+      "address": "0x665c220ecd70f390a61cb5149336461438c2827c",
+      "symbol": "PAGx",
+      "assetGroup": "Penske Automotive xStock::PAGx",
+      "currencyId": "Penske Automotive xStock::PAGx"
+    },
+    "0xce39e4fb8e9e415f60869a5ea3467091ae115e15": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Axsome Therapeutics xStock",
+      "address": "0xce39e4fb8e9e415f60869a5ea3467091ae115e15",
+      "symbol": "AXSMx",
+      "assetGroup": "Axsome Therapeutics xStock::AXSMx",
+      "currencyId": "Axsome Therapeutics xStock::AXSMx"
+    },
+    "0xf95823d1f58bd633cd51e407c20f8ce7f50becb9": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "C3.ai xStock",
+      "address": "0xf95823d1f58bd633cd51e407c20f8ce7f50becb9",
+      "symbol": "AIx",
+      "assetGroup": "C3.ai xStock::AIx",
+      "currencyId": "C3.ai xStock::AIx"
+    },
+    "0xcdf976c44cb357977712c362407a823825e33e2a": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Sterling Infrastructure xStock",
+      "address": "0xcdf976c44cb357977712c362407a823825e33e2a",
+      "symbol": "STRLx",
+      "assetGroup": "Sterling Infrastructure xStock::STRLx",
+      "currencyId": "Sterling Infrastructure xStock::STRLx"
+    },
+    "0xf208153ba23df793b9a9a5ef1517cd4644d04889": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Amkor Technology xStock",
+      "address": "0xf208153ba23df793b9a9a5ef1517cd4644d04889",
+      "symbol": "AMKRx",
+      "assetGroup": "Amkor Technology xStock::AMKRx",
+      "currencyId": "Amkor Technology xStock::AMKRx"
+    },
+    "0x139bc1d061cc62be1c1f9ab7b2d7ce722e54cc9b": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Corebridge Financial xStock",
+      "address": "0x139bc1d061cc62be1c1f9ab7b2d7ce722e54cc9b",
+      "symbol": "CRBGx",
+      "assetGroup": "Corebridge Financial xStock::CRBGx",
+      "currencyId": "Corebridge Financial xStock::CRBGx"
+    },
+    "0x14e7901b89158e80a953cfef3cebe065f9cb8eef": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Domino's Pizza xStock",
+      "address": "0x14e7901b89158e80a953cfef3cebe065f9cb8eef",
+      "symbol": "DPZx",
+      "assetGroup": "Domino's Pizza xStock::DPZx",
+      "currencyId": "Domino's Pizza xStock::DPZx"
+    },
+    "0x1a7ad9dc7e1dc6873c7c47504aad8c99b86ce114": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "BridgeBio Pharma xStock",
+      "address": "0x1a7ad9dc7e1dc6873c7c47504aad8c99b86ce114",
+      "symbol": "BBIOx",
+      "assetGroup": "BridgeBio Pharma xStock::BBIOx",
+      "currencyId": "BridgeBio Pharma xStock::BBIOx"
+    },
+    "0x9a1c32b87d0367daac48f784e480e14d66cea8e5": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "IES xStock",
+      "address": "0x9a1c32b87d0367daac48f784e480e14d66cea8e5",
+      "symbol": "IESCx",
+      "assetGroup": "IES xStock::IESCx",
+      "currencyId": "IES xStock::IESCx"
+    },
+    "0x09ab6d34642be26e346b52e392874150507f5ce9": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Ryan Specialty xStock",
+      "address": "0x09ab6d34642be26e346b52e392874150507f5ce9",
+      "symbol": "RYANx",
+      "assetGroup": "Ryan Specialty xStock::RYANx",
+      "currencyId": "Ryan Specialty xStock::RYANx"
+    },
+    "0xd45b9ffcf15744476e5e7b79d4266818177e1a34": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "American Financial xStock",
+      "address": "0xd45b9ffcf15744476e5e7b79d4266818177e1a34",
+      "symbol": "AFGx",
+      "assetGroup": "American Financial xStock::AFGx",
+      "currencyId": "American Financial xStock::AFGx"
+    },
+    "0x013678d2039f27ac8531dd994411b6f6c502d889": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Texas Roadhouse xStock",
+      "address": "0x013678d2039f27ac8531dd994411b6f6c502d889",
+      "symbol": "TXRHx",
+      "assetGroup": "Texas Roadhouse xStock::TXRHx",
+      "currencyId": "Texas Roadhouse xStock::TXRHx"
+    },
+    "0x02a6f0539da50e2ef5365eea214495c5cd42f127": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "CACI International xStock",
+      "address": "0x02a6f0539da50e2ef5365eea214495c5cd42f127",
+      "symbol": "CACIx",
+      "assetGroup": "CACI International xStock::CACIx",
+      "currencyId": "CACI International xStock::CACIx"
+    },
+    "0x0062331a5a1627704b912bc5299bb604ea3ab825": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Huntington Ingalls Industries xStock",
+      "address": "0x0062331a5a1627704b912bc5299bb604ea3ab825",
+      "symbol": "HIIx",
+      "assetGroup": "Huntington Ingalls Industries xStock::HIIx",
+      "currencyId": "Huntington Ingalls Industries xStock::HIIx"
+    },
+    "0xf9afa9dacbe613696e2747c29b930a51ada284e5": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "INTC 2x Long ETF xStock",
+      "address": "0xf9afa9dacbe613696e2747c29b930a51ada284e5",
+      "symbol": "INTWx",
+      "assetGroup": "INTC 2x Long ETF xStock::INTWx",
+      "currencyId": "INTC 2x Long ETF xStock::INTWx"
+    },
+    "0xc9fa9d22fd52a634f395260e921aa06044e19d09": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "AGNC Investment xStock",
+      "address": "0xc9fa9d22fd52a634f395260e921aa06044e19d09",
+      "symbol": "AGNCx",
+      "assetGroup": "AGNC Investment xStock::AGNCx",
+      "currencyId": "AGNC Investment xStock::AGNCx"
+    },
+    "0xd7b67b7fc787fbce0adeac16c2ccb1c8047d8cca": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Crown xStock",
+      "address": "0xd7b67b7fc787fbce0adeac16c2ccb1c8047d8cca",
+      "symbol": "CCKx",
+      "assetGroup": "Crown xStock::CCKx",
+      "currencyId": "Crown xStock::CCKx"
+    },
+    "0x7dcdbb780db10a9a0f8d2a0b6ab00f02b1974df4": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "IonQ xStock",
+      "address": "0x7dcdbb780db10a9a0f8d2a0b6ab00f02b1974df4",
+      "symbol": "IONQx",
+      "assetGroup": "IonQ xStock::IONQx",
+      "currencyId": "IonQ xStock::IONQx"
+    },
+    "0x4efb7f42a381a115fe375438e85da301d6fd1b71": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Leonardo DRS xStock",
+      "address": "0x4efb7f42a381a115fe375438e85da301d6fd1b71",
+      "symbol": "DRSx",
+      "assetGroup": "Leonardo DRS xStock::DRSx",
+      "currencyId": "Leonardo DRS xStock::DRSx"
+    },
+    "0x142bf1f505fed39338897bc9f165a1dd505d9f55": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Wayfair xStock",
+      "address": "0x142bf1f505fed39338897bc9f165a1dd505d9f55",
+      "symbol": "Wx",
+      "assetGroup": "Wayfair xStock::Wx",
+      "currencyId": "Wayfair xStock::Wx"
+    },
+    "0xbe57c33d1278f5dbda142f328d805353b94aa6ca": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Bentley Systems xStock",
+      "address": "0xbe57c33d1278f5dbda142f328d805353b94aa6ca",
+      "symbol": "BSYx",
+      "assetGroup": "Bentley Systems xStock::BSYx",
+      "currencyId": "Bentley Systems xStock::BSYx"
+    },
+    "0xd920c8ed3f6d7ade6bba3c336f47aeb57ef93e89": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Five Below xStock",
+      "address": "0xd920c8ed3f6d7ade6bba3c336f47aeb57ef93e89",
+      "symbol": "FIVEx",
+      "assetGroup": "Five Below xStock::FIVEx",
+      "currencyId": "Five Below xStock::FIVEx"
+    },
+    "0xd4272b4d50ffed57da20c02ab6d3ea3324bdcae2": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Marvell 2x Long ETF xStock",
+      "address": "0xd4272b4d50ffed57da20c02ab6d3ea3324bdcae2",
+      "symbol": "MVLLx",
+      "assetGroup": "Marvell 2x Long ETF xStock::MVLLx",
+      "currencyId": "Marvell 2x Long ETF xStock::MVLLx"
+    },
+    "0x4aafeaeeea18dc613be2ec9a057e64a1df2cb6dd": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Gartner xStock",
+      "address": "0x4aafeaeeea18dc613be2ec9a057e64a1df2cb6dd",
+      "symbol": "ITx",
+      "assetGroup": "Gartner xStock::ITx",
+      "currencyId": "Gartner xStock::ITx"
+    },
+    "0x9861604f392f025f69a7ff1f5c8044d0f15c8c35": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Whitefiber xStock",
+      "address": "0x9861604f392f025f69a7ff1f5c8044d0f15c8c35",
+      "symbol": "WYFIx",
+      "assetGroup": "Whitefiber xStock::WYFIx",
+      "currencyId": "Whitefiber xStock::WYFIx"
+    },
+    "0xad2fec6ba14a5b0b56f8ad7efdcaf3629a03ffa3": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Essential Utilities xStock",
+      "address": "0xad2fec6ba14a5b0b56f8ad7efdcaf3629a03ffa3",
+      "symbol": "WTRGx",
+      "assetGroup": "Essential Utilities xStock::WTRGx",
+      "currencyId": "Essential Utilities xStock::WTRGx"
+    },
+    "0xb3c2e973d85deec0ceed18fa13b02e6a1a1bb60c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Invesco xStock",
+      "address": "0xb3c2e973d85deec0ceed18fa13b02e6a1a1bb60c",
+      "symbol": "IVZx",
+      "assetGroup": "Invesco xStock::IVZx",
+      "currencyId": "Invesco xStock::IVZx"
+    },
+    "0x477344c0f2973595693226568a89712a8bbded5f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "GLOBALFOUNDRIES xStock",
+      "address": "0x477344c0f2973595693226568a89712a8bbded5f",
+      "symbol": "GFSx",
+      "assetGroup": "GLOBALFOUNDRIES xStock::GFSx",
+      "currencyId": "GLOBALFOUNDRIES xStock::GFSx"
+    },
+    "0x16c283ac8f4789fb3d707308e69fd96ade45837a": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Owens-Corning xStock",
+      "address": "0x16c283ac8f4789fb3d707308e69fd96ade45837a",
+      "symbol": "OCx",
+      "assetGroup": "Owens-Corning xStock::OCx",
+      "currencyId": "Owens-Corning xStock::OCx"
+    },
+    "0xcde01af7fbe0d7b8526252320d7dbd183566297d": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Halozyme Therapeutics xStock",
+      "address": "0xcde01af7fbe0d7b8526252320d7dbd183566297d",
+      "symbol": "HALOx",
+      "assetGroup": "Halozyme Therapeutics xStock::HALOx",
+      "currencyId": "Halozyme Therapeutics xStock::HALOx"
+    },
+    "0x1a65a334918c39c00e5ad99ebe936c1bd681d95e": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Unity Software xStock",
+      "address": "0x1a65a334918c39c00e5ad99ebe936c1bd681d95e",
+      "symbol": "Ux",
+      "assetGroup": "Unity Software xStock::Ux",
+      "currencyId": "Unity Software xStock::Ux"
+    },
+    "0xa4e2cd78c1d50cfd00b6606d7e0ffc54742fcbfa": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Allison Transmission xStock",
+      "address": "0xa4e2cd78c1d50cfd00b6606d7e0ffc54742fcbfa",
+      "symbol": "ALSNx",
+      "assetGroup": "Allison Transmission xStock::ALSNx",
+      "currencyId": "Allison Transmission xStock::ALSNx"
+    },
+    "0x19b7680118fd54b8d52ef922afb3bbb13e3ad47f": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Xerox xStock",
+      "address": "0x19b7680118fd54b8d52ef922afb3bbb13e3ad47f",
+      "symbol": "XRXx",
+      "assetGroup": "Xerox xStock::XRXx",
+      "currencyId": "Xerox xStock::XRXx"
+    },
+    "0x267a0a7ddcf0a7802fea1cd806f4ffc311a3cfa9": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Samsara xStock",
+      "address": "0x267a0a7ddcf0a7802fea1cd806f4ffc311a3cfa9",
+      "symbol": "IOTx",
+      "assetGroup": "Samsara xStock::IOTx",
+      "currencyId": "Samsara xStock::IOTx"
+    },
+    "0x51494064481cba017ba920bf1058933e7c6a1bb4": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Hormel Foods xStock",
+      "address": "0x51494064481cba017ba920bf1058933e7c6a1bb4",
+      "symbol": "HRLx",
+      "assetGroup": "Hormel Foods xStock::HRLx",
+      "currencyId": "Hormel Foods xStock::HRLx"
+    },
+    "0x769621695d9c1b8d1c88c9b973fcac6f2067a0a3": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Coeur Mining xStock",
+      "address": "0x769621695d9c1b8d1c88c9b973fcac6f2067a0a3",
+      "symbol": "CDEx",
+      "assetGroup": "Coeur Mining xStock::CDEx",
+      "currencyId": "Coeur Mining xStock::CDEx"
+    },
+    "0x47ee09a9b5c7c98eb2768b91596bcaa2ba9dd2b8": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Toast xStock",
+      "address": "0x47ee09a9b5c7c98eb2768b91596bcaa2ba9dd2b8",
+      "symbol": "TOSTx",
+      "assetGroup": "Toast xStock::TOSTx",
+      "currencyId": "Toast xStock::TOSTx"
+    },
+    "0xdf4e8de684eab404a46af6140369d7905f3f2821": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Indie Semiconductor xStock",
+      "address": "0xdf4e8de684eab404a46af6140369d7905f3f2821",
+      "symbol": "INDIx",
+      "assetGroup": "Indie Semiconductor xStock::INDIx",
+      "currencyId": "Indie Semiconductor xStock::INDIx"
+    },
+    "0x215f08575c1033c171563e64923e70a050310055": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Jefferies Financial xStock",
+      "address": "0x215f08575c1033c171563e64923e70a050310055",
+      "symbol": "JEFx",
+      "assetGroup": "Jefferies Financial xStock::JEFx",
+      "currencyId": "Jefferies Financial xStock::JEFx"
+    },
+    "0xebd96effc88cef240a35d8223008a7f788695608": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Blue Owl Capital xStock",
+      "address": "0xebd96effc88cef240a35d8223008a7f788695608",
+      "symbol": "OWLx",
+      "assetGroup": "Blue Owl Capital xStock::OWLx",
+      "currencyId": "Blue Owl Capital xStock::OWLx"
+    },
+    "0xd5b5f0613f9f3d6a670eb32d59dd5bedbb444426": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Aurora Innovation xStock",
+      "address": "0xd5b5f0613f9f3d6a670eb32d59dd5bedbb444426",
+      "symbol": "AURx",
+      "assetGroup": "Aurora Innovation xStock::AURx",
+      "currencyId": "Aurora Innovation xStock::AURx"
+    },
+    "0xa83697f63962e780246290460c841c3afbef6527": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Fabrinet xStock",
+      "address": "0xa83697f63962e780246290460c841c3afbef6527",
+      "symbol": "FNx",
+      "assetGroup": "Fabrinet xStock::FNx",
+      "currencyId": "Fabrinet xStock::FNx"
+    },
+    "0x860e267ee6db9d38256a46eabd56bf1f133ca4ae": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Semtech xStock",
+      "address": "0x860e267ee6db9d38256a46eabd56bf1f133ca4ae",
+      "symbol": "SMTCx",
+      "assetGroup": "Semtech xStock::SMTCx",
+      "currencyId": "Semtech xStock::SMTCx"
+    },
+    "0x26e58f0d3c6e211d6e30d9f5a016c4883670acb7": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Arrowhead Pharmaceuticals xStock",
+      "address": "0x26e58f0d3c6e211d6e30d9f5a016c4883670acb7",
+      "symbol": "ARWRx",
+      "assetGroup": "Arrowhead Pharmaceuticals xStock::ARWRx",
+      "currencyId": "Arrowhead Pharmaceuticals xStock::ARWRx"
+    },
+    "0x90216e923d43b8840d7164634aa9267313058e42": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Trump Media & Technology Group xStock",
+      "address": "0x90216e923d43b8840d7164634aa9267313058e42",
+      "symbol": "DJTx",
+      "assetGroup": "Trump Media & Technology Group xStock::DJTx",
+      "currencyId": "Trump Media & Technology Group xStock::DJTx"
+    },
+    "0xccf2c9bf9e97554080bf899105454419bfe8c930": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Quantum Computing xStock",
+      "address": "0xccf2c9bf9e97554080bf899105454419bfe8c930",
+      "symbol": "QUBTx",
+      "assetGroup": "Quantum Computing xStock::QUBTx",
+      "currencyId": "Quantum Computing xStock::QUBTx"
+    },
+    "0xf4c5ab39067a38b4e01b35d128f3d2bd6bc7298c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "BioMarin Pharmaceutical xStock",
+      "address": "0xf4c5ab39067a38b4e01b35d128f3d2bd6bc7298c",
+      "symbol": "BMRNx",
+      "assetGroup": "BioMarin Pharmaceutical xStock::BMRNx",
+      "currencyId": "BioMarin Pharmaceutical xStock::BMRNx"
+    },
+    "0xf90653ea8c2f1dbd69c8ce6d4360a4c31d867534": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Advanced Energy Industries xStock",
+      "address": "0xf90653ea8c2f1dbd69c8ce6d4360a4c31d867534",
+      "symbol": "AEISx",
+      "assetGroup": "Advanced Energy Industries xStock::AEISx",
+      "currencyId": "Advanced Energy Industries xStock::AEISx"
+    },
+    "0x89d657e98e08c7585304024d5c786b96e8ed275c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Manhattan Associates xStock",
+      "address": "0x89d657e98e08c7585304024d5c786b96e8ed275c",
+      "symbol": "MANHx",
+      "assetGroup": "Manhattan Associates xStock::MANHx",
+      "currencyId": "Manhattan Associates xStock::MANHx"
+    },
+    "0x5866f125b00bf3d123586d26681362c110553262": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Popular xStock",
+      "address": "0x5866f125b00bf3d123586d26681362c110553262",
+      "symbol": "BPOPx",
+      "assetGroup": "Popular xStock::BPOPx",
+      "currencyId": "Popular xStock::BPOPx"
+    },
+    "0xd2de202c1dbc8915ab431773d50a10a256da9b6c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Encompass Health xStock",
+      "address": "0xd2de202c1dbc8915ab431773d50a10a256da9b6c",
+      "symbol": "EHCx",
+      "assetGroup": "Encompass Health xStock::EHCx",
+      "currencyId": "Encompass Health xStock::EHCx"
+    },
+    "0xf0938b2dfec267f439b55dff0523fbe741f95b02": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Globalstar xStock",
+      "address": "0xf0938b2dfec267f439b55dff0523fbe741f95b02",
+      "symbol": "GSATx",
+      "assetGroup": "Globalstar xStock::GSATx",
+      "currencyId": "Globalstar xStock::GSATx"
+    },
+    "0xfe9e8fcd0990c9170254fe1d3c28f5cd730cd03b": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Korea 3x Long ETF xStock",
+      "address": "0xfe9e8fcd0990c9170254fe1d3c28f5cd730cd03b",
+      "symbol": "KORUx",
+      "assetGroup": "Korea 3x Long ETF xStock::KORUx",
+      "currencyId": "Korea 3x Long ETF xStock::KORUx"
+    },
+    "0x44028a82cead1efaf12c43dd41caf14877872d84": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "News Class A xStock",
+      "address": "0x44028a82cead1efaf12c43dd41caf14877872d84",
+      "symbol": "NWSAx",
+      "assetGroup": "News Class A xStock::NWSAx",
+      "currencyId": "News Class A xStock::NWSAx"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "10",
