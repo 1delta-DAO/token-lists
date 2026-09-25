@@ -440,7 +440,15 @@
           "syAddress": "0xbd852f753cc668c88878edbb333f4d08e6c8e8b2"
         },
         "risk": { "score": 2, "source": "vault_inherit" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "fastlane",
+            "name": "Fastlane",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7": {
@@ -512,7 +520,15 @@
           "ytAddress": "0xc22efd9bfe13bda11743c7cd90cf0b34ee471c13"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "fastlane",
+            "name": "Fastlane",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xc22efd9bfe13bda11743c7cd90cf0b34ee471c13": {
@@ -534,7 +550,15 @@
           "syAddress": "0xbd852f753cc668c88878edbb333f4d08e6c8e8b2"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "fastlane",
+            "name": "Fastlane",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xd236e83c563f888f540ca997c3ddf00e82d68c45": {
@@ -1142,7 +1166,8 @@
       "currencyId": "aPriori Monad LST::aprMON",
       "props": {
         "lst": { "type": "staking", "asset": "MON", "provider": "apriori" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "apriori", "name": "Apriori", "kind": "protocol" }
       }
     },
     "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081": {
@@ -1156,7 +1181,8 @@
       "currencyId": "gMON::gMON",
       "props": {
         "lst": { "type": "staking", "asset": "MON", "provider": "magma" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "magma", "name": "Magma", "kind": "protocol" }
       }
     },
     "0x1ce060d47a0fd08b0869748fd7eccf151f4ec5d1": {
@@ -1169,7 +1195,8 @@
       "assetGroup": "ShMonad (Old)::shMON",
       "currencyId": "ShMonad (Old)::shMON",
       "props": {
-        "lst": { "type": "staking", "asset": "MON", "provider": "fastlane" }
+        "lst": { "type": "staking", "asset": "MON", "provider": "fastlane" },
+        "issuer": { "id": "fastlane", "name": "Fastlane", "kind": "protocol" }
       }
     },
     "0xa3227c5969757783154c60bf0bc1944180ed81b9": {
@@ -1183,7 +1210,8 @@
       "currencyId": "Kintsu Staked Monad::sMON",
       "props": {
         "lst": { "type": "staking", "asset": "MON", "provider": "kintsu" },
-        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" },
+        "issuer": { "id": "kintsu", "name": "Kintsu", "kind": "protocol" }
       }
     },
     "0x1b68626dca36c7fe922fd2d55e4f631d962de19c": {
@@ -1197,7 +1225,8 @@
       "currencyId": "ShMonad::shMON",
       "props": {
         "lst": { "type": "staking", "asset": "MON", "provider": "fastlane" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "fastlane", "name": "Fastlane", "kind": "protocol" }
       }
     },
     "0x2abc42250154752273a4560e875c858623f83ecc": {
