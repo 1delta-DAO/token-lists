@@ -371,7 +371,7 @@
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
           "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -1131,6 +1131,75 @@
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
+    "0x0c65a0bc65a5d819235b71f554d210d3f80e0852": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "aPriori Monad LST",
+      "address": "0x0c65a0bc65a5d819235b71f554d210d3f80e0852",
+      "symbol": "aprMON",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/aprMON/logo.svg",
+      "assetGroup": "aPriori Monad LST::aprMON",
+      "currencyId": "aPriori Monad LST::aprMON",
+      "props": {
+        "lst": { "type": "staking", "asset": "MON", "provider": "apriori" },
+        "risk": { "score": 2, "source": "vault_inherit" }
+      }
+    },
+    "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "gMON",
+      "address": "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081",
+      "symbol": "gMON",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/gMON/logo.svg",
+      "assetGroup": "gMON::gMON",
+      "currencyId": "gMON::gMON",
+      "props": {
+        "lst": { "type": "staking", "asset": "MON", "provider": "magma" },
+        "risk": { "score": 2, "source": "vault_inherit" }
+      }
+    },
+    "0x1ce060d47a0fd08b0869748fd7eccf151f4ec5d1": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "ShMonad (Old)",
+      "address": "0x1ce060d47a0fd08b0869748fd7eccf151f4ec5d1",
+      "symbol": "shMON",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
+      "assetGroup": "ShMonad (Old)::shMON",
+      "currencyId": "ShMonad (Old)::shMON",
+      "props": {
+        "lst": { "type": "staking", "asset": "MON", "provider": "fastlane" }
+      }
+    },
+    "0xa3227c5969757783154c60bf0bc1944180ed81b9": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Kintsu Staked Monad",
+      "address": "0xa3227c5969757783154c60bf0bc1944180ed81b9",
+      "symbol": "sMON",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sMON/logo.svg",
+      "assetGroup": "Kintsu Staked Monad::sMON",
+      "currencyId": "Kintsu Staked Monad::sMON",
+      "props": {
+        "lst": { "type": "staking", "asset": "MON", "provider": "kintsu" },
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+      }
+    },
+    "0x1b68626dca36c7fe922fd2d55e4f631d962de19c": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "ShMonad",
+      "address": "0x1b68626dca36c7fe922fd2d55e4f631d962de19c",
+      "symbol": "shMON",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
+      "assetGroup": "ShMonad::shMON",
+      "currencyId": "ShMonad::shMON",
+      "props": {
+        "lst": { "type": "staking", "asset": "MON", "provider": "fastlane" },
+        "risk": { "score": 2, "source": "vault_inherit" }
+      }
+    },
     "0x2abc42250154752273a4560e875c858623f83ecc": {
       "chainId": "143",
       "decimals": 18,
@@ -1467,20 +1536,6 @@
         "denomination": "MON"
       }
     },
-    "0x0c65a0bc65a5d819235b71f554d210d3f80e0852": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "aPriori Monad LST",
-      "address": "0x0c65a0bc65a5d819235b71f554d210d3f80e0852",
-      "symbol": "aprMON",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/aprMON/logo.svg",
-      "assetGroup": "aPriori Monad LST::aprMON",
-      "currencyId": "aPriori Monad LST::aprMON",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 2, "source": "vault_inherit" }
-      }
-    },
     "0x103222f020e98bba0ad9809a011fdf8e6f067496": {
       "chainId": "143",
       "decimals": 6,
@@ -1511,17 +1566,6 @@
         }
       }
     },
-    "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "gMON",
-      "address": "0x8498312a6b3cbd158bf0c93abdcf29e6e4f55081",
-      "symbol": "gMON",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/gMON/logo.svg",
-      "assetGroup": "gMON::gMON",
-      "currencyId": "gMON::gMON",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
-    },
     "0x1d4795a4670033f47f572b910553be0295077b51": {
       "chainId": "143",
       "decimals": 18,
@@ -1541,40 +1585,6 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/muBOND/logo.svg",
       "assetGroup": "mu Bond::muBOND",
       "currencyId": "mu Bond::muBOND"
-    },
-    "0x1ce060d47a0fd08b0869748fd7eccf151f4ec5d1": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "ShMonad (Old)",
-      "address": "0x1ce060d47a0fd08b0869748fd7eccf151f4ec5d1",
-      "symbol": "shMON",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
-      "assetGroup": "ShMonad (Old)::shMON",
-      "currencyId": "ShMonad (Old)::shMON"
-    },
-    "0xa3227c5969757783154c60bf0bc1944180ed81b9": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "Kintsu Staked Monad",
-      "address": "0xa3227c5969757783154c60bf0bc1944180ed81b9",
-      "symbol": "sMON",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sMON/logo.svg",
-      "assetGroup": "Kintsu Staked Monad::sMON",
-      "currencyId": "Kintsu Staked Monad::sMON",
-      "props": {
-        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
-      }
-    },
-    "0x1b68626dca36c7fe922fd2d55e4f631d962de19c": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "ShMonad",
-      "address": "0x1b68626dca36c7fe922fd2d55e4f631d962de19c",
-      "symbol": "shMON",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/shMON/logo.png",
-      "assetGroup": "ShMonad::shMON",
-      "currencyId": "ShMonad::shMON",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xe85411c030fb32a9d8b14bbbc6cb19417391f711": {
       "chainId": "143",
@@ -3013,7 +3023,7 @@
       "currencyId": "Mento Euro::EURm",
       "props": {
         "stablecoin": { "base": "EUR" },
-        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0xfc421ad3c883bf9e7c4f42de845c4e4405799e73": {
@@ -4577,6 +4587,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178361/thumb/abot.png?1789385140",
       "assetGroup": "RoboStrategy Inc aStock::ABOT",
       "currencyId": "RoboStrategy Inc aStock::ABOT"
+    },
+    "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Waterdrop Inc aStock",
+      "address": "0x6458d4844ccaad06dbf566d1df93d8815f89d9b0",
+      "symbol": "AWDH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178731/thumb/aWDH-logo.png?1790168204",
+      "assetGroup": "Waterdrop Inc aStock::AWDH",
+      "currencyId": "Waterdrop Inc aStock::AWDH"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",

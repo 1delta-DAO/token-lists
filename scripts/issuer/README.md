@@ -3,8 +3,8 @@
 **Whose credit is this?**
 
 Every other axis on a token answers something else. `props.stablecoin.base` and
-`props.denomination` say what *money* it is worth. `assetGroup` says *which
-token* it is. `props.lst.provider` covers staking and nothing else. None of them
+`props.denomination` say what _money_ it is worth. `assetGroup` says _which
+token_ it is. `props.lst.provider` covers staking and nothing else. None of them
 answers the question a lender, an allocator or a risk dashboard actually asks
 about a dollar: **whose solvency, administration and redemption terms am I
 holding?**
@@ -34,12 +34,12 @@ one field cannot say both — so there are two:
 }
 ```
 
-| | `issuer` | `issuerExposures` |
-|---|---|---|
-| question | whose **instrument** is this? | whose **credit** does it leave me holding? |
-| `PT-sUSDE` | `pendle` | `[ethena]` |
-| spot `sUSDe` | `ethena` | *absent* |
-| `WETH` | *absent* | *absent* |
+|              | `issuer`                      | `issuerExposures`                          |
+| ------------ | ----------------------------- | ------------------------------------------ |
+| question     | whose **instrument** is this? | whose **credit** does it leave me holding? |
+| `PT-sUSDE`   | `pendle`                      | `[ethena]`                                 |
+| spot `sUSDe` | `ethena`                      | _absent_                                   |
+| `WETH`       | _absent_                      | _absent_                                   |
 
 **A LIST, not one desk.** Every wrapper these lists can describe today resolves
 to exactly one, but the concept is plural: a basket (`terminal.kind ===
@@ -58,16 +58,16 @@ A curated vault holds **many** exposures at once — one production Fluid USDC
 vault sits across eight collaterals spanning six desks — and none of that
 belongs here:
 
-* it changes when the **curator rebalances**, not when these lists regenerate;
-* a MetaMorpho share token is usually not in the lists at all;
-* the deposit token is plain USDC, which names Circle and nothing else.
+- it changes when the **curator rebalances**, not when these lists regenerate;
+- a MetaMorpho share token is usually not in the lists at all;
+- the deposit token is plain USDC, which names Circle and nothing else.
 
 That set is a property of the POSITION, and it lives downstream in
 yield-tracer's `earn_issuer_exposure` table, keyed by earn row and rebuilt
 hourly from each provider's published allocation. Do not try to infer it from a
 share token here.
 
-**Why this exists.** Before it, a PT over sUSDe matched *no* issuer filter at
+**Why this exists.** Before it, a PT over sUSDe matched _no_ issuer filter at
 all — 2 203 wrapper tokens in the lists, zero attributions between them. A
 consumer filtering for Ethena could not see the PT menu, and a consumer
 filtering for Pendle could not see it either.
@@ -91,7 +91,7 @@ A group whose deployments disagree about the desk is **dropped, not
 majority-voted**: disagreement means the hop data is wrong, and voting would
 launder that into an attribution. (Currently 0 such groups.)
 
-Because the walk resolves against *today's* curated map rather than against
+Because the walk resolves against _today's_ curated map rather than against
 whatever the last run published, **curating one underlying lights up every
 wrapper over it on the next run**. That is the highest-leverage curation there
 is: the dead ends concentrate on 238 groups, and the top 10 alone would unlock
@@ -101,7 +101,7 @@ is: the dead ends concentrate on 238 groups, and the top 10 alone would unlock
 
 The `issuer` half of a wrapper is not curated by group — it is read off the
 family prop the token already carries (`WRAPPER_ISSUERS` in `wrappers.ts`:
-`pendle`, `spectra`, `exponent`, `receipt` → Dolomite). That prop *is* the fact:
+`pendle`, `spectra`, `exponent`, `receipt` → Dolomite). That prop _is_ the fact:
 a token with `props.pendle` was minted by Pendle, on any chain, including a
 bridged mirror, with no list to keep in sync. A curated entry still wins over
 it.
@@ -111,13 +111,13 @@ it.
 Each of these looks like the issuer and is a different question. Getting them
 confused is the failure this overlay exists to prevent.
 
-| Not this | Because |
-|---|---|
-| the **money** it is worth | USDe and USDC are both `USD`. They are not the same credit. |
-| the **venue** that hosts it | a Morpho vault holding sUSDe is Ethena's credit on Morpho's rails. |
-| the **curator** who allocates to it | Steakhouse curating a USDC vault does not make Steakhouse the issuer of USDC. |
-| the **chain or bridge** it arrived over | USDC.e is still Circle's asset; the bridge is a separate risk. |
-| the **staking provider** alone | `lst.provider` is a *seed* for this field, not a synonym — it covers ~390 tokens, and none of the dollar menu. |
+| Not this                                | Because                                                                                                        |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| the **money** it is worth               | USDe and USDC are both `USD`. They are not the same credit.                                                    |
+| the **venue** that hosts it             | a Morpho vault holding sUSDe is Ethena's credit on Morpho's rails.                                             |
+| the **curator** who allocates to it     | Steakhouse curating a USDC vault does not make Steakhouse the issuer of USDC.                                  |
+| the **chain or bridge** it arrived over | USDC.e is still Circle's asset; the bridge is a separate risk.                                                 |
+| the **staking provider** alone          | `lst.provider` is a _seed_ for this field, not a synonym — it covers ~390 tokens, and none of the dollar menu. |
 
 ## No issuer is an answer
 
@@ -151,12 +151,12 @@ omni-list.json ──► issuer.ts ───┤  derive from props already publi
 
 Three properties worth knowing:
 
-* **Keyed by `assetGroup`, not by address.** A desk does not change per chain,
+- **Keyed by `assetGroup`, not by address.** A desk does not change per chain,
   so one entry attributes every deployment of the group — Ethereum, Base,
   Arbitrum, and any bridged mirror.
-* **Curation always wins.** `ISSUER_CURATED` is merged last, over anything
+- **Curation always wins.** `ISSUER_CURATED` is merged last, over anything
   derived. A hand-written desk beats an inference, always.
-* **The impostor guard still applies.** `generateTokenMap.script.ts` skips the
+- **The impostor guard still applies.** `generateTokenMap.script.ts` skips the
   overlay for a token flagged by `isImpostor`, so a ticker-copy can never
   inherit a real desk's name through a shared group.
 
@@ -210,7 +210,7 @@ not that the assets changed.
 ## Four traps, each one paid for
 
 These are the mistakes that were actually made building this. They all have the
-same shape: something that *looks* like an issuer and is not.
+same shape: something that _looks_ like an issuer and is not.
 
 ### 1. A LayerZero mesh is a corridor, not a desk
 
@@ -220,14 +220,14 @@ another 51 to "hybridge", and inflated the roster to **372 issuers**.
 
 So `OAPP_ISSUER_MESHES` in [`issuer.ts`](./issuer.ts) is an **allowlist**, not a
 denylist — the junk is not enumerable, the legitimate cases are. The bar for an
-entry: *the mesh moves the issuer's own token*, so the corridor and the desk are
+entry: _the mesh moves the issuer's own token_, so the corridor and the desk are
 the same party (`usdt0` → Tether, `ethena` → Ethena, `frax-finance` → Frax).
 `wbtc`, `euler`, `zro-token`, `rootstock`, `movement` and `glue` fail it and are
 deliberately absent. 372 issuers → 81.
 
 ### 2. The lookup happens on the PRE-ALIAS group
 
-`generateTokenMap.script.ts` calls `lookupIssuer(assetGroup)` *before* the
+`generateTokenMap.script.ts` calls `lookupIssuer(assetGroup)` _before_ the
 unifier folds `Kelp DAO Restaked ETH::RSETH` into `RSETH`. A group-only key
 therefore misses every deployment that arrives under its own `Name::SYMBOL`
 string — which was 22 groups attributed on Ethereum and blank on every bridged
@@ -272,7 +272,7 @@ git diff --name-only -- '*.json' | grep -v '^scripts/' \
 
 `omni-list.json` and the chain files are **generated artifacts**. When two
 branches both regenerate them, the conflict is not resolvable by hand and must
-not be resolved textually. Take one side's *inputs* (the `scripts/*/**.json`
+not be resolved textually. Take one side's _inputs_ (the `scripts/*/**.json`
 snapshots), then re-run `npm run issuer && GEN_CACHE=1 npm run generate` and
 format. The output is the resolution.
 
