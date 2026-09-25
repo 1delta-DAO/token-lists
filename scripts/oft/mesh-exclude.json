@@ -1,0 +1,15 @@
+{
+  "_readme": [
+    "OFT meshes `meshReport.ts` must NOT unify, keyed by any asset group in the",
+    "mesh, with the reason. A mesh is excluded when a peer link joins two",
+    "different assets or when its canonical group is itself a ticker collision.",
+    "Reviewed 2026-09-25 over all 88 split meshes of the omni-list; every other",
+    "one is a single asset under several keys. An exclusion added AFTER a mesh",
+    "was unified does not undo it: delete that mesh's rows from mesh-groups.json."
+  ],
+  "exclude": {
+    "KRWT::KRWT": "IQ's second Ethereum adapter (0xf1f3…) peers into the KRWT mesh; IQ and KRWT are different tokens",
+    "IQ": "see KRWT::KRWT",
+    "AMP": "chain 1's `AMP` group is Flexa's AMP; the Amped Finance deployment filed there is itself mis-grouped, so its mesh must not be pulled into it"
+  }
+}

@@ -20,6 +20,7 @@ import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
 import { lookupOft } from './oft/oftMap'
+import { lookupMeshGroup } from './oft/meshMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
 import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
@@ -309,6 +310,15 @@ async function readTokenLists(): Promise<{
                       assetGroup = _assetGroup
                     }
 
+                    // OFT mesh unification (oft/mesh.ts, reviewed in oft/mesh-groups.json): a
+                    // deployment whose LayerZero peer links join it to an asset the lists file
+                    // under another key takes that asset's group — Stable's USDT0 is USDT, every
+                    // XAUt0 is Tether Gold. Set BEFORE the group-keyed overlays so the moved
+                    // deployment inherits the asset's stablecoin / issuer / lst labels, and it
+                    // wins over the 1delta list's stored group, which is last run's output.
+                    const meshGroup = lookupMeshGroup(chainId, lcAddress)
+                    if (meshGroup) assetGroup = meshGroup
+
                     const permit = PERMIT_MAP[chainId]?.[lcAddress]
 
                     let tokenProps: TokenProps = tokenInList?.props ?? {}
@@ -414,6 +424,8 @@ async function readTokenLists(): Promise<{
                     // We then assign a new asset group to it that has a different name
                     if (
                       !is1delta &&
+                      !meshGroup && // the peer links already proved it is this asset
+                      NATIVE_ERC20[chainId] !== lcAddress && // the gas coin's own ERC-20 view: the SAME balance as the zero address in this group (Stable USDT0, Arc USDC)
                       !tags.includes('bridged') && // asset is bridged
                       !GROUP_HARD_SETTER[chainId]?.[assetGroup]?.includes(lcAddress) && // not force-included
                       symbolToNames[assetGroup]
@@ -920,6 +932,57 @@ async function main() {
 
   const addressToOmniPath = `../omni-list.json`
   fs.writeFileSync(addressToOmniPath, JSON.stringify(omnis))
+
+  fs.writeFileSync(`../native-currencies.json`, JSON.stringify(nativeCurrencies(listOfLists), null, 2) + '\n')
+}
+
+/**
+ * Chains whose `eth_getBalance` is not a balance at all: Tempo answers one
+ * constant placeholder for every address (see NATIVE_CURRENCY_OVERRIDE), so
+ * the zero-address entry is only a mirror of the fee token's ERC-20.
+ */
+const NO_NATIVE_BALANCE_CHAINS: string[] = [Chain.TEMPO_MAINNET_PRESTO]
+
+/**
+ * `native-currencies.json`: what each chain's gas coin IS, in one small file a
+ * consumer can read without the 7 MB chain list — the zero-address entry's
+ * symbol / decimals / group plus the two addresses that carry the same money:
+ *
+ * - `shape: 'coin'`       — a coin with a separate wrapper (`wrapped`, WETH):
+ *   two balances, the wrapper holds coin already counted in the coin.
+ * - `shape: 'coin+erc20'` — a coin with an ERC-20 VIEW of the same balance
+ *   (`erc20`, Polygon's 0x…1010) AND a separate wrapper: the view is an alias.
+ * - `shape: 'erc20'`      — the gas coin IS an ERC-20 (Arc USDC, Stable USDT0,
+ *   Celo): the zero address is an alias of `erc20`, never a second balance.
+ * - `shape: 'none'`       — no gas coin (Tempo): the zero address is not money;
+ *   `erc20` is the fee token it mirrors.
+ */
+function nativeCurrencies(lists: ListOfLists) {
+  const out: Record<string, any> = {}
+  for (const chainId of Object.keys(lists).sort((a, b) => Number(a) - Number(b) || a.localeCompare(b))) {
+    const z = lists[chainId]?.[zeroAddress]
+    if (!z) continue
+    const props: any = z.props ?? {}
+    const erc20: string | undefined = props.erc20
+    const wrapped: string | undefined = props.wrapped
+    const shape = NO_NATIVE_BALANCE_CHAINS.includes(chainId)
+      ? 'none'
+      : erc20 && (!wrapped || wrapped === erc20)
+        ? 'erc20'
+        : erc20
+          ? 'coin+erc20'
+          : 'coin'
+    out[chainId] = {
+      symbol: z.symbol,
+      name: z.name,
+      decimals: z.decimals,
+      assetGroup: (z as any).assetGroup,
+      shape,
+      ...(erc20 && { erc20 }),
+      ...(wrapped && wrapped !== erc20 && { wrapped }),
+    }
+  }
+  return out
 }
 
 main()
