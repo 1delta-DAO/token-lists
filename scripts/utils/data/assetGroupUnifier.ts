@@ -423,6 +423,11 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Syrup USDC::syrupUSDC': 'SYRUPUSDC',
   'Syrup USDT::syrupUSDT': 'SYRUPUSDT',
   'Syrup USDG::syrupUSDG': 'SYRUPUSDG',
+  // Tether Gold XAUt0 on BNB (0x21ca…a3bf) — the one XAUt0 deployment the OFT registry does
+  // not carry, so the mesh unification (oft/mesh-groups.json) cannot reach it. Same coin as
+  // every other XAUt0: CoinGecko files it under `tether-gold-tokens` exactly as it does
+  // Arbitrum's and HyperEVM's XAUt0, and `name()` / `symbol()` answer "Tether Gold" / "XAUt".
+  'Tether Gold::XAUt0': 'Tether Gold::XAUt',
 }
 
 export function aliasAssetGroup(gr: string) {
