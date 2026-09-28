@@ -41,12 +41,12 @@ Written by the generator from every chain list's zero-address entry
 (`props.erc20` = `NATIVE_ERC20`, `props.wrapped` = the wnative), so a consumer
 can read it without the chain lists:
 
-| shape        | meaning                                                          | e.g.                      |
-| ------------ | ---------------------------------------------------------------- | ------------------------- |
-| `coin`       | a coin with a separate wrapper — two balances                    | ETH / WETH                |
-| `coin+erc20` | a coin, an ERC-20 VIEW of the same balance, and a wrapper        | Polygon `0x…1010` / WPOL  |
-| `erc20`      | the coin IS the ERC-20; the zero address is its alias            | Arc USDC, Stable USDT0    |
-| `none`       | no gas coin; `eth_getBalance` is a placeholder (Tempo)           | pathUSD `0x20c0…0000`     |
+| shape        | meaning                                                   | e.g.                     |
+| ------------ | --------------------------------------------------------- | ------------------------ |
+| `coin`       | a coin with a separate wrapper — two balances             | ETH / WETH               |
+| `coin+erc20` | a coin, an ERC-20 VIEW of the same balance, and a wrapper | Polygon `0x…1010` / WPOL |
+| `erc20`      | the coin IS the ERC-20; the zero address is its alias     | Arc USDC, Stable USDT0   |
+| `none`       | no gas coin; `eth_getBalance` is a placeholder (Tempo)    | pathUSD `0x20c0…0000`    |
 
 On Arc and Stable the native balance equals `balanceOf` to the token's last
 digit (16 holders, 2026-09-25), which is why a consumer that adds the zero
