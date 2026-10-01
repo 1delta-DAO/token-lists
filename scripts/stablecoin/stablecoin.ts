@@ -20,6 +20,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
  */
 interface RawStablecoin {
   assetGroup?: string
+  symbol?: string
   pegType?: string
 }
 
@@ -76,6 +77,25 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   'BRLA Token::BRLA': { base: 'REAL' },
 }
 
+/**
+ * Symbol-keyed overlays for feed rows that carry NO `assetGroup` — the group-keyed
+ * snapshot can never reach them, so they are stamped by ticker. Keyed by UPPER-CASED
+ * symbol, merged after the feed like `STABLECOIN_MANUAL`. EUR + CHF only for now.
+ */
+const STABLECOIN_SYMBOL_MANUAL: StablecoinGroupMap = {
+  // Harbor haEUR — EUR-pegged, feed row has no assetGroup.
+  HAEUR: { base: 'EUR' },
+  // Quantoz EURD — EUR-pegged, feed row has no assetGroup.
+  EURD: { base: 'EUR' },
+  // Hedera Swiss Franc — CHF-pegged, feed row has no assetGroup.
+  HCHF: { base: 'CHF' },
+  // Quantillon Euro — EUR-pegged, feed row has no assetGroup.
+  QEURO: { base: 'EUR' },
+  // agEUR — Angle's euro under its PRE-rename ticker (the feed lists it as EURA).
+  // The old agEUR/AGEUR deployments are the same EUR money, so they inherit EUR.
+  AGEUR: { base: 'EUR' },
+}
+
 function serialize(map: StablecoinGroupMap): string {
   const keys = Object.keys(map).sort()
   return JSON.stringify(
@@ -91,19 +111,28 @@ async function generateStablecoinMap() {
     const raw = await loadRiskDataFile<RawStablecoin[]>('data/defillama/stablecoin-quality.json')
 
     const map: StablecoinGroupMap = {}
+    const symbolMap: StablecoinGroupMap = {}
     for (const s of raw) {
-      const group = s?.assetGroup
-      if (!group) continue
       const base = fiatBase(s.pegType)
-      map[group] = base ? { base } : {}
+      const props = base ? { base } : {}
+      if (s.assetGroup) map[s.assetGroup] = props
+      // Symbol-keyed fallback: the lists fragment a stablecoin's assetGroup string
+      // (collision suffixes, PoS bridge variants, renames, casing), but its ticker
+      // does not — key the same fact by symbol so every group variant inherits it.
+      if (s.symbol) symbolMap[s.symbol.toUpperCase()] = props
     }
 
     // Merge manual overlays last so they win and survive feed refreshes.
     Object.assign(map, STABLECOIN_MANUAL)
+    Object.assign(symbolMap, STABLECOIN_SYMBOL_MANUAL)
 
     const withBase = Object.values(map).filter((v) => v.base).length
     fs.writeFileSync(path.resolve(__dirname, './stablecoin.json'), serialize(map))
-    console.log(`Wrote stablecoin.json with ${Object.keys(map).length} groups (${withBase} with a fiat base).`)
+    fs.writeFileSync(path.resolve(__dirname, './stablecoin-symbols.json'), serialize(symbolMap))
+    console.log(
+      `Wrote stablecoin.json (${Object.keys(map).length} groups, ${withBase} with a fiat base) ` +
+        `and stablecoin-symbols.json (${Object.keys(symbolMap).length} symbols).`,
+    )
   } catch (error) {
     // Non-fatal: keep the last committed snapshot so the generate pipeline never breaks.
     console.warn('[stablecoin] could not refresh stablecoin.json, keeping existing snapshot:', (error as Error).message)

@@ -86,6 +86,15 @@ const ALL_NETWORKS = Object.values(Chain)
 const isImpostor = makeImpostorCheck()
 
 /**
+ * A deployment whose NAME marks it as a test/prepaid token rather than the real
+ * asset. Needed by the stablecoin overlay's symbol fallback: a test token that
+ * borrows a real ticker (`Test EURS::EURS`, `Prepaid JPY Coin::JPYC`) must not
+ * inherit the real asset's fiat base through its shared symbol.
+ */
+const isTestToken = (name: string | undefined): boolean =>
+  !!name && /\b(tests?|prepaid|testnet)\b/i.test(name)
+
+/**
  * External-list fetch cache. Every fresh run writes each fetched list here; running with
  * `GEN_CACHE=1` reuses it (no network, no rate-limit waits) — for reprocessing minor generator
  * changes (asset-group aliases, symbol overrides, …) without re-fetching ~100 sources.
@@ -352,8 +361,13 @@ async function readTokenLists(): Promise<{
                     const impostor = isImpostor(chainId, lcAddress, tokenInList.name, tokenInList.symbol)
 
                     // Stablecoin overlay (from risk-data). Keyed by assetGroup since the fiat
-                    // base is chain-independent — covers every deployment of the group.
-                    const stablecoin = impostor ? undefined : lookupStablecoin(assetGroup)
+                    // base is chain-independent — covers every deployment of the group. Falls
+                    // back to symbol for the fragmented group variants (collision suffix, PoS
+                    // bridge, rename); test/prepaid deployments are excluded.
+                    const stablecoin =
+                      impostor || isTestToken(tokenInList.name)
+                        ? undefined
+                        : lookupStablecoin(assetGroup, tokenInList.symbol)
                     if (stablecoin && !tokenProps.stablecoin) tokenProps = { ...tokenProps, stablecoin }
 
                     // Savings overlay (yield-bearing stablecoin wrappers, from risk-data). Keyed by
