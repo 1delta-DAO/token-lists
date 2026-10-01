@@ -3280,6 +3280,7 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x310e9d4efa5652e8e79a66f5563ad48b230a6024': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x3216a28c44d87aa5006db1c4b13b422c7826df88': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x3234421fa54ddf0eb750ae04680cc0c4d2de2721': { type: 'equity', subType: 'stock', issuer: 'backed' },
+    '0x33aa35b0271fffe2048cc093ab7fe60931786719': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x3400f8b9852537feadc778f66629d7b5002593e2': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x3427b17e44f8fca0e91981b7c15b40727fe4ad81': { type: 'equity', subType: 'stock', issuer: 'backed' },
     '0x3481a7c02a9b467630e77a7cce91a25396414c6d': { type: 'fund', subType: 'etf', issuer: 'backed' },
@@ -4668,6 +4669,7 @@ export const RWA_GENERATED: RwaRegistry = {
   },
   '1672': {
     '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
+    '0x0bf7a3b6b0b0f65bb54169199c41001d0e876b55': { type: 'fund', subType: 'etf', issuer: 'blackrock' },
     '0xc18e6f730896971a79d748e8dea61067a9bc6040': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
   },
   '4217': {
@@ -5453,6 +5455,12 @@ export const RWA_GENERATED: RwaRegistry = {
     '0x1234b15f9c9b01deffc897e8018c9a26dfd6a924': { type: 'equity', subType: 'stock', issuer: 'dinari' },
     '0x132b6a2b80c9f577f73483efab0c70285d14289a': { type: 'equity', subType: 'stock', issuer: 'dinari' },
     '0x13b251cf6b1eea8be9af267e9a5fe234d602120c': { type: 'equity', subType: 'stock', issuer: 'dinari' },
+    '0x178b01f61cbea1d2a5581fe1621be607835ec349': {
+      type: 'commodity',
+      subType: 'gold',
+      issuer: 'matrixdock',
+      underlying: 'XAU',
+    },
     '0x1b71d09c0238a52cb5c9ef036fe85895931cb359': { type: 'equity', subType: 'stock', issuer: 'dinari' },
     '0x1f1a8b19ba9ca36cc3bd2564597ac01927e94d44': { type: 'equity', subType: 'stock', issuer: 'dinari' },
     '0x23bbba1e56e7c6b98e56ec64b0ccc54b0c848778': { type: 'fund', subType: 'etf', issuer: 'dinari' },
