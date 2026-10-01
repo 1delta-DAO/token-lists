@@ -1,0 +1,52 @@
+name: Issuer reconciliation
+
+# Desk coverage gate for the generated lists (scripts/issuer/README.md,
+# "Reconciliation gate"). Deliberately a workflow of its own and NOT a step of
+# run-scripts.yml's generate job: a coverage gap must never block the nightly
+# token-map auto-generate PR — it shows up here, on that PR and on main.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  issuer-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "scripts/package-lock.json"
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci
+
+      # Both run even if the first fails, so one CI run reports every gap.
+      - name: Fiat money has a desk (issuer:check)
+        id: fiat
+        continue-on-error: true
+        working-directory: scripts
+        run: npm run issuer:check
+
+      - name: ETH/BTC has a desk and a money (issuer:check:eth-btc)
+        id: ethbtc
+        continue-on-error: true
+        working-directory: scripts
+        run: npm run issuer:check:eth-btc
+
+      - name: Fail if either check failed
+        if: steps.fiat.outcome == 'failure' || steps.ethbtc.outcome == 'failure'
+        run: |
+          echo "::error::issuer:check=${{ steps.fiat.outcome }}, issuer:check:eth-btc=${{ steps.ethbtc.outcome }} — see the step logs; curate in scripts/issuer/issuerAssets.ts or allowlist with a reason."
+          exit 1

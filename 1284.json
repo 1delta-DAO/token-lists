@@ -122,10 +122,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39799/thumb/dai.png?1724125463",
       "assetGroup": "Multichain Bridged DAI::DAI",
       "currencyId": "Multichain Bridged DAI::DAI",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x4792c1ecb969b036eb51330c63bd27899a13d84e": {
       "chainId": "1284",
@@ -293,8 +290,8 @@
       "currencyId": "Frax::FRAX",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -307,10 +304,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/28145/thumb/logo_%285%29.png?1696527151",
       "assetGroup": "Acala Dollar::AUSD",
       "currencyId": "Acala Dollar::AUSD",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x8389cf5be8f1e56211d226668a8b8f6cade61ee4": {
       "chainId": "1284",
@@ -333,8 +327,17 @@
       "currencyId": "BRLA Digital BRLA::BRLA",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "REAL" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": {
+          "id": "brla",
+          "name": "BRLA Digital",
+          "kind": "institution"
+        }
       }
     },
     "0x524d524b4c9366be706d3a90dcf70076ca037ae3": {
@@ -400,8 +403,8 @@
       "currencyId": "Bridged USDC (Axelar)::AXLUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -811,7 +814,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "dam-finance",
+          "name": "DAM Finance",
+          "kind": "protocol"
+        }
       }
     },
     "0xd10078fdbc835726c79533a4a19db40cfad69d7f": {
@@ -855,8 +863,8 @@
       "currencyId": "xcUSDC::XCUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },

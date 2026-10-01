@@ -11319,8 +11319,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -11381,8 +11381,7 @@
       "symbol": "mUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/moe-tokenlists/main/logos/0xab575258d37EaA5C8956EfABe71F4eE8F6397cF3/logo.png",
       "assetGroup": "Mantle USD::mUSD",
-      "currencyId": "Mantle USD::mUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Mantle USD::mUSD"
     },
     "0x25356aeca4210ef7553140edb9b8026089e49396": {
       "chainId": "5000",
@@ -11449,7 +11448,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30181,
           "routes": [
@@ -11463,6 +11461,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -11602,7 +11601,8 @@
       "currencyId": "Fire Bitcoin::FBTC",
       "props": {
         "risk": { "score": 2, "source": "whitelist" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "function", "name": "Function", "kind": "protocol" }
       }
     },
     "0xbe5acfd64358805616b5cbd5277b9a85011d7cf1": {
@@ -11655,12 +11655,12 @@
       "currencyId": "AUSD::AUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
     },
@@ -11701,10 +11701,7 @@
       "logoURI": "https://raw.githubusercontent.com/merchant-moe/moe-tokenlists/main/logos/0xD2B4C9B0d70e3Da1fBDD98f469bD02E77E12FC79/logo.png",
       "assetGroup": "Aurelius USD::aUSD",
       "currencyId": "Aurelius USD::aUSD",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "5000",
@@ -11721,7 +11718,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30181,
@@ -11736,6 +11732,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -12079,8 +12076,8 @@
       "currencyId": "Bridged USDC (Axelar)::axlUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -12102,8 +12099,7 @@
       "symbol": "iUSD",
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/iusd.png",
       "assetGroup": "IUSD",
-      "currencyId": "iZUMi Bond USD::iUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "iZUMi Bond USD::iUSD"
     },
     "0x6a3b0eb5b57c9a4f5772fc900dae427e65f8c1a5": {
       "chainId": "5000",
@@ -12189,8 +12185,13 @@
       "assetGroup": "GRAI",
       "currencyId": "Gravita Debt Token::GRAI",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "gravita", "name": "Gravita", "kind": "protocol" }
       }
     },
     "0x2598c30330d5771ae9f983979209486ae26de875": {
@@ -12340,6 +12341,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -12399,8 +12401,8 @@
       "currencyId": "Bridged FRAX::FRAX",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -12413,7 +12415,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/28775/thumb/dusd_logo_200x200.png?1696527754",
       "assetGroup": "Davos xyz USD::DUSD",
       "currencyId": "Davos xyz USD::DUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "davos", "name": "Davos", "kind": "protocol" }
+      }
     },
     "0xbd9aa882f5a9423b515721d84e9ead5ac40ae3de": {
       "chainId": "5000",
@@ -12424,7 +12429,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39966/thumb/dackie_usd_circle.png?1734941381",
       "assetGroup": "Dackie USD::DCKUSD",
       "currencyId": "Dackie USD::DCKUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dackie", "name": "DackieSwap", "kind": "protocol" }
+      }
     },
     "0x872952d3c1caf944852c5adda65633f1ef218a26": {
       "chainId": "5000",
@@ -12446,7 +12454,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x527856315a4bcd2f428ea7fa05ea251f7e96a50a": {
@@ -12493,7 +12502,9 @@
               }
             }
           ]
-        }
+        },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
     "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf": {
@@ -12772,7 +12783,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30181,
           "routes": [
@@ -12806,6 +12816,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
@@ -12917,8 +12928,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDT", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
     },

@@ -166,8 +166,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -195,7 +195,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30255,
           "routes": [
@@ -233,6 +232,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -298,7 +298,6 @@
       "assetGroup": "Staked Frax USD::sfrxUSD",
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30255,
@@ -337,6 +336,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -363,8 +363,8 @@
             }
           ]
         },
-        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x09eadcbaa812a4c076c3a6cde765dc4a22e0d775": {
@@ -377,8 +377,8 @@
       "assetGroup": "SDAI",
       "currencyId": "Savings Dai::sDAI",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "DAI", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
@@ -392,7 +392,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Staked USDe::sUSDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30255,
@@ -407,6 +406,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -417,8 +417,7 @@
       "address": "0xdebb8a79b025b2fc2ca506f0c69497b60b91235c",
       "symbol": "FXD",
       "assetGroup": "Frax Doge::FXD",
-      "currencyId": "Frax Doge::FXD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Frax Doge::FXD"
     },
     "0x788d96f655735f52c676a133f4dfc53cec614d4a": {
       "chainId": "252",
@@ -429,7 +428,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53290/thumb/dUSD_Logo.png?1735997462",
       "assetGroup": "dTRINITY USD::DUSD",
       "currencyId": "dTRINITY USD::DUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dtrinity", "name": "dTRINITY", "kind": "protocol" }
+      }
     },
     "0xcc15f0f1e81e4a90cc2faa918842e19f2ea2ee03": {
       "chainId": "252",
@@ -481,8 +483,8 @@
       "assetGroup": "USDC",
       "currencyId": "Axelar Bridged USDC::AXLUSDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -529,7 +531,9 @@
               }
             }
           ]
-        }
+        },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
     "0x4c0bd74da8237c08840984fdb33a84b4586aaee6": {
@@ -541,7 +545,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/29351/thumb/VNXEUR_%281%29.png?1696528300",
       "assetGroup": "VNX EURO::VEUR",
       "currencyId": "VNX EURO::VEUR",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
+      }
     },
     "0x418126bb59457afdba1ecf376f97400b4157425d": {
       "chainId": "252",
@@ -552,7 +559,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/29547/thumb/VNXCHF_%282%29.png?1696528488",
       "assetGroup": "VNX Swiss Franc::VCHF",
       "currencyId": "VNX Swiss Franc::VCHF",
-      "props": { "stablecoin": { "base": "CHF" } }
+      "props": {
+        "stablecoin": { "base": "CHF" },
+        "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
+      }
     },
     "0xfc00000000000000000000000000000000000003": {
       "chainId": "252",
@@ -564,7 +574,6 @@
       "assetGroup": "Frax Price Index::FPI",
       "currencyId": "Frax Price Index::FPI",
       "props": {
-        "stablecoin": {},
         "oft": {
           "eid": 30255,
           "routes": [
@@ -578,6 +587,7 @@
             }
           ]
         },
+        "stablecoin": {},
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -614,7 +624,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/30118/thumb/crvusd.jpg?1746670973",
       "assetGroup": "crvUSD::CRVUSD",
       "currencyId": "crvUSD::CRVUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
+      }
     },
     "0x58acc2600835211dcb5847c5fa422791fd492409": {
       "chainId": "252",
@@ -625,7 +638,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68063/thumb/sdUSD_Logo.png?1754642699",
       "assetGroup": "dTrinity Staked dUSD::SDUSD",
       "currencyId": "dTrinity Staked dUSD::SDUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dtrinity", "name": "dTRINITY", "kind": "protocol" }
+      }
     },
     "0xd6a6ba37faac229b9665e86739ca501401f5a940": {
       "chainId": "252",

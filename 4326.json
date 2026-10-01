@@ -69,7 +69,6 @@
       "assetGroup": "MegaUSD::USDM",
       "currencyId": "MegaUSD::USDM",
       "props": {
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 5,
           "category": "STABLECOIN",
@@ -87,6 +86,13 @@
               "peers": { "1": "0xec2af1c8b110a61fd9c3fa6a554a031ca9943926" }
             }
           ]
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "megaeth",
+          "name": "MegaETH",
+          "kind": "protocol",
+          "parent": "ethena"
         }
       }
     },
@@ -158,8 +164,8 @@
             }
           ]
         },
-        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x551dfe38994ec53c9e7e18084d73893225eea3bf": {
@@ -193,7 +199,8 @@
       "currencyId": "Wrapped iTRY::WITRY",
       "props": {
         "savings": { "underlying": "iTRY", "base": "TRY" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "brix", "name": "Brix", "kind": "institution" }
       }
     },
     "0x2a3a4c92ce37abd7239fb010bc390710f4062407": {
@@ -246,7 +253,6 @@
       "assetGroup": "USDE",
       "currencyId": "Ethena USDe::USDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30398,
           "routes": [
@@ -260,6 +266,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -286,7 +293,15 @@
       "symbol": "BTC.b",
       "logoURI": "https://assets.coingecko.com/coins/images/26115/thumb/BTC.b.png?1772210755",
       "assetGroup": "Bitcoin::BTC.b",
-      "currencyId": "Bitcoin::BTC.b"
+      "currencyId": "Bitcoin::BTC.b",
+      "props": {
+        "issuer": {
+          "id": "ava-labs",
+          "name": "Ava Labs",
+          "kind": "institution"
+        },
+        "denomination": "BTC"
+      }
     },
     "0xee85aefb15b9489563a6a29891ebe0750aa1a7ae": {
       "chainId": "4326",
@@ -308,7 +323,6 @@
       "assetGroup": "Cap USD::CUSD",
       "currencyId": "Cap USD::CUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
@@ -331,6 +345,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
       }
     },

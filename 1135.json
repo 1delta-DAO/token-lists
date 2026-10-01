@@ -51,8 +51,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Lisk)::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -108,7 +108,15 @@
       "symbol": "M-BTC",
       "logoURI": "https://static.debank.com/image/lisk_token/logo_url/0x9bfa177621119e64cecbeabe184ab9993e2ef727/4fbfc21e21f337f3221adea0b75baf63.png",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {
+        "issuer": {
+          "id": "merlin",
+          "name": "Merlin Chain",
+          "kind": "protocol"
+        },
+        "denomination": "BTC"
+      }
     },
     "0x1b10e2270780858923cdbbc9b5423e29fffd1a44": {
       "chainId": "1135",
@@ -217,8 +225,7 @@
       "address": "0x2a0fa5d670deb472c1a72977b75ba53d1e6fab72",
       "symbol": "LUSD",
       "assetGroup": "L USD Coin::LUSD",
-      "currencyId": "L USD Coin::LUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "L USD Coin::LUSD"
     },
     "0x3f608a49a3ab475da7fbb167c1be6b7a45cd7013": {
       "chainId": "1135",
@@ -254,8 +261,7 @@
       "address": "0x4900900a850153ea6eb7d172362a37354ad04828",
       "symbol": "USDN",
       "assetGroup": "USDN::USDN",
-      "currencyId": "USDN::USDN",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "USDN::USDN"
     },
     "0x6a58dee314d8c112ba3c629f27e59074d4083ddb": {
       "chainId": "1135",

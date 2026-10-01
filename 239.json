@@ -115,7 +115,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54660/thumb/mre7yield_logo.png?1740896178",
       "assetGroup": "Midas mRe7YIELD::MRE7YIELD",
       "currencyId": "Midas Re7 Yield::mRe7YIELD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
     },
     "0x0faca06594c8d5bd9ea61d2bb68c0b3676674563": {
       "chainId": "239",
@@ -165,8 +168,8 @@
             }
           ]
         },
-        "issuer": { "id": "resolv", "name": "Resolv" },
-        "savings": { "underlying": "USR", "base": "USD" }
+        "savings": { "underlying": "USR", "base": "USD" },
+        "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
     "0x35533f54740f1f1aa4179e57ba37039dfa16868b": {
@@ -213,8 +216,8 @@
       "assetGroup": "YieldFi yUSD::yUSD",
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
@@ -226,8 +229,7 @@
       "symbol": "USN",
       "logoURI": "https://static.debank.com/image/aurora_token/logo_url/0x5183e1b1091804bc2602586919e6880ac1cf2896/62f660021cfa773c8195c6e2e4e0af58.png",
       "assetGroup": "USN::USN",
-      "currencyId": "USN::USN",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "USN::USN"
     },
     "0x5ced7f73b76a555ccb372cc0f0137bec5665f81e": {
       "chainId": "239",
@@ -240,7 +242,8 @@
       "currencyId": "Staked USN::sUSN",
       "props": {
         "savings": { "underlying": "USN", "base": "USD" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "noon", "name": "Noon", "kind": "protocol" }
       }
     },
     "0x61d66bc21fed820938021b06e9b2291f3fb91945": {
@@ -322,7 +325,6 @@
       "assetGroup": "Resolv USD::USR",
       "currencyId": "Resolv USD::USR",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30377,
           "routes": [
@@ -344,6 +346,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
@@ -424,6 +427,7 @@
             }
           ]
         },
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },

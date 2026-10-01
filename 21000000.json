@@ -108,8 +108,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -175,7 +175,8 @@
             }
           ]
         },
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x2840f9d9f96321435ab0f977e7fdbf32ea8b304f": {
@@ -213,6 +214,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -249,7 +251,6 @@
       "assetGroup": "USDT",
       "currencyId": "USDT0::USDT0",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30331,
           "routes": [
@@ -261,6 +262,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },

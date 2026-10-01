@@ -101,8 +101,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -121,7 +121,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30125,
           "routes": [
@@ -138,6 +137,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
@@ -247,7 +247,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "KES" }
+        "stablecoin": { "base": "KES" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0x105d4a9306d2e55a71d2eb95b81553ae1dc20d7b": {
@@ -265,7 +266,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "PHP" }
+        "stablecoin": { "base": "PHP" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xe8537a3d056da446677b9e9d6c5db704eaab4787": {
@@ -283,7 +285,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "REAL" }
+        "stablecoin": { "base": "REAL" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0x46c9757c5497c5b1f2eb73ae79b6b67d119b0b58": {
@@ -384,7 +387,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xfecb3f7c54e2caae9dc6ac9060a822d47e053760": {
@@ -397,8 +401,17 @@
       "assetGroup": "BRLA",
       "currencyId": "BRLA Digital BRLA::BRLA",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "REAL" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": {
+          "id": "brla",
+          "name": "BRLA Digital",
+          "kind": "institution"
+        }
       }
     },
     "0x1d18d0386f51ab03e7e84e71bda1681eba865f1f": {
@@ -431,8 +444,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Wormhole)::USDCET",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -456,8 +469,17 @@
       "assetGroup": "Glo Dollar::USDGLO",
       "currencyId": "Glo Dollar::USDGLO",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": {
+          "id": "glo",
+          "name": "Glo Foundation",
+          "kind": "institution"
+        }
       }
     },
     "0xd15ec721c2a896512ad29c671997dd68f9593226": {
@@ -480,8 +502,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Axelar)::axlUSDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -767,8 +789,8 @@
       "assetGroup": "Tether USD::USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
-        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xb020d981420744f6b0fedd22bb67cd37ce18a1d5": {
@@ -857,7 +879,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
     "0xc668583dcbdc9ae6fa3ce46462758188adfdfc24": {
@@ -1066,7 +1089,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "XOF" }
+        "stablecoin": { "base": "XOF" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0x8a567e2ae79ca692bd748ab832081c45de4041ea": {
@@ -1084,7 +1108,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "COP" }
+        "stablecoin": { "base": "COP" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xfaea5f3404bba20d3cc2f8c4b0a888f55a3c7313": {
@@ -1102,7 +1127,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "GHS" }
+        "stablecoin": { "base": "GHS" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0x7175504c455076f15c04a2f90a8e352281f492f9": {
@@ -1120,7 +1146,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "AUD" }
+        "stablecoin": { "base": "AUD" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xff4ab19391af240c311c54200a492233052b6325": {
@@ -1138,7 +1165,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "CAD" }
+        "stablecoin": { "base": "CAD" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xe2702bd97ee33c88c8f6f92da3b733608aa76f71": {
@@ -1156,7 +1184,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "NGN" }
+        "stablecoin": { "base": "NGN" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xccf663b1ff11028f0b19058d0f7b674004a40746": {
@@ -1187,7 +1216,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "ZAR" }
+        "stablecoin": { "base": "ZAR" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xc45ecf20f3cd864b32d9794d6f76814ae8892e20": {
@@ -1205,7 +1235,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "JPY" }
+        "stablecoin": { "base": "JPY" },
+        "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
     },
     "0xb55a79f398e759e43c95b979163f30ec87ee131d": {

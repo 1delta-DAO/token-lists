@@ -207,8 +207,8 @@
       "assetGroup": "Staked avUSD::savUSD",
       "currencyId": "Staked avUSD::savUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "avUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
@@ -222,7 +222,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Bridged frxUSD (LayerZero)::frxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30280,
           "routes": [
@@ -236,6 +235,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -273,8 +273,7 @@
       "symbol": "JUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/54933/thumb/jusd_200px.png?1742628333",
       "assetGroup": "jAsset jUSD::JUSD",
-      "currencyId": "jAsset jUSD::JUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "jAsset jUSD::JUSD"
     },
     "0x51121bcae92e302f19d06c193c95e1f7b81a444b": {
       "chainId": "1329",
@@ -340,7 +339,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/50179/thumb/7.png?1726164913",
       "assetGroup": "Synnax Stablecoin::SYUSD",
       "currencyId": "Synnax Stablecoin::SYUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "synnax", "name": "Synnax", "kind": "protocol" }
+      }
     },
     "0xa8a3a5013104e093245164ea56588dbe10a3eb48": {
       "chainId": "1329",
@@ -386,8 +388,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (IBC)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -460,7 +462,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30280,
@@ -475,6 +476,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -498,7 +500,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x78e26e8b953c7c78a58d69d8b9a91745c2bbb258": {
@@ -586,7 +589,6 @@
       "assetGroup": "USDT",
       "currencyId": "USDT0::USDT0",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30280,
           "routes": [
@@ -620,6 +622,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
@@ -641,7 +644,15 @@
       "symbol": "M-BTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36566/thumb/photo_2024-03-25_22-04-42.jpg?1711936162",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {
+        "issuer": {
+          "id": "merlin",
+          "name": "Merlin Chain",
+          "kind": "protocol"
+        },
+        "denomination": "BTC"
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "1329",
@@ -779,8 +790,8 @@
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -1083,8 +1094,13 @@
             }
           ]
         },
-        "issuer": { "id": "paypal", "name": "Paypal" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "paypal",
+          "name": "PayPal",
+          "kind": "institution",
+          "parent": "paxos"
+        }
       }
     },
     "0x5fabd1d440a90ee57dd698ea096b91f994b6df56": {
@@ -1096,7 +1112,10 @@
       "logoURI": "https://token-list.mantle.xyz/data/FBTC/logo.svg",
       "assetGroup": "FBTC",
       "currencyId": "Fire Bitcoin::FBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "function", "name": "Function", "kind": "protocol" }
+      }
     },
     "0x095957ceb9f317ac1328f0ab3123622401766d71": {
       "chainId": "1329",
@@ -1135,7 +1154,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
+        "denomination": "BTC"
       }
     },
     "0xf2282e641cd3ceeafd4e24663d409fcb68edc1df": {
@@ -1146,8 +1166,7 @@
       "symbol": "EUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102172372/thumb/Evolve_pfp.png?1773162038",
       "assetGroup": "Evolve eUSD::EUSD",
-      "currencyId": "Evolve eUSD::EUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Evolve eUSD::EUSD"
     },
     "0xf91fbe296b0121da410f885bfa39fad078407234": {
       "chainId": "1329",
@@ -1178,8 +1197,17 @@
       "assetGroup": "Staked Stream USD::xUSD",
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "issuer": {
+          "id": "stream",
+          "name": "Stream Finance",
+          "kind": "protocol"
+        }
       }
     },
     "0xa933d9d710a9c38c0cc875fb164d59f90026c0fc": {

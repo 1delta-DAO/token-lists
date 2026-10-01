@@ -121,8 +121,28 @@ canonical group reaches its pre-alias variants (`USD3::USD3` →
 `npm run issuer:check` fails when a token with `stablecoin.base` or
 `savings.base` has neither `issuer` nor `issuerExposures` and its group is not
 in [`unattributed-ok.json`](./unattributed-ok.json) with a reason. The list is
-a ratchet: stale entries (group now attributed or gone) fail too. It is not
-wired into `generate:formatted`, so it cannot block the auto-generate PR.
+a ratchet: stale entries (group now attributed or gone) fail too.
+
+`npm run issuer:check:eth-btc` ([`checkEthBtc.ts`](./checkEthBtc.ts)) is the
+same gate for ETH and BTC money (`lst.asset`, `denomination`, `savings.base`),
+with its own list, [`unattributed-eth-btc-ok.json`](./unattributed-eth-btc-ok.json).
+Here "nobody issues it" is a common answer — native ETH and WETH are listed
+with exactly that reason. It also asserts the converse: an attributed,
+non-wrapper token wearing an ETH/BTC ticker must carry a money (`denomination`
+in `denomination/denominationMap.ts` for 1:1 wrappers like tBTC/BTCB/SolvBTC,
+`lst` in `lst/lstGroupMap.ts` for staked forms), exempted only as
+`"money:<group>"` in the same list.
+
+Neither is wired into `generate:formatted`, so neither can block the
+auto-generate PR; both run in `.github/workflows/issuer-check.yml` on pull
+requests and pushes to main.
+
+### Seeded labels are re-derived
+
+The 1delta lists the generator re-seeds from are last run's output. `stablecoin`,
+`issuer` and `issuerExposures` are dropped from that seed before the overlays
+run, so every run reflects today's maps: a removed desk or a tightened overlay
+takes effect instead of persisting forever through the seed.
 
 ### Wrapper instruments
 
@@ -186,6 +206,26 @@ Three properties worth knowing:
 - **The impostor guard still applies.** `generateTokenMap.script.ts` skips the
   overlay for a token flagged by `isImpostor`, so a ticker-copy can never
   inherit a real desk's name through a shared group.
+
+### The one exception: split groups (`ISSUER_BY_ADDRESS`)
+
+Some groups hold several desks' tokens under one key — `BUSD` is Paxos' BUSD
+on 1 and Binance-peg BUSD on 56; `eUSD::EUSD` is Lybra on 1 and Telcoin on
+8453; the bare `BTC` group mixes Ava Labs' BTC.b with unrelated bridged BTC. A
+group key would be wrong for half of each, so `ISSUER_BY_ADDRESS` in
+[`issuerAssets.ts`](./issuerAssets.ts), keyed `chainId:lowercaseAddress`, is
+consulted **before** the group map (generator and wrapper walk alike). The bar
+is higher than for a group line: every entry cites evidence that _that
+contract_ is the desk's token or a verifiable 1:1 route to it — canonical L2
+bridge getters (`l1Token`/`remoteToken`/`l1Address`), Polygon PoS
+`childToRootToken`, Omnibridge `foreignTokenAddress`, Binance-peg `getOwner`,
+a LayerZero `trustedRemoteLookup` back to the issuer's adapter, or the issuer's
+own published address list. Members that cannot be verified stay blank and the
+group keeps its allowlist entry, with a reason naming what is left.
+
+A bridged copy over a **defunct** bridge (Multichain, Nomad) is not the
+underlying desk's credit — its collateral is gone — and is left blank with
+that reason rather than attributed to Circle/Tether/Sky.
 
 ### The `kind` field
 

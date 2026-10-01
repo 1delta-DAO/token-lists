@@ -1470,8 +1470,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -1501,7 +1501,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "berachain", "name": "Berachain", "kind": "protocol" }
       }
     },
     "0x779ded0c9e1022225f8e0630b35a9b54be713736": {
@@ -1514,7 +1515,6 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -1548,6 +1548,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
@@ -1566,7 +1567,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "beraborrow",
+          "name": "Beraborrow",
+          "kind": "protocol"
+        }
       }
     },
     "0x28e0e3b9817012b356119df9e217c25932d609c2": {
@@ -1614,7 +1620,8 @@
             }
           ]
         },
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0xff12470a969dd362eb6595ffb44c82c959fe9acc": {
@@ -1627,7 +1634,6 @@
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -1644,6 +1650,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avalon", "name": "Avalon" }
       }
     },
@@ -1686,7 +1693,6 @@
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -1700,6 +1706,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -1713,7 +1720,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Staked USDe::sUSDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30362,
@@ -1728,6 +1734,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -1754,6 +1761,7 @@
             }
           ]
         },
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -1807,7 +1815,6 @@
       "assetGroup": "MIM",
       "currencyId": "Magic Internet Money::MIM",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -1824,6 +1831,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "abracadabra",
           "name": "Abracadabra",
@@ -2068,7 +2076,9 @@
               }
             }
           ]
-        }
+        },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
     "0xbaadcc2962417c01af99fb2b7c75706b9bd6babe": {
@@ -2150,7 +2160,6 @@
       "assetGroup": "Reservoir srUSD::SRUSD",
       "currencyId": "Reservoir srUSD::SRUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "rUSD", "base": "USD" },
         "oft": {
           "eid": 30362,
@@ -2165,6 +2174,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -2393,7 +2403,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "rootsfi", "name": "RootsFi", "kind": "protocol" }
       }
     },
     "0x02f92800f57bcd74066f5709f1daa1a4302df875": {
@@ -2586,7 +2597,6 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -2609,6 +2619,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
@@ -2707,6 +2718,7 @@
       "assetGroup": "Ether fi Staked BTC::EBTC",
       "currencyId": "Ether fi Staked BTC::EBTC",
       "props": {
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -2744,7 +2756,11 @@
       "symbol": "SOLVBTCBNB",
       "logoURI": "https://assets.coingecko.com/coins/images/67662/thumb/SolvBTC.BNB.png?1753426768",
       "assetGroup": "Solv Protocol SolvBTC BNB::SOLVBTCBNB",
-      "currencyId": "Solv Protocol SolvBTC BNB::SOLVBTCBNB"
+      "currencyId": "Solv Protocol SolvBTC BNB::SOLVBTCBNB",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "80094",
@@ -2756,7 +2772,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -2770,6 +2785,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -3112,7 +3128,11 @@
       "symbol": "SOLVBTC.BERA",
       "logoURI": "https://assets.coingecko.com/coins/images/69747/thumb/SolvBTC.BERA.png?1759482666",
       "assetGroup": "Solv Protocol SolvBTC.BERA::SOLVBTC.BERA",
-      "currencyId": "Solv Protocol SolvBTC.BERA::SOLVBTC.BERA"
+      "currencyId": "Solv Protocol SolvBTC.BERA::SOLVBTC.BERA",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0xeb9b5f4eb023ae754ff59a04c9c038d58606dac6": {
       "chainId": "80094",
@@ -3379,8 +3399,8 @@
       "assetGroup": "Staked avUSD::savUSD",
       "currencyId": "Staked avUSD::savUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "avUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },

@@ -76,7 +76,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
+        "denomination": "BTC"
       }
     },
     "0x6120725cfa1062b0596c48d356e4bec6a44feece": {
@@ -355,8 +356,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin (Layer0 Bridge)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -515,7 +516,12 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "risk": { "score": 1, "category": "BLUE_CHIP", "source": "whitelist" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": {
+          "id": "ava-labs",
+          "name": "Ava Labs",
+          "kind": "institution"
+        }
       }
     },
     "0x42077e348702f13ea80ce6a6a38b8b60fbb37b5d": {

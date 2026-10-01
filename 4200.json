@@ -89,8 +89,8 @@
       "assetGroup": "USDC",
       "currencyId": "Merlin USDC::M-USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -162,7 +162,15 @@
       "symbol": "M-BTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36566/thumb/photo_2024-03-25_22-04-42.jpg?1711936162",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {
+        "issuer": {
+          "id": "merlin",
+          "name": "Merlin Chain",
+          "kind": "protocol"
+        },
+        "denomination": "BTC"
+      }
     },
     "0x09401c470a76ec07512eeddef5477be74bac2338": {
       "chainId": "4200",
@@ -240,6 +248,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -251,7 +260,11 @@
       "symbol": "SolvBTC.ENA",
       "logoURI": "https://assets.coingecko.com/coins/images/38931/thumb/BTC_ena.png?1719562313",
       "assetGroup": "SOLVBTC.ENA",
-      "currencyId": "SolvBTC Ethena::SolvBTC.ENA"
+      "currencyId": "SolvBTC Ethena::SolvBTC.ENA",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x0a3bb08b3a15a19b4de82f8acfc862606fb69a2d": {
       "chainId": "4200",
@@ -261,8 +274,7 @@
       "symbol": "IUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/25388/thumb/iusd-logo-symbol-10k%E5%A4%A7%E5%B0%8F.png?1696524521",
       "assetGroup": "IUSD",
-      "currencyId": "iZUMi Bond USD::IUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "iZUMi Bond USD::IUSD"
     },
     "0x41d9036454be47d3745a823c4aacd0e29cfb0f71": {
       "chainId": "4200",
@@ -274,7 +286,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x4dcb91cc19aadfe5a6672781eb09abad00c19e4c": {

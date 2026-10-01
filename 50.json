@@ -104,8 +104,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin (ICE)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -202,8 +202,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -261,7 +261,8 @@
       "currencyId": "Fathom Dollar::FXD",
       "props": {
         "risk": { "score": 4, "source": "default" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "fathom", "name": "Fathom", "kind": "protocol" }
       }
     },
     "0x81b244d0be055ef3bef1b09b7826cc2b108b2cbd": {
@@ -305,8 +306,8 @@
       "assetGroup": "USDC",
       "currencyId": "USDC.e (Stargate)::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -497,8 +498,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -511,7 +512,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33263/thumb/AUDD-Logo-Blue_512.png?1701319895",
       "assetGroup": "Australian Digital Dollar::AUDD",
       "currencyId": "Australian Digital Dollar::AUDD",
-      "props": { "stablecoin": { "base": "AUD" } }
+      "props": {
+        "stablecoin": { "base": "AUD" },
+        "issuer": { "id": "novatti", "name": "Novatti", "kind": "institution" }
+      }
     },
     "0x2d1c02cf9e7a1659b82185fef243078bfd237b23": {
       "chainId": "50",
@@ -587,8 +591,8 @@
       "currencyId": "Savings crvUSD::scrvUSD",
       "props": {
         "savings": { "underlying": "crvUSD", "base": "USD" },
-        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
       }
     },
     "0xd687759f35bb747a29246a4b9495c8f52c49e00c": {

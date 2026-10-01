@@ -348,8 +348,7 @@
       "symbol": "IUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/50841/thumb/iUSD.png?1729295402",
       "assetGroup": "Ironclad USD::IUSD",
-      "currencyId": "Ironclad USD::IUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Ironclad USD::IUSD"
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "34443",
@@ -361,7 +360,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Ethena Staked USDe::sUSDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30260,
@@ -376,6 +374,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -434,8 +433,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -508,6 +507,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -531,7 +531,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Bridged FRAX::FRAX",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
         "oft": {
           "eid": 30260,
@@ -546,6 +545,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -558,7 +558,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39966/thumb/dackie_usd_circle.png?1734941381",
       "assetGroup": "Dackie USD::DCKUSD",
       "currencyId": "Dackie USD::DCKUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dackie", "name": "DackieSwap", "kind": "protocol" }
+      }
     },
     "0x66eed5ff1701e6ed8470dc391f05e27b1d0657eb": {
       "chainId": "34443",
@@ -618,7 +621,15 @@
       "symbol": "M-BTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36566/thumb/photo_2024-03-25_22-04-42.jpg?1711936162",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {
+        "issuer": {
+          "id": "merlin",
+          "name": "Merlin Chain",
+          "kind": "protocol"
+        },
+        "denomination": "BTC"
+      }
     },
     "0x819d1daa794c1c46b841981b61cc978d95a17b8e": {
       "chainId": "34443",
@@ -629,7 +640,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/28775/thumb/dusd_logo_200x200.png?1696527754",
       "assetGroup": "Davos xyz USD::DUSD",
       "currencyId": "Davos xyz USD::DUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "davos", "name": "Davos", "kind": "protocol" }
+      }
     },
     "0xdf474b7109b73b7d57926d43598d5934131136b2": {
       "chainId": "34443",
@@ -649,8 +663,7 @@
       "symbol": "sDUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/37909/thumb/image_%281%29.png?1715934988",
       "assetGroup": "Davos Protocol Staked DUSD::sDUSD",
-      "currencyId": "Davos Protocol Staked DUSD::sDUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Davos Protocol Staked DUSD::sDUSD"
     },
     "0xcfd1d50ce23c46d3cf6407487b2f8934e96dc8f9": {
       "chainId": "34443",
@@ -672,7 +685,6 @@
       "assetGroup": "Staked Frax USD::sfrxUSD",
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30260,
@@ -687,6 +699,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -700,7 +713,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x1217bfe6c773eec6cc4a38b5dc45b92292b6e189": {
@@ -871,7 +885,6 @@
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30260,
           "routes": [
@@ -885,6 +898,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -1107,8 +1121,7 @@
       "address": "0x1b666fd10ce8cd99cad15ef5fe664a7631b98379",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0x2c4e1c8d61074481f10f591bc377876d7f4a7748": {
       "chainId": "34443",
@@ -1189,8 +1202,7 @@
       "address": "0x3e362023d264c8cff9f19874cccb19cc6dbc0e9e",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0x3e5be6efedef08c9aa1702ba03d2f9200111e2a7": {
       "chainId": "34443",
@@ -1217,8 +1229,7 @@
       "address": "0x4811b76e93e98b6dcbf0f3283f13d8b52fd4062a",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0x4900f2c35251b65b256ec4a2afd8449c219ebda8": {
       "chainId": "34443",
@@ -1245,8 +1256,7 @@
       "address": "0x5559c32092f667e5cc14628388b31baa5e2552b6",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0x5a3aefa1df807ab1f2a5748221995cc01dbe28fe": {
       "chainId": "34443",
@@ -1498,8 +1508,7 @@
       "address": "0xa1ec2764bdefa286c499c4f53506611b098f3e09",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0xa3c8e664f6cce5df0701e28135cf7fd3ed1b155d": {
       "chainId": "34443",
@@ -1607,8 +1616,7 @@
       "address": "0xb4a12f0f29b6649335bab055dd9df9de62e54846",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0xb6dc6a628fa9c12df3a25ba5b583cc38d179afa8": {
       "chainId": "34443",
@@ -1709,8 +1717,7 @@
       "address": "0xcc39008eca9023483d1cad8e1148619b59a35ebf",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0xe12f0247433a150a1ad957a4f56189a2fd3a4c02": {
       "chainId": "34443",
@@ -1818,8 +1825,7 @@
       "address": "0xfe4aa94b96aec86f7231e222c10c8a9ecba1106b",
       "symbol": "DAI",
       "assetGroup": "DefiAi::DAI",
-      "currencyId": "DefiAi::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "DefiAi::DAI"
     },
     "0xfe5961eab109eb13fe25435c35fc90d4902f3acd": {
       "chainId": "34443",

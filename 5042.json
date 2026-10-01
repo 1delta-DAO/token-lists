@@ -1233,7 +1233,6 @@
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
         "wnative": true,
         "risk": {
@@ -1241,6 +1240,7 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -1375,8 +1375,8 @@
       "assetGroup": "EURC::EURC",
       "currencyId": "EURC::EURC",
       "props": {
-        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" },
-        "stablecoin": { "base": "EUR" }
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x4933a85b5b5466fbaf179f72d3de273c287ec2c2": {
@@ -1388,7 +1388,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68076/thumb/EURAU_blue.png?1782278504",
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": {
+          "id": "allunity",
+          "name": "AllUnity",
+          "kind": "institution"
+        }
+      }
     },
     "0xc6df1b92a6ae61a27059c41e541a91ce8dcb1605": {
       "chainId": "5042",
@@ -1399,7 +1406,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102172300/thumb/CHFAU_red.png?1782278502",
       "assetGroup": "AllUnity CHF::CHFAU",
       "currencyId": "AllUnity CHF::CHFAU",
-      "props": { "stablecoin": { "base": "CHF" } }
+      "props": {
+        "stablecoin": { "base": "CHF" },
+        "issuer": {
+          "id": "allunity",
+          "name": "AllUnity",
+          "kind": "institution"
+        }
+      }
     },
     "0x171a4217b86a807a64eb94757db6849fb4bdbaa0": {
       "chainId": "5042",
@@ -1490,7 +1504,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173633/thumb/gbpa.png?1780589453",
       "assetGroup": "Agant GBP::GBPA",
       "currencyId": "Agant GBP::GBPA",
-      "props": { "stablecoin": { "base": "GBP" } }
+      "props": {
+        "stablecoin": { "base": "GBP" },
+        "issuer": { "id": "agant", "name": "Agant", "kind": "institution" }
+      }
     },
     "0xd70c2fa4232e054b373efaea98e4138511c2a309": {
       "chainId": "5042",
@@ -1501,7 +1518,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102172031/thumb/QCAD-Teal---Transparent_200x200.png?1771119370",
       "assetGroup": "Stablecorp QCAD::QCAD",
       "currencyId": "Stablecorp QCAD::QCAD",
-      "props": { "stablecoin": { "base": "CAD" } }
+      "props": {
+        "stablecoin": { "base": "CAD" },
+        "issuer": {
+          "id": "stablecorp",
+          "name": "Stablecorp",
+          "kind": "institution"
+        }
+      }
     },
     "0x41358defd0dedc90528b3f1835715e907b686e6a": {
       "chainId": "5042",
@@ -1639,8 +1663,7 @@
       "symbol": "USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/102178579/thumb/1000118393.webp?1790085348",
       "assetGroup": "Fat Cat Bat Rat Wif Hat::USDC",
-      "currencyId": "Fat Cat Bat Rat Wif Hat::USDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Fat Cat Bat Rat Wif Hat::USDC"
     },
     "0x4c9b47dbd5933aa4574b2c27f82419e4dbbd0222": {
       "chainId": "5042",
@@ -1670,8 +1693,7 @@
       "symbol": "USDB",
       "logoURI": "https://assets.coingecko.com/coins/images/102178483/thumb/IMG_1772.jpeg?1789702296",
       "assetGroup": "Blockchain USD::USDB",
-      "currencyId": "Blockchain USD::USDB",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Blockchain USD::USDB"
     },
     "0x76a443768a5e3b8d1aed0105fc250877841deb40": {
       "chainId": "5042",
@@ -1812,7 +1834,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/10119/thumb/JBs9jiXO_400x400.jpg?1696510144",
       "assetGroup": "BiLira::TRYB",
       "currencyId": "BiLira::TRYB",
-      "props": { "stablecoin": { "base": "TRY" } }
+      "props": {
+        "stablecoin": { "base": "TRY" },
+        "issuer": { "id": "bilira", "name": "BiLira", "kind": "institution" }
+      }
     },
     "0xf76b1d00bd3d63a37246b5f512074e864010e33d": {
       "chainId": "5042",

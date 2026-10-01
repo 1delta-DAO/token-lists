@@ -90,8 +90,8 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "permit": { "type": 1, "version": "2" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -106,8 +106,8 @@
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
         "permit": { "type": 1, "version": "2" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -258,7 +258,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0xf7fb2df9280eb0a76427dc3b34761db8b1441a49": {
@@ -269,7 +270,15 @@
       "symbol": "M-BTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36566/standard/photo_2024-03-25_22-04-42.jpg?1711936162",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {
+        "issuer": {
+          "id": "merlin",
+          "name": "Merlin Chain",
+          "kind": "protocol"
+        },
+        "denomination": "BTC"
+      }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
       "chainId": "167000",
@@ -281,6 +290,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -310,7 +320,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
+        "denomination": "BTC"
       }
     },
     "0xe3c0ff176ef92fc225096c6d1788ccb818808b35": {

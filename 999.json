@@ -414,7 +414,15 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "hyperbeat",
+            "name": "Hyperbeat",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x31bec70012f6a197715f388eef86d65a798d945c": {
@@ -899,7 +907,15 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "hyperbeat",
+            "name": "Hyperbeat",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x4a40bfcebf16d677d919dea07a24cd444ea4f229": {
@@ -1384,7 +1400,15 @@
           "ytAddress": "0x47dd54dfa68172e3354e3cba2f59521d3dc9d9c7"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "hyperbeat",
+            "name": "Hyperbeat",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x64b2315a8b37adfd935c65f65c343904468228e7": {
@@ -14294,7 +14318,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "hypurrfi", "name": "HypurrFi", "kind": "protocol" }
       }
     },
     "0x02c6a2fa58cc01a18b8d9e00ea48d65e4df26c70": {
@@ -14313,7 +14338,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "felix", "name": "Felix", "kind": "protocol" }
       }
     },
     "0x5748ae796ae46a4f1348a1693de4b50560485562": {
@@ -14353,7 +14379,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "keiko", "name": "Keiko Finance", "kind": "protocol" }
       }
     },
     "0x47bb061c0204af921f43dc73c7d7768d2672ddee": {
@@ -14529,7 +14556,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x96c6cbb6251ee1c257b2162ca0f39aa5fa44b1fb": {
@@ -14685,7 +14713,6 @@
       "assetGroup": "USDE",
       "currencyId": "USDeOFT::USDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30367,
           "routes": [
@@ -14699,8 +14726,13 @@
             }
           ]
         },
-        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
@@ -14713,7 +14745,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Staked USDe::sUSDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30367,
@@ -14728,8 +14759,13 @@
             }
           ]
         },
-        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
     "0x7280cc1f369ab574c35cb8a8d0885e9486e3b733": {
@@ -14797,7 +14833,6 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30367,
           "routes": [
@@ -14819,6 +14854,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "resolv", "name": "Resolv", "kind": "protocol" }
       }
     },
@@ -14847,7 +14883,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "hyperstable",
+          "name": "Hyperstable",
+          "kind": "protocol"
+        }
       }
     },
     "0x00fdbc53719604d924226215bc871d55e40a1009": {
@@ -14964,7 +15005,6 @@
       "currencyId": "USDT0::USDT0",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30367,
           "routes": [
@@ -14998,8 +15038,13 @@
             }
           ]
         },
-        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x704b679f26b8daba1d5d1e59d56229a34bfee56f": {
@@ -15426,7 +15471,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "hyperbeat", "name": "Hyperbeat", "kind": "protocol" }
       }
     },
     "0x057ced81348d57aad579a672d521d7b4396e8a61": {
@@ -15439,12 +15485,7 @@
       "assetGroup": "Hyperbeat USDC::hbUSDC",
       "currencyId": "Hyperbeat USDC::hbUSDC",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x835febf893c6dddee5cf762b0f8e31c5b06938ab": {
@@ -15536,10 +15577,7 @@
       "logoURI": "https://static.debank.com/image/hyper_token/logo_url/0x101ce20864f0483843a9c41a2f3a8bad7569b04a/36bb37dadf0176d6ede31ad5e91dbb2a.png",
       "assetGroup": "SuperMegaUltraHyperLiquid::ULTRA",
       "currencyId": "SuperMegaUltraHyperLiquid::ULTRA",
-      "props": {
-        "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
-      }
+      "props": { "permit": { "type": 1, "version": "1" } }
     },
     "0x219289f5af40e35d23beca6ae193e3ed3a00ad43": {
       "chainId": "999",
@@ -16322,7 +16360,8 @@
       "currencyId": "M by M0::M",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "m0", "name": "M0", "kind": "protocol" }
       }
     },
     "0x74a40455ff49ece02009bee405154ac9ac3fa340": {
@@ -16356,8 +16395,13 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
     },
     "0x9b3a8f7cec208e247d97dee13313690977e24459": {
@@ -17313,7 +17357,11 @@
       "symbol": "SOLVBTCBNB",
       "logoURI": "https://assets.coingecko.com/coins/images/67662/thumb/SolvBTC.BNB.png?1753426768",
       "assetGroup": "Solv Protocol SolvBTC BNB::SOLVBTCBNB",
-      "currencyId": "Solv Protocol SolvBTC BNB::SOLVBTCBNB"
+      "currencyId": "Solv Protocol SolvBTC BNB::SOLVBTCBNB",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x96029bcf706fac4176492f4a05f63f7d23ce78fb": {
       "chainId": "999",
@@ -18252,10 +18300,14 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
-        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" },
-        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x1368ee9d1212ae5b26ff166049220051a9eebc42": {
@@ -18327,7 +18379,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "native-markets",
+          "name": "Native Markets",
+          "kind": "protocol"
+        }
       }
     },
     "0x9c3bcc457862dd6d8907ba11f8c7fe7e43a8c08b": {
@@ -18360,6 +18417,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -18927,7 +18985,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "hyperbeat", "name": "Hyperbeat", "kind": "protocol" }
       }
     },
     "0xc315a169f49b167870e7eecb8e7ee5d6275b47d8": {
@@ -18959,7 +19018,8 @@
       "currencyId": "Staked USN::sUSN",
       "props": {
         "savings": { "underlying": "USN", "base": "USD" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "noon", "name": "Noon", "kind": "protocol" }
       }
     },
     "0x34c07f50c4f55b322e85deeb265d278e6af112e4": {
@@ -18971,7 +19031,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/syzusd.svg",
       "assetGroup": "Staked Yuzu USD::syzUSD",
       "currencyId": "Staked Yuzu USD::syzUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
+      }
     },
     "0x9522133c663ba8c2a8a7b4f63dd2ac8dccce1505": {
       "chainId": "999",
@@ -19040,8 +19103,7 @@
       "symbol": "LIMUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102173147/thumb/limusd_400x400.jpg?1778064982",
       "assetGroup": "limUSD::LIMUSD",
-      "currencyId": "limUSD::LIMUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "limUSD::LIMUSD"
     },
     "0x2c81466c9b144e3b6e9d6e8858bc0973a953fb0a": {
       "chainId": "999",
@@ -19243,8 +19305,7 @@
       "symbol": "HAUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/102173506/thumb/haUSDC-200x200.png?1779872816",
       "assetGroup": "harmonixUSDCV2::HAUSDC",
-      "currencyId": "harmonixUSDCV2::HAUSDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "harmonixUSDCV2::HAUSDC"
     },
     "0xd687759f35bb747a29246a4b9495c8f52c49e00c": {
       "chainId": "999",
@@ -19301,7 +19362,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "monetrix", "name": "Monetrix", "kind": "protocol" }
       }
     },
     "0xbee62d1b61af920098873bd0336b46a5efdc0e83": {
@@ -19333,7 +19395,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70846/thumb/world_logos_wars_logo_3.png?1764176749",
       "assetGroup": "Argentine Peso::WARS",
       "currencyId": "Argentine Peso::WARS",
-      "props": { "stablecoin": { "base": "ARS" } }
+      "props": {
+        "stablecoin": { "base": "ARS" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe": {
       "chainId": "999",
@@ -19344,7 +19409,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70975/thumb/wpen_logo_1.png?1764954695",
       "assetGroup": "Peruvian Sol::WPEN",
       "currencyId": "Peruvian Sol::WPEN",
-      "props": { "stablecoin": { "base": "PEN" } }
+      "props": {
+        "stablecoin": { "base": "PEN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0": {
       "chainId": "999",
@@ -19355,7 +19423,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70862/thumb/wbrl.png?1764272108",
       "assetGroup": "Brazilian real::WBRL",
       "currencyId": "Brazilian real::WBRL",
-      "props": { "stablecoin": { "base": "REAL" } }
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x61d450a098b6a7f69fc4b98ce68198fe59768651": {
       "chainId": "999",
@@ -19366,7 +19437,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70976/thumb/wclp_logo_1.png?1764954870",
       "assetGroup": "Chilean Peso::WCLP",
       "currencyId": "Chilean Peso::WCLP",
-      "props": { "stablecoin": { "base": "CLP" } }
+      "props": {
+        "stablecoin": { "base": "CLP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x337e7456b420bd3481e7fa61fa9850343d610d34": {
       "chainId": "999",
@@ -19377,7 +19451,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70880/thumb/wmxn_logo_1.png?1764392404",
       "assetGroup": "Mexican Peso::WMXN",
       "currencyId": "Mexican Peso::WMXN",
-      "props": { "stablecoin": { "base": "MXN" } }
+      "props": {
+        "stablecoin": { "base": "MXN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x8a1d45e102e886510e891d2ec656a708991e2d76": {
       "chainId": "999",
@@ -19388,7 +19465,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70887/thumb/wcop_logo_1.png?1764394538",
       "assetGroup": "Colombian Peso::WCOP",
       "currencyId": "Colombian Peso::WCOP",
-      "props": { "stablecoin": { "base": "COP" } }
+      "props": {
+        "stablecoin": { "base": "COP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x8c6eb3c8d1fddc752684274fb4a3eb98dbe9cd26": {
       "chainId": "999",
@@ -19400,8 +19480,13 @@
       "assetGroup": "USDV",
       "currencyId": "Delpho USDV::USDV",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "delpho", "name": "Delpho", "kind": "protocol" }
       }
     },
     "0x9628bba16db41ea7fe1fd84f9ce53bc27c63f59b": {

@@ -126,8 +126,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Etherlink)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -282,7 +282,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54660/thumb/mre7yield_logo.png?1740896178",
       "assetGroup": "Midas mRe7YIELD::MRE7YIELD",
       "currencyId": "Midas mRe7YIELD::MRE7YIELD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
     },
     "0x5542f82389b76c23f5848268893234d8a63fd5c8": {
       "chainId": "42793",
@@ -400,7 +403,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173681/thumb/USDSM-logo-2.png?1780931561",
       "assetGroup": "Stable Mint USD::USDSM",
       "currencyId": "Stable Mint USD::USDSM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "stable-mint",
+          "name": "Stable Mint",
+          "kind": "institution"
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42793",

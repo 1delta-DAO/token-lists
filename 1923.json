@@ -126,7 +126,6 @@
       "assetGroup": "USDE",
       "currencyId": "Bridged USDE (Layerzero)::USDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30335,
           "routes": [
@@ -138,6 +137,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -280,7 +280,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "orki", "name": "Orki", "kind": "protocol" }
       }
     },
     "0xfa3198ecf05303a6d96e57a45e6c815055d255b1": {
@@ -303,8 +304,8 @@
       "assetGroup": "SUSDE",
       "currencyId": "Staked USDe::sUSDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -410,8 +411,7 @@
       "address": "0x7fa65bb90fcec0fa82e009e65aa3736c376c2572",
       "symbol": "USDs",
       "assetGroup": "USD Stable::USDs",
-      "currencyId": "USD Stable::USDs",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "USD Stable::USDs"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1923",

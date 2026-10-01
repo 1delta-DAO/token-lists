@@ -5,7 +5,7 @@ import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
-import { ISSUER_CURATED } from './issuerAssets'
+import { ISSUER_BY_ADDRESS, ISSUER_CURATED } from './issuerAssets'
 import { aliasAssetGroup } from '../utils/data/assetGroupUnifier'
 
 // @ts-ignore
@@ -40,6 +40,16 @@ export const ISSUER_MAP: IssuerGroupMap = { ...loadSnapshot(), ...ISSUER_CURATED
  */
 export function lookupIssuer(assetGroup: string): IssuerProps | undefined {
   return ISSUER_MAP[assetGroup] ?? ISSUER_MAP[aliasAssetGroup(assetGroup)]
+}
+
+/**
+ * Per-deployment issuer (`ISSUER_BY_ADDRESS`), consulted BEFORE the group map:
+ * it exists only for groups whose deployments are different desks' tokens
+ * (Paxos BUSD vs Binance-peg BUSD), where a group key would be wrong for half
+ * of them. Curated-only — there is no snapshot of it.
+ */
+export function lookupIssuerByAddress(chainId: string, lcAddress: string): IssuerProps | undefined {
+  return ISSUER_BY_ADDRESS[`${chainId}:${lcAddress.toLowerCase()}`]
 }
 
 /**

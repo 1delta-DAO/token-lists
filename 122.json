@@ -115,7 +115,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "fuse", "name": "Fuse", "kind": "protocol" }
       }
     },
     "0xc6bc407706b7140ee8eef2f86f9504651b63e7f9": {
@@ -128,8 +129,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -180,8 +181,7 @@
       "symbol": "VOLT",
       "logoURI": "https://assets.coingecko.com/coins/images/21886/thumb/My_project.png?1696521238",
       "assetGroup": "Voltage Finance::VOLT",
-      "currencyId": "Voltage Finance::VOLT",
-      "props": { "stablecoin": {} }
+      "currencyId": "Voltage Finance::VOLT"
     },
     "0xa722c13135930332eb3d749b2f0906559d2c5b99": {
       "chainId": "122",
@@ -240,8 +240,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Layer0 Bridge)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -289,8 +289,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -368,7 +368,10 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/fuseusd.jpg",
       "assetGroup": "Fuse Dollar::fUSD",
       "currencyId": "Fuse Dollar::fUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "fuse", "name": "Fuse", "kind": "protocol" }
+      }
     },
     "0x025a4c577198d116ea499193e6d735fdb2e6e841": {
       "chainId": "122",
@@ -501,6 +504,7 @@
       "assetGroup": "stETH::stETH",
       "currencyId": "stETH::stETH",
       "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
@@ -571,7 +575,10 @@
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xd0ce1b4a349c35e61af02f5971e71ac502441e49/4db7f2d35e6ae655690aeb75dbdfd99a.png",
       "assetGroup": "Fuse Dollar::fUSD::122::0",
       "currencyId": "Fuse Dollar::fUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "fuse", "name": "Fuse", "kind": "protocol" }
+      }
     },
     "0xd1b300aec14c5ddb934c5bbcba4e9f7463b9e3ca": {
       "chainId": "122",
@@ -645,8 +652,7 @@
       "symbol": "SOUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68960/thumb/soUSD_logo.png?1757088705",
       "assetGroup": "Solid USD soUSD::SOUSD",
-      "currencyId": "Solid USD soUSD::SOUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Solid USD soUSD::SOUSD"
     },
     "0x4447863cddabbf2c3dac826f042e03c91927a196": {
       "chainId": "122",
@@ -657,7 +663,10 @@
       "logoURI": "https://raw.githubusercontent.com/swapsicledex/swapsicle-token-list/master/logos/telos/0x8f7D64ea96D729EF24a0F30b4526D47b80d877B9/logo.png",
       "assetGroup": "USDM Stablecoin::USDM",
       "currencyId": "USDM Stablecoin::USDM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "meridian", "name": "Meridian", "kind": "protocol" }
+      }
     },
     "0xb1dd0b683d9a56525cc096fbf5eec6e60fe79871": {
       "chainId": "122",

@@ -58,8 +58,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -654,8 +654,7 @@
       "symbol": "CASH",
       "logoURI": "https://assets.coingecko.com/coins/images/69041/thumb/0x4f62ab32fac017c303aee402b2b1725d100fe8a7%282%29.png?1757326854",
       "assetGroup": "CASH::CASH",
-      "currencyId": "CASH::CASH",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "CASH::CASH"
     },
     "0x5e1f9a9bd16deb2a44c9723a72d99f759a30d907": {
       "chainId": "2741",
@@ -817,7 +816,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::FRXUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30324,
           "routes": [
@@ -831,6 +829,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -929,7 +928,6 @@
       "assetGroup": "Staked Frax USD::sfrxUSD",
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30324,
@@ -944,6 +942,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },

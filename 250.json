@@ -557,8 +557,8 @@
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -1093,8 +1093,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Axelar)::axlUSDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -1352,8 +1352,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Wormhole)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -1392,7 +1392,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "fantom",
+          "name": "Fantom Foundation",
+          "kind": "protocol"
+        }
       }
     },
     "0x5c725631fd299703d0a74c23f89a55c6b9a0c52f": {
@@ -1786,7 +1791,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "hector",
+          "name": "Hector Network",
+          "kind": "protocol"
+        }
       }
     },
     "0x606ba50fa9fbad28d714d49a43b9028a84ad36ac": {
@@ -1989,7 +1999,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/29744/thumb/ERN200x200.png?1696528676",
       "assetGroup": "Ethos Reserve Note::ERN",
       "currencyId": "Ethos Reserve Note::ERN",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethos", "name": "Ethos", "kind": "protocol" }
+      }
     },
     "0xeaf26191ac1d35ae30baa19a5ad5558dd8156aef": {
       "chainId": "250",
@@ -2079,8 +2092,7 @@
       "symbol": "MOD",
       "logoURI": "https://assets.coingecko.com/coins/images/13980/thumb/modefi_logo.png?1696513713",
       "assetGroup": "MOD",
-      "currencyId": "Modefi::MOD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Modefi::MOD"
     },
     "0x6a545f9c64d8f7b957d8d2e6410b52095a9e6c29": {
       "chainId": "250",
@@ -2225,7 +2237,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/15462/thumb/ust.png?1696515108",
       "assetGroup": "USTC",
       "currencyId": "Wrapped USTC::USTC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "terra", "name": "Terra Classic", "kind": "protocol" }
+      }
     },
     "0x1e1085efaa63edfe74aad7c05a28eae4ef917c3f": {
       "chainId": "250",
@@ -2338,7 +2353,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14153/thumb/par_round_200.png?1696513872",
       "assetGroup": "Parallel::PAR",
       "currencyId": "Parallel::PAR",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
+      }
     },
     "0x1d1764f04de29da6b90ffbef372d1a45596c4855": {
       "chainId": "250",
@@ -2758,8 +2776,7 @@
       "symbol": "XY",
       "logoURI": "https://assets.coingecko.com/coins/images/21541/thumb/xy.png?1696520900",
       "assetGroup": "XY",
-      "currencyId": "XY Finance::XY",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "XY Finance::XY"
     },
     "0x89d5e71e275b4be094df9551627bcf4e3b24ce22": {
       "chainId": "250",
@@ -2898,7 +2915,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14114/thumb/Alchemix_USD.png?1696513835",
       "assetGroup": "Alchemix USD::ALUSD",
       "currencyId": "Alchemix USD::ALUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
     },
     "0x646481dbd76264f817d6588e289bf08da38a571e": {
       "chainId": "250",
@@ -3716,8 +3736,7 @@
       "symbol": "fETH",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/eth.jpg",
       "assetGroup": "fETH::fETH",
-      "currencyId": "fETH::fETH",
-      "props": { "stablecoin": {} }
+      "currencyId": "fETH::fETH"
     },
     "0xe1146b9ac456fcbb60644c36fd3f868a9072fc6e": {
       "chainId": "250",
@@ -4149,8 +4168,8 @@
       "assetGroup": "LUSD Stablecoin::LUSD",
       "currencyId": "LUSD Stablecoin::LUSD",
       "props": {
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0xd02a30d33153877bc20e5721ee53dedee0422b2f": {

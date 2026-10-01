@@ -74,8 +74,7 @@
       "symbol": "USDC",
       "logoURI": "https://assets.coingecko.com/coins/images/35221/thumb/USDC.jpg?1707919585",
       "assetGroup": "Multichain Bridged USDC::USDC",
-      "currencyId": "Multichain Bridged USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Multichain Bridged USDC::USDC"
     },
     "0xb84df10966a5d7e1ab46d9276f55d57bd336afc7": {
       "chainId": "2222",
@@ -203,8 +202,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Axelar)::AXLUSDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -238,7 +237,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/17422/thumb/usx_32.png?1696516969",
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dforce", "name": "dForce", "kind": "protocol" }
+      }
     },
     "0x7f5373ae26c3e8ffc4c77b7255df7ec1a9af52a6": {
       "chainId": "2222",
@@ -392,7 +394,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Ethena Staked USDe::SUSDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30177,
@@ -407,6 +408,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -420,7 +422,6 @@
       "assetGroup": "USDE",
       "currencyId": "Ethena USDe::USDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30177,
           "routes": [
@@ -434,6 +435,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },

@@ -61,7 +61,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/enzoBTC.webp",
       "assetGroup": "ENZOBTC",
       "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
-      "props": { "issuer": { "id": "lorenzo", "name": "Lorenzo" } }
+      "props": {
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
+        "denomination": "BTC"
+      }
     },
     "0x3228995749610bea00b59c44f8d1df21c14027f1": {
       "chainId": "200901",
@@ -93,6 +96,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -195,8 +199,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -225,7 +229,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "bitsmiley", "name": "bitSmiley", "kind": "protocol" }
       }
     },
     "0xe04d21d999faedf1e72ade6629e20a11a1ed14fa": {

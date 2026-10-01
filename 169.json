@@ -127,8 +127,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -218,8 +218,7 @@
               "peers": { "1": "0x3f24e1d7a973867fc2a03fe199e5502514e0e11e" }
             }
           ]
-        },
-        "stablecoin": { "base": "USD" }
+        }
       }
     },
     "0x0d613b80f9afb3cef99fe26702227d74b0178740": {
@@ -408,7 +407,6 @@
       "assetGroup": "USDE",
       "currencyId": "Ethena USDe::USDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30217,
           "routes": [
@@ -422,6 +420,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -464,7 +463,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54829/thumb/zoth_32.webp?1741933336",
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "zoth", "name": "Zoth", "kind": "protocol" }
+      }
     },
     "0x35a57efb9b4ae833e9a200bb191ff69420cafa1d": {
       "chainId": "169",
@@ -486,8 +488,9 @@
       "assetGroup": "Anzen Staked USDz::SUSDZ",
       "currencyId": "Anzen Staked USDz::SUSDZ",
       "props": {
+        "savings": { "underlying": "USDz", "base": "USD" },
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "USDz", "base": "USD" }
+        "issuer": { "id": "anzen", "name": "Anzen", "kind": "protocol" }
       }
     },
     "0x078f712f038a95beea94f036cadb49188a90604b": {
@@ -498,8 +501,7 @@
       "symbol": "IUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/25388/thumb/iusd-logo-symbol-10k%E5%A4%A7%E5%B0%8F.png?1696524521",
       "assetGroup": "IUSD",
-      "currencyId": "iZUMi Bond USD::IUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "iZUMi Bond USD::IUSD"
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "169",
@@ -511,7 +513,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Ethena Staked USDe::SUSDE",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30217,
@@ -526,6 +527,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },

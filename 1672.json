@@ -68,8 +68,8 @@
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -200,7 +200,8 @@
       "address": "0x2da3d6e4e2eb9207839247e511e81de4d9a6456e",
       "symbol": "USD",
       "assetGroup": "USD::USD",
-      "currencyId": "USD::USD"
+      "currencyId": "USD::USD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x843913de261a1712d3ae8d4bc751e705bb0823b8": {
       "chainId": "1672",
@@ -626,7 +627,11 @@
       "address": "0x7126c3fef4e6a680eee09fb039b2236f638384b0",
       "symbol": "USDC.e",
       "assetGroup": "Bridged USDC (Pharos)::USDC.e",
-      "currencyId": "Bridged USDC (Pharos)::USDC.e"
+      "currencyId": "Bridged USDC (Pharos)::USDC.e",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
+      }
     },
     "0x61997601cebf74395aeb99edc4f30d16c77a30d2": {
       "chainId": "1672",
@@ -1491,7 +1496,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/syzusd.svg",
       "assetGroup": "Staked Yuzu USD::syzUSD",
       "currencyId": "Staked Yuzu USD::syzUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
+      }
     },
     "0x81acc053ca20e75faed94382e297e6bad50c2c2c": {
       "chainId": "1672",
@@ -2202,8 +2210,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -2270,7 +2278,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/rwaUSDi/logo.png",
       "assetGroup": "rwaUSDi::rwaUSDi",
       "currencyId": "rwaUSDi::rwaUSDi",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "multipli", "name": "Multipli", "kind": "protocol" }
+      }
     },
     "0x97cf68b9f081b568c240e13807b8f7d9f7292a0d": {
       "chainId": "1672",

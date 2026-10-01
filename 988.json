@@ -124,8 +124,8 @@
             }
           ]
         },
-        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0xfdd22ce6d1f66bc0ec89b20bf16ccb6670f55a5a": {
@@ -169,7 +169,6 @@
       "assetGroup": "Staked Frax USD::sfrxUSD",
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30396,
@@ -184,6 +183,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -234,7 +234,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/sthusd.svg",
       "assetGroup": "Staked thUSD::STHUSD",
       "currencyId": "sthUSD::sthUSD",
-      "props": { "savings": { "underlying": "thUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "thUSD", "base": "USD" },
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
+      }
     },
     "0x985fb0821eef0056ec26dd8b33dc61b9415b7f4b": {
       "chainId": "988",
@@ -256,7 +259,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::FRXUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30396,
           "routes": [
@@ -270,6 +272,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -283,8 +286,8 @@
       "assetGroup": "USDC",
       "currencyId": "Stargate Bridged USDC::USDC.E",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -331,8 +334,13 @@
             }
           ]
         },
-        "issuer": { "id": "paypal", "name": "Paypal" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "paypal",
+          "name": "PayPal",
+          "kind": "institution",
+          "parent": "paxos"
+        }
       }
     },
     "0xeaf7ac0fdf150cdd89340fb762d83848de6a7b83": {

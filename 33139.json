@@ -248,8 +248,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -436,7 +436,6 @@
       "assetGroup": "Pleasing USD::PUSD",
       "currencyId": "Pleasing USD::PUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30312,
           "routes": [
@@ -453,7 +452,9 @@
               }
             }
           ]
-        }
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "pleasing", "name": "Pleasing", "kind": "protocol" }
       }
     },
     "0x5e88483a602f865d3b39e2548a8c3ac266a4f096": {

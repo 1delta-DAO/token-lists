@@ -317,8 +317,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -470,7 +470,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54829/thumb/zoth_32.webp?1741933336",
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "zoth", "name": "Zoth", "kind": "protocol" }
+      }
     },
     "0x4651b38e7ec14bb3db731369bfe5b08f2466bd0a": {
       "chainId": "1088",
@@ -534,7 +537,10 @@
       "logoURI": "https://static.debank.com/image/metis_token/logo_url/0x303241e2b3b4aed0bb0f8623e7442368fed8faf3/7a392b1aa4c33cdd3b133c2c858d1a8c.png",
       "assetGroup": "Alchemix USD::alUSD",
       "currencyId": "Alchemix USD::alUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
     },
     "0x0e17934b9735d479b2388347faef0f4e58b9cc06": {
       "chainId": "1088",
@@ -575,7 +581,6 @@
       "assetGroup": "SUSDE",
       "currencyId": "Staked USDe::sUSDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30151,
@@ -590,6 +595,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -629,7 +635,6 @@
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30151,
           "routes": [
@@ -643,6 +648,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },

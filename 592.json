@@ -27,8 +27,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Celer)::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -72,7 +72,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "astriddao", "name": "AstridDAO", "kind": "protocol" }
       }
     },
     "0xc4335b1b76fa6d52877b3046eca68f6e708a27dd": {
@@ -178,7 +179,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/12589/thumb/ousd-logo-200x200.png?1696512399",
       "assetGroup": "OUSD",
       "currencyId": "Origin Dollar::OUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "origin", "name": "Origin", "kind": "protocol" }
+      }
     },
     "0xdd90e5e87a2081dcf0391920868ebc2ffb81a1af": {
       "chainId": "592",

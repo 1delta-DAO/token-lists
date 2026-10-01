@@ -967,7 +967,6 @@
       "assetGroup": "USDT",
       "currencyId": "USD₮0::USD₮0",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30295,
           "routes": [
@@ -1001,6 +1000,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
@@ -1164,7 +1164,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38997/thumb/USDX.png?1719809776",
       "assetGroup": "Hex Trust USD::USDX",
       "currencyId": "Hex Trust USD::USDX",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "hex-trust",
+          "name": "Hex Trust",
+          "kind": "institution"
+        }
+      }
     },
     "0xfbda5f676cb37624f28265a144a48b0d6e87d3b6": {
       "chainId": "14",
@@ -1176,8 +1183,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },

@@ -3688,8 +3688,7 @@
       "symbol": "USDp",
       "logoURI": "https://firebasestorage.googleapis.com/v0/b/pump-555ee.appspot.com/o/images%2FFUEL%20PEPE.jpg?alt=media&token=545cdf19-21b9-449d-8b99-8035d44954f3",
       "assetGroup": "PEPE (Fuel network)::USDp::fuel",
-      "currencyId": "PEPE (Fuel network)::USDp",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "PEPE (Fuel network)::USDp"
     },
     "0x5791954b52dbf77caed09bc8f8c52ce528402fd0405fa597a31b1c66914d309a": {
       "chainId": "fuel",
@@ -5939,8 +5938,7 @@
       "symbol": "u",
       "logoURI": "https://firebasestorage.googleapis.com/v0/b/meme-fun-fuel.appspot.com/o/images%2FQ%7D%40UZWIH%252GNI)(2B2R1(UI.png?alt=media&token=07be5382-6efa-415d-96fd-76d9711b165c",
       "assetGroup": "yas::u::fuel",
-      "currencyId": "yas::u",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "yas::u"
     },
     "0xe8f63fe7ec07c0c00db643a6bf38340fbc2e08ed5fb33da614fdd1026586bc34": {
       "chainId": "fuel",
@@ -8557,7 +8555,10 @@
       "logoURI": "https://verified-assets.fuel.network/images/fbtc.svg",
       "assetGroup": "FBTC",
       "currencyId": "Fire Bitcoin::FBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "function", "name": "Function", "kind": "protocol" }
+      }
     },
     "0x1186afea9affb88809c210e13e2330b5258c2cef04bb8fff5eff372b7bd3f40f": {
       "chainId": "fuel",
@@ -8569,7 +8570,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x9e46f919fbf978f3cad7cd34cca982d5613af63ff8aab6c379e4faa179552958": {
@@ -8582,8 +8584,8 @@
       "assetGroup": "SDAI",
       "currencyId": "Savings Dai::sDAI",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "DAI", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
@@ -8611,8 +8613,8 @@
       "assetGroup": "USDC",
       "currencyId": "USD Coin::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -8640,8 +8642,8 @@
       "assetGroup": "SUSDE",
       "currencyId": "Staked USDe::sUSDe",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -8683,8 +8685,7 @@
       "symbol": "USDF",
       "logoURI": "https://verified-assets.fuel.network/images/USDF.png",
       "assetGroup": "USDF::USDF::fuel",
-      "currencyId": "USDF::USDF",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "USDF::USDF"
     },
     "0x5505d0f58bea82a052bc51d2f67ab82e9735f0a98ca5d064ecb964b8fd30c474": {
       "chainId": "fuel",

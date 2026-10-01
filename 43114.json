@@ -4561,7 +4561,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766",
       "assetGroup": "BUSD",
       "currencyId": "Binance USD::BUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "binance", "name": "Binance", "kind": "cex" }
+      }
     },
     "0xc3048e19e76cb9a3aa9d77d8c03c29fc906e2437": {
       "chainId": "43114",
@@ -4657,8 +4660,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -4974,7 +4977,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/3449/large/tusd.png?1618395665",
       "assetGroup": "TUSD",
       "currencyId": "TrueUSD::TUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "techteryx",
+          "name": "Techteryx",
+          "kind": "institution"
+        }
+      }
     },
     "0x3bd2b1c7ed8d396dbb98ded3aebb41350a5b2339": {
       "chainId": "43114",
@@ -5021,8 +5031,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -5278,8 +5288,8 @@
             }
           ]
         },
-        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
@@ -5297,7 +5307,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -5316,6 +5325,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
     },
@@ -5443,8 +5453,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC::USDC.e",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -5582,6 +5592,11 @@
               "peers": {}
             }
           ]
+        },
+        "issuer": {
+          "id": "ava-labs",
+          "name": "Ava Labs",
+          "kind": "institution"
         }
       }
     },
@@ -5777,8 +5792,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Axelar)::axlUSDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -5811,7 +5826,14 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x323665443CEf804A3b5206103304BD4872EA4253/logo.png",
       "assetGroup": "USDV",
       "currencyId": "USDV::USDV",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "verified-usd",
+          "name": "Verified USD Foundation",
+          "kind": "institution"
+        }
+      }
     },
     "0xe3b3f75f99da4ff26aa867ef70b48f8f6b2d4958": {
       "chainId": "43114",
@@ -6254,8 +6276,17 @@
       "assetGroup": "StableJack aUSD::aUSD",
       "currencyId": "StableJack aUSD::aUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": {
+          "id": "stablejack",
+          "name": "StableJack",
+          "kind": "protocol"
+        }
       }
     },
     "0x214dd1b5cbe543d4189ab39832f1bc1eedebb1d3": {
@@ -6338,7 +6369,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
+        "denomination": "BTC"
       }
     },
     "0x4a5bb433132b7e7f75d6a9a3e4136bb85ce6e4d5": {
@@ -6420,7 +6452,14 @@
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xb2F85b7AB3c2b6f62DF06dE6aE7D09c010a5096E/logo.png",
       "assetGroup": "XSGD::XSGD",
       "currencyId": "XSGD::XSGD",
-      "props": { "stablecoin": { "base": "SGD" } }
+      "props": {
+        "stablecoin": { "base": "SGD" },
+        "issuer": {
+          "id": "straitsx",
+          "name": "StraitsX",
+          "kind": "institution"
+        }
+      }
     },
     "0xdbdd50997361522495ecfe57ebb6850da0e4c699": {
       "chainId": "43114",
@@ -6437,7 +6476,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "balanced", "name": "Balanced", "kind": "protocol" }
       }
     },
     "0x0a10d108e2d81ccc793e37b56206c84bf96ddc57": {
@@ -6470,12 +6510,7 @@
       "assetGroup": "DEUSD",
       "currencyId": "deUSD::deUSD",
       "props": {
-        "risk": {
-          "score": 6,
-          "category": "COMPROMISED",
-          "source": "whitelist"
-        },
-        "stablecoin": { "base": "USD" }
+        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xaeb1fa0853c7c98eab10fcf0ea669ae3d07fbb10": {
@@ -6901,13 +6936,13 @@
       "assetGroup": "Staked avUSD::savUSD",
       "currencyId": "Staked avUSD::savUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "avUSD", "base": "USD" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
@@ -6976,7 +7011,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "yeti", "name": "Yeti Finance", "kind": "protocol" }
       }
     },
     "0xfcc6ce74f4cd7edef0c5429bb99d38a3608043a5": {
@@ -7108,8 +7144,7 @@
       "symbol": "AUSD",
       "logoURI": "https://static.debank.com/image/avax_token/logo_url/0x783c08b5f26e3daf8c4681f3bf49844e425b6393/a9087d4d18f7c514c616aa0e8a50bf88.png",
       "assetGroup": "Avaware USD::AUSD",
-      "currencyId": "Avaware USD::AUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Avaware USD::AUSD"
     },
     "0xd81d45e7635400ddd9c028839e9a9ef479006b28": {
       "chainId": "43114",
@@ -7610,8 +7645,7 @@
       "symbol": "NOTE",
       "logoURI": "https://assets.coingecko.com/coins/images/33726/thumb/Note-Logo-2023.png?1702888132",
       "assetGroup": "Republic Note::NOTE",
-      "currencyId": "Republic Note::NOTE",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Republic Note::NOTE"
     },
     "0x5478b121ceb140f8114e16b16d1752f3b29d514f": {
       "chainId": "43114",
@@ -7908,7 +7942,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -7921,6 +7954,12 @@
               "peers": { "8453": "0x6c672c3612f6b8ad686516b7657f61610f4943ab" }
             }
           ]
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "nereus",
+          "name": "Nereus Finance",
+          "kind": "protocol"
         }
       }
     },
@@ -8635,7 +8674,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "moremoney", "name": "Moremoney", "kind": "protocol" }
       }
     },
     "0xedf647326007e64d94b0ee69743350f3736e392c": {
@@ -8657,7 +8697,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "mountain",
+          "name": "Mountain Protocol",
+          "kind": "institution"
+        }
+      }
     },
     "0x57f5e098cad7a3d1eed53991d4d66c45c9af7812": {
       "chainId": "43114",
@@ -8862,7 +8909,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/29744/thumb/ERN200x200.png?1696528676",
       "assetGroup": "Ethos Reserve Note::ERN",
       "currencyId": "Ethos Reserve Note::ERN",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ethos", "name": "Ethos", "kind": "protocol" }
+      }
     },
     "0x8929e9dbd2785e3ba16175e596cdd61520fee0d1": {
       "chainId": "43114",
@@ -8902,8 +8952,7 @@
       "symbol": "CDT",
       "logoURI": "https://assets.coingecko.com/coins/images/20370/thumb/token-200x200_%281%29.png?1696519781",
       "assetGroup": "CheckDot::CDT",
-      "currencyId": "CheckDot::CDT",
-      "props": { "stablecoin": {} }
+      "currencyId": "CheckDot::CDT"
     },
     "0x590eb2920486486c2d9bb3eb651f73b81df87bcf": {
       "chainId": "43114",
@@ -8945,8 +8994,13 @@
       "assetGroup": "VNX Swiss Franc::VCHF",
       "currencyId": "VNX Swiss Franc::VCHF",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "CHF" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
       }
     },
     "0x431d5dff03120afa4bdf332c61a6e1766ef37bdb": {
@@ -8968,7 +9022,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/28913/thumb/euroe-200x200-round.png?1696527889",
       "assetGroup": "EUROe Stablecoin::EUROE",
       "currencyId": "EUROe Stablecoin::EUROE",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": {
+          "id": "membrane",
+          "name": "Membrane Finance",
+          "kind": "institution"
+        }
+      }
     },
     "0x644192291cc835a93d6330b24ea5f5fedd0eef9e": {
       "chainId": "43114",
@@ -9020,8 +9081,13 @@
       "assetGroup": "VNX EURO::VEUR",
       "currencyId": "VNX EURO::VEUR",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
       }
     },
     "0xc685e8eddc9f078666794cbfcd8d8351bac404ef": {
@@ -9349,8 +9415,13 @@
       "assetGroup": "BiLira::TRYB",
       "currencyId": "BiLira::TRYB",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "TRY" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "bilira", "name": "BiLira", "kind": "institution" }
       }
     },
     "0xb44a9b6905af7c801311e8f4e76932ee959c663c": {
@@ -9392,7 +9463,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/25380/thumb/UUSD.jpg?1696524513",
       "assetGroup": "USDD",
       "currencyId": "USDD::USDD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "usdd", "name": "USDD", "kind": "protocol" }
+      }
     },
     "0x73178fceb736a9d6c1a9ef1fe413f09cba2d4a68": {
       "chainId": "43114",
@@ -9655,8 +9729,13 @@
       "assetGroup": "Forte AUD::AUDF",
       "currencyId": "Forte AUD::AUDF",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "AUD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "forte", "name": "Forte", "kind": "institution" }
       }
     },
     "0xab236ed82a0184ab754534f3952b48408468c09b": {
@@ -9677,8 +9756,7 @@
       "symbol": "USD3",
       "logoURI": "https://assets.coingecko.com/coins/images/39865/thumb/2024-04-stable_com-usd3_coin.png?1724379520",
       "assetGroup": "Stable com USD3::USD3",
-      "currencyId": "Stable com USD3::USD3",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Stable com USD3::USD3"
     },
     "0x39fc9e94caeacb435842fadedecb783589f50f5f": {
       "chainId": "43114",
@@ -9759,7 +9837,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33428/thumb/GYD-gradient_resized_transparent.png?1702316822",
       "assetGroup": "Gyroscope GYD::GYD",
       "currencyId": "Gyroscope GYD::GYD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "gyroscope", "name": "Gyroscope", "kind": "protocol" }
+      }
     },
     "0xb24ca28d4e2742907115fecda335b40dbda07a4c": {
       "chainId": "43114",
@@ -9771,8 +9852,8 @@
       "assetGroup": "USDC",
       "currencyId": "Bridged USDC (Wormhole)::USDCET",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -10029,7 +10110,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::frxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -10043,6 +10123,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -10125,7 +10206,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54829/thumb/zoth_32.webp?1741933336",
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "zoth", "name": "Zoth", "kind": "protocol" }
+      }
     },
     "0x49f519002eeced6902f24c0be72b6d898e4d27fc": {
       "chainId": "43114",
@@ -10753,7 +10837,11 @@
       "symbol": "SolvBTC.AVAX",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x6c7d727a0432d03351678f91faa1126a5b871df5.png",
       "assetGroup": "SolvBTC Avalanche::SolvBTC.AVAX",
-      "currencyId": "SolvBTC Avalanche::SolvBTC.AVAX"
+      "currencyId": "SolvBTC Avalanche::SolvBTC.AVAX",
+      "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
+      }
     },
     "0x5030183b3dd0105d69d7d45595c120fc4b542ec3": {
       "chainId": "43114",
@@ -10820,7 +10908,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
       }
     },
     "0x580d5e1399157fd0d58218b7a514b60974f2ab01": {
@@ -10834,7 +10923,8 @@
       "currencyId": "Staked UTY::yUTY",
       "props": {
         "savings": { "underlying": "UTY", "base": "USD" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
       }
     },
     "0xe80772eaf6e2e18b651f160bc9158b2a5cafca65": {
@@ -10847,12 +10937,12 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 5,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
     },
@@ -11663,8 +11753,8 @@
       "assetGroup": "LUSD Stablecoin::LUSD",
       "currencyId": "LUSD Stablecoin::LUSD",
       "props": {
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0x80d18b1c9ab0c9b5d6a6d5173575417457d00a12": {
@@ -12026,7 +12116,10 @@
       "logoURI": "https://static.debank.com/image/avax_token/logo_url/0xcfc37a6ab183dd4aed08c204d1c2773c0b1bdf46/c8b883302e354571ab0bbfcf039e85b8.png",
       "assetGroup": "nUSD::nUSD",
       "currencyId": "nUSD::nUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "synapse", "name": "Synapse", "kind": "protocol" }
+      }
     },
     "0x5525ee69bc1e354b356864187de486fab5ad67d7": {
       "chainId": "43114",
@@ -12216,7 +12309,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
     "0xa60c5bebccdb9738f63891bbdd7fec3e762f9098": {
@@ -12267,7 +12361,11 @@
       "symbol": "frxETH",
       "logoURI": "https://assets.coingecko.com/coins/images/28284/standard/frxETH_icon.png",
       "assetGroup": "frxETH::frxETH",
-      "currencyId": "frxETH::frxETH"
+      "currencyId": "frxETH::frxETH",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
+      }
     },
     "0x180af87b47bf272b2df59dccf2d76a6eafa625bf": {
       "chainId": "43114",
@@ -12279,7 +12377,6 @@
       "assetGroup": "Re Protocol reUSD::REUSD",
       "currencyId": "Re Protocol reUSD::REUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
@@ -12307,6 +12404,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
       }
     },
@@ -12668,7 +12766,6 @@
       "assetGroup": "Staked Frax USD::sfrxUSD",
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30106,
@@ -12683,6 +12780,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -12877,8 +12975,8 @@
       "assetGroup": "BOLD Stablecoin::BOLD",
       "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0xf611aeb5013fd2c0511c9cd55c7dc5c1140741a6": {
@@ -13019,8 +13117,13 @@
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
     },
     "0x9b9fd410d5f01a6a60acf4678a5a99d8027fa5a7": {
@@ -13053,8 +13156,13 @@
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "dforce", "name": "dForce", "kind": "protocol" }
       }
     },
     "0xcd94a87696fac69edae3a70fe5725307ae1c43f6": {
@@ -13256,12 +13364,12 @@
       "assetGroup": "Frankencoin::ZCHF",
       "currencyId": "Frankencoin::ZCHF",
       "props": {
-        "stablecoin": { "base": "CHF" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "CHF" },
         "issuer": {
           "id": "frankencoin",
           "name": "Frankencoin",
@@ -13420,7 +13528,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "wyoming",
+          "name": "Wyoming Stable Token Commission",
+          "kind": "institution"
+        }
       }
     },
     "0x8835a2f66a7aaccb297cb985831a616b75e2e16c": {
@@ -13450,7 +13563,12 @@
             }
           ]
         },
-        "stablecoin": { "base": "EUR" }
+        "stablecoin": { "base": "EUR" },
+        "issuer": {
+          "id": "schuman",
+          "name": "Schuman Financial",
+          "kind": "institution"
+        }
       }
     },
     "0xf9fb20b8e097904f0ab7d12e9dbee88f2dcd0f16": {
@@ -13463,7 +13581,6 @@
       "assetGroup": "Stable Coin::SBC",
       "currencyId": "Stable Coin::SBC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 1,
           "category": "STABLECOIN",
@@ -13488,7 +13605,9 @@
               }
             }
           ]
-        }
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "brale", "name": "Brale", "kind": "institution" }
       }
     },
     "0xeec951bfdeb358371a19512c6c33cdd840d47db0": {
@@ -13556,7 +13675,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30106,
@@ -13571,6 +13689,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -13620,7 +13739,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -13634,6 +13752,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
     },
@@ -13656,7 +13775,14 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x94f9bb5c972285728dcee7eaece48bec2ff341ce.png",
       "assetGroup": "Staked Stream USD::xUSD",
       "currencyId": "Staked Stream USD::xUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "stream",
+          "name": "Stream Finance",
+          "kind": "protocol"
+        }
+      }
     },
     "0x6eaf19b2fc24552925db245f9ff613157a7dbb4c": {
       "chainId": "43114",
@@ -13734,7 +13860,6 @@
       "assetGroup": "Aegis YUSD::YUSD",
       "currencyId": "Aegis YUSD::YUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -13756,6 +13881,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
       }
     },
@@ -14050,8 +14176,13 @@
       "assetGroup": "JPY Coin::JPYC",
       "currencyId": "JPY Coin::JPYC",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "JPY" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "jpyc", "name": "JPYC", "kind": "institution" }
       }
     },
     "0x34a1d2105dd1b658a48ead516a9ce3032082799c": {
@@ -14103,7 +14234,6 @@
       "assetGroup": "Tokenised GBP::TGBP",
       "currencyId": "Tokenised GBP::TGBP",
       "props": {
-        "stablecoin": { "base": "GBP" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
@@ -14120,6 +14250,12 @@
               "peers": { "100": "0x1f34490f8e8e776ffc547b39b864364035eaf44f" }
             }
           ]
+        },
+        "stablecoin": { "base": "GBP" },
+        "issuer": {
+          "id": "bcp",
+          "name": "BCP Technologies",
+          "kind": "institution"
         }
       }
     },
@@ -14131,8 +14267,7 @@
       "symbol": "USDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xffe8b2295cef70290819a8193834cc7900bcef5f.png",
       "assetGroup": "Gami USDC::USDC",
-      "currencyId": "Gami USDC::USDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Gami USDC::USDC"
     },
     "0x5dd1a7a369e8273371d2dbf9d83356057088082c": {
       "chainId": "43114",
@@ -14174,8 +14309,17 @@
       "assetGroup": "Gaming XP USD::XPUSD",
       "currencyId": "Gaming XP USD::XPUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": {
+          "id": "growth-protocol",
+          "name": "The Growth Protocol",
+          "kind": "institution"
+        }
       }
     },
     "0xc53ac24320e3a54c7211e4993c8095078a0cb3cf": {
@@ -14310,8 +14454,7 @@
       "address": "0x24dd05a8fd6c75c16eba113ba5ca334811b3e055",
       "symbol": "mUSD",
       "assetGroup": "Mock USD Stablecoin::mUSD",
-      "currencyId": "Mock USD Stablecoin::mUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Mock USD Stablecoin::mUSD"
     },
     "0x311ad4977655e781be7ffe3cf02a34102d1a06b8": {
       "chainId": "43114",
@@ -14396,13 +14539,13 @@
       "assetGroup": "YieldFi yUSD::yUSD",
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
@@ -14425,13 +14568,13 @@
       "assetGroup": "Staked YUSD::sYUSD",
       "currencyId": "Staked YUSD::sYUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "YUSD", "base": "USD" },
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
       }
     },
@@ -14546,8 +14689,7 @@
       "symbol": "EVAUSDT",
       "logoURI": "https://assets.coingecko.com/coins/images/102173286/thumb/token-usdt.png?1778830738",
       "assetGroup": "evaUSDT::EVAUSDT",
-      "currencyId": "evaUSDT::EVAUSDT",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "evaUSDT::EVAUSDT"
     },
     "0x741bd193b6b40f8703d2e116fd1965421f290f58": {
       "chainId": "43114",
@@ -14557,8 +14699,7 @@
       "symbol": "EVAUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/102173288/thumb/token-evaUSDC.png?1778830856",
       "assetGroup": "evaUSDC::EVAUSDC",
-      "currencyId": "evaUSDC::EVAUSDC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "evaUSDC::EVAUSDC"
     },
     "0x038dbe3d967bb8389190446dacdfe7b95b44f73d": {
       "chainId": "43114",
@@ -14829,7 +14970,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66299/thumb/u.png?1775549867",
       "assetGroup": "Unity::UTY::43114::0",
       "currencyId": "Unity::UTY",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
+      }
     },
     "0x390ceed555905ec225da330a188ea04e85570f00": {
       "chainId": "43114",

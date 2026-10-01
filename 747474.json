@@ -304,7 +304,6 @@
       "currencyId": "Vault Bridge USDC::vbUSDC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
         "oft": {
           "eid": 30375,
@@ -319,6 +318,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -333,7 +333,6 @@
       "currencyId": "Vault Bridge USDT::vbUSDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30375,
           "routes": [
@@ -347,6 +346,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
@@ -388,12 +388,12 @@
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "risk": {
           "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
     },
@@ -541,8 +541,8 @@
       "assetGroup": "YieldFi yUSD::yUSD",
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
@@ -556,8 +556,8 @@
       "assetGroup": "Staked YUSD::sYUSD",
       "currencyId": "Staked YUSD::sYUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "YUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
       }
     },
@@ -644,8 +644,7 @@
           "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        },
-        "stablecoin": { "base": "USD" }
+        }
       }
     },
     "0xca52d08737e6af8763a2bf6034b3b03868f24dda": {
@@ -664,7 +663,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dtrinity", "name": "dTRINITY", "kind": "protocol" }
       }
     },
     "0x64445f0aecc51e94ad52d8ac56b7190e764e561a": {
@@ -703,7 +703,6 @@
       "assetGroup": "FRXUSD",
       "currencyId": "Frax USD::FRXUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "oft": {
           "eid": 30375,
           "routes": [
@@ -717,6 +716,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -730,7 +730,6 @@
       "assetGroup": "Staked Frax USD::sfrxUSD",
       "currencyId": "Staked Frax USD::sfrxUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "frxUSD", "base": "USD" },
         "oft": {
           "eid": 30375,
@@ -745,6 +744,7 @@
             }
           ]
         },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -812,7 +812,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/siusd.svg",
       "assetGroup": "Staked InfiniFi USD::siUSD",
       "currencyId": "Staked InfiniFi USD::siUSD",
-      "props": { "savings": { "underlying": "iUSD", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "iUSD", "base": "USD" },
+        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
+      }
     },
     "0x1b6e79f9da388387ed67a89cba06948e78d16796": {
       "chainId": "747474",
@@ -875,7 +878,8 @@
       "currencyId": "YieldFi vyUSD::vyUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
     },
     "0xfcff2086192bd2f134b9bfa3acc4e7646b697d4b": {
@@ -887,7 +891,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/67386/thumb/y.png?1775550186",
       "assetGroup": "Staked UTY::yUTY",
       "currencyId": "Staked UTY::yUTY",
-      "props": { "savings": { "underlying": "UTY", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "UTY", "base": "USD" },
+        "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
+      }
     },
     "0x0ef68c1ab3c83cf11f9546faba385e8a1bd38d74": {
       "chainId": "747474",
@@ -932,7 +939,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/66299/thumb/u.png?1775549867",
       "assetGroup": "Unity::UTY",
       "currencyId": "Unity::UTY",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "747474",

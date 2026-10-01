@@ -464,8 +464,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -622,8 +622,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "DAI", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
@@ -662,8 +662,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -686,7 +686,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/40062/thumb/IconGreen400.png?1725459580",
       "assetGroup": "BRLA",
       "currencyId": "BRLA Digital BRLA::BRLA",
-      "props": { "stablecoin": { "base": "REAL" } }
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": {
+          "id": "brla",
+          "name": "BRLA Digital",
+          "kind": "institution"
+        }
+      }
     },
     "0x1509706a6c66ca549ff0cb464de88231ddbe213b": {
       "chainId": "100",
@@ -1097,8 +1104,7 @@
       "symbol": "REUSD",
       "logoURI": "https://rmm.realtoken.network/icons/tokens/realt-token.svg",
       "assetGroup": "Realtoken Ecosystem USD::REUSD",
-      "currencyId": "Realtoken Ecosystem USD::REUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Realtoken Ecosystem USD::REUSD"
     },
     "0xb90d6bec20993be5d72a5ab353343f7a0281f158": {
       "chainId": "100",
@@ -1159,7 +1165,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33428/thumb/GYD-gradient_resized_transparent.png?1702316822",
       "assetGroup": "Gyroscope GYD::GYD",
       "currencyId": "Gyroscope GYD::GYD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "gyroscope", "name": "Gyroscope", "kind": "protocol" }
+      }
     },
     "0x256eb8a51f382650b2a1e946b8811953640ee47d": {
       "chainId": "100",
@@ -1230,7 +1239,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/17277/thumb/WoZ8rruL_400x400.png?1696516831",
       "assetGroup": "JPYC",
       "currencyId": "JPY Coin v1::JPYC",
-      "props": { "stablecoin": { "base": "JPY" } }
+      "props": {
+        "stablecoin": { "base": "JPY" },
+        "issuer": { "id": "jpyc", "name": "JPYC", "kind": "institution" }
+      }
     },
     "0xeeeeeb57642040be42185f49c52f7e9b38f8eeee": {
       "chainId": "100",
@@ -1302,7 +1314,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54303/thumb/eure.jpg?1739167959",
       "assetGroup": "Monerium EUR emoney::EURE::100::0",
       "currencyId": "Monerium EUR emoney::EURE",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": {
+          "id": "monerium",
+          "name": "Monerium",
+          "kind": "institution"
+        }
+      }
     },
     "0x7e8101a1c322d394b3961498c7d40d2dfa94c392": {
       "chainId": "100",
@@ -1367,7 +1386,12 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "breadchain",
+          "name": "Breadchain",
+          "kind": "protocol"
+        }
       }
     },
     "0x41211bba6d37f5a74b22e667533f080c7c7f3f13": {
@@ -5453,7 +5477,14 @@
       "logoURI": "https://tokens-data.1inch.io/images/100/0x59d9356e565ab3a36dd77763fc0d87feaf85508c_0x872a73a1cc49f0882a3a25674ae49f8cd963821ff12ed543ce8e9e15df0243d0.png",
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "mountain",
+          "name": "Mountain Protocol",
+          "kind": "institution"
+        }
+      }
     },
     "0x915742cb77124761015f63e079089ad0eff1b57c": {
       "chainId": "100",
@@ -6126,8 +6157,7 @@
       "symbol": "HUSD",
       "logoURI": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0x1e37e5b504f7773460d6eb0e24d2e7c223b66ec7/logo.jpg",
       "assetGroup": "HUSD on Gnosis::HUSD",
-      "currencyId": "HUSD on Gnosis::HUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "HUSD on Gnosis::HUSD"
     },
     "0x6052245ec516d0f653794052d24efca8a39fcbc3": {
       "chainId": "100",
@@ -6812,8 +6842,7 @@
       "address": "0xb1950fb2c9c0cbc8553578c67db52aa110a93393",
       "symbol": "sUSD",
       "assetGroup": "Synthetix USD on Gnosis::sUSD",
-      "currencyId": "Synthetix USD on Gnosis::sUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Synthetix USD on Gnosis::sUSD"
     },
     "0xeaacce3e5bcc10fb32c2553f8d6fc4c3888ffdad": {
       "chainId": "100",
@@ -6910,7 +6939,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/3449/large/tusd.png?1618395665",
       "assetGroup": "TUSD",
       "currencyId": "TrueUSD on Gnosis::TUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "techteryx",
+          "name": "Techteryx",
+          "kind": "institution"
+        }
+      }
     },
     "0xeb2bcabb0cdc099978a74cfe4ab4d45e7e677a45": {
       "chainId": "100",
@@ -6958,8 +6994,7 @@
       "symbol": "USDP",
       "logoURI": "https://static.debank.com/image/xdai_token/logo_url/0xfe7ed09c4956f7cdb54ec4ffcb9818db2d7025b8/a0577db751d5f0598b65930fb4a0176d.png",
       "assetGroup": "USDP Stablecoin on Gnosis::USDP",
-      "currencyId": "USDP Stablecoin on Gnosis::USDP",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "USDP Stablecoin on Gnosis::USDP"
     },
     "0x0939a7c3f8d37c1ce67fada4963ae7e0bd112ff3": {
       "chainId": "100",
@@ -7124,7 +7159,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766",
       "assetGroup": "BUSD",
       "currencyId": "Binance USD on xDai::BUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
+      }
     },
     "0xd7a28aa9c470e7e9d8c676bcd5dd2f40c5683afa": {
       "chainId": "100",
@@ -7243,8 +7281,8 @@
       "assetGroup": "SDAI",
       "currencyId": "Savings Dai::sDAI",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "DAI", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
@@ -7485,8 +7523,7 @@
       "address": "0x7300aafc0ef0d47daeb850f8b6a1931b40acab33",
       "symbol": "mUSD",
       "assetGroup": "mStable USD on xDai::mUSD",
-      "currencyId": "mStable USD on xDai::mUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "mStable USD on xDai::mUSD"
     },
     "0x783514141beb02828858a086c9fada6d5d1912d5": {
       "chainId": "100",
@@ -7583,8 +7620,8 @@
       "assetGroup": "FRAX",
       "currencyId": "Frax on xDai::FRAX",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -7691,8 +7728,7 @@
       "symbol": "SBC",
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sbc.png",
       "assetGroup": "STREETBASED Community Token::SBC",
-      "currencyId": "STREETBASED Community Token::SBC",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "STREETBASED Community Token::SBC"
     },
     "0x481d6104761442f162d1f7ac3dc6f98896e7a4ef": {
       "chainId": "100",
@@ -7740,7 +7776,10 @@
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/USDp.svg",
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
+      }
     },
     "0xd4dd9e2f021bb459d5a5f6c24c12fe09c5d45553": {
       "chainId": "100",
@@ -7857,7 +7896,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70846/thumb/world_logos_wars_logo_3.png?1764176749",
       "assetGroup": "Argentine Peso::WARS",
       "currencyId": "Argentine Peso::WARS",
-      "props": { "stablecoin": { "base": "ARS" } }
+      "props": {
+        "stablecoin": { "base": "ARS" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x337e7456b420bd3481e7fa61fa9850343d610d34": {
       "chainId": "100",
@@ -7868,7 +7910,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70880/thumb/wmxn_logo_1.png?1764392404",
       "assetGroup": "Mexican Peso::WMXN",
       "currencyId": "Mexican Peso::WMXN",
-      "props": { "stablecoin": { "base": "MXN" } }
+      "props": {
+        "stablecoin": { "base": "MXN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0": {
       "chainId": "100",
@@ -7879,7 +7924,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70862/thumb/wbrl.png?1764272108",
       "assetGroup": "Brazilian real::WBRL",
       "currencyId": "Brazilian real::WBRL",
-      "props": { "stablecoin": { "base": "REAL" } }
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe": {
       "chainId": "100",
@@ -7890,7 +7938,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70975/thumb/wpen_logo_1.png?1764954695",
       "assetGroup": "Peruvian Sol::WPEN",
       "currencyId": "Peruvian Sol::WPEN",
-      "props": { "stablecoin": { "base": "PEN" } }
+      "props": {
+        "stablecoin": { "base": "PEN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x8a1d45e102e886510e891d2ec656a708991e2d76": {
       "chainId": "100",
@@ -7901,7 +7952,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70887/thumb/wcop_logo_1.png?1764394538",
       "assetGroup": "Colombian Peso::WCOP",
       "currencyId": "Colombian Peso::WCOP",
-      "props": { "stablecoin": { "base": "COP" } }
+      "props": {
+        "stablecoin": { "base": "COP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x61d450a098b6a7f69fc4b98ce68198fe59768651": {
       "chainId": "100",
@@ -7912,7 +7966,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70976/thumb/wclp_logo_1.png?1764954870",
       "assetGroup": "Chilean Peso::WCLP",
       "currencyId": "Chilean Peso::WCLP",
-      "props": { "stablecoin": { "base": "CLP" } }
+      "props": {
+        "stablecoin": { "base": "CLP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x1f34490f8e8e776ffc547b39b864364035eaf44f": {
       "chainId": "100",
@@ -7923,7 +7980,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70647/thumb/tgbp-square.png?1762953800",
       "assetGroup": "Tokenised GBP::TGBP",
       "currencyId": "Tokenised GBP::TGBP",
-      "props": { "stablecoin": { "base": "GBP" } }
+      "props": {
+        "stablecoin": { "base": "GBP" },
+        "issuer": {
+          "id": "bcp",
+          "name": "BCP Technologies",
+          "kind": "institution"
+        }
+      }
     },
     "0x8e34bfec4f6eb781f9743d9b4af99cd23f9b7053": {
       "chainId": "100",

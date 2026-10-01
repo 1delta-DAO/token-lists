@@ -23,7 +23,30 @@ const ETH_GROUPS = ['ETH', 'WETH'] as const
 
 /** assetGroup → denomination, for canonical base BTC tokens (wrapped/bridged
  *  BTC that is ~1:1 BTC and NOT a staking/yield derivative). */
-const BTC_GROUPS = ['WBTC', 'CBBTC', 'TBTC', 'FBTC', 'BTC'] as const
+const BTC_GROUPS = [
+  'WBTC',
+  'CBBTC',
+  'TBTC',
+  'FBTC',
+  'BTC',
+  // Pre-alias / per-chain spellings of the canonical wrappers above, and the 1:1
+  // custodial or bridge wrappers that carried no money at all (each also has a desk
+  // in issuer/issuerAssets.ts, asserted by `npm run issuer:check`).
+  'tBTC::tBTC',
+  'tBTC::TBTC',
+  'Optimism tBTC v2::tBTC',
+  'Fire Bitcoin::FBTC',
+  'Function ƒBTC::FBTC',
+  'Wrapped BTC::WBTC',
+  'BTCB',
+  'SOLVBTC',
+  'Solv Protocol BTC::SOLVBTC',
+  'ENZOBTC',
+  'KBTC',
+  'M-BTC',
+  'Bitcoin::BTC.b',
+  'eBTC::EBTC',
+] as const
 
 /** assetGroup → denomination, for FXRP — Flare's 1:1 FAsset representation of
  *  XRP, the canonical XRP base on the chains Flare serves. stXRP is its LST

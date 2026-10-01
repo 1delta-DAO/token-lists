@@ -54,8 +54,8 @@
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -128,8 +128,8 @@
       "assetGroup": "EURC::EURC",
       "currencyId": "EURC::EURC",
       "props": {
-        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" },
-        "stablecoin": { "base": "EUR" }
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d": {
@@ -141,7 +141,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/wars.svg",
       "assetGroup": "Peso Argentino::wARS",
       "currencyId": "Peso Argentino::wARS",
-      "props": { "stablecoin": { "base": "ARS" } }
+      "props": {
+        "stablecoin": { "base": "ARS" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x0fe75cae44e409af8c9e631985d6b3de8e1138de": {
       "chainId": "480",

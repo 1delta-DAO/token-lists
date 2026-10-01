@@ -26,7 +26,7 @@ import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
 import { lookupLstGroup } from './lst/lstGroupMap'
 import { lookupDenomination } from './denomination/denominationMap'
-import { lookupIssuer, lookupIssuerExposures } from './issuer/issuerMap'
+import { lookupIssuer, lookupIssuerByAddress, lookupIssuerExposures } from './issuer/issuerMap'
 import { wrapperIssuer } from './issuer/wrappers'
 // @ts-ignore-next-line
 import * as path from 'path'
@@ -91,8 +91,7 @@ const isImpostor = makeImpostorCheck()
  * borrows a real ticker (`Test EURS::EURS`, `Prepaid JPY Coin::JPYC`) must not
  * inherit the real asset's fiat base through its shared symbol.
  */
-const isTestToken = (name: string | undefined): boolean =>
-  !!name && /\b(tests?|prepaid|testnet)\b/i.test(name)
+const isTestToken = (name: string | undefined): boolean => !!name && /\b(tests?|prepaid|testnet)\b/i.test(name)
 
 /**
  * External-list fetch cache. Every fresh run writes each fetched list here; running with
@@ -332,6 +331,17 @@ async function readTokenLists(): Promise<{
 
                     let tokenProps: TokenProps = tokenInList?.props ?? {}
 
+                    // The 1delta lists are LAST RUN'S OUTPUT. The group-keyed overlays below
+                    // (stablecoin, issuer, issuerExposures) are re-derived from today's maps on
+                    // every run and only ever fill a missing key — so a seeded copy would make a
+                    // published label permanent: an overlay fix (the bare-ticker stablecoin
+                    // fallback that tagged Ethernity ERN as USD) or a removed desk could never
+                    // take effect. Drop them from the seed; nothing else sets them.
+                    if (is1delta && tokenProps) {
+                      const { stablecoin: _s, issuer: _i, issuerExposures: _e, ...rest } = tokenProps
+                      tokenProps = rest
+                    }
+
                     if (permit) tokenProps = { ...tokenProps, permit }
 
                     if (permitMaps[chainId]) {
@@ -362,12 +372,13 @@ async function readTokenLists(): Promise<{
 
                     // Stablecoin overlay (from risk-data). Keyed by assetGroup since the fiat
                     // base is chain-independent — covers every deployment of the group. Falls
-                    // back to symbol for the fragmented group variants (collision suffix, PoS
-                    // bridge, rename); test/prepaid deployments are excluded.
+                    // back to the fragmented group variants (collision suffix, PoS bridge,
+                    // rename) and to the ticker only with identity evidence (name/address);
+                    // test/prepaid deployments are excluded.
                     const stablecoin =
                       impostor || isTestToken(tokenInList.name)
                         ? undefined
-                        : lookupStablecoin(assetGroup, tokenInList.symbol)
+                        : lookupStablecoin(assetGroup, tokenInList.symbol, tokenInList.name, chainId, lcAddress)
                     if (stablecoin && !tokenProps.stablecoin) tokenProps = { ...tokenProps, stablecoin }
 
                     // Savings overlay (yield-bearing stablecoin wrappers, from risk-data). Keyed by
@@ -396,7 +407,13 @@ async function readTokenLists(): Promise<{
                     // walked from the wrapper's hop. A PT over sUSDe is
                     // `pendle` + `ethena`; before both existed it matched
                     // NEITHER filter.
-                    const issuer = impostor ? undefined : (lookupIssuer(assetGroup) ?? wrapperIssuer(tokenProps))
+                    // A per-deployment line (issuerAssets.ts ISSUER_BY_ADDRESS) wins over the
+                    // group: it exists only where one group holds several desks' tokens.
+                    const issuer = impostor
+                      ? undefined
+                      : (lookupIssuerByAddress(chainId, lcAddress) ??
+                        lookupIssuer(assetGroup) ??
+                        wrapperIssuer(tokenProps))
                     if (issuer && !tokenProps.issuer) tokenProps = { ...tokenProps, issuer }
 
                     // A LIST: one entry for every desk the wrapper's walk

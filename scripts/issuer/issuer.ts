@@ -5,7 +5,7 @@ import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
-import { ISSUER_CURATED } from './issuerAssets'
+import { ISSUER_BY_ADDRESS, ISSUER_CURATED } from './issuerAssets'
 import { WRAPPER_ISSUERS, wrapperHop } from './wrappers'
 import { STABLECOIN_MAP } from '../stablecoin/stablecoinMap'
 
@@ -240,7 +240,8 @@ function resolveExposures(
         const node = byAddr.get(key)
         if (!node) break
         hops++
-        const desk = issuers[node.group]
+        // A per-deployment desk (split groups like BUSD) beats the group's.
+        const desk = ISSUER_BY_ADDRESS[key] ?? issuers[node.group]
         if (desk) {
           hit = { ...desk, hops }
           break

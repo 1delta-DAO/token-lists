@@ -187,8 +187,8 @@
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
         "permit": { "type": 1, "version": "2" },
-        "stablecoin": { "base": "USD" },
         "denomination": "USDC",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
@@ -201,7 +201,10 @@
       "logoURI": "https://izumi-finance.oss-ap-southeast-1.aliyuncs.com/tokens/vusd.png",
       "assetGroup": "Vesper V-Dollar (Legacy)::VUSD.L",
       "currencyId": "Vesper V-Dollar (Legacy)::VUSD.L",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "vesper", "name": "Vesper", "kind": "protocol" }
+      }
     },
     "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e": {
       "chainId": "43111",
@@ -302,7 +305,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
+        "denomination": "BTC"
       }
     },
     "0x1596be338b999e2376675c908168a7548c8b0525": {
@@ -399,7 +403,15 @@
       "symbol": "M-BTC",
       "logoURI": "https://assets.coingecko.com/coins/images/36566/standard/photo_2024-03-25_22-04-42.jpg?1711936162",
       "assetGroup": "M-BTC",
-      "currencyId": "Merlin BTC::M-BTC"
+      "currencyId": "Merlin BTC::M-BTC",
+      "props": {
+        "issuer": {
+          "id": "merlin",
+          "name": "Merlin Chain",
+          "kind": "protocol"
+        },
+        "denomination": "BTC"
+      }
     },
     "0x12b6e6fc45f81cda81d2656b974e8190e4ab8d93": {
       "chainId": "43111",
@@ -410,7 +422,10 @@
       "logoURI": "https://icecreamswap-assets.s3.amazonaws.com/token/60808/0xBBa2eF945D523C4e2608C9E1214C2Cc64D4fc2e2.png",
       "assetGroup": "TBTC",
       "currencyId": "tBTC v2::tBTC",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
+      }
     },
     "0xf9775085d726e782e83585033b58606f7731ab18": {
       "chainId": "43111",
@@ -422,6 +437,7 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -494,7 +510,10 @@
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_48/d_unknown.png/tokens/43111/0x3EA24E3727a85A479E29E02Cc70e792936FbBcaD.jpg",
       "assetGroup": "Metronome Synth USD::msUSD",
       "currencyId": "Metronome Synth USD::msUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "metronome", "name": "Metronome", "kind": "protocol" }
+      }
     },
     "0x1c22531aa9747d76fff8f0a43b37954ca67d28e0": {
       "chainId": "43111",
@@ -544,8 +563,8 @@
             }
           ]
         },
-        "issuer": { "id": "river", "name": "River", "kind": "protocol" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "river", "name": "River", "kind": "protocol" }
       }
     },
     "0x8bf591eae535f93a242d5a954d3cde648b48a5a8": {
@@ -632,8 +651,8 @@
       "assetGroup": "FRAX",
       "currencyId": "Frax::FRAX",
       "props": {
-        "stablecoin": { "base": "USD" },
         "denomination": "FRAX",
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -810,8 +829,7 @@
       "symbol": "VUSD",
       "logoURI": "https://static.vetro.org/brand/tokens/VUSD/vetro-token-VUSD.png",
       "assetGroup": "VUSD",
-      "currencyId": "Vetro USD::VUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Vetro USD::VUSD"
     },
     "0xfe875cc86cc6bc2e93ab330d6b2c408c3cd79710": {
       "chainId": "43111",
@@ -821,8 +839,7 @@
       "symbol": "sVUSD",
       "logoURI": "https://static.vetro.org/brand/tokens/sVUSD-VUSDx/vetro-token-sVUSD-VUSDx.png",
       "assetGroup": "SVUSD",
-      "currencyId": "Staked Vetro USD::sVUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "Staked Vetro USD::sVUSD"
     },
     "0xff16e26b7ffcf24c378d57df536dc5ec104a7de4": {
       "chainId": "43111",
