@@ -6,6 +6,7 @@ import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
 import { ISSUER_CURATED } from './issuerAssets'
+import { aliasAssetGroup } from '../utils/data/assetGroupUnifier'
 
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -29,9 +30,16 @@ function loadSnapshot(): IssuerGroupMap {
 
 export const ISSUER_MAP: IssuerGroupMap = { ...loadSnapshot(), ...ISSUER_CURATED }
 
-/** Lookup a token's issuer by its assetGroup. */
+/**
+ * Lookup a token's issuer by its assetGroup.
+ *
+ * The generator calls this on the PRE-alias group; `GROUP_ALIAS` only ever
+ * folds same-asset variants, so falling back to the group it folds INTO is
+ * safe and closes the pre-alias trap for keys the snapshot's `Name::SYMBOL`
+ * expansion cannot see (e.g. `USD3::USD3` -> `3Jane USD3::USD3`).
+ */
 export function lookupIssuer(assetGroup: string): IssuerProps | undefined {
-  return ISSUER_MAP[assetGroup]
+  return ISSUER_MAP[assetGroup] ?? ISSUER_MAP[aliasAssetGroup(assetGroup)]
 }
 
 /**
@@ -56,6 +64,8 @@ export const ISSUER_EXPOSURE_MAP: IssuerExposureGroupMap = loadExposures()
 
 /** Lookup the desks a wrapper's underlying resolves to, by the WRAPPER's assetGroup. */
 export function lookupIssuerExposures(assetGroup: string): IssuerExposure[] | undefined {
-  const hit = ISSUER_EXPOSURE_MAP[assetGroup]
+  // Same pre-alias fallback as lookupIssuer: the snapshot is keyed by the
+  // omni-list's (post-alias) group.
+  const hit = ISSUER_EXPOSURE_MAP[assetGroup] ?? ISSUER_EXPOSURE_MAP[aliasAssetGroup(assetGroup)]
   return hit && hit.length > 0 ? hit : undefined
 }

@@ -862,7 +862,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/19479/thumb/agEUR-4.png?1710726218",
       "assetGroup": "EURA",
       "currencyId": "EURA::EURA",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
+      }
     },
     "0x7ecf26cd9a36990b8ea477853663092333f59979": {
       "chainId": "100",
@@ -940,7 +943,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
     "0xd0dd6cef72143e22cced4867eb0d5f2328715533": {
@@ -1081,7 +1085,8 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
-        "savings": { "underlying": "EURA", "base": "EUR" }
+        "savings": { "underlying": "EURA", "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
     "0x3390742ac0dce14ea6fcbd5ae02e2303c5d62ad9": {
@@ -1092,7 +1097,8 @@
       "symbol": "REUSD",
       "logoURI": "https://rmm.realtoken.network/icons/tokens/realt-token.svg",
       "assetGroup": "Realtoken Ecosystem USD::REUSD",
-      "currencyId": "Realtoken Ecosystem USD::REUSD"
+      "currencyId": "Realtoken Ecosystem USD::REUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xb90d6bec20993be5d72a5ab353343f7a0281f158": {
       "chainId": "100",
@@ -1152,7 +1158,8 @@
       "symbol": "GYD",
       "logoURI": "https://assets.coingecko.com/coins/images/33428/thumb/GYD-gradient_resized_transparent.png?1702316822",
       "assetGroup": "Gyroscope GYD::GYD",
-      "currencyId": "Gyroscope GYD::GYD"
+      "currencyId": "Gyroscope GYD::GYD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x256eb8a51f382650b2a1e946b8811953640ee47d": {
       "chainId": "100",
@@ -1294,7 +1301,8 @@
       "symbol": "EURE",
       "logoURI": "https://assets.coingecko.com/coins/images/54303/thumb/eure.jpg?1739167959",
       "assetGroup": "Monerium EUR emoney::EURE::100::0",
-      "currencyId": "Monerium EUR emoney::EURE"
+      "currencyId": "Monerium EUR emoney::EURE",
+      "props": { "stablecoin": { "base": "EUR" } }
     },
     "0x7e8101a1c322d394b3961498c7d40d2dfa94c392": {
       "chainId": "100",
@@ -6118,7 +6126,8 @@
       "symbol": "HUSD",
       "logoURI": "https://raw.githubusercontent.com/1Hive/default-token-list/master/src/assets/gnosis/0x1e37e5b504f7773460d6eb0e24d2e7c223b66ec7/logo.jpg",
       "assetGroup": "HUSD on Gnosis::HUSD",
-      "currencyId": "HUSD on Gnosis::HUSD"
+      "currencyId": "HUSD on Gnosis::HUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x6052245ec516d0f653794052d24efca8a39fcbc3": {
       "chainId": "100",
@@ -6803,7 +6812,8 @@
       "address": "0xb1950fb2c9c0cbc8553578c67db52aa110a93393",
       "symbol": "sUSD",
       "assetGroup": "Synthetix USD on Gnosis::sUSD",
-      "currencyId": "Synthetix USD on Gnosis::sUSD"
+      "currencyId": "Synthetix USD on Gnosis::sUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xeaacce3e5bcc10fb32c2553f8d6fc4c3888ffdad": {
       "chainId": "100",
@@ -6948,7 +6958,8 @@
       "symbol": "USDP",
       "logoURI": "https://static.debank.com/image/xdai_token/logo_url/0xfe7ed09c4956f7cdb54ec4ffcb9818db2d7025b8/a0577db751d5f0598b65930fb4a0176d.png",
       "assetGroup": "USDP Stablecoin on Gnosis::USDP",
-      "currencyId": "USDP Stablecoin on Gnosis::USDP"
+      "currencyId": "USDP Stablecoin on Gnosis::USDP",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x0939a7c3f8d37c1ce67fada4963ae7e0bd112ff3": {
       "chainId": "100",
@@ -7185,7 +7196,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/6013/large/Pax_Dollar.png?1629877204",
       "assetGroup": "USDP",
       "currencyId": "Pax Dollar::USDP",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
+      }
     },
     "0xd859c12fc06045b0bd399ac55ffa75cadc378f69": {
       "chainId": "100",
@@ -7393,7 +7407,11 @@
       "symbol": "agEUR",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/optimism/0x9485aca5bbBE1667AD97c7fE7C4531a624C8b1ED.jpg",
       "assetGroup": "AGEUR",
-      "currencyId": "agEUR::agEUR"
+      "currencyId": "agEUR::agEUR",
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
+      }
     },
     "0x5b449ea0e550c143074146abc89a6328d9e70798": {
       "chainId": "100",
@@ -7429,7 +7447,8 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
-        "savings": { "underlying": "USDA", "base": "USD" }
+        "savings": { "underlying": "USDA", "base": "USD" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
     "0x679922d1edca00d2f41ec9aeb023ccc1d58d045f": {
@@ -7466,7 +7485,8 @@
       "address": "0x7300aafc0ef0d47daeb850f8b6a1931b40acab33",
       "symbol": "mUSD",
       "assetGroup": "mStable USD on xDai::mUSD",
-      "currencyId": "mStable USD on xDai::mUSD"
+      "currencyId": "mStable USD on xDai::mUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x783514141beb02828858a086c9fada6d5d1912d5": {
       "chainId": "100",
@@ -7671,7 +7691,8 @@
       "symbol": "SBC",
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sbc.png",
       "assetGroup": "STREETBASED Community Token::SBC",
-      "currencyId": "STREETBASED Community Token::SBC"
+      "currencyId": "STREETBASED Community Token::SBC",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x481d6104761442f162d1f7ac3dc6f98896e7a4ef": {
       "chainId": "100",

@@ -259,7 +259,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31113/thumb/fxd_200x200_%281%29.png?1696529943",
       "assetGroup": "Fathom Dollar::FXD",
       "currencyId": "Fathom Dollar::FXD",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x81b244d0be055ef3bef1b09b7826cc2b108b2cbd": {
       "chainId": "50",
@@ -507,7 +510,8 @@
       "symbol": "AUDD",
       "logoURI": "https://assets.coingecko.com/coins/images/33263/thumb/AUDD-Logo-Blue_512.png?1701319895",
       "assetGroup": "Australian Digital Dollar::AUDD",
-      "currencyId": "Australian Digital Dollar::AUDD"
+      "currencyId": "Australian Digital Dollar::AUDD",
+      "props": { "stablecoin": { "base": "AUD" } }
     },
     "0x2d1c02cf9e7a1659b82185fef243078bfd237b23": {
       "chainId": "50",
@@ -527,7 +531,15 @@
       "symbol": "USDF",
       "logoURI": "https://assets.coingecko.com/coins/images/54558/thumb/ff_200_X_200.png?1740741076",
       "assetGroup": "Falcon USD::USDF",
-      "currencyId": "Falcon USD::USDF"
+      "currencyId": "Falcon USD::USDF",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "falcon",
+          "name": "Falcon Finance",
+          "kind": "protocol"
+        }
+      }
     },
     "0xe27dd9bf01b55ce6803c0d81386a04212c718b95": {
       "chainId": "50",
@@ -575,7 +587,8 @@
       "currencyId": "Savings crvUSD::scrvUSD",
       "props": {
         "savings": { "underlying": "crvUSD", "base": "USD" },
-        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
+        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xd687759f35bb747a29246a4b9495c8f52c49e00c": {

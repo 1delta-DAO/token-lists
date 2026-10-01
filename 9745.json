@@ -2306,7 +2306,16 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": {
+          "id": "openeden",
+          "name": "OpenEden",
+          "kind": "institution"
+        }
       }
     },
     "0xbeee5862649ef24c1f1d5e799505f67f1e7bab9a": {
@@ -2321,7 +2330,12 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "savings": { "underlying": "USDO", "base": "USD" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": {
+          "id": "openeden",
+          "name": "OpenEden",
+          "kind": "institution"
+        }
       }
     },
     "0x92a01ab7317ac318b39b00eb6704ba56f0245d7a": {
@@ -2742,7 +2756,8 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "avUSD", "base": "USD" }
+        "savings": { "underlying": "avUSD", "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
     "0x76309a9a56309104518847bba321c261b7b4a43f": {
@@ -2793,7 +2808,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xabb48792a3161e81b47ca084c0b7a22a50324a44": {
@@ -3060,7 +3076,8 @@
       "symbol": "STBL",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xfdf91362b7e9330f232e500c0236a02b0de3e492.png",
       "assetGroup": "Stability::STBL",
-      "currencyId": "Stability::STBL"
+      "currencyId": "Stability::STBL",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x28c48a7630a730f5f2297da7a72b7f31d9e99e19": {
       "chainId": "9745",
@@ -3141,7 +3158,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "savings": { "underlying": "USDC", "base": "USD" }
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xffc953feb92768e633a2530ef0a85f6334e1f7c6": {

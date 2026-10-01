@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url'
 import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
 import { ISSUER_CURATED } from './issuerAssets'
 import { WRAPPER_ISSUERS, wrapperHop } from './wrappers'
+import { STABLECOIN_MAP } from '../stablecoin/stablecoinMap'
 
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -277,6 +278,113 @@ function resolveExposures(
   return { map, stats }
 }
 
+/**
+ * Savings wrappers resolve through `props.savings.underlying` the way PTs
+ * resolve through `pendle.underlyingAsset`.
+ *
+ * - A savings group with NO desk of its own inherits its underlying's desk as
+ *   its `issuer`: sDOLA is Inverse's, savUSD is Avant's — the staking leg of a
+ *   desk's own dollar is that desk's instrument. Curated entries are already in
+ *   `issuers` when this runs, so a third party's vault over someone else's
+ *   dollar is fixed by curating the vault, never overridden from here.
+ * - A savings group that HAS a desk, different from the underlying's, carries
+ *   the underlying's as an exposure (hops 1): Strata's srUSDe -> Ethena.
+ *
+ * `savings.underlying` is a SYMBOL, not an address, and a ticker is not an
+ * identity (USDF is Falcon's on one row and Astherus' on the next). So the
+ * symbol is resolved only against deployments on the SAME chain as the
+ * wrapper (exact casing preferred), only when every candidate there agrees on
+ * one desk, and only when NO deployment of the wrapper is ambiguous. A
+ * candidate with no desk is a vote for "unknown" and blocks the inheritance —
+ * otherwise Astherus' asUSDF would inherit Falcon through a shared `USDF`.
+ * Junk is thinned first: when any candidate is a stablecoin BY GROUP
+ * (stablecoin.json — not the ticker fallback), the others are ignored. Deployments of one group that resolve to different
+ * desks drop the group (same rule as the wrapper walk: never majority-vote).
+ *
+ * A fiat-reserve underlying (kind `institution`: Circle, Tether, Paxos …) is
+ * NOT followed. A vault that takes USDC is denominated in USDC; its holder
+ * carries the vault's credit, and naming Circle would file syrupUSDC, Spark's
+ * sUSDC and every Strata mHYPER tranche under "Circle".
+ */
+function inheritSavings(
+  omni: Record<string, OmniCurrencyLike>,
+  issuers: IssuerGroupMap,
+): { issuers: IssuerGroupMap; exposures: IssuerExposureGroupMap; stats: Record<string, number> } {
+  // (chain, UPPER symbol) -> deployments with that ticker on that chain
+  const bySymbol = new Map<string, { group: string; symbol: string; stable: boolean }[]>()
+  for (const [group, entry] of Object.entries(omni)) {
+    for (const c of entry.currencies ?? []) {
+      if (typeof c?.symbol !== 'string') continue
+      const key = `${c.chainId}:${c.symbol.toUpperCase()}`
+      const list = bySymbol.get(key) ?? []
+      // "Stable" means listed as a stablecoin BY GROUP (stablecoin.json), not
+      // tagged through the ticker fallback (stablecoin-symbols.json) — that
+      // fallback tags `StableUSD::USDS` as readily as Sky's USDS, and would
+      // let any ticker-copy veto (or win) the resolution.
+      const stable = !!(STABLECOIN_MAP[group] || STABLECOIN_MAP[`${c.name}::${c.symbol}`] || c.props?.savings)
+      list.push({ group, symbol: c.symbol, stable })
+      bySymbol.set(key, list)
+    }
+  }
+
+  const stats: Record<string, number> = { wrappers: 0, ambiguous: 0, unresolved: 0, fiat: 0, conflicts: 0 }
+  const inherited: IssuerGroupMap = {}
+  const exposures: IssuerExposureGroupMap = {}
+
+  for (const [group, entry] of Object.entries(omni)) {
+    const deployments = (entry.currencies ?? []).filter((c) => typeof c?.props?.savings?.underlying === 'string')
+    if (deployments.length === 0) continue
+    stats.wrappers++
+
+    const desks = new Map<string, IssuerProps>()
+    let ambiguous = false
+    for (const c of deployments) {
+      const underlying = String(c.props!.savings.underlying)
+      let candidates = (bySymbol.get(`${c.chainId}:${underlying.toUpperCase()}`) ?? []).filter((x) => x.group !== group)
+      // Exact casing first: `YUSD` (Aegis) and `yUSD` (YieldFi) are different
+      // dollars, and only when no deployment spells it exactly is the casing
+      // treated as list noise (`USDf` listed as `USDF`).
+      const exact = candidates.filter((x) => x.symbol === underlying)
+      if (exact.length) candidates = exact
+      if (candidates.some((x) => x.stable)) candidates = candidates.filter((x) => x.stable)
+      if (candidates.length === 0) continue
+      const ids = new Set(candidates.map((x) => issuers[x.group]?.id ?? ''))
+      if (ids.size !== 1 || ids.has('')) {
+        ambiguous = true
+        continue
+      }
+      const desk = issuers[candidates[0].group]
+      desks.set(desk.id, desk)
+    }
+
+    // One ambiguous deployment sinks the group: the ticker demonstrably means
+    // more than one thing for this wrapper, so a clean answer on another chain
+    // is as likely to be a ticker collision as the truth (Aegis' sYUSD resolved
+    // to YieldFi's yUSD on Katana before this rule).
+    if (ambiguous) {
+      stats.ambiguous++
+      continue
+    }
+    if (desks.size === 0) {
+      stats.unresolved++
+      continue
+    }
+    if (desks.size > 1) {
+      stats.conflicts++
+      continue
+    }
+    const desk = [...desks.values()][0]
+    if (desk.kind === 'institution') {
+      stats.fiat++
+      continue
+    }
+    const own = issuers[group]
+    if (!own) inherited[group] = desk
+    else if (own.id !== desk.id) exposures[group] = [{ ...desk, hops: 1 }]
+  }
+  return { issuers: inherited, exposures, stats }
+}
+
 function serialize(map: Record<string, unknown>): string {
   const keys = Object.keys(map).sort()
   return JSON.stringify(
@@ -311,6 +419,28 @@ function generateIssuerMap() {
     console.warn('[issuer] could not read omni-list.json, using the curated map alone:', (error as Error).message)
   }
 
+  // Only DERIVED desks are expanded into pre-alias keys below (unchanged
+  // behaviour): a curated key is often a bare-ticker group (`USDC`, `WBTC`)
+  // whose deployments are named `USDC::USDC` or `BTC::BTC`, and as pre-alias
+  // keys those also catch unrelated tokens (PulseChain's fork-copy USDC,
+  // native BTC on Merlin). Curated entries spell out their own variants; the
+  // lookup's GROUP_ALIAS fallback (issuerMap.ts) covers the unifier's folds.
+  const expandable: IssuerGroupMap = { ...map }
+
+  // Curated first (re-applied after the alias expansion below), so the
+  // savings inheritance resolves against curated desks too.
+  Object.assign(map, ISSUER_CURATED)
+
+  // Savings wrappers inherit their underlying's desk — see inheritSavings().
+  const savings = inheritSavings(omniGroups, map)
+  for (const [group, desk] of Object.entries(savings.issuers)) map[group] = expandable[group] = desk
+  console.log(
+    `  + ${Object.keys(savings.issuers).length} savings wrapper(s) inherited their underlying's desk; ` +
+      `${Object.keys(savings.exposures).length} carry it as an exposure ` +
+      `(${savings.stats.wrappers} savings groups seen, ${savings.stats.ambiguous} ambiguous, ` +
+      `${savings.stats.unresolved} unresolved, ${savings.stats.fiat} fiat-reserve underlyings skipped).`,
+  )
+
   // ---------------------------------------------------------------------
   // Pre-alias aliases.
   //
@@ -331,7 +461,7 @@ function generateIssuerMap() {
   let aliases = 0
   let conflicts = 0
   for (const [group, entry] of Object.entries(omniGroups)) {
-    const issuer = map[group]
+    const issuer = expandable[group]
     if (!issuer) continue
     for (const c of entry.currencies ?? []) {
       const name = typeof c?.name === 'string' ? c.name : ''
@@ -364,6 +494,15 @@ function generateIssuerMap() {
   // The exposure half — which desk a WRAPPER's underlying walk ends at. Runs
   // after the self-issuer map is final, because it resolves against it.
   const { map: exposures, stats } = resolveExposures(omniGroups, map)
+  // Savings exposures join the wrapper walk's: a Strata srUSDe is Strata's
+  // instrument (issuer) and Ethena's credit (exposure), exactly like a PT.
+  for (const [group, legs] of Object.entries(savings.exposures)) {
+    const own = map[group]?.id
+    const merged = new Map((exposures[group] ?? []).map((e) => [e.id, e]))
+    for (const leg of legs) if (leg.id !== own && !merged.has(leg.id)) merged.set(leg.id, leg)
+    const list = [...merged.values()].sort((a, b) => a.hops! - b.hops! || a.id.localeCompare(b.id))
+    if (list.length) exposures[group] = list
+  }
   fs.writeFileSync(path.resolve(__dirname, './issuerExposure.json'), serialize(exposures))
   console.log(
     `Wrote issuerExposure.json with ${Object.keys(exposures).length} wrapper groups ` +

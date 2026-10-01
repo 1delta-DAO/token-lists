@@ -78,9 +78,23 @@ function loadCoinGeckoCanonical(): { [chainId: string]: { [symbol: string]: stri
  * assetGroup. A token is an impostor when it is a lazy ticker-copy (`name === symbol`) and
  * CoinGecko lists that symbol on that chain but NOT at this address. Returns a predicate.
  */
+/**
+ * Deployments verified by hand to be the REAL asset although they match the
+ * lazy-copy signature (`name === symbol`) and CoinGecko files the ticker under
+ * someone else's address. Keyed `"<chainId>:<address-lowercase>"`; every
+ * entry states its evidence.
+ */
+const IMPOSTOR_EXEMPT = new Set<string>([
+  // 3Jane USD3 — `name() == 'USD3'`, and CoinGecko's chain-1 USD3 is Reserve's
+  // Web 3 Dollar (0x0d86…). 3Jane's sUSD3 (0xf689…) answers `asset()` = this
+  // address, and GROUP_ALIAS already folds it into `3Jane USD3::USD3`.
+  '1:0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc',
+])
+
 export function makeImpostorCheck(): (chainId: string, address: string, name?: string, symbol?: string) => boolean {
   const cg = loadCoinGeckoCanonical()
   return (chainId, address, name, symbol) => {
+    if (IMPOSTOR_EXEMPT.has(`${chainId}:${address.toLowerCase()}`)) return false
     const n = (name ?? '').trim()
     const s = (symbol ?? '').trim()
     if (!n || n.toLowerCase() !== s.toLowerCase()) return false

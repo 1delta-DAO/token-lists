@@ -379,7 +379,12 @@
       "assetGroup": "CUSD",
       "currencyId": "Celo Dollar::CUSD",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xfecb3f7c54e2caae9dc6ac9060a822d47e053760": {
@@ -499,7 +504,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/19479/thumb/agEUR-4.png?1710726218",
       "assetGroup": "EURA",
       "currencyId": "EURA::EURA",
-      "props": { "stablecoin": { "base": "EUR" } }
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
+      }
     },
     "0xd252e98c5b6ea1e29a7e2789a9ec0493707a60b9": {
       "chainId": "42220",
@@ -759,7 +767,8 @@
       "assetGroup": "Tether USD::USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
-        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
+        "issuer": { "id": "tether", "name": "Tether", "kind": "institution" },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xb020d981420744f6b0fedd22bb67cd37ce18a1d5": {
@@ -843,7 +852,12 @@
       "assetGroup": "USDA::USDA",
       "currencyId": "USDA::USDA",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xc668583dcbdc9ae6fa3ce46462758188adfdfc24": {
@@ -1035,7 +1049,8 @@
       "symbol": "USDT",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0x617f3112bf5397d0467d315cc709ef968d9ba546/f1992d97a61c154a388c0de34cb136f3.png",
       "assetGroup": "Tether USD::USDT::42220::0",
-      "currencyId": "Tether USD::USDT"
+      "currencyId": "Tether USD::USDT",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x73f93dcc49cb8a239e2032663e9475dd5ef29a08": {
       "chainId": "42220",
@@ -1185,7 +1200,12 @@
       "assetGroup": "Celo Japanese Yen::cJPY",
       "currencyId": "Celo Japanese Yen::cJPY",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "JPY" }
       }
     },
     "0xb55a79f398e759e43c95b979163f30ec87ee131d": {

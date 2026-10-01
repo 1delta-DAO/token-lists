@@ -171,6 +171,117 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Universal ETH::uniETH': { id: 'bedrock', name: 'Bedrock', kind: 'protocol' },
   'Ethena Staked ENA::SENA': { id: 'ethena', name: 'Ethena', kind: 'protocol' },
 
+  // --- Loop collateral / earn assets that arrived with no desk -------------
+  //
+  // Measured from YieldCircle's loop + earn menu (docs/stablecoin-exposure.md,
+  // phase 1). Every line names the evidence: the token's own name, or the
+  // ERC-4626 `asset()` it was read to wrap on Ethereum (2026-10-01). Keyed on
+  // the full group because every one of these tickers is shared elsewhere.
+  //
+  // Falcon Finance. sUSDf (0xc8cf…) `asset()` = 0xfa2b…cec2, the group listed
+  // as `Falcon Finance::USDF` on 1; BNB and XDC carry the name "Falcon USD".
+  // NOT `Astherus USDF`, `USD Flex`, `USDF - Global Fund Dollar` or Fractal's
+  // USDF — same ticker, other desks. `Hakutora Staked Falcon USD` is a third
+  // party's vault over sUSDf and is left to the wrapper walk.
+  'Falcon Finance::USDF': { id: 'falcon', name: 'Falcon Finance', kind: 'protocol' },
+  'Falcon USD::USDF': { id: 'falcon', name: 'Falcon Finance', kind: 'protocol' },
+  'Falcon USD::USDf': { id: 'falcon', name: 'Falcon Finance', kind: 'protocol' },
+  'Staked Falcon USD::sUSDf': { id: 'falcon', name: 'Falcon Finance', kind: 'protocol' },
+  // Avant — `avant` already exists (savETH via lst.provider); the dollar pair
+  // was unmapped. savUSD's underlying is avUSD (savings.json).
+  'avUSD::avUSD': { id: 'avant', name: 'Avant', kind: 'protocol' },
+  'Staked avUSD::savUSD': { id: 'avant', name: 'Avant', kind: 'protocol' },
+  // Saturn — names say so; sUSDat's underlying is USDat (savings.json). Both
+  // pre-alias spellings of the OFT mirrors fold here via GROUP_ALIAS.
+  'Saturn Dollar::USDAT': { id: 'saturn', name: 'Saturn', kind: 'protocol' },
+  'Saturn sUSDat::SUSDAT': { id: 'saturn', name: 'Saturn', kind: 'protocol' },
+  // Strata — senior/junior tranches over someone else's dollar. The tranche is
+  // Strata's instrument; the credit under it (USDe -> Ethena, USDat -> Saturn)
+  // is resolved as an EXPOSURE by the savings walk in issuer.ts, not here.
+  // NB `Tori Staked trUSD::STRUSD` is NOT Strata — see Tori below.
+  'Strata Senior USDe::SRUSDE': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior USDe::jrUSDe': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Senior NUSD::srNUSD': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior NUSD::JRNUSD': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Senior USDat::SRUSDAT': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior USDat::JRUSDAT': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Senior mHYPER::srmHYPER': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior mHYPER::JRMHYPER': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Senior mM1-USD::SRMM1-USD': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior mM1-USD::JRMM1-USD': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Senior PRIME::SRPRIME': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior PRIME::JRPRIME': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Senior nOPAL::SRNOPAL': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Junior nOPAL::JRNOPAL': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  'Strata Pre-deposit Receipt Token::pUSDe': { id: 'strata', name: 'Strata', kind: 'protocol' },
+  // Tori — the only STRUSD in the lists is "Tori Staked trUSD" (0x2808…),
+  // whose `asset()` is 0xd058…, listed as `Tori trUSD::TRUSD`.
+  'Tori trUSD::TRUSD': { id: 'tori', name: 'Tori', kind: 'protocol' },
+  'Tori Staked trUSD::STRUSD': { id: 'tori', name: 'Tori', kind: 'protocol' },
+  // 3Jane — the staked (junior) tranche. `asset()` of sUSD3 (0xf689…) is
+  // 0x056b…, i.e. `3Jane USD3::USD3` above. `Stable com USD3` / `Stable.com
+  // USD3` (0x0460…) is Stable.com's and `Web 3 Dollar` is Reserve's: neither
+  // is 3Jane, so neither is keyed here.
+  '3Jane Staked USD3::sUSD3': { id: '3jane', name: '3Jane', kind: 'protocol' },
+  // Aegis — "Staked YUSD" (0xfe0c… on 1) `asset()` = 0x4274…, i.e. `Aegis
+  // YUSD::YUSD`. NOT YieldFi's yUSD, which the savings walk would otherwise
+  // reach through a case-insensitive ticker on Katana.
+  'Staked YUSD::sYUSD': { id: 'aegis', name: 'Aegis', kind: 'protocol' },
+  // Inverse — sDOLA (0xb45a…) `asset()` = DOLA 0x8653…, already `inverse`.
+  'sDOLA::SDOLA': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
+  // Aave — sGho (0xe175…) `asset()` = GHO 0x40d1…, already `aave`.
+  'sGho::sGho': { id: 'aave', name: 'Aave', kind: 'protocol' },
+  // Moved upstream from pos-indexer's config/issuer-overrides.json (tickets/0011)
+  // so both consumers agree:
+  //  - REUSDE "Re Protocol reUSDe" (0xddc0…): the name states the desk; sibling
+  //    of `Re Protocol reUSD` (`re`). Not 4626, so no asset() to read.
+  //  - stUSR "Staked USR" (0x6c89…): the staked form of Resolv's USR.
+  //  - sreUSD "Savings reUSD" (0x557a…): `asset()` = 0x57ab…4bec "Resupply
+  //    USD". NOT Re Protocol's reUSD, which wears the same ticker.
+  'Re Protocol reUSDe::REUSDE': { id: 're', name: 'Re', kind: 'protocol' },
+  'Staked USR::stUSR': { id: 'resolv', name: 'Resolv', kind: 'protocol' },
+  'Savings reUSD::sreUSD': { id: 'resupply', name: 'Resupply', kind: 'protocol' },
+  // Plume USD (pUSD, 0xdddd…3f5 on 1 and Plume) is the base unit of Plume's
+  // Nest vault system, so it joins the existing `nest` desk (same id/name/kind
+  // as the RWA-derived Nest vaults, so the facet does not split). NOT
+  // `Palm USD`, `Polymarket USD`, `Pleasing USD`, `PUSD_Polyquity`.
+  'Plume USD::PUSD': { id: 'nest', name: 'Nest', kind: 'institution' },
+  'Plume USD::pUSD': { id: 'nest', name: 'Nest', kind: 'institution' },
+  // Stables Labs USDX / sUSDX — one vanity address per token on every chain
+  // (USDX 0xf352…, sUSDX 0x7788…); sUSDX `asset()` = 0xf352… "USDX". Base
+  // lists the same two addresses as `Wrapped USDX` / `Wrapped sUSDX`. NOT
+  // `Hex Trust USD`, dForce's `USDx`, Synthetix `USDx` or `X20 USD`.
+  USDX: { id: 'stables-labs', name: 'Stables Labs', kind: 'protocol' },
+  SUSDX: { id: 'stables-labs', name: 'Stables Labs', kind: 'protocol' },
+  'Wrapped USDX::USDX': { id: 'stables-labs', name: 'Stables Labs', kind: 'protocol' },
+  'Wrapped sUSDX::sUSDX': { id: 'stables-labs', name: 'Stables Labs', kind: 'protocol' },
+  // Axis — "Staked Axis USD" (0xeb89…); its `asset()` 0xa1fa… answers only
+  // `name() == 'USDx'`, which is too weak to key `USDx::USDx` on, so only the
+  // named share is attributed.
+  'Staked Axis USD::SUSDX': { id: 'axis', name: 'Axis', kind: 'protocol' },
+
+  // --- Largest unattributed stable/savings groups (reconciliation gate) ----
+  //
+  // Picked from `npm run issuer:check`'s worklist where every deployment in
+  // the group carries the desk's own product name (checked 2026-10-01), so no
+  // ticker is doing the attributing. Binance-peg BUSD and TrueUSD stay blank:
+  // whose desk a bridged BUSD is (Paxos or Binance) differs per deployment.
+  EURA: { id: 'angle', name: 'Angle', kind: 'protocol' },
+  AGEUR: { id: 'angle', name: 'Angle', kind: 'protocol' },
+  USDA: { id: 'angle', name: 'Angle', kind: 'protocol' }, // every deployment named "Angle USDA", 0x0000206…
+  STEUR: { id: 'angle', name: 'Angle', kind: 'protocol' }, // "Angle Staked EURA" / "Staked agEUR", one address 0x004626…
+  'Angle Staked EURA::STEUR': { id: 'angle', name: 'Angle', kind: 'protocol' },
+  'Angle Staked EURA::stEUR': { id: 'angle', name: 'Angle', kind: 'protocol' },
+  'Angle Staked USDA::stUSD': { id: 'angle', name: 'Angle', kind: 'protocol' },
+  'Bridged Angle Staked USDA::stUSD': { id: 'angle', name: 'Angle', kind: 'protocol' },
+  USDP: { id: 'paxos', name: 'Paxos', kind: 'institution' }, // every deployment named "Pax Dollar"
+  'OpenEden Open Dollar::USDO': { id: 'openeden', name: 'OpenEden', kind: 'institution' },
+  'Compounding Open Dollar::CUSDO': { id: 'openeden', name: 'OpenEden', kind: 'institution' },
+  'Compounding Open Dollar::cUSDO': { id: 'openeden', name: 'OpenEden', kind: 'institution' },
+  'Compounding OpenDollar::CUSDO': { id: 'openeden', name: 'OpenEden', kind: 'institution' },
+  'USD+': { id: 'overnight', name: 'Overnight', kind: 'protocol' }, // every deployment "Overnight.fi USD+"
+  SUSD: { id: 'synthetix', name: 'Synthetix', kind: 'protocol' }, // every deployment "Synth sUSD" (0x57ab1e… on 1)
+
   // --- BTC wrappers --------------------------------------------------------
   WBTC: { id: 'bitgo', name: 'BitGo', kind: 'institution' },
   'Wrapped BTC::WBTC': { id: 'bitgo', name: 'BitGo', kind: 'institution' },

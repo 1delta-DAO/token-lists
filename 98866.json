@@ -80,6 +80,7 @@
       "currencyId": "Midas mBASIS::mBASIS",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
@@ -427,7 +428,8 @@
       "symbol": "USD+",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0x1fa3671df7300df728858b88c7216708f22da3fb/small/token-logo.png",
       "assetGroup": "USD+::USD+",
-      "currencyId": "USD+::USD+"
+      "currencyId": "USD+::USD+",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xea237441c92cae6fc17caaf9a7acb3f953be4bd1": {
       "chainId": "98866",
@@ -471,7 +473,8 @@
       "symbol": "nELIXIR",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0x9fbc367b9bb966a2a537989817a088afcaffdc4c/small/token-logo.svg",
       "assetGroup": "Nest Institutional Core Vault::nELIXIR",
-      "currencyId": "Nest Institutional Core Vault::nELIXIR"
+      "currencyId": "Nest Institutional Core Vault::nELIXIR",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x2de8a403f7a5c6c5161d4a129918ec9f0b653918": {
       "chainId": "98866",
@@ -521,7 +524,11 @@
       "symbol": "pUSD",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0xdddd73f5df1f0dc31373357beac77545dc5a6f3f/small/token-logo.svg",
       "assetGroup": "Plume USD::pUSD",
-      "currencyId": "Plume USD::pUSD"
+      "currencyId": "Plume USD::pUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
     },
     "0x78add880a697070c1e765ac44d65323a0dcce913": {
       "chainId": "98866",
@@ -808,7 +815,8 @@
       "symbol": "WEUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68196/thumb/WEUSD%28200X200%29.png?1755065644",
       "assetGroup": "WEUSD::WEUSD",
-      "currencyId": "WEUSD::WEUSD"
+      "currencyId": "WEUSD::WEUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x02cdb5ccc97d5dc7ed2747831b516669eb635706": {
       "chainId": "98866",

@@ -258,7 +258,8 @@
       "currencyId": "EURA::EURA",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "EUR" }
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
     "0x6baa318cf7c51c76e17ae1ebe9bbff96ae017acb": {
@@ -567,7 +568,8 @@
       "currencyId": "Pax Dollar::USDP",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
       }
     },
     "0xa6eb75b11b36fb9175fb94c5b96959879a26c2a8": {
@@ -665,7 +667,10 @@
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/27290.png",
       "assetGroup": "US KUMA Interest Bearing Token::USK",
       "currencyId": "US KUMA Interest Bearing Token::USK",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x636b22bc471c955a8db60f28d4795066a8201fa3": {
       "chainId": "59144",
@@ -703,7 +708,12 @@
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
         "stablecoin": { "base": "USD" },
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
     },
     "0x176211869ca2b568f2a7d4ee941e073a821ee1ff": {
@@ -746,7 +756,12 @@
       "assetGroup": "USDT+::USDT+",
       "currencyId": "USDT+::USDT+",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x3aab2285ddcddad8edf438c1bab47e1a9d05a9b4": {
@@ -1737,7 +1752,8 @@
       "symbol": "EURA",
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x1a7e4e63778b4f12a199c062f3efdd288afcbce8/ee004294d4abb5d51d078fb8151579d1.png",
       "assetGroup": "EURA::EURA",
-      "currencyId": "EURA::EURA"
+      "currencyId": "EURA::EURA",
+      "props": { "stablecoin": { "base": "EUR" } }
     },
     "0x0f87d0618b873be947ff7d3620c51b832b71c4d0": {
       "chainId": "59144",
@@ -2469,7 +2485,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/avUSD/logo.svg",
       "assetGroup": "avUSD::avUSD",
       "currencyId": "avUSD::avUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
+      }
     },
     "0x3fb52887b61224823edd3680eca0a2fdba7de4d1": {
       "chainId": "59144",
@@ -2539,7 +2558,8 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "avUSD", "base": "USD" }
+        "savings": { "underlying": "avUSD", "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
     "0xb728946dd750c60c75c40f434c38e2f5afe48a01": {
@@ -2549,7 +2569,8 @@
       "address": "0xb728946dd750c60c75c40f434c38e2f5afe48a01",
       "symbol": "deUSD",
       "assetGroup": "deUSD::deUSD",
-      "currencyId": "deUSD::deUSD"
+      "currencyId": "deUSD::deUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xf29ac58e23904ce3057afe2f9c430c87703da982": {
       "chainId": "59144",
@@ -2588,7 +2609,8 @@
       "symbol": "EVAUSDT",
       "logoURI": "https://assets.coingecko.com/coins/images/102173286/thumb/token-usdt.png?1778830738",
       "assetGroup": "evaUSDT::EVAUSDT",
-      "currencyId": "evaUSDT::EVAUSDT"
+      "currencyId": "evaUSDT::EVAUSDT",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x741bd193b6b40f8703d2e116fd1965421f290f58": {
       "chainId": "59144",
@@ -2598,7 +2620,8 @@
       "symbol": "EVAUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/102173288/thumb/token-evaUSDC.png?1778830856",
       "assetGroup": "evaUSDC::EVAUSDC",
-      "currencyId": "evaUSDC::EVAUSDC"
+      "currencyId": "evaUSDC::EVAUSDC",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x02f289e429655d0c0d713a7dfd26850a81f7cfc5": {
       "chainId": "59144",
@@ -2618,7 +2641,8 @@
       "symbol": "USDL",
       "logoURI": "https://images.ctfassets.net/4j2tco9amoqh/ekw4l3V8np3FcXo6lMeY5/67df4116cf4dc351326ccb53c1436db7/linea_usd_logo.png",
       "assetGroup": "Linea USD::USDL",
-      "currencyId": "Linea USD::USDL"
+      "currencyId": "Linea USD::USDL",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x10f04e61bd6019d6c9b0bf4907e805a64b92ee3e": {
       "chainId": "59144",

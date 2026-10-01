@@ -327,7 +327,12 @@
       "assetGroup": "Satoshi Stablecoin::satUSD",
       "currencyId": "Satoshi Stablecoin::satUSD",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x85473255b6a895865a8b5f088dde75d43909d13e": {
@@ -375,7 +380,8 @@
       "symbol": "thUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/32274/thumb/thusd.png?1697180081",
       "assetGroup": "Threshold USD::thUSD",
-      "currencyId": "Threshold USD::thUSD"
+      "currencyId": "Threshold USD::thUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x2fece49b79292c2cf6218b2bc657fddfd2941e18": {
       "chainId": "60808",

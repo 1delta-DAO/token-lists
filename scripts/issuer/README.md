@@ -97,6 +97,33 @@ wrapper over it on the next run**. That is the highest-leverage curation there
 is: the dead ends concentrate on 238 groups, and the top 10 alone would unlock
 170 wrappers (`UNIBTC` 27, `FLR` 23, `uniETH` 18, `siUSD` 16, `FXRP` 16 …).
 
+### Savings wrappers
+
+`props.savings.underlying` is the savings family's hop, and `issuer.ts`
+(`inheritSavings`) follows it too. It is a ticker, not an address, so it is
+resolved only against deployments on the wrapper's own chain (exact casing
+first, group-listed stablecoins first), only when every candidate agrees on one
+desk, and only when no deployment of the wrapper is ambiguous.
+
+- no desk of its own → the wrapper **inherits** the underlying's as `issuer`
+  (`Staked USDS::stUSDS` → `sky`);
+- its own desk, different → the underlying's becomes an **exposure**
+  (`Strata Senior USDe` → `strata` + `[ethena]`);
+- a fiat-reserve underlying (`kind: institution` — Circle, Tether …) is not
+  followed: a vault that takes USDC is denominated in USDC, not Circle's credit.
+
+Lookups also fall back through `GROUP_ALIAS` (`issuerMap.ts`), so a curated
+canonical group reaches its pre-alias variants (`USD3::USD3` →
+`3Jane USD3::USD3`) without per-casing entries.
+
+### Reconciliation gate
+
+`npm run issuer:check` fails when a token with `stablecoin.base` or
+`savings.base` has neither `issuer` nor `issuerExposures` and its group is not
+in [`unattributed-ok.json`](./unattributed-ok.json) with a reason. The list is
+a ratchet: stale entries (group now attributed or gone) fail too. It is not
+wired into `generate:formatted`, so it cannot block the auto-generate PR.
+
 ### Wrapper instruments
 
 The `issuer` half of a wrapper is not curated by group — it is read off the

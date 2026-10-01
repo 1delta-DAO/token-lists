@@ -275,7 +275,12 @@
       "assetGroup": "Orki USDK::USDK",
       "currencyId": "Orki USDK::USDK",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xfa3198ecf05303a6d96e57a45e6c815055d255b1": {
@@ -405,7 +410,8 @@
       "address": "0x7fa65bb90fcec0fa82e009e65aa3736c376c2572",
       "symbol": "USDs",
       "assetGroup": "USD Stable::USDs",
-      "currencyId": "USD Stable::USDs"
+      "currencyId": "USD Stable::USDs",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1923",

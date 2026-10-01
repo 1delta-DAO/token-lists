@@ -105,7 +105,10 @@
           "ytAddress": "0x5aff25c86c7cb739e554be8904b32047738b7440"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0fe4a1bbe013b54e38ef4e4ec8ba1d64d12a0663": {
@@ -164,7 +167,10 @@
           "syAddress": "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286"
         },
         "risk": { "score": 3, "source": "vault_inherit" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x355e82c60d51d6942bdfd0f2b95a204acd068963": {
@@ -207,7 +213,10 @@
           "syAddress": "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b": {
@@ -251,7 +260,10 @@
           "syAddress": "0x0898c3346275e79db4892feb1c18875ec154f274"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5fdbc1502e1a3742110730272c61a208758317bc": {
@@ -364,7 +376,10 @@
           "ytAddress": "0x3ebb97649af955e86699444aabc5aee3787bb7ce"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1": {
@@ -411,7 +426,10 @@
           "syAddress": "0x0898c3346275e79db4892feb1c18875ec154f274"
         },
         "risk": { "score": 3, "source": "vault_inherit" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51": {
@@ -708,7 +726,10 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89": {
@@ -770,7 +791,10 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x01bff41798a0bcf287b996046ca68b395dbc1071": {
@@ -829,6 +853,7 @@
       "currencyId": "RWA Backed Lending by Valos::vUSD",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -2154,7 +2179,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xfdd22ce6d1f66bc0ec89b20bf16ccb6670f55a5a": {
@@ -2358,7 +2384,8 @@
       "symbol": "KTB",
       "logoURI": "https://assets.coingecko.com/coins/images/102172092/thumb/KTB_Image.png?1771517177",
       "assetGroup": "Etherfuse KTB::KTB",
-      "currencyId": "Etherfuse KTB::KTB"
+      "currencyId": "Etherfuse KTB::KTB",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9": {
       "chainId": "143",
@@ -2472,7 +2499,12 @@
       "assetGroup": "Mento Dollar::USDm",
       "currencyId": "Mento Dollar::USDm",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x0a332311633c0625f63cfc51ee33fc49826e0a3c": {
@@ -2662,7 +2694,8 @@
       "address": "0xf13dacada8f45c2b2cbf60ecb1d412d0c57bf2f8",
       "symbol": "eUSD",
       "assetGroup": "Euler USD::eUSD",
-      "currencyId": "Euler USD::eUSD"
+      "currencyId": "Euler USD::eUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xf503d5d7b7d4927b4c4ab4f9b7498c6cfcfe9dfe": {
       "chainId": "143",
@@ -2712,7 +2745,8 @@
       "symbol": "BOB",
       "logoURI": "https://assets.coingecko.com/coins/images/102173014/thumb/main_mascot.png?1777218464",
       "assetGroup": "Bob::BOB",
-      "currencyId": "Bob::BOB"
+      "currencyId": "Bob::BOB",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xd7acb868f97f8286d5d3a0fd5ef112a8a72ecd90": {
       "chainId": "143",
@@ -2830,7 +2864,8 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "avUSD", "base": "USD" }
+        "savings": { "underlying": "avUSD", "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
     "0xc9ea90692757831d98ac629f2a0140e02b80a7da": {
@@ -3119,7 +3154,8 @@
       "symbol": "M",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/M/logo.svg",
       "assetGroup": "M by M0::M",
-      "currencyId": "M by M0::M"
+      "currencyId": "M by M0::M",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34": {
       "chainId": "143",
@@ -3144,7 +3180,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/avUSD/logo.svg",
       "assetGroup": "avUSD::avUSD",
       "currencyId": "avUSD::avUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
+      }
     },
     "0x61b29efef2e6f866ba4aaefdb87d2837c6a22b9c": {
       "chainId": "143",
@@ -3266,7 +3305,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
       }
     },
     "0xad663ac84052b52be4ed1b27ba416505e84a00bf": {
@@ -3294,7 +3334,8 @@
           "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
       }
     },
     "0x6f2cdf03c8343e1ea608668812fb094e46c41c80": {
@@ -3411,7 +3452,8 @@
       "symbol": "jrUSDat",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/jrUSDat/logo.svg",
       "assetGroup": "jrUSDat::jrUSDat",
-      "currencyId": "jrUSDat::jrUSDat"
+      "currencyId": "jrUSDat::jrUSDat",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xd25f563e12ff616262f8c947fec108db934f8059": {
       "chainId": "143",
@@ -3440,7 +3482,8 @@
       "symbol": "srUSDat",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/srUSDat/logo.svg",
       "assetGroup": "srUSDat::srUSDat",
-      "currencyId": "srUSDat::srUSDat"
+      "currencyId": "srUSDat::srUSDat",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x8959f4e6ed1f4567a464959793d5f8f6f33c1c8b": {
       "chainId": "143",

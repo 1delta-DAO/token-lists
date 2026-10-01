@@ -1471,7 +1471,8 @@
       "symbol": "crvUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/31181/thumb/CurveFi_32.png?1696530009",
       "assetGroup": "Bridged Curve Fi USD Stablecoin (Stargate)::crvUSD",
-      "currencyId": "Bridged Curve Fi USD Stablecoin (Stargate)::crvUSD"
+      "currencyId": "Bridged Curve Fi USD Stablecoin (Stargate)::crvUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x9bd0611610a0f5133e4dd1bfdd71c5479ee77f37": {
       "chainId": "250",
@@ -2078,7 +2079,8 @@
       "symbol": "MOD",
       "logoURI": "https://assets.coingecko.com/coins/images/13980/thumb/modefi_logo.png?1696513713",
       "assetGroup": "MOD",
-      "currencyId": "Modefi::MOD"
+      "currencyId": "Modefi::MOD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x6a545f9c64d8f7b957d8d2e6410b52095a9e6c29": {
       "chainId": "250",
@@ -2169,7 +2171,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/5013/thumb/sUSD.png?1696505546",
       "assetGroup": "SUSD",
       "currencyId": "Synth sUSD::sUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "synthetix", "name": "Synthetix", "kind": "protocol" }
+      }
     },
     "0x43a8cab15d06d3a5fe5854d714c37e7e9246f170": {
       "chainId": "250",
@@ -2753,7 +2758,8 @@
       "symbol": "XY",
       "logoURI": "https://assets.coingecko.com/coins/images/21541/thumb/xy.png?1696520900",
       "assetGroup": "XY",
-      "currencyId": "XY Finance::XY"
+      "currencyId": "XY Finance::XY",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x89d5e71e275b4be094df9551627bcf4e3b24ce22": {
       "chainId": "250",
@@ -3710,7 +3716,8 @@
       "symbol": "fETH",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/icons/master/token/eth.jpg",
       "assetGroup": "fETH::fETH",
-      "currencyId": "fETH::fETH"
+      "currencyId": "fETH::fETH",
+      "props": { "stablecoin": {} }
     },
     "0xe1146b9ac456fcbb60644c36fd3f868a9072fc6e": {
       "chainId": "250",
@@ -4142,7 +4149,8 @@
       "assetGroup": "LUSD Stablecoin::LUSD",
       "currencyId": "LUSD Stablecoin::LUSD",
       "props": {
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xd02a30d33153877bc20e5721ee53dedee0422b2f": {
@@ -4163,7 +4171,11 @@
       "symbol": "agEUR",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/optimism/0x9485aca5bbBE1667AD97c7fE7C4531a624C8b1ED.jpg",
       "assetGroup": "AGEUR",
-      "currencyId": "agEUR::agEUR"
+      "currencyId": "agEUR::agEUR",
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
+      }
     },
     "0x0def844ed26409c5c46dda124ec28fb064d90d27": {
       "chainId": "250",

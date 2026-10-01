@@ -241,7 +241,8 @@
       "symbol": "GYD",
       "logoURI": "https://assets.coingecko.com/coins/images/33428/thumb/GYD-gradient_resized_transparent.png?1702316822",
       "assetGroup": "Gyroscope GYD::GYD",
-      "currencyId": "Gyroscope GYD::GYD"
+      "currencyId": "Gyroscope GYD::GYD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x83b874c1e09d316059d929da402dcb1a98e92082": {
       "chainId": "1101",
@@ -620,7 +621,8 @@
       "symbol": "EURA",
       "logoURI": "https://raw.githubusercontent.com/AngleProtocol/angle-token-list/main/src/assets/tokens/EURA.svg",
       "assetGroup": "EURA (previously agEUR)::EURA",
-      "currencyId": "EURA (previously agEUR)::EURA"
+      "currencyId": "EURA (previously agEUR)::EURA",
+      "props": { "stablecoin": { "base": "EUR" } }
     },
     "0x615b25500403eb688be49221b303084d9cf0e5b4": {
       "chainId": "1101",
@@ -642,7 +644,12 @@
       "assetGroup": "USDA::USDA",
       "currencyId": "USDA::USDA",
       "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {

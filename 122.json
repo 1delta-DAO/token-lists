@@ -110,7 +110,12 @@
       "assetGroup": "Dollar V3::FUSD",
       "currencyId": "Dollar V3::FUSD",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0xc6bc407706b7140ee8eef2f86f9504651b63e7f9": {
@@ -175,7 +180,8 @@
       "symbol": "VOLT",
       "logoURI": "https://assets.coingecko.com/coins/images/21886/thumb/My_project.png?1696521238",
       "assetGroup": "Voltage Finance::VOLT",
-      "currencyId": "Voltage Finance::VOLT"
+      "currencyId": "Voltage Finance::VOLT",
+      "props": { "stablecoin": {} }
     },
     "0xa722c13135930332eb3d749b2f0906559d2c5b99": {
       "chainId": "122",
@@ -361,7 +367,8 @@
       "symbol": "fUSD",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/token/fuseusd.jpg",
       "assetGroup": "Fuse Dollar::fUSD",
-      "currencyId": "Fuse Dollar::fUSD"
+      "currencyId": "Fuse Dollar::fUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x025a4c577198d116ea499193e6d735fdb2e6e841": {
       "chainId": "122",
@@ -442,7 +449,8 @@
       "symbol": "DAI",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0x2502f488d481df4f5054330c71b95d93d41625c2/b0f7e93ed5d6314101bb6c225e8141ac.png",
       "assetGroup": "Dai Stablecoin::DAI",
-      "currencyId": "Dai Stablecoin::DAI"
+      "currencyId": "Dai Stablecoin::DAI",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x2b09179d26fddb27a24ee25328890791c7a984c2": {
       "chainId": "122",
@@ -562,7 +570,8 @@
       "symbol": "fUSD",
       "logoURI": "https://static.debank.com/image/fuse_token/logo_url/0xd0ce1b4a349c35e61af02f5971e71ac502441e49/4db7f2d35e6ae655690aeb75dbdfd99a.png",
       "assetGroup": "Fuse Dollar::fUSD::122::0",
-      "currencyId": "Fuse Dollar::fUSD"
+      "currencyId": "Fuse Dollar::fUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xd1b300aec14c5ddb934c5bbcba4e9f7463b9e3ca": {
       "chainId": "122",
@@ -611,7 +620,11 @@
       "symbol": "agEUR",
       "logoURI": "https://raw.githubusercontent.com/sushiswap/list/master/logos/token-logos/network/optimism/0x9485aca5bbBE1667AD97c7fE7C4531a624C8b1ED.jpg",
       "assetGroup": "AGEUR",
-      "currencyId": "agEUR::agEUR"
+      "currencyId": "agEUR::agEUR",
+      "props": {
+        "stablecoin": { "base": "EUR" },
+        "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
+      }
     },
     "0xd8bf72f3e163b9cf0c73dfdcc316417a5ac20670": {
       "chainId": "122",
@@ -632,7 +645,8 @@
       "symbol": "SOUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/68960/thumb/soUSD_logo.png?1757088705",
       "assetGroup": "Solid USD soUSD::SOUSD",
-      "currencyId": "Solid USD soUSD::SOUSD"
+      "currencyId": "Solid USD soUSD::SOUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x4447863cddabbf2c3dac826f042e03c91927a196": {
       "chainId": "122",
