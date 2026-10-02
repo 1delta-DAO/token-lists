@@ -46,6 +46,7 @@ const REPO_ROOT = path.resolve(__dirname, '../..')
 const OUT = path.resolve(REPO_ROOT, 'solana.json')
 
 const JUPITER_VERIFIED = 'https://lite-api.jup.ag/tokens/v2/tag?query=verified'
+const JUPITER_SEARCH = 'https://lite-api.jup.ag/tokens/v2/search?query='
 const COINGECKO_SOLANA = 'https://tokens.coingecko.com/solana/all.json'
 const COINGECKO_PLATFORMS = 'https://api.coingecko.com/api/v3/coins/list?include_platform=true'
 const COINGECKO_ASSET_PLATFORMS = 'https://api.coingecko.com/api/v3/asset_platforms'
@@ -82,6 +83,39 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // (`0x22ae3d9a…`) and Arc (`0xa6db07eb…`), which carry this group. CoinGecko
   // lists no PST coin at all, so the cross-chain map cannot join it.
   '59obFNBzyTBGowrkif5uK7ojS58vsuWz3ZCvg6tfZAGw': 'PayFi Strategy Token::PST',
+  // USD.AI's Staked USDai: Jupiter-verified, vanity mint, metadata served from
+  // usd.ai/metadata/solana/; Kamino's "sUSDai Market" lends it. The EVM
+  // deployments (1/5042/8453/9745/42161 `0x0b2b2b20…`) carry this group.
+  sUSDai6Y3GxysDEtA9BVcEFTaog6UZpYUVxJiMhAKYE: 'sUSDai::SUSDAI',
+  // Nest's BlackOpal LiquidStone II (Plume): same name, icon served from
+  // assets.plume.org/…/nest/nOPAL/, Kamino's "Nest Market" lends it. The EVM
+  // deployments (1/5042/98866 `0x119dd7da…`) carry this group.
+  GArhnnDj3GYhmQeApKVXaRv4TQFwhPcs3SNF6FXsTeXq: 'Nest BlackOpal LiquidStone II Vault::nOPAL',
+}
+
+/**
+ * Mints Jupiter does NOT verify that a Solana lending market nevertheless
+ * holds as a reserve — so positions in them exist, and a token the list does
+ * not carry never reaches the classification / issuer overlay. Each is fetched
+ * one by one from Jupiter's search (`tokens/v2/search?query=<mint>`, which
+ * answers unverified mints too) and joins the roster past the liquidity floor.
+ *
+ * The bar: the mint is a reserve of a named lending market (the evidence on
+ * the line), and its identity is corroborated by the issuer's own metadata
+ * host. A mint that merely shares a ticker with something is not listed —
+ * `STCC` (ScarCoin, a Save memecoin market) and the second `DAI` on Save's
+ * "LST" market (`FWhZyxJQ…`, no issuer metadata) are deliberately absent.
+ */
+const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
+  sUSDai6Y3GxysDEtA9BVcEFTaog6UZpYUVxJiMhAKYE:
+    'Kamino "sUSDai Market" reserve; Jupiter-verified today, kept here should that lapse',
+  GArhnnDj3GYhmQeApKVXaRv4TQFwhPcs3SNF6FXsTeXq: 'Kamino "Nest Market" reserve; icon on assets.plume.org (Nest)',
+  BwB3tNH92jKw6naNGDYDbDwRo8bvYxZVvZjRZRcoWR2h: 'Kamino "Obligate Market" reserve (oTFY); icon on app.obligate.com',
+  '7GzQgf6DPo6ZANjnbhe9tNCpkGTv3zqHbsDx74jyQf9':
+    'Kamino "Superstate Opening Bell Market" reserve (FWDI); icon on assets.superstate.com — NOT the Backpack FWDI',
+  SAVEDpx3nFNdzG3ymJfShYnrBuYy7LtQEABZQ3qtTFt:
+    'Save main market reserve "Save Staked SOL (saveSOL)"; icon on save-assets',
+  sctmpFDKXZPEfTCEgDHqwxepmorCpYA5Q2CrYUytGDU: 'Save main market reserve "Save Staked SOL"; icon on save-assets',
 }
 
 interface JupToken {
@@ -188,6 +222,25 @@ async function main() {
   for (const p of cgPlatforms) if (p.chain_identifier) slugToChain.set(p.id, String(p.chain_identifier))
 
   const kept = jup.filter((t) => t.isVerified !== false).filter((t) => (t.liquidity ?? 0) >= MIN_LIQUIDITY_USD)
+
+  // The lending reserves Jupiter does not verify (SOLANA_EXTRA_MINTS). A mint
+  // the search does not answer EXACTLY is skipped and reported, never guessed.
+  const keptIds = new Set(kept.map((t) => t.id))
+  const extrasMissing: string[] = []
+  let extrasAdded = 0
+  for (const mint of Object.keys(SOLANA_EXTRA_MINTS)) {
+    if (keptIds.has(mint)) continue
+    const hit = (await getJson<JupToken[]>(JUPITER_SEARCH + mint).catch(() => [] as JupToken[])).find(
+      (t) => t.id === mint,
+    )
+    if (!hit) {
+      extrasMissing.push(mint)
+      continue
+    }
+    kept.push(hit)
+    keptIds.add(mint)
+    extrasAdded++
+  }
   const bySymbol = new Map(kept.map((t) => [t.id, t.symbol]))
 
   /**
@@ -343,6 +396,12 @@ async function main() {
       suffixed++
     }
     takenGroups.add(assetGroup.toLowerCase())
+    // Through the same overlay as a Jupiter token, so the PT / YT / SY gets
+    // its issuer (`exponent`, from the family prop) and the exposure its
+    // underlying walk reaches. Untagged, so nothing tag-gated fires.
+    const props = classifySolanaToken({ id: e.address, name: e.name, symbol: e.symbol }, assetGroup, {
+      exponent: e.props.exponent,
+    })
     list[e.address] = {
       chainId: 'solana',
       decimals: e.decimals,
@@ -352,7 +411,7 @@ async function main() {
       logoURI: e.logoURI,
       assetGroup,
       currencyId,
-      props: { exponent: e.props.exponent },
+      props,
     }
     exponentAdded++
   }
@@ -400,6 +459,10 @@ async function main() {
   console.log(`classified stablecoin       : ${withProp('stablecoin')}`)
   console.log(`classified savings          : ${withProp('savings')}`)
   console.log(`denomination set            : ${withProp('denomination')}`)
+  console.log(`issuer set                  : ${withProp('issuer')}`)
+  console.log(`issuerExposures set         : ${withProp('issuerExposures')}`)
+  console.log(`unverified lending mints    : ${extrasAdded} added (SOLANA_EXTRA_MINTS)`)
+  if (extrasMissing.length) console.log(`  NOT ANSWERED by search     : ${extrasMissing.join(', ')}`)
   console.log(
     `exponent PT/YT/SY           : ${withProp('exponent')}  (${exponentAdded} added, ${exponent.length - exponentAdded} already verified by Jupiter)`,
   )

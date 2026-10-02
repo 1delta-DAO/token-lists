@@ -3,11 +3,14 @@ import { lookupLstGroup } from '../lst/lstGroupMap'
 import { lookupStablecoin } from '../stablecoin/stablecoinMap'
 import { lookupSavings } from '../savings/savingsMap'
 import { lookupDenomination } from '../denomination/denominationMap'
+import { lookupIssuer, lookupIssuerByAddress, lookupIssuerExposures } from '../issuer/issuerMap'
+import { wrapperIssuer } from '../issuer/wrappers'
 import { LstProps, RwaProps, SavingsProps, StablecoinProps, TokenProps } from '../utils/types'
 
 /**
  * Classification overlay for `solana.json` — the `props.lst` / `rwa` /
- * `stablecoin` / `savings` / `denomination` flags every EVM list carries.
+ * `stablecoin` / `savings` / `denomination` / `issuer` / `issuerExposures`
+ * flags every EVM list carries.
  *
  * WHY THIS IS NOT THE GENERATOR'S OVERLAY STEP
  * --------------------------------------------
@@ -36,6 +39,8 @@ import { LstProps, RwaProps, SavingsProps, StablecoinProps, TokenProps } from '.
  */
 
 export interface TaggedToken {
+  /** The mint — the key `ISSUER_BY_ADDRESS` is consulted on (`solana:<mint>`). */
+  id: string
   name: string
   symbol: string
   tags?: string[]
@@ -159,6 +164,27 @@ export function classifySolanaToken(t: TaggedToken, assetGroup: string, existing
   const denomination = lookupDenomination(assetGroup)
   if (denomination && !props.denomination && !props.lst && !props.savings && !props.exponent)
     props.denomination = denomination
+
+  // Issuer overlay — the same two halves, in the same order, as the EVM
+  // generator (`generateTokenMap.script.ts`, "Issuer overlay"): a
+  // per-deployment line first, then the group, then the wrapper protocol the
+  // token's own family prop names (an Exponent PT is Exponent's instrument);
+  // the exposure list is the wrapper walk's answer minus the token's own desk.
+  //
+  // `ISSUER_BY_ADDRESS` and the exposure walk lower-case addresses on both
+  // sides. A base58 mint is case-significant, but the lower-cased string is a
+  // LOOKUP KEY only — nothing re-uses it as an address, and the list keeps the
+  // mint verbatim — and a collision between two mints that differ only in case
+  // is not a real risk at 32 bytes of entropy.
+  //
+  // `issuer.ts` reads THIS file back as an input (Solana LST / RWA desks, the
+  // Exponent hop), so a fresh desk lands on the second `npm run solana` of
+  // `solana → issuer → solana`, never on the first.
+  const issuer = lookupIssuerByAddress('solana', t.id) ?? lookupIssuer(assetGroup) ?? wrapperIssuer(props)
+  if (issuer && !props.issuer) props.issuer = issuer
+  const ownDesk = props.issuer?.id
+  const issuerExposures = lookupIssuerExposures(assetGroup)?.filter((e) => e.id !== ownDesk)
+  if (issuerExposures?.length && !props.issuerExposures) props.issuerExposures = issuerExposures
 
   return props
 }

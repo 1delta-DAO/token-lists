@@ -81,6 +81,25 @@ const SEED_ALIASES: Record<string, IssuerProps> = {
   superstate: { id: 'superstate', name: 'Superstate', kind: 'institution' },
   hashnote: { id: 'hashnote', name: 'Hashnote', kind: 'institution' },
   paxos: { id: 'paxos', name: 'Paxos', kind: 'institution' },
+  // Solana desks (`solana.json`'s `lst.provider` / `rwa.issuer`, and the
+  // curated Solana rows in issuerAssets.ts).
+  jupiter: { id: 'jupiter', name: 'Jupiter', kind: 'protocol' },
+  drift: { id: 'drift', name: 'Drift', kind: 'protocol' },
+  sanctum: { id: 'sanctum', name: 'Sanctum', kind: 'protocol' },
+  helius: { id: 'helius', name: 'Helius', kind: 'protocol' },
+  phantom: { id: 'phantom', name: 'Phantom', kind: 'institution' }, // a company, as the CASH row says (issuerAssets.ts)
+  solblaze: { id: 'solblaze', name: 'SolBlaze', kind: 'protocol' },
+  blaze: { id: 'solblaze', name: 'SolBlaze', kind: 'protocol' }, // the rule engine's provider slug for bSOL
+  onre: { id: 'onre', name: 'OnRe', kind: 'institution' },
+  huma: { id: 'huma', name: 'Huma', kind: 'protocol' },
+  solstice: { id: 'solstice', name: 'Solstice', kind: 'protocol' },
+  hylo: { id: 'hylo', name: 'Hylo', kind: 'protocol' },
+  okx: { id: 'okx', name: 'OKX', kind: 'cex' },
+  hastra: { id: 'hastra', name: 'Hastra', kind: 'protocol' },
+  jpool: { id: 'jpool', name: 'JPool', kind: 'protocol' },
+  thevault: { id: 'thevault', name: 'The Vault', kind: 'protocol' },
+  fragmetric: { id: 'fragmetric', name: 'Fragmetric', kind: 'protocol' },
+  solayer: { id: 'solayer', name: 'Solayer', kind: 'protocol' },
 }
 
 /**
@@ -386,6 +405,46 @@ function inheritSavings(
   return { issuers: inherited, exposures, stats }
 }
 
+/**
+ * `solana.json` folded into the omni-list shape (group -> currencies), because
+ * the omni-list is built by the EVM generator and holds 0 Solana currencies.
+ * Without it `fromProps` derives no Solana LST / RWA desk and the exposure walk
+ * has no Exponent PT to start from. A Solana mint that joined a global group
+ * (`USDC`, `CBBTC`, `sUSDai::SUSDAI`) is appended to that group's currencies —
+ * on a COPY, the omni-list object is not mutated.
+ *
+ * Non-fatal like the omni-list read: a bare checkout has no solana.json. Its
+ * own build reads issuer.json back (`solanaClassify.ts`), hence the order
+ * `npm run solana` -> `npm run issuer` -> `npm run solana`.
+ */
+const SOLANA_CHAIN = 'solana'
+
+function withSolana(omni: Record<string, OmniCurrencyLike>): Record<string, OmniCurrencyLike> {
+  let list: Record<string, any>
+  try {
+    list = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../solana.json'), 'utf-8'))?.list ?? {}
+  } catch (error) {
+    console.warn('[issuer] could not read solana.json, deriving without Solana:', (error as Error).message)
+    return omni
+  }
+  const out: Record<string, OmniCurrencyLike> = { ...omni }
+  let n = 0
+  for (const t of Object.values<any>(list)) {
+    if (!t?.assetGroup || !t?.address) continue
+    const prior = out[t.assetGroup]
+    out[t.assetGroup] = {
+      ...prior,
+      currencies: [
+        ...(prior?.currencies ?? []),
+        { chainId: SOLANA_CHAIN, address: t.address, name: t.name, symbol: t.symbol, props: t.props },
+      ],
+    }
+    n++
+  }
+  console.log(`  + ${n} Solana token(s) from solana.json.`)
+  return out
+}
+
 function serialize(map: Record<string, unknown>): string {
   const keys = Object.keys(map).sort()
   return JSON.stringify(
@@ -406,8 +465,8 @@ function generateIssuerMap() {
     const omni: Record<string, OmniCurrencyLike> = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, '../../omni-list.json'), 'utf-8'),
     )
-    omniGroups = omni
-    for (const [group, entry] of Object.entries(omni)) {
+    omniGroups = withSolana(omni)
+    for (const [group, entry] of Object.entries(omniGroups)) {
       const issuer = fromProps(entry)
       if (issuer) {
         map[group] = issuer
@@ -465,6 +524,11 @@ function generateIssuerMap() {
     const issuer = expandable[group]
     if (!issuer) continue
     for (const c of entry.currencies ?? []) {
+      // Not for a Solana deployment: its group is `::solana`-scoped or a
+      // global group joined on cross-chain evidence, so the overlay already
+      // finds it by its own key, and its `Name::SYMBOL` would only reach EVM
+      // tokens that happen to share the string — a ticker, not an identity.
+      if (c?.chainId === SOLANA_CHAIN) continue
       const name = typeof c?.name === 'string' ? c.name : ''
       const symbol = typeof c?.symbol === 'string' ? c.symbol : ''
       if (!name || !symbol) continue

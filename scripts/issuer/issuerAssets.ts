@@ -792,6 +792,52 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'World Liberty Financial USD::USD1': { id: 'world-liberty', name: 'World Liberty Financial', kind: 'institution' }, // 42161 0x7550…: gateway l1Address() = USD1 0x8d0d… (1)
   'Verified USD::USDV': { id: 'verified-usd', name: 'Verified USD Foundation', kind: 'institution' }, // docs.usdv.money lists 1 0x0e57… and 0x3236… on 10/56/137/42161/43114
   'Wrapped iTRY::WITRY': { id: 'brix', name: 'Brix', kind: 'institution' }, // chain: wiTRY (1) asset() = iTRY 0xb492…; brix.money/itry — Brix's staked iTRY, OFT on 4326/4663
+
+  // --- Solana (`solana.json`) ----------------------------------------------
+  //
+  // Keyed EXACTLY as solana.json holds the group: a mint with no cross-chain
+  // evidence is `Name::SYMBOL::solana` (scripts/solana/solana.ts), so these
+  // can never reach an EVM token. The few bare / global keys below are groups
+  // a Solana mint JOINED, and the desk is the same on every chain. The LST /
+  // RWA corners derive from `lst.provider` / `rwa.issuer` (issuer.ts reads
+  // solana.json); these are the products no feed names. Same rule as above:
+  // the group NAME (or the issuer's own metadata host) names the desk.
+  'OnRe Tokenized Reinsurance::ONyc::solana': { id: 'onre', name: 'OnRe', kind: 'institution' }, // 5Y8NV33V… — OnRe's reinsurance note; Exponent's PT-ONyc walks to it
+  'Jupiter Perps::JLP::solana': { id: 'jupiter', name: 'Jupiter', kind: 'protocol' }, // 27G8MtK7… — the Jupiter Perps LP token
+  'Jupiter Staked SOL::JupSOL::solana': { id: 'jupiter', name: 'Jupiter', kind: 'protocol' }, // jupSoLaH…
+  'Jupiter USD::JupUSD::solana': { id: 'jupiter', name: 'Jupiter', kind: 'protocol' }, // JuprjznT…
+  'Infinity::INF::solana': { id: 'sanctum', name: 'Sanctum', kind: 'protocol' }, // 5oVNBeEE… — Sanctum Infinity, the multi-LST pool
+  // Huma's PayFi Strategy Token: Solana original + its CCIP mirrors on 1 / 5042
+  // (solana.ts SOLANA_MAPPEDS joins the mint to this group).
+  'PayFi Strategy Token::PST': { id: 'huma', name: 'Huma', kind: 'protocol' },
+  'USX::USX::solana': { id: 'solstice', name: 'Solstice', kind: 'protocol' }, // 6FrrzDk5…
+  // Solstice's own yield-bearing USX. Carries no `savings.underlying`, so the
+  // savings walk cannot reach USX from it — curated, as sUSDS is with USDS.
+  'eUSX::eUSX::solana': { id: 'solstice', name: 'Solstice', kind: 'protocol' }, // 3ThdFZQK…
+  // Phantom's CASH, issued through Bridge (Stripe) — its metadata is served from
+  // token-metadata.bridge.xyz. Same shape as MetaMask USD above.
+  'CASH::CASH::solana': { id: 'phantom', name: 'Phantom', kind: 'institution', parent: 'bridge' }, // CASHx9KJ…
+  'hyUSD::hyUSD::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // 5YMkXAYc… (metadata on hylo-token-metadata)
+  'Earn Hylo USD::eHYUSD::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // HnnGv3Hr…
+  'Hylo Leveraged BTC::xBTC::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // 2zCo6bUo… — NOT OKX's xBTC
+  'Hylo Leveraged SOL::xSOL::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // 4sWNB8zG…
+  'Hylo Staked SOL::hyloSOL::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // hy1oXYgr…
+  'Hylo SOL Plus::hyloSOL+::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // hy1opf2b…
+  // OKX's wrapped BTC: X Layer (196 0xb7c0…) and its Solana mint CtzPWv73…,
+  // one group. An exchange's own wrapper, like cbBTC / BTCB.
+  'OKX Wrapped BTC::xBTC': { id: 'okx', name: 'OKX', kind: 'cex' },
+  // Hastra (Figure's yield program): PRIME on 1 / 4217 / Solana, AUTO on 1 /
+  // Solana. wYLDS is NOT here: its Solana metadata carries no name at all
+  // (`::wYLDS::solana`), so nothing in the list says whose it is.
+  'Hastra PRIME::PRIME': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
+  'Hastra AUTO::AUTO': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
+  // Wormhole Portal DAI (EjmyN6qE…) — a bridged copy over a live bridge is
+  // still the desk's dollar, cf. `USDC::USDC(Wormhole)` above.
+  'DAI (Portal)::DAI::solana': { id: 'sky', name: 'Sky', kind: 'protocol' },
+  // Save's own stake pool — both mints are reserves of Save's main market under
+  // that name (SAVEDpx3…, and sctmpFDK… which the list numbers `::0`).
+  'Save Staked SOL::saveSOL::solana': { id: 'save', name: 'Save', kind: 'protocol' },
+  'Save Staked SOL::saveSOL::solana::0': { id: 'save', name: 'Save', kind: 'protocol' },
 }
 
 /**
@@ -896,4 +942,11 @@ export const ISSUER_BY_ADDRESS: Record<string, IssuerProps> = {
   // it is the desk here (as Ava Labs is for BTC.b). Only the deployment whose
   // name() says so; `syBTC` on 30/56 is left blank.
   '324:0xed0c95ebe5a3e687cb2224687024fec6518e683e': { id: 'symbiosis', name: 'Symbiosis', kind: 'protocol' },
+
+  // --- Solana: base58 mints, lower-cased as a LOOKUP KEY only ---------------
+  // (lookupIssuerByAddress lower-cases both sides; solana.json keeps the mint
+  // verbatim.) Superstate's FWDI share (`7GzQgf6D…`, Kamino "Superstate Opening
+  // Bell Market", icon on assets.superstate.com) — Backpack's FWDI (`FWDtiB5f…`)
+  // is a different token and derives `backpack` from its rwa tag.
+  'solana:7gzqgf6dpo6zanjnbhe9tncpkgtv3zqhbsdx74jyqf9': { id: 'superstate', name: 'Superstate', kind: 'institution' },
 }
