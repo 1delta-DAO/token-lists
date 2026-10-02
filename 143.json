@@ -58,7 +58,14 @@
       "assetGroup": "earnAUSD Monad::SY-earnAUSD",
       "currencyId": "earnAUSD Monad::SY-earnAUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xdc66fcf20d4e8780ea9eda19d832345a2af69c42",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
+          "ytAddress": "0xddb70adb30e61f6c4d36ce70d5a3e3c13d39136f"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -144,7 +151,14 @@
       "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-17DEC2026",
       "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-17DEC2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1797465600 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x9cbc42eff240ad2e43bbdc3c0562a9b4ce842a5a",
+          "expiry": 1797465600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
+          "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -328,7 +342,14 @@
       "assetGroup": "PT AUSD (AUSD) Monad::PT-AUSD-17DEC2026",
       "currencyId": "PT AUSD (AUSD) Monad::PT-AUSD-17DEC2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1797465600 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x9cbc42eff240ad2e43bbdc3c0562a9b4ce842a5a",
+          "expiry": 1797465600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ytAddress": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e",
+          "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -493,7 +514,14 @@
       "assetGroup": "PT earnAUSD (AUSD) Monad::PT-earnAUSD-28JAN2027",
       "currencyId": "PT earnAUSD (AUSD) Monad::PT-earnAUSD-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xdc66fcf20d4e8780ea9eda19d832345a2af69c42",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ytAddress": "0xddb70adb30e61f6c4d36ce70d5a3e3c13d39136f",
+          "syAddress": "0x05938d5d7b7243a27d88b83272ab36f2034168f4"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -663,7 +691,14 @@
       "assetGroup": "YT earnAUSD (AUSD) Monad::YT-earnAUSD-28JAN2027",
       "currencyId": "YT earnAUSD (AUSD) Monad::YT-earnAUSD-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xdc66fcf20d4e8780ea9eda19d832345a2af69c42",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
+          "syAddress": "0x05938d5d7b7243a27d88b83272ab36f2034168f4"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -699,7 +734,14 @@
       "assetGroup": "AUSD Monad::SY-AUSD::143::0",
       "currencyId": "AUSD Monad::SY-AUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x9cbc42eff240ad2e43bbdc3c0562a9b4ce842a5a",
+          "expiry": 1797465600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
+          "ytAddress": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -2034,8 +2076,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x1c8ee940b654bfced403f2a44c1603d5be0f50fa": {
@@ -2416,8 +2458,8 @@
       "assetGroup": "eBTC::EBTC",
       "currencyId": "eBTC::EBTC",
       "props": {
-        "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" }
       }
     },
     "0x3a2c4aaae6776dc1c31316de559598f2f952e2cb": {
@@ -2781,8 +2823,8 @@
       "assetGroup": "ENZOBTC",
       "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
       "props": {
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0xc6de1dc0b59682be906e5bca14e385e74ee88168": {
