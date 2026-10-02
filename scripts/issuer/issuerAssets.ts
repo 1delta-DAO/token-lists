@@ -772,6 +772,8 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'zkUSD::ZKUSD': { id: 'goal3', name: 'Goal3', kind: 'protocol' }, // feed 151
   'flexUSD::FLEXUSD': { id: 'coinflex', name: 'CoinFLEX', kind: 'cex' }, // feed 21 (defunct desk is still the desk)
   'Nest Elixir Vault::NELIXIR': { id: 'nest', name: 'Nest', kind: 'institution' }, // a Nest vault, like the rwa-derived `nest` ones
+  // a Nest vault OVER BlackRock's CLO ETF: the share is Nest's (rwaAssets.ts says so too); the seed read the name
+  'Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA': { id: 'nest', name: 'Nest', kind: 'institution' },
   // Reserve Protocol RTokens — same treatment as `Electronic USD` / `Web 3 Dollar`.
   'Reserve::RSV': { id: 'reserve', name: 'Reserve', kind: 'protocol' }, // feed 25
   'KNOX::KNOX': { id: 'reserve', name: 'Reserve', kind: 'protocol' }, // feed 187; chain: main() (RToken)

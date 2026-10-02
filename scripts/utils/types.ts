@@ -475,6 +475,12 @@ export interface TokenProps {
     issuer?: string
     /** underlying real-world instrument, e.g. 'AAPL' | 'US T-Bill' | 'XAU' */
     underlying?: string
+    /**
+     * The money the fund's NAV is struck in, upper-case (`'USD'`) — for a vault share, its
+     * accountant's base asset. A floating NAV in that money, NOT a peg (a share at 1.10 is
+     * $1.10). Set only where verified on-chain; consumers read it as the token's money.
+     */
+    denomination?: string
   }
   /** Liquid (re)staking token classification */
   lst?: {
