@@ -263,7 +263,7 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/bfBTC.webp",
       "assetGroup": "BitFi Bitcoin::BFBTC",
       "currencyId": "BitFi Bitcoin::bfBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "43111",
@@ -305,8 +305,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0x1596be338b999e2376675c908168a7548c8b0525": {
@@ -405,12 +405,8 @@
       "assetGroup": "M-BTC",
       "currencyId": "Merlin BTC::M-BTC",
       "props": {
-        "issuer": {
-          "id": "merlin",
-          "name": "Merlin Chain",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
     "0x12b6e6fc45f81cda81d2656b974e8190e4ab8d93": {

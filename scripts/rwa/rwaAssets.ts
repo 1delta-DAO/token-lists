@@ -22,24 +22,84 @@ export const RWA_MANUAL: RwaRegistry = {
   // nACRDX/nWISDOM/nOPAL) and `getRate()` is the NAV in it — checked 2026-10-02, nOPAL 1.101612
   // = its USD price. A floating NAV (nWISDOM 0.93), not a peg.
   '98866': {
-    '0x593ccca4c4bf58b7526a4c164ceef4003c6388db': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nALPHA
-    '0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9': { type: 'fund', subType: 'treasury', issuer: 'nest', denomination: 'USD' }, // nTBILL
-    '0x11113ff3a60c2450f4b22515cb760417259ee94b': { type: 'fund', subType: 'basis-trade', issuer: 'nest', denomination: 'USD' }, // nBASIS
-    '0xa5f78b2a0ab85429d2dfbf8b60abc70f4cec066c': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nCREDIT
-    '0x2a3e301dbd45c143dfbb7b1ce1c55bf0bbf161cb': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nACRDX
-    '0x29bf22381a5811dec89dc7b46a5ce57ad02c0240': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nWISDOM
-    '0x119dd7daff816f29d7ee47596ae5e4bdc4299165': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nOPAL
-    '0xdf45b8322ea4ce898331602e2d1f3d1a67ae0ee8': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nLCRD
-    '0x7488b23f4c26b44eef2e0766896be47443e86d79': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nAXI
-    '0x066d10e240999aea6798b2e2ca0bdac2923cbdff': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nFALCON
+    '0x593ccca4c4bf58b7526a4c164ceef4003c6388db': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nALPHA
+    '0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nTBILL
+    '0x11113ff3a60c2450f4b22515cb760417259ee94b': {
+      type: 'fund',
+      subType: 'basis-trade',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nBASIS
+    '0xa5f78b2a0ab85429d2dfbf8b60abc70f4cec066c': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nCREDIT
+    '0x2a3e301dbd45c143dfbb7b1ce1c55bf0bbf161cb': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nACRDX
+    '0x29bf22381a5811dec89dc7b46a5ce57ad02c0240': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nWISDOM
+    '0x119dd7daff816f29d7ee47596ae5e4bdc4299165': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nOPAL
+    '0xdf45b8322ea4ce898331602e2d1f3d1a67ae0ee8': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nLCRD
+    '0x7488b23f4c26b44eef2e0766896be47443e86d79': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nAXI
+    '0x066d10e240999aea6798b2e2ca0bdac2923cbdff': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nFALCON
     '0x63810d7f1c7b4dbfb60c173ba120a2be98b59e13': { type: 'fund', subType: 'etf', issuer: 'nest', denomination: 'USD' }, // nCLOA
   },
   // Arc (5042) — the same two Nest shares at their Plume addresses (verified on-chain:
   // same name/symbol/decimals, live supply). The name carries no "Nest"-rule the
   // classifier knows, so they need the manual row exactly like Plume's.
   '5042': {
-    '0x119dd7daff816f29d7ee47596ae5e4bdc4299165': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nOPAL
-    '0x066d10e240999aea6798b2e2ca0bdac2923cbdff': { type: 'fund', subType: 'private-credit', issuer: 'nest', denomination: 'USD' }, // nFALCON
+    '0x119dd7daff816f29d7ee47596ae5e4bdc4299165': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nOPAL
+    '0x066d10e240999aea6798b2e2ca0bdac2923cbdff': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'nest',
+      denomination: 'USD',
+    }, // nFALCON
   },
 }
 

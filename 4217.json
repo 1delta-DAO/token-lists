@@ -534,7 +534,7 @@
       "currencyId": "Agant GBP::GBPA",
       "props": {
         "risk": {
-          "score": 5,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -606,7 +606,10 @@
       "symbol": "PRIME",
       "logoURI": "https://api.tempo.xyz/assets/4217/icons/0x20c00000000000000000000058d0b8b2cfdb358c",
       "assetGroup": "Hastra PRIME::PRIME",
-      "currencyId": "Hastra PRIME::PRIME"
+      "currencyId": "Hastra PRIME::PRIME",
+      "props": {
+        "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
+      }
     },
     "0x20c000000000000000000000f37de3740adec032": {
       "chainId": "4217",
@@ -637,6 +640,11 @@
       "assetGroup": "YLDS::YLDS",
       "currencyId": "YLDS::YLDS",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "figure", "name": "Figure", "kind": "institution" }
       }
@@ -651,6 +659,11 @@
       "assetGroup": "OpenUSD::OUSD",
       "currencyId": "OpenUSD::OUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "open-standard",

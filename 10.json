@@ -11672,12 +11672,8 @@
       "currencyId": "Optimism tBTC v2::tBTC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0x73cb180bf0521828d8849bc8cf2b920918e23032": {
@@ -12895,8 +12891,8 @@
             }
           ]
         },
-        "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
     "0x5a5fff6f753d7c11a56a52fe47a177a87e431655": {
@@ -13222,6 +13218,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -15049,6 +15046,7 @@
       "currencyId": "StaFi Staked ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -15373,6 +15371,7 @@
           ]
         },
         "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },

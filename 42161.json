@@ -6346,7 +6346,7 @@
           "ytAddress": "0x82533d15d76f498de4f50858f9a86ad3b22c752d",
           "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
         },
-        "risk": { "score": 3, "source": "vault_inherit" },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -21750,7 +21750,6 @@
       "currencyId": "ether.fi BTC::eBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -25124,12 +25123,8 @@
       "assetGroup": "tBTC::tBTC",
       "currencyId": "tBTC::tBTC",
       "props": {
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0xd58d345fd9c82262e087d2d0607624b410d88242": {
@@ -27936,6 +27931,7 @@
           ]
         },
         "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -27978,6 +27974,7 @@
           ]
         },
         "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -28271,6 +28268,7 @@
       "currencyId": "Universal ETH::uniETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -28793,6 +28791,7 @@
                 "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "43114": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
               }
@@ -33618,12 +33617,8 @@
       "currencyId": "tBTC::TBTC",
       "props": {
         "risk": { "score": 2, "source": "whitelist" },
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0x999faf0af2ff109938eefe6a7bf91ca56f0d07e1": {
@@ -33918,8 +33913,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x968be3f7bfef0f8edc3c1ad90232ebb0da0867aa": {
@@ -34782,6 +34777,7 @@
       "currencyId": "Wrapped OETH::WOETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "origin" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "origin", "name": "Origin", "kind": "protocol" }
       }
     },
@@ -37028,6 +37024,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -38229,6 +38226,7 @@
       "currencyId": "StaFi::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -42516,6 +42514,7 @@
       "currencyId": "Super Symbiotic LRT::weETHs",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -43665,6 +43664,7 @@
       "currencyId": "Universal ETH::uniETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -45746,6 +45746,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },
@@ -47236,7 +47237,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -47557,7 +47558,10 @@
       "symbol": "MCOX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176217/thumb/MCOx.png?1787822115",
       "assetGroup": "Moody's xStock::MCOX",
-      "currencyId": "Moody's xStock::MCOX"
+      "currencyId": "Moody's xStock::MCOX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x5a4860addcc094fce026384caeecb1e634dd9af4": {
       "chainId": "42161",
@@ -47697,7 +47701,10 @@
       "symbol": "SMOIHX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176353/thumb/SMOIHx.png?1787822657",
       "assetGroup": "Smoore International xStock::SMOIHX",
-      "currencyId": "Smoore International xStock::SMOIHX"
+      "currencyId": "Smoore International xStock::SMOIHX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0xb8e03ad48dddc2e415715f6dbefb51839e756c25": {
       "chainId": "42161",
@@ -47967,7 +47974,10 @@
       "symbol": "QSRX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176309/thumb/QSRx.png?1787822484",
       "assetGroup": "Restaurant Brands International xStock::QSRX",
-      "currencyId": "Restaurant Brands International xStock::QSRX"
+      "currencyId": "Restaurant Brands International xStock::QSRX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x822594e4bc4c8237e77e5620744d3f383e77d4fe": {
       "chainId": "42161",
@@ -48207,7 +48217,10 @@
       "symbol": "DRIX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176037/thumb/DRIx.png?1787821375",
       "assetGroup": "Darden Restaurants xStock::DRIX",
-      "currencyId": "Darden Restaurants xStock::DRIX"
+      "currencyId": "Darden Restaurants xStock::DRIX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x0b45e5afea928030988704ef60995d8925b91cd6": {
       "chainId": "42161",
