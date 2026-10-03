@@ -428,6 +428,10 @@ export const GROUP_ALIAS: Record<string, string> = {
   // every other XAUt0: CoinGecko files it under `tether-gold-tokens` exactly as it does
   // Arbitrum's and HyperEVM's XAUt0, and `name()` / `symbol()` answer "Tether Gold" / "XAUt".
   'Tether Gold::XAUt0': 'Tether Gold::XAUt',
+  // NetNet sNET (Robinhood Chain 0xb773…a4c7) — rebasing stake of NET, always 1:1 with NET
+  // (the stETH/ETH shape). wsNET is the non-rebasing wrap (sNET × index) and keeps its own
+  // group `Wrapped Staked NET::wsNET`; merging it here would price it with NET's feed.
+  'Staked NET::sNET': 'NetNet::NET',
 }
 
 export function aliasAssetGroup(gr: string) {
