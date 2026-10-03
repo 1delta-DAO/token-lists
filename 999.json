@@ -2218,7 +2218,7 @@
           "ytAddress": "0xd78bdbaa4cbd60bc9311faea101fd96caa889448",
           "syAddress": "0x57fc55dff8ceca86ee94a6bf255af2f0ed90eb9e"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kinetiq", "name": "Kinetiq", "kind": "protocol", "hops": 1 }
@@ -14014,7 +14014,7 @@
       "currencyId": "hyperbeat x ether.fi HYPE::beHYPE",
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "oft": {
           "eid": 30367,
           "routes": [
@@ -14148,6 +14148,7 @@
       "currencyId": "Staked HYPE::STHYPE",
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "valantis" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "valantis", "name": "Valantis", "kind": "protocol" }
       }
     },
@@ -14192,7 +14193,7 @@
       "currencyId": "Hyperbeat LST Vault::lstHYPE",
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "hyperbeat" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "hyperbeat", "name": "Hyperbeat", "kind": "protocol" }
       }
     },
@@ -14207,6 +14208,7 @@
       "currencyId": "Hyperdrive Liquid Staked Hype::HYPED",
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "hyperdrive" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": {
           "id": "hyperdrive",
           "name": "Hyperdrive",
@@ -14225,6 +14227,7 @@
       "currencyId": "Kintsu Staked Hype::SHYPE",
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "kintsu" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "kintsu", "name": "Kintsu", "kind": "protocol" }
       }
     },
@@ -14239,6 +14242,7 @@
       "currencyId": "Ventuals vHYPE::VHYPE",
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "ventuals" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "ventuals", "name": "Ventuals", "kind": "protocol" }
       }
     },
@@ -14556,8 +14560,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x96c6cbb6251ee1c257b2162ca0f39aa5fa44b1fb": {
@@ -14569,7 +14573,7 @@
       "logoURI": "https://www.hyperbeat.org/assets/images/vaults/hbhype.svg",
       "assetGroup": "Hyperbeat Ultra Hype::hbHYPE",
       "currencyId": "Hyperbeat Ultra Hype::hbHYPE",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x7dcffcb06b40344eeced2d1cbf096b299fe4b405": {
       "chainId": "999",
@@ -15414,6 +15418,7 @@
                 "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "42161": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "43114": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
@@ -15484,9 +15489,7 @@
       "logoURI": "https://app.hyperbeat.org/assets/images/vaults/hbUSDC.svg",
       "assetGroup": "Hyperbeat USDC::hbUSDC",
       "currencyId": "Hyperbeat USDC::hbUSDC",
-      "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
-      }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x835febf893c6dddee5cf762b0f8e31c5b06938ab": {
       "chainId": "999",
@@ -15609,7 +15612,8 @@
       "symbol": "hbBTC",
       "logoURI": "https://app.hyperbeat.org/assets/images/vaults/hbBTC.svg",
       "assetGroup": "Hyperbeat Ultra uBTC::hbBTC",
-      "currencyId": "Hyperbeat Ultra uBTC::hbBTC"
+      "currencyId": "Hyperbeat Ultra uBTC::hbBTC",
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x618275f8efe54c2afa87bfb9f210a52f0ff89364": {
       "chainId": "999",
@@ -16412,7 +16416,8 @@
       "symbol": "sUSDp",
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/sUSDp.svg",
       "assetGroup": "Staked USDp::sUSDp",
-      "currencyId": "Staked USDp::sUSDp"
+      "currencyId": "Staked USDp::sUSDp",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xcae9e2a86c146b084169e170e63d340bf34d6b83": {
       "chainId": "999",
@@ -16583,7 +16588,8 @@
       "symbol": "liquidHYPE",
       "logoURI": "https://assets.coingecko.com/coins/images/68444/thumb/liquidhype.png?1755770963",
       "assetGroup": "Liquid HYPE Yield::liquidHYPE",
-      "currencyId": "Liquid HYPE Yield::liquidHYPE"
+      "currencyId": "Liquid HYPE Yield::liquidHYPE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x6365b1d514342015ce623e488bf74af4a8772c8f": {
       "chainId": "999",
@@ -17886,7 +17892,8 @@
       "address": "0xa2f88bd459cbe5358d78b12109bad9bffd54a4d3",
       "symbol": "PURR/USH",
       "assetGroup": "Hyperstable PURR/USH::PURR/USH",
-      "currencyId": "Hyperstable PURR/USH::PURR/USH"
+      "currencyId": "Hyperstable PURR/USH::PURR/USH",
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x232e18cc8d53fdd2d27c68f46f9da156ef889b5d": {
       "chainId": "999",
@@ -17895,7 +17902,8 @@
       "address": "0x232e18cc8d53fdd2d27c68f46f9da156ef889b5d",
       "symbol": "WHLP/USH",
       "assetGroup": "Hyperstable WHLP/USH::WHLP/USH",
-      "currencyId": "Hyperstable WHLP/USH::WHLP/USH"
+      "currencyId": "Hyperstable WHLP/USH::WHLP/USH",
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x61f25b1b4235e0fff2329037cf514c4f72c8e9fd": {
       "chainId": "999",
@@ -17904,7 +17912,8 @@
       "address": "0x61f25b1b4235e0fff2329037cf514c4f72c8e9fd",
       "symbol": "HWHLP/USH",
       "assetGroup": "Hyperstable HWHLP/USH::HWHLP/USH",
-      "currencyId": "Hyperstable HWHLP/USH::HWHLP/USH"
+      "currencyId": "Hyperstable HWHLP/USH::HWHLP/USH",
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0xd2196493cf0d51276ab509e0ce89015bcb0d77c3": {
       "chainId": "999",
@@ -19113,7 +19122,10 @@
       "symbol": "UNGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172447/thumb/ungon_160x160.png?1773420007",
       "assetGroup": "US Natural Gas Fund (Ondo Tokenized)::UNGON",
-      "currencyId": "US Natural Gas Fund (Ondo Tokenized)::UNGON"
+      "currencyId": "US Natural Gas Fund (Ondo Tokenized)::UNGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x32ec2792aec02122edd9f28866b720db1e1c1b54": {
       "chainId": "999",
@@ -19123,7 +19135,10 @@
       "symbol": "SPYON",
       "logoURI": "https://assets.coingecko.com/coins/images/68655/thumb/spyon_160x160.png?1756156354",
       "assetGroup": "SPDR S&P 500 ETF (Ondo Tokenized ETF)::SPYON",
-      "currencyId": "SPDR S&P 500 ETF (Ondo Tokenized ETF)::SPYON"
+      "currencyId": "SPDR S&P 500 ETF (Ondo Tokenized ETF)::SPYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x353d347bb7bc1c812e3a131d9b5193b3618029e5": {
       "chainId": "999",
@@ -19133,7 +19148,10 @@
       "symbol": "RIVNON",
       "logoURI": "https://assets.coingecko.com/coins/images/71463/thumb/rivnon_160x160.png?1767890637",
       "assetGroup": "Rivian Automotive (Ondo Tokenized)::RIVNON",
-      "currencyId": "Rivian Automotive (Ondo Tokenized)::RIVNON"
+      "currencyId": "Rivian Automotive (Ondo Tokenized)::RIVNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x5ff6e08a0bdbc1ff11004ffb62b7ac7cdcf101bd": {
       "chainId": "999",
@@ -19143,7 +19161,10 @@
       "symbol": "PALLON",
       "logoURI": "https://assets.coingecko.com/coins/images/71399/thumb/pallon_160x160.png?1767874802",
       "assetGroup": "abrdn Physical Palladium Shares ETF (Ondo Tokenized ETF)::PALLON",
-      "currencyId": "abrdn Physical Palladium Shares ETF (Ondo Tokenized ETF)::PALLON"
+      "currencyId": "abrdn Physical Palladium Shares ETF (Ondo Tokenized ETF)::PALLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x86e33197369a3560cee2ab6bb12376ac7b29f3dd": {
       "chainId": "999",
@@ -19153,7 +19174,10 @@
       "symbol": "COPXON",
       "logoURI": "https://assets.coingecko.com/coins/images/71424/thumb/copxon_160x160.png?1767882136",
       "assetGroup": "Global X Copper Miners ETF (Ondo Tokenized ETF)::COPXON",
-      "currencyId": "Global X Copper Miners ETF (Ondo Tokenized ETF)::COPXON"
+      "currencyId": "Global X Copper Miners ETF (Ondo Tokenized ETF)::COPXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x911e2dcd2b70f44231f3f0f1c6ec9af75068fd85": {
       "chainId": "999",
@@ -19163,7 +19187,10 @@
       "symbol": "QQQON",
       "logoURI": "https://assets.coingecko.com/coins/images/68654/thumb/qqqon_160x160.png?1756156339",
       "assetGroup": "Invesco QQQ ETF (Ondo Tokenized ETF)::QQQON",
-      "currencyId": "Invesco QQQ ETF (Ondo Tokenized ETF)::QQQON"
+      "currencyId": "Invesco QQQ ETF (Ondo Tokenized ETF)::QQQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x95febdd6f447b5278c9b98743b4254eb02c6ea1d": {
       "chainId": "999",
@@ -19173,7 +19200,10 @@
       "symbol": "GLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/71467/thumb/gldon_160x160.png?1767891536",
       "assetGroup": "SPDR Gold Shares (Ondo Tokenized)::GLDON",
-      "currencyId": "SPDR Gold Shares (Ondo Tokenized)::GLDON"
+      "currencyId": "SPDR Gold Shares (Ondo Tokenized)::GLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa019295d44677dd2f5b066245453938b1b1c483b": {
       "chainId": "999",
@@ -19183,7 +19213,10 @@
       "symbol": "FCXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172494/thumb/fcxon_160x160.png?1773507293",
       "assetGroup": "Freeport-McMoRan (Ondo Tokenized)::FCXON",
-      "currencyId": "Freeport-McMoRan (Ondo Tokenized)::FCXON"
+      "currencyId": "Freeport-McMoRan (Ondo Tokenized)::FCXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa4db50bb345151f3649539300523e83a8b8a6bc7": {
       "chainId": "999",
@@ -19193,7 +19226,10 @@
       "symbol": "USOON",
       "logoURI": "https://assets.coingecko.com/coins/images/71471/thumb/usoon_160x160.png?1767892001",
       "assetGroup": "United States Oil Fund (Ondo Tokenized)::USOON",
-      "currencyId": "United States Oil Fund (Ondo Tokenized)::USOON"
+      "currencyId": "United States Oil Fund (Ondo Tokenized)::USOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb4c0eaf28ae7f667d9dabaa995f7a6e75e094770": {
       "chainId": "999",
@@ -19203,7 +19239,10 @@
       "symbol": "PPLTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172475/thumb/pplton_160x160.png?1773506580",
       "assetGroup": "abrdn Physical Platinum Shares ETF (Ondo Tokenized)::PPLTON",
-      "currencyId": "abrdn Physical Platinum Shares ETF (Ondo Tokenized)::PPLTON"
+      "currencyId": "abrdn Physical Platinum Shares ETF (Ondo Tokenized)::PPLTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb8927cff399e23328eec0e457e75c709dcfcf382": {
       "chainId": "999",
@@ -19213,7 +19252,10 @@
       "symbol": "SNDKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172440/thumb/sndkon_160x160.png?1773419692",
       "assetGroup": "SanDisk (Ondo Tokenized)::SNDKON",
-      "currencyId": "SanDisk (Ondo Tokenized)::SNDKON"
+      "currencyId": "SanDisk (Ondo Tokenized)::SNDKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd616ddc3a9e13e12533d7124d5bd94b53fb60a3f": {
       "chainId": "999",
@@ -19223,7 +19265,10 @@
       "symbol": "CRWVON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172482/thumb/crwvon_160x160.png?1773506891",
       "assetGroup": "CoreWeave (Ondo Tokenized)::CRWVON",
-      "currencyId": "CoreWeave (Ondo Tokenized)::CRWVON"
+      "currencyId": "CoreWeave (Ondo Tokenized)::CRWVON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb2a2104d9fc202a38d74d8f6c3c45da6eef8f5e0": {
       "chainId": "999",
@@ -19243,7 +19288,8 @@
       "symbol": "tHYPE",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb83d27f0f4133a7b0377a88089583131a903fdc7.png",
       "assetGroup": "Treehouse HYPE::tHYPE",
-      "currencyId": "Treehouse HYPE::tHYPE"
+      "currencyId": "Treehouse HYPE::tHYPE",
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0xa3882d42ed12b57c10c85e8ec8febd0774600000": {
       "chainId": "999",
@@ -19284,7 +19330,8 @@
       "symbol": "csUSDH",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf38ea9de758a8f6be08b6e65bc0ff2f3e3ab741b.png",
       "assetGroup": "Clearstar Earn USDH::csUSDH",
-      "currencyId": "Clearstar Earn USDH::csUSDH"
+      "currencyId": "Clearstar Earn USDH::csUSDH",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x6dd448d5cb73dc96788d5be605dd3c5c83864a36": {
       "chainId": "999",
@@ -19726,7 +19773,10 @@
       "symbol": "DRIX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176037/thumb/DRIx.png?1787821375",
       "assetGroup": "Darden Restaurants xStock::DRIX",
-      "currencyId": "Darden Restaurants xStock::DRIX"
+      "currencyId": "Darden Restaurants xStock::DRIX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x90424a0398141599a27cff5938a6a721c51a09fc": {
       "chainId": "999",
@@ -19736,7 +19786,10 @@
       "symbol": "MCOX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176217/thumb/MCOx.png?1787822115",
       "assetGroup": "Moody's xStock::MCOX",
-      "currencyId": "Moody's xStock::MCOX"
+      "currencyId": "Moody's xStock::MCOX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0xc6437a260bf2b7e9d9e402b2ef7e9a84d3622046": {
       "chainId": "999",
@@ -19746,7 +19799,10 @@
       "symbol": "QSRX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176309/thumb/QSRx.png?1787822484",
       "assetGroup": "Restaurant Brands International xStock::QSRX",
-      "currencyId": "Restaurant Brands International xStock::QSRX"
+      "currencyId": "Restaurant Brands International xStock::QSRX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x4c599685e1b7717f245b93c9e081ed256d4781b3": {
       "chainId": "999",
@@ -19756,7 +19812,10 @@
       "symbol": "SMOIHX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176353/thumb/SMOIHx.png?1787822657",
       "assetGroup": "Smoore International xStock::SMOIHX",
-      "currencyId": "Smoore International xStock::SMOIHX"
+      "currencyId": "Smoore International xStock::SMOIHX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x4f9e014f620d83b08342c8bdff3043fb2220b727": {
       "chainId": "999",

@@ -1067,8 +1067,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -1993,7 +1993,10 @@
           "syAddress": "0xa9ab6ec90ff9059cd0b2ff27c325835d9179f4f7",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "hastra", "name": "Hastra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0f83ff733b756435ef4433607ebef9fe28d53275": {
@@ -2111,8 +2114,8 @@
           "ytAddress": "0x08903411e7a3eb500e30aac3bdd44775055b8c00"
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -3715,6 +3718,20 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x1d03e1859e0b10fc4943fd9204c008c8293d416d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT srUSDe (USDe) Ethereum",
+      "address": "0x1d03e1859e0b10fc4943fd9204c008c8293d416d",
+      "symbol": "YT-srUSDe-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/0f662016-0440-42e1-827a-4ec381913c9e.svg",
+      "assetGroup": "YT srUSDe (USDe) Ethereum::YT-srUSDe-25FEB2027",
+      "currencyId": "YT srUSDe (USDe) Ethereum::YT-srUSDe-25FEB2027",
+      "props": {
+        "pendle": { "tokenType": "YT", "expiry": 1803513600 },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x1d27254125246873a19580b7364bff322c5def0f": {
       "chainId": "1",
       "decimals": 18,
@@ -3974,6 +3991,20 @@
         ]
       }
     },
+    "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT jrUSDe (USDe) Ethereum",
+      "address": "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5",
+      "symbol": "PT-jrUSDe-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/cb9af685-e1bf-4480-89fd-c841f4d54f2c.svg",
+      "assetGroup": "PT jrUSDe (USDe) Ethereum::PT-jrUSDe-25FEB2027",
+      "currencyId": "PT jrUSDe (USDe) Ethereum::PT-jrUSDe-25FEB2027",
+      "props": {
+        "pendle": { "tokenType": "PT", "expiry": 1803513600 },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x1ec77f630ef8e8e0ae29aa44a48af8fa41c2f762": {
       "chainId": "1",
       "decimals": 18,
@@ -4202,6 +4233,7 @@
           "ytAddress": "0x8e5ae33b762076244fb4ebbd15ba837a176726f4",
           "syAddress": "0x2b4715bc201375aea9f55866473aa99d8321b71a"
         },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -4465,8 +4497,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -4891,8 +4923,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -5694,8 +5726,8 @@
           "ytAddress": "0x30ea2e13ffcdd9ec18335f4d10181eb14a6d5498"
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -5929,6 +5961,7 @@
           "ptAddress": "0x203a918321f920763c2b8ccc2cbf5b3a5ba748d1",
           "ytAddress": "0x8e5ae33b762076244fb4ebbd15ba837a176726f4"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -6218,11 +6251,6 @@
       "currencyId": "PT sNUSD (NUSD) Ethereum::PT-sNUSD-24SEP2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "vault_inherit"
-        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -6762,7 +6790,7 @@
           "syAddress": "0xe1e22d55e23900f30599d8bee74a0801f09b4e58",
           "expired": true
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -6913,8 +6941,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -7917,8 +7945,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -8102,6 +8130,11 @@
           "ytAddress": "0x5a2e9209a7c521ca9b7e1f0e17229c7e57f9294d",
           "syAddress": "0x92899026d06343929c61e0987e09caeea6873fe5",
           "expired": true
+        },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -8833,8 +8866,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -9332,7 +9365,7 @@
           "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c",
           "expired": true
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "aegis", "name": "Aegis", "kind": "protocol", "hops": 1 }
@@ -11123,11 +11156,7 @@
           "ptAddress": "0xd28b0d694b8e814fa905a8b480b30691e18396eb",
           "ytAddress": "0xc95541af9925035eed46051466d7ae011574293c"
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -12024,8 +12053,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
@@ -12763,6 +12792,11 @@
           "syAddress": "0x92899026d06343929c61e0987e09caeea6873fe5",
           "expired": true
         },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -13477,8 +13511,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -14001,7 +14035,10 @@
           "syAddress": "0xa9ab6ec90ff9059cd0b2ff27c325835d9179f4f7",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "hastra", "name": "Hastra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x62c6e813b9589c3631ba0cdb013acdb8544038b7": {
@@ -15016,8 +15053,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -15569,11 +15606,6 @@
       "currencyId": "PT NUSD (NUSD) Ethereum::PT-NUSD-24SEP2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1790208000, "expired": true },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "vault_inherit"
-        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -16688,7 +16720,7 @@
       "currencyId": "PT ynRWAx (USDC) Ethereum::PT-ynRWAx-15OCT2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1792022400 },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 3, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -16742,8 +16774,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -16771,11 +16803,7 @@
           "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc",
           "expired": true
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -17717,11 +17745,7 @@
           "ptAddress": "0xaf687b5ecb525ccea96115088999b4ed80c388b6",
           "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc"
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -17912,8 +17936,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -19238,6 +19262,7 @@
           "ptAddress": "0x203a918321f920763c2b8ccc2cbf5b3a5ba748d1",
           "syAddress": "0x2b4715bc201375aea9f55866473aa99d8321b71a"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -19739,6 +19764,11 @@
           "ptAddress": "0x3a0f4beeb1bb41bb545a1ce54b905fa13c162e34",
           "ytAddress": "0x5a2e9209a7c521ca9b7e1f0e17229c7e57f9294d"
         },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -19790,11 +19820,7 @@
           "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc",
           "expired": true
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -23107,7 +23133,10 @@
           "ptAddress": "0x0f700a1c6541021996a2c8aa00722d592ffe1322",
           "ytAddress": "0x625417897cad73807deb5d51f65ba84f6644bbb8"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "hastra", "name": "Hastra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa9b8ea09bbb7d3f423398f3757573bf6621a70ea": {
@@ -24038,11 +24067,7 @@
           "ytAddress": "0x7fbc01c63b0ac372ec75907f3a1d8adc8cf28e1f",
           "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc"
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -24789,6 +24814,20 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT jrUSDe (USDe) Ethereum",
+      "address": "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a",
+      "symbol": "YT-jrUSDe-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ccae4529-b3b4-441f-a0ce-f8e2b90b24cf.svg",
+      "assetGroup": "YT jrUSDe (USDe) Ethereum::YT-jrUSDe-25FEB2027",
+      "currencyId": "YT jrUSDe (USDe) Ethereum::YT-jrUSDe-25FEB2027",
+      "props": {
+        "pendle": { "tokenType": "YT", "expiry": 1803513600 },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -26339,7 +26378,7 @@
           "syAddress": "0xc1799cab1f201946f7cfafbaf1bcc089b2f08927",
           "expired": true
         },
-        "risk": { "score": 3, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -27300,7 +27339,7 @@
           "syAddress": "0x95fc228a926828b4d95f52c1d52b345e743153f0",
           "expired": true
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -27345,11 +27384,7 @@
           "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc",
           "expired": true
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -27708,8 +27743,8 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -28440,11 +28475,7 @@
           "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc",
           "expired": true
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
@@ -28601,6 +28632,20 @@
           "expired": true
         },
         "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT srUSDe (USDe) Ethereum",
+      "address": "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1",
+      "symbol": "PT-srUSDe-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/713d1417-d114-4cfa-87bc-cb6e640c2ee9.svg",
+      "assetGroup": "PT srUSDe (USDe) Ethereum::PT-srUSDe-25FEB2027",
+      "currencyId": "PT srUSDe (USDe) Ethereum::PT-srUSDe-25FEB2027",
+      "props": {
+        "pendle": { "tokenType": "PT", "expiry": 1803513600 },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -29649,8 +29694,8 @@
           "ytAddress": "0x77fe4cd64b5b37da507c1d69ced1e0497ed463f7"
         },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -34123,7 +34168,7 @@
           "syAddress": "0x457904b54f47dd7a91253f225237a5b02ca059d6",
           "expired": true
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -39533,11 +39578,7 @@
       "currencyId": "Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA",
       "props": {
         "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x7796f4e23a62ef3653829c21032a9e24beaf4cf5": {
@@ -53601,7 +53642,7 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -55577,7 +55618,7 @@
       "currencyId": "Binance USD::BUSD",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -64193,12 +64234,8 @@
       "currencyId": "tBTC::tBTC",
       "props": {
         "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0x9c4a4204b79dd291d6b6571c5be8bbcd0622f050": {
@@ -64907,7 +64944,7 @@
       "currencyId": "Pax Dollar::USDP",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -84567,6 +84604,7 @@
       "currencyId": "StaFi Staked ETH::RETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -86451,6 +86489,7 @@
       "currencyId": "Universal ETH::uniETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -91240,8 +91279,8 @@
       "currencyId": "eBTC::EBTC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" }
       }
     },
     "0xbdf245957992bfbc62b07e344128a1eec7b7ee3f": {
@@ -92039,6 +92078,7 @@
           ]
         },
         "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -92615,7 +92655,7 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -92629,8 +92669,8 @@
             }
           ]
         },
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x67859a9314b9dca2642023ad8231beaa6cbf1933": {
@@ -99949,7 +99989,7 @@
       "currencyId": "Hex Trust USD::USDX",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -103884,8 +103924,8 @@
             }
           ]
         },
-        "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
     "0xb0df0e6133ce2bae93f1bb1737ed3f39593c67f5": {
@@ -107310,6 +107350,7 @@
       "currencyId": "ether fi Staked ETH::EETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -109238,8 +109279,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0xc833da2888c77d045c4a8f78f2faeb283e75acab": {
@@ -111555,6 +111596,7 @@
                 "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "42161": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "43114": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
@@ -113193,12 +113235,8 @@
             }
           ]
         },
-        "issuer": {
-          "id": "merlin",
-          "name": "Merlin Chain",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
     "0x9d9535dae62f5f12ab83f1183dca1ead244b0db3": {
@@ -122866,12 +122904,8 @@
       "assetGroup": "tBTC::TBTC",
       "currencyId": "tBTC::TBTC",
       "props": {
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0xf06ddacf71e2992e2122a1a0168c6967afdf63ce": {
@@ -142493,12 +142527,12 @@
       "assetGroup": "Bitcoin::BTC.b",
       "currencyId": "Bitcoin::BTC.b",
       "props": {
+        "denomination": "BTC",
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
           "kind": "institution"
-        },
-        "denomination": "BTC"
+        }
       }
     },
     "0xb986f3a2d91d3704dc974a24fb735dcc5e3c1e70": {
@@ -146841,6 +146875,7 @@
       "name": "Wrapped Aave Ethereum DAI",
       "address": "0x5caf5a86f39073637ac7c8a7b5290871de80cb9b",
       "symbol": "waEthDAI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179020/thumb/waethdai.png?1790933404",
       "assetGroup": "Wrapped Aave Ethereum DAI::waEthDAI",
       "currencyId": "Wrapped Aave Ethereum DAI::waEthDAI"
     },
@@ -154003,7 +154038,10 @@
       "symbol": "DFDVX",
       "logoURI": "https://assets.coingecko.com/coins/images/66919/thumb/DFDVx.png?1751053171",
       "assetGroup": "DeFi Development Corp ::DFDVX",
-      "currencyId": "DeFi Development Corp ::DFDVX"
+      "currencyId": "DeFi Development Corp ::DFDVX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x44e22c1b859a3f613276a0ff28af1a4d1a3b5c5e": {
       "chainId": "1",
@@ -154874,7 +154912,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0xfedc5f4a6c38211c1338aa411018dfaf26612c08": {
@@ -154899,7 +154938,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0x073e7a0669833d356fa88ca65cc6d454efaaa3c5": {
@@ -155052,6 +155092,11 @@
               "peers": {}
             }
           ]
+        },
+        "issuer": {
+          "id": "blackrock",
+          "name": "Blackrock",
+          "kind": "institution"
         }
       }
     },
@@ -155076,7 +155121,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0xd08ddb436e731f32455fe302723ee0fd2e9e8706": {
@@ -155625,7 +155671,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "0x5bf1b2a808598c0ef4af1673a5457d86fe6d7b3d": {
@@ -160237,9 +160284,9 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
         },
         "oft": {
           "eid": 30101,
@@ -160270,8 +160317,8 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "savings_inherit"
         },
         "savings": { "underlying": "NUSD", "base": "USD" },
@@ -163110,7 +163157,10 @@
       "symbol": "DGRWON",
       "logoURI": "https://assets.coingecko.com/coins/images/71397/thumb/dgrwon_160x160.png?1767869674",
       "assetGroup": "WisdomTree US Quality Dividend Growth Fund (Ondo Tokenized)::DGRWON",
-      "currencyId": "WisdomTree US Quality Dividend Growth Fund (Ondo Tokenized)::DGRWON"
+      "currencyId": "WisdomTree US Quality Dividend Growth Fund (Ondo Tokenized)::DGRWON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe571b648569619566cf6ce1060c97b621cb635d3": {
       "chainId": "1",
@@ -163131,7 +163181,10 @@
       "symbol": "PALLON",
       "logoURI": "https://assets.coingecko.com/coins/images/71399/thumb/pallon_160x160.png?1767874802",
       "assetGroup": "abrdn Physical Palladium Shares ETF (Ondo Tokenized ETF)::PALLON",
-      "currencyId": "abrdn Physical Palladium Shares ETF (Ondo Tokenized ETF)::PALLON"
+      "currencyId": "abrdn Physical Palladium Shares ETF (Ondo Tokenized ETF)::PALLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xacf3fecaa787f268351a86409c3bd3b96ef924fb": {
       "chainId": "1",
@@ -163141,7 +163194,10 @@
       "symbol": "FTGCON",
       "logoURI": "https://assets.coingecko.com/coins/images/71422/thumb/ftgcon_160x160.png?1767881800",
       "assetGroup": "First Trust Global Tactical Commodity Strategy Fund (Ondo To::FTGCON",
-      "currencyId": "First Trust Global Tactical Commodity Strategy Fund (Ondo To::FTGCON"
+      "currencyId": "First Trust Global Tactical Commodity Strategy Fund (Ondo To::FTGCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x423a63dfe8d82cd9c6568c92210aa537d8ef6885": {
       "chainId": "1",
@@ -163151,7 +163207,10 @@
       "symbol": "COPXON",
       "logoURI": "https://assets.coingecko.com/coins/images/71424/thumb/copxon_160x160.png?1767882136",
       "assetGroup": "Global X Copper Miners ETF (Ondo Tokenized ETF)::COPXON",
-      "currencyId": "Global X Copper Miners ETF (Ondo Tokenized ETF)::COPXON"
+      "currencyId": "Global X Copper Miners ETF (Ondo Tokenized ETF)::COPXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x20224080ad516769723c9a4a18325fc4e8c9ab5d": {
       "chainId": "1",
@@ -163161,7 +163220,10 @@
       "symbol": "DBCON",
       "logoURI": "https://assets.coingecko.com/coins/images/71429/thumb/dbcon_160x160.png?1767882634",
       "assetGroup": "Invesco DB Commodity Index Tracking Fund (Ondo Tokenized ETF::DBCON",
-      "currencyId": "Invesco DB Commodity Index Tracking Fund (Ondo Tokenized ETF::DBCON"
+      "currencyId": "Invesco DB Commodity Index Tracking Fund (Ondo Tokenized ETF::DBCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x46c0a02a877c1412cb32b57028b2f771c0364a7e": {
       "chainId": "1",
@@ -163171,7 +163233,10 @@
       "symbol": "PDBCON",
       "logoURI": "https://assets.coingecko.com/coins/images/71430/thumb/pdbcon_160x160.png?1767882707",
       "assetGroup": "Invesco Optimum Yld Dvsfd Cmd Str No K-1 ETF (Ondo Tokenized::PDBCON",
-      "currencyId": "Invesco Optimum Yld Dvsfd Cmd Str No K-1 ETF (Ondo Tokenized::PDBCON"
+      "currencyId": "Invesco Optimum Yld Dvsfd Cmd Str No K-1 ETF (Ondo Tokenized::PDBCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x219a1b27baa08d72fac836665a3b752f3c9acbbc": {
       "chainId": "1",
@@ -163181,7 +163246,10 @@
       "symbol": "JAAAON",
       "logoURI": "https://assets.coingecko.com/coins/images/71434/thumb/jaaaon_160x160.png?1767883134",
       "assetGroup": "Janus Henderson AAA CLO ETF (Ondo Tokenized ETF)::JAAAON",
-      "currencyId": "Janus Henderson AAA CLO ETF (Ondo Tokenized ETF)::JAAAON"
+      "currencyId": "Janus Henderson AAA CLO ETF (Ondo Tokenized ETF)::JAAAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa637ae510cb50e61236a89ac480b93b8c3bccc46": {
       "chainId": "1",
@@ -163191,7 +163259,10 @@
       "symbol": "KLACON",
       "logoURI": "https://assets.coingecko.com/coins/images/71437/thumb/klacon_160x160.png?1767889328",
       "assetGroup": "KLA (Ondo Tokenized)::KLACON",
-      "currencyId": "KLA (Ondo Tokenized)::KLACON"
+      "currencyId": "KLA (Ondo Tokenized)::KLACON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x21be23f5bf87a749670c088f6dee26760f1ab80f": {
       "chainId": "1",
@@ -163201,7 +163272,10 @@
       "symbol": "LRCXON",
       "logoURI": "https://assets.coingecko.com/coins/images/71438/thumb/lrcxon_160x160.png?1767889373",
       "assetGroup": "Lam Research (Ondo Tokenized)::LRCXON",
-      "currencyId": "Lam Research (Ondo Tokenized)::LRCXON"
+      "currencyId": "Lam Research (Ondo Tokenized)::LRCXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb6e362a39db703f0f7cf582c9fc043a51624e53d": {
       "chainId": "1",
@@ -163211,7 +163285,10 @@
       "symbol": "LION",
       "logoURI": "https://assets.coingecko.com/coins/images/71439/thumb/lion_160x160.png?1767889433",
       "assetGroup": "Li Auto (Ondo Tokenized)::LION",
-      "currencyId": "Li Auto (Ondo Tokenized)::LION"
+      "currencyId": "Li Auto (Ondo Tokenized)::LION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x84328d8b85019fdcecf4c82fbe076bf350fc0cab": {
       "chainId": "1",
@@ -163221,7 +163298,10 @@
       "symbol": "LOWON",
       "logoURI": "https://assets.coingecko.com/coins/images/71440/thumb/lowon_160x160.png?1767889494",
       "assetGroup": "Lowe's (Ondo Tokenized)::LOWON",
-      "currencyId": "Lowe's (Ondo Tokenized)::LOWON"
+      "currencyId": "Lowe's (Ondo Tokenized)::LOWON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x5cb95099a2c7e3c8187fbca6efe5ba222b5ba820": {
       "chainId": "1",
@@ -163231,7 +163311,10 @@
       "symbol": "MTZON",
       "logoURI": "https://assets.coingecko.com/coins/images/71441/thumb/mtzon_160x160.png?1767889534",
       "assetGroup": "MasTec (Ondo Tokenized)::MTZON",
-      "currencyId": "MasTec (Ondo Tokenized)::MTZON"
+      "currencyId": "MasTec (Ondo Tokenized)::MTZON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdc8a7db05ea704227d56f5d4a4b77a2d1bba29c0": {
       "chainId": "1",
@@ -163241,7 +163324,10 @@
       "symbol": "MRKON",
       "logoURI": "https://assets.coingecko.com/coins/images/71442/thumb/mrkon_160x160.png?1767889571",
       "assetGroup": "Merck (Ondo Tokenized)::MRKON",
-      "currencyId": "Merck (Ondo Tokenized)::MRKON"
+      "currencyId": "Merck (Ondo Tokenized)::MRKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa2c1c0b4683a871187d4565eb63abf9aef5947ee": {
       "chainId": "1",
@@ -163251,7 +163337,10 @@
       "symbol": "MRNAON",
       "logoURI": "https://assets.coingecko.com/coins/images/71443/thumb/mrnaon_160x160.png?1767889634",
       "assetGroup": "Moderna (Ondo Tokenized)::MRNAON",
-      "currencyId": "Moderna (Ondo Tokenized)::MRNAON"
+      "currencyId": "Moderna (Ondo Tokenized)::MRNAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x75846a2b2eeee6575ac775f9984be54fd1d08189": {
       "chainId": "1",
@@ -163261,7 +163350,10 @@
       "symbol": "MPON",
       "logoURI": "https://assets.coingecko.com/coins/images/71444/thumb/mpon_160x160.png?1767889675",
       "assetGroup": "MP Materials (Ondo Tokenized)::MPON",
-      "currencyId": "MP Materials (Ondo Tokenized)::MPON"
+      "currencyId": "MP Materials (Ondo Tokenized)::MPON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x3d1cf8692a6f2fc9048a9cc1a06abf77f3465f0a": {
       "chainId": "1",
@@ -163271,7 +163363,10 @@
       "symbol": "NTESON",
       "logoURI": "https://assets.coingecko.com/coins/images/71445/thumb/nteson_160x160.png?1767889779",
       "assetGroup": "NetEase (Ondo Tokenized)::NTESON",
-      "currencyId": "NetEase (Ondo Tokenized)::NTESON"
+      "currencyId": "NetEase (Ondo Tokenized)::NTESON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf46ba88694cd7933ca28be84ee787ad5732e856b": {
       "chainId": "1",
@@ -163281,7 +163376,10 @@
       "symbol": "NEEON",
       "logoURI": "https://assets.coingecko.com/coins/images/71446/thumb/neeon_160x160.png?1767889812",
       "assetGroup": "NextEra Energy (Ondo Tokenized)::NEEON",
-      "currencyId": "NextEra Energy (Ondo Tokenized)::NEEON"
+      "currencyId": "NextEra Energy (Ondo Tokenized)::NEEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xee2542f442a5ed8008e2fe3590e14f90db69f70d": {
       "chainId": "1",
@@ -163291,7 +163389,10 @@
       "symbol": "NIOON",
       "logoURI": "https://assets.coingecko.com/coins/images/71447/thumb/nioon_160x160.png?1767889848",
       "assetGroup": "NIO (Ondo Tokenized)::NIOON",
-      "currencyId": "NIO (Ondo Tokenized)::NIOON"
+      "currencyId": "NIO (Ondo Tokenized)::NIOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xeedc48205852e9d83ea5ca92fa8656597788601f": {
       "chainId": "1",
@@ -163301,7 +163402,10 @@
       "symbol": "OXYON",
       "logoURI": "https://assets.coingecko.com/coins/images/71448/thumb/oxyon_160x160.png?1767889881",
       "assetGroup": "Occidental Petroleum (Ondo Tokenized)::OXYON",
-      "currencyId": "Occidental Petroleum (Ondo Tokenized)::OXYON"
+      "currencyId": "Occidental Petroleum (Ondo Tokenized)::OXYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf0372e226553af4f343b44111a789f87a9fa427a": {
       "chainId": "1",
@@ -163311,7 +163415,10 @@
       "symbol": "OKLOON",
       "logoURI": "https://assets.coingecko.com/coins/images/71449/thumb/okloon_160x160.png?1767889913",
       "assetGroup": "Oklo (Ondo Tokenized)::OKLOON",
-      "currencyId": "Oklo (Ondo Tokenized)::OKLOON"
+      "currencyId": "Oklo (Ondo Tokenized)::OKLOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa52b2d6ca1cd9b1e8b931645428380c340caef9a": {
       "chainId": "1",
@@ -163321,7 +163428,10 @@
       "symbol": "ONON",
       "logoURI": "https://assets.coingecko.com/coins/images/71450/thumb/onon_160x160.png?1767889948",
       "assetGroup": "ON Semiconductor (Ondo Tokenized)::ONON",
-      "currencyId": "ON Semiconductor (Ondo Tokenized)::ONON"
+      "currencyId": "ON Semiconductor (Ondo Tokenized)::ONON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb22d83e228c4266075ec75c32acc3bc059b6f248": {
       "chainId": "1",
@@ -163331,7 +163441,10 @@
       "symbol": "OPENON",
       "logoURI": "https://assets.coingecko.com/coins/images/71452/thumb/openon_160x160.png?1767890016",
       "assetGroup": "Opendoor Technologies (Ondo Tokenized)::OPENON",
-      "currencyId": "Opendoor Technologies (Ondo Tokenized)::OPENON"
+      "currencyId": "Opendoor Technologies (Ondo Tokenized)::OPENON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb40afd1d55ea61fc1a6fbe093b817b673c8e78d7": {
       "chainId": "1",
@@ -163341,7 +163454,10 @@
       "symbol": "OPRAON",
       "logoURI": "https://assets.coingecko.com/coins/images/71453/thumb/opraon_160x160.png?1767890056",
       "assetGroup": "Opera (Ondo Tokenized)::OPRAON",
-      "currencyId": "Opera (Ondo Tokenized)::OPRAON"
+      "currencyId": "Opera (Ondo Tokenized)::OPRAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x244efb92f76a57da49b5f71045dce3e546e13106": {
       "chainId": "1",
@@ -163351,7 +163467,10 @@
       "symbol": "OSCRON",
       "logoURI": "https://assets.coingecko.com/coins/images/71454/thumb/oscron_160x160.png?1767890097",
       "assetGroup": "Oscar Health (Ondo Tokenized)::OSCRON",
-      "currencyId": "Oscar Health (Ondo Tokenized)::OSCRON"
+      "currencyId": "Oscar Health (Ondo Tokenized)::OSCRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xcc40965d3621362c3ee1dd946ba98d6a708ea86b": {
       "chainId": "1",
@@ -163361,7 +163480,10 @@
       "symbol": "PDDON",
       "logoURI": "https://assets.coingecko.com/coins/images/71455/thumb/pddon_160x160.png?1767890129",
       "assetGroup": "PDD Holdings (Ondo Tokenized)::PDDON",
-      "currencyId": "PDD Holdings (Ondo Tokenized)::PDDON"
+      "currencyId": "PDD Holdings (Ondo Tokenized)::PDDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x193fdf644451cc394b28b9cec2f5d32e2b4de515": {
       "chainId": "1",
@@ -163371,7 +163493,10 @@
       "symbol": "PCGON",
       "logoURI": "https://assets.coingecko.com/coins/images/71456/thumb/pcgon_160x160.png?1767890294",
       "assetGroup": "PG&E (Ondo Tokenized)::PCGON",
-      "currencyId": "PG&E (Ondo Tokenized)::PCGON"
+      "currencyId": "PG&E (Ondo Tokenized)::PCGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc017c622cd05698580e2decd0f97d4a17dab70f9": {
       "chainId": "1",
@@ -163381,7 +163506,10 @@
       "symbol": "PINSON",
       "logoURI": "https://assets.coingecko.com/coins/images/71457/thumb/pinson_160x160.png?1767890343",
       "assetGroup": "Pinterest (Ondo Tokenized)::PINSON",
-      "currencyId": "Pinterest (Ondo Tokenized)::PINSON"
+      "currencyId": "Pinterest (Ondo Tokenized)::PINSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe7ee911172bdd557b9ab6be7701f86bbc8fd772e": {
       "chainId": "1",
@@ -163391,7 +163519,10 @@
       "symbol": "PLUGON",
       "logoURI": "https://assets.coingecko.com/coins/images/71458/thumb/plugon_160x160.png?1767890383",
       "assetGroup": "Plug Power (Ondo Tokenized)::PLUGON",
-      "currencyId": "Plug Power (Ondo Tokenized)::PLUGON"
+      "currencyId": "Plug Power (Ondo Tokenized)::PLUGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x9ebd34d99cc3a45b39cafc14ad7994263fa2be56": {
       "chainId": "1",
@@ -163401,7 +163532,10 @@
       "symbol": "PSQON",
       "logoURI": "https://assets.coingecko.com/coins/images/71459/thumb/psqon_160x160.png?1767890433",
       "assetGroup": "ProShares Short QQQ (Ondo Tokenized)::PSQON",
-      "currencyId": "ProShares Short QQQ (Ondo Tokenized)::PSQON"
+      "currencyId": "ProShares Short QQQ (Ondo Tokenized)::PSQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa45cd7ac9865b9539166ebaf2abc362df4736580": {
       "chainId": "1",
@@ -163411,7 +163545,10 @@
       "symbol": "TQQQON",
       "logoURI": "https://assets.coingecko.com/coins/images/71460/thumb/tqqqon_160x160.png?1767890499",
       "assetGroup": "ProShares UltraPro QQQ (Ondo Tokenized)::TQQQON",
-      "currencyId": "ProShares UltraPro QQQ (Ondo Tokenized)::TQQQON"
+      "currencyId": "ProShares UltraPro QQQ (Ondo Tokenized)::TQQQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0a00c19246fc41b2524d56c87ec44ce8b30ba0f8": {
       "chainId": "1",
@@ -163421,7 +163558,10 @@
       "symbol": "SQQQON",
       "logoURI": "https://assets.coingecko.com/coins/images/71461/thumb/sqqqon_160x160.png?1767890553",
       "assetGroup": "ProShares UltraPro Short QQQ (Ondo Tokenized)::SQQQON",
-      "currencyId": "ProShares UltraPro Short QQQ (Ondo Tokenized)::SQQQON"
+      "currencyId": "ProShares UltraPro Short QQQ (Ondo Tokenized)::SQQQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfdfdf5db2f4a72cb754ffa8896ea012dc2cc0f5e": {
       "chainId": "1",
@@ -163431,7 +163571,10 @@
       "symbol": "RGTION",
       "logoURI": "https://assets.coingecko.com/coins/images/71462/thumb/rgtion_160x160.png?1767890590",
       "assetGroup": "Rigetti Computing (Ondo Tokenized)::RGTION",
-      "currencyId": "Rigetti Computing (Ondo Tokenized)::RGTION"
+      "currencyId": "Rigetti Computing (Ondo Tokenized)::RGTION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x04d94914cd1d7ff749efedee764335777225b962": {
       "chainId": "1",
@@ -163441,7 +163584,10 @@
       "symbol": "RIVNON",
       "logoURI": "https://assets.coingecko.com/coins/images/71463/thumb/rivnon_160x160.png?1767890637",
       "assetGroup": "Rivian Automotive (Ondo Tokenized)::RIVNON",
-      "currencyId": "Rivian Automotive (Ondo Tokenized)::RIVNON"
+      "currencyId": "Rivian Automotive (Ondo Tokenized)::RIVNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x67c5902f5210f62f37157cd9c735c693164c1378": {
       "chainId": "1",
@@ -163451,7 +163597,10 @@
       "symbol": "RTXON",
       "logoURI": "https://assets.coingecko.com/coins/images/71464/thumb/rtxon_160x160.png?1767890843",
       "assetGroup": "RTX (Ondo Tokenized)::RTXON",
-      "currencyId": "RTX (Ondo Tokenized)::RTXON"
+      "currencyId": "RTX (Ondo Tokenized)::RTXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb2924278cc92e60db9b673d6a311d7a331dd703d": {
       "chainId": "1",
@@ -163461,7 +163610,10 @@
       "symbol": "SNAPON",
       "logoURI": "https://assets.coingecko.com/coins/images/71465/thumb/snapon_160x160.png?1767890903",
       "assetGroup": "Snap (Ondo Tokenized)::SNAPON",
-      "currencyId": "Snap (Ondo Tokenized)::SNAPON"
+      "currencyId": "Snap (Ondo Tokenized)::SNAPON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x966db065199a3edea2228c6e5eb6ac49ff251acc": {
       "chainId": "1",
@@ -163471,7 +163623,10 @@
       "symbol": "SOUNON",
       "logoURI": "https://assets.coingecko.com/coins/images/71466/thumb/sounon_160x160.png?1767891383",
       "assetGroup": "SoundHound AI (Ondo Tokenized)::SOUNON",
-      "currencyId": "SoundHound AI (Ondo Tokenized)::SOUNON"
+      "currencyId": "SoundHound AI (Ondo Tokenized)::SOUNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x423d42e505e64f99b6e277eb7ed324cc5606f139": {
       "chainId": "1",
@@ -163481,7 +163636,10 @@
       "symbol": "GLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/71467/thumb/gldon_160x160.png?1767891536",
       "assetGroup": "SPDR Gold Shares (Ondo Tokenized)::GLDON",
-      "currencyId": "SPDR Gold Shares (Ondo Tokenized)::GLDON"
+      "currencyId": "SPDR Gold Shares (Ondo Tokenized)::GLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xbf54eb503bb350583d11f4348086dc3608fa245c": {
       "chainId": "1",
@@ -163491,7 +163649,10 @@
       "symbol": "NIKLON",
       "logoURI": "https://assets.coingecko.com/coins/images/71468/thumb/niklon_160x160.png?1767891579",
       "assetGroup": "Sprott Nickel Miners ETF (Ondo Tokenized)::NIKLON",
-      "currencyId": "Sprott Nickel Miners ETF (Ondo Tokenized)::NIKLON"
+      "currencyId": "Sprott Nickel Miners ETF (Ondo Tokenized)::NIKLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x110cae53912c2ed9bf279cd70b3b699e26c79e58": {
       "chainId": "1",
@@ -163501,7 +163662,10 @@
       "symbol": "WULFON",
       "logoURI": "https://assets.coingecko.com/coins/images/71469/thumb/wulfon_160x160.png?1767891803",
       "assetGroup": "Terawulf (Ondo Tokenized)::WULFON",
-      "currencyId": "Terawulf (Ondo Tokenized)::WULFON"
+      "currencyId": "Terawulf (Ondo Tokenized)::WULFON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x58fc9d573ea773ef9a25c3de66f990b87ee5f50e": {
       "chainId": "1",
@@ -163511,7 +163675,10 @@
       "symbol": "TXNON",
       "logoURI": "https://assets.coingecko.com/coins/images/71470/thumb/txnon_160x160.png?1767891853",
       "assetGroup": "Texas Instruments (Ondo Tokenized)::TXNON",
-      "currencyId": "Texas Instruments (Ondo Tokenized)::TXNON"
+      "currencyId": "Texas Instruments (Ondo Tokenized)::TXNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1f5fc5c3c8b0f15c7e21af623936ff2b210b6415": {
       "chainId": "1",
@@ -163521,7 +163688,10 @@
       "symbol": "USOON",
       "logoURI": "https://assets.coingecko.com/coins/images/71471/thumb/usoon_160x160.png?1767892001",
       "assetGroup": "United States Oil Fund (Ondo Tokenized)::USOON",
-      "currencyId": "United States Oil Fund (Ondo Tokenized)::USOON"
+      "currencyId": "United States Oil Fund (Ondo Tokenized)::USOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1140043f02d8ee34b10eae2e32ae921cda1459ee": {
       "chainId": "1",
@@ -163531,7 +163701,10 @@
       "symbol": "REMXON",
       "logoURI": "https://assets.coingecko.com/coins/images/71472/thumb/remxon_160x160.png?1767892092",
       "assetGroup": "VanEck Rare Earth and Strategic Metals ETF (Ondo Tokenized)::REMXON",
-      "currencyId": "VanEck Rare Earth and Strategic Metals ETF (Ondo Tokenized)::REMXON"
+      "currencyId": "VanEck Rare Earth and Strategic Metals ETF (Ondo Tokenized)::REMXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x57b392146848c6321bb2a3d4358df1bdeacdc62a": {
       "chainId": "1",
@@ -163541,7 +163714,10 @@
       "symbol": "VTION",
       "logoURI": "https://assets.coingecko.com/coins/images/71473/thumb/vtion_160x160.png?1767892132",
       "assetGroup": "Vanguard Total Stock Market ETF (Ondo Tokenized)::VTION",
-      "currencyId": "Vanguard Total Stock Market ETF (Ondo Tokenized)::VTION"
+      "currencyId": "Vanguard Total Stock Market ETF (Ondo Tokenized)::VTION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x84e8f1b9b40dd1832925702459d12ffb14d97bf3": {
       "chainId": "1",
@@ -163551,7 +163727,10 @@
       "symbol": "VTVON",
       "logoURI": "https://assets.coingecko.com/coins/images/71474/thumb/vtvon_160x160.png?1767892219",
       "assetGroup": "Vanguard Value ETF (Ondo Tokenized)::VTVON",
-      "currencyId": "Vanguard Value ETF (Ondo Tokenized)::VTVON"
+      "currencyId": "Vanguard Value ETF (Ondo Tokenized)::VTVON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0e3d889d5b857c3e6eb361b9c9ae35bb7ddbd254": {
       "chainId": "1",
@@ -163561,7 +163740,10 @@
       "symbol": "VZON",
       "logoURI": "https://assets.coingecko.com/coins/images/71475/thumb/vzon_160x160.png?1767892257",
       "assetGroup": "Verizon (Ondo Tokenized)::VZON",
-      "currencyId": "Verizon (Ondo Tokenized)::VZON"
+      "currencyId": "Verizon (Ondo Tokenized)::VZON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0752163d221d3d5d4b6e98bd616b22bd2b453964": {
       "chainId": "1",
@@ -163571,7 +163753,10 @@
       "symbol": "VRTON",
       "logoURI": "https://assets.coingecko.com/coins/images/71476/thumb/vrton_160x160.png?1767892296",
       "assetGroup": "Vertiv (Ondo Tokenized)::VRTON",
-      "currencyId": "Vertiv (Ondo Tokenized)::VRTON"
+      "currencyId": "Vertiv (Ondo Tokenized)::VRTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf1573edddb75bf7ce165f142a17ed6b5e7f5aa13": {
       "chainId": "1",
@@ -163581,7 +163766,10 @@
       "symbol": "VSTON",
       "logoURI": "https://assets.coingecko.com/coins/images/71477/thumb/vston_160x160.png?1767892341",
       "assetGroup": "Vistra (Ondo Tokenized)::VSTON",
-      "currencyId": "Vistra (Ondo Tokenized)::VSTON"
+      "currencyId": "Vistra (Ondo Tokenized)::VSTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfb82561a955bf59b9263301126af490d3799e231": {
       "chainId": "1",
@@ -163591,7 +163779,10 @@
       "symbol": "USFRON",
       "logoURI": "https://assets.coingecko.com/coins/images/71478/thumb/usfron_160x160.png?1767892375",
       "assetGroup": "WisdomTree Floating Rate Treasury Fund (Ondo Tokenized)::USFRON",
-      "currencyId": "WisdomTree Floating Rate Treasury Fund (Ondo Tokenized)::USFRON"
+      "currencyId": "WisdomTree Floating Rate Treasury Fund (Ondo Tokenized)::USFRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x818234860a647d480b9bbcc9a47a23889f2ec900": {
       "chainId": "1",
@@ -163601,7 +163792,10 @@
       "symbol": "ONDSON",
       "logoURI": "https://assets.coingecko.com/coins/images/71451/thumb/ondson_160x160.png?1767889983",
       "assetGroup": "Ondas Holdings (Ondo Tokenized)::ONDSON",
-      "currencyId": "Ondas Holdings (Ondo Tokenized)::ONDSON"
+      "currencyId": "Ondas Holdings (Ondo Tokenized)::ONDSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4951bec6f4dfc23935c0ec8af92f231f4c20ea03": {
       "chainId": "1",
@@ -163801,7 +163995,7 @@
       "currencyId": "GAIB AID::AID",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -164309,8 +164503,8 @@
       "currencyId": "Strata Senior NUSD::srNUSD",
       "props": {
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "savings_inherit"
         },
         "savings": { "underlying": "NUSD", "base": "USD" },
@@ -164663,7 +164857,7 @@
       "currencyId": "apxUSD::APXUSD",
       "props": {
         "risk": {
-          "score": 5,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -164739,11 +164933,7 @@
       "assetGroup": "apyUSD::APYUSD",
       "currencyId": "apyUSD::apyUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "savings_inherit"
-        },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "savings": { "underlying": "apxUSD", "base": "USD" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
@@ -164778,7 +164968,10 @@
       "symbol": "URAON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172414/thumb/uraon_160x160.png?1773392907",
       "assetGroup": "Global X Uranium ETF (Ondo Tokenized)::URAON",
-      "currencyId": "Global X Uranium ETF (Ondo Tokenized)::URAON"
+      "currencyId": "Global X Uranium ETF (Ondo Tokenized)::URAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd4c6cce0cadf2fe4c0af9ee6777989efd8fb7670": {
       "chainId": "1",
@@ -164788,7 +164981,10 @@
       "symbol": "PAVEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172415/thumb/paveon_160x160.png?1773392973",
       "assetGroup": "Global X US Infrastructure Development ETF (Ondo Tokenized)::PAVEON",
-      "currencyId": "Global X US Infrastructure Development ETF (Ondo Tokenized)::PAVEON"
+      "currencyId": "Global X US Infrastructure Development ETF (Ondo Tokenized)::PAVEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x58a2edf0169ede82904e47a0e2a3a4008edebb60": {
       "chainId": "1",
@@ -164798,7 +164994,10 @@
       "symbol": "LUNRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172416/thumb/lunron_160x160.png?1773393077",
       "assetGroup": "Intuitive Machines (Ondo Tokenized)::LUNRON",
-      "currencyId": "Intuitive Machines (Ondo Tokenized)::LUNRON"
+      "currencyId": "Intuitive Machines (Ondo Tokenized)::LUNRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc98a910ede52e7d5308525845f19e17470dbccf7": {
       "chainId": "1",
@@ -164818,7 +165017,10 @@
       "symbol": "IONQON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172417/thumb/ionqon_160x160.png?1773394394",
       "assetGroup": "IonQ (Ondo Tokenized)::IONQON",
-      "currencyId": "IonQ (Ondo Tokenized)::IONQON"
+      "currencyId": "IonQ (Ondo Tokenized)::IONQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x122940c4c5f9ccfae7fa86455a42d3ec140855ce": {
       "chainId": "1",
@@ -164828,7 +165030,10 @@
       "symbol": "IBITON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172420/thumb/ibiton_160x160.png?1773394618",
       "assetGroup": "iShares Bitcoin Trust (Ondo Tokenized)::IBITON",
-      "currencyId": "iShares Bitcoin Trust (Ondo Tokenized)::IBITON"
+      "currencyId": "iShares Bitcoin Trust (Ondo Tokenized)::IBITON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x98284fbc11edd7540e29b896a49817bbe52ddcbd": {
       "chainId": "1",
@@ -164838,7 +165043,10 @@
       "symbol": "ETHAON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172422/thumb/ethaon_160x160.png?1773394777",
       "assetGroup": "iShares Ethereum Trust (Ondo Tokenized)::ETHAON",
-      "currencyId": "iShares Ethereum Trust (Ondo Tokenized)::ETHAON"
+      "currencyId": "iShares Ethereum Trust (Ondo Tokenized)::ETHAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xeaa2287290544ed9f481012aa348619a4d2f9e51": {
       "chainId": "1",
@@ -164848,7 +165056,10 @@
       "symbol": "KWEBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172430/thumb/kwebon_160x160.png?1773395551",
       "assetGroup": "KraneShares CSI China Internet ETF (Ondo Tokenized)::KWEBON",
-      "currencyId": "KraneShares CSI China Internet ETF (Ondo Tokenized)::KWEBON"
+      "currencyId": "KraneShares CSI China Internet ETF (Ondo Tokenized)::KWEBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe4babaa960ba7d37860f3fe00d7b95d3868e8edc": {
       "chainId": "1",
@@ -164858,7 +165069,10 @@
       "symbol": "NBISON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172431/thumb/nbison_160x160.png?1773395603",
       "assetGroup": "Nebius Group (Ondo Tokenized)::NBISON",
-      "currencyId": "Nebius Group (Ondo Tokenized)::NBISON"
+      "currencyId": "Nebius Group (Ondo Tokenized)::NBISON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0c802acb21cb2aadb2eb5e5090868e1361b26b69": {
       "chainId": "1",
@@ -164868,7 +165082,10 @@
       "symbol": "NEMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172432/thumb/nemon_160x160.png?1773395651",
       "assetGroup": "Newmont (Ondo Tokenized)::NEMON",
-      "currencyId": "Newmont (Ondo Tokenized)::NEMON"
+      "currencyId": "Newmont (Ondo Tokenized)::NEMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x8ce34f749796f82a6990ffa2d80622ef75ca7ad5": {
       "chainId": "1",
@@ -164878,7 +165095,10 @@
       "symbol": "NOCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172433/thumb/nocon_160x160.png?1773395724",
       "assetGroup": "Northrop Grumman (Ondo Tokenized)::NOCON",
-      "currencyId": "Northrop Grumman (Ondo Tokenized)::NOCON"
+      "currencyId": "Northrop Grumman (Ondo Tokenized)::NOCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x633821b8e003344e5223509277f2084ea809a452": {
       "chainId": "1",
@@ -164962,7 +165182,10 @@
       "symbol": "PPLTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172475/thumb/pplton_160x160.png?1773506580",
       "assetGroup": "abrdn Physical Platinum Shares ETF (Ondo Tokenized)::PPLTON",
-      "currencyId": "abrdn Physical Platinum Shares ETF (Ondo Tokenized)::PPLTON"
+      "currencyId": "abrdn Physical Platinum Shares ETF (Ondo Tokenized)::PPLTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd0a265a32d0211a7f61f11de014b854f7ce716f8": {
       "chainId": "1",
@@ -164972,7 +165195,10 @@
       "symbol": "GLTRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172476/thumb/gltron_160x160.png?1773506654",
       "assetGroup": "abrdn Physical Precious Metals Basket Shares ETF (Ondo Token::GLTRON",
-      "currencyId": "abrdn Physical Precious Metals Basket Shares ETF (Ondo Token::GLTRON"
+      "currencyId": "abrdn Physical Precious Metals Basket Shares ETF (Ondo Token::GLTRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1b468d5535ed7c19ce42f0073db7fdf441028131": {
       "chainId": "1",
@@ -164982,7 +165208,10 @@
       "symbol": "ALBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172477/thumb/albon_160x160.png?1773506695",
       "assetGroup": "Albemarle (Ondo Tokenized)::ALBON",
-      "currencyId": "Albemarle (Ondo Tokenized)::ALBON"
+      "currencyId": "Albemarle (Ondo Tokenized)::ALBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x318dcb4f07c3e6ccecc12a252100fb3bf76eeb02": {
       "chainId": "1",
@@ -164992,7 +165221,10 @@
       "symbol": "APLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172478/thumb/apldon_160x160.png?1773506743",
       "assetGroup": "Applied Digital (Ondo Tokenized)::APLDON",
-      "currencyId": "Applied Digital (Ondo Tokenized)::APLDON"
+      "currencyId": "Applied Digital (Ondo Tokenized)::APLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0d1fa4e1e3719945899ef7b02840627df46af44a": {
       "chainId": "1",
@@ -165002,7 +165234,10 @@
       "symbol": "ASTSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172479/thumb/astson_160x160.png?1773506781",
       "assetGroup": "AST SpaceMobile (Ondo Tokenized)::ASTSON",
-      "currencyId": "AST SpaceMobile (Ondo Tokenized)::ASTSON"
+      "currencyId": "AST SpaceMobile (Ondo Tokenized)::ASTSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x70ec0f5b23404c0cd6f29ce88f4af00a0b0d895d": {
       "chainId": "1",
@@ -165012,7 +165247,10 @@
       "symbol": "CAPRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172480/thumb/capron_160x160.png?1773506804",
       "assetGroup": "Capricor Therapeutics (Ondo Tokenized)::CAPRON",
-      "currencyId": "Capricor Therapeutics (Ondo Tokenized)::CAPRON"
+      "currencyId": "Capricor Therapeutics (Ondo Tokenized)::CAPRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x2b7727076b9c9b1834a2f95b81f12eedd30db9f1": {
       "chainId": "1",
@@ -165022,7 +165260,10 @@
       "symbol": "COHRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172481/thumb/cohron_160x160.png?1773506851",
       "assetGroup": "Coherent (Ondo Tokenized)::COHRON",
-      "currencyId": "Coherent (Ondo Tokenized)::COHRON"
+      "currencyId": "Coherent (Ondo Tokenized)::COHRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x66908813cd7676269494b2c6f6dbab8b4f9e95df": {
       "chainId": "1",
@@ -165032,7 +165273,10 @@
       "symbol": "CRWVON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172482/thumb/crwvon_160x160.png?1773506891",
       "assetGroup": "CoreWeave (Ondo Tokenized)::CRWVON",
-      "currencyId": "CoreWeave (Ondo Tokenized)::CRWVON"
+      "currencyId": "CoreWeave (Ondo Tokenized)::CRWVON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x9b56f5ed5a94ae3266b7ff21953e6626f94008f1": {
       "chainId": "1",
@@ -165042,7 +165286,10 @@
       "symbol": "ETNON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172483/thumb/etnon_160x160.png?1773506931",
       "assetGroup": "Eaton (Ondo Tokenized)::ETNON",
-      "currencyId": "Eaton (Ondo Tokenized)::ETNON"
+      "currencyId": "Eaton (Ondo Tokenized)::ETNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc4e6e80295154d3968519851f73f8dc1a227286f": {
       "chainId": "1",
@@ -165052,7 +165299,10 @@
       "symbol": "ENLVON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172484/thumb/enlvon_160x160.png?1773506977",
       "assetGroup": "Enlivex Therapeutics (Ondo Tokenized)::ENLVON",
-      "currencyId": "Enlivex Therapeutics (Ondo Tokenized)::ENLVON"
+      "currencyId": "Enlivex Therapeutics (Ondo Tokenized)::ENLVON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4f3b49ac895a29c0908c57538932967cdc8e3c80": {
       "chainId": "1",
@@ -165062,7 +165312,10 @@
       "symbol": "ENPHON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172485/thumb/enphon_160x160.png?1773506999",
       "assetGroup": "Enphase Energy (Ondo Tokenized)::ENPHON",
-      "currencyId": "Enphase Energy (Ondo Tokenized)::ENPHON"
+      "currencyId": "Enphase Energy (Ondo Tokenized)::ENPHON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x185e5fa1b84f94d46ef2a33052ad39bd5f326fd8": {
       "chainId": "1",
@@ -165072,7 +165325,10 @@
       "symbol": "EXODON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172486/thumb/exodon_160x160.png?1773507028",
       "assetGroup": "Exodus Movement (Ondo Tokenized)::EXODON",
-      "currencyId": "Exodus Movement (Ondo Tokenized)::EXODON"
+      "currencyId": "Exodus Movement (Ondo Tokenized)::EXODON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x224b381cfae8ccaf2e4d32d827467c2331ce04be": {
       "chainId": "1",
@@ -165082,7 +165338,10 @@
       "symbol": "FSOLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172487/thumb/fsolon_160x160.png?1773507075",
       "assetGroup": "Fidelity Solana Fund (Ondo Tokenized)::FSOLON",
-      "currencyId": "Fidelity Solana Fund (Ondo Tokenized)::FSOLON"
+      "currencyId": "Fidelity Solana Fund (Ondo Tokenized)::FSOLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x42d6e274b8631e5289a8f853e8d1a7baeff3c8d1": {
       "chainId": "1",
@@ -165092,7 +165351,10 @@
       "symbol": "CIBRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172488/thumb/cibron_160x160.png?1773507107",
       "assetGroup": "First Trust NASDAQ Cybersecurity ETF (Ondo Tokenized)::CIBRON",
-      "currencyId": "First Trust NASDAQ Cybersecurity ETF (Ondo Tokenized)::CIBRON"
+      "currencyId": "First Trust NASDAQ Cybersecurity ETF (Ondo Tokenized)::CIBRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x70b4082f4e3f9067db9a2aa7520c77719e8626ee": {
       "chainId": "1",
@@ -165102,7 +165364,10 @@
       "symbol": "FFOGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172489/thumb/ffogon_160x160.png?1773507122",
       "assetGroup": "Franklin Focused Growth ETF (Ondo Tokenized)::FFOGON",
-      "currencyId": "Franklin Focused Growth ETF (Ondo Tokenized)::FFOGON"
+      "currencyId": "Franklin Focused Growth ETF (Ondo Tokenized)::FFOGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x54c1ff361b402f66c13107421e6a431c3375ef24": {
       "chainId": "1",
@@ -165112,7 +165377,10 @@
       "symbol": "FLHYON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172490/thumb/flhyon_160x160.png?1773507164",
       "assetGroup": "Franklin High Yield Corporate ETF (Ondo Tokenized)::FLHYON",
-      "currencyId": "Franklin High Yield Corporate ETF (Ondo Tokenized)::FLHYON"
+      "currencyId": "Franklin High Yield Corporate ETF (Ondo Tokenized)::FLHYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfa690b2b6f6b4da518035f1d0aa8b968c23341bb": {
       "chainId": "1",
@@ -165122,7 +165390,10 @@
       "symbol": "INCEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172491/thumb/inceon_160x160.png?1773507198",
       "assetGroup": "Franklin Income Equity Focus ETF (Ondo Tokenized)::INCEON",
-      "currencyId": "Franklin Income Equity Focus ETF (Ondo Tokenized)::INCEON"
+      "currencyId": "Franklin Income Equity Focus ETF (Ondo Tokenized)::INCEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1cb673005fc58447d881486919c14d8e7c741bb1": {
       "chainId": "1",
@@ -165132,7 +165403,10 @@
       "symbol": "FGDLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172492/thumb/fgdlon_160x160.png?1773507224",
       "assetGroup": "Franklin Responsibly Sourced Gold ETF (Ondo Tokenized)::FGDLON",
-      "currencyId": "Franklin Responsibly Sourced Gold ETF (Ondo Tokenized)::FGDLON"
+      "currencyId": "Franklin Responsibly Sourced Gold ETF (Ondo Tokenized)::FGDLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc53d2e7321ab83b28af2360559aa303676a23f98": {
       "chainId": "1",
@@ -165142,7 +165416,10 @@
       "symbol": "FLQLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172493/thumb/flqlon_160x160.png?1773507264",
       "assetGroup": "Franklin US Large Cap Multifactor Index ETF (Ondo Tokenized)::FLQLON",
-      "currencyId": "Franklin US Large Cap Multifactor Index ETF (Ondo Tokenized)::FLQLON"
+      "currencyId": "Franklin US Large Cap Multifactor Index ETF (Ondo Tokenized)::FLQLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xeb08d539be0f6a6c90ea24276196e348f5688a02": {
       "chainId": "1",
@@ -165152,7 +165429,10 @@
       "symbol": "FCXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172494/thumb/fcxon_160x160.png?1773507293",
       "assetGroup": "Freeport-McMoRan (Ondo Tokenized)::FCXON",
-      "currencyId": "Freeport-McMoRan (Ondo Tokenized)::FCXON"
+      "currencyId": "Freeport-McMoRan (Ondo Tokenized)::FCXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe668e08a6f5792cef0e63e9d98524968fdb5882f": {
       "chainId": "1",
@@ -165162,7 +165442,10 @@
       "symbol": "GLXYON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172495/thumb/glxyon_160x160.png?1773507327",
       "assetGroup": "Galaxy Digital (Ondo Tokenized)::GLXYON",
-      "currencyId": "Galaxy Digital (Ondo Tokenized)::GLXYON"
+      "currencyId": "Galaxy Digital (Ondo Tokenized)::GLXYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa043fdc5a6e2e381e3532d5a97404b82fb7a0af8": {
       "chainId": "1",
@@ -165172,7 +165455,10 @@
       "symbol": "GEVON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172496/thumb/gevon_160x160.png?1773507349",
       "assetGroup": "GE Vernova (Ondo Tokenized)::GEVON",
-      "currencyId": "GE Vernova (Ondo Tokenized)::GEVON"
+      "currencyId": "GE Vernova (Ondo Tokenized)::GEVON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x95dbf36774917d7e3440eafdaf8b768725f249a0": {
       "chainId": "1",
@@ -165257,7 +165543,10 @@
       "symbol": "HYSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172435/thumb/hyson_160x160.png?1773419262",
       "assetGroup": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok::HYSON",
-      "currencyId": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok::HYSON"
+      "currencyId": "PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok::HYSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc95c9e3fa311664b5e744b3c2716547bec2ba7da": {
       "chainId": "1",
@@ -165267,7 +165556,10 @@
       "symbol": "QUBTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172436/thumb/qubton_160x160.png?1773419307",
       "assetGroup": "Quantum Computing (Ondo Tokenized)::QUBTON",
-      "currencyId": "Quantum Computing (Ondo Tokenized)::QUBTON"
+      "currencyId": "Quantum Computing (Ondo Tokenized)::QUBTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfccd6fbca272b4cc11069402f4123b070b7838f9": {
       "chainId": "1",
@@ -165287,7 +165579,10 @@
       "symbol": "RDWON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172437/thumb/rdwon_160x160.png?1773419575",
       "assetGroup": "Redwire (Ondo Tokenized)::RDWON",
-      "currencyId": "Redwire (Ondo Tokenized)::RDWON"
+      "currencyId": "Redwire (Ondo Tokenized)::RDWON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x33ac34da58168de69ce74a66fbad81a88f974bd5": {
       "chainId": "1",
@@ -165297,7 +165592,10 @@
       "symbol": "REGNON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172438/thumb/regnon_160x160.png?1773419619",
       "assetGroup": "Regeneron Pharmaceuticals (Ondo Tokenized)::REGNON",
-      "currencyId": "Regeneron Pharmaceuticals (Ondo Tokenized)::REGNON"
+      "currencyId": "Regeneron Pharmaceuticals (Ondo Tokenized)::REGNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x36e3b8d9aad0e51ac08e56a75a8f6005bf68535b": {
       "chainId": "1",
@@ -165307,7 +165605,10 @@
       "symbol": "RKLBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172439/thumb/rklbon_160x160.png?1773419655",
       "assetGroup": "Rocket Lab (Ondo Tokenized)::RKLBON",
-      "currencyId": "Rocket Lab (Ondo Tokenized)::RKLBON"
+      "currencyId": "Rocket Lab (Ondo Tokenized)::RKLBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x71e2400cf1cb83204f33794ed326636a71a9aafc": {
       "chainId": "1",
@@ -165317,7 +165618,10 @@
       "symbol": "SNDKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172440/thumb/sndkon_160x160.png?1773419692",
       "assetGroup": "SanDisk (Ondo Tokenized)::SNDKON",
-      "currencyId": "SanDisk (Ondo Tokenized)::SNDKON"
+      "currencyId": "SanDisk (Ondo Tokenized)::SNDKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb53894f82a6b2d3b7365f24932b5bde1c5fb51ff": {
       "chainId": "1",
@@ -165327,7 +165631,10 @@
       "symbol": "STXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172441/thumb/stxon_160x160.png?1773419730",
       "assetGroup": "Seagate (Ondo Tokenized)::STXON",
-      "currencyId": "Seagate (Ondo Tokenized)::STXON"
+      "currencyId": "Seagate (Ondo Tokenized)::STXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x8e82a0d7347329703fb6c6a745b1c2b3abb1658c": {
       "chainId": "1",
@@ -165337,7 +165644,10 @@
       "symbol": "SEDGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172442/thumb/sedgon_160x160.png?1773419776",
       "assetGroup": "SolarEdge Technologies (Ondo Tokenized)::SEDGON",
-      "currencyId": "SolarEdge Technologies (Ondo Tokenized)::SEDGON"
+      "currencyId": "SolarEdge Technologies (Ondo Tokenized)::SEDGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xda81da76070a7377eaeeb2978f0e13c5d57fadb7": {
       "chainId": "1",
@@ -165347,7 +165657,10 @@
       "symbol": "SCCOON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172443/thumb/sccoon_160x160.png?1773419813",
       "assetGroup": "Southern Copper (Ondo Tokenized)::SCCOON",
-      "currencyId": "Southern Copper (Ondo Tokenized)::SCCOON"
+      "currencyId": "Southern Copper (Ondo Tokenized)::SCCOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x39930751d4569f7dd45d1ba46e82cd3680ec2e0a": {
       "chainId": "1",
@@ -165357,7 +165670,10 @@
       "symbol": "UNPON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172444/thumb/unpon_160x160.png?1773419860",
       "assetGroup": "Union Pacific Corporation (Ondo Tokenized)::UNPON",
-      "currencyId": "Union Pacific Corporation (Ondo Tokenized)::UNPON"
+      "currencyId": "Union Pacific Corporation (Ondo Tokenized)::UNPON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0f8887772262c449793890dcd3bf320308db423b": {
       "chainId": "1",
@@ -165367,7 +165683,10 @@
       "symbol": "UECON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172445/thumb/uecon_160x160.png?1773419902",
       "assetGroup": "Uranium Energy (Ondo Tokenized)::UECON",
-      "currencyId": "Uranium Energy (Ondo Tokenized)::UECON"
+      "currencyId": "Uranium Energy (Ondo Tokenized)::UECON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x9ddb2524782684942fad28b44e76552cb7f3f548": {
       "chainId": "1",
@@ -165377,7 +165696,10 @@
       "symbol": "BNOON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172446/thumb/bnoon_160x160.png?1773419957",
       "assetGroup": "US Brent Oil Fund (Ondo Tokenized)::BNOON",
-      "currencyId": "US Brent Oil Fund (Ondo Tokenized)::BNOON"
+      "currencyId": "US Brent Oil Fund (Ondo Tokenized)::BNOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x7c488cfc874ca9f34e7bdbd0410c27ce6d6af5f9": {
       "chainId": "1",
@@ -165387,7 +165709,10 @@
       "symbol": "UNGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172447/thumb/ungon_160x160.png?1773420007",
       "assetGroup": "US Natural Gas Fund (Ondo Tokenized)::UNGON",
-      "currencyId": "US Natural Gas Fund (Ondo Tokenized)::UNGON"
+      "currencyId": "US Natural Gas Fund (Ondo Tokenized)::UNGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xbca31049ab4782f0ffa9cffcb2cf48e8d6de4fb8": {
       "chainId": "1",
@@ -165397,7 +165722,10 @@
       "symbol": "OIHON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172448/thumb/oihon_160x160.png?1773420046",
       "assetGroup": "VanEck Oil Services ETF (Ondo Tokenized)::OIHON",
-      "currencyId": "VanEck Oil Services ETF (Ondo Tokenized)::OIHON"
+      "currencyId": "VanEck Oil Services ETF (Ondo Tokenized)::OIHON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xccae8843e26259278c200c6506f6e5a3bdd524cd": {
       "chainId": "1",
@@ -165407,7 +165735,10 @@
       "symbol": "VNQON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172449/thumb/vnqon_160x160.png?1773420094",
       "assetGroup": "Vanguard Real Estate ETF (Ondo Tokenized)::VNQON",
-      "currencyId": "Vanguard Real Estate ETF (Ondo Tokenized)::VNQON"
+      "currencyId": "Vanguard Real Estate ETF (Ondo Tokenized)::VNQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfc003a764a7b5054cc6fdb6b511f35dec8022751": {
       "chainId": "1",
@@ -165417,7 +165748,10 @@
       "symbol": "VRTXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172450/thumb/vrtxon_160x160.png?1773420136",
       "assetGroup": "Vertex Pharmaceuticals (Ondo Tokenized)::VRTXON",
-      "currencyId": "Vertex Pharmaceuticals (Ondo Tokenized)::VRTXON"
+      "currencyId": "Vertex Pharmaceuticals (Ondo Tokenized)::VRTXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xbfe6e76a2fe099392064fbb3e868558c82beb917": {
       "chainId": "1",
@@ -165427,7 +165761,10 @@
       "symbol": "VFSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172451/thumb/vfson_160x160.png?1773420177",
       "assetGroup": "VinFast Auto (Ondo Tokenized)::VFSON",
-      "currencyId": "VinFast Auto (Ondo Tokenized)::VFSON"
+      "currencyId": "VinFast Auto (Ondo Tokenized)::VFSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1fb5a8dcd70be750a97eaf8a47bbe74ab7d3183e": {
       "chainId": "1",
@@ -165437,7 +165774,10 @@
       "symbol": "WMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172452/thumb/wmon_160x160.png?1773420210",
       "assetGroup": "Waste Management (Ondo Tokenized)::WMON",
-      "currencyId": "Waste Management (Ondo Tokenized)::WMON"
+      "currencyId": "Waste Management (Ondo Tokenized)::WMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x44e89d34601b8d0155e16634d2553ef7f54dbab2": {
       "chainId": "1",
@@ -165447,7 +165787,10 @@
       "symbol": "WDCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102172453/thumb/wdcon_160x160.png?1773420241",
       "assetGroup": "Western Digital (Ondo Tokenized)::WDCON",
-      "currencyId": "Western Digital (Ondo Tokenized)::WDCON"
+      "currencyId": "Western Digital (Ondo Tokenized)::WDCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe3872dd4eba50598c54b2aa21b04c71fc37b000b": {
       "chainId": "1",
@@ -167223,8 +167566,8 @@
       "props": {
         "savings": { "underlying": "NUSD", "base": "USD" },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "savings_inherit"
         },
         "stablecoin": { "base": "USD" },
@@ -167987,12 +168330,12 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "risk": { "score": 2, "source": "whitelist" },
+        "denomination": "BTC",
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
           "kind": "institution"
-        },
-        "denomination": "BTC"
+        }
       }
     },
     "0x06da0fd433c1a5d7a4faa01111c044910a184553": {
@@ -168435,7 +168778,10 @@
       "symbol": "STRCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173053/thumb/stretch.png?1777525062",
       "assetGroup": "Strategy Stretch Preferred (Ondo Tokenized)::STRCON",
-      "currencyId": "Strategy Stretch Preferred (Ondo Tokenized)::STRCON"
+      "currencyId": "Strategy Stretch Preferred (Ondo Tokenized)::STRCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x99e980265bf36516c442be982df1772a6ccb3233": {
       "chainId": "1",
@@ -168572,7 +168918,10 @@
       "symbol": "PRIME",
       "logoURI": "https://cdn.morpho.org/assets/logos/prime.svg",
       "assetGroup": "Hastra PRIME::PRIME",
-      "currencyId": "Hastra PRIME::PRIME"
+      "currencyId": "Hastra PRIME::PRIME",
+      "props": {
+        "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
+      }
     },
     "0x54a4fc78431f9201824643e99bec891bb7462a1d": {
       "chainId": "1",
@@ -168812,7 +169161,7 @@
       "currencyId": "Inverse USD::INVUSD",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -168995,7 +169344,7 @@
       "currencyId": "Universal USD::USDU",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 5,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -169252,7 +169601,7 @@
       "currencyId": "Agant GBP::GBPA",
       "props": {
         "risk": {
-          "score": 5,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -169359,7 +169708,10 @@
       "logoURI": "https://meta.huma.finance/pst.svg",
       "assetGroup": "PayFi Strategy Token::PST",
       "currencyId": "PayFi Strategy Token::PST",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "huma", "name": "Huma", "kind": "protocol" }
+      }
     },
     "0xfe6eb3b609a7c8352a241f7f3a21cea4e9209b8f": {
       "chainId": "1",
@@ -169504,7 +169856,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -169524,7 +169876,10 @@
       "symbol": "YEARON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173827/thumb/yearon_160x160.png?1781494689",
       "assetGroup": "AB Ultra Short Income ETF (Ondo Tokenized)::YEARON",
-      "currencyId": "AB Ultra Short Income ETF (Ondo Tokenized)::YEARON"
+      "currencyId": "AB Ultra Short Income ETF (Ondo Tokenized)::YEARON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x2710e30d84b376c34a3b3036aa196b26a83a321b": {
       "chainId": "1",
@@ -169534,7 +169889,10 @@
       "symbol": "BILON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173829/thumb/bilon_160x160.png?1781494683",
       "assetGroup": "SPDR Bloomberg 1-3 Month T-Bill ETF (Ondo Tokenized)::BILON",
-      "currencyId": "SPDR Bloomberg 1-3 Month T-Bill ETF (Ondo Tokenized)::BILON"
+      "currencyId": "SPDR Bloomberg 1-3 Month T-Bill ETF (Ondo Tokenized)::BILON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x034c9ffec64597e0a0622ca5b9eaf00839052e0a": {
       "chainId": "1",
@@ -169544,7 +169902,10 @@
       "symbol": "XYLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173830/thumb/xyldon_160x160.png?1781494680",
       "assetGroup": "Global X S&P 500 Covered Call ETF (Ondo Tokenized)::XYLDON",
-      "currencyId": "Global X S&P 500 Covered Call ETF (Ondo Tokenized)::XYLDON"
+      "currencyId": "Global X S&P 500 Covered Call ETF (Ondo Tokenized)::XYLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x823cf9cca5b8eae0ae08ff3c6cd5102d2859db4d": {
       "chainId": "1",
@@ -169554,7 +169915,10 @@
       "symbol": "HIVEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173923/thumb/hiveon_160x160.png?1781494532",
       "assetGroup": "HIVE Digital Technologies (Ondo Tokenized)::HIVEON",
-      "currencyId": "HIVE Digital Technologies (Ondo Tokenized)::HIVEON"
+      "currencyId": "HIVE Digital Technologies (Ondo Tokenized)::HIVEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdebb8e6f581655759e3d64f769247a007af0ae36": {
       "chainId": "1",
@@ -169564,7 +169928,10 @@
       "symbol": "TTMION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173924/thumb/ttmion_160x160.png?1781494535",
       "assetGroup": "TTM Technologies (Ondo Tokenized)::TTMION",
-      "currencyId": "TTM Technologies (Ondo Tokenized)::TTMION"
+      "currencyId": "TTM Technologies (Ondo Tokenized)::TTMION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xba6ff85f4595a3e71f3a965e6b528bbcf51a2c79": {
       "chainId": "1",
@@ -169574,7 +169941,10 @@
       "symbol": "PRIMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173925/thumb/primon_160x160.png?1781494538",
       "assetGroup": "Primoris Services (Ondo Tokenized)::PRIMON",
-      "currencyId": "Primoris Services (Ondo Tokenized)::PRIMON"
+      "currencyId": "Primoris Services (Ondo Tokenized)::PRIMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd318bbbe6b6e83f74e7acaeb5e94c08ddbdb44c0": {
       "chainId": "1",
@@ -169584,7 +169954,10 @@
       "symbol": "SOXLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173926/thumb/soxlon_160x160.png?1781494486",
       "assetGroup": "Direxion Daily Semi Bull 3X ETF (Ondo Tokenized)::SOXLON",
-      "currencyId": "Direxion Daily Semi Bull 3X ETF (Ondo Tokenized)::SOXLON"
+      "currencyId": "Direxion Daily Semi Bull 3X ETF (Ondo Tokenized)::SOXLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x01eb2ee6ec05c304666210133b762088ff9965ac": {
       "chainId": "1",
@@ -169594,7 +169967,10 @@
       "symbol": "SOXSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173927/thumb/soxson_160x160.png?1781494489",
       "assetGroup": "Direxion Daily Semi Bear 3X ETF (Ondo Tokenized)::SOXSON",
-      "currencyId": "Direxion Daily Semi Bear 3X ETF (Ondo Tokenized)::SOXSON"
+      "currencyId": "Direxion Daily Semi Bear 3X ETF (Ondo Tokenized)::SOXSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x26719965000a3dcacc1451f836fbb9c883ccde85": {
       "chainId": "1",
@@ -169604,7 +169980,10 @@
       "symbol": "EMRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173833/thumb/emron_160x160.png?1781494588",
       "assetGroup": "Emerson Electric (Ondo Tokenized)::EMRON",
-      "currencyId": "Emerson Electric (Ondo Tokenized)::EMRON"
+      "currencyId": "Emerson Electric (Ondo Tokenized)::EMRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x41d022c6008fbf431c5e5e88246a948b9e941ea3": {
       "chainId": "1",
@@ -169614,7 +169993,10 @@
       "symbol": "SYMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173834/thumb/symon_160x160.png?1781494591",
       "assetGroup": "Symbotic (Ondo Tokenized)::SYMON",
-      "currencyId": "Symbotic (Ondo Tokenized)::SYMON"
+      "currencyId": "Symbotic (Ondo Tokenized)::SYMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x85bd7b075a9e0f6d7099dd750cecd65ce57d4f44": {
       "chainId": "1",
@@ -169624,7 +170006,10 @@
       "symbol": "TASKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173835/thumb/taskon_160x160.png?1781494593",
       "assetGroup": "TaskUs (Ondo Tokenized)::TASKON",
-      "currencyId": "TaskUs (Ondo Tokenized)::TASKON"
+      "currencyId": "TaskUs (Ondo Tokenized)::TASKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1c99a152e00a5dc40f8c3e893c1d04b0f6a48b0f": {
       "chainId": "1",
@@ -169634,7 +170019,10 @@
       "symbol": "INODON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173836/thumb/inodon_160x160.png?1781494596",
       "assetGroup": "Innodata (Ondo Tokenized)::INODON",
-      "currencyId": "Innodata (Ondo Tokenized)::INODON"
+      "currencyId": "Innodata (Ondo Tokenized)::INODON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdc7e54dd476812f7cf1d77066f523afe50edab1b": {
       "chainId": "1",
@@ -169644,7 +170032,10 @@
       "symbol": "HSAION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173837/thumb/hsaion_160x160.png?1781494599",
       "assetGroup": "Hesai Group (Ondo Tokenized)::HSAION",
-      "currencyId": "Hesai Group (Ondo Tokenized)::HSAION"
+      "currencyId": "Hesai Group (Ondo Tokenized)::HSAION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x084a613fed04b5d26672e38dc9c3aa13f3c1ae58": {
       "chainId": "1",
@@ -169654,7 +170045,10 @@
       "symbol": "UAMYON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173838/thumb/uamyon_160x160.png?1781494602",
       "assetGroup": "United States Antimony (Ondo Tokenized)::UAMYON",
-      "currencyId": "United States Antimony (Ondo Tokenized)::UAMYON"
+      "currencyId": "United States Antimony (Ondo Tokenized)::UAMYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4cdd1099146f28a9b428cd85f36b562b6d05c8c8": {
       "chainId": "1",
@@ -169664,7 +170058,10 @@
       "symbol": "ALOYON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173839/thumb/aloyon_160x160.png?1781494605",
       "assetGroup": "REalloys (Ondo Tokenized)::ALOYON",
-      "currencyId": "REalloys (Ondo Tokenized)::ALOYON"
+      "currencyId": "REalloys (Ondo Tokenized)::ALOYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x8379c5595b8148a9968bee6d8110b2b4a627a9dd": {
       "chainId": "1",
@@ -169674,7 +170071,10 @@
       "symbol": "ACMRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173840/thumb/acmron_160x160.png?1781494608",
       "assetGroup": "ACM Research (Ondo Tokenized)::ACMRON",
-      "currencyId": "ACM Research (Ondo Tokenized)::ACMRON"
+      "currencyId": "ACM Research (Ondo Tokenized)::ACMRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x80d04221ec124850c4b9ba8f625b9a12ad609200": {
       "chainId": "1",
@@ -169684,7 +170084,10 @@
       "symbol": "NVMION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173841/thumb/nvmion_160x160.png?1781494611",
       "assetGroup": "Nova (Ondo Tokenized)::NVMION",
-      "currencyId": "Nova (Ondo Tokenized)::NVMION"
+      "currencyId": "Nova (Ondo Tokenized)::NVMION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf02b8309df07641ddcfd1dabceffdde3d30915de": {
       "chainId": "1",
@@ -169694,7 +170097,10 @@
       "symbol": "AMKRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173842/thumb/amkron_160x160.png?1781494614",
       "assetGroup": "Amkor Technology (Ondo Tokenized)::AMKRON",
-      "currencyId": "Amkor Technology (Ondo Tokenized)::AMKRON"
+      "currencyId": "Amkor Technology (Ondo Tokenized)::AMKRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6e9c573e5b8a59cec47d8e317c148e4b0595fb39": {
       "chainId": "1",
@@ -169704,7 +170110,10 @@
       "symbol": "AAONON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173843/thumb/aaonon_160x160.png?1781494616",
       "assetGroup": "AAON (Ondo Tokenized)::AAONON",
-      "currencyId": "AAON (Ondo Tokenized)::AAONON"
+      "currencyId": "AAON (Ondo Tokenized)::AAONON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa4daa3f53405bea3b1e5701b6db2ddc0efc4c8b2": {
       "chainId": "1",
@@ -169714,7 +170123,10 @@
       "symbol": "HLITON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173844/thumb/hliton_160x160.png?1781494619",
       "assetGroup": "Harmonic (Ondo Tokenized)::HLITON",
-      "currencyId": "Harmonic (Ondo Tokenized)::HLITON"
+      "currencyId": "Harmonic (Ondo Tokenized)::HLITON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x141196732ce4bb20010e4149704c0f278d5d3cea": {
       "chainId": "1",
@@ -169724,7 +170136,10 @@
       "symbol": "SATAON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173845/thumb/sataon_160x160.png?1781494623",
       "assetGroup": "Strive Preferred (Ondo Tokenized)::SATAON",
-      "currencyId": "Strive Preferred (Ondo Tokenized)::SATAON"
+      "currencyId": "Strive Preferred (Ondo Tokenized)::SATAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdb5a8f5b4c17f2ee2e7192a150687e48eb3c415d": {
       "chainId": "1",
@@ -169734,7 +170149,10 @@
       "symbol": "DRAMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173846/thumb/dramon_160x160.png?1781494626",
       "assetGroup": "Roundhill Memory ETF (Ondo Tokenized)::DRAMON",
-      "currencyId": "Roundhill Memory ETF (Ondo Tokenized)::DRAMON"
+      "currencyId": "Roundhill Memory ETF (Ondo Tokenized)::DRAMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfb1b703b26957c344aab03bbe11ec9c23e9eddf5": {
       "chainId": "1",
@@ -169744,7 +170162,10 @@
       "symbol": "ARGTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173847/thumb/argton_160x160.png?1781494629",
       "assetGroup": "Global X MSCI Argentina ETF (Ondo Tokenized)::ARGTON",
-      "currencyId": "Global X MSCI Argentina ETF (Ondo Tokenized)::ARGTON"
+      "currencyId": "Global X MSCI Argentina ETF (Ondo Tokenized)::ARGTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x211d1d372e6a782e9786b045004382834bdb224e": {
       "chainId": "1",
@@ -169754,7 +170175,10 @@
       "symbol": "PURRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173848/thumb/purron_160x160.png?1781494632",
       "assetGroup": "Hyperliquid Strategies (Ondo Tokenized)::PURRON",
-      "currencyId": "Hyperliquid Strategies (Ondo Tokenized)::PURRON"
+      "currencyId": "Hyperliquid Strategies (Ondo Tokenized)::PURRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfb4aa24c9c4e65f82d57d268da8a65a0de0dc43b": {
       "chainId": "1",
@@ -169764,7 +170188,10 @@
       "symbol": "SHLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173849/thumb/shldon_160x160.png?1781494634",
       "assetGroup": "Global X Defense Tech ETF (Ondo Tokenized)::SHLDON",
-      "currencyId": "Global X Defense Tech ETF (Ondo Tokenized)::SHLDON"
+      "currencyId": "Global X Defense Tech ETF (Ondo Tokenized)::SHLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x7abec847a3f9820397c82e1dad231721bf5a6732": {
       "chainId": "1",
@@ -169774,7 +170201,10 @@
       "symbol": "BOTZON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173850/thumb/botzon_160x160.png?1781494637",
       "assetGroup": "Global X Robotics & Artificial Intelligence ETF (Ondo Tokeni::BOTZON",
-      "currencyId": "Global X Robotics & Artificial Intelligence ETF (Ondo Tokeni::BOTZON"
+      "currencyId": "Global X Robotics & Artificial Intelligence ETF (Ondo Tokeni::BOTZON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x3eb4293b73080214012def05244ec291094c6c14": {
       "chainId": "1",
@@ -169784,7 +170214,10 @@
       "symbol": "LITON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173851/thumb/liton_160x160.png?1781494640",
       "assetGroup": "Global X Lithium & Battery Tech ETF (Ondo Tokenized)::LITON",
-      "currencyId": "Global X Lithium & Battery Tech ETF (Ondo Tokenized)::LITON"
+      "currencyId": "Global X Lithium & Battery Tech ETF (Ondo Tokenized)::LITON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4d9216151dad1af871a6eec623e2f04e7a2717b3": {
       "chainId": "1",
@@ -169794,7 +170227,10 @@
       "symbol": "DTCRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173852/thumb/dtcron_160x160.png?1781494643",
       "assetGroup": "Global X Data Center & Digital Infrastructure ETF (Ondo Toke::DTCRON",
-      "currencyId": "Global X Data Center & Digital Infrastructure ETF (Ondo Toke::DTCRON"
+      "currencyId": "Global X Data Center & Digital Infrastructure ETF (Ondo Toke::DTCRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf8fd3698ca42c07f502150c19dd1d96b687f53cd": {
       "chainId": "1",
@@ -169804,7 +170240,10 @@
       "symbol": "ORBXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173853/thumb/orbxon_160x160.png?1781494646",
       "assetGroup": "Global X Space Tech ETF (Ondo Tokenized)::ORBXON",
-      "currencyId": "Global X Space Tech ETF (Ondo Tokenized)::ORBXON"
+      "currencyId": "Global X Space Tech ETF (Ondo Tokenized)::ORBXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa7776b3d801a6626807e0db357c7ee2a8962903b": {
       "chainId": "1",
@@ -169814,7 +170253,10 @@
       "symbol": "QYLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173858/thumb/qyldon_160x160.png?1781494660",
       "assetGroup": "Global X NASDAQ 100 Covered Call ETF (Ondo Tokenized)::QYLDON",
-      "currencyId": "Global X NASDAQ 100 Covered Call ETF (Ondo Tokenized)::QYLDON"
+      "currencyId": "Global X NASDAQ 100 Covered Call ETF (Ondo Tokenized)::QYLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x603e505799511155a9216d37cf9e051171240b4c": {
       "chainId": "1",
@@ -169824,7 +170266,10 @@
       "symbol": "SILON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173859/thumb/silon_160x160.png?1781494663",
       "assetGroup": "Global X Silver Miners ETF (Ondo Tokenized)::SILON",
-      "currencyId": "Global X Silver Miners ETF (Ondo Tokenized)::SILON"
+      "currencyId": "Global X Silver Miners ETF (Ondo Tokenized)::SILON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x2a5ae1bde731cb8732fd762073dd0bbe151360b9": {
       "chainId": "1",
@@ -169834,7 +170279,10 @@
       "symbol": "AIQON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173860/thumb/aiqon_160x160.png?1781494666",
       "assetGroup": "Global X Artificial Intelligence & Technology ETF (Ondo Toke::AIQON",
-      "currencyId": "Global X Artificial Intelligence & Technology ETF (Ondo Toke::AIQON"
+      "currencyId": "Global X Artificial Intelligence & Technology ETF (Ondo Toke::AIQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdd00b1046692aa2780ef04849829609fc4f90fd7": {
       "chainId": "1",
@@ -169844,7 +170292,10 @@
       "symbol": "BKCHON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173861/thumb/bkchon_160x160.png?1781494669",
       "assetGroup": "Global X Blockchain ETF (Ondo Tokenized)::BKCHON",
-      "currencyId": "Global X Blockchain ETF (Ondo Tokenized)::BKCHON"
+      "currencyId": "Global X Blockchain ETF (Ondo Tokenized)::BKCHON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe92eb2bcf6425ca3b2967e33eb9a770ff89c1243": {
       "chainId": "1",
@@ -169864,7 +170315,10 @@
       "symbol": "VCXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173867/thumb/vcxon_160x160.png?1781494371",
       "assetGroup": "Fundrise Innovation Fund (Ondo Tokenized)::VCXON",
-      "currencyId": "Fundrise Innovation Fund (Ondo Tokenized)::VCXON"
+      "currencyId": "Fundrise Innovation Fund (Ondo Tokenized)::VCXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb326821b68313082f00a1a4d6fa3f924d3e826dc": {
       "chainId": "1",
@@ -169874,7 +170328,10 @@
       "symbol": "GFSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173868/thumb/gfson_160x160.png?1781494374",
       "assetGroup": "GlobalFoundries (Ondo Tokenized)::GFSON",
-      "currencyId": "GlobalFoundries (Ondo Tokenized)::GFSON"
+      "currencyId": "GlobalFoundries (Ondo Tokenized)::GFSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf14d47aed45e16bf1f6e06904ac7f852fce6cdf4": {
       "chainId": "1",
@@ -169884,7 +170341,10 @@
       "symbol": "UUUUON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173869/thumb/uuuuon_160x160.png?1781494377",
       "assetGroup": "Energy Fuels (Ondo Tokenized)::UUUUON",
-      "currencyId": "Energy Fuels (Ondo Tokenized)::UUUUON"
+      "currencyId": "Energy Fuels (Ondo Tokenized)::UUUUON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb4d71137656150e97f3ed2c18d4a30be138d8f2e": {
       "chainId": "1",
@@ -169894,7 +170354,10 @@
       "symbol": "PWRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173870/thumb/pwron_160x160.png?1781494379",
       "assetGroup": "Quanta Services (Ondo Tokenized)::PWRON",
-      "currencyId": "Quanta Services (Ondo Tokenized)::PWRON"
+      "currencyId": "Quanta Services (Ondo Tokenized)::PWRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xddaf7945093ad7457228c185783fdf6ab25022b2": {
       "chainId": "1",
@@ -169904,7 +170367,10 @@
       "symbol": "CORZON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173871/thumb/corzon_160x160.png?1781494383",
       "assetGroup": "Core Scientific (Ondo Tokenized)::CORZON",
-      "currencyId": "Core Scientific (Ondo Tokenized)::CORZON"
+      "currencyId": "Core Scientific (Ondo Tokenized)::CORZON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdf3f2315d124f7f8b714ba031d6e69aa16a61fa2": {
       "chainId": "1",
@@ -169914,7 +170380,10 @@
       "symbol": "HUTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173872/thumb/huton_160x160.png?1781494386",
       "assetGroup": "Hut 8 (Ondo Tokenized)::HUTON",
-      "currencyId": "Hut 8 (Ondo Tokenized)::HUTON"
+      "currencyId": "Hut 8 (Ondo Tokenized)::HUTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6c51001149c7782820c107adce650692ab6c5378": {
       "chainId": "1",
@@ -169924,7 +170393,10 @@
       "symbol": "VICRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173873/thumb/vicron_160x160.png?1781494389",
       "assetGroup": "Vicor (Ondo Tokenized)::VICRON",
-      "currencyId": "Vicor (Ondo Tokenized)::VICRON"
+      "currencyId": "Vicor (Ondo Tokenized)::VICRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd9c1b5df94063177cf168680b695a417919ae1ae": {
       "chainId": "1",
@@ -169934,7 +170406,10 @@
       "symbol": "APHON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173874/thumb/aphon_160x160.png?1781494392",
       "assetGroup": "Amphenol (Ondo Tokenized)::APHON",
-      "currencyId": "Amphenol (Ondo Tokenized)::APHON"
+      "currencyId": "Amphenol (Ondo Tokenized)::APHON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1b8085e78877dfba98692cb918809b35f6280015": {
       "chainId": "1",
@@ -169944,7 +170419,10 @@
       "symbol": "POWLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173875/thumb/powlon_160x160.png?1781494394",
       "assetGroup": "Powell Industries (Ondo Tokenized)::POWLON",
-      "currencyId": "Powell Industries (Ondo Tokenized)::POWLON"
+      "currencyId": "Powell Industries (Ondo Tokenized)::POWLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa95837130bcbc0ad99e188e22f674e4ec6925be2": {
       "chainId": "1",
@@ -169954,7 +170432,10 @@
       "symbol": "CLFON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173876/thumb/clfon_160x160.png?1781494397",
       "assetGroup": "Cleveland-Cliffs (Ondo Tokenized)::CLFON",
-      "currencyId": "Cleveland-Cliffs (Ondo Tokenized)::CLFON"
+      "currencyId": "Cleveland-Cliffs (Ondo Tokenized)::CLFON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa9f9be37b19f261ab067c5f7deda2c969ec66944": {
       "chainId": "1",
@@ -169964,7 +170445,10 @@
       "symbol": "CCJON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173877/thumb/ccjon_160x160.png?1781494400",
       "assetGroup": "Cameco (Ondo Tokenized)::CCJON",
-      "currencyId": "Cameco (Ondo Tokenized)::CCJON"
+      "currencyId": "Cameco (Ondo Tokenized)::CCJON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0a600856eedce367ed49c3cd399775dc95d8bb5a": {
       "chainId": "1",
@@ -169974,7 +170458,10 @@
       "symbol": "SMRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173783/thumb/smron_160x160.png?1781494290",
       "assetGroup": "NuScale Power (Ondo Tokenized)::SMRON",
-      "currencyId": "NuScale Power (Ondo Tokenized)::SMRON"
+      "currencyId": "NuScale Power (Ondo Tokenized)::SMRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf5852886fff060df3af99a4246456fca26445e8c": {
       "chainId": "1",
@@ -169984,7 +170471,10 @@
       "symbol": "STMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173784/thumb/stmon_160x160.png?1781494293",
       "assetGroup": "STMicroelectronics (Ondo Tokenized)::STMON",
-      "currencyId": "STMicroelectronics (Ondo Tokenized)::STMON"
+      "currencyId": "STMicroelectronics (Ondo Tokenized)::STMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x05d2d23398756821dc3de359ffce8ebbd50af8c5": {
       "chainId": "1",
@@ -169994,7 +170484,10 @@
       "symbol": "EQTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173785/thumb/eqton_160x160.png?1781494296",
       "assetGroup": "EQT (Ondo Tokenized)::EQTON",
-      "currencyId": "EQT (Ondo Tokenized)::EQTON"
+      "currencyId": "EQT (Ondo Tokenized)::EQTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xcafd1c0ee8b392cb446e3e745a4adeff7a861995": {
       "chainId": "1",
@@ -170004,7 +170497,10 @@
       "symbol": "SAPON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173786/thumb/sapon_160x160.png?1781494299",
       "assetGroup": "SAP (Ondo Tokenized)::SAPON",
-      "currencyId": "SAP (Ondo Tokenized)::SAPON"
+      "currencyId": "SAP (Ondo Tokenized)::SAPON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfb6d594cccfded3606e1500b92a26b8b43a35071": {
       "chainId": "1",
@@ -170014,7 +170510,10 @@
       "symbol": "WMBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173787/thumb/wmbon_160x160.png?1781494302",
       "assetGroup": "Williams (Ondo Tokenized)::WMBON",
-      "currencyId": "Williams (Ondo Tokenized)::WMBON"
+      "currencyId": "Williams (Ondo Tokenized)::WMBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb5dd7ff8e2e4019ca7a55f10c13282071a5775d4": {
       "chainId": "1",
@@ -170024,7 +170523,10 @@
       "symbol": "NNEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173788/thumb/nneon_160x160.png?1781494305",
       "assetGroup": "NANO Nuclear Energy (Ondo Tokenized)::NNEON",
-      "currencyId": "NANO Nuclear Energy (Ondo Tokenized)::NNEON"
+      "currencyId": "NANO Nuclear Energy (Ondo Tokenized)::NNEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf6c9c6b33bd3df0d761702db7075f89e561a54d8": {
       "chainId": "1",
@@ -170034,7 +170536,10 @@
       "symbol": "FLNCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173789/thumb/flncon_160x160.png?1781494308",
       "assetGroup": "Fluence Energy (Ondo Tokenized)::FLNCON",
-      "currencyId": "Fluence Energy (Ondo Tokenized)::FLNCON"
+      "currencyId": "Fluence Energy (Ondo Tokenized)::FLNCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x61882bb63af8e6a39531175cdfde1fcd98346503": {
       "chainId": "1",
@@ -170044,7 +170549,10 @@
       "symbol": "CBRSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173790/thumb/cbrson_160x160.png?1781494311",
       "assetGroup": "Cerebras Systems (Ondo Tokenized)::CBRSON",
-      "currencyId": "Cerebras Systems (Ondo Tokenized)::CBRSON"
+      "currencyId": "Cerebras Systems (Ondo Tokenized)::CBRSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xee9f43476c5b7292b114ba1b280a42a8746792d4": {
       "chainId": "1",
@@ -170054,7 +170562,10 @@
       "symbol": "DELLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173791/thumb/dellon_160x160.png?1781494313",
       "assetGroup": "Dell Technologies (Ondo Tokenized)::DELLON",
-      "currencyId": "Dell Technologies (Ondo Tokenized)::DELLON"
+      "currencyId": "Dell Technologies (Ondo Tokenized)::DELLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xebe0d1b1d50bc68458fcdc45c3c276d57cdc422b": {
       "chainId": "1",
@@ -170064,7 +170575,10 @@
       "symbol": "TSEMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173792/thumb/tsemon_160x160.png?1781494316",
       "assetGroup": "Tower Semiconductor (Ondo Tokenized)::TSEMON",
-      "currencyId": "Tower Semiconductor (Ondo Tokenized)::TSEMON"
+      "currencyId": "Tower Semiconductor (Ondo Tokenized)::TSEMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1ffac2df9696868d06f9fe8d72fee9e1452eef76": {
       "chainId": "1",
@@ -170074,7 +170588,10 @@
       "symbol": "CIENON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173793/thumb/cienon_160x160.png?1781494319",
       "assetGroup": "Ciena (Ondo Tokenized)::CIENON",
-      "currencyId": "Ciena (Ondo Tokenized)::CIENON"
+      "currencyId": "Ciena (Ondo Tokenized)::CIENON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x93a96721a624822a6ab6461a7891a5c6b154102f": {
       "chainId": "1",
@@ -170084,7 +170601,10 @@
       "symbol": "FNON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173794/thumb/fnon_160x160.png?1781494322",
       "assetGroup": "Fabrinet (Ondo Tokenized)::FNON",
-      "currencyId": "Fabrinet (Ondo Tokenized)::FNON"
+      "currencyId": "Fabrinet (Ondo Tokenized)::FNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x45583545be579cc96409903597c5e17b3fd7ceff": {
       "chainId": "1",
@@ -170094,7 +170614,10 @@
       "symbol": "ARQQON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173795/thumb/arqqon_160x160.png?1781494325",
       "assetGroup": "Arqit Quantum (Ondo Tokenized)::ARQQON",
-      "currencyId": "Arqit Quantum (Ondo Tokenized)::ARQQON"
+      "currencyId": "Arqit Quantum (Ondo Tokenized)::ARQQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd6d09189b6fd611a75435e4a123e373a56ab0e41": {
       "chainId": "1",
@@ -170104,7 +170627,10 @@
       "symbol": "ALABON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173796/thumb/alabon_160x160.png?1781494328",
       "assetGroup": "Astera Labs (Ondo Tokenized)::ALABON",
-      "currencyId": "Astera Labs (Ondo Tokenized)::ALABON"
+      "currencyId": "Astera Labs (Ondo Tokenized)::ALABON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb348a4bce7fae890d2d37ea104e59fb3881757c2": {
       "chainId": "1",
@@ -170114,7 +170640,10 @@
       "symbol": "CRDOON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173797/thumb/crdoon_160x160.png?1781494331",
       "assetGroup": "Credo Technology Group Holding (Ondo Tokenized)::CRDOON",
-      "currencyId": "Credo Technology Group Holding (Ondo Tokenized)::CRDOON"
+      "currencyId": "Credo Technology Group Holding (Ondo Tokenized)::CRDOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6e9c4bceddd057d66b65794a0093ad95c5fa0cc4": {
       "chainId": "1",
@@ -170124,7 +170653,10 @@
       "symbol": "MTSION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173798/thumb/mtsion_160x160.png?1781494334",
       "assetGroup": "MACOM Technology Solutions Holdings (Ondo Tokenized)::MTSION",
-      "currencyId": "MACOM Technology Solutions Holdings (Ondo Tokenized)::MTSION"
+      "currencyId": "MACOM Technology Solutions Holdings (Ondo Tokenized)::MTSION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x5bc56f5a324bb572b934ced4448055e30ec11c0c": {
       "chainId": "1",
@@ -170134,7 +170666,10 @@
       "symbol": "LWLGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173799/thumb/lwlgon_160x160.png?1781494336",
       "assetGroup": "Lightwave Logic (Ondo Tokenized)::LWLGON",
-      "currencyId": "Lightwave Logic (Ondo Tokenized)::LWLGON"
+      "currencyId": "Lightwave Logic (Ondo Tokenized)::LWLGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x2d9fc6c5dd136658ab6190f356ae3186c4daa7d5": {
       "chainId": "1",
@@ -170144,7 +170679,10 @@
       "symbol": "NVTSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173878/thumb/nvtson_160x160.png?1781494403",
       "assetGroup": "Navitas Semiconductor (Ondo Tokenized)::NVTSON",
-      "currencyId": "Navitas Semiconductor (Ondo Tokenized)::NVTSON"
+      "currencyId": "Navitas Semiconductor (Ondo Tokenized)::NVTSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x41fa6d32917e17cf29a5e93940471492d7c301c8": {
       "chainId": "1",
@@ -170154,7 +170692,10 @@
       "symbol": "PENGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173800/thumb/pengon_160x160.png?1781494339",
       "assetGroup": "Penguin Solutions (Ondo Tokenized)::PENGON",
-      "currencyId": "Penguin Solutions (Ondo Tokenized)::PENGON"
+      "currencyId": "Penguin Solutions (Ondo Tokenized)::PENGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb71c4ebb4edbad867290206239c19dbb59ed55e1": {
       "chainId": "1",
@@ -170164,7 +170705,10 @@
       "symbol": "FCELON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173801/thumb/fcelon_160x160.png?1781494342",
       "assetGroup": "FuelCell Energy (Ondo Tokenized)::FCELON",
-      "currencyId": "FuelCell Energy (Ondo Tokenized)::FCELON"
+      "currencyId": "FuelCell Energy (Ondo Tokenized)::FCELON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1c4c8a66884f1eec60aa203c6cb51fd6cb76dbb9": {
       "chainId": "1",
@@ -170174,7 +170718,10 @@
       "symbol": "VPGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173802/thumb/vpgon_160x160.png?1781494345",
       "assetGroup": "Vishay Precision Group (Ondo Tokenized)::VPGON",
-      "currencyId": "Vishay Precision Group (Ondo Tokenized)::VPGON"
+      "currencyId": "Vishay Precision Group (Ondo Tokenized)::VPGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x9a73a9cc7c5889c521423870e896904f71562504": {
       "chainId": "1",
@@ -170184,7 +170731,10 @@
       "symbol": "LPTHON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173803/thumb/lpthon_160x160.png?1781494348",
       "assetGroup": "LightPath Technologies (Ondo Tokenized)::LPTHON",
-      "currencyId": "LightPath Technologies (Ondo Tokenized)::LPTHON"
+      "currencyId": "LightPath Technologies (Ondo Tokenized)::LPTHON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4ef7a9145e7b3c92e23a97fb41a9f4e9856288cb": {
       "chainId": "1",
@@ -170194,7 +170744,10 @@
       "symbol": "ROKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173804/thumb/rokon_160x160.png?1781494351",
       "assetGroup": "Rockwell Automation (Ondo Tokenized)::ROKON",
-      "currencyId": "Rockwell Automation (Ondo Tokenized)::ROKON"
+      "currencyId": "Rockwell Automation (Ondo Tokenized)::ROKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc4fa11ed5141195ccba19180628fa5091f53790b": {
       "chainId": "1",
@@ -170204,7 +170757,10 @@
       "symbol": "MBLYON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173805/thumb/mblyon_160x160.png?1781494354",
       "assetGroup": "Mobileye Global (Ondo Tokenized)::MBLYON",
-      "currencyId": "Mobileye Global (Ondo Tokenized)::MBLYON"
+      "currencyId": "Mobileye Global (Ondo Tokenized)::MBLYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfc9d0ebbd17d3aaa336a50488795806c69ea4b32": {
       "chainId": "1",
@@ -170214,7 +170770,10 @@
       "symbol": "AURON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173806/thumb/auron_160x160.png?1781494356",
       "assetGroup": "Aurora Innovation (Ondo Tokenized)::AURON",
-      "currencyId": "Aurora Innovation (Ondo Tokenized)::AURON"
+      "currencyId": "Aurora Innovation (Ondo Tokenized)::AURON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1630281079ebac2e873fb1f1cb41df3d0e451e23": {
       "chainId": "1",
@@ -170224,7 +170783,10 @@
       "symbol": "CLSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173807/thumb/clson_160x160.png?1781494359",
       "assetGroup": "Celestica (Ondo Tokenized)::CLSON",
-      "currencyId": "Celestica (Ondo Tokenized)::CLSON"
+      "currencyId": "Celestica (Ondo Tokenized)::CLSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd569ff7f1560f71874bc52d4728fb2921e3dce05": {
       "chainId": "1",
@@ -170234,7 +170796,10 @@
       "symbol": "KOPNON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173808/thumb/kopnon_160x160.png?1781494362",
       "assetGroup": "Kopin (Ondo Tokenized)::KOPNON",
-      "currencyId": "Kopin (Ondo Tokenized)::KOPNON"
+      "currencyId": "Kopin (Ondo Tokenized)::KOPNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd120f60fec8189ed4a2346e10107b0f1f61354cb": {
       "chainId": "1",
@@ -170244,7 +170809,10 @@
       "symbol": "GNRCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173809/thumb/gnrcon_160x160.png?1781494365",
       "assetGroup": "Generac Holdings (Ondo Tokenized)::GNRCON",
-      "currencyId": "Generac Holdings (Ondo Tokenized)::GNRCON"
+      "currencyId": "Generac Holdings (Ondo Tokenized)::GNRCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x26e78f7170d8cc3bd3865d37ce4c554b65b1c9ba": {
       "chainId": "1",
@@ -170254,7 +170822,10 @@
       "symbol": "TTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173810/thumb/tton_160x160.png?1781494368",
       "assetGroup": "Trane Technologies (Ondo Tokenized)::TTON",
-      "currencyId": "Trane Technologies (Ondo Tokenized)::TTON"
+      "currencyId": "Trane Technologies (Ondo Tokenized)::TTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd62c0bf1e1dd6f4fee1b3d042a9e479ad1fb1bcb": {
       "chainId": "1",
@@ -170264,7 +170835,10 @@
       "symbol": "LECOON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173811/thumb/lecoon_160x160.png?1781494541",
       "assetGroup": "Lincoln Electric (Ondo Tokenized)::LECOON",
-      "currencyId": "Lincoln Electric (Ondo Tokenized)::LECOON"
+      "currencyId": "Lincoln Electric (Ondo Tokenized)::LECOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x113fae6e1103a4c09250c8697a6a4be6ca987d06": {
       "chainId": "1",
@@ -170274,7 +170848,10 @@
       "symbol": "AMEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173812/thumb/ameon_160x160.png?1781494544",
       "assetGroup": "AMETEK (Ondo Tokenized)::AMEON",
-      "currencyId": "AMETEK (Ondo Tokenized)::AMEON"
+      "currencyId": "AMETEK (Ondo Tokenized)::AMEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x410e7d6b6303e531753d4fbe3e50e35efbcff53c": {
       "chainId": "1",
@@ -170284,7 +170861,10 @@
       "symbol": "FPSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173813/thumb/fpson_160x160.png?1781494547",
       "assetGroup": "Forgent Power Solutions (Ondo Tokenized)::FPSON",
-      "currencyId": "Forgent Power Solutions (Ondo Tokenized)::FPSON"
+      "currencyId": "Forgent Power Solutions (Ondo Tokenized)::FPSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf87efca06f6af53cb096847ba092ccd04395a192": {
       "chainId": "1",
@@ -170294,7 +170874,10 @@
       "symbol": "WCCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173814/thumb/wccon_160x160.png?1781494550",
       "assetGroup": "WESCO International (Ondo Tokenized)::WCCON",
-      "currencyId": "WESCO International (Ondo Tokenized)::WCCON"
+      "currencyId": "WESCO International (Ondo Tokenized)::WCCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xeca55ac71f83931b7e074228aebc9104f13d8c02": {
       "chainId": "1",
@@ -170304,7 +170887,10 @@
       "symbol": "BWETON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173815/thumb/bweton_160x160.png?1781494553",
       "assetGroup": "Breakwave Tanker Shipping ETF (Ondo Tokenized)::BWETON",
-      "currencyId": "Breakwave Tanker Shipping ETF (Ondo Tokenized)::BWETON"
+      "currencyId": "Breakwave Tanker Shipping ETF (Ondo Tokenized)::BWETON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf25a149151033fcfaf069c1d007c3c2d2429be8e": {
       "chainId": "1",
@@ -170314,7 +170900,10 @@
       "symbol": "STNGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173816/thumb/stngon_160x160.png?1781494555",
       "assetGroup": "Scorpio Tankers (Ondo Tokenized)::STNGON",
-      "currencyId": "Scorpio Tankers (Ondo Tokenized)::STNGON"
+      "currencyId": "Scorpio Tankers (Ondo Tokenized)::STNGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x90c06bccb5bd20c5a84cbd59a43aa22ca96e588d": {
       "chainId": "1",
@@ -170324,7 +170913,10 @@
       "symbol": "TNKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173817/thumb/tnkon_160x160.png?1781494558",
       "assetGroup": "Teekay Tankers (Ondo Tokenized)::TNKON",
-      "currencyId": "Teekay Tankers (Ondo Tokenized)::TNKON"
+      "currencyId": "Teekay Tankers (Ondo Tokenized)::TNKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x3f696db88aca815c150feb9baaa9870f85b77494": {
       "chainId": "1",
@@ -170334,7 +170926,10 @@
       "symbol": "INSWON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173818/thumb/inswon_160x160.png?1781494562",
       "assetGroup": "International Seaways (Ondo Tokenized)::INSWON",
-      "currencyId": "International Seaways (Ondo Tokenized)::INSWON"
+      "currencyId": "International Seaways (Ondo Tokenized)::INSWON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdb2e166f0c76b05bc07700cbf74cc36ae2603624": {
       "chainId": "1",
@@ -170344,7 +170939,10 @@
       "symbol": "TENON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173819/thumb/tenon_160x160.png?1781494565",
       "assetGroup": "Tsakos Energy Navigation (Ondo Tokenized)::TENON",
-      "currencyId": "Tsakos Energy Navigation (Ondo Tokenized)::TENON"
+      "currencyId": "Tsakos Energy Navigation (Ondo Tokenized)::TENON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x64b84731cec441370c90c1b06d66a17eadfacd0f": {
       "chainId": "1",
@@ -170354,7 +170952,10 @@
       "symbol": "NATON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173820/thumb/naton_160x160.png?1781494568",
       "assetGroup": "Nordic American Tankers (Ondo Tokenized)::NATON",
-      "currencyId": "Nordic American Tankers (Ondo Tokenized)::NATON"
+      "currencyId": "Nordic American Tankers (Ondo Tokenized)::NATON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd081b43e3c334b1a101981efc1d98f1e82df076e": {
       "chainId": "1",
@@ -170364,7 +170965,10 @@
       "symbol": "ECOON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173821/thumb/ecoon_160x160.png?1781494570",
       "assetGroup": "Okeanis Eco Tankers (Ondo Tokenized)::ECOON",
-      "currencyId": "Okeanis Eco Tankers (Ondo Tokenized)::ECOON"
+      "currencyId": "Okeanis Eco Tankers (Ondo Tokenized)::ECOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xead51ee313a7187fc1a155c381270c764da42770": {
       "chainId": "1",
@@ -170374,7 +170978,10 @@
       "symbol": "WLKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173822/thumb/wlkon_160x160.png?1781494573",
       "assetGroup": "Westlake (Ondo Tokenized)::WLKON",
-      "currencyId": "Westlake (Ondo Tokenized)::WLKON"
+      "currencyId": "Westlake (Ondo Tokenized)::WLKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x167f8d6b357fa9fff9b1286e519bd32d4504757e": {
       "chainId": "1",
@@ -170384,7 +170991,10 @@
       "symbol": "NUEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173823/thumb/nueon_160x160.png?1781494576",
       "assetGroup": "Nucor (Ondo Tokenized)::NUEON",
-      "currencyId": "Nucor (Ondo Tokenized)::NUEON"
+      "currencyId": "Nucor (Ondo Tokenized)::NUEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xf9d5af26e1b96625dbc86609463a06602be42966": {
       "chainId": "1",
@@ -170394,7 +171004,10 @@
       "symbol": "STLDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173824/thumb/stldon_160x160.png?1781494579",
       "assetGroup": "Steel Dynamics (Ondo Tokenized)::STLDON",
-      "currencyId": "Steel Dynamics (Ondo Tokenized)::STLDON"
+      "currencyId": "Steel Dynamics (Ondo Tokenized)::STLDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa0db1eca4aaebca03a3c04ed221b036dd3ccb025": {
       "chainId": "1",
@@ -170404,7 +171017,10 @@
       "symbol": "LSCCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173825/thumb/lsccon_160x160.png?1781494582",
       "assetGroup": "Lattice Semiconductor (Ondo Tokenized)::LSCCON",
-      "currencyId": "Lattice Semiconductor (Ondo Tokenized)::LSCCON"
+      "currencyId": "Lattice Semiconductor (Ondo Tokenized)::LSCCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc4881ce8269744b9255b926b76728eadcb240a3b": {
       "chainId": "1",
@@ -170414,7 +171030,10 @@
       "symbol": "CEVAON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173826/thumb/cevaon_160x160.png?1781494585",
       "assetGroup": "CEVA (Ondo Tokenized)::CEVAON",
-      "currencyId": "CEVA (Ondo Tokenized)::CEVAON"
+      "currencyId": "CEVA (Ondo Tokenized)::CEVAON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x77adb9f3ff7aacba0eece50d1bbf51ada182d174": {
       "chainId": "1",
@@ -170424,7 +171043,10 @@
       "symbol": "UCTTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173908/thumb/uctton_160x160.png?1781494492",
       "assetGroup": "Ultra Clean Holdings (Ondo Tokenized)::UCTTON",
-      "currencyId": "Ultra Clean Holdings (Ondo Tokenized)::UCTTON"
+      "currencyId": "Ultra Clean Holdings (Ondo Tokenized)::UCTTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6785ce8060655b1f4991c3893dc41814154a1808": {
       "chainId": "1",
@@ -170434,7 +171056,10 @@
       "symbol": "ACLSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173909/thumb/aclson_160x160.png?1781494494",
       "assetGroup": "Axcelis Technologies (Ondo Tokenized)::ACLSON",
-      "currencyId": "Axcelis Technologies (Ondo Tokenized)::ACLSON"
+      "currencyId": "Axcelis Technologies (Ondo Tokenized)::ACLSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x948b03e4a1f1330d86ea3ade02482639b5cce720": {
       "chainId": "1",
@@ -170444,7 +171069,10 @@
       "symbol": "COHUON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173910/thumb/cohuon_160x160.png?1781494497",
       "assetGroup": "Cohu (Ondo Tokenized)::COHUON",
-      "currencyId": "Cohu (Ondo Tokenized)::COHUON"
+      "currencyId": "Cohu (Ondo Tokenized)::COHUON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1e328bbcd67e1bbee198bb3f90e764812e6e0ac9": {
       "chainId": "1",
@@ -170454,7 +171082,10 @@
       "symbol": "KEYSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173911/thumb/keyson_160x160.png?1781494500",
       "assetGroup": "Keysight Technologies (Ondo Tokenized)::KEYSON",
-      "currencyId": "Keysight Technologies (Ondo Tokenized)::KEYSON"
+      "currencyId": "Keysight Technologies (Ondo Tokenized)::KEYSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc5a72b01cc9e2721dc6de1a35ab8d92a6aa273e6": {
       "chainId": "1",
@@ -170464,7 +171095,10 @@
       "symbol": "VRSNON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173913/thumb/vrsnon_160x160.png?1781494506",
       "assetGroup": "VeriSign (Ondo Tokenized)::VRSNON",
-      "currencyId": "VeriSign (Ondo Tokenized)::VRSNON"
+      "currencyId": "VeriSign (Ondo Tokenized)::VRSNON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6987f17a188c3b64f4892f0e31c2ccd88f54fcfd": {
       "chainId": "1",
@@ -170474,7 +171108,10 @@
       "symbol": "VSHON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173914/thumb/vshon_160x160.png?1781494509",
       "assetGroup": "Vishay Intertechnology (Ondo Tokenized)::VSHON",
-      "currencyId": "Vishay Intertechnology (Ondo Tokenized)::VSHON"
+      "currencyId": "Vishay Intertechnology (Ondo Tokenized)::VSHON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x84601fdb21e3e892104e1fe4a8269e7aca7c0e1a": {
       "chainId": "1",
@@ -170484,7 +171121,10 @@
       "symbol": "MEION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173915/thumb/meion_160x160.png?1781494512",
       "assetGroup": "Methode Electronics (Ondo Tokenized)::MEION",
-      "currencyId": "Methode Electronics (Ondo Tokenized)::MEION"
+      "currencyId": "Methode Electronics (Ondo Tokenized)::MEION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xae1c6e353cdc9dc3cc01124ffb62a0d0ce64a401": {
       "chainId": "1",
@@ -170494,7 +171134,10 @@
       "symbol": "RMBSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173916/thumb/rambus.png?1781589919",
       "assetGroup": "Rambus (Ondo Tokenized)::RMBSON",
-      "currencyId": "Rambus (Ondo Tokenized)::RMBSON"
+      "currencyId": "Rambus (Ondo Tokenized)::RMBSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0d8ef471a11036bc6dda1536069457f7e97dab66": {
       "chainId": "1",
@@ -170504,7 +171147,10 @@
       "symbol": "AIPON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173917/thumb/aipon_160x160.png?1781494515",
       "assetGroup": "Arteris (Ondo Tokenized)::AIPON",
-      "currencyId": "Arteris (Ondo Tokenized)::AIPON"
+      "currencyId": "Arteris (Ondo Tokenized)::AIPON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x04c8381e17b6a9245abbf2e62c544eaee4030d1b": {
       "chainId": "1",
@@ -170514,7 +171160,10 @@
       "symbol": "EXTRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173918/thumb/extron_160x160.png?1781494518",
       "assetGroup": "Extreme Networks (Ondo Tokenized)::EXTRON",
-      "currencyId": "Extreme Networks (Ondo Tokenized)::EXTRON"
+      "currencyId": "Extreme Networks (Ondo Tokenized)::EXTRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xceb37ad46957047e22f726a7b25b134fc53ad753": {
       "chainId": "1",
@@ -170524,7 +171173,10 @@
       "symbol": "WYFION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173919/thumb/wyfion_160x160.png?1781494520",
       "assetGroup": "WhiteFiber (Ondo Tokenized)::WYFION",
-      "currencyId": "WhiteFiber (Ondo Tokenized)::WYFION"
+      "currencyId": "WhiteFiber (Ondo Tokenized)::WYFION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc76e008965b2f0e37896f52a2feee66ef2926ae8": {
       "chainId": "1",
@@ -170534,7 +171186,10 @@
       "symbol": "DGXXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173920/thumb/dgxxon_160x160.png?1781494523",
       "assetGroup": "Digi Power X (Ondo Tokenized)::DGXXON",
-      "currencyId": "Digi Power X (Ondo Tokenized)::DGXXON"
+      "currencyId": "Digi Power X (Ondo Tokenized)::DGXXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0683154c33b7563ed39951b4d7c0470ea28d93e9": {
       "chainId": "1",
@@ -170544,7 +171199,10 @@
       "symbol": "BTDRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173921/thumb/btdron_160x160.png?1781494526",
       "assetGroup": "Bitdeer Technologies (Ondo Tokenized)::BTDRON",
-      "currencyId": "Bitdeer Technologies (Ondo Tokenized)::BTDRON"
+      "currencyId": "Bitdeer Technologies (Ondo Tokenized)::BTDRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x96c662b152bec886facab388bd98470fd3aa9737": {
       "chainId": "1",
@@ -170554,7 +171212,10 @@
       "symbol": "KEELON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173922/thumb/keelon_160x160.png?1781494529",
       "assetGroup": "Keel Infrastructure (Ondo Tokenized)::KEELON",
-      "currencyId": "Keel Infrastructure (Ondo Tokenized)::KEELON"
+      "currencyId": "Keel Infrastructure (Ondo Tokenized)::KEELON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xaa26e62e51bc5da24ed2b6fc6491e137d68824b9": {
       "chainId": "1",
@@ -170564,7 +171225,10 @@
       "symbol": "AGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173899/thumb/agon_160x160.png?1781494460",
       "assetGroup": "First Majestic Silver (Ondo Tokenized)::AGON",
-      "currencyId": "First Majestic Silver (Ondo Tokenized)::AGON"
+      "currencyId": "First Majestic Silver (Ondo Tokenized)::AGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xcea4290d6578f0253308304f7184ea2e8f5eb0e4": {
       "chainId": "1",
@@ -170574,7 +171238,10 @@
       "symbol": "SLBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173900/thumb/slbon_160x160.png?1781494463",
       "assetGroup": "SLB (Ondo Tokenized)::SLBON",
-      "currencyId": "SLB (Ondo Tokenized)::SLBON"
+      "currencyId": "SLB (Ondo Tokenized)::SLBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x596b790ccee1032f6658ac2c78a119cce69727fc": {
       "chainId": "1",
@@ -170584,7 +171251,10 @@
       "symbol": "HALON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173901/thumb/halon_160x160.png?1781494466",
       "assetGroup": "Halliburton (Ondo Tokenized)::HALON",
-      "currencyId": "Halliburton (Ondo Tokenized)::HALON"
+      "currencyId": "Halliburton (Ondo Tokenized)::HALON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x01e7eaf05be1d0c2d1834fc65080188376026d07": {
       "chainId": "1",
@@ -170594,7 +171264,10 @@
       "symbol": "NOKON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173774/thumb/nokon_160x160.png?1781494265",
       "assetGroup": "Nokia (Ondo Tokenized)::NOKON",
-      "currencyId": "Nokia (Ondo Tokenized)::NOKON"
+      "currencyId": "Nokia (Ondo Tokenized)::NOKON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x333333330522f64ee8d0b3039c460b41670e3404": {
       "chainId": "1",
@@ -170614,7 +171287,10 @@
       "symbol": "QTUMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173902/thumb/qtumon_160x160.png?1781494469",
       "assetGroup": "Defiance Quantum ETF (Ondo Tokenized)::QTUMON",
-      "currencyId": "Defiance Quantum ETF (Ondo Tokenized)::QTUMON"
+      "currencyId": "Defiance Quantum ETF (Ondo Tokenized)::QTUMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc15f11599828b0afb0c071994679ef9e685f9e2e": {
       "chainId": "1",
@@ -170624,7 +171300,10 @@
       "symbol": "SWKSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173903/thumb/swkson_160x160.png?1781494472",
       "assetGroup": "Skyworks Solutions (Ondo Tokenized)::SWKSON",
-      "currencyId": "Skyworks Solutions (Ondo Tokenized)::SWKSON"
+      "currencyId": "Skyworks Solutions (Ondo Tokenized)::SWKSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x9784508a0758cbb43ecb9b62f4cf4b1b3a36480c": {
       "chainId": "1",
@@ -170634,7 +171313,10 @@
       "symbol": "UMCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173904/thumb/umcon_160x160.png?1781494475",
       "assetGroup": "United Microelectronics (Ondo Tokenized)::UMCON",
-      "currencyId": "United Microelectronics (Ondo Tokenized)::UMCON"
+      "currencyId": "United Microelectronics (Ondo Tokenized)::UMCON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa656c5dd6b64b3acb6e32af8a876a48b5748f858": {
       "chainId": "1",
@@ -170644,7 +171326,10 @@
       "symbol": "PLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173775/thumb/plon_160x160.png?1781494268",
       "assetGroup": "Planet Labs (Ondo Tokenized)::PLON",
-      "currencyId": "Planet Labs (Ondo Tokenized)::PLON"
+      "currencyId": "Planet Labs (Ondo Tokenized)::PLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb2e9ec5c62f78596ca4a21a21570b9a00c6d226c": {
       "chainId": "1",
@@ -170654,7 +171339,10 @@
       "symbol": "ENBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173776/thumb/enbon_160x160.png?1781494270",
       "assetGroup": "Enbridge (Ondo Tokenized)::ENBON",
-      "currencyId": "Enbridge (Ondo Tokenized)::ENBON"
+      "currencyId": "Enbridge (Ondo Tokenized)::ENBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xbf5ab848efff75d897a3dbe4647b939c59d3cdb0": {
       "chainId": "1",
@@ -170664,7 +171352,10 @@
       "symbol": "LITEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173751/thumb/liteon_160x160.png?1781494199",
       "assetGroup": "Lumentum Holdings (Ondo Tokenized)::LITEON",
-      "currencyId": "Lumentum Holdings (Ondo Tokenized)::LITEON"
+      "currencyId": "Lumentum Holdings (Ondo Tokenized)::LITEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x99888f2ccd08258ed5f66e94ba59d7e75016900f": {
       "chainId": "1",
@@ -170674,7 +171365,10 @@
       "symbol": "AAOION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173752/thumb/aaoion_160x160.png?1781494202",
       "assetGroup": "Applied Optoelectronics (Ondo Tokenized)::AAOION",
-      "currencyId": "Applied Optoelectronics (Ondo Tokenized)::AAOION"
+      "currencyId": "Applied Optoelectronics (Ondo Tokenized)::AAOION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6a3e77d984e22bed6a036d3da79d7857936a593f": {
       "chainId": "1",
@@ -170684,7 +171378,10 @@
       "symbol": "AXTION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173753/thumb/axtion_160x160.png?1781494205",
       "assetGroup": "AXT (Ondo Tokenized)::AXTION",
-      "currencyId": "AXT (Ondo Tokenized)::AXTION"
+      "currencyId": "AXT (Ondo Tokenized)::AXTION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x38cbbbf83ab583e231960b5c112145324bef55ae": {
       "chainId": "1",
@@ -170694,7 +171391,10 @@
       "symbol": "NVTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173754/thumb/nvton_160x160.png?1781494208",
       "assetGroup": "nVent Electric (Ondo Tokenized)::NVTON",
-      "currencyId": "nVent Electric (Ondo Tokenized)::NVTON"
+      "currencyId": "nVent Electric (Ondo Tokenized)::NVTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x62d5854e309e7f7fc27ff6ebefb54d2b235a0e9b": {
       "chainId": "1",
@@ -170704,7 +171404,10 @@
       "symbol": "LASRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173755/thumb/lasron_160x160.png?1781494211",
       "assetGroup": "nLIGHT (Ondo Tokenized)::LASRON",
-      "currencyId": "nLIGHT (Ondo Tokenized)::LASRON"
+      "currencyId": "nLIGHT (Ondo Tokenized)::LASRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6401365aa495ca96bcfcf9c6c47bd4a590336b00": {
       "chainId": "1",
@@ -170714,7 +171417,10 @@
       "symbol": "FORMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173756/thumb/formon_160x160.png?1781494214",
       "assetGroup": "FormFactor (Ondo Tokenized)::FORMON",
-      "currencyId": "FormFactor (Ondo Tokenized)::FORMON"
+      "currencyId": "FormFactor (Ondo Tokenized)::FORMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdc4f9c9caa96046816255bc6c10fd6433863128e": {
       "chainId": "1",
@@ -170724,7 +171430,10 @@
       "symbol": "MKSION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173757/thumb/mksion_160x160.png?1781494217",
       "assetGroup": "MKS Inc. (Ondo Tokenized)::MKSION",
-      "currencyId": "MKS Inc. (Ondo Tokenized)::MKSION"
+      "currencyId": "MKS Inc. (Ondo Tokenized)::MKSION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xdfca97fb2a3163011f3b5b3198f63d9ab8f04a98": {
       "chainId": "1",
@@ -170734,7 +171443,10 @@
       "symbol": "ICHRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173758/thumb/ichron_160x160.png?1781494220",
       "assetGroup": "Ichor Holdings (Ondo Tokenized)::ICHRON",
-      "currencyId": "Ichor Holdings (Ondo Tokenized)::ICHRON"
+      "currencyId": "Ichor Holdings (Ondo Tokenized)::ICHRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xeb48e68f01c0c76735dc6f1dcc0f151a973bd9d2": {
       "chainId": "1",
@@ -170744,7 +171456,10 @@
       "symbol": "AEHRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173759/thumb/aehron_160x160.png?1781494222",
       "assetGroup": "Aehr Test Systems (Ondo Tokenized)::AEHRON",
-      "currencyId": "Aehr Test Systems (Ondo Tokenized)::AEHRON"
+      "currencyId": "Aehr Test Systems (Ondo Tokenized)::AEHRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc087ea645a1efe021577c19413fbe39d617a3196": {
       "chainId": "1",
@@ -170754,7 +171469,10 @@
       "symbol": "CAMTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173760/thumb/camton_160x160.png?1781494225",
       "assetGroup": "Camtek (Ondo Tokenized)::CAMTON",
-      "currencyId": "Camtek (Ondo Tokenized)::CAMTON"
+      "currencyId": "Camtek (Ondo Tokenized)::CAMTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x995584539633f7d28757b6329a42439bd8aecede": {
       "chainId": "1",
@@ -170764,7 +171482,10 @@
       "symbol": "WOLFON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173761/thumb/wolfon_160x160.png?1781494228",
       "assetGroup": "Wolfspeed (Ondo Tokenized)::WOLFON",
-      "currencyId": "Wolfspeed (Ondo Tokenized)::WOLFON"
+      "currencyId": "Wolfspeed (Ondo Tokenized)::WOLFON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1db23e5c0da6b960d0cf3d9939cbf50a2514bfc2": {
       "chainId": "1",
@@ -170774,7 +171495,10 @@
       "symbol": "MYRGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173777/thumb/myrgon_160x160.png?1781494273",
       "assetGroup": "MYR Group (Ondo Tokenized)::MYRGON",
-      "currencyId": "MYR Group (Ondo Tokenized)::MYRGON"
+      "currencyId": "MYR Group (Ondo Tokenized)::MYRGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x44abf03ca01b8e7877bc3dbc37b132f6f25e9450": {
       "chainId": "1",
@@ -170784,7 +171508,10 @@
       "symbol": "ENTGON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173778/thumb/entgon_160x160.png?1781494276",
       "assetGroup": "Entegris (Ondo Tokenized)::ENTGON",
-      "currencyId": "Entegris (Ondo Tokenized)::ENTGON"
+      "currencyId": "Entegris (Ondo Tokenized)::ENTGON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd9584f80cce13afc96bfd0188fd5c81e08f18c85": {
       "chainId": "1",
@@ -170794,7 +171521,10 @@
       "symbol": "JBLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173905/thumb/jblon_160x160.png?1781494478",
       "assetGroup": "Jabil (Ondo Tokenized)::JBLON",
-      "currencyId": "Jabil (Ondo Tokenized)::JBLON"
+      "currencyId": "Jabil (Ondo Tokenized)::JBLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe67abca57e1504a26bd2ed209f2e0c09543fd7eb": {
       "chainId": "1",
@@ -170804,7 +171534,10 @@
       "symbol": "HPEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173779/thumb/hpeon_160x160.png?1781494279",
       "assetGroup": "Hewlett Packard Enterprise (Ondo Tokenized)::HPEON",
-      "currencyId": "Hewlett Packard Enterprise (Ondo Tokenized)::HPEON"
+      "currencyId": "Hewlett Packard Enterprise (Ondo Tokenized)::HPEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x0e05ba0756c504b69aaa642f7379cd1af7c63969": {
       "chainId": "1",
@@ -170814,7 +171547,10 @@
       "symbol": "BOTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173780/thumb/boton_160x160.png?1781494282",
       "assetGroup": "RoboStrategy (Ondo Tokenized)::BOTON",
-      "currencyId": "RoboStrategy (Ondo Tokenized)::BOTON"
+      "currencyId": "RoboStrategy (Ondo Tokenized)::BOTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4493e670f5a077d46eb3389ffa9af19999ea54ed": {
       "chainId": "1",
@@ -170824,7 +171560,10 @@
       "symbol": "FLEXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173906/thumb/flexon_160x160.png?1781494480",
       "assetGroup": "Flex (Ondo Tokenized)::FLEXON",
-      "currencyId": "Flex (Ondo Tokenized)::FLEXON"
+      "currencyId": "Flex (Ondo Tokenized)::FLEXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe172fb6b867f873db7cb2d7435b95a07e5defe81": {
       "chainId": "1",
@@ -170834,7 +171573,10 @@
       "symbol": "POWION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173762/thumb/powion_160x160.png?1781494231",
       "assetGroup": "Power Integrations (Ondo Tokenized)::POWION",
-      "currencyId": "Power Integrations (Ondo Tokenized)::POWION"
+      "currencyId": "Power Integrations (Ondo Tokenized)::POWION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x7c17a5423200246eafdd9fa0f5d70eade3067dd6": {
       "chainId": "1",
@@ -170844,7 +171586,10 @@
       "symbol": "TELON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173763/thumb/telon_160x160.png?1781494234",
       "assetGroup": "TE Connectivity (Ondo Tokenized)::TELON",
-      "currencyId": "TE Connectivity (Ondo Tokenized)::TELON"
+      "currencyId": "TE Connectivity (Ondo Tokenized)::TELON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x24e7504246dfdd7e866936e2816bfbea73bd890a": {
       "chainId": "1",
@@ -170854,7 +171599,10 @@
       "symbol": "HUBBON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173764/thumb/hubbon_160x160.png?1781494236",
       "assetGroup": "Hubbell (Ondo Tokenized)::HUBBON",
-      "currencyId": "Hubbell (Ondo Tokenized)::HUBBON"
+      "currencyId": "Hubbell (Ondo Tokenized)::HUBBON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x55025c1e2acfe5a7092cf32f7a4f351a9fd21e1c": {
       "chainId": "1",
@@ -170864,7 +171612,10 @@
       "symbol": "AOSLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173781/thumb/aoslon_160x160.png?1781494285",
       "assetGroup": "Alpha and Omega Semiconductor (Ondo Tokenized)::AOSLON",
-      "currencyId": "Alpha and Omega Semiconductor (Ondo Tokenized)::AOSLON"
+      "currencyId": "Alpha and Omega Semiconductor (Ondo Tokenized)::AOSLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x92e04b1fcc2b16347820241d226853cf01c9ebab": {
       "chainId": "1",
@@ -170874,7 +171625,10 @@
       "symbol": "BEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173782/thumb/beon_160x160.png?1781494287",
       "assetGroup": "Bloom Energy (Ondo Tokenized)::BEON",
-      "currencyId": "Bloom Energy (Ondo Tokenized)::BEON"
+      "currencyId": "Bloom Energy (Ondo Tokenized)::BEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x7f24e4f5dc9ce7d00170c91ce18326e01d702242": {
       "chainId": "1",
@@ -170884,7 +171638,10 @@
       "symbol": "WSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173765/thumb/wson_160x160.png?1781494239",
       "assetGroup": "Worthington Steel (Ondo Tokenized)::WSON",
-      "currencyId": "Worthington Steel (Ondo Tokenized)::WSON"
+      "currencyId": "Worthington Steel (Ondo Tokenized)::WSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xb50a8bd8883dfe59eaf1a8b1130acd97ced9ac84": {
       "chainId": "1",
@@ -170894,7 +171651,10 @@
       "symbol": "ATKRON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173766/thumb/atkron_160x160.png?1781494242",
       "assetGroup": "Atkore (Ondo Tokenized)::ATKRON",
-      "currencyId": "Atkore (Ondo Tokenized)::ATKRON"
+      "currencyId": "Atkore (Ondo Tokenized)::ATKRON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4f5a3b3e184b1424816d9107448314ba0aad63e1": {
       "chainId": "1",
@@ -170904,7 +171664,10 @@
       "symbol": "NETON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173767/thumb/neton_160x160.png?1781494245",
       "assetGroup": "Cloudflare (Ondo Tokenized)::NETON",
-      "currencyId": "Cloudflare (Ondo Tokenized)::NETON"
+      "currencyId": "Cloudflare (Ondo Tokenized)::NETON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xe2c149fa719d43912bfe584c71c9a6a018a5e916": {
       "chainId": "1",
@@ -170914,7 +171677,10 @@
       "symbol": "USARON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173768/thumb/usaron_160x160.png?1781494247",
       "assetGroup": "USA Rare Earth (Ondo Tokenized)::USARON",
-      "currencyId": "USA Rare Earth (Ondo Tokenized)::USARON"
+      "currencyId": "USA Rare Earth (Ondo Tokenized)::USARON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xabc32c14ce8502ff6b63adc2907b9458c06a6856": {
       "chainId": "1",
@@ -170924,7 +171690,10 @@
       "symbol": "HIMXON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173769/thumb/himxon_160x160.png?1781494250",
       "assetGroup": "Himax Technologies (Ondo Tokenized)::HIMXON",
-      "currencyId": "Himax Technologies (Ondo Tokenized)::HIMXON"
+      "currencyId": "Himax Technologies (Ondo Tokenized)::HIMXON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd1c3bf5dde6ee17ae2a472a8c4f0258e0b350cb4": {
       "chainId": "1",
@@ -170934,7 +171703,10 @@
       "symbol": "MXLON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173770/thumb/mxlon_160x160.png?1781494253",
       "assetGroup": "MaxLinear (Ondo Tokenized)::MXLON",
-      "currencyId": "MaxLinear (Ondo Tokenized)::MXLON"
+      "currencyId": "MaxLinear (Ondo Tokenized)::MXLON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc29ff16a7b0a895e9fe05c32ce3f26c44e8eca3d": {
       "chainId": "1",
@@ -170944,7 +171716,10 @@
       "symbol": "ONTOON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173771/thumb/ontoon_160x160.png?1781494256",
       "assetGroup": "Onto Innovation (Ondo Tokenized)::ONTOON",
-      "currencyId": "Onto Innovation (Ondo Tokenized)::ONTOON"
+      "currencyId": "Onto Innovation (Ondo Tokenized)::ONTOON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x67a47353d5449fc24088190c44247d4d4e296073": {
       "chainId": "1",
@@ -170954,7 +171729,10 @@
       "symbol": "OUSTON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173772/thumb/ouston_160x160.png?1781494259",
       "assetGroup": "Ouster (Ondo Tokenized)::OUSTON",
-      "currencyId": "Ouster (Ondo Tokenized)::OUSTON"
+      "currencyId": "Ouster (Ondo Tokenized)::OUSTON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x1d1b9ae25722d0b27db23171cfee0c269b203695": {
       "chainId": "1",
@@ -170964,7 +171742,10 @@
       "symbol": "TERON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173773/thumb/teron_160x160.png?1781494262",
       "assetGroup": "Teradyne (Ondo Tokenized)::TERON",
-      "currencyId": "Teradyne (Ondo Tokenized)::TERON"
+      "currencyId": "Teradyne (Ondo Tokenized)::TERON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x4032d3076974b89238adfe61085ec57fc4522646": {
       "chainId": "1",
@@ -170974,7 +171755,10 @@
       "symbol": "SOXQON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173907/thumb/soxqon_160x160.png?1781494483",
       "assetGroup": "Invesco PHLX Semiconductor ETF (Ondo Tokenized)::SOXQON",
-      "currencyId": "Invesco PHLX Semiconductor ETF (Ondo Tokenized)::SOXQON"
+      "currencyId": "Invesco PHLX Semiconductor ETF (Ondo Tokenized)::SOXQON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x5673154dae5dab8ca6bd3ee42c3245dbfedc6611": {
       "chainId": "1",
@@ -170984,7 +171768,10 @@
       "symbol": "OIION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173891/thumb/oiion_160x160.png?1781494437",
       "assetGroup": "Oceaneering International (Ondo Tokenized)::OIION",
-      "currencyId": "Oceaneering International (Ondo Tokenized)::OIION"
+      "currencyId": "Oceaneering International (Ondo Tokenized)::OIION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd0e60d2ef0841e49700772d9889123b9886194c7": {
       "chainId": "1",
@@ -170994,7 +171781,10 @@
       "symbol": "IRDMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173892/thumb/irdmon_160x160.png?1781494440",
       "assetGroup": "Iridium Communications (Ondo Tokenized)::IRDMON",
-      "currencyId": "Iridium Communications (Ondo Tokenized)::IRDMON"
+      "currencyId": "Iridium Communications (Ondo Tokenized)::IRDMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x448550de96bcbef1d8ccd755b5bc842f58485b46": {
       "chainId": "1",
@@ -171004,7 +171794,10 @@
       "symbol": "DRSON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173893/thumb/drson_160x160.png?1781494443",
       "assetGroup": "Leonardo DRS (Ondo Tokenized)::DRSON",
-      "currencyId": "Leonardo DRS (Ondo Tokenized)::DRSON"
+      "currencyId": "Leonardo DRS (Ondo Tokenized)::DRSON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x10bd54f1f4dc19be0c46b1ea7e5f38fd2eafee26": {
       "chainId": "1",
@@ -171014,7 +171807,10 @@
       "symbol": "HIION",
       "logoURI": "https://assets.coingecko.com/coins/images/102173894/thumb/hiion_160x160.png?1781494446",
       "assetGroup": "Huntington Ingalls Industries (Ondo Tokenized)::HIION",
-      "currencyId": "Huntington Ingalls Industries (Ondo Tokenized)::HIION"
+      "currencyId": "Huntington Ingalls Industries (Ondo Tokenized)::HIION",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd68fa0978c257aace5bec5246b201b56e838d45d": {
       "chainId": "1",
@@ -171024,7 +171820,10 @@
       "symbol": "GDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173895/thumb/gdon_160x160.png?1781494449",
       "assetGroup": "General Dynamics (Ondo Tokenized)::GDON",
-      "currencyId": "General Dynamics (Ondo Tokenized)::GDON"
+      "currencyId": "General Dynamics (Ondo Tokenized)::GDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x241aa03de25bd3a6b6254258bef7f287af94b93c": {
       "chainId": "1",
@@ -171034,7 +171833,10 @@
       "symbol": "VDEON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173896/thumb/vdeon_160x160.png?1781494452",
       "assetGroup": "Vanguard Energy ETF (Ondo Tokenized)::VDEON",
-      "currencyId": "Vanguard Energy ETF (Ondo Tokenized)::VDEON"
+      "currencyId": "Vanguard Energy ETF (Ondo Tokenized)::VDEON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xa65db7879774bd6758abaf583a91177afd96d5a3": {
       "chainId": "1",
@@ -171044,7 +171846,10 @@
       "symbol": "URNMON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173897/thumb/urnmon_160x160.png?1781494455",
       "assetGroup": "Sprott Uranium Miners ETF (Ondo Tokenized)::URNMON",
-      "currencyId": "Sprott Uranium Miners ETF (Ondo Tokenized)::URNMON"
+      "currencyId": "Sprott Uranium Miners ETF (Ondo Tokenized)::URNMON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x22a684e0a3cc9b74596719f722cf4e597aafa3ba": {
       "chainId": "1",
@@ -171054,7 +171859,10 @@
       "symbol": "CPERON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173898/thumb/cperon_160x160.png?1781494458",
       "assetGroup": "US Copper Index Fund (Ondo Tokenized)::CPERON",
-      "currencyId": "US Copper Index Fund (Ondo Tokenized)::CPERON"
+      "currencyId": "US Copper Index Fund (Ondo Tokenized)::CPERON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x69af64f409c08e9076bf7f3ed9db3a7409717161": {
       "chainId": "1",
@@ -171134,7 +171942,10 @@
       "symbol": "GLWON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173732/thumb/glwon_160x160.png?1781494196",
       "assetGroup": "Corning (Ondo Tokenized)::GLWON",
-      "currencyId": "Corning (Ondo Tokenized)::GLWON"
+      "currencyId": "Corning (Ondo Tokenized)::GLWON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xfc209eeba3d744aa741cc5c2a73ebf9c977b5f82": {
       "chainId": "1",
@@ -171446,7 +172257,10 @@
       "symbol": "AUTO",
       "logoURI": "https://assets.coingecko.com/coins/images/102174221/thumb/AUTO_200x200_%281%29.png?1782569824",
       "assetGroup": "Hastra AUTO::AUTO",
-      "currencyId": "Hastra AUTO::AUTO"
+      "currencyId": "Hastra AUTO::AUTO",
+      "props": {
+        "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
+      }
     },
     "0xaf3f58c4f9baaf2f10a5e39da75b9f894f63087a": {
       "chainId": "1",
@@ -171661,7 +172475,10 @@
       "symbol": "SKHYON",
       "logoURI": "https://assets.coingecko.com/coins/images/102174413/thumb/sk_hynix.png?1783648418",
       "assetGroup": "SK Hynix (Ondo Tokenized)::SKHYON",
-      "currencyId": "SK Hynix (Ondo Tokenized)::SKHYON"
+      "currencyId": "SK Hynix (Ondo Tokenized)::SKHYON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xc84782858b7bef5d25182dbac956a6aa463aefe5": {
       "chainId": "1",
@@ -172243,6 +173060,7 @@
       "name": "BTC Concrete Custodial Asset",
       "address": "0x852724426b2851487b278a3377449bf26b06c1ba",
       "symbol": "BTCcx",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179023/thumb/btc.png?1790934807",
       "assetGroup": "BTC Concrete Custodial Asset::BTCcx",
       "currencyId": "BTC Concrete Custodial Asset::BTCcx"
     },
@@ -173620,7 +174438,10 @@
       "symbol": "DRIX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176037/thumb/DRIx.png?1787821375",
       "assetGroup": "Darden Restaurants xStock::DRIX",
-      "currencyId": "Darden Restaurants xStock::DRIX"
+      "currencyId": "Darden Restaurants xStock::DRIX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x9b5803e173b3118d70a17c3be0babdd912a4000e": {
       "chainId": "1",
@@ -173640,7 +174461,10 @@
       "symbol": "MCOX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176217/thumb/MCOx.png?1787822115",
       "assetGroup": "Moody's xStock::MCOX",
-      "currencyId": "Moody's xStock::MCOX"
+      "currencyId": "Moody's xStock::MCOX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0xc6437a260bf2b7e9d9e402b2ef7e9a84d3622046": {
       "chainId": "1",
@@ -173650,7 +174474,10 @@
       "symbol": "QSRX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176309/thumb/QSRx.png?1787822484",
       "assetGroup": "Restaurant Brands International xStock::QSRX",
-      "currencyId": "Restaurant Brands International xStock::QSRX"
+      "currencyId": "Restaurant Brands International xStock::QSRX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x4c599685e1b7717f245b93c9e081ed256d4781b3": {
       "chainId": "1",
@@ -173660,7 +174487,10 @@
       "symbol": "SMOIHX",
       "logoURI": "https://assets.coingecko.com/coins/images/102176353/thumb/SMOIHx.png?1787822657",
       "assetGroup": "Smoore International xStock::SMOIHX",
-      "currencyId": "Smoore International xStock::SMOIHX"
+      "currencyId": "Smoore International xStock::SMOIHX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x75e2fc69ff2ac12af65ba7d321bbf4f878c535d2": {
       "chainId": "1",
@@ -174747,6 +175577,11 @@
       "assetGroup": "Open USD::OUSD",
       "currencyId": "Open USD::OUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "open-standard",
@@ -174824,7 +175659,45 @@
       "symbol": "USDGO",
       "logoURI": "https://assets.coingecko.com/coins/images/102172077/thumb/USDGO_Primary_Icon.png?1789694084",
       "assetGroup": "USDGO::USDGO",
-      "currencyId": "USDGO::USDGO"
+      "currencyId": "USDGO::USDGO",
+      "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
+    },
+    "0x476a2d04ab8a7fb93e13ac14f2c077866ff13500": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Wrapped Aave Ethereum EURC",
+      "address": "0x476a2d04ab8a7fb93e13ac14f2c077866ff13500",
+      "symbol": "WAETHEURC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179021/thumb/EURC.png?1790933922",
+      "assetGroup": "Wrapped Aave Ethereum EURC::WAETHEURC",
+      "currencyId": "Wrapped Aave Ethereum EURC::WAETHEURC"
+    },
+    "0x8407f7245dbb72e1570fdee4fecb267dd3edbb0d": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Revolut GBP",
+      "address": "0x8407f7245dbb72e1570fdee4fecb267dd3edbb0d",
+      "symbol": "GBPR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174783/thumb/GBP-Light.png?1784807113",
+      "assetGroup": "Revolut GBP::GBPR",
+      "currencyId": "Revolut GBP::GBPR"
+    },
+    "0x3c3959052f60cbddc498b384958841b718112353": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SilverChat",
+      "address": "0x3c3959052f60cbddc498b384958841b718112353",
+      "symbol": "SC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179007/thumb/500ssss.png?1790907541",
+      "assetGroup": "SilverChat::SC",
+      "currencyId": "SilverChat::SC"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
