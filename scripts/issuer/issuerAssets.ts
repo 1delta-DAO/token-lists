@@ -1,4 +1,5 @@
 import { IssuerGroupMap, IssuerProps } from '../utils/types'
+import { RWA_MANUAL } from '../rwa/rwaAssets'
 
 /**
  * Hand-curated issuer attribution, keyed by `assetGroup`.
@@ -942,6 +943,19 @@ export const ISSUER_BY_ADDRESS: Record<string, IssuerProps> = {
   // it is the desk here (as Ava Labs is for BTC.b). Only the deployment whose
   // name() says so; `syBTC` on 30/56 is left blank.
   '324:0xed0c95ebe5a3e687cb2224687024fec6518e683e': { id: 'symbiosis', name: 'Symbiosis', kind: 'protocol' },
+
+  // --- Robinhood Stock Tokens on Robinhood Chain (4663) ----------------------
+  // Robinhood Assets (Jersey) Ltd. One line per token, generated from the address-keyed
+  // RWA rows in rwa/rwaAssets.ts (membership = the shared token beacon 0xe10b…1b00, see
+  // there). Address-scoped rather than group-keyed on purpose: the list names them like
+  // the company ("Apple::AAPL", "GameStop::GME", "Oracle::ORCL"), groups that unrelated
+  // tokens on other chains already share (GME on 369/8453, ORCL on 8453, the aliased
+  // bare `FLY` group), and a group key would hand those Robinhood's desk.
+  ...Object.fromEntries(
+    Object.entries(RWA_MANUAL['4663'] ?? {})
+      .filter(([, rwa]) => rwa.issuer === 'robinhood')
+      .map(([address]) => [`4663:${address}`, { id: 'robinhood', name: 'Robinhood', kind: 'institution' } as IssuerProps]),
+  ),
 
   // --- Solana: base58 mints, lower-cased as a LOOKUP KEY only ---------------
   // (lookupIssuerByAddress lower-cases both sides; solana.json keeps the mint

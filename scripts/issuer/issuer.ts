@@ -81,6 +81,13 @@ const SEED_ALIASES: Record<string, IssuerProps> = {
   superstate: { id: 'superstate', name: 'Superstate', kind: 'institution' },
   hashnote: { id: 'hashnote', name: 'Hashnote', kind: 'institution' },
   paxos: { id: 'paxos', name: 'Paxos', kind: 'institution' },
+  // Tokenized-stock desks (`rwa.issuer` from the per-provider rules in labels/rwaLstRules.ts
+  // and the Robinhood rows in rwa/rwaAssets.ts). Listed so the display name is not the
+  // title-cased slug ("Bstocks", "St0x").
+  bstocks: { id: 'bstocks', name: 'bStocks', kind: 'institution' }, // BTECH Holdings (Binance-affiliated, ADGM)
+  anchored: { id: 'anchored', name: 'Anchored', kind: 'institution' }, // Anchored (BVI); not Anchored Coins (AEUR)
+  st0x: { id: 'st0x', name: 'ST0x', kind: 'institution' },
+  robinhood: { id: 'robinhood', name: 'Robinhood', kind: 'institution' }, // Robinhood Assets (Jersey) Ltd
   // Solana desks (`solana.json`'s `lst.provider` / `rwa.issuer`, and the
   // curated Solana rows in issuerAssets.ts).
   jupiter: { id: 'jupiter', name: 'Jupiter', kind: 'protocol' },
@@ -177,6 +184,11 @@ function fromProps(group: OmniCurrencyLike): IssuerProps | undefined {
   for (const c of group.currencies ?? []) {
     const p = c?.props
     if (!p) continue
+    // A deployment with its own ISSUER_BY_ADDRESS line speaks only for itself: it sits
+    // in a split group (e.g. Robinhood's GameStop stock token on 4663 shares
+    // `GameStop::GME` with unrelated Base/PulseChain tokens), and seeding the GROUP
+    // from it would hand its desk to every other member.
+    if (c.address && ISSUER_BY_ADDRESS[`${c.chainId}:${String(c.address).toLowerCase()}`]) continue
     // An RWA's issuer is the strongest signal there is: it is the legal entity.
     const rwa = resolve(p.rwa?.issuer, 'institution')
     if (rwa) return rwa

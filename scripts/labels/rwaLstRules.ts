@@ -95,9 +95,13 @@ const has =
     return phrases.some((p) => n.includes(p.toLowerCase()))
   }
 
-/** ETF / index vehicle detector (routes tokenized equities into the `fund` bucket). */
-export const isEtf = has(
-  'etf',
+/**
+ * ETF / index vehicle detector (routes tokenized equities into the `fund` bucket).
+ * 'ETF' is matched as a WORD: as a bare substring it filed every Netflix share
+ * ("N-etf-lix") as a fund. A CoinGecko-truncated "… (Provider Tokenized ET" still counts.
+ */
+const ETF_WORD = /\betfs?\b|tokeni[sz]ed\s+et\s*$/i
+const isEtfPhrase = has(
   's&p',
   'nasdaq',
   'msci',
@@ -109,6 +113,7 @@ export const isEtf = has(
   'spdr',
   'ucits',
 )
+export const isEtf = (name: string) => ETF_WORD.test(name) || isEtfPhrase(name)
 
 /**
  * Principal / yield / standardized-yield wrappers, which carry their own props
@@ -320,12 +325,27 @@ const equityIssuer =
     rwa: isEtf(name) ? { type: 'fund', subType: 'etf', issuer } : { type: 'equity', subType: 'stock', issuer },
   })
 
+const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+/**
+ * The tokenizer's own suffix, "<Name> (<Provider> Tokenized Stock|ETF)", plus the
+ * un-parenthesised "<Name> <Provider> Tokenized" form and CoinGecko's 60-char
+ * truncations ("…ETF (Ondo Toke", "…ETF (Ondo T", "…ETF (Ondo "), which only ever cut
+ * the TAIL of the name — so a bare "(<provider>" is accepted only at the very end.
+ */
+const tokenizedBy = (provider: string) => {
+  const p = escapeRe(provider.toLowerCase())
+  const spelled = new RegExp(`(^|[^a-z0-9])${p}\\s+tokeni[sz]ed`, 'i') // not "Taekwondo Tokenized"
+  const truncated = new RegExp(`\\(${p}(\\s+t[a-z]*(\\s+[a-z]*)?\\)?)?\\s*$`, 'i')
+  return (name: string) => spelled.test(name) || truncated.test(name)
+}
+
 const RWA_RULES: Rule[] = [
   // --- Tokenized equities / equity ETFs ---
-  // Dinari dShares — "<Name> (Dinari Tokenized Stock|ETF)". Must run before the generic
-  // 'tokenized stock' match below and before 'ishares-etf', or every dShare is attributed
-  // to Ondo and the iShares dShares (TLT, SLV, IWM, …) to BlackRock — the fund manager,
-  // not the tokenizer. Issuer is the party that mints/redeems the on-chain share.
+  // Dinari dShares — "<Name> (Dinari Tokenized Stock|ETF)". Must run before 'ishares-etf',
+  // or the iShares dShares (TLT, SLV, IWM, …) are attributed to BlackRock — the fund
+  // manager, not the tokenizer. Issuer is the party that mints/redeems the on-chain share.
+  // (There used to be a generic 'tokenized stock' → Ondo fallback below; it is gone.)
   // ('(dinari to' covers CoinGecko's 60-char truncation, e.g. "…CLO Active ETF (Dinari To".)
   {
     id: 'dinari-stock',
@@ -333,10 +353,34 @@ const RWA_RULES: Rule[] = [
     test: has('dinari tokenized', '(dinari to'),
     build: equityIssuer('dinari'),
   },
+  // Every other "(<Provider> Tokenized Stock)" family. Same reasoning as Dinari: these all
+  // used to fall through to a generic 'tokenized stock' match and were filed under Ondo,
+  // and their ETFs (e.g. "iShares … (ST0x Tokenized ETF)") under BlackRock. Each must run
+  // before 'ondo-stock' and 'ishares-etf'.
+  //  - bStocks: "<Name> (bStocks Tokenized Stock)" (AMDB, NVDAB, CRCLB on BNB Chain) —
+  //    issued by BTECH Holdings (Binance-affiliated, ADGM).
+  //  - Anchored: "<Name> (Anchored Tokenized Stock|ETF)" (ASPCX) — Anchored (BVI). Not
+  //    Anchored Coins AG, the Swiss AEUR desk (`anchored-coins` in issuerAssets.ts).
+  //  - ST0x: "<Name> (ST0x Tokenized Stock|ETF)" (WTBABA, WTSPCX on Base).
+  //  - Coinbase: "<Name> (Coinbase Tokenized Stock[s])" (AAPLC, GOOGLC on Base) — issued by
+  //    Coinbase Onchain SPV. Filed under the existing `coinbase` desk (cbBTC, cbETH) rather
+  //    than a new id: issuer facets group on `id`, and a holder of either is exposed to the
+  //    same corporate group.
+  { id: 'bstocks-stock', confidence: 'auto', test: tokenizedBy('bstocks'), build: equityIssuer('bstocks') },
+  { id: 'anchored-stock', confidence: 'auto', test: tokenizedBy('anchored'), build: equityIssuer('anchored') },
+  { id: 'st0x-stock', confidence: 'auto', test: tokenizedBy('st0x'), build: equityIssuer('st0x') },
+  { id: 'coinbase-stock', confidence: 'auto', test: tokenizedBy('coinbase'), build: equityIssuer('coinbase') },
+  // Ondo Global Markets — ONLY Ondo's own spellings: "(Ondo Tokenized Stock|ETF)",
+  // "(Ondo Tokenized)", "<Name> Ondo Tokenized" and their truncations. Deliberately no
+  // generic 'tokenized stock' fallback: an unrecognised "(Foo Tokenized Stock)" stays
+  // unattributed (it lands in the candidate queue at most) instead of becoming Ondo's credit.
+  // The un-parenthesised form is truncated too ("iShares Russell 2000 Value ETF Ondo To",
+  // "…Emerging Markets ETF  Ondo"); that bare trailing "Ondo" is accepted only with Ondo's
+  // `…ON` ticker suffix, so the ONDO governance token ("Ondo") can never match.
   {
     id: 'ondo-stock',
     confidence: 'auto',
-    test: has('ondo tokenized stock', 'tokenized stock'),
+    test: (n, s) => tokenizedBy('ondo')(n) || (/ON$/i.test(s) && /\S\s+ondo(\s+t[a-z]*)?\s*$/i.test(n)),
     build: equityIssuer('ondo'),
   },
   { id: 'sailing-stock', confidence: 'auto', test: has('tokenized by sailing'), build: equityIssuer('sailing') },

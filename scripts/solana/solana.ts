@@ -67,6 +67,20 @@ const TOKEN_2022 = 'TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb'
 /** Wrapped SOL — the chain's wrapped native, flagged the way `WRAPPED_NATIVE_INFO` flags WETH. */
 const WSOL = 'So11111111111111111111111111111111111111112'
 
+/**
+ * NATIVE SOL — the System Program id, the industry's address for native SOL
+ * (LI.FI, Relay, DZap; `@1delta/wnative` `SOLANA_NATIVE_ADDRESS`). Native SOL
+ * has no mint; this row is the Solana twin of every EVM list's zero-address
+ * row (`props.isNative`, `props.wrapped`), and it SHARES wSOL's assetGroup
+ * the way ETH and WETH share `ETH` — one asset in two forms, one price.
+ *
+ * Without it the list's only "SOL" was the wSOL mint, which four of five
+ * bridges (LI.FI, Relay, DZap, Mayan) read as WRAPPED SOL: a user picking
+ * "SOL" received wSOL in a token account, or was asked to pay from one.
+ */
+const NATIVE_SOL = '11111111111111111111111111111111'
+const NATIVE_SOL_LOGO = 'https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/sol.webp'
+
 const EXPONENT_LIST = path.resolve(__dirname, '../exponent/exponent.json')
 
 /**
@@ -372,7 +386,11 @@ async function main() {
       decimals: t.decimals,
       name: t.name,
       address: t.id,
-      symbol: t.symbol,
+      // Jupiter calls the wSOL mint "SOL". With the native row below also
+      // "SOL", the selector would show two identical rows for two different
+      // balances — so the wrapper is `wSOL`. Its `currencyId` and `assetGroup`
+      // keep the Jupiter symbol: they are keys (prices, the lending join).
+      symbol: t.id === WSOL ? 'wSOL' : t.symbol,
       logoURI: t.icon ?? cgLogo.get(t.id),
       assetGroup,
       currencyId,
@@ -416,6 +434,25 @@ async function main() {
     exponentAdded++
   }
 
+  // The native row, after the roster: it shares wSOL's group by design, so it
+  // must not pass through the group-uniqueness bookkeeping above.
+  const wsol = list[WSOL]
+  if (wsol) {
+    list[NATIVE_SOL] = {
+      chainId: 'solana',
+      decimals: 9,
+      name: 'Solana',
+      address: NATIVE_SOL,
+      symbol: 'SOL',
+      logoURI: NATIVE_SOL_LOGO,
+      assetGroup: wsol.assetGroup,
+      currencyId: 'Solana::SOL',
+      props: { isNative: true, wrapped: WSOL },
+    }
+  } else {
+    console.warn('wSOL missing from the roster — no native SOL row written')
+  }
+
   const sortedList: { [address: string]: ListEntry } = {}
   for (const k of Object.keys(list).sort()) sortedList[k] = list[k]
 
@@ -440,7 +477,10 @@ async function main() {
     const k = e.assetGroup.toLowerCase()
     byGroup.set(k, (byGroup.get(k) ?? 0) + 1)
   }
-  const groupDupes = [...byGroup.entries()].filter(([, c]) => c > 1)
+  // Native SOL and wSOL share a group ON PURPOSE (one asset, two forms — the
+  // ETH/WETH rule); every other share is a defect.
+  const nativeGroup = sortedList[NATIVE_SOL]?.assetGroup.toLowerCase()
+  const groupDupes = [...byGroup.entries()].filter(([k, c]) => c > (k === nativeGroup ? 2 : 1))
 
   console.log(`jupiter verified            : ${jup.length}`)
   console.log(`kept (liquidity >= $${MIN_LIQUIDITY_USD.toLocaleString()})   : ${vals.length}`)

@@ -1011,6 +1011,25 @@ function nativeCurrencies(lists: ListOfLists) {
       ...(wrapped && wrapped !== erc20 && { wrapped }),
     }
   }
+  // Solana never passes through this generator (it admits EVM/Fuel only), and
+  // its native is not at the zero address — read the row `solana/solana.ts`
+  // wrote, and say WHERE it lives (`address`), since that differs here.
+  try {
+    const sol = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../solana.json'), 'utf-8'))?.list ?? {}
+    const native = Object.values<any>(sol).find((t) => t?.props?.isNative)
+    if (native)
+      out.solana = {
+        symbol: native.symbol,
+        name: native.name,
+        decimals: native.decimals,
+        assetGroup: native.assetGroup,
+        shape: 'coin',
+        address: native.address,
+        ...(native.props?.wrapped && { wrapped: native.props.wrapped }),
+      }
+  } catch {
+    // a bare checkout has no solana.json — Solana is then simply absent
+  }
   return out
 }
 

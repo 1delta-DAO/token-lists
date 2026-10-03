@@ -46,6 +46,8 @@ const BTC_GROUPS = [
   'M-BTC',
   'Bitcoin::BTC.b',
   'eBTC::EBTC',
+  // OKX's 1:1 custodial BTC on X Layer (196 0xb7c0…6b4f); desk okx in issuer.json.
+  'OKX Wrapped BTC::xBTC',
 ] as const
 
 /** assetGroup → denomination, for FXRP — Flare's 1:1 FAsset representation of

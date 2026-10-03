@@ -3047,7 +3047,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3120,7 +3120,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3168,7 +3168,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3242,7 +3242,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3357,7 +3357,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3405,7 +3405,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3509,7 +3509,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3534,7 +3534,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -3938,12 +3938,8 @@
       "assetGroup": "BlackRock iShares 0-3 Month Treasury Bond (ST0x Tokenized ET::WTSGOV",
       "currencyId": "BlackRock iShares 0-3 Month Treasury Bond (ST0x Tokenized ET::WTSGOV",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x19f89aaef8a93f38a974beca9776f09ab844887f": {
@@ -3956,8 +3952,8 @@
       "assetGroup": "SpaceX (ST0x Tokenized Stock)::WTSPCX",
       "currencyId": "SpaceX (ST0x Tokenized Stock)::WTSPCX",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
@@ -4090,7 +4086,7 @@
       "assetGroup": "Netflix (Dinari Tokenized Stock)::NFLX",
       "currencyId": "Netflix (Dinari Tokenized Stock)::NFLX",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "dinari" },
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "dinari" },
         "issuer": { "id": "dinari", "name": "Dinari", "kind": "institution" }
       }
     },
@@ -5994,8 +5990,8 @@
       "assetGroup": "Apple (Coinbase Tokenized Stock)::AAPLC",
       "currencyId": "Apple (Coinbase Tokenized Stock)::AAPLC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb2000000000000000000002d0ba3164cc74f58b7": {
@@ -6008,8 +6004,8 @@
       "assetGroup": "Alphabet (Coinbase Tokenized Stock)::GOOGLC",
       "currencyId": "Alphabet (Coinbase Tokenized Stock)::GOOGLC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb20000000000000000000078ee7ce2fe4908108c": {
@@ -6022,8 +6018,8 @@
       "assetGroup": "NVIDIA (Coinbase Tokenized Stock)::NVDAC",
       "currencyId": "NVIDIA (Coinbase Tokenized Stock)::NVDAC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb2000000000000000000008bc8786b856e61707c": {
@@ -6036,8 +6032,8 @@
       "assetGroup": "Meta (Coinbase Tokenized Stock)::METAC",
       "currencyId": "Meta (Coinbase Tokenized Stock)::METAC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0x6e8568ba7b43138d9210959a9523155e274550c9": {
@@ -6050,8 +6046,12 @@
       "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "issuer": {
+          "id": "anchored",
+          "name": "Anchored",
+          "kind": "institution"
+        }
       }
     },
     "0x12473790e09d415abac7441401f7abec64fa959c": {
@@ -6064,8 +6064,12 @@
       "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "issuer": {
+          "id": "anchored",
+          "name": "Anchored",
+          "kind": "institution"
+        }
       }
     },
     "0x5da938ad48c46bd22ca362a91517ce2c16367d09": {
@@ -6096,8 +6100,8 @@
       "assetGroup": "Playboy (ST0x Tokenized Stock)::WTPLBY",
       "currencyId": "Playboy (ST0x Tokenized Stock)::WTPLBY",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x6aed8b1acfb04f4e0e6db580f12ff41438a394e5": {
@@ -6110,8 +6114,8 @@
       "assetGroup": "FGI Industries (ST0x Tokenized Stock)::WTFGI",
       "currencyId": "FGI Industries (ST0x Tokenized Stock)::WTFGI",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x1db49ff8bee88ec73f82f395b0bead372bdcadb7": {
@@ -6124,8 +6128,8 @@
       "assetGroup": "Krispy Kreme (ST0x Tokenized Stock)::WTDNUT",
       "currencyId": "Krispy Kreme (ST0x Tokenized Stock)::WTDNUT",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x0883f32d23ed5535057a4b5e3eb1970fe08606af": {
@@ -6138,8 +6142,8 @@
       "assetGroup": "Nike (ST0x Tokenized Stock)::WTNKE",
       "currencyId": "Nike (ST0x Tokenized Stock)::WTNKE",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x433fd2fc0964b07e9820e4cd01774ede59d1f002": {
@@ -6152,8 +6156,8 @@
       "assetGroup": "Tootsie Roll Industries (ST0x Tokenized Stock)::WTTR",
       "currencyId": "Tootsie Roll Industries (ST0x Tokenized Stock)::WTTR",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x31fa821f8b1bdea7db357ec9622d1a2f6afe903d": {
@@ -6166,8 +6170,8 @@
       "assetGroup": "Wendy's (ST0x Tokenized Stock)::WTWEN",
       "currencyId": "Wendy's (ST0x Tokenized Stock)::WTWEN",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x1197e6fa778c4d13e47875bd1761c68c22c928e0": {
@@ -6180,8 +6184,8 @@
       "assetGroup": "Grindr (ST0x Tokenized Stock)::WTGRND",
       "currencyId": "Grindr (ST0x Tokenized Stock)::WTGRND",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0xfcd17ac4c4bf6a72c93018096f3fc09e66573ff9": {
@@ -6194,8 +6198,8 @@
       "assetGroup": "SK hynix (ST0x Tokenized Stock)::WTSKHY",
       "currencyId": "SK hynix (ST0x Tokenized Stock)::WTSKHY",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x7ecae30ed8ee4f72653ada7b0941bde7a0a8ee8d": {
@@ -6208,8 +6212,8 @@
       "assetGroup": "McDonald's (ST0x Tokenized Stock)::WTMCD",
       "currencyId": "McDonald's (ST0x Tokenized Stock)::WTMCD",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0xb200000000000000000000d9192b6b456483c2e8": {
@@ -6222,8 +6226,8 @@
       "assetGroup": "Amazon (Coinbase Tokenized Stock)::AMZNC",
       "currencyId": "Amazon (Coinbase Tokenized Stock)::AMZNC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0x1e46d7efef64a833afb1cd49299a7ad5b439f4d8": {
@@ -6236,12 +6240,8 @@
       "assetGroup": "iShares Gold Trust (ST0x Tokenized ETF)::WTIAU",
       "currencyId": "iShares Gold Trust (ST0x Tokenized ETF)::WTIAU",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0xb2000000000000000000004884b426556b92883d": {
@@ -6254,8 +6254,8 @@
       "assetGroup": "MicroStrategy (Coinbase Tokenized Stock)::MSTRC",
       "currencyId": "MicroStrategy (Coinbase Tokenized Stock)::MSTRC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb200000000000000000000ab99cfa739e253872b": {
@@ -6268,8 +6268,8 @@
       "assetGroup": "Microsoft (Coinbase Tokenized Stock)::MSFTC",
       "currencyId": "Microsoft (Coinbase Tokenized Stock)::MSFTC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb200000000000000000000397293cb8cda9a10c5": {
@@ -6282,8 +6282,8 @@
       "assetGroup": "SanDisk (Coinbase Tokenized Stock)::SNDKC",
       "currencyId": "SanDisk (Coinbase Tokenized Stock)::SNDKC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb2000000000000000000001e800a7f5189430cd0": {
@@ -6296,8 +6296,8 @@
       "assetGroup": "Tesla (Coinbase Tokenized Stocks)::TSLAC",
       "currencyId": "Tesla (Coinbase Tokenized Stocks)::TSLAC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0xb2000000000000000000007b9fcbd005511acbd5": {
@@ -6310,8 +6310,8 @@
       "assetGroup": "SpaceX (Coinbase Tokenized Stock)::SPCXC",
       "currencyId": "SpaceX (Coinbase Tokenized Stock)::SPCXC",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
     "0x7e5cc7eae0455a07ab4abf354e0f5657ba2888bd": {
@@ -6324,8 +6324,8 @@
       "assetGroup": "Alibaba (ST0x Tokenized Stock)::WTBABA",
       "currencyId": "Alibaba (ST0x Tokenized Stock)::WTBABA",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x3af952888cd89dad3e8af67cf4b7e740b36829c3": {
@@ -6338,8 +6338,8 @@
       "assetGroup": "Constellation Energy (ST0x Tokenized Stock)::WTCEG",
       "currencyId": "Constellation Energy (ST0x Tokenized Stock)::WTCEG",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x71c66449d2528e23514a9c197bfd55ae9db3b714": {
@@ -6352,8 +6352,8 @@
       "assetGroup": "Taiwan Semiconductor (ST0x Tokenized Stock)::WTTSM",
       "currencyId": "Taiwan Semiconductor (ST0x Tokenized Stock)::WTTSM",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0xfb5b41acdba20a3230f84be995173cfb98b8d6e7": {
@@ -6366,8 +6366,8 @@
       "assetGroup": "NVIDIA (ST0x Tokenized Stock)::WTNVDA",
       "currencyId": "NVIDIA (ST0x Tokenized Stock)::WTNVDA",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
-        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
       }
     },
     "0x8a768ef1d44939e2c6e36b83a948295962d6f795": {
@@ -6986,6 +6986,80 @@
         "issuer": { "id": "dinari", "name": "Dinari", "kind": "institution" }
       }
     },
+    "0x823ff7bbde2869aae73a6cd53e7f614442836757": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Invesco NASDAQ 100 (ST0x Tokenized ETF)",
+      "address": "0x823ff7bbde2869aae73a6cd53e7f614442836757",
+      "symbol": "WTQQQM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174007/thumb/WTQQQM_256.png?1781775620",
+      "assetGroup": "Invesco NASDAQ 100 (ST0x Tokenized ETF)::WTQQQM",
+      "currencyId": "Invesco NASDAQ 100 (ST0x Tokenized ETF)::WTQQQM",
+      "props": {
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
+      }
+    },
+    "0x4fc5b9f8933597d3ecf84d0611687e1dc8dd576f": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)",
+      "address": "0x4fc5b9f8933597d3ecf84d0611687e1dc8dd576f",
+      "symbol": "ABIL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175631/thumb/coingecko-aBIL.png?1787145231",
+      "assetGroup": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL",
+      "currencyId": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL",
+      "props": {
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "anchored" },
+        "issuer": {
+          "id": "anchored",
+          "name": "Anchored",
+          "kind": "institution"
+        }
+      }
+    },
+    "0x1a91df4a970ebab1bb4af32eb6d10509028ee4b8": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Roundhill Memory ETF (ST0x Tokenized ETF)",
+      "address": "0x1a91df4a970ebab1bb4af32eb6d10509028ee4b8",
+      "symbol": "WTDRAM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178391/thumb/roundhill.png?1789459975",
+      "assetGroup": "Roundhill Memory ETF (ST0x Tokenized ETF)::WTDRAM",
+      "currencyId": "Roundhill Memory ETF (ST0x Tokenized ETF)::WTDRAM",
+      "props": {
+        "rwa": { "type": "fund", "subType": "etf", "issuer": "st0x" },
+        "issuer": { "id": "st0x", "name": "ST0x", "kind": "institution" }
+      }
+    },
+    "0xb2000000000000000000007d16372840df4dabbe": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Palantir (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000007d16372840df4dabbe",
+      "symbol": "PLTRC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178880/thumb/PLTR.png?1790582134",
+      "assetGroup": "Palantir (Coinbase Tokenized Stock)::PLTRC",
+      "currencyId": "Palantir (Coinbase Tokenized Stock)::PLTRC",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb200000000000000000000fd2f87532b90095211": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Micron Technology Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000fd2f87532b90095211",
+      "symbol": "MUC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178881/thumb/MU.png?1790582164",
+      "assetGroup": "Micron Technology Inc. (Coinbase Tokenized Stock)::MUC",
+      "currencyId": "Micron Technology Inc. (Coinbase Tokenized Stock)::MUC",
+      "props": {
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
     "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
       "chainId": "8453",
       "decimals": 18,
@@ -7416,7 +7490,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7441,7 +7515,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7466,7 +7540,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7491,7 +7565,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7516,7 +7590,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7541,7 +7615,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7566,7 +7640,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7591,7 +7665,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7616,7 +7690,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -7641,7 +7715,7 @@
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
-          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+          { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
       }
     },
@@ -8734,12 +8808,8 @@
       "currencyId": "tBTC::tBTC",
       "props": {
         "risk": { "score": 2, "source": "whitelist" },
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0xac1bd2486aaf3b5c0fc3fd868558b082a531b2b4": {
@@ -21456,8 +21526,8 @@
       "assetGroup": "SOLVBTC",
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0xb8a9a92dfe1303728394dd0f8362a09962dec24f": {
@@ -49975,16 +50045,6 @@
       "assetGroup": "NoelClaw::NOELCLAW",
       "currencyId": "NoelClaw::NOELCLAW"
     },
-    "0x823ff7bbde2869aae73a6cd53e7f614442836757": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "Invesco NASDAQ 100 (ST0x Tokenized ETF)",
-      "address": "0x823ff7bbde2869aae73a6cd53e7f614442836757",
-      "symbol": "WTQQQM",
-      "logoURI": "https://assets.coingecko.com/coins/images/102174007/thumb/WTQQQM_256.png?1781775620",
-      "assetGroup": "Invesco NASDAQ 100 (ST0x Tokenized ETF)::WTQQQM",
-      "currencyId": "Invesco NASDAQ 100 (ST0x Tokenized ETF)::WTQQQM"
-    },
     "0xfcc9cc1209651ed8867332d6f664cf82743a2584": {
       "chainId": "8453",
       "decimals": 18,
@@ -50865,16 +50925,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175784/thumb/9813.jpg?1787563039",
       "assetGroup": "Base Juice::BASEJUICE",
       "currencyId": "Base Juice::BASEJUICE"
-    },
-    "0x4fc5b9f8933597d3ecf84d0611687e1dc8dd576f": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)",
-      "address": "0x4fc5b9f8933597d3ecf84d0611687e1dc8dd576f",
-      "symbol": "ABIL",
-      "logoURI": "https://assets.coingecko.com/coins/images/102175631/thumb/coingecko-aBIL.png?1787145231",
-      "assetGroup": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL",
-      "currencyId": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL"
     },
     "0x44f49ff0da2498bcb1d3dc7c0f999578f67fd8c6": {
       "chainId": "8453",
@@ -52019,16 +52069,6 @@
       "assetGroup": "IHODL::IHODL",
       "currencyId": "IHODL::IHODL"
     },
-    "0x1a91df4a970ebab1bb4af32eb6d10509028ee4b8": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "Roundhill Memory ETF (ST0x Tokenized ETF)",
-      "address": "0x1a91df4a970ebab1bb4af32eb6d10509028ee4b8",
-      "symbol": "WTDRAM",
-      "logoURI": "https://assets.coingecko.com/coins/images/102178391/thumb/roundhill.png?1789459975",
-      "assetGroup": "Roundhill Memory ETF (ST0x Tokenized ETF)::WTDRAM",
-      "currencyId": "Roundhill Memory ETF (ST0x Tokenized ETF)::WTDRAM"
-    },
     "0xe34356dcd3d7bb991248f322e4ec31b5d60bc54e": {
       "chainId": "8453",
       "decimals": 18,
@@ -52546,26 +52586,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178877/thumb/GYND-logo-200.png?1790581758",
       "assetGroup": "Gyndore::GYND",
       "currencyId": "Gyndore::GYND"
-    },
-    "0xb2000000000000000000007d16372840df4dabbe": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Palantir (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000007d16372840df4dabbe",
-      "symbol": "PLTRC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102178880/thumb/PLTR.png?1790582134",
-      "assetGroup": "Palantir (Coinbase Tokenized Stock)::PLTRC",
-      "currencyId": "Palantir (Coinbase Tokenized Stock)::PLTRC"
-    },
-    "0xb200000000000000000000fd2f87532b90095211": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Micron Technology Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000fd2f87532b90095211",
-      "symbol": "MUC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102178881/thumb/MU.png?1790582164",
-      "assetGroup": "Micron Technology Inc. (Coinbase Tokenized Stock)::MUC",
-      "currencyId": "Micron Technology Inc. (Coinbase Tokenized Stock)::MUC"
     },
     "0x9470ef4e54520f0369ac850e239205bacf27008a": {
       "chainId": "8453",
