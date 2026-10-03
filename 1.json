@@ -64193,12 +64193,8 @@
       "currencyId": "tBTC::tBTC",
       "props": {
         "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0x9c4a4204b79dd291d6b6571c5be8bbcd0622f050": {
@@ -91240,8 +91236,8 @@
       "currencyId": "eBTC::EBTC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" }
       }
     },
     "0xbdf245957992bfbc62b07e344128a1eec7b7ee3f": {
@@ -92629,8 +92625,8 @@
             }
           ]
         },
-        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x67859a9314b9dca2642023ad8231beaa6cbf1933": {
@@ -103884,8 +103880,8 @@
             }
           ]
         },
-        "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
     "0xb0df0e6133ce2bae93f1bb1737ed3f39593c67f5": {
@@ -109238,8 +109234,8 @@
             }
           ]
         },
-        "issuer": { "id": "lorenzo", "name": "Lorenzo" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
     "0xc833da2888c77d045c4a8f78f2faeb283e75acab": {
@@ -111555,6 +111551,7 @@
                 "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "42161": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "43114": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
@@ -113193,12 +113190,8 @@
             }
           ]
         },
-        "issuer": {
-          "id": "merlin",
-          "name": "Merlin Chain",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
     "0x9d9535dae62f5f12ab83f1183dca1ead244b0db3": {
@@ -122866,12 +122859,8 @@
       "assetGroup": "tBTC::TBTC",
       "currencyId": "tBTC::TBTC",
       "props": {
-        "issuer": {
-          "id": "threshold",
-          "name": "Threshold",
-          "kind": "protocol"
-        },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
     "0xf06ddacf71e2992e2122a1a0168c6967afdf63ce": {
@@ -142493,12 +142482,12 @@
       "assetGroup": "Bitcoin::BTC.b",
       "currencyId": "Bitcoin::BTC.b",
       "props": {
+        "denomination": "BTC",
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
           "kind": "institution"
-        },
-        "denomination": "BTC"
+        }
       }
     },
     "0xb986f3a2d91d3704dc974a24fb735dcc5e3c1e70": {
@@ -167987,12 +167976,12 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "risk": { "score": 2, "source": "whitelist" },
+        "denomination": "BTC",
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
           "kind": "institution"
-        },
-        "denomination": "BTC"
+        }
       }
     },
     "0x06da0fd433c1a5d7a4faa01111c044910a184553": {
@@ -174824,7 +174813,18 @@
       "symbol": "USDGO",
       "logoURI": "https://assets.coingecko.com/coins/images/102172077/thumb/USDGO_Primary_Icon.png?1789694084",
       "assetGroup": "USDGO::USDGO",
-      "currencyId": "USDGO::USDGO"
+      "currencyId": "USDGO::USDGO",
+      "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x3c3959052f60cbddc498b384958841b718112353": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SilverChat",
+      "address": "0x3c3959052f60cbddc498b384958841b718112353",
+      "symbol": "SC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179007/thumb/500ssss.png?1790907541",
+      "assetGroup": "SilverChat::SC",
+      "currencyId": "SilverChat::SC"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
