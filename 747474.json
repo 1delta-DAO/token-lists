@@ -90,6 +90,7 @@
           "underlyingAsset": "0x203a662b0bd271a6ed5a60edfbd04bfce608fd36",
           "maturity": 1795305606
         },
+        "risk": { "score": 3, "source": "vault_inherit" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
           { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
@@ -115,6 +116,7 @@
           "underlyingAsset": "0x7f1f4b4b29f5058fa32cc7a97141b8d7e5abdc2d",
           "maturity": 1795046410
         },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -132,6 +134,11 @@
           "type": "credit",
           "subType": "reinsurance",
           "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "oft": {
           "eid": 30375,
@@ -176,6 +183,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -231,7 +239,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/kat.svg",
       "assetGroup": "Katana Network Token::KAT",
       "currencyId": "Katana Network Token::KAT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x3ba1fbc4c3aea775d335b31fb53778f46fd3a330": {
       "chainId": "747474",
@@ -262,7 +273,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/sushi.svg",
       "assetGroup": "SushiToken::SUSHI",
       "currencyId": "SushiToken::SUSHI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xee7d8bcfb72bc1880d0cf19822eb0a2e6577ab62": {
       "chainId": "747474",
@@ -318,6 +332,7 @@
             }
           ]
         },
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -346,6 +361,7 @@
             }
           ]
         },
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -496,7 +512,10 @@
       "logoURI": "https://static.debank.com/image/coin/logo_url/yearn/f14ac7f4efe5c51e1c6b32add3dea10c.png",
       "assetGroup": "yearn.finance::YFI",
       "currencyId": "yearn.finance::YFI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "747474",
@@ -507,7 +526,10 @@
       "logoURI": "https://static.debank.com/image/katana_token/logo_url/0x4200000000000000000000000000000000000006/61844453e63cf81301f845d7864236f6.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 2, "source": "issuer_inherit" }
+      }
     },
     "0x80c34bd3a3569e126e7055831036aa7b212cb159": {
       "chainId": "747474",
@@ -542,6 +564,11 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -569,7 +596,8 @@
       "symbol": "KITSU",
       "logoURI": "https://assets.coingecko.com/coins/images/67868/thumb/KitsuPNG2.png?1754110292",
       "assetGroup": "Kitsu::KITSU",
-      "currencyId": "Kitsu::KITSU"
+      "currencyId": "Kitsu::KITSU",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "747474",
@@ -594,6 +622,11 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
@@ -801,7 +834,8 @@
       "symbol": "avKAT",
       "logoURI": "https://cdn.morpho.org/assets/logos/avkat.svg",
       "assetGroup": "Autocompounding vKAT::avKAT",
-      "currencyId": "Autocompounding vKAT::avKAT"
+      "currencyId": "Autocompounding vKAT::avKAT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x68943c066747690ecdaeb027fa722b090ee6f92d": {
       "chainId": "747474",
@@ -878,6 +912,11 @@
       "currencyId": "YieldFi vyUSD::vyUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -927,6 +966,11 @@
       "currencyId": "Staked Cap USD::stcUSD",
       "props": {
         "savings": { "underlying": "cUSD", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
       }
     },

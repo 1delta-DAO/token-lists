@@ -148,6 +148,11 @@
       "currencyId": "NVIDIA xStock::NVDAX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -232,6 +237,11 @@
       "currencyId": "Tesla xStock::TSLAx",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -10483,6 +10493,7 @@
       "currencyId": "Lombard Staked Bitcoin::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -10656,6 +10667,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -10713,6 +10729,7 @@
           ]
         },
         "denomination": "BTC",
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -10903,6 +10920,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
       }
@@ -10958,6 +10980,11 @@
       "currencyId": "USDC::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -10998,6 +11025,11 @@
       "assetGroup": "GHO::GHO",
       "currencyId": "GHO::GHO",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
       }
@@ -11091,6 +11123,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -11118,6 +11155,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -11133,6 +11175,11 @@
       "currencyId": "Syrup USDT::syrupUSDT",
       "props": {
         "savings": { "underlying": "USDT", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
@@ -11995,7 +12042,8 @@
       "symbol": "KHYPE",
       "logoURI": "https://assets.coingecko.com/coins/images/102176672/thumb/kHYPE.png?1788459787",
       "assetGroup": "Kraken Wrapped HYPE::KHYPE",
-      "currencyId": "Kraken Wrapped HYPE::KHYPE"
+      "currencyId": "Kraken Wrapped HYPE::KHYPE",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd95b9a5fa7c2708fd4fe0e07e59bde1ef35b194a": {
       "chainId": "57073",

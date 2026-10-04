@@ -134,7 +134,11 @@
           "syAddress": "0xad96c88ec5d39fc5020851075ecb756b2b228060",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1003,7 +1007,6 @@
           "ptAddress": "0xcea23ab8fde0b90e4d08eb68e8876e43933721d2",
           "ytAddress": "0xeb9445e79047807e8a6fb394c2b66c42ca621463"
         },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1217,7 +1220,11 @@
           "syAddress": "0xad96c88ec5d39fc5020851075ecb756b2b228060",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1269,7 +1276,11 @@
           "ptAddress": "0xa6c55e31154d39bb0aa3ca2ff9f7665bda4e47fc",
           "ytAddress": "0x13e695e95601545657caaa7cd62a22fa87b62bdd"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1783,7 +1794,6 @@
           "syAddress": "0x825645da91d741e429247f7fc01ca2dfacb61420",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -2770,7 +2780,13 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x616185600989bf8339b58ac9e539d49536598343.png",
       "assetGroup": "Staked Plasma USD::splUSD",
       "currencyId": "Staked Plasma USD::splUSD",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        }
+      }
     },
     "0xf91c31299e998c5127bc5f11e4a657fc0cf358cd": {
       "chainId": "9745",
@@ -2896,11 +2912,7 @@
       "assetGroup": "ebUSD Stablecoin::EBUSD",
       "currencyId": "ebUSD Stablecoin::ebUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30383,
           "routes": [
@@ -3062,9 +3074,9 @@
       "currencyId": "Staked NUSD::sNUSD",
       "props": {
         "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
-          "source": "whitelist"
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "NUSD", "base": "USD" },
         "oft": {
@@ -3189,8 +3201,8 @@
       "currencyId": "Neutrl USD::NUSD",
       "props": {
         "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
+          "score": 6,
+          "category": "COMPROMISED",
           "source": "whitelist"
         },
         "oft": {
@@ -3251,7 +3263,8 @@
       "address": "0x1e8d78e9b3f0152d54d32904b7933f1cfe439df1",
       "symbol": "sUSDeUSDT0",
       "assetGroup": "sUSDeUSDT0::USDT0/sUSDe",
-      "currencyId": "USDT0/sUSDe::sUSDeUSDT0"
+      "currencyId": "USDT0/sUSDe::sUSDeUSDT0",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2d84d79c852f6842abe0304b70bbaa1506add457": {
       "chainId": "9745",
@@ -3260,7 +3273,8 @@
       "address": "0x2d84d79c852f6842abe0304b70bbaa1506add457",
       "symbol": "USDT0-USDe",
       "assetGroup": "USDT0-USDe::USDT0/USDe",
-      "currencyId": "USDT0/USDe::USDT0-USDe"
+      "currencyId": "USDT0/USDe::USDT0-USDe",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x43324fa4842829db99e25713f81da2d0e7eb21c3": {
       "chainId": "9745",
@@ -3269,7 +3283,8 @@
       "address": "0x43324fa4842829db99e25713f81da2d0e7eb21c3",
       "symbol": "GRID",
       "assetGroup": "GRID::GRID",
-      "currencyId": "GRID::GRID"
+      "currencyId": "GRID::GRID",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe08853433fdbc504240455e295b644e0f44c3b29": {
       "chainId": "9745",

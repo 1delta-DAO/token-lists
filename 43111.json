@@ -93,7 +93,6 @@
       "currencyId": "brBTC::brBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -202,6 +201,11 @@
       "assetGroup": "Vesper V-Dollar (Legacy)::VUSD.L",
       "currencyId": "Vesper V-Dollar (Legacy)::VUSD.L",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "vesper", "name": "Vesper", "kind": "protocol" }
       }
@@ -263,7 +267,7 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/bfBTC.webp",
       "assetGroup": "BitFi Bitcoin::BFBTC",
       "currencyId": "BitFi Bitcoin::bfBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "43111",
@@ -571,7 +575,14 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUUSD.webp",
       "assetGroup": "SUUSD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x6c851f501a3f24e29a8e39a29591cddf09369080": {
       "chainId": "43111",

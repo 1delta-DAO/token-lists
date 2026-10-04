@@ -1391,6 +1391,7 @@
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "allunity",
@@ -1425,7 +1426,10 @@
       "symbol": "CIRBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/102172745/thumb/cirbtc.jpg?1775204071",
       "assetGroup": "Circle Wrapped BTC::CIRBTC",
-      "currencyId": "Circle Wrapped BTC::CIRBTC"
+      "currencyId": "Circle Wrapped BTC::CIRBTC",
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0xe205b4e7ac03e3f7b2060c3edf2171aa7126c0d5": {
       "chainId": "5042",
@@ -1447,6 +1451,7 @@
       "assetGroup": "PayFi Strategy Token::PST",
       "currencyId": "PayFi Strategy Token::PST",
       "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "huma", "name": "Huma", "kind": "protocol" }
       }
     },
@@ -1510,6 +1515,11 @@
       "assetGroup": "Agant GBP::GBPA",
       "currencyId": "Agant GBP::GBPA",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "agant", "name": "Agant", "kind": "institution" }
       }
@@ -1553,6 +1563,11 @@
       "currencyId": "sUSDai::SUSDAI",
       "props": {
         "savings": { "underlying": "USDai", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
       }
     },
@@ -1566,6 +1581,11 @@
       "assetGroup": "USDai::USDAI",
       "currencyId": "USDai::USDAI",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
       }
@@ -2042,6 +2062,86 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178950/thumb/BAGFI.jpg?1790748603",
       "assetGroup": "BAGFI::BAGFI",
       "currencyId": "BAGFI::BAGFI"
+    },
+    "0x2a7a8c69a7462a2737a3b41188bc7a36d5555f2f": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "$SOLD",
+      "address": "0x2a7a8c69a7462a2737a3b41188bc7a36d5555f2f",
+      "symbol": "SOLD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178999/thumb/Sold_Token_Logo_under2.9mb.png?1790840276",
+      "assetGroup": "$SOLD::SOLD",
+      "currencyId": "$SOLD::SOLD"
+    },
+    "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Argentine Peso",
+      "address": "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d",
+      "symbol": "WARS",
+      "logoURI": "https://assets.coingecko.com/coins/images/70846/thumb/world_logos_wars_logo_3.png?1764176749",
+      "assetGroup": "Argentine Peso::WARS",
+      "currencyId": "Argentine Peso::WARS",
+      "props": {
+        "stablecoin": { "base": "ARS" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Brazilian real",
+      "address": "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0",
+      "symbol": "WBRL",
+      "logoURI": "https://assets.coingecko.com/coins/images/70862/thumb/wbrl.png?1764272108",
+      "assetGroup": "Brazilian real::WBRL",
+      "currencyId": "Brazilian real::WBRL",
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x337e7456b420bd3481e7fa61fa9850343d610d34": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Mexican Peso",
+      "address": "0x337e7456b420bd3481e7fa61fa9850343d610d34",
+      "symbol": "WMXN",
+      "logoURI": "https://assets.coingecko.com/coins/images/70880/thumb/wmxn_logo_1.png?1764392404",
+      "assetGroup": "Mexican Peso::WMXN",
+      "currencyId": "Mexican Peso::WMXN",
+      "props": {
+        "stablecoin": { "base": "MXN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Peruvian Sol",
+      "address": "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe",
+      "symbol": "WPEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/70975/thumb/wpen_logo_1.png?1764954695",
+      "assetGroup": "Peruvian Sol::WPEN",
+      "currencyId": "Peruvian Sol::WPEN",
+      "props": {
+        "stablecoin": { "base": "PEN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x61d450a098b6a7f69fc4b98ce68198fe59768651": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Chilean Peso",
+      "address": "0x61d450a098b6a7f69fc4b98ce68198fe59768651",
+      "symbol": "WCLP",
+      "logoURI": "https://assets.coingecko.com/coins/images/70976/thumb/wclp_logo_1.png?1764954870",
+      "assetGroup": "Chilean Peso::WCLP",
+      "currencyId": "Chilean Peso::WCLP",
+      "props": {
+        "stablecoin": { "base": "CLP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "5042",

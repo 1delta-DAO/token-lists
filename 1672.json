@@ -30,6 +30,11 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
@@ -228,7 +233,8 @@
       "address": "0xe47e9ba4ea2320a6ed87246d02fd5c38485ed7d1",
       "symbol": "pALPHA",
       "assetGroup": "Ember Pharos Alpha::pALPHA",
-      "currencyId": "Ember Pharos Alpha::pALPHA"
+      "currencyId": "Ember Pharos Alpha::pALPHA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe6b9da03a33bc2b7736325c8a15a0c4d13cf1408": {
       "chainId": "1672",
@@ -1061,6 +1067,11 @@
       "currencyId": "Wrapped Savings rUSD::wsrUSD",
       "props": {
         "savings": { "underlying": "rUSD", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -1635,7 +1646,8 @@
       "symbol": "bfBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/69326/thumb/bfBTC-logo-symbol-color.png?1758193458",
       "assetGroup": "BitFi Bitcoin::BFBTC",
-      "currencyId": "BitFi Bitcoin::bfBTC"
+      "currencyId": "BitFi Bitcoin::bfBTC",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x8d296f4cc5ae608199e1e7869c922c5698028743": {
       "chainId": "1672",
@@ -1709,7 +1721,8 @@
       "symbol": "FBTC",
       "logoURI": "https://storage.googleapis.com/socialscan-public-asset/explorer/pharos/FunctionBTC.png",
       "assetGroup": "FunctionBTC::FBTC",
-      "currencyId": "FunctionBTC::FBTC"
+      "currencyId": "FunctionBTC::FBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x1c207fc400467f711d388fffc914da17c3703048": {
       "chainId": "1672",
@@ -3317,6 +3330,51 @@
       "symbol": "ABC",
       "assetGroup": "223 Shares::ABC",
       "currencyId": "223 Shares::ABC"
+    },
+    "0x0737c48cfd7f79c03191a96ae10a5a060d8ca823": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Uniswap V2",
+      "address": "0x0737c48cfd7f79c03191a96ae10a5a060d8ca823",
+      "symbol": "UNI-V2",
+      "assetGroup": "Uniswap V2::UNI-V2::1672::66",
+      "currencyId": "Uniswap V2::UNI-V2"
+    },
+    "0x85d0e463c2d3c50bbf91b373cf53318e10ef9359": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Uniswap V2",
+      "address": "0x85d0e463c2d3c50bbf91b373cf53318e10ef9359",
+      "symbol": "UNI-V2",
+      "assetGroup": "Uniswap V2::UNI-V2::1672::67",
+      "currencyId": "Uniswap V2::UNI-V2"
+    },
+    "0x8b53806a94c8af8e95a054974e2ad6bf3f390f76": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "name",
+      "address": "0x8b53806a94c8af8e95a054974e2ad6bf3f390f76",
+      "symbol": "pNAME",
+      "assetGroup": "name::pNAME",
+      "currencyId": "name::pNAME"
+    },
+    "0x0c8ffe952189db2b217c146424962ab585d8b494": {
+      "chainId": "1672",
+      "decimals": 0,
+      "name": "SK Hynix Inc.",
+      "address": "0x0c8ffe952189db2b217c146424962ab585d8b494",
+      "symbol": "SKHYs",
+      "assetGroup": "SK Hynix Inc.::SKHYs",
+      "currencyId": "SK Hynix Inc.::SKHYs"
+    },
+    "0x0bf7a3b6b0b0f65bb54169199c41001d0e876b55": {
+      "chainId": "1672",
+      "decimals": 0,
+      "name": "iShares 0-3 Month Treasury Bond ETF",
+      "address": "0x0bf7a3b6b0b0f65bb54169199c41001d0e876b55",
+      "symbol": "SGOVs",
+      "assetGroup": "iShares 0-3 Month Treasury Bond ETF::SGOVs",
+      "currencyId": "iShares 0-3 Month Treasury Bond ETF::SGOVs"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1672",

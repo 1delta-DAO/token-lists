@@ -13,6 +13,7 @@
       "currencyId": "PT USDe (USDe) Avalanche::PT-USDe-27NOV2025",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1764201600, "expired": true },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -82,6 +83,7 @@
           "underlyingAsset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
           "maturity": 1821139205
         },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
           { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
@@ -239,6 +241,11 @@
       "currencyId": "Backed NVIDIA::BNVDA",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 3,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -541,6 +548,11 @@
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
@@ -586,6 +598,11 @@
           "type": "credit",
           "subType": "reinsurance",
           "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "oft": {
           "eid": 30106,
@@ -4255,6 +4272,7 @@
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
@@ -4297,6 +4315,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -4324,6 +4343,7 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -4351,6 +4371,7 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -4489,7 +4510,8 @@
       "symbol": "ALPHA",
       "logoURI": "https://assets.coingecko.com/coins/images/12738/thumb/AlphaToken_256x256.png?1617160876",
       "assetGroup": "ALPHA",
-      "currencyId": "Alpha Venture DAO::ALPHA"
+      "currencyId": "Alpha Venture DAO::ALPHA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x027dbca046ca156de9622cd1e2d907d375e53aa7": {
       "chainId": "43114",
@@ -5805,7 +5827,8 @@
       "symbol": "ggAVAX",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0xA25EaF2906FA1a3a13EdAc9B9657108Af7B703e3/logo.png",
       "assetGroup": "GoGoPool AVAX::ggAVAX",
-      "currencyId": "GoGoPool AVAX::ggAVAX"
+      "currencyId": "GoGoPool AVAX::ggAVAX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd402298a793948698b9a63311404fbbee944eafd": {
       "chainId": "43114",
@@ -5827,6 +5850,7 @@
       "assetGroup": "USDV",
       "currencyId": "USDV::USDV",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "verified-usd",
@@ -6531,7 +6555,8 @@
       "symbol": "upAVAX",
       "logoURI": "https://token-images.euler.finance/43114/0xB2bFb52cfc40584AC4e9e2B36a5B8d6554A56e0b?v=492546",
       "assetGroup": "upAVAX::Upshift Avalanche AVAX",
-      "currencyId": "Upshift Avalanche AVAX::upAVAX"
+      "currencyId": "Upshift Avalanche AVAX::upAVAX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xcf0eb4ac018c06a16ed5c63484823c7805e7599d": {
       "chainId": "43114",
@@ -6808,6 +6833,7 @@
                 "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "42161": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
               }
@@ -6964,7 +6990,8 @@
       "symbol": "ankrAVAX",
       "logoURI": "https://assets.coingecko.com/coins/images/28695/large/ankrAVAX.png?1673413425",
       "assetGroup": "ANKRAVAX",
-      "currencyId": "Ankr Reward Bearing AVAX::ankrAVAX"
+      "currencyId": "Ankr Reward Bearing AVAX::ankrAVAX",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xa32608e873f9ddef944b24798db69d80bbb4d1ed": {
       "chainId": "43114",
@@ -7939,8 +7966,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "oft": {
           "eid": 30106,
@@ -8669,11 +8696,7 @@
       "assetGroup": "Moremoney USD::MONEY",
       "currencyId": "Moremoney USD::MONEY",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "moremoney", "name": "Moremoney", "kind": "protocol" }
       }
@@ -8698,6 +8721,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -8714,7 +8742,14 @@
       "symbol": "WUSDM",
       "logoURI": "https://assets.coingecko.com/coins/images/33785/thumb/wUSDM_PNG_240px.png?1702981552",
       "assetGroup": "WUSDM",
-      "currencyId": "Wrapped USDM::WUSDM"
+      "currencyId": "Wrapped USDM::WUSDM",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x333000333b26ee30214b4af6419d9ab07a450400": {
       "chainId": "43114",
@@ -9023,6 +9058,11 @@
       "assetGroup": "EUROe Stablecoin::EUROE",
       "currencyId": "EUROe Stablecoin::EUROE",
       "props": {
+        "risk": {
+          "score": 3,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "membrane",
@@ -9081,11 +9121,7 @@
       "assetGroup": "VNX EURO::VEUR",
       "currencyId": "VNX EURO::VEUR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
       }
@@ -9415,11 +9451,7 @@
       "assetGroup": "BiLira::TRYB",
       "currencyId": "BiLira::TRYB",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "TRY" },
         "issuer": { "id": "bilira", "name": "BiLira", "kind": "institution" }
       }
@@ -10207,6 +10239,11 @@
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "zoth", "name": "Zoth", "kind": "protocol" }
       }
@@ -10814,7 +10851,8 @@
       "symbol": "upAUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x3408b22d8895753c9a3e14e4222e981d4e9a599e.png",
       "assetGroup": "Upshift Avalanche AUSD::upAUSD",
-      "currencyId": "Upshift Avalanche AUSD::upAUSD"
+      "currencyId": "Upshift Avalanche AUSD::upAUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x68088c91446c7bea49ea7dbd3b96ce62b272dc96": {
       "chainId": "43114",
@@ -10881,7 +10919,8 @@
       "symbol": "eUSDC-2",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x39de0f00189306062d79edec6dca5bb6bfd108f9.png",
       "assetGroup": "EVK Vault eUSDC-2::eUSDC-2",
-      "currencyId": "EVK Vault eUSDC-2::eUSDC-2"
+      "currencyId": "EVK Vault eUSDC-2::eUSDC-2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x72f92a966f1874f74e1b601bee7cf57031b53a03": {
       "chainId": "43114",
@@ -10937,11 +10976,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -11876,6 +11911,11 @@
       "currencyId": "Staked agEUR::stEUR",
       "props": {
         "savings": { "underlying": "EURA", "base": "EUR" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -12046,7 +12086,7 @@
         "risk": {
           "score": 5,
           "category": "DISCONTINUED",
-          "source": "whitelist"
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -12117,7 +12157,6 @@
       "assetGroup": "nUSD::nUSD",
       "currencyId": "nUSD::nUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "synapse", "name": "Synapse", "kind": "protocol" }
       }
     },
@@ -12306,8 +12345,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -13156,11 +13195,7 @@
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "dforce", "name": "dForce", "kind": "protocol" }
       }
@@ -13471,6 +13506,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -13658,7 +13698,8 @@
       "symbol": "tAVAX",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x14a84f1a61ccd7d1be596a6cc11fe33a36bc1646.png",
       "assetGroup": "Treehouse AVAX::tAVAX",
-      "currencyId": "Treehouse AVAX::tAVAX"
+      "currencyId": "Treehouse AVAX::tAVAX",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2": {
       "chainId": "43114",
@@ -13848,7 +13889,8 @@
       "symbol": "sUSDp",
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/sUSDp.svg",
       "assetGroup": "Staked USDp::sUSDp",
-      "currencyId": "Staked USDp::sUSDp"
+      "currencyId": "Staked USDp::sUSDp",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xca2671dcd031a72359f456c212f62a9bda737cd7": {
       "chainId": "43114",
@@ -14267,7 +14309,8 @@
       "symbol": "USDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xffe8b2295cef70290819a8193834cc7900bcef5f.png",
       "assetGroup": "Gami USDC::USDC",
-      "currencyId": "Gami USDC::USDC"
+      "currencyId": "Gami USDC::USDC",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x5dd1a7a369e8273371d2dbf9d83356057088082c": {
       "chainId": "43114",
@@ -14454,7 +14497,8 @@
       "address": "0x24dd05a8fd6c75c16eba113ba5ca334811b3e055",
       "symbol": "mUSD",
       "assetGroup": "Mock USD Stablecoin::mUSD",
-      "currencyId": "Mock USD Stablecoin::mUSD"
+      "currencyId": "Mock USD Stablecoin::mUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x311ad4977655e781be7ffe3cf02a34102d1a06b8": {
       "chainId": "43114",
@@ -14463,7 +14507,8 @@
       "address": "0x311ad4977655e781be7ffe3cf02a34102d1a06b8",
       "symbol": "mRWA",
       "assetGroup": "Mock RWA::mRWA",
-      "currencyId": "Mock RWA::mRWA"
+      "currencyId": "Mock RWA::mRWA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x3e3e3a934412f52cbd287b8b3264d4f862f485e8": {
       "chainId": "43114",
@@ -14472,7 +14517,8 @@
       "address": "0x3e3e3a934412f52cbd287b8b3264d4f862f485e8",
       "symbol": "ps-mRWA",
       "assetGroup": "Pending Settlement mRWA::ps-mRWA",
-      "currencyId": "Pending Settlement mRWA::ps-mRWA"
+      "currencyId": "Pending Settlement mRWA::ps-mRWA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4e07f5cb1751e1ae17e8d3d2d6b8d9b4ce8492e6": {
       "chainId": "43114",
@@ -14481,7 +14527,8 @@
       "address": "0x4e07f5cb1751e1ae17e8d3d2d6b8d9b4ce8492e6",
       "symbol": "ps-mUSD",
       "assetGroup": "Pending Settlement mUSD::ps-mUSD",
-      "currencyId": "Pending Settlement mUSD::ps-mUSD"
+      "currencyId": "Pending Settlement mUSD::ps-mUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x649342c6bff544d82df1b2ba3c93e0c22cdeba84": {
       "chainId": "43114",
@@ -14490,7 +14537,8 @@
       "address": "0x649342c6bff544d82df1b2ba3c93e0c22cdeba84",
       "symbol": "savBTC",
       "assetGroup": "Staked avBTC::savBTC",
-      "currencyId": "Staked avBTC::savBTC"
+      "currencyId": "Staked avBTC::savBTC",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x66f9e7c1a356aed33551a31a7f58d222ac4c87a9": {
       "chainId": "43114",
@@ -14509,7 +14557,11 @@
       "symbol": "xUSDC",
       "assetGroup": "xUSDC::xUSDC::suspicious::7dc04960",
       "currencyId": "xUSDC::xUSDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb4205a645c7e920bd8504181b1d7f2c5c955c3e7": {
       "chainId": "43114",
@@ -14518,7 +14570,8 @@
       "address": "0xb4205a645c7e920bd8504181b1d7f2c5c955c3e7",
       "symbol": "PT-USDe-25SEP2025",
       "assetGroup": "PT Ethena USDe 25SEP2025::PT-USDe-25SEP2025",
-      "currencyId": "PT Ethena USDe 25SEP2025::PT-USDe-25SEP2025"
+      "currencyId": "PT Ethena USDe 25SEP2025::PT-USDe-25SEP2025",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x433af1d58f2b24d05e6f191548fbe1e74af67c3b": {
       "chainId": "43114",
@@ -14594,7 +14647,8 @@
       "address": "0x901ee57f7118a7be56ac079cbcda7f22663a3874",
       "symbol": "GLV [WAVAX-USDC]",
       "assetGroup": "GMX Liquidity Vault [WAVAX-USDC]::GLV [WAVAX-USDC]",
-      "currencyId": "GMX Liquidity Vault [WAVAX-USDC]::GLV [WAVAX-USDC]"
+      "currencyId": "GMX Liquidity Vault [WAVAX-USDC]::GLV [WAVAX-USDC]",
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0x981d3f6534af64b65930de9e4b83c1055bad1e31": {
       "chainId": "43114",
@@ -14624,7 +14678,8 @@
       "symbol": "sACRED",
       "logoURI": "https://cdn.morpho.org/assets/logos/sacred.svg",
       "assetGroup": "sACRED::sACRED",
-      "currencyId": "sACRED::sACRED"
+      "currencyId": "sACRED::sACRED",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb66a5502ab560a672aa2f1d38dad5670200d14c8": {
       "chainId": "43114",
@@ -14633,7 +14688,8 @@
       "address": "0xb66a5502ab560a672aa2f1d38dad5670200d14c8",
       "symbol": "PT-sw-avUSDx(avUSD)-2026/05/15",
       "assetGroup": "Principal Token: sw-avUSDx(avUSD) 2026/05/15::PT-sw-avUSDx(avUSD)-2026/05/15",
-      "currencyId": "Principal Token: sw-avUSDx(avUSD) 2026/05/15::PT-sw-avUSDx(avUSD)-2026/05/15"
+      "currencyId": "Principal Token: sw-avUSDx(avUSD) 2026/05/15::PT-sw-avUSDx(avUSD)-2026/05/15",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb70b5a24bd06a9c6254501076b0dd8b86dd27a28": {
       "chainId": "43114",
@@ -14651,7 +14707,8 @@
       "address": "0xbf5419095edccf25e594e5ae84550a5082f7e7ae",
       "symbol": "PT-savUSD(avUSD)-2026/05/15",
       "assetGroup": "Principal Token: savUSD(avUSD) 2026/05/15::PT-savUSD(avUSD)-2026/05/15",
-      "currencyId": "Principal Token: savUSD(avUSD) 2026/05/15::PT-savUSD(avUSD)-2026/05/15"
+      "currencyId": "Principal Token: savUSD(avUSD) 2026/05/15::PT-savUSD(avUSD)-2026/05/15",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xdb37a52034e617dc5b1b6739da9b648fd7213a13": {
       "chainId": "43114",
@@ -14660,7 +14717,8 @@
       "address": "0xdb37a52034e617dc5b1b6739da9b648fd7213a13",
       "symbol": "PT-sw-esdeUSD-3(deUSD)-2026/02/06",
       "assetGroup": "Principal Token: sw-esdeUSD-3(deUSD) 2026/02/06::PT-sw-esdeUSD-3(deUSD)-2026/02/06",
-      "currencyId": "Principal Token: sw-esdeUSD-3(deUSD) 2026/02/06::PT-sw-esdeUSD-3(deUSD)-2026/02/06"
+      "currencyId": "Principal Token: sw-esdeUSD-3(deUSD) 2026/02/06::PT-sw-esdeUSD-3(deUSD)-2026/02/06",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xf5a7de2d276dbda3eef1b62a9e718eff4d29ddc8": {
       "chainId": "43114",
@@ -15001,6 +15059,7 @@
       "name": "Ammo Markets 9MM",
       "address": "0xfe4f3960b69bf865ac8dcef0159995c8ca4d2946",
       "symbol": "9MM",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178996/thumb/9mm-fmj-black-200.png?1790839294",
       "assetGroup": "Ammo Markets 9MM::9MM",
       "currencyId": "Ammo Markets 9MM::9MM"
     },

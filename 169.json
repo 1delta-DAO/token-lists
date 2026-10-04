@@ -42,7 +42,7 @@
       "currencyId": "Kelp DAO Restaked ETH::RSETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "oft": {
           "eid": 30217,
           "routes": [
@@ -420,6 +420,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -464,6 +469,11 @@
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "zoth", "name": "Zoth", "kind": "protocol" }
       }
@@ -526,6 +536,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }

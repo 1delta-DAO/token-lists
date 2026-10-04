@@ -43,7 +43,7 @@
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
@@ -134,7 +134,7 @@
       "currencyId": "KelpDAO Bridged rsETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "oft": {
           "eid": 30243,
           "routes": [
@@ -308,7 +308,8 @@
       "symbol": "BLAST",
       "logoURI": "https://assets.coingecko.com/coins/images/35494/standard/Blast.jpg?1719385662",
       "assetGroup": "Blast::BLAST",
-      "currencyId": "Blast::BLAST"
+      "currencyId": "Blast::BLAST",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd1fedd031b92f50a50c05e2c45af1adb4cea82f4": {
       "chainId": "81457",
@@ -420,11 +421,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -1035,11 +1032,7 @@
       "currencyId": "Anzen Staked USDz::SUSDZ",
       "props": {
         "savings": { "underlying": "USDz", "base": "USD" },
-        "risk": {
-          "score": 4,
-          "category": "STABLECOIN",
-          "source": "savings_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "anzen", "name": "Anzen", "kind": "protocol" }
       }
@@ -1217,9 +1210,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/34763/thumb/USDC_.png?1705990720",
       "assetGroup": "Overnight.fi USDC::USDC+",
       "currencyId": "Overnight.fi USDC::USDC+",
-      "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x15d24de366f69b835be19f7cf9447e770315dd80": {
       "chainId": "81457",
@@ -1691,6 +1682,7 @@
       "assetGroup": "STAR Token::STAR",
       "currencyId": "STAR Token::STAR",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "preon", "name": "Preon", "kind": "protocol" }
       }
@@ -2120,6 +2112,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -2288,7 +2281,6 @@
       "assetGroup": "nUSD::nUSD",
       "currencyId": "nUSD::nUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "synapse", "name": "Synapse", "kind": "protocol" }
       }
     },
@@ -2532,6 +2524,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -2674,6 +2671,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }

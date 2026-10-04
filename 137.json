@@ -210,6 +210,11 @@
       "currencyId": "Backed NVIDIA::bNVDA",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 3,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -585,6 +590,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -612,6 +618,7 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -7622,6 +7629,7 @@
       "currencyId": "tBTC::tBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
@@ -8418,11 +8426,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -8901,7 +8905,14 @@
       "symbol": "wUSDM",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x57f5e098cad7a3d1eed53991d4d66c45c9af7812/small/token-logo.png",
       "assetGroup": "WUSDM",
-      "currencyId": "Wrapped USDM::wUSDM"
+      "currencyId": "Wrapped USDM::wUSDM",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x27842334c55c01ddfe81bf687425f906816c5141": {
       "chainId": "137",
@@ -9013,11 +9024,7 @@
       "assetGroup": "Davos.xyz USD::DUSD",
       "currencyId": "Davos.xyz USD::DUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "davos", "name": "Davos", "kind": "protocol" }
       }
@@ -9362,11 +9369,7 @@
       "assetGroup": "STAR Token::STAR",
       "currencyId": "STAR Token::STAR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "preon", "name": "Preon", "kind": "protocol" }
       }
@@ -9381,6 +9384,11 @@
       "assetGroup": "EUROe Stablecoin::EUROe",
       "currencyId": "EUROe Stablecoin::EUROe",
       "props": {
+        "risk": {
+          "score": 3,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "membrane",
@@ -9399,6 +9407,7 @@
       "assetGroup": "Verified USD::USDV",
       "currencyId": "Verified USD::USDV",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "verified-usd",
@@ -10680,8 +10689,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -10859,9 +10868,7 @@
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x37b8e1152fb90a867f3dcca6e8d537681b04705e/small/token-logo.png",
       "assetGroup": "Proto Gyro Dollar::p-GYD",
       "currencyId": "Proto Gyro Dollar::p-GYD",
-      "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb7f1219db39ea0cb029e4dcc3daffdcfd233defd": {
       "chainId": "137",
@@ -11627,7 +11634,14 @@
       "symbol": "EUTBL",
       "logoURI": "https://assets.coingecko.com/coins/images/39657/thumb/EUTBL.png?1723517425",
       "assetGroup": "Spiko EU T-Bills Money Market Fund::EUTBL",
-      "currencyId": "Spiko EU T-Bills Money Market Fund::EUTBL"
+      "currencyId": "Spiko EU T-Bills Money Market Fund::EUTBL",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0xc4ce1d6f5d98d65ee25cf85e9f2e9dcfee6cb5d6": {
       "chainId": "137",
@@ -11671,7 +11685,14 @@
       "symbol": "USTBL",
       "logoURI": "https://assets.coingecko.com/coins/images/39666/thumb/USTB.png?1723541269",
       "assetGroup": "Spiko US T-Bills Money Market Fund::USTBL",
-      "currencyId": "Spiko US T-Bills Money Market Fund::USTBL"
+      "currencyId": "Spiko US T-Bills Money Market Fund::USTBL",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "137",
@@ -11895,11 +11916,7 @@
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "dforce", "name": "dForce", "kind": "protocol" }
       }
@@ -11934,11 +11951,7 @@
       "assetGroup": "BiLira::TRYB",
       "currencyId": "BiLira::TRYB",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "TRY" },
         "issuer": { "id": "bilira", "name": "BiLira", "kind": "institution" }
       }
@@ -12177,11 +12190,7 @@
       "assetGroup": "Worldwide USD::WUSD",
       "currencyId": "Worldwide USD::WUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -12382,7 +12391,15 @@
       "symbol": "USDN",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x013f9c3fac3e2759d7e90aca4f9540f75194a0d7/small/token-logo.png",
       "assetGroup": "Neutrino Index Token::USDN",
-      "currencyId": "Neutrino Index Token::USDN"
+      "currencyId": "Neutrino Index Token::USDN",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xd24157aa1097486dc9d7cf094a7e15026e566b5d": {
       "chainId": "137",
@@ -12404,11 +12421,7 @@
       "assetGroup": "VNX EURO::VEUR",
       "currencyId": "VNX EURO::VEUR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
       }
@@ -14726,11 +14739,7 @@
       "assetGroup": "ARYZE eEUR::eEUR",
       "currencyId": "ARYZE eEUR::eEUR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "aryze", "name": "ARYZE", "kind": "institution" }
       }
@@ -15447,11 +15456,7 @@
       "assetGroup": "Num ARS::nARS",
       "currencyId": "Num ARS::nARS",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "ARS" },
         "issuer": {
           "id": "num-finance",
@@ -15500,11 +15505,7 @@
       "assetGroup": "USC",
       "currencyId": "Classic USD::USC",
       "props": {
-        "risk": {
-          "score": 4,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "brale", "name": "Brale", "kind": "institution" }
       }
@@ -15800,11 +15801,7 @@
       "assetGroup": "ARYZE eUSD::eUSD",
       "currencyId": "ARYZE eUSD::eUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aryze", "name": "ARYZE", "kind": "institution" }
       }
@@ -16259,11 +16256,7 @@
       "assetGroup": "ARYZE eGBP::eGBP",
       "currencyId": "ARYZE eGBP::eGBP",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "aryze", "name": "ARYZE", "kind": "institution" }
       }
@@ -17868,11 +17861,7 @@
       "assetGroup": "uaht.io::UAHT",
       "currencyId": "uaht.io::UAHT",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "UAH" },
         "issuer": { "id": "uaht", "name": "UAHT", "kind": "institution" }
       }
@@ -18277,6 +18266,11 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "denomination": "BTC",
+        "risk": {
+          "score": 1,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
@@ -20280,6 +20274,7 @@
       "assetGroup": "Gyroscope GYD::GYD::137::0",
       "currencyId": "Gyroscope GYD::GYD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "gyroscope", "name": "Gyroscope", "kind": "protocol" }
       }
@@ -22541,7 +22536,6 @@
       "assetGroup": "nUSD::nUSD",
       "currencyId": "nUSD::nUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "synapse", "name": "Synapse", "kind": "protocol" }
       }
     },
@@ -22679,7 +22673,11 @@
       "currencyId": "Staked EURA::stEUR",
       "props": {
         "savings": { "underlying": "EURA", "base": "EUR" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -22696,7 +22694,7 @@
         "risk": {
           "score": 5,
           "category": "DISCONTINUED",
-          "source": "whitelist"
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -23060,6 +23058,11 @@
               }
             }
           ]
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "EUR" },
         "issuer": {
@@ -27259,6 +27262,7 @@
       "assetGroup": "US Permissionless Dollar::USPD",
       "currencyId": "US Permissionless Dollar::USPD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "uspd", "name": "USPD", "kind": "protocol" }
       }
@@ -27293,6 +27297,7 @@
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "allunity",
@@ -27385,11 +27390,7 @@
       "assetGroup": "Quantoz EURQ::EURQ",
       "currencyId": "Quantoz EURQ::EURQ",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -27417,11 +27418,7 @@
       "assetGroup": "Quantoz USDQ::USDQ",
       "currencyId": "Quantoz USDQ::USDQ",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -27707,7 +27704,7 @@
       "currencyId": "eUSD::eUSD",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -27781,7 +27778,8 @@
       "symbol": "TESOURO",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0xd574b191b5a00262ff19953d3ce25543ab7c8098/small/token-logo.png",
       "assetGroup": "Etherfuse TESOURO::TESOURO",
-      "currencyId": "Etherfuse TESOURO::TESOURO"
+      "currencyId": "Etherfuse TESOURO::TESOURO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x070c3e8a408bbacc61f40ef023d30e173f268f5e": {
       "chainId": "137",
@@ -28487,7 +28485,8 @@
       "symbol": "sPOL",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0xd1cd49a08aef3af93457aec17c786c2b7f48ecd7/small/token-logo.png",
       "assetGroup": "sPOL::sPOL",
-      "currencyId": "sPOL::sPOL"
+      "currencyId": "sPOL::sPOL",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb": {
       "chainId": "137",
@@ -28724,6 +28723,15 @@
       "symbol": "MARCO",
       "assetGroup": "MELEGA::MARCO",
       "currencyId": "MELEGA::MARCO"
+    },
+    "0x220b60aeafa5cfa22d92c20dc2f0ff4a389bb152": {
+      "chainId": "137",
+      "decimals": 18,
+      "name": "TTAJ",
+      "address": "0x220b60aeafa5cfa22d92c20dc2f0ff4a389bb152",
+      "symbol": "TTAJ",
+      "assetGroup": "TTAJ::TTAJ::137::0",
+      "currencyId": "TTAJ::TTAJ"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "137",

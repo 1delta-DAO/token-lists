@@ -28,6 +28,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -136,6 +137,11 @@
               "oapp": "ethena"
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -305,6 +311,11 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "savings": { "underlying": "USDe", "base": "USD" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }

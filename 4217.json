@@ -436,11 +436,7 @@
       "assetGroup": "USDBridge::USDB",
       "currencyId": "USDBridge::USDB",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "bridge", "name": "Bridge", "kind": "institution" }
       }
@@ -473,11 +469,7 @@
       "assetGroup": "Deel USD::DLUSD",
       "currencyId": "Deel USD::DLUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "deel",
@@ -534,7 +526,7 @@
       "currencyId": "Agant GBP::GBPA",
       "props": {
         "risk": {
-          "score": 5,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -640,6 +632,11 @@
       "assetGroup": "YLDS::YLDS",
       "currencyId": "YLDS::YLDS",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "figure", "name": "Figure", "kind": "institution" }
       }
@@ -654,6 +651,11 @@
       "assetGroup": "OpenUSD::OUSD",
       "currencyId": "OpenUSD::OUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "open-standard",

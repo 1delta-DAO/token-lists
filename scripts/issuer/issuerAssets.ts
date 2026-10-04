@@ -954,7 +954,10 @@ export const ISSUER_BY_ADDRESS: Record<string, IssuerProps> = {
   ...Object.fromEntries(
     Object.entries(RWA_MANUAL['4663'] ?? {})
       .filter(([, rwa]) => rwa.issuer === 'robinhood')
-      .map(([address]) => [`4663:${address}`, { id: 'robinhood', name: 'Robinhood', kind: 'institution' } as IssuerProps]),
+      .map(([address]) => [
+        `4663:${address}`,
+        { id: 'robinhood', name: 'Robinhood', kind: 'institution' } as IssuerProps,
+      ]),
   ),
 
   // --- Solana: base58 mints, lower-cased as a LOOKUP KEY only ---------------

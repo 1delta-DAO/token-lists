@@ -70,6 +70,7 @@
           "syAddress": "0x27b1dacd74688af24a64bd3c9c1b143118740784",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -246,6 +247,7 @@
           "syAddress": "0x69a23f16974024a1b6a5362ac2a11bfeeefd5827",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -360,6 +362,7 @@
           "ptAddress": "0x789ca09b0b4bcc83062d817c43206f96bd464015",
           "ytAddress": "0x081424ec3f4bfe0ad829297d6cb73997656f56ac"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -555,6 +558,7 @@
           "syAddress": "0x69a23f16974024a1b6a5362ac2a11bfeeefd5827",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -819,6 +823,7 @@
           "ptAddress": "0x22fe64c10f482004c48872c98d1f03cbdcaddce9",
           "ytAddress": "0xc92113f9590999f3dab6fb32a17e050da1efdd76"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -888,6 +893,7 @@
           "syAddress": "0x27b1dacd74688af24a64bd3c9c1b143118740784",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1238,6 +1244,7 @@
           "syAddress": "0x69a23f16974024a1b6a5362ac2a11bfeeefd5827",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1346,7 +1353,6 @@
           "syAddress": "0x896f4d49916ac5cfc36d7a260a7039ba4ea317b6",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1404,6 +1410,7 @@
           "syAddress": "0x69a23f16974024a1b6a5362ac2a11bfeeefd5827",
           "expired": true
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1626,6 +1633,11 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "oft": {
           "eid": 30332,
           "routes": [
@@ -1654,6 +1666,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -1668,6 +1681,7 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30332,
           "routes": [
@@ -1695,6 +1709,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30332,
           "routes": [
@@ -1749,6 +1764,7 @@
       "currencyId": "Wrapped eETH::WEETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30332,
           "routes": [
@@ -1837,13 +1853,15 @@
                 "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "42161": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "43114": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
               }
             }
           ]
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x71e99522ead5e21cf57f1f542dc4ad2e841f7321": {
@@ -2065,7 +2083,8 @@
       "symbol": "X33",
       "logoURI": "https://assets.coingecko.com/coins/images/54526/thumb/shadow_liquid_staking_token17400.jpg?1740148577",
       "assetGroup": "Shadow Liquid Staking Token::X33",
-      "currencyId": "Shadow Liquid Staking Token::X33"
+      "currencyId": "Shadow Liquid Staking Token::X33",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xbc0d0650412ef353d672c0bbd12efff90591b251": {
       "chainId": "146",
@@ -2704,7 +2723,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54997/thumb/scBTC_32.png?1743095543",
       "assetGroup": "Rings scBTC::SCBTC",
       "currencyId": "Rings scBTC::SCBTC",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x0e899da2ad0817ed850ce68f7f489688e4d42d9d": {
       "chainId": "146",
@@ -3364,7 +3386,8 @@
       "symbol": "wanS",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/wanS.png",
       "assetGroup": "Wrapped anS::wanS",
-      "currencyId": "Wrapped anS::wanS"
+      "currencyId": "Wrapped anS::wanS",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x219656f33c58488d09d518badf50aa8cdcaca2aa": {
       "chainId": "146",
@@ -3533,6 +3556,11 @@
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avalon", "name": "Avalon" }
       }
@@ -3546,7 +3574,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
       "currencyId": "sUSDa::sUSDa",
-      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x6646248971427b80ce531bdd793e2eb859347e55": {
       "chainId": "146",
@@ -3790,7 +3821,11 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -4062,6 +4097,11 @@
       "currencyId": "Fire Bitcoin::FBTC",
       "props": {
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "function", "name": "Function", "kind": "protocol" }
       }
     },
@@ -4690,6 +4730,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -4704,7 +4749,11 @@
       "currencyId": "YieldFi vyUSD::VYUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -4966,11 +5015,7 @@
       "assetGroup": "US Sonic Dollar::USSD",
       "currencyId": "US Sonic Dollar::USSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "sonic-labs",
@@ -5138,6 +5183,11 @@
       "assetGroup": "Flying Tulip USD::ftUSD",
       "currencyId": "Flying Tulip USD::ftUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "flying-tulip",

@@ -13,7 +13,7 @@
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
@@ -229,7 +229,7 @@
       "currencyId": "KelpDAO Bridged rsETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "oft": {
           "eid": 30260,
           "routes": [
@@ -373,6 +373,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -624,6 +629,7 @@
       "currencyId": "Merlin BTC::M-BTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
@@ -864,8 +870,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -893,6 +899,11 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }

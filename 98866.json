@@ -169,6 +169,11 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "oft": {
           "eid": 30370,
           "routes": [
@@ -544,6 +549,11 @@
       "assetGroup": "Plume USD::pUSD",
       "currencyId": "Plume USD::pUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
@@ -695,6 +705,11 @@
       "assetGroup": "USD1::USD1",
       "currencyId": "USD1::USD1",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "world-liberty",
@@ -753,6 +768,11 @@
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
@@ -768,6 +788,11 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -835,6 +860,7 @@
       "assetGroup": "WEUSD::WEUSD",
       "currencyId": "WEUSD::WEUSD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "picwe", "name": "PicWe", "kind": "protocol" }
       }
@@ -894,7 +920,14 @@
       "symbol": "SSUPERUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/67821/thumb/sSuperUSD_200x200.png?1753943152",
       "assetGroup": "SuperReturn sSuperUSD::SSUPERUSD",
-      "currencyId": "SuperReturn sSuperUSD::SSUPERUSD"
+      "currencyId": "SuperReturn sSuperUSD::SSUPERUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x222365ef19f7947e5484218551b56bb3965aa7af": {
       "chainId": "98866",
@@ -963,7 +996,14 @@
       "symbol": "FBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39182/thumb/Function_Token_%282%29.png?1760254065",
       "assetGroup": "Function FBTC::FBTC",
-      "currencyId": "Function FBTC::FBTC"
+      "currencyId": "Function FBTC::FBTC",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x11a8d8694b656112d9a94285223772f4aad269fc": {
       "chainId": "98866",

@@ -22,7 +22,6 @@
           "expiry": 1775088000,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -46,7 +45,6 @@
           "expiry": 1771459200,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -117,7 +115,6 @@
           "expiry": 1781740800,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -178,6 +175,11 @@
           "type": "credit",
           "subType": "reinsurance",
           "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "oft": {
           "eid": 30320,
@@ -3953,6 +3955,11 @@
           ]
         },
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -3987,7 +3994,10 @@
       "logoURI": "https://ethereum-optimism.github.io/data/GRG/logo.svg",
       "assetGroup": "Rigo Token::GRG",
       "currencyId": "Rigo Token::GRG",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "130",
@@ -4115,6 +4125,11 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
@@ -4427,7 +4442,8 @@
       "address": "0x2718199693293ea98c8e60ee1fc8cadb8c5f850c",
       "symbol": "TEST3",
       "assetGroup": "Test Token::TEST3",
-      "currencyId": "Test Token::TEST3"
+      "currencyId": "Test Token::TEST3",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x271820abb1e7565a3c90cca37771e42d2176113b": {
       "chainId": "130",
@@ -4436,7 +4452,8 @@
       "address": "0x271820abb1e7565a3c90cca37771e42d2176113b",
       "symbol": "BENTLEY",
       "assetGroup": "Bentley::BENTLEY",
-      "currencyId": "Bentley::BENTLEY"
+      "currencyId": "Bentley::BENTLEY",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x27183ca95744921d6e4c8be073c400d32ce3b550": {
       "chainId": "130",
@@ -4446,7 +4463,8 @@
       "symbol": "TEST",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x09e7be7ace149207f4c7e4494347ca7e45f22f14/icon",
       "assetGroup": "Test Token::TEST",
-      "currencyId": "Test Token::TEST"
+      "currencyId": "Test Token::TEST",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x271846fb94bf9aada9acf94e326ed6bad8b2a4ba": {
       "chainId": "130",
@@ -4455,7 +4473,8 @@
       "address": "0x271846fb94bf9aada9acf94e326ed6bad8b2a4ba",
       "symbol": "NEULER",
       "assetGroup": "Not Euler::NEULER",
-      "currencyId": "Not Euler::NEULER"
+      "currencyId": "Not Euler::NEULER",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x27185031bd5b9509d696c8e87771bc42a65ec05e": {
       "chainId": "130",
@@ -4464,7 +4483,8 @@
       "address": "0x27185031bd5b9509d696c8e87771bc42a65ec05e",
       "symbol": "YIELD",
       "assetGroup": "Yield Bearer::YIELD",
-      "currencyId": "Yield Bearer::YIELD"
+      "currencyId": "Yield Bearer::YIELD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x271897ce4c0a7d7e03683eb9b359640d9d38673c": {
       "chainId": "130",
@@ -4473,7 +4493,8 @@
       "address": "0x271897ce4c0a7d7e03683eb9b359640d9d38673c",
       "symbol": "UNICAT",
       "assetGroup": "Unicat::UNICAT",
-      "currencyId": "Unicat::UNICAT"
+      "currencyId": "Unicat::UNICAT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x27189af89312cf442f52bbdbc603b35ff54c18ac": {
       "chainId": "130",
@@ -4482,7 +4503,8 @@
       "address": "0x27189af89312cf442f52bbdbc603b35ff54c18ac",
       "symbol": "YIELD3",
       "assetGroup": "Yield Bearer 3::YIELD3",
-      "currencyId": "Yield Bearer 3::YIELD3"
+      "currencyId": "Yield Bearer 3::YIELD3",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718a6c867d4388b65a054c36439c627044856e3": {
       "chainId": "130",
@@ -4491,7 +4513,8 @@
       "address": "0x2718a6c867d4388b65a054c36439c627044856e3",
       "symbol": "DEMO",
       "assetGroup": "Demo Token::DEMO",
-      "currencyId": "Demo Token::DEMO"
+      "currencyId": "Demo Token::DEMO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718ae9bea3efdebed1eac7f365cd882617fd3bc": {
       "chainId": "130",
@@ -4501,7 +4524,11 @@
       "symbol": "YIELD",
       "assetGroup": "Yield Bearer::YIELD::suspicious::2718ae9b",
       "currencyId": "Yield Bearer::YIELD",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x2718b4a402285d8dd6601b56c6ab79103258d812": {
       "chainId": "130",
@@ -4510,7 +4537,8 @@
       "address": "0x2718b4a402285d8dd6601b56c6ab79103258d812",
       "symbol": "TEST2",
       "assetGroup": "Another Test::TEST2",
-      "currencyId": "Another Test::TEST2"
+      "currencyId": "Another Test::TEST2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718c0288431196db20869925caa6b61521cc714": {
       "chainId": "130",
@@ -4519,7 +4547,8 @@
       "address": "0x2718c0288431196db20869925caa6b61521cc714",
       "symbol": "TIP2",
       "assetGroup": "Test In Prod 2::TIP2",
-      "currencyId": "Test In Prod 2::TIP2"
+      "currencyId": "Test In Prod 2::TIP2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718d8e8ff9334207ab03c9627a25dfc463be574": {
       "chainId": "130",
@@ -4529,7 +4558,11 @@
       "symbol": "YIELD",
       "assetGroup": "Yield Bearer::YIELD::suspicious::2718d8e8",
       "currencyId": "Yield Bearer::YIELD",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x2718d96b08775096c217ff5d3ce2e060e0d76a71": {
       "chainId": "130",
@@ -4538,7 +4571,8 @@
       "address": "0x2718d96b08775096c217ff5d3ce2e060e0d76a71",
       "symbol": "TIP",
       "assetGroup": "Test In Prod::TIP",
-      "currencyId": "Test In Prod::TIP"
+      "currencyId": "Test In Prod::TIP",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718e4bf0d2713232f778a45bb3716e81ad7b2aa": {
       "chainId": "130",
@@ -4547,7 +4581,8 @@
       "address": "0x2718e4bf0d2713232f778a45bb3716e81ad7b2aa",
       "symbol": "TIPLT",
       "assetGroup": "Test In Prod (Last Time)::TIPLT",
-      "currencyId": "Test In Prod (Last Time)::TIPLT"
+      "currencyId": "Test In Prod (Last Time)::TIPLT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718ec99d7eb93db2424cbaffff77f8cdfff013a": {
       "chainId": "130",
@@ -4556,7 +4591,8 @@
       "address": "0x2718ec99d7eb93db2424cbaffff77f8cdfff013a",
       "symbol": "TIP3",
       "assetGroup": "Test In Prod 3::TIP3",
-      "currencyId": "Test In Prod 3::TIP3"
+      "currencyId": "Test In Prod 3::TIP3",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718eeff692c0f61cbfc185c39f7589635702b80": {
       "chainId": "130",
@@ -4565,7 +4601,8 @@
       "address": "0x2718eeff692c0f61cbfc185c39f7589635702b80",
       "symbol": "YIELD2",
       "assetGroup": "Yield Bearer 2::YIELD2",
-      "currencyId": "Yield Bearer 2::YIELD2"
+      "currencyId": "Yield Bearer 2::YIELD2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x3a9c7b18f62e3f2a6e66a89d8720cbd0ce27c4fc": {
       "chainId": "130",
@@ -4634,7 +4671,11 @@
       "symbol": "MOCK",
       "assetGroup": "MockERC20::MOCK::suspicious::846eab6d",
       "currencyId": "MockERC20::MOCK",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9cb28fd578602a51870f60c08f99820b4ea897ce": {
       "chainId": "130",

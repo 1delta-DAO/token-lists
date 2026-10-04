@@ -210,7 +210,8 @@
       "symbol": "MOO",
       "logoURI": "https://assets.coingecko.com/coins/images/17719/thumb/MOO_Logo_blue.png?1696517246",
       "assetGroup": "Moola Market::MOO",
-      "currencyId": "Moola Market::MOO"
+      "currencyId": "Moola Market::MOO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x73a210637f6f6b7005512677ba6b3c96bb4aa44b": {
       "chainId": "42220",
@@ -329,7 +330,7 @@
       "assetGroup": "CEUR",
       "currencyId": "Celo Euro::CEUR",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec": {
@@ -876,8 +877,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -891,7 +892,8 @@
       "symbol": "stCELO",
       "logoURI": "https://static.debank.com/image/celo_token/logo_url/0xc668583dcbdc9ae6fa3ce46462758188adfdfc24/500bf40c1c1eed7f5a3cd93443a1d9c2.png",
       "assetGroup": "Staked CELO::stCELO",
-      "currencyId": "Staked CELO::stCELO"
+      "currencyId": "Staked CELO::stCELO",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x02de4766c272abc10bc88c220d214a26960a7e92": {
       "chainId": "42220",
@@ -1084,11 +1086,7 @@
       "assetGroup": "ECO CFA::eXOF",
       "currencyId": "ECO CFA::eXOF",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "XOF" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1103,11 +1101,7 @@
       "assetGroup": "Celo Colombian Peso::cCOP",
       "currencyId": "Celo Colombian Peso::cCOP",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "COP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1141,11 +1135,7 @@
       "assetGroup": "Celo Australian Dollar::cAUD",
       "currencyId": "Celo Australian Dollar::cAUD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "AUD" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1160,11 +1150,7 @@
       "assetGroup": "Celo Canadian Dollar::cCAD",
       "currencyId": "Celo Canadian Dollar::cCAD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "CAD" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1179,11 +1165,7 @@
       "assetGroup": "Celo Nigerian Naira::cNGN",
       "currencyId": "Celo Nigerian Naira::cNGN",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "NGN" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1211,11 +1193,7 @@
       "assetGroup": "Celo South African Rand::cZAR",
       "currencyId": "Celo South African Rand::cZAR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "ZAR" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1230,11 +1208,7 @@
       "assetGroup": "Celo Japanese Yen::cJPY",
       "currencyId": "Celo Japanese Yen::cJPY",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "JPY" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1248,9 +1222,7 @@
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xb55a79f398e759e43c95b979163f30ec87ee131d.png",
       "assetGroup": "Celo Swiss Franc::cCHF",
       "currencyId": "Celo Swiss Franc::cCHF",
-      "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x94140c2ea9d208d8476ca4e3045254169791c59e": {
       "chainId": "42220",
@@ -1269,7 +1241,8 @@
       "address": "0x8ac2901dd8a1f17a1a4768a6ba4c3751e3995b2d",
       "symbol": "WBTC",
       "assetGroup": "Wrapped BTC (Celo native bridge)::WBTC",
-      "currencyId": "Wrapped BTC (Celo native bridge)::WBTC"
+      "currencyId": "Wrapped BTC (Celo native bridge)::WBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x7f9adfbd38b669f03d1d11000bc76b9aaea28a81": {
       "chainId": "42220",

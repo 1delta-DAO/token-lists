@@ -205,7 +205,7 @@
       "currencyId": "KelpDAO Bridged rsETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "oft": {
           "eid": 30183,
           "routes": [
@@ -713,11 +713,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -763,7 +759,7 @@
       "currencyId": "USDT+::USDT+",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -1691,6 +1687,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -1775,6 +1776,11 @@
       "assetGroup": "EURA::EURA",
       "currencyId": "EURA::EURA",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
@@ -1998,6 +2004,11 @@
               "peers": {}
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -2227,7 +2238,8 @@
       "symbol": "REX33",
       "logoURI": "https://assets.coingecko.com/coins/images/68282/thumb/rex33.png?1755242075",
       "assetGroup": "Etherex Liquid Staking Token::REX33",
-      "currencyId": "Etherex Liquid Staking Token::REX33"
+      "currencyId": "Etherex Liquid Staking Token::REX33",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x8cf881799e3b5ab24271a9b66b6ca2b0e575b1ef": {
       "chainId": "59144",
@@ -2282,7 +2294,10 @@
       "logoURI": "https://linea.build/icons/token_round.png",
       "assetGroup": "Linea::LINEA",
       "currencyId": "Linea::LINEA",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x7324a70d1a70cf0e9dab2ea8335ced1ec100bcf3": {
       "chainId": "59144",
@@ -2551,6 +2566,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -2596,7 +2616,8 @@
       "address": "0xb728946dd750c60c75c40f434c38e2f5afe48a01",
       "symbol": "deUSD",
       "assetGroup": "deUSD::deUSD",
-      "currencyId": "deUSD::deUSD"
+      "currencyId": "deUSD::deUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xf29ac58e23904ce3057afe2f9c430c87703da982": {
       "chainId": "59144",
@@ -2605,7 +2626,8 @@
       "address": "0xf29ac58e23904ce3057afe2f9c430c87703da982",
       "symbol": "eWETH-5",
       "assetGroup": "EVK Vault eWETH-5::eWETH-5",
-      "currencyId": "EVK Vault eWETH-5::eWETH-5"
+      "currencyId": "EVK Vault eWETH-5::eWETH-5",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x139c3d0d52c58fd1ea10b44981aaf21976f7ff51": {
       "chainId": "59144",

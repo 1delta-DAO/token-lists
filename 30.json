@@ -13,6 +13,11 @@
       "currencyId": "Midas mTBILL::MTBILL",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
@@ -544,6 +549,11 @@
               }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }

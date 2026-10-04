@@ -120,7 +120,7 @@
       "currencyId": "ether.fi BTC::eBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -702,6 +702,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -801,11 +802,7 @@
       "currencyId": "Quill USDQ::USDQ",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "quill", "name": "Quill", "kind": "protocol" }
       }
@@ -894,6 +891,11 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -1036,6 +1038,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -1110,6 +1117,7 @@
       "assetGroup": "STAR::STAR",
       "currencyId": "STAR::STAR",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "preon", "name": "Preon", "kind": "protocol" }
       }
@@ -1176,6 +1184,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },

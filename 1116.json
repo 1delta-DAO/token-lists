@@ -38,7 +38,8 @@
       "symbol": "SCORE",
       "logoURI": "https://assets.coingecko.com/coins/images/29469/thumb/score.png?1696528414",
       "assetGroup": "StakedCore::SCORE",
-      "currencyId": "StakedCore::SCORE"
+      "currencyId": "StakedCore::SCORE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xa5c4cd9ad4beda2ef1befece1ee16511ebcc41ad": {
       "chainId": "1116",
@@ -379,7 +380,14 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUUSD.webp",
       "assetGroup": "suUSD::Sumerian USD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x1a639e150d2210a4be4a5f0857a9151b241e7ae4": {
       "chainId": "1116",
@@ -918,7 +926,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/55488/thumb/dualCORE.png?1746263021",
       "assetGroup": "b14g dualCORE::DUALCORE",
       "currencyId": "b14g dualCORE::DUALCORE",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x0fd98374ee05d059885ba70988ea2d072f6fd981": {
       "chainId": "1116",
@@ -982,6 +990,11 @@
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }

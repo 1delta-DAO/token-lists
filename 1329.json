@@ -52,6 +52,11 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "oft": {
           "eid": 30280,
           "routes": [
@@ -135,6 +140,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30280,
           "routes": [
@@ -340,6 +346,7 @@
       "assetGroup": "Synnax Stablecoin::SYUSD",
       "currencyId": "Synnax Stablecoin::SYUSD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "synnax", "name": "Synnax", "kind": "protocol" }
       }
@@ -885,6 +892,11 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }

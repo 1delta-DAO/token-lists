@@ -606,6 +606,11 @@
       "currencyId": "NVIDIA xStock::NVDAX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -662,6 +667,11 @@
       "currencyId": "Alphabet xStock::GOOGLX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -690,6 +700,11 @@
       "currencyId": "Tesla xStock::TSLAX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -11110,6 +11125,7 @@
       "currencyId": "Bridged Frax Ether (Axelar)::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -11124,6 +11140,7 @@
       "currencyId": "Kelp DAO Restaked ETH::RSETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "oft": {
           "eid": 30181,
           "routes": [
@@ -11271,6 +11288,7 @@
       "currencyId": "Dolomite Isolation: PT cmETH 13FEB2025::dPT-cmETH-13FEB2025",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "mantle" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "mantle", "name": "Mantle", "kind": "protocol" }
       }
     },
@@ -12860,6 +12878,11 @@
       "assetGroup": "USD1::USD1",
       "currencyId": "USD1::USD1",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "world-liberty",
@@ -13000,7 +13023,8 @@
       "address": "0x5b12e419a57e3102ec1d47bd11ba5ec87ef264fb",
       "symbol": "dPT-mETH-26DEC2024",
       "assetGroup": "Dolomite Isolation: PT mETH 26DEC2024::dPT-mETH-26DEC2024",
-      "currencyId": "Dolomite Isolation: PT mETH 26DEC2024::dPT-mETH-26DEC2024"
+      "currencyId": "Dolomite Isolation: PT mETH 26DEC2024::dPT-mETH-26DEC2024",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x6b68bdccb22931937d7d11e556d95a07e02fe3ce": {
       "chainId": "5000",
@@ -13009,7 +13033,8 @@
       "address": "0x6b68bdccb22931937d7d11e556d95a07e02fe3ce",
       "symbol": "dWMNT",
       "assetGroup": "Dolomite Isolation: Wrapped Mantle::dWMNT",
-      "currencyId": "Dolomite Isolation: Wrapped Mantle::dWMNT"
+      "currencyId": "Dolomite Isolation: Wrapped Mantle::dWMNT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb3ff983d7927540b7f92602657a2a26977664e77": {
       "chainId": "5000",
@@ -13018,7 +13043,8 @@
       "address": "0xb3ff983d7927540b7f92602657a2a26977664e77",
       "symbol": "dPT-USDe-25JUL2024",
       "assetGroup": "Dolomite Isolation: PT Ethena USDe 25JUL2024::dPT-USDe-25JUL2024",
-      "currencyId": "Dolomite Isolation: PT Ethena USDe 25JUL2024::dPT-USDe-25JUL2024"
+      "currencyId": "Dolomite Isolation: PT Ethena USDe 25JUL2024::dPT-USDe-25JUL2024",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe44cefd2e6b0b846e2720e7b823e173d9fdf8601": {
       "chainId": "5000",
@@ -13027,7 +13053,8 @@
       "address": "0xe44cefd2e6b0b846e2720e7b823e173d9fdf8601",
       "symbol": "dPT-sMNT-3OCT2024",
       "assetGroup": "Dolomite Isolation: PT Staking MNT 3OCT2024::dPT-sMNT-3OCT2024",
-      "currencyId": "Dolomite Isolation: PT Staking MNT 3OCT2024::dPT-sMNT-3OCT2024"
+      "currencyId": "Dolomite Isolation: PT Staking MNT 3OCT2024::dPT-sMNT-3OCT2024",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xec0ad37432b489c40ed6da003b2c2f033928599e": {
       "chainId": "5000",
@@ -13036,7 +13063,8 @@
       "address": "0xec0ad37432b489c40ed6da003b2c2f033928599e",
       "symbol": "dPT-USDe-26DEC2024",
       "assetGroup": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024",
-      "currencyId": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024"
+      "currencyId": "Dolomite Isolation: PT Ethena USDe 26DEC2024::dPT-USDe-26DEC2024",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xeec6574eabba52bac3f0277f2cd5ac7e67197886": {
       "chainId": "5000",
