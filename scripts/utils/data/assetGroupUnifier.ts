@@ -127,6 +127,18 @@ export const GROUP_ALIAS: Record<string, string> = {
   // case-sensitive index and the losing side simply reports nothing.
   'Staked Saturn USD::sUSDat': 'Saturn sUSDat::SUSDAT',
   'Saturn USD::USDat': 'Saturn Dollar::USDAT',
+  // Nest vault shares — one OFT at ONE address per vault on every chain (rwa/rwaAssets.ts
+  // `NEST_SHARES`), split into several groups because the deployments do not agree on the
+  // NAME or the ticker's casing: nALPHA answers 'Nest Alpha Vault' on 1/8453/56/9745 and
+  // 'Nest Institutional Alpha Vault' on World Chain, nBASIS 'Nest Basis' on 56/480/9745,
+  // and Ethereum's nLCRD / nFALCON rows were listed upper-case. Canonical = the Plume form:
+  // Plume is the hub (the vault, its accountant, every lending market on the share) and it
+  // is the key the Morpho rows and the Solana mints (solana/solana.ts) already join.
+  'Nest Alpha Vault::nALPHA': 'Nest ALPHA Vault::nALPHA',
+  'Nest Institutional Alpha Vault::nALPHA': 'Nest ALPHA Vault::nALPHA',
+  'Nest Basis::nBASIS': 'Nest Basis Vault::nBASIS',
+  'Nest Liquid Credit Vault::NLCRD': 'Nest Liquid Credit Vault::nLCRD',
+  'Nest FalconX CLO::NFALCON': 'Nest FalconX CLO::nFALCON',
   // Renzo ezETH
   'Renzo Restaked ETH::ezETH': 'EZETH',
   // Frax frxETH

@@ -963,4 +963,8 @@ export const ISSUER_BY_ADDRESS: Record<string, IssuerProps> = {
   // Bell Market", icon on assets.superstate.com) — Backpack's FWDI (`FWDtiB5f…`)
   // is a different token and derives `backpack` from its rwa tag.
   'solana:7gzqgf6dpo6zanjnbhe9tncpkgtv3zqhbsdx74jyqf9': { id: 'superstate', name: 'Superstate', kind: 'institution' },
+  // Nest's Plume Factor Vault share on Solana (`6ESVavhf…`, the `solana.mintAddress`
+  // api.nest.credit publishes). Its group is new on every chain, so the derived arm
+  // (`rwa.issuer`) only reaches it on the run after issuer.json picks it up.
+  'solana:6esvavhfwc4rxhhhzmr6ajg7nlml6x5ukpzuacoa7xj7': { id: 'nest', name: 'Nest', kind: 'institution' },
 }

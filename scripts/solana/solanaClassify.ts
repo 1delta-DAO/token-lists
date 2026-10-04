@@ -3,6 +3,7 @@ import { lookupLstGroup } from '../lst/lstGroupMap'
 import { lookupStablecoin } from '../stablecoin/stablecoinMap'
 import { lookupSavings } from '../savings/savingsMap'
 import { lookupDenomination } from '../denomination/denominationMap'
+import { lookupRwa } from '../rwa/rwaAssets'
 import { lookupIssuer, lookupIssuerByAddress, lookupIssuerExposures } from '../issuer/issuerMap'
 import { wrapperIssuer } from '../issuer/wrappers'
 import { LstProps, RwaProps, SavingsProps, StablecoinProps, TokenProps } from '../utils/types'
@@ -149,7 +150,20 @@ export function classifySolanaToken(t: TaggedToken, assetGroup: string, existing
 
   const lst =
     (tags.has('lst') || tags.has('yield') ? auto?.lst : undefined) ?? lookupLstGroup(assetGroup) ?? lstFromTags(t, tags)
-  const rwa = (tags.has('rwa') ? auto?.rwa : undefined) ?? rwaFromTags(t, tags)
+  // The curated registry first (`RWA_MANUAL.solana`, keyed by mint): Nest's
+  // shares carry no Jupiter tag and no name rule, and without the row the
+  // NAV's money (`denomination: 'USD'`) never reaches the list.
+  // A name rule names the issuer but not always the underlying (`ondo-stock`
+  // builds none), which the tag path reads off the ticker (`RGTIon` → RGTI):
+  // keep the tag's underlying under the rule's row rather than drop it.
+  const tagRwa = rwaFromTags(t, tags)
+  const ruleRwa = tags.has('rwa') ? auto?.rwa : undefined
+  const rwa =
+    lookupRwa('solana', t.id) ??
+    (ruleRwa && !ruleRwa.underlying && tagRwa?.underlying && tagRwa.type === ruleRwa.type
+      ? { ...ruleRwa, underlying: tagRwa.underlying }
+      : ruleRwa) ??
+    tagRwa
   const stablecoin = lookupStablecoin(assetGroup) ?? stablecoinFromTags(t, tags)
   const savings = lookupSavings(assetGroup) ?? savingsFromTags(t, tags)
 

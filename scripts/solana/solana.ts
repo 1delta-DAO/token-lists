@@ -105,6 +105,22 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // assets.plume.org/…/nest/nOPAL/, Kamino's "Nest Market" lends it. The EVM
   // deployments (1/5042/98866 `0x119dd7da…`) carry this group.
   GArhnnDj3GYhmQeApKVXaRv4TQFwhPcs3SNF6FXsTeXq: 'Nest BlackOpal LiquidStone II Vault::nOPAL',
+  // VNX's VEUR: joined the EVM group through CoinGecko's platform map until
+  // 2026-10-04, when that row stopped matching. A group is an identity and
+  // may not move between runs, so the join it already had is pinned.
+  C4Kkr9NZU3VbyedcgutU6LKmi6MKz81sx6gRmk5pX519: 'VNX EURO::VEUR',
+  // The rest of Nest's Solana shares: each is the `solana.mintAddress` that
+  // `api.nest.credit/v1/vaults` publishes for the vault (LayerZero OFT of the
+  // Plume share, same decimals, metadata on assets.plume.org). The group is
+  // Plume's — the hub chain, where the vault and its `rwa` row live.
+  '8qujzAXj2nz99CmeiCgPPc2JxEuDNYvPffzRomroJnee': 'Nest ALPHA Vault::nALPHA',
+  '2sA2jW9e8EYJkLFpq9hkhxfVUQBwVGJwq6iP4TmTKrL4': 'Nest Treasuries Vault::nTBILL',
+  G6SkPqYTbtVFYU4krZLDgHf5MVMfARG57G1kog4RYH2n: 'Nest Basis Vault::nBASIS',
+  '77DTSzxisdQWshFYHP9M2JBDuHNojLAVoC7GBNC2yadT': 'Nest WisdomTree Vault::nWISDOM',
+  '14BM5Nvq2kuJPn4vFNqiPM3XSBzVaqEjZrDT7ZYLS2nB': 'Nest Liquid Credit Vault::nLCRD',
+  '4bpR1mvWgL25NxWBfYKDjiYGfAVttTeo9VJ1LvmbPj9y': 'Nest FalconX CLO::nFALCON',
+  BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA',
+  '6ESVavhfwC4rXHHHZmR6ajg7nLmL6X5UkpZuAcoA7xj7': 'Plume Factor Vault::FACTOR',
 }
 
 /**
@@ -124,12 +140,32 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   sUSDai6Y3GxysDEtA9BVcEFTaog6UZpYUVxJiMhAKYE:
     'Kamino "sUSDai Market" reserve; Jupiter-verified today, kept here should that lapse',
   GArhnnDj3GYhmQeApKVXaRv4TQFwhPcs3SNF6FXsTeXq: 'Kamino "Nest Market" reserve; icon on assets.plume.org (Nest)',
+  // Nest's other Solana shares: not a lending reserve today, but the issuer
+  // publishes the mint (`api.nest.credit/v1/vaults` → `solana.mintAddress`),
+  // which is a stronger identity than a reserve, and a holder needs the row.
+  '8qujzAXj2nz99CmeiCgPPc2JxEuDNYvPffzRomroJnee': 'Nest nALPHA; mint published by api.nest.credit',
+  '2sA2jW9e8EYJkLFpq9hkhxfVUQBwVGJwq6iP4TmTKrL4': 'Nest nTBILL; mint published by api.nest.credit',
+  G6SkPqYTbtVFYU4krZLDgHf5MVMfARG57G1kog4RYH2n: 'Nest nBASIS; mint published by api.nest.credit',
+  '77DTSzxisdQWshFYHP9M2JBDuHNojLAVoC7GBNC2yadT': 'Nest nWISDOM; mint published by api.nest.credit',
+  '14BM5Nvq2kuJPn4vFNqiPM3XSBzVaqEjZrDT7ZYLS2nB': 'Nest nLCRD; mint published by api.nest.credit',
+  '4bpR1mvWgL25NxWBfYKDjiYGfAVttTeo9VJ1LvmbPj9y': 'Nest nFALCON; mint published by api.nest.credit',
+  BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'Nest nCLOA; mint published by api.nest.credit',
+  '6ESVavhfwC4rXHHHZmR6ajg7nLmL6X5UkpZuAcoA7xj7': 'Nest FACTOR (Plume Factor Vault); mint published by api.nest.credit',
   BwB3tNH92jKw6naNGDYDbDwRo8bvYxZVvZjRZRcoWR2h: 'Kamino "Obligate Market" reserve (oTFY); icon on app.obligate.com',
   '7GzQgf6DPo6ZANjnbhe9tNCpkGTv3zqHbsDx74jyQf9':
     'Kamino "Superstate Opening Bell Market" reserve (FWDI); icon on assets.superstate.com — NOT the Backpack FWDI',
   SAVEDpx3nFNdzG3ymJfShYnrBuYy7LtQEABZQ3qtTFt:
     'Save main market reserve "Save Staked SOL (saveSOL)"; icon on save-assets',
   sctmpFDKXZPEfTCEgDHqwxepmorCpYA5Q2CrYUytGDU: 'Save main market reserve "Save Staked SOL"; icon on save-assets',
+}
+
+/**
+ * Icons for listed mints that neither Jupiter nor CoinGecko carries one for —
+ * the issuer's own host only, the same host its sibling shares are served from.
+ */
+const SOLANA_LOGOS: { [mint: string]: string } = {
+  BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'https://assets.plume.org/images/logos/nest/nCLOA/nCLOA-token.svg',
+  '14BM5Nvq2kuJPn4vFNqiPM3XSBzVaqEjZrDT7ZYLS2nB': 'https://assets.plume.org/images/logos/nest/nLCRD/nLCRD-token.svg',
 }
 
 interface JupToken {
@@ -391,7 +427,7 @@ async function main() {
       // balances — so the wrapper is `wSOL`. Its `currencyId` and `assetGroup`
       // keep the Jupiter symbol: they are keys (prices, the lending join).
       symbol: t.id === WSOL ? 'wSOL' : t.symbol,
-      logoURI: t.icon ?? cgLogo.get(t.id),
+      logoURI: t.icon ?? cgLogo.get(t.id) ?? SOLANA_LOGOS[t.id],
       assetGroup,
       currencyId,
       ...(Object.keys(props).length ? { props } : {}),

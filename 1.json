@@ -39377,7 +39377,12 @@
       "assetGroup": "Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA",
       "currencyId": "Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -126806,7 +126811,13 @@
       "currencyId": "Nest Treasuries Vault::nTBILL",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" },
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "nest",
+          "denomination": "USD"
+        }
       }
     },
     "0xf0b2dd79324a66d2108c961d680f7616e1486bb0": {
@@ -126913,7 +126924,13 @@
       "currencyId": "Nest Basis Vault::nBASIS",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" },
+        "rwa": {
+          "type": "fund",
+          "subType": "basis-trade",
+          "issuer": "nest",
+          "denomination": "USD"
+        }
       }
     },
     "0xbfc5770631641719cd1cf809d8325b146aed19de": {
@@ -126968,7 +126985,13 @@
       "currencyId": "Nest Credit Vault::nCREDIT",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" },
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        }
       }
     },
     "0x9fbc367b9bb966a2a537989817a088afcaffdc4c": {
@@ -127052,8 +127075,17 @@
       "address": "0x593ccca4c4bf58b7526a4c164ceef4003c6388db",
       "symbol": "nALPHA",
       "logoURI": "https://assets.coingecko.com/coins/images/55541/thumb/nALPHA-token.png?1746610637",
-      "assetGroup": "Nest Alpha Vault::nALPHA",
-      "currencyId": "Nest Alpha Vault::nALPHA"
+      "assetGroup": "Nest ALPHA Vault::nALPHA",
+      "currencyId": "Nest Alpha Vault::nALPHA",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
     },
     "0xb52b090837a035f93a84487e5a7d3719c32aa8a9": {
       "chainId": "1",
@@ -164685,7 +164717,13 @@
       "assetGroup": "Nest Apollo ACRDX Vault::nACRDX",
       "currencyId": "Nest Apollo ACRDX Vault::nACRDX",
       "props": {
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" },
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        }
       }
     },
     "0x9d08946ca5856f882a56c29042fbedc5142663b9": {
@@ -165076,7 +165114,13 @@
       "assetGroup": "Nest WisdomTree Vault::nWISDOM",
       "currencyId": "Nest WisdomTree Vault::nWISDOM",
       "props": {
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" },
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        }
       }
     },
     "0xe420029dc3dda2b9b9002cf99848cc31ed4df88e": {
@@ -165223,7 +165267,13 @@
       "assetGroup": "Nest BlackOpal LiquidStone II Vault::nOPAL",
       "currencyId": "Nest BlackOpal LiquidStone II Vault::nOPAL",
       "props": {
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" },
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        }
       }
     },
     "0x50f41f589afaca2ef41fdf590fe7b90cd26dee64": {
@@ -171123,8 +171173,17 @@
       "address": "0xdf45b8322ea4ce898331602e2d1f3d1a67ae0ee8",
       "symbol": "NLCRD",
       "logoURI": "https://assets.coingecko.com/coins/images/102172627/thumb/nLCRD-token.png?1774372939",
-      "assetGroup": "Nest Liquid Credit Vault::NLCRD",
-      "currencyId": "Nest Liquid Credit Vault::NLCRD"
+      "assetGroup": "Nest Liquid Credit Vault::nLCRD",
+      "currencyId": "Nest Liquid Credit Vault::NLCRD",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
     },
     "0x498d9329555471bf6073a5f2d047f746d522a373": {
       "chainId": "1",
@@ -171849,8 +171908,17 @@
       "address": "0x066d10e240999aea6798b2e2ca0bdac2923cbdff",
       "symbol": "NFALCON",
       "logoURI": "https://assets.coingecko.com/coins/images/102173601/thumb/nFALCON-round.png?1780411172",
-      "assetGroup": "Nest FalconX CLO::NFALCON",
-      "currencyId": "Nest FalconX CLO::NFALCON"
+      "assetGroup": "Nest FalconX CLO::nFALCON",
+      "currencyId": "Nest FalconX CLO::NFALCON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
     },
     "0x22ae3d9a738471f405169af055d31c687087d4c7": {
       "chainId": "1",
@@ -175808,6 +175876,50 @@
       "props": {
         "isNative": true,
         "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
+    },
+    "0x7488b23f4c26b44eef2e0766896be47443e86d79": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Nest USDC PayFi Lending Vault",
+      "address": "0x7488b23f4c26b44eef2e0766896be47443e86d79",
+      "symbol": "nAXI",
+      "assetGroup": "Nest USDC PayFi Lending Vault::nAXI",
+      "currencyId": "Nest USDC PayFi Lending Vault::nAXI",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
+    "0x6fec234e8801ed88964bc058a0f9fbcc9fcbd2eb": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Prime Vault",
+      "address": "0x6fec234e8801ed88964bc058a0f9fbcc9fcbd2eb",
+      "symbol": "nPRIME",
+      "assetGroup": "Prime Vault::nPRIME",
+      "currencyId": "Prime Vault::nPRIME",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
+    "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Plume Factor Vault",
+      "address": "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925",
+      "symbol": "FACTOR",
+      "assetGroup": "Plume Factor Vault::FACTOR",
+      "currencyId": "Plume Factor Vault::FACTOR",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     }
   },
