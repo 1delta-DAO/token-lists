@@ -7,6 +7,7 @@ import { fileURLToPath } from 'url'
 import { multicallRetryUniversal } from '@1delta/providers'
 import { OftProps, OftRegistry, OftRoute } from '../utils/types'
 import { readChainLists } from '../labels/labelUtils'
+import { carryForwardFrozen, isFrozenChain } from '../utils/frozenChains'
 
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -240,6 +241,10 @@ async function generateOftMap() {
   const stats = { routes: 0, verified: 0, corridors: 0, dropped: 0, unreadChains: [] as string[] }
 
   const work = lists.map(({ chainId, tokens }) => async () => {
+    // A frozen chain (Blast) is never read: its routes are carried forward
+    // below. It stays in `peerChains`, so live chains still report their
+    // corridors INTO it — that is a read on the live chain.
+    if (isFrozenChain(chainId)) return
     const { chain, eid } = chains[chainId]
     const listed = new Set(tokens.map((t) => (t.address ?? '').toLowerCase()).filter(Boolean))
     const candidates = candidatesFor(chain, listed)
@@ -300,6 +305,7 @@ async function generateOftMap() {
   await Promise.all(runners)
 
   const file = path.resolve(__dirname, './oft.json')
+  carryForwardFrozen(file, out)
   fs.writeFileSync(file, serialize(out) + '\n')
   console.log(
     `Wrote ${file}: ${Object.keys(out).length} chains, ${stats.routes} routes (${stats.verified} verified on-chain, ` +

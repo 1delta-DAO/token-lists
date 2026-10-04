@@ -53,7 +53,7 @@ const BASESWAP_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/baseswapfi/default-token-list/main/src/tokens/base.json',
   access: 'tokens',
 }
-const BLAST_LIST: ArbitraryTokenList = { url: 'https://tokens.coingecko.com/blast/all.json', access: 'tokens' }
+// Blast (81457) is frozen (utils/frozenChains.ts): no third-party list is read for it any more.
 const LINEA_LIST: ArbitraryTokenList = {
   url: 'https://raw.githubusercontent.com/Consensys/linea-token-list/main/json/linea-mainnet-token-shortlist.json',
   access: 'tokens',
@@ -105,7 +105,6 @@ const others = [
   '56.json',
   '59144.json',
   '80094.json',
-  '81457.json',
   '8453.json',
   '8822.json',
 ]
@@ -182,7 +181,6 @@ const sushiNames = [
   'arbitrum.json',
   'avalanche.json',
   'base.json',
-  'blast.json',
   'boba-avax.json',
   'boba-bnb.json',
   'boba.json',
@@ -424,8 +422,7 @@ const KONA_ABSTRACT_SUBGRAPH_LIST: ArbitraryTokenList = {
 const OPEN_OCEAN_LISTS = [
   1, 10, 25, 56, 58, 66, 100, 137, 250, 324, 1101, 1088, 1285, 1625, 2222, 8217, 42220, 43114, 42161, 9745,
   // 59140,
-  59144, 81457, 1313161554, 1666600000, 40, 8453, 5000, 204, 169, 8453, 534352, 195, 34443, 369, 4200, 30, 1329, 33139,
-  146,
+  59144, 1313161554, 1666600000, 40, 8453, 5000, 204, 169, 8453, 534352, 195, 34443, 369, 4200, 30, 1329, 33139, 146,
   // 80084,
   80094, 10143, 130, 14, 1923,
 ].map((a) => ({
@@ -438,7 +435,6 @@ const OPEN_OCEAN_LISTS = [
 
 const COINGECKO_LISTS = [
   'ethereum',
-  'blast',
   'arbitrum-one',
   'ethereum-classic',
   'linea',
@@ -793,7 +789,6 @@ export const ALL_LISTS: ArbitraryTokenList[] = [
   PANCAKE_EXTENDED_LIST,
   BASESWAP_LIST,
   LINEA_LIST,
-  BLAST_LIST,
   TRADERJOE_TOKENLIST,
   SMOL_TOKENLIST,
   MOE_LIST,

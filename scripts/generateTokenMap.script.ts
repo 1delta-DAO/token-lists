@@ -1,6 +1,7 @@
 // @ts-ignore-next-line
 import * as fs from 'fs'
 import { AutoGenHelpers } from './utils'
+import { isFrozenChain } from './utils/frozenChains'
 import { accessListUnfiltered, ALL_LISTS, defaultmutateEntry } from './externalLists'
 
 import {
@@ -265,6 +266,9 @@ async function readTokenLists(): Promise<{
               const tokenInListName = tokenInList.name
               const parsedSymbol = AutoGenHelpers.safeparseSymbol(tokenInList.symbol, tokenInListName)
               const chainId = AutoGenHelpers.safeparseChainId(tokenInList.chainId)
+              // A frozen chain (Blast) is carried forward from our own published list
+              // only — no third-party source can add, change or drop a token there.
+              if (isFrozenChain(chainId) && !is1delta) return
               if (!BANNED_NETWORKS.includes(chainId))
                 if (ALL_NETWORKS.includes(chainId as any)) {
                   /**

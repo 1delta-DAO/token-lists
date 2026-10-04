@@ -10,6 +10,7 @@ import { SavingsGroupMap, SavingsProps } from '../utils/types'
 import { loadRiskDataFile } from '../utils/riskDataSource'
 import { ERC4626_ABI } from './erc4626'
 import { SAVINGS_CURATED } from './savingsAssets'
+import { isFrozenChain } from '../utils/frozenChains'
 
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -83,6 +84,7 @@ async function resolveOnchain(byChain: {
 }): Promise<{ [assetGroup: string]: string }> {
   const out: { [assetGroup: string]: string } = {}
   for (const [chainId, rows] of Object.entries(byChain)) {
+    if (isFrozenChain(chainId)) continue // no RPC on a frozen chain (utils/frozenChains.ts)
     try {
       const assetRes = (await multicallRetryUniversal({
         chain: chainId,

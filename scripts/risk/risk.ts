@@ -5,6 +5,7 @@ import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { RiskProps, RiskRegistry } from '../utils/types'
+import { carryForwardFrozen, isFrozenChain } from '../utils/frozenChains'
 import { loadRiskDataFile } from '../utils/riskDataSource'
 
 // @ts-ignore
@@ -51,6 +52,7 @@ async function generateRiskMap() {
     const out: RiskRegistry = {}
     let count = 0
     for (const [chainId, assets] of Object.entries(raw)) {
+      if (isFrozenChain(chainId)) continue // carried forward below (utils/frozenChains.ts)
       for (const [address, r] of Object.entries(assets)) {
         if (r?.riskScore == null) continue
         const entry: RiskProps = { score: r.riskScore }
@@ -61,6 +63,7 @@ async function generateRiskMap() {
       }
     }
 
+    carryForwardFrozen(path.resolve(__dirname, './risk.json'), out)
     fs.writeFileSync(path.resolve(__dirname, './risk.json'), serializeRisk(out))
     console.log(`Wrote risk.json with ${count} asset-risk entries across ${Object.keys(out).length} chains.`)
   } catch (error) {

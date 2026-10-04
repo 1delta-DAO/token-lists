@@ -5,6 +5,7 @@ import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { StablecoinGroupMap } from '../utils/types'
+import { isFrozenChain } from '../utils/frozenChains'
 import { loadRiskDataFile } from '../utils/riskDataSource'
 import { normName, StablecoinSymbolEntry, StablecoinSymbolMap } from './identity'
 
@@ -219,8 +220,18 @@ async function generateStablecoinMap() {
       put(e.names, sym, normName(s.name), base)
       if (groupName) put(e.names, sym, normName(groupName), base)
       for (const d of s.deployments ?? [])
-        put((e.addresses ??= {}), sym, `${d.chainId}:${d.address.toLowerCase()}`, base)
+        if (!isFrozenChain(d.chainId)) put((e.addresses ??= {}), sym, `${d.chainId}:${d.address.toLowerCase()}`, base)
     }
+    // A frozen chain's deployments (Blast) are no longer refreshed: carry the
+    // last published ones forward unchanged (utils/frozenChains.ts).
+    try {
+      const prev: StablecoinSymbolMap = JSON.parse(
+        fs.readFileSync(path.resolve(__dirname, './stablecoin-symbols.json'), 'utf8'),
+      )
+      for (const [sym, pe] of Object.entries(prev))
+        for (const [k, v] of Object.entries(pe.addresses ?? {}))
+          if (isFrozenChain(k.slice(0, k.indexOf(':')))) (entryOf(sym).addresses ??= {})[k] = v
+    } catch {}
     // Names the curated groups' own deployments carry (`Bridged DAI (OmniBridge)` in `DAI`).
     for (const [sym, byName] of members) {
       const e = entryOf(sym)
