@@ -157,6 +157,11 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   SAVEDpx3nFNdzG3ymJfShYnrBuYy7LtQEABZQ3qtTFt:
     'Save main market reserve "Save Staked SOL (saveSOL)"; icon on save-assets',
   sctmpFDKXZPEfTCEgDHqwxepmorCpYA5Q2CrYUytGDU: 'Save main market reserve "Save Staked SOL"; icon on save-assets',
+  // Exponent's senior tranche of Hastra AUTO — not in Exponent's /tokens yet
+  // (no PT vault), but its mint authority is a PDA of Exponent's tranching
+  // program (XPTrnch…), the same owner as srONyc's.
+  F17tzaQaFf1x3tC5gQFVvXAF2hcgq1qX6Mc9595zo3FD:
+    'Loopscale "srAUTO / USDC" loop collateral (srAUTO, Exponent Senior AUTO); mint authority owned by Exponent tranching',
 }
 
 /**

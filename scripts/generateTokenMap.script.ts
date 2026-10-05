@@ -1,7 +1,7 @@
 // @ts-ignore-next-line
 import * as fs from 'fs'
 import { AutoGenHelpers } from './utils'
-import { isFrozenChain } from './utils/frozenChains'
+import { FROZEN_WNATIVE, isFrozenChain } from './utils/frozenChains'
 import { accessListUnfiltered, ALL_LISTS, defaultmutateEntry } from './externalLists'
 
 import {
@@ -500,6 +500,7 @@ async function readTokenLists(): Promise<{
 
                     const isWrappedNative =
                       WNATIVE_OVERRIDES[chainId] === lcAddress ||
+                      FROZEN_WNATIVE[chainId] === lcAddress ||
                       (chainId !== 'fuel' && WRAPPED_NATIVE_INFO[chainId]?.address === lcAddress)
 
                     if (isWrappedNative) {
@@ -739,7 +740,8 @@ async function readTokenLists(): Promise<{
       }
       if (info && !data[zeroAddress]) {
         // let tags = ['native']
-        const wnative = WRAPPED_NATIVE_INFO[chain]
+        // a frozen chain's wrapped native is no longer in @1delta/wnative (utils/frozenChains.ts)
+        const wnative = WRAPPED_NATIVE_INFO[chain] ?? (FROZEN_WNATIVE[chain] && { address: FROZEN_WNATIVE[chain] })
         let dataBase
         if (wnative) {
           // // // tags = [...tags, ...(data[wnative.address].tags ?? [])]

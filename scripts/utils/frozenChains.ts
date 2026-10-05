@@ -22,6 +22,16 @@ import * as fs from 'fs'
  */
 export const FROZEN_CHAINS: ReadonlySet<string> = new Set(['81457'])
 
+/**
+ * The wrapped native of each frozen chain. `@1delta/wnative` drops a chain
+ * once nothing we serve runs on it, but a frozen list still carries its
+ * wrapped native (tagged `props.wnative`, in `mainTokens`, the base of the
+ * native row), so the token map resolves it here instead of from that package.
+ */
+export const FROZEN_WNATIVE: { readonly [chainId: string]: string } = {
+  '81457': '0x4300000000000000000000000000000000000004', // Blast WETH
+}
+
 export const isFrozenChain = (chainId: string | number | undefined | null): boolean =>
   chainId !== undefined && chainId !== null && FROZEN_CHAINS.has(String(chainId))
 
