@@ -37,6 +37,7 @@ import * as crypto from 'crypto'
 import { fileURLToPath } from 'url'
 import { Chain } from '@1delta/chain-registry'
 import { WRAPPED_NATIVE_INFO } from '@1delta/wnative'
+import { lookupNestIdentity, nestGroupOf } from './rwa/nestIdentity'
 // import { scrapeAllPermits } from '../permit/scrapeAllPermits'
 
 interface MinimalTokenNoChainId {
@@ -63,6 +64,16 @@ const NO_WNATIVE_CHAINS: string[] = [Chain.TEMPO_MAINNET_PRESTO, Chain.STABLE_MA
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const permitFilePath = (chainId: string) => path.resolve(__dirname, `./permit-info/${chainId}.permit.json`)
+
+/** The row with its Nest identity applied (rwa/nestIdentity.ts), or unchanged. */
+function withNestIdentity<T extends { address?: string; id?: string; chainId?: unknown }>(t: T): T {
+  const key = t.address ?? t.id
+  const n = key ? lookupNestIdentity(key) : undefined
+  if (!n) return t
+  const chain = AutoGenHelpers.safeparseChainId(t.chainId as any)
+  const decimals = n.decimals?.[chain]
+  return { ...t, name: n.name, symbol: n.symbol, ...(decimals !== undefined ? { decimals } : {}) }
+}
 
 function getNativeIcon(symb: string) {
   return `https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/${symb.toLowerCase()}.webp`
@@ -254,7 +265,11 @@ async function readTokenLists(): Promise<{
         const mutator = list.mutateEntry ?? defaultmutateEntry
         const assets = mutator(tokenInList0)
 
-        assets.forEach((tokenInList) => {
+        assets.forEach((tokenInListRaw) => {
+          // Nest (Plume Vaults) products carry ONE name / symbol / decimals on every chain,
+          // whatever the source list says (rwa/nestIdentity.ts). Applied before anything
+          // reads the row so the currencyId and every label below agree with it.
+          const tokenInList = withNestIdentity(tokenInListRaw)
           const isPolkadotXc = tokenInList.symbol && tokenInList.symbol.toLowerCase().startsWith('xc')
           const enumKey = AutoGenHelpers.symbolToKey(tokenInList.symbol)
           const symbolParsed = AutoGenHelpers.normalizeSymbol(tokenInList.symbol)
@@ -484,6 +499,10 @@ async function readTokenLists(): Promise<{
                     // (e.g. Kelp wrsETH → RSETH, StakeWise osETH variants → OSETH). Runs AFTER the
                     // dedup so the alias is the final word; only same-asset variants are listed.
                     assetGroup = aliasAssetGroup(assetGroup)
+                    // …and the Nest group is the identity's, last — over the seed's stored group,
+                    // the same-chain dedup suffix and any list's casing.
+                    const nestIdentity = lookupNestIdentity(lcAddress)
+                    if (nestIdentity) assetGroup = nestGroupOf(nestIdentity)
 
                     let parsedEntry = {
                       chainId,

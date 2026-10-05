@@ -134,8 +134,10 @@ export const GROUP_ALIAS: Record<string, string> = {
   // and Ethereum's nLCRD / nFALCON rows were listed upper-case. Canonical = the Plume form:
   // Plume is the hub (the vault, its accountant, every lending market on the share) and it
   // is the key the Morpho rows and the Solana mints (solana/solana.ts) already join.
-  'Nest Alpha Vault::nALPHA': 'Nest ALPHA Vault::nALPHA',
-  'Nest Institutional Alpha Vault::nALPHA': 'Nest ALPHA Vault::nALPHA',
+  // (rwa/nestIdentity.ts now sets every Nest group outright; these stay for the group
+  // strings older rows carried. nALPHA's canonical moved to the contract's own casing.)
+  'Nest ALPHA Vault::nALPHA': 'Nest Alpha Vault::nALPHA',
+  'Nest Institutional Alpha Vault::nALPHA': 'Nest Alpha Vault::nALPHA',
   'Nest Basis::nBASIS': 'Nest Basis Vault::nBASIS',
   'Nest Liquid Credit Vault::NLCRD': 'Nest Liquid Credit Vault::nLCRD',
   'Nest FalconX CLO::NFALCON': 'Nest FalconX CLO::nFALCON',

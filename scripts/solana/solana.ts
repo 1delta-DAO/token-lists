@@ -6,6 +6,7 @@ import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { TokenProps } from '../utils/types'
 import { classifySolanaToken } from './solanaClassify'
+import { lookupNestIdentity, nestGroupOf } from '../rwa/nestIdentity'
 
 /**
  * Generates `solana.json`, the chain list for `Chain.SOLANA = 'solana'`.
@@ -113,13 +114,13 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // `api.nest.credit/v1/vaults` publishes for the vault (LayerZero OFT of the
   // Plume share, same decimals, metadata on assets.plume.org). The group is
   // Plume's — the hub chain, where the vault and its `rwa` row live.
-  '8qujzAXj2nz99CmeiCgPPc2JxEuDNYvPffzRomroJnee': 'Nest ALPHA Vault::nALPHA',
+  '8qujzAXj2nz99CmeiCgPPc2JxEuDNYvPffzRomroJnee': 'Nest Alpha Vault::nALPHA',
   '2sA2jW9e8EYJkLFpq9hkhxfVUQBwVGJwq6iP4TmTKrL4': 'Nest Treasuries Vault::nTBILL',
   G6SkPqYTbtVFYU4krZLDgHf5MVMfARG57G1kog4RYH2n: 'Nest Basis Vault::nBASIS',
   '77DTSzxisdQWshFYHP9M2JBDuHNojLAVoC7GBNC2yadT': 'Nest WisdomTree Vault::nWISDOM',
   '14BM5Nvq2kuJPn4vFNqiPM3XSBzVaqEjZrDT7ZYLS2nB': 'Nest Liquid Credit Vault::nLCRD',
   '4bpR1mvWgL25NxWBfYKDjiYGfAVttTeo9VJ1LvmbPj9y': 'Nest FalconX CLO::nFALCON',
-  BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'Nest BlackRock iShares AAA CLO Active ETF Vault::NCLOA',
+  BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'Nest BlackRock iShares AAA CLO Active ETF Vault::nCLOA',
   '6ESVavhfwC4rXHHHZmR6ajg7nLmL6X5UkpZuAcoA7xj7': 'Plume Factor Vault::FACTOR',
 }
 
@@ -162,6 +163,61 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   // program (XPTrnch…), the same owner as srONyc's.
   F17tzaQaFf1x3tC5gQFVvXAF2hcgq1qX6Mc9595zo3FD:
     'Loopscale "srAUTO / USDC" loop collateral (srAUTO, Exponent Senior AUTO); mint authority owned by Exponent tranching',
+  // The rest of Loopscale's pairs (`/markets/lending_vaults/info` assetTerms ∪
+  // `/markets/loop/info`, 2026-10-05) whose mint the list did not carry: the
+  // converter then names the leg `F17t…o3FD`. The 35 0-decimal, supply-1
+  // collateral mints (NFTs, 32 of them on the `dawn…` principal) are out of
+  // scope. Exponent's senior tranches: mint authority a
+  // PDA of Exponent's tranching program (XPTrnch…), metadata on
+  // `api.exponent.finance/tranching-token/<mint>`.
+  '9J8VvigcjFTkN3jhZH2ieTi2hdGVBVpEXbcA1JDo7QpA':
+    'Loopscale "srONyc / USDC" + "srONyc / USDG" loop collateral; Exponent /tokens + /sy-tokens (wsrONyc underlying)',
+  FvQP1fjox2GPSwkEhENuZisz8UeRURLWf7GYF9n2mURD:
+    'Loopscale "srEHYUSD / USDC" loop collateral; Exponent /tokens + /sy-tokens (wsrEHYUSD underlying)',
+  '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5':
+    'Loopscale "srnOPAL / USDC" loop collateral; Exponent tranching-token metadata — NOT Strata\'s EVM srNOPAL',
+  E1ovyHMqfSQxEofRP2T1pP5iZ2obug92WBvar1KKQKn8:
+    'Loopscale "PT-sUSDai-25FEB27 / USDG" loop collateral; api.exponent.finance/pt-token metadata (vault absent from /vaults)',
+  // Loopscale's own vault shares: the `lpMint` of its curated vaults.
+  Hj3avy8d4k1skU3aScok7VWxEQSw6Bchuu5C9oV6vNz5:
+    'Loopscale "USDC Genesis" vault lpMint (oneUSDC); collateral on Loopscale USDC + SOL vaults',
+  GMGm82jMiMCVQZfnHcD96b8YF8BXvLHteKhEaj3fZjDe: 'Loopscale "SOL Genesis" vault lpMint (oneSOL); collateral on a Loopscale USDC vault',
+  // Securitize funds — Token-2022 metadata on metadata.securitize.io.
+  FubtUcvhSCr3VPXEcxouoQjKQ7NWTCzXyECe76B7L3f8: 'Loopscale "ACRED / USDG" loop collateral; metadata.securitize.io/acred.json',
+  EuTtCw35R3BJnTmXCREctjCU9XTkZXsQjqnoNg7NwdnZ: 'Loopscale "HINC / USDG" loop collateral; metadata.securitize.io/hinc.json',
+  // Etherfuse stablebonds and the local-currency stables they loop against.
+  CETES7CKqqKQizuSN6iWQwmTeFRjbJR6Vw2XRKfEDR8f:
+    'Loopscale "CETES / MXNe" + "CETES / USDC" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
+  GiLTSeSFnNse7xQVYeKdMyckGw66AoRmyggGg1NNd4yr: 'Loopscale "GILTS / tGBP" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
+  BRNTNaZeTJANz9PeuD8drNbBHwGgg7ZTjiQYrFgWQ48p:
+    'Loopscale "TESOURO / BRZ" + "TESOURO / USDC" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
+  '6zYgzrT7X2wi9a9NeMtUvUWLLmf2a8vBsbYkocYdB9wa': 'Loopscale "CETES / MXNe" loop principal; metadata on brale.xyz (Real MXN)',
+  '2zMqyX4AYCk6mgy5UZ2S7zUaLxwERhK5WjqDzkPPbSpW':
+    'Loopscale "GILTS / tGBP" loop principal; metadata on superset-finance, CoinGecko `tokenised-gbp` names this mint',
+  BRZbFNQDcWLfcdHmAkqEVnLHCAWKTRf6eHyEaWdZp3JN:
+    'Loopscale "TESOURO / BRZ" loop principal; Token-2022 metadata on transferotokensconfig (Transfero)',
+  // Staked / wrapped collateral on Loopscale vault offers and loops.
+  WFRGB49tP8CdKubqCdt5Spo2BdGS4BpgoinNER5TYUm:
+    'Loopscale zBTC vault collateral (wfragBTC); mint authority owned by Fragmetric (fragnAis…), icon on fragmetric-assets',
+  CHa1NzoGsJ8wAEQUBjwtyUcv7rQBDW2yk3c8LvqaA8Lb: 'Loopscale "chainSOL / SOL" loop collateral (Chainflow Staked SOL)',
+  G4L8PeENzfepB3jBpDKJ5McnHbXA7nh8gQQsZJQptVM7:
+    'Loopscale "sUSD.tel / USDG" loop collateral (Dawn telecom-revenue vault); Metaplex metadata on its own pinata gateway',
+}
+
+/**
+ * Name / symbol for an extra mint whose Jupiter answer is unusable, beating it.
+ * Jupiter answers the Exponent senior tranches and sUSD.tel BLANK (they would
+ * publish with `symbol: ""`), and the PT with its bare on-chain `PT-sUSDai`,
+ * which every later maturity would share. Taken from the issuer's metadata,
+ * never invented; the PT gets Exponent's `<ticker>-<DDMONYY>` symbol, the
+ * spelling `exponentApi.ts` gives every other PT.
+ */
+const SOLANA_IDENTITY: { [mint: string]: { name: string; symbol: string } } = {
+  '9J8VvigcjFTkN3jhZH2ieTi2hdGVBVpEXbcA1JDo7QpA': { name: 'Exponent Senior ONyc', symbol: 'srONyc' },
+  FvQP1fjox2GPSwkEhENuZisz8UeRURLWf7GYF9n2mURD: { name: 'Exponent Senior eHYUSD', symbol: 'srEHYUSD' },
+  '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5': { name: 'Exponent Senior nOPAL', symbol: 'srnOPAL' },
+  G4L8PeENzfepB3jBpDKJ5McnHbXA7nh8gQQsZJQptVM7: { name: 'sUSD.tel', symbol: 'sUSD.tel' },
+  E1ovyHMqfSQxEofRP2T1pP5iZ2obug92WBvar1KKQKn8: { name: 'Exponent PT-sUSDai-25FEB27', symbol: 'PT-sUSDai-25FEB27' },
 }
 
 /**
@@ -171,6 +227,13 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
 const SOLANA_LOGOS: { [mint: string]: string } = {
   BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'https://assets.plume.org/images/logos/nest/nCLOA/nCLOA-token.svg',
   '14BM5Nvq2kuJPn4vFNqiPM3XSBzVaqEjZrDT7ZYLS2nB': 'https://assets.plume.org/images/logos/nest/nLCRD/nLCRD-token.svg',
+  // Exponent senior tranches: the `image` of api.exponent.finance/tranching-token/<mint>.
+  F17tzaQaFf1x3tC5gQFVvXAF2hcgq1qX6Mc9595zo3FD: 'https://cdn.exponent.finance/senior-tokens/srAUTO.svg',
+  '9J8VvigcjFTkN3jhZH2ieTi2hdGVBVpEXbcA1JDo7QpA': 'https://cdn.exponent.finance/senior-tokens/srONyc.svg',
+  FvQP1fjox2GPSwkEhENuZisz8UeRURLWf7GYF9n2mURD: 'https://cdn.exponent.finance/senior-tokens/srEHYUSD.svg',
+  '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5': 'https://cdn.exponent.finance/senior-tokens/srnOPAL.svg',
+  // The `image` of metadata.securitize.io/hinc.json.
+  EuTtCw35R3BJnTmXCREctjCU9XTkZXsQjqnoNg7NwdnZ: 'https://metadata.securitize.io/hinc_logo.png',
 }
 
 interface JupToken {
@@ -292,7 +355,8 @@ async function main() {
       extrasMissing.push(mint)
       continue
     }
-    kept.push(hit)
+    const identity = SOLANA_IDENTITY[mint]
+    kept.push(identity ? { ...hit, ...identity } : hit)
     keptIds.add(mint)
     extrasAdded++
   }
@@ -361,7 +425,11 @@ async function main() {
   let joinedGlobal = 0
   const doubleClaimed: string[] = []
 
-  for (const t of ordered) {
+  for (const t0 of ordered) {
+    // Nest (Plume Vaults) shares carry the name / symbol they have on every EVM chain
+    // (rwa/nestIdentity.ts), not whatever Jupiter's metadata says.
+    const nest = lookupNestIdentity(t0.id)
+    const t = nest ? { ...t0, name: nest.name, symbol: nest.symbol } : t0
     // DECIMALS COME FROM THE SOURCE OR THE TOKEN IS DROPPED. Solana decimals are
     // genuinely mixed (6 / 9 / 8 / 5 / 4 / 2), so a default here is the
     // chain-1672 mistake: 48 tokens published at the wrong scale because the
@@ -372,7 +440,7 @@ async function main() {
     }
 
     const currencyId = `${t.name}::${t.symbol}`
-    const global = SOLANA_MAPPEDS[t.id] ?? crossChain.get(t.id)
+    const global = (nest && nestGroupOf(nest)) ?? SOLANA_MAPPEDS[t.id] ?? crossChain.get(t.id)
     let assetGroup: string
 
     if (global) {
