@@ -131,11 +131,7 @@
       "assetGroup": "USC Stablecoin::USC",
       "currencyId": "USC Stablecoin::USC",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "orby", "name": "Orby", "kind": "protocol" }
       }
@@ -2103,6 +2099,11 @@
       "currencyId": "USDC Token::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -2118,6 +2119,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -2131,6 +2133,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -2155,6 +2162,11 @@
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
@@ -2302,7 +2314,14 @@
       "logoURI": "https://vvs-ui.vvs.finance/9eaba9eb6d05b1a16fe8f8daca7b812392d64a06fd91f8d33220a9d8d95ee1bc.svg",
       "assetGroup": "TUSD",
       "currencyId": "TrueUSD::TUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x9c62f89a8c9907582f21205ce90443730361ea05": {
       "chainId": "25",
@@ -3427,6 +3446,36 @@
       "logoURI": "https://vvs-ui.vvs.finance/cc4f18aab07d97637fb754e321097f0e2f62a040ab6118322e7a48356edba776.svg",
       "assetGroup": "Six Seven::SISE",
       "currencyId": "Six Seven::SISE"
+    },
+    "0x95e80b18753db5adb4cf2df92a067d8837e388b1": {
+      "chainId": "25",
+      "decimals": 18,
+      "name": "Pantheon God's Genesis",
+      "address": "0x95e80b18753db5adb4cf2df92a067d8837e388b1",
+      "symbol": "GENESIS",
+      "logoURI": "https://vvs-ui.vvs.finance/eea3888aaa4f60a86f640f742b4c308a0e9699aedf5a239803c1fce9baac4628.svg",
+      "assetGroup": "Pantheon God's Genesis::GENESIS",
+      "currencyId": "Pantheon God's Genesis::GENESIS"
+    },
+    "0x99bace699c7595facf98c0fb893a3f256699cde0": {
+      "chainId": "25",
+      "decimals": 18,
+      "name": "Hephaestus",
+      "address": "0x99bace699c7595facf98c0fb893a3f256699cde0",
+      "symbol": "HEF",
+      "logoURI": "https://vvs-ui.vvs.finance/7f8fed552e12ef223fafad086883ff13cd343ba6bc0bffa382a6dbcbc3562897.svg",
+      "assetGroup": "Hephaestus::HEF",
+      "currencyId": "Hephaestus::HEF"
+    },
+    "0x0be50447a747b5af5008b349fee03533f00f5939": {
+      "chainId": "25",
+      "decimals": 18,
+      "name": "KRONA",
+      "address": "0x0be50447a747b5af5008b349fee03533f00f5939",
+      "symbol": "KRO",
+      "logoURI": "https://vvs-ui.vvs.finance/a11fa00f687c0b5e6c26b23d4d0cb97ba2ef1553bc1e23cbc78588f167a66250.svg",
+      "assetGroup": "KRONA::KRO",
+      "currencyId": "KRONA::KRO"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "25",

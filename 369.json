@@ -44,7 +44,8 @@
       "symbol": "HEX",
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x2b591e99afE9f32eAA6214f7B7629768c40Eeb39.png",
       "assetGroup": "HEX::HEX",
-      "currencyId": "HEX::HEX"
+      "currencyId": "HEX::HEX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x95b303987a60c71504d99aa1b13b4da07b0790ab": {
       "chainId": "369",
@@ -54,7 +55,8 @@
       "symbol": "PLSX",
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x95B303987A60C71504D99Aa1b13B4DA07b0790ab.png",
       "assetGroup": "PulseX::PLSX",
-      "currencyId": "PulseX::PLSX"
+      "currencyId": "PulseX::PLSX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x15d38573d2feeb82e7ad5187ab8c1d52810b1f07": {
       "chainId": "369",
@@ -67,6 +69,11 @@
       "currencyId": "USD Coin from Ethereum::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -80,7 +87,10 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x02DcdD04e3F455D838cd1249292C58f3B79e3C3C.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether from Ethereum::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb17d901469b9208b17d916112988a3fed19b5ca1": {
       "chainId": "369",
@@ -93,6 +103,7 @@
       "currencyId": "Wrapped BTC from Ethereum::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -106,6 +117,11 @@
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin from Ethereum::DAI",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
@@ -120,6 +136,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD from Ethereum::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -132,7 +153,8 @@
       "symbol": "INC",
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x2fa878Ab3F87CC1C9737Fc071108F904c0B0C95d.png",
       "assetGroup": "Incentive::INC",
-      "currencyId": "Incentive::INC"
+      "currencyId": "Incentive::INC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0deed1486bc52aa0d3e6f8849cec5add6598a162": {
       "chainId": "369",
@@ -435,7 +457,14 @@
       "symbol": "UNI",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984.png",
       "assetGroup": "UNI",
-      "currencyId": "Uniswap::UNI"
+      "currencyId": "Uniswap::UNI",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "ESTABLISHED_DEFI",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x2260fac5e5542a773aa44fbcfedf7c193bc2c599": {
       "chainId": "369",
@@ -445,7 +474,14 @@
       "symbol": "WBTC",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599.png",
       "assetGroup": "WBTC::WBTC",
-      "currencyId": "WBTC::WBTC"
+      "currencyId": "WBTC::WBTC",
+      "props": {
+        "risk": {
+          "score": 1,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce": {
       "chainId": "369",
@@ -506,7 +542,14 @@
       "symbol": "LINK",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0x514910771AF9Ca656af840dff83E8264EcF986CA.png",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "ESTABLISHED_DEFI",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x5a98fcbea516cf06857215779fd812ca3bef1b32": {
       "chainId": "369",
@@ -516,7 +559,14 @@
       "symbol": "LDO",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0x5A98FcBEA516Cf06857215779Fd812CA3beF1B32.png",
       "assetGroup": "Lido DAO Token::LDO",
-      "currencyId": "Lido DAO Token::LDO"
+      "currencyId": "Lido DAO Token::LDO",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "ESTABLISHED_DEFI",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x6982508145454ce325ddbe47a25d4ec3d2311933": {
       "chainId": "369",
@@ -537,7 +587,14 @@
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0x6B175474E89094C44Da98b954EedeAC495271d0F.png",
       "assetGroup": "DAI::DAI",
       "currencyId": "DAI::DAI",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
       "chainId": "369",
@@ -547,7 +604,14 @@
       "symbol": "USDC",
       "logoURI": "https://tokens.app.pulsex.com/images/tokens/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48.png",
       "assetGroup": "USDC::USDC",
-      "currencyId": "USDC::USDC"
+      "currencyId": "USDC::USDC",
+      "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0xb7dd55c4858f93b819435152d1ffa3cf9561fff5": {
       "chainId": "369",
@@ -579,6 +643,11 @@
       "assetGroup": "Tether USD::USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -903,6 +972,11 @@
       "assetGroup": "LUSD Stablecoin::LUSD",
       "currencyId": "LUSD Stablecoin::LUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
@@ -1016,7 +1090,8 @@
       "symbol": "WBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/7598/thumb/WBTCLOGO.png?1764496367",
       "assetGroup": "Wrapped Bitcoin::WBTC",
-      "currencyId": "Wrapped Bitcoin::WBTC"
+      "currencyId": "Wrapped Bitcoin::WBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x57fde0a71132198bbec939b98976993d8d89d225": {
       "chainId": "369",
@@ -1096,7 +1171,8 @@
       "symbol": "ATROPA",
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0xCc78A0acDF847A2C1714D2A925bB4477df5d48a6.png",
       "assetGroup": "Atropa::ATROPA",
-      "currencyId": "Atropa::ATROPA"
+      "currencyId": "Atropa::ATROPA",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xfc4913214444af5c715cc9f7b52655e788a569ed": {
       "chainId": "369",
@@ -4678,7 +4754,14 @@
       "logoURI": "https://raw.githubusercontent.com/piteasio/app-tokens/main/token-logo/0x8E870D67F660D95d5be530380D0eC0bd388289E1.png",
       "assetGroup": "Pax Dollar on Pulsechain::USDP",
       "currencyId": "Pax Dollar on Pulsechain::USDP",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x9d95dfbb1abb8f57abc20fde4f786bb1db52ad71": {
       "chainId": "369",

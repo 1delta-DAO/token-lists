@@ -94,6 +94,11 @@
       "assetGroup": "USDT",
       "currencyId": "Bridged stgUSDT::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -107,7 +112,10 @@
       "logoURI": "https://raw.githubusercontent.com/fusionx-finance/tokens/main/images/5000/0xdeaddeaddeaddeaddeaddeaddeaddeaddead1111.png",
       "assetGroup": "ETH",
       "currencyId": "WETH::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x568524da340579887db50ecf602cd1ba8451b243": {
       "chainId": "40",
@@ -281,6 +289,11 @@
       "assetGroup": "USDT",
       "currencyId": "USD Tether::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -296,6 +309,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -330,7 +348,10 @@
       "logoURI": "https://raw.githubusercontent.com/swapsicledex/swapsicle-token-list/master/logos/mantle/0xCAbAE6f6Ea1ecaB08Ad02fE02ce9A44F09aebfA2/logo.png",
       "assetGroup": "BTC",
       "currencyId": "Bitcoin::BTC.b",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x26ed0f16e777c94a6fe798f9e20298034930bae8": {
       "chainId": "40",
@@ -693,6 +714,11 @@
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -737,6 +763,7 @@
             }
           ]
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },

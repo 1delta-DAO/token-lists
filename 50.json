@@ -13,6 +13,11 @@
       "currencyId": "Wrapped Savings rUSD::WSRUSD",
       "props": {
         "savings": { "underlying": "rUSD", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -163,6 +168,11 @@
       "assetGroup": "EURS",
       "currencyId": "STASIS EURO::EURS",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "stasis", "name": "STASIS", "kind": "institution" }
       }
@@ -260,7 +270,11 @@
       "assetGroup": "Fathom Dollar::FXD",
       "currencyId": "Fathom Dollar::FXD",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "fathom", "name": "Fathom", "kind": "protocol" }
       }
@@ -331,6 +345,11 @@
       "assetGroup": "USDT",
       "currencyId": "Bridged stgUSDT::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -405,7 +424,8 @@
       "symbol": "PLI",
       "logoURI": "https://raw.githubusercontent.com/pro100skm/xdc-token-list/master/assets/0xFf7412Ea7C8445C46a8254dFB557Ac1E48094391/logo.png",
       "assetGroup": "Plugin::PLI",
-      "currencyId": "Plugin::PLI"
+      "currencyId": "Plugin::PLI",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb3f18b584263191a33169f6393487e43e9586329": {
       "chainId": "50",
@@ -455,7 +475,8 @@
       "symbol": "PRNT",
       "logoURI": "https://raw.githubusercontent.com/pro100skm/xdc-token-list/master/assets/0x0E11710AAd67E7427CfbC12c353284C2e335F62c/logo.png",
       "assetGroup": "PrimeNumbers Token::PRNT",
-      "currencyId": "PrimeNumbers Token::PRNT"
+      "currencyId": "PrimeNumbers Token::PRNT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x5d5f074837f5d4618b3916ba74de1bf9662a3fed": {
       "chainId": "50",
@@ -499,6 +520,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -513,6 +539,11 @@
       "assetGroup": "Australian Digital Dollar::AUDD",
       "currencyId": "Australian Digital Dollar::AUDD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "AUD" },
         "issuer": { "id": "novatti", "name": "Novatti", "kind": "institution" }
       }
@@ -591,6 +622,11 @@
       "currencyId": "Savings crvUSD::scrvUSD",
       "props": {
         "savings": { "underlying": "crvUSD", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
       }
@@ -613,7 +649,8 @@
       "symbol": "psXDC",
       "logoURI": "https://assets.coingecko.com/coins/images/54097/thumb/XDC-PNL-CIRCLE.png?1738224626",
       "assetGroup": "Prime Staked XDC::PSXDC",
-      "currencyId": "PrimeStaking psXDC::psXDC"
+      "currencyId": "PrimeStaking psXDC::psXDC",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xa7fd1c5601348633018003c90ae568d1ff7973e4": {
       "chainId": "50",
@@ -622,7 +659,8 @@
       "address": "0xa7fd1c5601348633018003c90ae568d1ff7973e4",
       "symbol": "psXDC",
       "assetGroup": "PrimeStakedXDC::psXDC",
-      "currencyId": "PrimeStakedXDC::psXDC"
+      "currencyId": "PrimeStakedXDC::psXDC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xdc74c0daed82ae94486deef22991d2f54173c734": {
       "chainId": "50",
@@ -631,7 +669,10 @@
       "address": "0xdc74c0daed82ae94486deef22991d2f54173c734",
       "symbol": "psXDC",
       "assetGroup": "PrimeStakedXDC::psXDC",
-      "currencyId": "PrimeStakedXDC::psXDC"
+      "currencyId": "PrimeStakedXDC::psXDC",
+      "props": {
+        "risk": { "score": 3, "category": "LST", "source": "whitelist" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "50",

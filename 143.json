@@ -20,7 +20,7 @@
           "ptAddress": "0xbb0dcdd5f0159c3d51d8bce7d84f1b9fa390ef09",
           "syAddress": "0x8c0ee449b8babc933047541249952d5084a7d99d"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "re", "name": "Re", "kind": "protocol", "hops": 1 }
@@ -58,7 +58,14 @@
       "assetGroup": "earnAUSD Monad::SY-earnAUSD",
       "currencyId": "earnAUSD Monad::SY-earnAUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xdc66fcf20d4e8780ea9eda19d832345a2af69c42",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
+          "ytAddress": "0xddb70adb30e61f6c4d36ce70d5a3e3c13d39136f"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -79,6 +86,11 @@
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0xd236e83c563f888f540ca997c3ddf00e82d68c45",
           "ytAddress": "0x758119e49319b91332eebd6fcbecd9e0387de16b"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -104,7 +116,11 @@
           "ptAddress": "0xa08a69ab9dd3b04d0992bc7afb2c0b907bbdc147",
           "ytAddress": "0x5aff25c86c7cb739e554be8904b32047738b7440"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -144,7 +160,14 @@
       "assetGroup": "YT AUSD (AUSD) Monad::YT-AUSD-17DEC2026",
       "currencyId": "YT AUSD (AUSD) Monad::YT-AUSD-17DEC2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1797465600 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x9cbc42eff240ad2e43bbdc3c0562a9b4ce842a5a",
+          "expiry": 1797465600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
+          "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -166,7 +189,11 @@
           "ytAddress": "0x3ebb97649af955e86699444aabc5aee3787bb7ce",
           "syAddress": "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286"
         },
-        "risk": { "score": 3, "source": "vault_inherit" },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -191,6 +218,11 @@
           "ytAddress": "0x0435a599e3fcf2e53028760060499350e25c3dd2",
           "syAddress": "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -212,7 +244,7 @@
           "ptAddress": "0x2e570a44909df47c4cad13c626626f59d056e9da",
           "syAddress": "0x8d3127aabf76f95fe2970a0480b8662b4ad4c286"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -237,7 +269,7 @@
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -259,7 +291,7 @@
           "ptAddress": "0xa08a69ab9dd3b04d0992bc7afb2c0b907bbdc147",
           "syAddress": "0x0898c3346275e79db4892feb1c18875ec154f274"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -298,6 +330,7 @@
           "ptAddress": "0xd236e83c563f888f540ca997c3ddf00e82d68c45",
           "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -328,7 +361,19 @@
       "assetGroup": "PT AUSD (AUSD) Monad::PT-AUSD-17DEC2026",
       "currencyId": "PT AUSD (AUSD) Monad::PT-AUSD-17DEC2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1797465600 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x9cbc42eff240ad2e43bbdc3c0562a9b4ce842a5a",
+          "expiry": 1797465600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ytAddress": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e",
+          "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -350,7 +395,11 @@
           "ptAddress": "0xbb0dcdd5f0159c3d51d8bce7d84f1b9fa390ef09",
           "ytAddress": "0x00e2a1a388fb871b0cbcc73e55b9b7dde8dc1518"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "re", "name": "Re", "kind": "protocol", "hops": 1 }
@@ -375,7 +424,11 @@
           "ptAddress": "0x2e570a44909df47c4cad13c626626f59d056e9da",
           "ytAddress": "0x3ebb97649af955e86699444aabc5aee3787bb7ce"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -400,7 +453,11 @@
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89",
           "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         },
-        "risk": { "score": 4, "source": "vault_inherit" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -425,7 +482,11 @@
           "ytAddress": "0x5aff25c86c7cb739e554be8904b32047738b7440",
           "syAddress": "0x0898c3346275e79db4892feb1c18875ec154f274"
         },
-        "risk": { "score": 3, "source": "vault_inherit" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -471,7 +532,11 @@
           "ytAddress": "0xc22efd9bfe13bda11743c7cd90cf0b34ee471c13",
           "syAddress": "0xbd852f753cc668c88878edbb333f4d08e6c8e8b2"
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -493,7 +558,19 @@
       "assetGroup": "PT earnAUSD (AUSD) Monad::PT-earnAUSD-28JAN2027",
       "currencyId": "PT earnAUSD (AUSD) Monad::PT-earnAUSD-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xdc66fcf20d4e8780ea9eda19d832345a2af69c42",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ytAddress": "0xddb70adb30e61f6c4d36ce70d5a3e3c13d39136f",
+          "syAddress": "0x05938d5d7b7243a27d88b83272ab36f2034168f4"
+        },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -515,7 +592,11 @@
           "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
           "ytAddress": "0xeddee9c0b56248d70a9bfdd103f8bd97c35dfd89"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -540,7 +621,11 @@
           "ytAddress": "0x00e2a1a388fb871b0cbcc73e55b9b7dde8dc1518",
           "syAddress": "0x8c0ee449b8babc933047541249952d5084a7d99d"
         },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "re", "name": "Re", "kind": "protocol", "hops": 1 }
@@ -565,7 +650,7 @@
           "ptAddress": "0xa7deac306a4520f4f2f94d150ca2fbd13080b607",
           "ytAddress": "0xc22efd9bfe13bda11743c7cd90cf0b34ee471c13"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -595,7 +680,7 @@
           "ptAddress": "0xa7deac306a4520f4f2f94d150ca2fbd13080b607",
           "syAddress": "0xbd852f753cc668c88878edbb333f4d08e6c8e8b2"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -625,6 +710,11 @@
           "ytAddress": "0x758119e49319b91332eebd6fcbecd9e0387de16b",
           "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -649,7 +739,11 @@
           "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
         },
-        "risk": { "score": 3, "source": "vault_inherit" },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -663,7 +757,14 @@
       "assetGroup": "YT earnAUSD (AUSD) Monad::YT-earnAUSD-28JAN2027",
       "currencyId": "YT earnAUSD (AUSD) Monad::YT-earnAUSD-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xdc66fcf20d4e8780ea9eda19d832345a2af69c42",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x103222f020e98bba0ad9809a011fdf8e6f067496",
+          "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
+          "syAddress": "0x05938d5d7b7243a27d88b83272ab36f2034168f4"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -685,7 +786,11 @@
           "ptAddress": "0xdaf216939826acaba0c2312f7e30a890213845cd",
           "ytAddress": "0x4147a0c89a83faba5d401e644e110a1c5f67bd8b"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -699,7 +804,14 @@
       "assetGroup": "AUSD Monad::SY-AUSD::143::0",
       "currencyId": "AUSD Monad::SY-AUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x9cbc42eff240ad2e43bbdc3c0562a9b4ce842a5a",
+          "expiry": 1797465600,
+          "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
+          "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
+          "ytAddress": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -725,7 +837,7 @@
           "syAddress": "0x0898c3346275e79db4892feb1c18875ec154f274",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -750,7 +862,7 @@
           "ptAddress": "0x9fc74f8ed616b5baf52a170caa97d6d3898602d1",
           "syAddress": "0xba3d60f5000f472aef947fb8020a3e6319f9a0b7"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -790,7 +902,11 @@
           "syAddress": "0x0898c3346275e79db4892feb1c18875ec154f274",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
@@ -813,7 +929,7 @@
           "issuer": "tether",
           "underlying": "XAU"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30390,
           "routes": [
@@ -853,6 +969,7 @@
       "currencyId": "RWA Backed Lending by Valos::vUSD",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -881,6 +998,11 @@
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund::JAAA",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
@@ -999,6 +1121,11 @@
           "subType": "reinsurance",
           "issuer": "reservoir"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "oft": {
           "eid": 30390,
           "routes": [
@@ -1063,6 +1190,11 @@
       "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "risk": {
+          "score": 3,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": {
           "id": "anchored",
           "name": "Anchored",
@@ -1081,6 +1213,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -1095,6 +1228,7 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
@@ -1109,6 +1243,7 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30390,
           "routes": [
@@ -1139,6 +1274,7 @@
       "currencyId": "Renzo Restaked ETH::ezETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
@@ -1270,6 +1406,7 @@
       "currencyId": "ShMonad (Old)::shMON",
       "props": {
         "lst": { "type": "staking", "asset": "MON", "provider": "fastlane" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "fastlane", "name": "Fastlane", "kind": "protocol" }
       }
     },
@@ -1311,7 +1448,8 @@
       "symbol": "aguaUSDCgc",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/aguaUSDCgc/logo.svg",
       "assetGroup": "Agua Global Carry Vault::aguaUSDCgc",
-      "currencyId": "Agua Global Carry Vault::aguaUSDCgc"
+      "currencyId": "Agua Global Carry Vault::aguaUSDCgc",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x58ba69b289de313e66a13b7d1f822fc98b970554": {
       "chainId": "143",
@@ -1321,7 +1459,10 @@
       "symbol": "naccUSDC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/naccUSDC/logo.svg",
       "assetGroup": "sUSN Delta Neutral Yield Vault::naccUSDC",
-      "currencyId": "sUSN Delta Neutral Yield Vault::naccUSDC"
+      "currencyId": "sUSN Delta Neutral Yield Vault::naccUSDC",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x03ef37626bc7c7b3f6cea4bcbfeb7764b51e22fb": {
       "chainId": "143",
@@ -1381,6 +1522,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -1429,6 +1575,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -1473,6 +1624,7 @@
             }
           ]
         },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -1487,7 +1639,8 @@
       "currencyId": "Wrapped Ether::WETH",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "denomination": "ETH"
+        "denomination": "ETH",
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
       }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
@@ -1537,11 +1690,7 @@
       "assetGroup": "Asian Dollar::AZND",
       "currencyId": "Asian Dollar::AZND",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mu-digital",
@@ -1561,7 +1710,8 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" }
       }
     },
     "0xff7f8f301f7a706e3cfd3d2275f5dc0b9ee8009b": {
@@ -1692,7 +1842,8 @@
       "symbol": "muBOND",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/muBOND/logo.svg",
       "assetGroup": "mu Bond::muBOND",
-      "currencyId": "mu Bond::muBOND"
+      "currencyId": "mu Bond::muBOND",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe85411c030fb32a9d8b14bbbc6cb19417391f711": {
       "chainId": "143",
@@ -1722,7 +1873,14 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/suUSD/logo.png",
       "assetGroup": "SUUSD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x62413d87cb81cf60a7b1599eacfbdeae1e569b93": {
       "chainId": "143",
@@ -1732,7 +1890,8 @@
       "symbol": "testWETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/testweth.svg",
       "assetGroup": "Test Wrapped ETH::testWETH",
-      "currencyId": "Test Wrapped ETH::testWETH"
+      "currencyId": "Test Wrapped ETH::testWETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x7f0b31617f0700358937b99f19b3d77db9c07d23": {
       "chainId": "143",
@@ -1742,7 +1901,8 @@
       "symbol": "testwstETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/testwsteth.svg",
       "assetGroup": "Test Wrapped stETH::testwstETH",
-      "currencyId": "Test Wrapped stETH::testwstETH"
+      "currencyId": "Test Wrapped stETH::testwstETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xdef72af3fc69e1dd5a094f7dda08ba203cd0438b": {
       "chainId": "143",
@@ -1788,7 +1948,8 @@
       "symbol": "sAUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/sAUSD/logo.svg",
       "assetGroup": "sAUSD::sAUSD",
-      "currencyId": "sAUSD::sAUSD"
+      "currencyId": "sAUSD::sAUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xc88cacd6fe1838c8dd1f0244b6cc0dee910dd261": {
       "chainId": "143",
@@ -1989,6 +2150,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -2054,7 +2220,8 @@
       "symbol": "MEDGE",
       "logoURI": "https://assets.coingecko.com/coins/images/54591/thumb/medge_logo.png?1740565725",
       "assetGroup": "Midas mEDGE::MEDGE",
-      "currencyId": "Midas mEDGE::MEDGE"
+      "currencyId": "Midas mEDGE::MEDGE",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x095957ceb9f317ac1328f0ab3123622401766d71": {
       "chainId": "143",
@@ -2172,7 +2339,8 @@
               "peers": { "1": "0x148c86390a4ae6f7a02df5903bc0a89e8b4581a0" }
             }
           ]
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x484be0540ad49f351eaa04eeb35df0f937d4e73f": {
@@ -2197,6 +2365,11 @@
               "peers": {}
             }
           ]
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
@@ -2304,7 +2477,9 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/ahyper.svg",
       "assetGroup": "Hyperithm Delta Neutral Vault::aHYPER",
       "currencyId": "Hyperithm Delta Neutral Vault::aHYPER",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x8e94704607e857eb3e10bd21d90bf8c1ecba0452": {
       "chainId": "143",
@@ -2425,6 +2600,7 @@
       "currencyId": "eBTC::EBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" }
       }
     },
@@ -2436,7 +2612,8 @@
       "symbol": "YZM",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/YZM/logo.svg",
       "assetGroup": "Yuzu Money Vault::YZM",
-      "currencyId": "Yuzu Money Vault::YZM"
+      "currencyId": "Yuzu Money Vault::YZM",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b": {
       "chainId": "143",
@@ -2449,6 +2626,7 @@
       "currencyId": "Coinbase Wrapped BTC::cbBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "category": "BRIDGED", "source": "whitelist" },
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
@@ -2512,11 +2690,7 @@
       "assetGroup": "Mento British Pound::GBPm",
       "currencyId": "Mento British Pound::GBPm",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -2576,7 +2750,8 @@
       "symbol": "triBTC",
       "logoURI": "https://cdn.morpho.org/assets/logos/tribtc.svg",
       "assetGroup": "cbBTC/WBTC/LBTC::triBTC",
-      "currencyId": "cbBTC/WBTC/LBTC::triBTC"
+      "currencyId": "cbBTC/WBTC/LBTC::triBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xf7cf282ec810fded974f99c0163e792f432892bc": {
       "chainId": "143",
@@ -2586,7 +2761,10 @@
       "symbol": "MHYPERBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/71550/thumb/mhyperbtc-Bvh-K9IL.png?1768299091",
       "assetGroup": "Midas Hyperithm BTC::mHyperBTC",
-      "currencyId": "Midas Hyperithm BTC::MHYPERBTC"
+      "currencyId": "Midas Hyperithm BTC::MHYPERBTC",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x150360c0efd098a6426060ee0cc4a0444c4b4b68": {
       "chainId": "143",
@@ -2595,7 +2773,8 @@
       "address": "0x150360c0efd098a6426060ee0cc4a0444c4b4b68",
       "symbol": "shMON-wnWMON",
       "assetGroup": "Fastlane Surge shMON / wnWMON::shMON-wnWMON",
-      "currencyId": "Fastlane Surge shMON / wnWMON::shMON-wnWMON"
+      "currencyId": "Fastlane Surge shMON / wnWMON::shMON-wnWMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2daa146dfb7eaef0038f9f15b2ec1e4de003f72b": {
       "chainId": "143",
@@ -2604,7 +2783,8 @@
       "address": "0x2daa146dfb7eaef0038f9f15b2ec1e4de003f72b",
       "symbol": "wnAUSD-wnUSDC-wnUSDT0",
       "assetGroup": "wnAUSD / wnUSDC / wnUSDT0::wnAUSD-wnUSDC-wnUSDT0",
-      "currencyId": "wnAUSD / wnUSDC / wnUSDT0::wnAUSD-wnUSDC-wnUSDT0"
+      "currencyId": "wnAUSD / wnUSDC / wnUSDT0::wnAUSD-wnUSDC-wnUSDT0",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x32592610debefe0616bd29de21d6baf5cd6b3026": {
       "chainId": "143",
@@ -2613,7 +2793,8 @@
       "address": "0x32592610debefe0616bd29de21d6baf5cd6b3026",
       "symbol": "TUSD",
       "assetGroup": "Test USD::TUSD",
-      "currencyId": "Test USD::TUSD"
+      "currencyId": "Test USD::TUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x3475ea1c3451a9a10aeb51bd8836312175b88bac": {
       "chainId": "143",
@@ -2622,7 +2803,8 @@
       "address": "0x3475ea1c3451a9a10aeb51bd8836312175b88bac",
       "symbol": "sMON-wnWMON",
       "assetGroup": "Kintsu Surge sMON / wnWMON::sMON-wnWMON",
-      "currencyId": "Kintsu Surge sMON / wnWMON::sMON-wnWMON"
+      "currencyId": "Kintsu Surge sMON / wnWMON::sMON-wnWMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x46ac36acb246eab59854ce746ea37cae4378971c": {
       "chainId": "143",
@@ -2631,7 +2813,8 @@
       "address": "0x46ac36acb246eab59854ce746ea37cae4378971c",
       "symbol": "TETH",
       "assetGroup": "Test ETH::TETH",
-      "currencyId": "Test ETH::TETH"
+      "currencyId": "Test ETH::TETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x7c86141e6c697ef043ab0ad781e25cbb07f69d1e": {
       "chainId": "143",
@@ -2640,7 +2823,8 @@
       "address": "0x7c86141e6c697ef043ab0ad781e25cbb07f69d1e",
       "symbol": "stTEST",
       "assetGroup": "Staked Test Token::stTEST",
-      "currencyId": "Staked Test Token::stTEST"
+      "currencyId": "Staked Test Token::stTEST",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x7c86b2437a91064dce69c4cb7e4bf3bc34932429": {
       "chainId": "143",
@@ -2650,7 +2834,8 @@
       "symbol": "TEST",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x09e7be7ace149207f4c7e4494347ca7e45f22f14/icon",
       "assetGroup": "Test Token::TEST",
-      "currencyId": "Test Token::TEST"
+      "currencyId": "Test Token::TEST",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x9f1269e2bba5732b95cef2bf1b22fccfe154e53c": {
       "chainId": "143",
@@ -2660,7 +2845,11 @@
       "symbol": "stTEST",
       "assetGroup": "Staked Test Token::stTEST::suspicious::9f1269e2",
       "currencyId": "Staked Test Token::stTEST",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb15c5d53bf07a99b71f949feb1fe833573c270d6": {
       "chainId": "143",
@@ -2669,7 +2858,8 @@
       "address": "0xb15c5d53bf07a99b71f949feb1fe833573c270d6",
       "symbol": "LOAN",
       "assetGroup": "Loan Token::LOAN",
-      "currencyId": "Loan Token::LOAN"
+      "currencyId": "Loan Token::LOAN",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb407675245d8ac6da2d95b5e84dc3b1b398e19a1": {
       "chainId": "143",
@@ -2679,7 +2869,11 @@
       "symbol": "TETH",
       "assetGroup": "Test ETH::TETH::suspicious::b4076752",
       "currencyId": "Test ETH::TETH",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xbaf20827ff9d715deb62531de682fa50493b8fe0": {
       "chainId": "143",
@@ -2688,7 +2882,8 @@
       "address": "0xbaf20827ff9d715deb62531de682fa50493b8fe0",
       "symbol": "COLLAT",
       "assetGroup": "Collateral Token::COLLAT",
-      "currencyId": "Collateral Token::COLLAT"
+      "currencyId": "Collateral Token::COLLAT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xce6170ea245dc8d1f275a710a062b70f125f0110": {
       "chainId": "143",
@@ -2699,7 +2894,10 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/FXRP/logo.svg",
       "assetGroup": "FXRP::FXRP",
       "currencyId": "FXRP::FXRP",
-      "props": { "denomination": "XRP" }
+      "props": {
+        "denomination": "XRP",
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+      }
     },
     "0xd328e74add15ac98275737a7c1c884ddc951f4d3": {
       "chainId": "143",
@@ -2708,7 +2906,8 @@
       "address": "0xd328e74add15ac98275737a7c1c884ddc951f4d3",
       "symbol": "wnLOAZND-AZND-wnAUSD",
       "assetGroup": "wnLOAZND / AZND / wnAUSD::wnLOAZND-AZND-wnAUSD",
-      "currencyId": "wnLOAZND / AZND / wnAUSD::wnLOAZND-AZND-wnAUSD"
+      "currencyId": "wnLOAZND / AZND / wnAUSD::wnLOAZND-AZND-wnAUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe6c608ebe6f5561260366c5ffcb4b2604ac92d87": {
       "chainId": "143",
@@ -2718,7 +2917,11 @@
       "symbol": "stTEST",
       "assetGroup": "Staked Test Token::stTEST::suspicious::e6c608eb",
       "currencyId": "Staked Test Token::stTEST",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf13dacada8f45c2b2cbf60ecb1d412d0c57bf2f8": {
       "chainId": "143",
@@ -2727,7 +2930,8 @@
       "address": "0xf13dacada8f45c2b2cbf60ecb1d412d0c57bf2f8",
       "symbol": "eUSD",
       "assetGroup": "Euler USD::eUSD",
-      "currencyId": "Euler USD::eUSD"
+      "currencyId": "Euler USD::eUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xf503d5d7b7d4927b4c4ab4f9b7498c6cfcfe9dfe": {
       "chainId": "143",
@@ -2737,7 +2941,11 @@
       "symbol": "TUSD",
       "assetGroup": "Test USD::TUSD::suspicious::f503d5d7",
       "currencyId": "Test USD::TUSD",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x81a224f8a62f52bde942dbf23a56df77a10b7777": {
       "chainId": "143",
@@ -2767,7 +2975,8 @@
       "symbol": "FUSDLP",
       "logoURI": "https://cdn.morpho.org/assets/logos/fusdlp.svg",
       "assetGroup": "FinChain Dollar LP::FUSDLP",
-      "currencyId": "FinChain Dollar LP::FUSDLP"
+      "currencyId": "FinChain Dollar LP::FUSDLP",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x21e325b059cd83d4037c82f0f5998ba2df3d7777": {
       "chainId": "143",
@@ -2801,7 +3010,10 @@
       "symbol": "aHyperBTC",
       "logoURI": "https://cdn.morpho.org/assets/logos/ahyperbtc.svg",
       "assetGroup": "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC",
-      "currencyId": "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC"
+      "currencyId": "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0xb3b850ac62b89fe9f4efb652b516108a8aeb8848": {
       "chainId": "143",
@@ -2820,7 +3032,8 @@
       "address": "0x02b34a02db24179ac2d77ae20aa6215c7153e7f8",
       "symbol": "wnSMON-wnWMON",
       "assetGroup": "Kintsu Surge wnSMON / wnWMON::wnSMON-wnWMON",
-      "currencyId": "Kintsu Surge wnSMON / wnWMON::wnSMON-wnWMON"
+      "currencyId": "Kintsu Surge wnSMON / wnWMON::wnSMON-wnWMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x340fa62ae58e90473da64b0af622cdd6113106cb": {
       "chainId": "143",
@@ -2829,7 +3042,8 @@
       "address": "0x340fa62ae58e90473da64b0af622cdd6113106cb",
       "symbol": "wnSHMON-wnWMON",
       "assetGroup": "Fastlane Surge wnSHMON / wnWMON::wnSHMON-wnWMON",
-      "currencyId": "Fastlane Surge wnSHMON / wnWMON::wnSHMON-wnWMON"
+      "currencyId": "Fastlane Surge wnSHMON / wnWMON::wnSHMON-wnWMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xbddb004a6c393c3f83bcccf7f07ee9d409b214de": {
       "chainId": "143",
@@ -2838,7 +3052,8 @@
       "address": "0xbddb004a6c393c3f83bcccf7f07ee9d409b214de",
       "symbol": "wnLOAZND-AZND-wnAUSD",
       "assetGroup": "Mu Digital wnLOAZND/AZND/wnAUSD::wnLOAZND-AZND-wnAUSD",
-      "currencyId": "Mu Digital wnLOAZND/AZND/wnAUSD::wnLOAZND-AZND-wnAUSD"
+      "currencyId": "Mu Digital wnLOAZND/AZND/wnAUSD::wnLOAZND-AZND-wnAUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x6a7e3f839382fbb6a6131d4aae864aaeb362292d": {
       "chainId": "143",
@@ -2908,6 +3123,11 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "savings": { "underlying": "avUSD", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -2920,7 +3140,10 @@
       "symbol": "YZPRIME",
       "logoURI": "https://assets.coingecko.com/coins/images/102173282/thumb/yPrime.png?1778824103",
       "assetGroup": "Yuzu Prime::YZPRIME",
-      "currencyId": "Yuzu Prime::YZPRIME"
+      "currencyId": "Yuzu Prime::YZPRIME",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x1111b3ded9f1fe1801ad4ebef8e2788183a24111": {
       "chainId": "143",
@@ -2963,7 +3186,8 @@
       "symbol": "AA_FalconXUSDC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/AA_FalconXUSDC/logo.svg",
       "assetGroup": "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC",
-      "currencyId": "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC"
+      "currencyId": "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x9f6714c302ffe3c3bafaf2ccb44201ff64f6371c": {
       "chainId": "143",
@@ -2999,6 +3223,11 @@
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
@@ -3051,7 +3280,8 @@
       "symbol": "CSUSDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xe1bca19baa63894d374578320551633320436523.png",
       "assetGroup": "Clearstar Earn USDC::CSUSDC",
-      "currencyId": "Clearstar Earn USDC::CSUSDC"
+      "currencyId": "Clearstar Earn USDC::CSUSDC",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xc6221856e45ed806f8325a084bed3d69d32c526d": {
       "chainId": "143",
@@ -3142,11 +3372,7 @@
       "assetGroup": "Mento Swiss Franc::CHFm",
       "currencyId": "Mento Swiss Franc::CHFm",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "CHF" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -3161,11 +3387,7 @@
       "assetGroup": "Mento Japanese Yen::JPYm",
       "currencyId": "Mento Japanese Yen::JPYm",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "JPY" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -3212,6 +3434,11 @@
       "assetGroup": "GHO",
       "currencyId": "Gho Token::GHO",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
       }
@@ -3226,6 +3453,7 @@
       "assetGroup": "M by M0::M",
       "currencyId": "M by M0::M",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "m0", "name": "M0", "kind": "protocol" }
       }
@@ -3240,6 +3468,11 @@
       "assetGroup": "USDE",
       "currencyId": "USDe::USDe",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -3279,6 +3512,11 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "savings": { "underlying": "USDe", "base": "USD" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -3390,7 +3628,8 @@
       "symbol": "hyAUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/hyAUSD/logo.svg",
       "assetGroup": "High Yield AUSD Vault::hyAUSD",
-      "currencyId": "High Yield AUSD Vault::hyAUSD"
+      "currencyId": "High Yield AUSD Vault::hyAUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x9cd57d3685e6868cacaa8bdcaaf52cbdebf4fa25": {
       "chainId": "143",
@@ -3478,7 +3717,8 @@
       "address": "0x74d80ee400d3026fdd2520265cc98300710b25d4",
       "symbol": "stMONMON",
       "assetGroup": "MON LSTs::stMONMON",
-      "currencyId": "MON LSTs::stMONMON"
+      "currencyId": "MON LSTs::stMONMON",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x942644106b073e30d72c2c5d7529d5c296ea91ab": {
       "chainId": "143",
@@ -3487,7 +3727,8 @@
       "address": "0x942644106b073e30d72c2c5d7529d5c296ea91ab",
       "symbol": "AUSDCT0",
       "assetGroup": "3pool::AUSDCT0",
-      "currencyId": "3pool::AUSDCT0"
+      "currencyId": "3pool::AUSDCT0",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2d84d79c852f6842abe0304b70bbaa1506add457": {
       "chainId": "143",
@@ -3496,7 +3737,8 @@
       "address": "0x2d84d79c852f6842abe0304b70bbaa1506add457",
       "symbol": "AZNDAUSD",
       "assetGroup": "AZND/AUSD::AZNDAUSD",
-      "currencyId": "AZND/AUSD::AZNDAUSD"
+      "currencyId": "AZND/AUSD::AZNDAUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd2a72aa2d3f2815673f4bb887559c333d7f1f34f": {
       "chainId": "143",
@@ -3505,7 +3747,8 @@
       "address": "0xd2a72aa2d3f2815673f4bb887559c333d7f1f34f",
       "symbol": "mEDGErdUSDC",
       "assetGroup": "mEDGE redeemed to USDC::mEDGErdUSDC",
-      "currencyId": "mEDGE redeemed to USDC::mEDGErdUSDC"
+      "currencyId": "mEDGE redeemed to USDC::mEDGErdUSDC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0143c3ef3a76ed825fd5201953f65b52acefd799": {
       "chainId": "143",
@@ -3515,7 +3758,10 @@
       "symbol": "gAUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/gAUSD/logo.svg",
       "assetGroup": "K3 x Galaxy Lending::gAUSD",
-      "currencyId": "K3 x Galaxy Lending::gAUSD"
+      "currencyId": "K3 x Galaxy Lending::gAUSD",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x5ec32e3f2cc925296dc37edf3b2388868d5525c5": {
       "chainId": "143",
@@ -4356,6 +4602,11 @@
       "assetGroup": "SoFiUSD::SOFID",
       "currencyId": "SoFiUSD::SOFID",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "sofi", "name": "SoFi", "kind": "institution" }
       }
@@ -4402,7 +4653,6 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "multipli", "name": "Multipli", "kind": "protocol" }
       }
     },
@@ -4459,7 +4709,10 @@
       "symbol": "MROX",
       "logoURI": "https://assets.coingecko.com/coins/images/102172744/thumb/download_%286%29.png?1775201597",
       "assetGroup": "Midas Rockaway Market Neutral::MROX",
-      "currencyId": "Midas Rockaway Market Neutral::MROX"
+      "currencyId": "Midas Rockaway Market Neutral::MROX",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0xa9da3c77ec7cdc4dfaa1fe142af583543d1c540f": {
       "chainId": "143",
@@ -4790,6 +5043,40 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178731/thumb/aWDH-logo.png?1790168204",
       "assetGroup": "Waterdrop Inc aStock::AWDH",
       "currencyId": "Waterdrop Inc aStock::AWDH"
+    },
+    "0xea7e0955d410c5ba9dac457539ef0fa53a1399ed": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "earnAUSD Loop",
+      "address": "0xea7e0955d410c5ba9dac457539ef0fa53a1399ed",
+      "symbol": "earnAUSDloop",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/earnAUSDloop/logo.svg",
+      "assetGroup": "earnAUSD Loop::earnAUSDloop",
+      "currencyId": "earnAUSD Loop::earnAUSDloop",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+    },
+    "0x683fb58ee77172626d5b49087ddac71ef7825d20": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Staked trUSD",
+      "address": "0x683fb58ee77172626d5b49087ddac71ef7825d20",
+      "symbol": "strUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/strUSD/logo.svg",
+      "assetGroup": "Staked trUSD::strUSD",
+      "currencyId": "Staked trUSD::strUSD",
+      "props": {
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+      }
+    },
+    "0x770a579ea200784723b31b8668b0773ba80393c9": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "trUSD",
+      "address": "0x770a579ea200784723b31b8668b0773ba80393c9",
+      "symbol": "trUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/trUSD/logo.svg",
+      "assetGroup": "trUSD::trUSD",
+      "currencyId": "trUSD::trUSD"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",

@@ -28,7 +28,7 @@
       "currencyId": "rsETHWrapper::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 5, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -56,6 +56,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -69,11 +74,7 @@
       "assetGroup": "MegaUSD::USDM",
       "currencyId": "MegaUSD::USDM",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "whitelist" },
         "oft": {
           "eid": 30398,
           "routes": [
@@ -164,6 +165,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -199,6 +205,11 @@
       "currencyId": "Wrapped iTRY::WITRY",
       "props": {
         "savings": { "underlying": "iTRY", "base": "TRY" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "brix", "name": "Brix", "kind": "institution" }
       }
@@ -266,6 +277,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -296,6 +312,7 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
@@ -360,7 +377,11 @@
       "currencyId": "Staked Cap USD::stcUSD",
       "props": {
         "savings": { "underlying": "cUSD", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "oft": {
           "eid": 30398,
           "routes": [
