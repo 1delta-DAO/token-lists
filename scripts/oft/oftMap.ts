@@ -29,12 +29,14 @@ const OFT_REGISTRY: OftRegistry = (() => {
   const out: OftRegistry = {}
   for (const chainId of Object.keys(raw)) {
     out[chainId] = {}
-    for (const address of Object.keys(raw[chainId])) out[chainId][address.toLowerCase()] = raw[chainId][address]
+    // base58 is case-significant: a lower-cased Solana mint is another account
+    for (const address of Object.keys(raw[chainId]))
+      out[chainId][chainId === 'solana' ? address : address.toLowerCase()] = raw[chainId][address]
   }
   return out
 })()
 
 /** Lookup a token's LayerZero OFT overlay. */
 export function lookupOft(chainId: string, address: string): OftProps | undefined {
-  return OFT_REGISTRY[chainId]?.[address.toLowerCase()]
+  return OFT_REGISTRY[chainId]?.[chainId === 'solana' ? address : address.toLowerCase()]
 }

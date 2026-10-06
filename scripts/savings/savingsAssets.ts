@@ -276,6 +276,15 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Savings crvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
   'Superbridge Bridged scrvUSD::SCRVUSD': { underlying: 'crvUSD', base: 'USD' },
 
+  // --- OnRe ONyc (Solana) — share of OnRe's Bermuda reinsurance fund, minted
+  // and redeemed against USDC through OnRe's offers, yield paid as a rising
+  // NAV (core.api.onre.finance/data/nav). Jupiter tags it `yb`, but
+  // `savingsFromTags` cannot read a money off "OnRe Tokenized Reinsurance",
+  // so without this row it shipped as `savings: {}` and consumers that test
+  // `savings.base` against the debt's money read an ONyc/USDC loop as a
+  // price bet. ---
+  'OnRe Tokenized Reinsurance::ONyc': { underlying: 'USDC', base: 'USD' },
+
   // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
   // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:
   // 'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },

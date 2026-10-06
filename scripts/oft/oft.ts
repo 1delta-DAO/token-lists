@@ -51,6 +51,21 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
  */
 
 const LAYERZERO_METADATA_URL = 'https://metadata.layerzero-api.com/v1/metadata'
+
+/**
+ * Solana in the OFT overlay (2026-10-06). Two halves:
+ *  - every EVM route reads `peers(30168)` like any other chain; a Solana peer
+ *    is a 32-byte pubkey (the OFT STORE account), kept as base58 under
+ *    `peers.solana` — never lower-cased.
+ *  - `solana.json` mints get `props.oft` from the registry's Solana rows: the
+ *    mint's `proxyAddresses` are its OFT stores, and an EVM peer naming one of
+ *    them is the corridor. Solana-side `peers` are NOT read (a PeerConfig PDA
+ *    per store per eid, no Multicall) — absent, i.e. "unread", which is all the
+ *    INTO-Solana direction needs: the join runs off the EVM side's peers.
+ */
+const SOLANA_CHAIN_ID = 'solana'
+const SOLANA_EID = 30168
+const SOLANA_LIST = path.resolve(__dirname, '../../solana.json')
 const OFT_TYPES = new Set(['NativeOFT', 'ProxyOFT', 'HydraOFT', 'WABProxyOFT'])
 const EXCLUDED_OAPPS = new Set(['stargate'])
 const CHAIN_CONCURRENCY = 6
@@ -121,6 +136,22 @@ function indexChains(lz: LzMetadata) {
   return byChainId
 }
 
+const BASE58 = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+
+/** A bytes32 peer as the Solana pubkey it is (base58, leading zero bytes as '1'). */
+export function bytes32ToBase58(v: unknown): string | undefined {
+  if (typeof v !== 'string' || !/^0x[0-9a-fA-F]{64}$/.test(v)) return undefined
+  if (/^0x0{64}$/.test(v)) return undefined
+  let n = BigInt(v)
+  let out = ''
+  while (n > 0n) {
+    out = BASE58[Number(n % 58n)] + out
+    n /= 58n
+  }
+  const zeros = (v.slice(2).match(/^(00)*/)?.[0].length ?? 0) / 2
+  return '1'.repeat(zeros) + out
+}
+
 function bytes32ToAddress(v: unknown): string | undefined {
   if (typeof v !== 'string' || !v.startsWith('0x') || v.length !== 66) return undefined
   if (/^0x0{64}$/.test(v)) return undefined
@@ -166,6 +197,48 @@ function candidatesFor(chain: LzChain, listed: Set<string>): Candidate[] {
     }
   }
   return out
+}
+
+/**
+ * Solana rows: the mint's own entry when it IS an OFT, plus every
+ * `proxyAddresses` store. Keys are base58 and compared verbatim. There are no
+ * approvals on Solana, so `approvalRequired` is never set.
+ */
+function solanaCandidates(chain: LzChain, mints: string[]): Candidate[] {
+  const tokens = chain.tokens ?? {}
+  const oapps = chain.addressToOApp ?? {}
+  const out: Candidate[] = []
+  const consider = (mint: string, contract: string, meta: LzToken | undefined) => {
+    if (!meta || !OFT_TYPES.has(meta.type ?? '')) return
+    if (meta.type === 'HydraOFT' || meta.type === 'WABProxyOFT') return
+    if (meta.status === 'DEPRECATED') return
+    // Solana rows rarely carry `endpointVersion`; a V1 store is marked 1
+    if (meta.endpointVersion !== undefined && meta.endpointVersion !== 2) return
+    const oapp = oapps[contract]?.id
+    if (oapp && EXCLUDED_OAPPS.has(oapp)) return
+    const route: OftRoute = {
+      contract,
+      kind: meta.type === 'NativeOFT' ? 'native' : 'adapter',
+      sharedDecimals: meta.sharedDecimals ?? 6,
+    }
+    if (oapp) route.oapp = oapp
+    out.push({ token: mint, route })
+  }
+  for (const mint of mints) {
+    const meta = tokens[mint]
+    if (!meta) continue
+    consider(mint, mint, meta)
+    for (const store of meta.proxyAddresses ?? []) consider(mint, store, tokens[store])
+  }
+  return out
+}
+
+function readSolanaMints(): string[] {
+  try {
+    return Object.keys(JSON.parse(fs.readFileSync(SOLANA_LIST, 'utf-8'))?.list ?? {})
+  } catch {
+    return []
+  }
 }
 
 async function readChain(
@@ -235,6 +308,9 @@ async function generateOftMap() {
   const chains = indexChains(lz)
   const lists = readChainLists().filter(({ chainId }) => chains[chainId])
   const peerChains = lists.map(({ chainId }) => ({ chainId, eid: chains[chainId].eid }))
+  // Solana is a peer of every EVM route (read on the EVM side) — see the header
+  const solanaChain = lz[SOLANA_CHAIN_ID]
+  if (solanaChain) peerChains.push({ chainId: SOLANA_CHAIN_ID, eid: SOLANA_EID })
   console.log(`  ${lists.length} listed chains have a LayerZero V2 endpoint`)
 
   const out: OftRegistry = {}
@@ -274,7 +350,8 @@ async function generateOftMap() {
           if (typeof shared === 'number' || typeof shared === 'bigint') route.sharedDecimals = Number(shared)
           const peers: { [chainId: string]: string } = {}
           others.forEach((p, j) => {
-            const addr = bytes32ToAddress(results[i * stride + 3 + j])
+            const raw = results[i * stride + 3 + j]
+            const addr = p.chainId === SOLANA_CHAIN_ID ? bytes32ToBase58(raw) : bytes32ToAddress(raw)
             if (addr) peers[p.chainId] = addr
           })
           route.peers = peers
@@ -303,6 +380,17 @@ async function generateOftMap() {
     }
   })
   await Promise.all(runners)
+
+  // Solana rows, from the registry alone (no on-chain read — see the header)
+  if (solanaChain) {
+    const perMint: { [mint: string]: OftRoute[] } = {}
+    for (const c of solanaCandidates(solanaChain, readSolanaMints())) (perMint[c.token] ??= []).push(c.route)
+    for (const [mint, routes] of Object.entries(perMint)) {
+      routes.sort((a, b) => a.contract.localeCompare(b.contract))
+      ;(out[SOLANA_CHAIN_ID] ??= {})[mint] = { eid: SOLANA_EID, routes }
+    }
+    console.log(`  solana: ${Object.keys(perMint).length} mints with an OFT store (registry only)`)
+  }
 
   const file = path.resolve(__dirname, './oft.json')
   carryForwardFrozen(file, out)

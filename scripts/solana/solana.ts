@@ -6,6 +6,7 @@ import * as path from 'path'
 import { fileURLToPath } from 'url'
 import { TokenProps } from '../utils/types'
 import { classifySolanaToken } from './solanaClassify'
+import { lookupOft } from '../oft/oftMap'
 import { lookupNestIdentity, nestGroupOf } from '../rwa/nestIdentity'
 
 /**
@@ -122,6 +123,11 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   '4bpR1mvWgL25NxWBfYKDjiYGfAVttTeo9VJ1LvmbPj9y': 'Nest FalconX CLO::nFALCON',
   BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'Nest BlackRock iShares AAA CLO Active ETF Vault::nCLOA',
   '6ESVavhfwC4rXHHHZmR6ajg7nLmL6X5UkpZuAcoA7xj7': 'Plume Factor Vault::FACTOR',
+  // OnRe's ONyc: issued natively on Solana (OnRe program `onreuGhH…`), not a
+  // bridged copy of an EVM token. CoinGecko's platform map has no other chain
+  // to join it to, so it fell through to the `::solana` scope reserved for
+  // name-squatting copies; the issuer and savings rows key this group.
+  '5Y8NV33Vv7WbnLfq3zBcKSdYPrk7g2KoiQoe7M2tcxp5': 'OnRe Tokenized Reinsurance::ONyc',
 }
 
 /**
@@ -489,6 +495,10 @@ async function main() {
     if (exponentByMint.has(t.id)) props.exponent = exponentByMint.get(t.id)!.props.exponent
 
     props = classifySolanaToken(t, assetGroup, props)
+    // LayerZero OFT stores of this mint (`npm run oft`), the into-Solana half
+    // of the `props.oft` overlay the EVM lists carry
+    const oft = lookupOft('solana', t.id)
+    if (oft) props = { ...props, oft }
 
     list[t.id] = {
       chainId: 'solana',

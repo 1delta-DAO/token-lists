@@ -803,7 +803,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   // RWA corners derive from `lst.provider` / `rwa.issuer` (issuer.ts reads
   // solana.json); these are the products no feed names. Same rule as above:
   // the group NAME (or the issuer's own metadata host) names the desk.
-  'OnRe Tokenized Reinsurance::ONyc::solana': { id: 'onre', name: 'OnRe', kind: 'institution' }, // 5Y8NV33V… — OnRe's reinsurance note; Exponent's PT-ONyc walks to it
+  'OnRe Tokenized Reinsurance::ONyc': { id: 'onre', name: 'OnRe', kind: 'institution' }, // 5Y8NV33V… — OnRe's reinsurance note; Exponent's PT-ONyc walks to it
   'Jupiter Perps::JLP::solana': { id: 'jupiter', name: 'Jupiter', kind: 'protocol' }, // 27G8MtK7… — the Jupiter Perps LP token
   'Jupiter Staked SOL::JupSOL::solana': { id: 'jupiter', name: 'Jupiter', kind: 'protocol' }, // jupSoLaH…
   'Jupiter USD::JupUSD::solana': { id: 'jupiter', name: 'Jupiter', kind: 'protocol' }, // JuprjznT…
