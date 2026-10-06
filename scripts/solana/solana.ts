@@ -128,6 +128,17 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // to join it to, so it fell through to the `::solana` scope reserved for
   // name-squatting copies; the issuer and savings rows key this group.
   '5Y8NV33Vv7WbnLfq3zBcKSdYPrk7g2KoiQoe7M2tcxp5': 'OnRe Tokenized Reinsurance::ONyc',
+  // Hastra (Figure / Provenance): the Solana mints of the products Ethereum
+  // (and Tempo) list as `Hastra wYLDS` / `Hastra PRIME` / `Hastra AUTO` —
+  // the mint addresses are the ones Hastra's own PoR feed publishes per chain
+  // (`hastra.io/hastra-pulse/public/api/v1/por`, `mint_address_by_chain`).
+  // Jupiter carries wYLDS and PRIME with an EMPTY name, so wYLDS fell through
+  // to `::wYLDS::solana` and the lending join could not see it as the EVM
+  // token; PRIME / AUTO joined through CoinGecko and are pinned so they cannot
+  // move.
+  '8fr7WGTVFszfyNWRMXj6fRjZZAnDwmXwEpCrtzmUkdih': 'Hastra wYLDS::wYLDS',
+  '3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7': 'Hastra PRIME::PRIME',
+  GNE6oDS6jHrfaV3GQVVCCp37fDnT7PiPuewMKBj2bqNm: 'Hastra AUTO::AUTO',
 }
 
 /**
@@ -224,6 +235,10 @@ const SOLANA_IDENTITY: { [mint: string]: { name: string; symbol: string } } = {
   '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5': { name: 'Exponent Senior nOPAL', symbol: 'srnOPAL' },
   G4L8PeENzfepB3jBpDKJ5McnHbXA7nh8gQQsZJQptVM7: { name: 'sUSD.tel', symbol: 'sUSD.tel' },
   E1ovyHMqfSQxEofRP2T1pP5iZ2obug92WBvar1KKQKn8: { name: 'Exponent PT-sUSDai-25FEB27', symbol: 'PT-sUSDai-25FEB27' },
+  // Jupiter-VERIFIED but nameless (`name: ""`): the names Hastra publishes on
+  // its EVM deployments, so `currencyId` is not `::PRIME`.
+  '8fr7WGTVFszfyNWRMXj6fRjZZAnDwmXwEpCrtzmUkdih': { name: 'Hastra wYLDS', symbol: 'wYLDS' },
+  '3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7': { name: 'Hastra PRIME', symbol: 'PRIME' },
 }
 
 /**
@@ -435,7 +450,9 @@ async function main() {
     // Nest (Plume Vaults) shares carry the name / symbol they have on every EVM chain
     // (rwa/nestIdentity.ts), not whatever Jupiter's metadata says.
     const nest = lookupNestIdentity(t0.id)
-    const t = nest ? { ...t0, name: nest.name, symbol: nest.symbol } : t0
+    // SOLANA_IDENTITY also covers verified mints Jupiter publishes nameless
+    const identity = SOLANA_IDENTITY[t0.id]
+    const t = nest ? { ...t0, name: nest.name, symbol: nest.symbol } : identity ? { ...t0, ...identity } : t0
     // DECIMALS COME FROM THE SOURCE OR THE TOKEN IS DROPPED. Solana decimals are
     // genuinely mixed (6 / 9 / 8 / 5 / 4 / 2), so a default here is the
     // chain-1672 mistake: 48 tokens published at the wrong scale because the

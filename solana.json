@@ -3096,15 +3096,15 @@
     "3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7": {
       "chainId": "solana",
       "decimals": 6,
-      "name": "",
+      "name": "Hastra PRIME",
       "address": "3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7",
       "symbol": "PRIME",
       "logoURI": "https://storage.googleapis.com/hastra-cdn-prod/spl/primetoken.png",
       "assetGroup": "Hastra PRIME::PRIME",
-      "currencyId": "::PRIME",
+      "currencyId": "Hastra PRIME::PRIME",
       "props": {
         "solana": { "tokenProgram": "spl-token" },
-        "savings": {},
+        "savings": { "underlying": "wYLDS", "base": "USD" },
         "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
       }
     },
@@ -10932,13 +10932,17 @@
     "8fr7WGTVFszfyNWRMXj6fRjZZAnDwmXwEpCrtzmUkdih": {
       "chainId": "solana",
       "decimals": 6,
-      "name": "",
+      "name": "Hastra wYLDS",
       "address": "8fr7WGTVFszfyNWRMXj6fRjZZAnDwmXwEpCrtzmUkdih",
       "symbol": "wYLDS",
       "logoURI": "https://storage.googleapis.com/hastra-cdn-prod/spl/wyldstoken.png",
-      "assetGroup": "::wYLDS::solana",
-      "currencyId": "::wYLDS",
-      "props": { "solana": { "tokenProgram": "spl-token" }, "stablecoin": {} }
+      "assetGroup": "Hastra wYLDS::wYLDS",
+      "currencyId": "Hastra wYLDS::wYLDS",
+      "props": {
+        "solana": { "tokenProgram": "spl-token" },
+        "stablecoin": {},
+        "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
+      }
     },
     "8gHPxqgHj6JQ2sQtMSghQYVN5qRP8wm5T6HNejuwpump": {
       "chainId": "solana",
@@ -25771,6 +25775,7 @@
       "currencyId": "Hastra AUTO::AUTO",
       "props": {
         "solana": { "tokenProgram": "spl-token" },
+        "savings": { "underlying": "wYLDS", "base": "USD" },
         "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
       }
     },

@@ -828,10 +828,11 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   // one group. An exchange's own wrapper, like cbBTC / BTCB.
   'OKX Wrapped BTC::xBTC': { id: 'okx', name: 'OKX', kind: 'cex' },
   // Hastra (Figure's yield program): PRIME on 1 / 4217 / Solana, AUTO on 1 /
-  // Solana. wYLDS is NOT here: its Solana metadata carries no name at all
-  // (`::wYLDS::solana`), so nothing in the list says whose it is.
+  // Solana, wYLDS on 1 / 4217 / Solana (solana.ts pins the Solana mints to
+  // these groups; wYLDS used to sit apart as `::wYLDS::solana`).
   'Hastra PRIME::PRIME': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
   'Hastra AUTO::AUTO': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
+  'Hastra wYLDS::wYLDS': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
   // Wormhole Portal DAI (EjmyN6qE…) — a bridged copy over a live bridge is
   // still the desk's dollar, cf. `USDC::USDC(Wormhole)` above.
   'DAI (Portal)::DAI::solana': { id: 'sky', name: 'Sky', kind: 'protocol' },

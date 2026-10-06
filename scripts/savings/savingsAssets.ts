@@ -285,7 +285,11 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // price bet. ---
   'OnRe Tokenized Reinsurance::ONyc': { underlying: 'USDC', base: 'USD' },
 
-  // --- FLAGGED, left out pending your call (actively-managed / exotic) ---
-  // Hastra PRIME wraps wYLDS (4626-over-USDC), whitelist-gated:
-  // 'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
+  // --- Hastra PRIME / AUTO — 4626 (Ethereum) and `vault-stake` (Solana)
+  // vaults over wYLDS, Figure's USDC-backed YLDS held 1:1; yield is the share
+  // price rising (PoR `effective_rate`). Deposit and redeem are permissionless
+  // and instant against wYLDS — fork-proven on Ethereum 2026-10-06, so the
+  // earlier "whitelist-gated" flag no longer holds. ---
+  'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
+  'Hastra AUTO::AUTO': { underlying: 'wYLDS', base: 'USD' },
 }
