@@ -292,4 +292,14 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // earlier "whitelist-gated" flag no longer holds. ---
   'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
   'Hastra AUTO::AUTO': { underlying: 'wYLDS', base: 'USD' },
+
+  // --- Exponent senior tranches (Solana) — the senior LP of an Exponent
+  // tranching market: a protected share of the base asset's yield, paid as a
+  // rising LP price in the market's dollar quote (hyUSD / USD); the junior
+  // takes the first loss. Loopscale loops them against USDC / USDG, which
+  // without `base` read as a price bet. `underlying` is the base asset. ---
+  'Exponent Senior eHYUSD::srEHYUSD::solana': { underlying: 'eHYUSD', base: 'USD' },
+  'Exponent Senior AUTO::srAUTO::solana': { underlying: 'AUTO', base: 'USD' },
+  'Exponent Senior ONyc::srONyc::solana': { underlying: 'ONyc', base: 'USD' },
+  'Exponent Senior nOPAL::srnOPAL::solana': { underlying: 'nOPAL', base: 'USD' },
 }
