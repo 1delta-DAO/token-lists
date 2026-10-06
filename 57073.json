@@ -148,6 +148,11 @@
       "currencyId": "NVIDIA xStock::NVDAX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -232,6 +237,11 @@
       "currencyId": "Tesla xStock::TSLAx",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -10451,7 +10461,7 @@
               "sharedDecimals": 6,
               "oapp": "kelpdao",
               "approvalRequired": false,
-              "peers": { "1": "0x85d456b2dff1fd8245387c0bfb64dfb700e98ef3" }
+              "peers": {}
             }
           ]
         },
@@ -10483,6 +10493,7 @@
       "currencyId": "Lombard Staked Bitcoin::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 4, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -10511,7 +10522,7 @@
       "currencyId": "rsETHWrapper::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 5, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -10656,6 +10667,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -10713,6 +10729,7 @@
           ]
         },
         "denomination": "BTC",
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -10782,6 +10799,7 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -10903,6 +10921,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
       }
@@ -10958,6 +10981,11 @@
       "currencyId": "USDC::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -10998,6 +11026,11 @@
       "assetGroup": "GHO::GHO",
       "currencyId": "GHO::GHO",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
       }
@@ -11091,6 +11124,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -11118,6 +11156,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -11133,6 +11176,11 @@
       "currencyId": "Syrup USDT::syrupUSDT",
       "props": {
         "savings": { "underlying": "USDT", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
@@ -11995,7 +12043,8 @@
       "symbol": "KHYPE",
       "logoURI": "https://assets.coingecko.com/coins/images/102176672/thumb/kHYPE.png?1788459787",
       "assetGroup": "Kraken Wrapped HYPE::KHYPE",
-      "currencyId": "Kraken Wrapped HYPE::KHYPE"
+      "currencyId": "Kraken Wrapped HYPE::KHYPE",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd95b9a5fa7c2708fd4fe0e07e59bde1ef35b194a": {
       "chainId": "57073",
@@ -12026,6 +12075,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178462/thumb/photo_2026-08-24_23-39-19.jpg?1789630768",
       "assetGroup": "Ink Cat::ICAT",
       "currencyId": "Ink Cat::ICAT"
+    },
+    "0xcf010ba185fd6ee6027b141e2c32614d673f8258": {
+      "chainId": "57073",
+      "decimals": 18,
+      "name": "HOOKIT",
+      "address": "0xcf010ba185fd6ee6027b141e2c32614d673f8258",
+      "symbol": "HKT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179082/thumb/IMG_8186.png?1791134386",
+      "assetGroup": "HOOKIT::HKT",
+      "currencyId": "HOOKIT::HKT"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "57073",

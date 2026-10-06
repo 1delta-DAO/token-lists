@@ -129,6 +129,7 @@
       "currencyId": "Renzo Restaked ETH::EZETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "renzo" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "renzo", "name": "Renzo", "kind": "protocol" }
       }
     },
@@ -363,6 +364,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -405,6 +411,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -601,6 +612,11 @@
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }

@@ -151,7 +151,11 @@
           "issuer": "nest",
           "denomination": "USD"
         },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+        "issuer": {
+          "id": "blackrock",
+          "name": "Blackrock",
+          "kind": "institution"
+        }
       }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
@@ -168,6 +172,11 @@
           "type": "credit",
           "subType": "reinsurance",
           "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "oft": {
           "eid": 30370,
@@ -206,6 +215,7 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -225,6 +235,7 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -244,6 +255,7 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -263,6 +275,7 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -339,6 +352,7 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -358,6 +372,7 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -380,6 +395,30 @@
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
+    "0x6fec234e8801ed88964bc058a0f9fbcc9fcbd2eb": {
+      "chainId": "98866",
+      "decimals": 6,
+      "name": "Prime Vault",
+      "address": "0x6fec234e8801ed88964bc058a0f9fbcc9fcbd2eb",
+      "symbol": "nPRIME",
+      "assetGroup": "Prime Vault::nPRIME",
+      "currencyId": "Prime Vault::nPRIME",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" }
+      }
+    },
+    "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
+      "chainId": "98866",
+      "decimals": 6,
+      "name": "Plume Factor Vault",
+      "address": "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925",
+      "symbol": "FACTOR",
+      "assetGroup": "Plume Factor Vault::FACTOR",
+      "currencyId": "Plume Factor Vault::FACTOR",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" }
+      }
+    },
     "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3": {
       "chainId": "98866",
       "decimals": 6,
@@ -391,6 +430,7 @@
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "risk": { "score": 3, "category": "LST", "source": "issuer_inherit" },
         "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
@@ -403,7 +443,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0xca59ca09e5602fae8b629dee83ffa819741f14be/small/token-logo.svg",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether (Stargate)::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xda6087e69c51e7d31b6dbad276a3c44703dfdcad": {
       "chainId": "98866",
@@ -415,6 +458,11 @@
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Stargate)::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -437,7 +485,8 @@
       "symbol": "nETF",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0xdea736937d464d288ec80138bcd1a2e109a200e3/small/token-logo.png",
       "assetGroup": "Nest ETF Vault::nETF",
-      "currencyId": "Nest ETF Vault::nETF"
+      "currencyId": "Nest ETF Vault::nETF",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x1fa3671df7300df728858b88c7216708f22da3fb": {
       "chainId": "98866",
@@ -492,7 +541,15 @@
       "symbol": "nELIXIR",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0x9fbc367b9bb966a2a537989817a088afcaffdc4c/small/token-logo.svg",
       "assetGroup": "Nest Elixir Vault::nELIXIR",
-      "currencyId": "Nest Elixir Vault::nELIXIR"
+      "currencyId": "Nest Elixir Vault::nELIXIR",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x2de8a403f7a5c6c5161d4a129918ec9f0b653918": {
       "chainId": "98866",
@@ -502,7 +559,8 @@
       "symbol": "wsuperOETHp",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0x2de8a403f7a5c6c5161d4a129918ec9f0b653918/small/token-logo.svg",
       "assetGroup": "Wrapped Super OETH::wsuperOETHp",
-      "currencyId": "Wrapped Super OETH::wsuperOETHp"
+      "currencyId": "Wrapped Super OETH::wsuperOETHp",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xd8724322f44e5c58d7a815f542036fb17dbbf839": {
       "chainId": "98866",
@@ -522,7 +580,8 @@
       "symbol": "pETH",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0x39d1f90ef89c52dda276194e9a832b484ee45574/small/token-logo.svg",
       "assetGroup": "Plume ETH::pETH",
-      "currencyId": "Plume ETH::pETH"
+      "currencyId": "Plume ETH::pETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x6b7e283d5098f3213d01d6cdcc35a217e1a3549f": {
       "chainId": "98866",
@@ -544,6 +603,11 @@
       "assetGroup": "Plume USD::pUSD",
       "currencyId": "Plume USD::pUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
@@ -559,6 +623,11 @@
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -571,7 +640,8 @@
       "symbol": "nINSTO",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0xbfc5770631641719cd1cf809d8325b146aed19de/small/token-logo.png",
       "assetGroup": "Nest Institutional Vault::nINSTO",
-      "currencyId": "Nest Institutional Vault::nINSTO"
+      "currencyId": "Nest Institutional Vault::nINSTO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe9e8330a71912f03e54e7d93795acd9a56f070aa": {
       "chainId": "98866",
@@ -613,7 +683,8 @@
       "symbol": "nPAYFI",
       "logoURI": "https://tokens.debridge.finance/Logo/100000024/0xb52b090837a035f93a84487e5a7d3719c32aa8a9/small/token-logo.svg",
       "assetGroup": "Nest PayFi Vault::nPAYFI",
-      "currencyId": "Nest PayFi Vault::nPAYFI"
+      "currencyId": "Nest PayFi Vault::nPAYFI",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xfcbe50dbe43bf7e5c88c6f6fb9ef432d4165406e": {
       "chainId": "98866",
@@ -695,6 +766,11 @@
       "assetGroup": "USD1::USD1",
       "currencyId": "USD1::USD1",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "world-liberty",
@@ -731,7 +807,8 @@
       "symbol": "MMEV",
       "logoURI": "https://assets.coingecko.com/coins/images/54592/thumb/mmev_logo.png?1740565795",
       "assetGroup": "Midas mMEV::MMEV",
-      "currencyId": "Midas mMEV::MMEV"
+      "currencyId": "Midas mMEV::MMEV",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x437cc33344a0b27a429f795ff6b469c72698b291": {
       "chainId": "98866",
@@ -753,6 +830,11 @@
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
@@ -768,6 +850,11 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -835,6 +922,7 @@
       "assetGroup": "WEUSD::WEUSD",
       "currencyId": "WEUSD::WEUSD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "picwe", "name": "PicWe", "kind": "protocol" }
       }
@@ -873,6 +961,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -894,7 +987,14 @@
       "symbol": "SSUPERUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/67821/thumb/sSuperUSD_200x200.png?1753943152",
       "assetGroup": "SuperReturn sSuperUSD::SSUPERUSD",
-      "currencyId": "SuperReturn sSuperUSD::SSUPERUSD"
+      "currencyId": "SuperReturn sSuperUSD::SSUPERUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x222365ef19f7947e5484218551b56bb3965aa7af": {
       "chainId": "98866",
@@ -907,6 +1007,11 @@
       "currencyId": "USDC::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -963,7 +1068,14 @@
       "symbol": "FBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39182/thumb/Function_Token_%282%29.png?1760254065",
       "assetGroup": "Function FBTC::FBTC",
-      "currencyId": "Function FBTC::FBTC"
+      "currencyId": "Function FBTC::FBTC",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x11a8d8694b656112d9a94285223772f4aad269fc": {
       "chainId": "98866",
@@ -1025,6 +1137,11 @@
       "currencyId": "Fire Bitcoin::FBTC",
       "props": {
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "function", "name": "Function", "kind": "protocol" }
       }
     },
@@ -1038,6 +1155,11 @@
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avalon", "name": "Avalon" }
       }
@@ -1051,7 +1173,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
       "currencyId": "sUSDa::SUSDA",
-      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "98866",
@@ -1065,32 +1194,6 @@
       "props": {
         "isNative": true,
         "wrapped": "0xea237441c92cae6fc17caaf9a7acb3f953be4bd1"
-      }
-    },
-    "0x6fec234e8801ed88964bc058a0f9fbcc9fcbd2eb": {
-      "chainId": "98866",
-      "decimals": 6,
-      "name": "Prime Vault",
-      "address": "0x6fec234e8801ed88964bc058a0f9fbcc9fcbd2eb",
-      "symbol": "nPRIME",
-      "assetGroup": "Prime Vault::nPRIME",
-      "currencyId": "Prime Vault::nPRIME",
-      "props": {
-        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
-      }
-    },
-    "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
-      "chainId": "98866",
-      "decimals": 6,
-      "name": "Plume Factor Vault",
-      "address": "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925",
-      "symbol": "FACTOR",
-      "assetGroup": "Plume Factor Vault::FACTOR",
-      "currencyId": "Plume Factor Vault::FACTOR",
-      "props": {
-        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     }
   },

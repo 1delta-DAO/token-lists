@@ -90,7 +90,7 @@
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 4, "category": "LRT", "source": "issuer_inherit" },
         "oft": {
           "eid": 30165,
           "routes": [
@@ -118,7 +118,7 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 5, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -144,7 +144,8 @@
       "symbol": "ZK",
       "logoURI": "https://assets.coingecko.com/coins/images/38043/large/ZKTokenBlack.png?17186145029",
       "assetGroup": "ZK",
-      "currencyId": "ZKsync::ZK"
+      "currencyId": "ZKsync::ZK",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x533b5f887383196c6bc642f83338a69596465307": {
       "chainId": "324",
@@ -660,6 +661,11 @@
       "currencyId": "Bridged USDC::USDC.e",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -755,6 +761,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -922,6 +929,11 @@
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -1081,6 +1093,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -1095,11 +1112,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -1207,11 +1220,7 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -1865,6 +1874,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }

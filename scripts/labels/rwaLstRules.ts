@@ -101,18 +101,7 @@ const has =
  * ("N-etf-lix") as a fund. A CoinGecko-truncated "… (Provider Tokenized ET" still counts.
  */
 const ETF_WORD = /\betfs?\b|tokeni[sz]ed\s+et\s*$/i
-const isEtfPhrase = has(
-  's&p',
-  'nasdaq',
-  'msci',
-  ' index',
-  'core s&p',
-  'ftse',
-  'russell',
-  'qqq',
-  'spdr',
-  'ucits',
-)
+const isEtfPhrase = has('s&p', 'nasdaq', 'msci', ' index', 'core s&p', 'ftse', 'russell', 'qqq', 'spdr', 'ucits')
 export const isEtf = (name: string) => ETF_WORD.test(name) || isEtfPhrase(name)
 
 /**

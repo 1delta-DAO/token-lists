@@ -18,6 +18,11 @@
           "issuer": "paxos",
           "underlying": "XAU"
         },
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
       }
     },
@@ -210,6 +215,11 @@
       "currencyId": "Backed NVIDIA::bNVDA",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 3,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -585,6 +595,7 @@
       "currencyId": "Staked Frax Ether::sfrxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -612,6 +623,7 @@
       "currencyId": "Frax Ether::frxETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "frax" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -2760,6 +2772,7 @@
       "assetGroup": "FXS",
       "currencyId": "Frax Share::FXS",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
     },
@@ -5249,7 +5262,8 @@
       "symbol": "SNX",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F/logo.png",
       "assetGroup": "SNX",
-      "currencyId": "Synthetix Network Token::SNX"
+      "currencyId": "Synthetix Network Token::SNX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x00a49a868d3fb149483a69045e1ed01e8c812ff0": {
       "chainId": "137",
@@ -5872,7 +5886,8 @@
       "symbol": "UNI",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/UNI.webp",
       "assetGroup": "UNI",
-      "currencyId": "Uniswap::UNI"
+      "currencyId": "Uniswap::UNI",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xabeb34c52292c5f3ee96396e02d8a77c8a903a4f": {
       "chainId": "137",
@@ -7622,6 +7637,7 @@
       "currencyId": "tBTC::tBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
@@ -8418,11 +8434,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -8901,7 +8913,14 @@
       "symbol": "wUSDM",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x57f5e098cad7a3d1eed53991d4d66c45c9af7812/small/token-logo.png",
       "assetGroup": "WUSDM",
-      "currencyId": "Wrapped USDM::wUSDM"
+      "currencyId": "Wrapped USDM::wUSDM",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x27842334c55c01ddfe81bf687425f906816c5141": {
       "chainId": "137",
@@ -9013,11 +9032,7 @@
       "assetGroup": "Davos.xyz USD::DUSD",
       "currencyId": "Davos.xyz USD::DUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "davos", "name": "Davos", "kind": "protocol" }
       }
@@ -9362,11 +9377,7 @@
       "assetGroup": "STAR Token::STAR",
       "currencyId": "STAR Token::STAR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "preon", "name": "Preon", "kind": "protocol" }
       }
@@ -9381,6 +9392,11 @@
       "assetGroup": "EUROe Stablecoin::EUROe",
       "currencyId": "EUROe Stablecoin::EUROe",
       "props": {
+        "risk": {
+          "score": 3,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "membrane",
@@ -9399,6 +9415,7 @@
       "assetGroup": "Verified USD::USDV",
       "currencyId": "Verified USD::USDV",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "verified-usd",
@@ -10507,7 +10524,8 @@
       "symbol": "BRZ",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x4ed141110f6eeeaba9a1df36d8c26f684d2475dc/small/token-logo.png",
       "assetGroup": "Brazilian Digital::BRZ",
-      "currencyId": "Brazilian Digital::BRZ"
+      "currencyId": "Brazilian Digital::BRZ",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x9cd6746665d9557e1b9a775819625711d0693439": {
       "chainId": "137",
@@ -10680,8 +10698,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -10859,9 +10877,7 @@
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x37b8e1152fb90a867f3dcca6e8d537681b04705e/small/token-logo.png",
       "assetGroup": "Proto Gyro Dollar::p-GYD",
       "currencyId": "Proto Gyro Dollar::p-GYD",
-      "props": {
-        "risk": { "score": 5, "category": "STABLECOIN", "source": "stablecoin" }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb7f1219db39ea0cb029e4dcc3daffdcfd233defd": {
       "chainId": "137",
@@ -11627,7 +11643,14 @@
       "symbol": "EUTBL",
       "logoURI": "https://assets.coingecko.com/coins/images/39657/thumb/EUTBL.png?1723517425",
       "assetGroup": "Spiko EU T-Bills Money Market Fund::EUTBL",
-      "currencyId": "Spiko EU T-Bills Money Market Fund::EUTBL"
+      "currencyId": "Spiko EU T-Bills Money Market Fund::EUTBL",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0xc4ce1d6f5d98d65ee25cf85e9f2e9dcfee6cb5d6": {
       "chainId": "137",
@@ -11671,7 +11694,14 @@
       "symbol": "USTBL",
       "logoURI": "https://assets.coingecko.com/coins/images/39666/thumb/USTB.png?1723541269",
       "assetGroup": "Spiko US T-Bills Money Market Fund::USTBL",
-      "currencyId": "Spiko US T-Bills Money Market Fund::USTBL"
+      "currencyId": "Spiko US T-Bills Money Market Fund::USTBL",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x80eede496655fb9047dd39d9f418d5483ed600df": {
       "chainId": "137",
@@ -11695,6 +11725,11 @@
               "peers": { "252": "0x96a394058e2b84a89bac9667b19661ed003cf5d4" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
@@ -11750,11 +11785,7 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -11833,6 +11864,11 @@
       "assetGroup": "Monerium EUR emoney::EURe",
       "currencyId": "Monerium EUR emoney::EURe",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "monerium",
@@ -11895,11 +11931,7 @@
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "dforce", "name": "dForce", "kind": "protocol" }
       }
@@ -11934,11 +11966,7 @@
       "assetGroup": "BiLira::TRYB",
       "currencyId": "BiLira::TRYB",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "TRY" },
         "issuer": { "id": "bilira", "name": "BiLira", "kind": "institution" }
       }
@@ -12177,11 +12205,7 @@
       "assetGroup": "Worldwide USD::WUSD",
       "currencyId": "Worldwide USD::WUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -12382,7 +12406,11 @@
       "symbol": "USDN",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x013f9c3fac3e2759d7e90aca4f9540f75194a0d7/small/token-logo.png",
       "assetGroup": "Neutrino Index Token::USDN",
-      "currencyId": "Neutrino Index Token::USDN"
+      "currencyId": "Neutrino Index Token::USDN",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xd24157aa1097486dc9d7cf094a7e15026e566b5d": {
       "chainId": "137",
@@ -12404,11 +12432,7 @@
       "assetGroup": "VNX EURO::VEUR",
       "currencyId": "VNX EURO::VEUR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
       }
@@ -14726,11 +14750,7 @@
       "assetGroup": "ARYZE eEUR::eEUR",
       "currencyId": "ARYZE eEUR::eEUR",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "aryze", "name": "ARYZE", "kind": "institution" }
       }
@@ -14975,11 +14995,7 @@
       "assetGroup": "Stabl.fi CASH::CASH",
       "currencyId": "Stabl.fi CASH::CASH",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "stabl", "name": "Stabl.fi", "kind": "protocol" }
       }
@@ -15447,11 +15463,7 @@
       "assetGroup": "Num ARS::nARS",
       "currencyId": "Num ARS::nARS",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "ARS" },
         "issuer": {
           "id": "num-finance",
@@ -15800,11 +15812,7 @@
       "assetGroup": "ARYZE eUSD::eUSD",
       "currencyId": "ARYZE eUSD::eUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aryze", "name": "ARYZE", "kind": "institution" }
       }
@@ -16259,11 +16267,7 @@
       "assetGroup": "ARYZE eGBP::eGBP",
       "currencyId": "ARYZE eGBP::eGBP",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "aryze", "name": "ARYZE", "kind": "institution" }
       }
@@ -17868,11 +17872,7 @@
       "assetGroup": "uaht.io::UAHT",
       "currencyId": "uaht.io::UAHT",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "UAH" },
         "issuer": { "id": "uaht", "name": "UAHT", "kind": "institution" }
       }
@@ -18277,6 +18277,7 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
@@ -20280,6 +20281,7 @@
       "assetGroup": "Gyroscope GYD::GYD::137::0",
       "currencyId": "Gyroscope GYD::GYD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "gyroscope", "name": "Gyroscope", "kind": "protocol" }
       }
@@ -22541,7 +22543,6 @@
       "assetGroup": "nUSD::nUSD",
       "currencyId": "nUSD::nUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "synapse", "name": "Synapse", "kind": "protocol" }
       }
     },
@@ -22679,7 +22680,11 @@
       "currencyId": "Staked EURA::stEUR",
       "props": {
         "savings": { "underlying": "EURA", "base": "EUR" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -22696,7 +22701,7 @@
         "risk": {
           "score": 5,
           "category": "DISCONTINUED",
-          "source": "whitelist"
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -23060,6 +23065,11 @@
               }
             }
           ]
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "EUR" },
         "issuer": {
@@ -26249,6 +26259,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
@@ -27211,7 +27226,8 @@
       "symbol": "RYT",
       "logoURI": "https://cdn.morpho.org/assets/logos/ryt.svg",
       "assetGroup": "Real Yield Token::RYT",
-      "currencyId": "Real Yield Token::RYT"
+      "currencyId": "Real Yield Token::RYT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x64445f0aecc51e94ad52d8ac56b7190e764e561a": {
       "chainId": "137",
@@ -27259,6 +27275,7 @@
       "assetGroup": "US Permissionless Dollar::USPD",
       "currencyId": "US Permissionless Dollar::USPD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "uspd", "name": "USPD", "kind": "protocol" }
       }
@@ -27293,6 +27310,7 @@
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "allunity",
@@ -27385,11 +27403,7 @@
       "assetGroup": "Quantoz EURQ::EURQ",
       "currencyId": "Quantoz EURQ::EURQ",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -27417,11 +27431,7 @@
       "assetGroup": "Quantoz USDQ::USDQ",
       "currencyId": "Quantoz USDQ::USDQ",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30109,
           "routes": [
@@ -27781,7 +27791,8 @@
       "symbol": "TESOURO",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0xd574b191b5a00262ff19953d3ce25543ab7c8098/small/token-logo.png",
       "assetGroup": "Etherfuse TESOURO::TESOURO",
-      "currencyId": "Etherfuse TESOURO::TESOURO"
+      "currencyId": "Etherfuse TESOURO::TESOURO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x070c3e8a408bbacc61f40ef023d30e173f268f5e": {
       "chainId": "137",
@@ -28053,7 +28064,8 @@
       "address": "0x067572c964b1500d2283547f162bcddebbdf091d",
       "symbol": "wCTFyes",
       "assetGroup": "Wrapped CTF Token::wCTFyes",
-      "currencyId": "Wrapped CTF Token::wCTFyes"
+      "currencyId": "Wrapped CTF Token::wCTFyes",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x06fbe6eb25f600ef51a64039f46b7dfddf2a4031": {
       "chainId": "137",
@@ -28062,7 +28074,8 @@
       "address": "0x06fbe6eb25f600ef51a64039f46b7dfddf2a4031",
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF",
-      "currencyId": "Ylop Wrapped CTF::ylopwCTF"
+      "currencyId": "Ylop Wrapped CTF::ylopwCTF",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0c09d749763fee4c8233fd3da5b3b30969679346": {
       "chainId": "137",
@@ -28071,7 +28084,8 @@
       "address": "0x0c09d749763fee4c8233fd3da5b3b30969679346",
       "symbol": "test-loan-semi",
       "assetGroup": "Test-Loan-SEMI::test-loan-semi",
-      "currencyId": "Test-Loan-SEMI::test-loan-semi"
+      "currencyId": "Test-Loan-SEMI::test-loan-semi",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0dfb06000a38a681e8c19787dddbb7d37315753b": {
       "chainId": "137",
@@ -28080,7 +28094,8 @@
       "address": "0x0dfb06000a38a681e8c19787dddbb7d37315753b",
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO",
-      "currencyId": "Mock Recession NO::MRCNO"
+      "currencyId": "Mock Recession NO::MRCNO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0f7ca6f47b48ee9710724f8af7455ee83f22be30": {
       "chainId": "137",
@@ -28089,7 +28104,8 @@
       "address": "0x0f7ca6f47b48ee9710724f8af7455ee83f22be30",
       "symbol": "test-collateral-usdc",
       "assetGroup": "Test-Collateral-USDC::test-collateral-usdc",
-      "currencyId": "Test-Collateral-USDC::test-collateral-usdc"
+      "currencyId": "Test-Collateral-USDC::test-collateral-usdc",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0fbd9a3c21837a8099a96e22f8a77e97d18b8835": {
       "chainId": "137",
@@ -28099,7 +28115,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::0fbd9a3c",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x1c2d652f68a4654f9c135de36759a1181f622049": {
       "chainId": "137",
@@ -28109,7 +28129,11 @@
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO::suspicious::1c2d652f",
       "currencyId": "Mock Recession NO::MRCNO",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x2ceb0cb6bbbbea6f3dead524bccbcc26bc99df9b": {
       "chainId": "137",
@@ -28118,7 +28142,8 @@
       "address": "0x2ceb0cb6bbbbea6f3dead524bccbcc26bc99df9b",
       "symbol": "wRNT",
       "assetGroup": "Wrapped Recession NO Token::wRNT",
-      "currencyId": "Wrapped Recession NO Token::wRNT"
+      "currencyId": "Wrapped Recession NO Token::wRNT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x33eef5d955da603208dec0d710c7285ff4a4f379": {
       "chainId": "137",
@@ -28127,7 +28152,8 @@
       "address": "0x33eef5d955da603208dec0d710c7285ff4a4f379",
       "symbol": "mockUSDC",
       "assetGroup": "Mock USD Coin::mockUSDC",
-      "currencyId": "Mock USD Coin::mockUSDC"
+      "currencyId": "Mock USD Coin::mockUSDC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x363e05d4c3f8c31ad00bc574e1e2fb26fa72f582": {
       "chainId": "137",
@@ -28137,7 +28163,11 @@
       "symbol": "mockUSDC",
       "assetGroup": "Mock USD Coin::mockUSDC::suspicious::363e05d4",
       "currencyId": "Mock USD Coin::mockUSDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x46f6921bb12309bd87779ac8915462faacbe9fcf": {
       "chainId": "137",
@@ -28147,7 +28177,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::46f6921b",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x50d0551432676b43798649715845064b8b8899ed": {
       "chainId": "137",
@@ -28157,7 +28191,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::50d05514",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x54875329eccb92d40cb0a6c30d6c26fae83e0efb": {
       "chainId": "137",
@@ -28167,7 +28205,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::54875329",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x747c5736b2b85b250e0cf5efdd39986d925f6530": {
       "chainId": "137",
@@ -28177,7 +28219,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::747c5736",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x77737b6908400fef8ecbfc4efa57cd789999e3af": {
       "chainId": "137",
@@ -28187,7 +28233,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::77737b69",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x7e346fc75267f63c1320d423f42af4a0d61a7b37": {
       "chainId": "137",
@@ -28197,7 +28247,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::7e346fc7",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x873a80cd6ca67670352812cb0cc0ec974f3f76d5": {
       "chainId": "137",
@@ -28207,7 +28261,11 @@
       "symbol": "wRNT",
       "assetGroup": "Wrapped Recession NO Token::wRNT::suspicious::873a80cd",
       "currencyId": "Wrapped Recession NO Token::wRNT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x88cd3ffc11ec1cefbb46b58e67de61af29242765": {
       "chainId": "137",
@@ -28217,7 +28275,11 @@
       "symbol": "wCTFyes",
       "assetGroup": "Wrapped CTF Token::wCTFyes::suspicious::88cd3ffc",
       "currencyId": "Wrapped CTF Token::wCTFyes",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x89879fc7d5af81fc8299fa1d2a56590e83a65df8": {
       "chainId": "137",
@@ -28227,7 +28289,11 @@
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO::suspicious::89879fc7",
       "currencyId": "Mock Recession NO::MRCNO",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x905e456b4839b0b735c7c52377d767d2ea69628e": {
       "chainId": "137",
@@ -28237,7 +28303,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::905e456b",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x91a8cbd409ff6d85da828f2a22d66757ea083084": {
       "chainId": "137",
@@ -28247,7 +28317,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::91a8cbd4",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9554c33f0f1b6c3d66278a0c3933798becb91bde": {
       "chainId": "137",
@@ -28257,7 +28331,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::9554c33f",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9900ff09e8be34cf4f9053007fb7a610288d28c2": {
       "chainId": "137",
@@ -28267,7 +28345,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::9900ff09",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9d4f6151e16819825a990d7612059abb712c62b6": {
       "chainId": "137",
@@ -28277,7 +28359,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::9d4f6151",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9da51f441748661063f832bb44286a8ec3114f71": {
       "chainId": "137",
@@ -28287,7 +28373,11 @@
       "symbol": "test-collateral-usdc",
       "assetGroup": "Test-Collateral-USDC::test-collateral-usdc::suspicious::9da51f44",
       "currencyId": "Test-Collateral-USDC::test-collateral-usdc",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xa3563a700c667baaae6691782d208c8b1a6aad75": {
       "chainId": "137",
@@ -28297,7 +28387,11 @@
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO::suspicious::a3563a70",
       "currencyId": "Mock Recession NO::MRCNO",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xac5e7adedd10655355275955287bb080809417cd": {
       "chainId": "137",
@@ -28307,7 +28401,11 @@
       "symbol": "mockUSDC",
       "assetGroup": "Mock USD Coin::mockUSDC::suspicious::ac5e7ade",
       "currencyId": "Mock USD Coin::mockUSDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb1b52134f9cd0f3e84e5861bcb444d4df2a1ac80": {
       "chainId": "137",
@@ -28317,7 +28415,11 @@
       "symbol": "mockUSDC",
       "assetGroup": "Mock USD Coin::mockUSDC::suspicious::b1b52134",
       "currencyId": "Mock USD Coin::mockUSDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb49e4e554fc498be6a3cf1c63efbf613ff0d5cfd": {
       "chainId": "137",
@@ -28327,7 +28429,11 @@
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO::suspicious::b49e4e55",
       "currencyId": "Mock Recession NO::MRCNO",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb906c022c6f68e4fb14b1426c0760d52e65236b2": {
       "chainId": "137",
@@ -28337,7 +28443,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::b906c022",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xbc9f0b78a80c4ebc2a3f7003665112a8bb31ede1": {
       "chainId": "137",
@@ -28347,7 +28457,11 @@
       "symbol": "test-collateral-usdc",
       "assetGroup": "Test-Collateral-USDC::test-collateral-usdc::suspicious::bc9f0b78",
       "currencyId": "Test-Collateral-USDC::test-collateral-usdc",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xcf9d933a52db7347b8a813347e4a892b37756053": {
       "chainId": "137",
@@ -28357,7 +28471,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::cf9d933a",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xd3b996eefe450db00dd0c1dce03faba5f9e675f7": {
       "chainId": "137",
@@ -28367,7 +28485,11 @@
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO::suspicious::d3b996ee",
       "currencyId": "Mock Recession NO::MRCNO",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xd82902024b32dfe8ce34a85b94194db3d8f8b45e": {
       "chainId": "137",
@@ -28377,7 +28499,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::d8290202",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xdac671baee0176012ea8e4b30ef824ac8a210c5e": {
       "chainId": "137",
@@ -28387,7 +28513,11 @@
       "symbol": "mockUSDC",
       "assetGroup": "Mock USD Coin::mockUSDC::suspicious::dac671ba",
       "currencyId": "Mock USD Coin::mockUSDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xdf8eed0577a97235d2405d7ea8f9cf27732f9b0e": {
       "chainId": "137",
@@ -28397,7 +28527,11 @@
       "symbol": "wRNT",
       "assetGroup": "Wrapped Recession NO Token::wRNT::suspicious::df8eed05",
       "currencyId": "Wrapped Recession NO Token::wRNT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xe89ed8292b77f5046ccc9240132e68c862e8d8f0": {
       "chainId": "137",
@@ -28407,7 +28541,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::e89ed829",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xebaa2620e71565d0b4bfa67d373fe085bd47d743": {
       "chainId": "137",
@@ -28417,7 +28555,11 @@
       "symbol": "ylopwCTF",
       "assetGroup": "Ylop Wrapped CTF::ylopwCTF::suspicious::ebaa2620",
       "currencyId": "Ylop Wrapped CTF::ylopwCTF",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xec33078263ef1d7657319090923c73e6cd42471a": {
       "chainId": "137",
@@ -28427,7 +28569,11 @@
       "symbol": "test-loan-semi",
       "assetGroup": "Test-Loan-SEMI::test-loan-semi::suspicious::ec330782",
       "currencyId": "Test-Loan-SEMI::test-loan-semi",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf694d0d45d6c99c8362dce1db9c328816b29a0cc": {
       "chainId": "137",
@@ -28437,7 +28583,11 @@
       "symbol": "MRCNO",
       "assetGroup": "Mock Recession NO::MRCNO::suspicious::f694d0d4",
       "currencyId": "Mock Recession NO::MRCNO",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf7dce80c54904d13c614adb471ec31ab1a946cf4": {
       "chainId": "137",
@@ -28447,7 +28597,11 @@
       "symbol": "wRNT",
       "assetGroup": "Wrapped Recession NO Token::wRNT::suspicious::f7dce80c",
       "currencyId": "Wrapped Recession NO Token::wRNT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf7f85a4b8c58fb5cfc491af91bd271747bbb458b": {
       "chainId": "137",
@@ -28457,7 +28611,11 @@
       "symbol": "test-loan-semi",
       "assetGroup": "Test-Loan-SEMI::test-loan-semi::suspicious::f7f85a4b",
       "currencyId": "Test-Loan-SEMI::test-loan-semi",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xe1f0402104089e3663f86dfecd9eee057e462236": {
       "chainId": "137",
@@ -28487,7 +28645,8 @@
       "symbol": "sPOL",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0xd1cd49a08aef3af93457aec17c786c2b7f48ecd7/small/token-logo.png",
       "assetGroup": "sPOL::sPOL",
-      "currencyId": "sPOL::sPOL"
+      "currencyId": "sPOL::sPOL",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb": {
       "chainId": "137",
@@ -28724,6 +28883,15 @@
       "symbol": "MARCO",
       "assetGroup": "MELEGA::MARCO",
       "currencyId": "MELEGA::MARCO"
+    },
+    "0x220b60aeafa5cfa22d92c20dc2f0ff4a389bb152": {
+      "chainId": "137",
+      "decimals": 18,
+      "name": "TTAJ",
+      "address": "0x220b60aeafa5cfa22d92c20dc2f0ff4a389bb152",
+      "symbol": "TTAJ",
+      "assetGroup": "TTAJ::TTAJ::137::0",
+      "currencyId": "TTAJ::TTAJ"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "137",

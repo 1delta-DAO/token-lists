@@ -34,6 +34,11 @@
           "ptAddress": "0x9a09a9e491db3dd8ada5b1b889991ac9ad5fd362",
           "ytAddress": "0x5e67c8d19eea0fd0d0da35e4008b56e87c931724"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -72,6 +77,7 @@
           "ptAddress": "0x5ea1f184af5ced57725213d8267b5c4c834557d4",
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -96,6 +102,7 @@
           "ptAddress": "0x9a09a9e491db3dd8ada5b1b889991ac9ad5fd362",
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -119,6 +126,11 @@
           "underlyingAsset": "0x4ae46a509f6b1d9056937ba4500cb143933d2dc8",
           "ytAddress": "0x5b4308e22ab59aae80cbf37089c528a125d2a34d",
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -171,6 +183,11 @@
           "underlyingAsset": "0x4ae46a509f6b1d9056937ba4500cb143933d2dc8",
           "ytAddress": "0x5e67c8d19eea0fd0d0da35e4008b56e87c931724",
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "whitelist"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -245,6 +262,11 @@
       "currencyId": "NVIDIA xStock::NVDAX",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -10632,6 +10654,7 @@
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
@@ -10733,6 +10756,11 @@
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -10771,7 +10799,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38360/thumb/weth.png?1717175703",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xd077abe1663166c0920d41fd37ea2d9a00fabd40": {
       "chainId": "196",
@@ -10938,6 +10969,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -10953,6 +10989,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -11080,6 +11117,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -11106,6 +11148,11 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -11223,6 +11270,11 @@
               }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
@@ -11347,6 +11399,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
       }
@@ -11375,8 +11432,9 @@
       "assetGroup": "OKX Wrapped BTC::xBTC",
       "currencyId": "OKX Wrapped BTC::xBTC",
       "props": {
-        "issuer": { "id": "okx", "name": "OKX", "kind": "cex" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
+        "issuer": { "id": "okx", "name": "OKX", "kind": "cex" }
       }
     },
     "0x505000008de8748dbd4422ff4687a4fc9beba15b": {
@@ -11387,7 +11445,10 @@
       "symbol": "XSOL",
       "logoURI": "https://assets.coingecko.com/coins/images/71715/thumb/okxsol.png?1769055437",
       "assetGroup": "OKX Wrapped SOL::XSOL",
-      "currencyId": "OKX Wrapped SOL::XSOL"
+      "currencyId": "OKX Wrapped SOL::XSOL",
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0xe7b000003a45145decf8a28fc755ad5ec5ea025a": {
       "chainId": "196",
@@ -11397,7 +11458,10 @@
       "symbol": "XETH",
       "logoURI": "https://assets.coingecko.com/coins/images/71719/thumb/xeth.png?1769060815",
       "assetGroup": "OKX Wrapped ETH::XETH",
-      "currencyId": "OKX Wrapped ETH::XETH"
+      "currencyId": "OKX Wrapped ETH::XETH",
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0xfdc4a45a4bf53957b2c73b1ff323d8cbe39118dd": {
       "chainId": "196",
@@ -11416,7 +11480,8 @@
       "address": "0x14a686103854dab7b8801e31979caa595835b25d",
       "symbol": "xOKSOL",
       "assetGroup": "OKX Wrapped Staked SOL::xOKSOL",
-      "currencyId": "OKX Wrapped Staked SOL::xOKSOL"
+      "currencyId": "OKX Wrapped Staked SOL::xOKSOL",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xafeab3b85b6a56cf5f02317f0f7a23340eb983d7": {
       "chainId": "196",
@@ -11425,7 +11490,10 @@
       "address": "0xafeab3b85b6a56cf5f02317f0f7a23340eb983d7",
       "symbol": "xBETH",
       "assetGroup": "OKX Wrapped Staked ETH::xBETH",
-      "currencyId": "OKX Wrapped Staked ETH::xBETH"
+      "currencyId": "OKX Wrapped Staked ETH::xBETH",
+      "props": {
+        "risk": { "score": 2, "category": "LST", "source": "whitelist" }
+      }
     },
     "0xde6539018b095353a40753dc54c91c68c9487d4e": {
       "chainId": "196",
@@ -11437,6 +11505,11 @@
       "assetGroup": "GHO",
       "currencyId": "Gho Token::GHO",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
       }
@@ -11491,6 +11564,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "river", "name": "River", "kind": "protocol" }
       }
@@ -11504,7 +11582,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/6319/thumb/USDC.png?1769615602",
       "assetGroup": "USDC",
       "currencyId": "USDC::USDC",
-      "props": { "denomination": "USDC" }
+      "props": {
+        "denomination": "USDC",
+        "risk": { "score": 1, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4fec966f98d8530507787d947d1ab24fa145a999": {
       "chainId": "196",

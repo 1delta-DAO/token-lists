@@ -13,6 +13,7 @@
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "risk": { "score": 3, "category": "LST", "source": "issuer_inherit" },
         "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
@@ -27,6 +28,7 @@
       "currencyId": "pumpBTC::pumpBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
@@ -38,7 +40,8 @@
       "symbol": "SCORE",
       "logoURI": "https://assets.coingecko.com/coins/images/29469/thumb/score.png?1696528414",
       "assetGroup": "StakedCore::SCORE",
-      "currencyId": "StakedCore::SCORE"
+      "currencyId": "StakedCore::SCORE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xa5c4cd9ad4beda2ef1befece1ee16511ebcc41ad": {
       "chainId": "1116",
@@ -304,7 +307,8 @@
       "symbol": "suBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUBTC.webp",
       "assetGroup": "SUBTC",
-      "currencyId": "Sumerian BTC::suBTC"
+      "currencyId": "Sumerian BTC::suBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe56016187c0fb36f76c33d0d0b36b47648a42d0a": {
       "chainId": "1116",
@@ -357,6 +361,11 @@
       "currencyId": "USD Coin (Layer0 Bridge)::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -379,7 +388,14 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUUSD.webp",
       "assetGroup": "suUSD::Sumerian USD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x1a639e150d2210a4be4a5f0857a9151b241e7ae4": {
       "chainId": "1116",
@@ -411,6 +427,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -918,7 +939,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/55488/thumb/dualCORE.png?1746263021",
       "assetGroup": "b14g dualCORE::DUALCORE",
       "currencyId": "b14g dualCORE::DUALCORE",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x0fd98374ee05d059885ba70988ea2d072f6fd981": {
       "chainId": "1116",
@@ -970,7 +991,10 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x00000000efe302beaa2b3e6e1b18d08d69a9012a": {
       "chainId": "1116",
@@ -982,6 +1006,11 @@
       "assetGroup": "AUSD",
       "currencyId": "AUSD::AUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "agora", "name": "Agora", "kind": "institution" }
       }
@@ -997,6 +1026,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },

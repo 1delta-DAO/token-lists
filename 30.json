@@ -13,6 +13,11 @@
       "currencyId": "Midas mTBILL::MTBILL",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
@@ -28,6 +33,7 @@
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "risk": { "score": 3, "category": "LST", "source": "issuer_inherit" },
         "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
@@ -439,7 +445,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69466/thumb/weth_2.jpg?1758701596",
       "assetGroup": "ETH",
       "currencyId": "WETH::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": {
+          "score": 3,
+          "category": "BRIDGED",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x967f8799af07df1534d48a95a5c9febe92c53ae0": {
       "chainId": "30",
@@ -544,6 +557,11 @@
               }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }

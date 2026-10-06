@@ -95,6 +95,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -382,6 +383,7 @@
                 "999": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
+                "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "8453": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "42161": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "43114": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c"
@@ -429,7 +431,8 @@
       "symbol": "miMATIC",
       "logoURI": "https://assets.coingecko.com/coins/images/15264/thumb/mimatic-red.png?1696514916",
       "assetGroup": "MIMATIC",
-      "currencyId": "Mai Stablecoin::miMATIC"
+      "currencyId": "Mai Stablecoin::miMATIC",
+      "props": { "risk": { "score": 2, "source": "issuer_inherit" } }
     },
     "0x66673f0a3b5d99524ba76a558b93a9ca1386f4cd": {
       "chainId": "1088",
@@ -595,6 +598,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -647,6 +655,11 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }

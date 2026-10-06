@@ -18,6 +18,7 @@
           "issuer": "tether",
           "underlying": "XAU"
         },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30396,
           "routes": [
@@ -57,6 +58,7 @@
       "currencyId": "Lombard Staked Bitcoin::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -68,7 +70,8 @@
       "symbol": "testWETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/testweth.svg",
       "assetGroup": "Test Wrapped ETH::testWETH",
-      "currencyId": "Test Wrapped ETH::testWETH"
+      "currencyId": "Test Wrapped ETH::testWETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb0f70c0bd6fd87dbeb7c10dc692a2a6106817072": {
       "chainId": "988",
@@ -79,7 +82,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/btc.b.svg",
       "assetGroup": "BTC",
       "currencyId": "Bitcoin::BTC.b",
-      "props": { "denomination": "BTC" }
+      "props": {
+        "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" }
+      }
     },
     "0x779ded0c9e1022225f8e0630b35a9b54be713736": {
       "chainId": "988",
@@ -124,6 +130,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -156,7 +167,8 @@
               }
             }
           ]
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x5bff88ca1442c2496f7e475e9e7786383bc070c0": {
@@ -183,6 +195,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
@@ -195,7 +212,8 @@
       "symbol": "testwstETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/testwsteth.svg",
       "assetGroup": "Test Wrapped stETH::testwstETH",
-      "currencyId": "Test Wrapped stETH::testwstETH"
+      "currencyId": "Test Wrapped stETH::testwstETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0000000000000000000000000000000000001003": {
       "chainId": "988",
@@ -236,6 +254,11 @@
       "currencyId": "sthUSD::sthUSD",
       "props": {
         "savings": { "underlying": "thUSD", "base": "USD" },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },

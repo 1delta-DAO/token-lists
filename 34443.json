@@ -13,7 +13,7 @@
       "currencyId": "Inception Restaked ETH::INETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
@@ -257,7 +257,7 @@
       "currencyId": "Wrapped rsETH::WRSETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 5, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -374,6 +374,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -434,6 +439,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -448,6 +458,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -508,6 +523,7 @@
       "currencyId": "uniBTC::uniBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -624,6 +640,7 @@
       "currencyId": "Merlin BTC::M-BTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
@@ -710,6 +727,7 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -864,8 +882,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -893,6 +911,11 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
