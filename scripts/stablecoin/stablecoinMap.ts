@@ -43,6 +43,13 @@ function loadSymbolSnapshot(): StablecoinSymbolMap {
 /** Curated overrides keyed by assetGroup. These WIN over the snapshot. */
 export const STABLECOIN_MANUAL: StablecoinGroupMap = {
   // 'USDC': { base: 'USD' },
+  // Solana dollars Jupiter tags `stable` but whose name / ticker carries no money for `pegBase` to read,
+  // so they shipped as `stablecoin: {}` — and a consumer that asks a token's money (YieldCircle's desks)
+  // read every USX- and CASH-borrowed loop as "not mapped" (11 Kamino / Loopscale pairs, 2026-10-07).
+  'USX::USX::solana': { base: 'USD' }, // Solstice USX (6FrrzDk5…), the dollar eUSX stakes
+  'CASH::CASH::solana': { base: 'USD' }, // Phantom CASH (CASHx9KJ…), issued through Bridge (Stripe)
+  // Hastra wYLDS — Figure's YLDS wrapped 1:1 against USDC (vault-mint), on 1 / 4217 / Solana
+  'Hastra wYLDS::wYLDS': { base: 'USD' },
 }
 
 export const STABLECOIN_MAP: StablecoinGroupMap = { ...loadSnapshot(), ...STABLECOIN_MANUAL }

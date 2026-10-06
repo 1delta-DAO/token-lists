@@ -292,6 +292,9 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // earlier "whitelist-gated" flag no longer holds. ---
   'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
   'Hastra AUTO::AUTO': { underlying: 'wYLDS', base: 'USD' },
+  // Solstice eUSX (Solana): USX staked in the YieldVault, a rising price. Jupiter tags it `yb` but
+  // `savingsFromTags` cannot read a money off "eUSX", so it shipped as `savings: {}`.
+  'eUSX::eUSX::solana': { underlying: 'USX', base: 'USD' },
 
   // --- Exponent senior tranches (Solana) — the senior LP of an Exponent
   // tranching market: a protected share of the base asset's yield, paid as a
