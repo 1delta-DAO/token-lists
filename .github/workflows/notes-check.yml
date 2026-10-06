@@ -1,0 +1,37 @@
+name: Asset notes
+
+# Gate for the hand-written asset notes (scripts/notes/notes.json): every key is
+# a live assetGroup, every `what` fits its 90-char line, and asset-notes.json was
+# regenerated after the edit. Its own workflow, like issuer-check.yml, so it never
+# blocks the nightly token-map PR.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notes-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: "scripts/package-lock.json"
+
+      - name: Install dependencies
+        working-directory: scripts
+        run: npm ci
+
+      - name: Notes are valid and asset-notes.json is current (notes:check)
+        working-directory: scripts
+        run: npm run notes:check

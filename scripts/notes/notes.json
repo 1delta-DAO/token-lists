@@ -1,0 +1,844 @@
+{
+  "USDC": { "what": "Circle stablecoin" },
+  "USDT": { "what": "Tether stablecoin · USDT0 on newer chains" },
+  "USDS": { "what": "Sky (Maker) stablecoin" },
+  "DAI": { "what": "Maker stablecoin" },
+  "USDE": { "what": "Ethena synthetic dollar · hedged ETH/BTC basis" },
+  "Global Dollar::USDG": { "what": "Paxos / Global Dollar Network stablecoin" },
+  "GHO": { "what": "Aave stablecoin" },
+  "PayPal USD::PYUSD": { "what": "PayPal stablecoin" },
+  "Ripple USD::RLUSD": { "what": "Ripple stablecoin" },
+  "AUSD": { "what": "Agora stablecoin" },
+  "FRXUSD": { "what": "Frax stablecoin" },
+  "CRVUSD": { "what": "Curve stablecoin" },
+  "DOLA": { "what": "Inverse Finance stablecoin" },
+  "USD1::USD1": { "what": "World Liberty stablecoin", "alsoGroups": ["World Liberty Financial USD::USD1"] },
+  "FRAX": { "what": "Frax stablecoin" },
+  "USDtb::USDTB": { "what": "Ethena / BlackRock BUIDL-backed dollar" },
+  "avUSD::avUSD": { "what": "Avant synthetic dollar" },
+  "Plume USD::pUSD": { "what": "Plume USD · USDC-backed stablecoin" },
+  "ETH": { "what": "Ether" },
+  "Wrapped Bitcoin::WBTC": { "what": "Wrapped bitcoin (BitGo)" },
+  "CBBTC": { "what": "Coinbase wrapped bitcoin" },
+  "tBTC::tBTC": { "what": "Threshold bitcoin", "alsoGroups": ["TBTC"] },
+  "LBTC": { "what": "Lombard staked bitcoin" },
+  "Bitcoin::BTC.b": { "what": "Avalanche bridged bitcoin (Core)" },
+  "BNB": { "what": "BNB Chain native coin" },
+  "AVAX": { "what": "Avalanche native coin" },
+  "HYPE": { "what": "Hyperliquid native coin" },
+  "SOL": { "what": "Solana native coin" },
+  "MON": { "what": "Monad native coin" },
+  "POL": { "what": "Polygon native coin (formerly MATIC)" },
+  "XPL": { "what": "Plasma native coin" },
+  "PLUME": { "what": "Plume native coin", "alsoGroups": ["Plume::PLUME"] },
+  "PATHUSD": { "what": "Tempo native coin · dollar-priced" },
+  "EURC": { "what": "Circle euro stablecoin", "alsoGroups": ["EURC::EURC"] },
+  "EUR CoinVertible::EURCV": { "what": "Société Générale euro stablecoin" },
+  "Tether Gold::XAUt": { "what": "Tether gold" },
+  "PAXG": { "what": "Paxos gold" },
+  "KBTC": {
+    "what": "Kraken wrapped bitcoin · 1:1 BTC held by Kraken",
+    "body": "kBTC is an ERC-20 wrapped bitcoin issued by Kraken on Ethereum, OP Mainnet, Unichain and Ink at the same address. Each token is backed 1:1 by BTC held in Kraken's custodial wallets, with the custody address published for verification. It earns no yield itself.",
+    "backing": "BTC held by Kraken (custodial)",
+    "redemption": "Kraken customers (outside restricted regions) deposit kBTC to Kraken and receive BTC 1:1; KYC via Kraken account",
+    "issuer": "Kraken",
+    "links": ["https://www.kraken.com/kbtc", "https://support.kraken.com/articles/what-is-kbtc"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Honest Abe::HA": {
+    "what": "Unverified token on Ethereum",
+    "body": "Unverified ERC-20 token on Ethereum named Honest Abe (HA). The contract source is not verified, it has 1,000,000 supply and only 2 holders, and no issuer, website or documentation could be found.",
+    "links": ["https://etherscan.io/token/0x88b608c0596f7865d77812db732d4a804bec5639"],
+    "updated": "2026-10-06",
+    "confidence": "low",
+    "verify": "Unidentified token: unverified contract, 2 holders, no price. Reported size is not credible."
+  },
+  "Circle Wrapped BTC::CIRBTC": {
+    "what": "Circle wrapped bitcoin · 1:1 BTC in segregated custody",
+    "body": "cirBTC is a wrapped bitcoin issued by Circle on Ethereum (launched June 2026) and Arc. Each token is backed 1:1 by native BTC held via Circle's Bermuda affiliate and custodied by Circle National Trust in segregated accounts for holders, with reserves verified on-chain through Chainlink Proof of Reserve. It earns no yield itself.",
+    "backing": "BTC held by Circle National Trust (custodial, segregated)",
+    "redemption": "Qualified businesses via Circle Mint redeem 1:1 for BTC; KYB required",
+    "issuer": "Circle",
+    "links": ["https://www.circle.com/cirbtc", "https://developers.circle.com/assets/what-is-cirbtc"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "World Liberty Financial::WLFI": {
+    "what": "World Liberty Financial governance token",
+    "body": "WLFI is the governance token of World Liberty Financial, the Trump-family-affiliated DeFi project behind the USD1 stablecoin. Holders vote on protocol proposals; the token does not represent ownership or a claim on protocol revenue. It was non-transferable until a 2025 tokenholder vote enabled trading.",
+    "backing": "none (governance token)",
+    "issuer": "World Liberty Financial",
+    "links": [
+      "https://docs.worldlibertyfinancial.com/wlfi-token/wlfi-risk-disclosures",
+      "https://www.coingecko.com/en/coins/world-liberty-financial"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Hastra PRIME::PRIME": {
+    "what": "Hastra staked wYLDS · Figure HELOC lending yield",
+    "body": "PRIME is a yield-bearing token from Hastra, a protocol incubated by Figure and the Provenance Blockchain Foundation. Users lock USDC for wYLDS (wrapped Figure YLDS) and stake wYLDS to mint PRIME, which earns interest from Figure's Democratized Prime facility that funds home equity lines of credit (HELOCs). Figure states it does not issue or sponsor PRIME.",
+    "backing": "HELOC loans via Figure Democratized Prime",
+    "yieldSource": "interest on HELOC warehouse lending",
+    "redemption": "Unstake to wYLDS any time, then redeem wYLDS for USDC after an unbonding period subject to redeem-vault liquidity; one pending redemption per address",
+    "issuer": "Hastra",
+    "links": ["https://help.hastra.io/prime/what-is-prime-(staked-wylds)", "https://hastra.io/proof-of-reserves"],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "PayFi Strategy Token::PST": {
+    "what": "Huma Finance PayFi LP token · USDC lent to payment financing",
+    "body": "PST is Huma Finance's yield-bearing LP token, minted when USDC is supplied to Huma's Classic mode; it originated on Solana and is also issued on Ethereum. Deposited USDC funds short-term real-world payment financing (PayFi), such as pre-funding of cross-border payments, and yield accrues to the token in USDC terms.",
+    "backing": "payment financing receivables (private credit)",
+    "yieldSource": "fees/interest from PayFi payment financing",
+    "redemption": "Redeem for USDC via Huma app subject to pool liquidity and any chosen lockup; or sell on DEX",
+    "issuer": "Huma Finance",
+    "links": [
+      "https://docs.huma.finance/products/huma-2.0/modes",
+      "https://etherscan.io/token/0x22ae3d9a738471f405169af055d31c687087d4c7"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "SYRUPUSDG": {
+    "what": "Maple yield vault on USDG · overcollateralized institutional loans",
+    "body": "syrupUSDG is a Maple Finance ERC-4626 pool token launched in July 2026; holders deposit Global Dollar (USDG) and receive shares in a pool of loans. The pool makes fixed-rate, overcollateralized loans to institutional borrowers managed by Maple, and interest accrues to the share price. It carries credit risk and possible principal loss.",
+    "backing": "overcollateralized institutional loans",
+    "yieldSource": "interest from Maple institutional lending",
+    "redemption": "Withdrawal requests usually filled near-instantly, up to ~24h, max 30 days depending on pool liquidity",
+    "issuer": "Maple Finance",
+    "links": [
+      "https://docs.maple.finance/syrupusdc-usdt-usdg-for-lenders/faq",
+      "https://governance.aave.com/t/maple-syrup-usdg-syrupusdg-on-aave-ethereum/25327"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Coinbase Wrapped XRP::CBXRP": {
+    "what": "Coinbase wrapped XRP · 1:1 XRP held by Coinbase",
+    "body": "cbXRP is an ERC-20 token on Base issued by Coinbase, backed 1:1 by native XRP held in Coinbase custody. It lets XRP be used in EVM DeFi and earns no yield itself.",
+    "backing": "XRP held by Coinbase (custodial)",
+    "redemption": "Coinbase customers convert cbXRP to XRP 1:1 via Coinbase account; KYC via Coinbase",
+    "issuer": "Coinbase",
+    "links": ["https://basescan.org/token/0xcb585250f852c6c6bf90434ab21a00f02833a4af"],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Staked Stream USD::xUSD": {
+    "what": "Stream Finance staked USD · collapsed Nov 2025, in wind-down",
+    "body": "xUSD is the staked vault token of Stream Finance, which deployed deposits into strategies run by external fund managers. In November 2025 Stream disclosed a ~$93M loss by an external manager, xUSD lost over 90% of its value, and the protocol is now in a wind-down to liquidate and distribute remaining assets to creditors.",
+    "backing": "impaired; residual assets in wind-down",
+    "redemption": "Normal redemptions halted; recovery depends on Stream wind-down distributions",
+    "issuer": "Stream Finance",
+    "links": ["https://app.streamprotocol.money", "https://cryptonews.net/news/defi/32844042/"],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "verify": "Defunct: Stream Finance collapsed Nov 2025; xUSD trades near $0.02."
+  },
+  "LINK": {
+    "what": "Chainlink oracle network token",
+    "body": "LINK is the native token of Chainlink, a decentralized oracle network that supplies price feeds, proof of reserve and cross-chain messaging (CCIP). It is used to pay node operators and for staking in Chainlink's staking program. It is bridged to many chains.",
+    "backing": "none (utility token)",
+    "issuer": "Chainlink",
+    "links": ["https://docs.chain.link/resources/link-token-contracts"],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "alsoGroups": ["ChainLink Token::LINK"]
+  },
+  "PT reUSD (USDC) Ethereum::PT-reUSD-10DEC2026": {
+    "what": "Pendle principal token on reUSD · fixed rate to 10 Dec 2026",
+    "body": "Pendle principal token that redeems 1:1 for reUSD's accounting asset (USDC) at maturity on 10 Dec 2026; its yield is the fixed discount to maturity. The underlying reUSD is Re Protocol's senior-tranche token, whose deposits back real-world reinsurance treaties via licensed reinsurers and earn a blend of reinsurance premiums and on-chain basis yield.",
+    "backing": "reUSD (reinsurance capital + stablecoins)",
+    "yieldSource": "fixed discount to maturity",
+    "redemption": "Redeem on Pendle at maturity for underlying (USDC value); before maturity sell on Pendle AMM",
+    "issuer": "Pendle / Re Protocol",
+    "links": [
+      "https://docs.re.xyz/protocol/how-the-re-protocol-works",
+      "https://etherscan.io/token/0xecfafdc7741323a945a163ed068b5a3c43483957"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "World Liberty Financial Custodial Asset::WLFIcx": {
+    "what": "Unverified WLFI-named custodial token on Ethereum",
+    "body": "Upgradeable ERC-20 on Ethereum named World Liberty Financial Custodial Asset, with about 2B supply held by only 4 addresses. No documentation from World Liberty Financial describing this token could be found, so its purpose and backing are unconfirmed.",
+    "links": ["https://etherscan.io/token/0x8af3b9d0e53186ae13b32fd783f42663bf48d389"],
+    "updated": "2026-10-06",
+    "confidence": "low",
+    "verify": "Not in World Liberty docs; 4 holders, no trading. May be an internal custody token or an impostor."
+  },
+  "Moons::MOON": {
+    "what": "r/CryptoCurrency community token (bridged from Arbitrum Nova)",
+    "body": "MOON is Reddit's r/CryptoCurrency community points token, originally native on Arbitrum Nova; this is the bridged copy on Arbitrum One. It was earned by subreddit contributions and is used for community governance; Reddit ended the Community Points program in 2023 and the token is now community-run.",
+    "backing": "none (community token)",
+    "issuer": "r/CryptoCurrency community",
+    "links": ["https://arbiscan.io/token/0x24404dc041d74cd03cfe28855f555559390c931b"],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "Genuine bridged MOON, but tiny (~$0.24m cap); a large reported size is a pricing error."
+  },
+  "RWA Backed Lending by Valos::vUSD": {
+    "what": "Valos private credit vault on Monad · AUSD lent to crypto institutions",
+    "body": "vUSD is the ERC-4626 share token of Valos's institutional credit vault on Monad, built on Accountable's vault infrastructure with real-time loan verification. AUSD deposits are lent to Valos, which runs a secured private credit book lending to market makers, prime brokers, exchanges and custodians; interest accrues to the vault.",
+    "backing": "secured private credit to crypto institutions",
+    "yieldSource": "interest on Valos institutional loans",
+    "redemption": "Daily redemption window to AUSD, min 100,000 AUSD; non-US professional or US accredited investors only",
+    "issuer": "Valos",
+    "links": [
+      "https://valos.io/announcements-and-insights/valos-launches-institutional-credit-vault-with-real-time-independent-verification",
+      "https://www.monad.xyz/blog/valos-accountable-institutional-credit-vault-monad"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Wrapped Savings rUSD::WSRUSD": {
+    "what": "Reservoir savings rUSD · yield from T-bills, lending, funding",
+    "body": "wsrUSD is the ERC-4626 wrapped savings version of Reservoir's rUSD stablecoin. rUSD is a multi-collateral stablecoin backed by real-world assets and on-chain strategies, including T-bills, overcollateralized lending and funding-rate strategies; their yield accrues to wsrUSD's exchange rate. wsrUSD has no lock-up and no fees.",
+    "backing": "T-bills, overcollateralized lending, funding-rate strategies",
+    "yieldSource": "Reservoir reserve strategies passed to savings rate",
+    "redemption": "Mint/redeem to rUSD any time, permissionless",
+    "issuer": "Reservoir",
+    "links": ["https://reservoir.xyz", "https://etherscan.io/token/0xd3fd63209fa2d55b07a0f6db36c2f43900be3094"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "ELITE::ELIT": {
+    "what": "Unverified token on Arbitrum",
+    "body": "Unverified ERC-20 on Arbitrum named ELITE (ELIT), an upgradeable proxy with 10B supply and only 4 holders. No issuer, website or documentation could be found.",
+    "links": ["https://arbiscan.io/token/0x5e021bf2ca47a17887d41f43af811912d572e4a2"],
+    "updated": "2026-10-06",
+    "confidence": "low",
+    "verify": "Unidentified token: 4 holders, no price, no transfers. Reported size is not credible."
+  },
+  "PT AUSD (AUSD) Monad::PT-AUSD-8OCT2026": {
+    "what": "Pendle principal token on Agora AUSD (Monad) · fixed rate to 8 Oct 2026",
+    "body": "Pendle principal token for the AUSD market on Monad, which redeems 1:1 for AUSD at maturity on 8 Oct 2026. AUSD is a dollar stablecoin issued by Agora, backed by cash, short-term US Treasuries and repo. AUSD itself does not accrue yield; the PT's fixed return is the discount to maturity, priced from whatever rewards accrue to the matching yield token.",
+    "backing": "AUSD (Agora; cash, T-bills, repo)",
+    "yieldSource": "Fixed discount to maturity",
+    "redemption": "Redeem 1:1 for AUSD via Pendle after 8 Oct 2026; before that, sell on the Pendle AMM",
+    "issuer": "Pendle (wrapper); Agora (AUSD)",
+    "links": ["https://app.pendle.finance/", "https://docs.pendle.finance/", "https://www.agora.finance/"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "United Stables::U": {
+    "what": "United Stables dollar stablecoin · fiat and stablecoin reserves",
+    "body": "U is a US-dollar stablecoin issued by United Stables Limited, mainly circulating on BNB Chain with deployments on Ethereum and other chains. Reserves are a mix of fiat at banks, other USD stablecoins (USDT, USDC, USD1) and tokenized short-term government bonds, held with qualified custodians. Chainlink Proof of Reserve publishes on-chain reserve data. U pays no yield.",
+    "backing": "Fiat, USD stablecoins (USDT/USDC/USD1), tokenized T-bills",
+    "redemption": "Eligible verified institutions can redeem for approved USD stablecoins through United Stables Limited; retail users exit on the market",
+    "issuer": "United Stables Limited",
+    "links": ["https://u.tech/", "https://u.tech/resources/white-paper/", "https://u.tech/por/"],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Midas Fasanara Global Open::MGLO": {
+    "what": "Midas tokenized note on Fasanara's trade-receivables credit fund",
+    "body": "mGLO is a limited-recourse note issued by Midas (through a compartment of a Luxembourg securitisation vehicle) that tracks Fasanara Capital's Global Diversified Alternative Debt strategy. The fund finances short-dated trade receivables: invoices sold by small and mid-size businesses, with payment owed by larger corporate debtors. Returns build up in the token's NAV, with no rebases or reward claims.",
+    "backing": "Private credit (trade receivables, Fasanara fund shares)",
+    "yieldSource": "Interest and discounts on trade-receivables financing, reflected in NAV",
+    "redemption": "KYC/greenlisted mint and redeem via Midas vaults; standard monthly cycle at NAV (about 35 days), with faster paid options (instant partial liquidity, OTC buyers) at a discount",
+    "issuer": "Midas (Fasanara Capital manages the strategy)",
+    "links": [
+      "https://docs.midas.app/resources/smart-contracts-addresses",
+      "https://kitchen.steakhouse.financial/p/midas-fasanara-mglo-in-morpho-onchain"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Superstate USCC::USCC": {
+    "what": "Superstate/Bitwise crypto carry fund · BTC/ETH basis trades",
+    "body": "USCC is a tokenized share of the Superstate Crypto Carry Fund, now managed with Bitwise. The fund runs cash-and-carry basis trades on Bitcoin and Ether (including staked ETH), and holds US Treasuries when basis returns are low. Returns build up in the share's NAV.",
+    "backing": "Delta-neutral BTC/ETH basis positions and US Treasuries",
+    "yieldSource": "Futures basis, ETH staking and Treasury interest",
+    "redemption": "Daily subscriptions and redemptions in USD or USDC for KYC'd, allowlisted investors (qualified purchasers); settles T+1/T+2",
+    "issuer": "Superstate (Bitwise as manager)",
+    "links": [
+      "https://docs.superstate.com/investors/tokenized-funds/available-funds/bitwise-uscc",
+      "https://superstate.com/assets/uscc"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Treehouse ETH::TETH": {
+    "what": "Treehouse liquid-staking wrapper on wstETH · rate-arbitrage yield",
+    "body": "tETH is Treehouse's yield-bearing receipt token, valued in wstETH. Pooled wstETH earns Lido staking rewards, and Treehouse adds yield by capturing the gap between staking returns and ETH borrowing rates on lending markets. Treehouse calls this extra yield Market Efficiency Yield. Yield is credited daily through a rising tETH:wstETH exchange rate.",
+    "backing": "wstETH (Lido staked ETH)",
+    "yieldSource": "ETH staking rewards plus leveraged staking-vs-borrow rate arbitrage",
+    "redemption": "Standard redemption to wstETH in about 7 days (small fee); faster exit available for a higher fee",
+    "issuer": "Treehouse",
+    "links": [
+      "https://docs.treehouse.finance/protocol/tasset/key-addresses",
+      "https://docs.treehouse.finance/protocol/tasset/architecture/redemption-process"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "alsoGroups": ["Treehouse ETH::tETH"]
+  },
+  "Janus Henderson Anemoy AAA CLO Fund Token::JAAA": {
+    "what": "Tokenized Janus Henderson AAA CLO fund (Centrifuge/Anemoy)",
+    "body": "JAAA is a permissioned token for shares of the Janus Henderson Anemoy AAA CLO Fund, issued through Anemoy on Centrifuge. Janus Henderson manages the portfolio of AAA-rated collateralized loan obligation tranches. The token's NAV rises as the portfolio's floating-rate interest is earned.",
+    "backing": "AAA-rated CLO tranches",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "redemption": "Subscriptions and redemptions in stablecoins for KYC'd, allowlisted investors via Centrifuge/Anemoy",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://www.anemoy.io/news/janus-henderson-anemoy-aaa-clo-onchain",
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Hyperithm Delta Neutral Vault::aHYPER": {
+    "what": "Hyperithm USDC vault on Monad · delta-neutral crypto strategies",
+    "body": "aHYPER is the share token of an asynchronous-redemption USDC vault on Monad, built on Accountable's vault infrastructure and listed on Accountable's YieldApp. Hyperithm, a digital asset manager based in Tokyo and Seoul, deploys the USDC across market-neutral strategies such as funding-rate arbitrage, Pendle PT positions, lending-rate arbitrage and liquidity provision. Accountable publishes verification data on the positions.",
+    "backing": "USDC deployed in delta-neutral strategies (off-chain and on-chain)",
+    "yieldSource": "Funding rates, basis, lending and Pendle fixed-rate spreads",
+    "redemption": "Asynchronous redemption, processed weekly; minimum 100 USDC",
+    "issuer": "Hyperithm (on Accountable)",
+    "links": ["https://yield.accountable.capital/", "https://app.rwa.xyz/assets/aHYPER"],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "SUSDX": {
+    "what": "Staked USDX (Stables Labs) · collapsed synthetic dollar",
+    "body": "sUSDX is the ERC-4626 staking vault for USDX, a synthetic dollar from Stables Labs that was meant to be backed by delta-neutral positions on several exchanges. USDX lost its peg in November 2025 and fell to around $0.3 or lower, amid allegations that the team minted unbacked USDX/sUSDX to borrow against it. The Ethereum sUSDX contract now has a tiny supply and trades near $0.01.",
+    "backing": "Nominally delta-neutral hedged positions; backing impaired after the Nov 2025 collapse",
+    "yieldSource": "Nominally funding-rate and basis yield (no longer credible)",
+    "redemption": "Cooldown-based unstake to USDX; USDX itself is not reliably redeemable",
+    "issuer": "Stables Labs",
+    "links": [
+      "https://docs.usdx.money/",
+      "https://beosin.com/resources/analysis-of-the-stables-labs-usdx-collapse-incident-and-fund-flow-tracing",
+      "https://www.theblock.co/post/377917/synthetic-stablecoin-usdx-depegs-pancakeswap-lista"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "Defunct: USDX collapsed Nov 2025; sUSDX trades near $0.01."
+  },
+  "APE": {
+    "what": "ApeCoin · ApeCoin DAO governance and ApeChain gas token",
+    "body": "ApeCoin is the governance and utility token of the ApeCoin DAO, which grew out of the Bored Ape Yacht Club ecosystem. Holders vote on DAO proposals and treasury use, and APE is the native gas token of ApeChain. It is not backed by any assets and earns nothing by itself.",
+    "backing": "none (governance token)",
+    "issuer": "ApeCoin DAO",
+    "links": ["https://apecoin.com/"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "dCOMP::dCOMP": {
+    "what": "API3 wrapper for COMP · 1:1, voting power delegated",
+    "body": "dCOMP is an ERC-20 wrapper by API3 that holds COMP 1:1 and delegates the wrapped COMP's Compound governance votes to an address set by the wrapper owner. Its main use is as collateral on Morpho (a dCOMP/USDC market), so COMP can be borrowed against while its voting power stays with the delegate. Only whitelisted addresses can wrap.",
+    "backing": "COMP held 1:1 in the wrapper",
+    "redemption": "Unwrap 1:1 to COMP via the wrapper contract",
+    "issuer": "API3",
+    "links": [
+      "https://github.com/api3dao/dcomp",
+      "https://app.morpho.org/ethereum/market/0x24852d8d7464402ddcd717415e009d42bf7427d6a8893487f83c75ee0f4a0ea6/usdc/dcomp"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Ripio Coin::RPC": {
+    "what": "Ripio Coin · rewards token of the Ripio exchange (LatAm)",
+    "body": "RPC is an ERC-20 token from Ripio, a Latin American crypto exchange and wallet operating since 2013. Ripio users earn RPC as in-app rewards for actions like verification, trading and referrals, and it is used for perks within Ripio's products. It is not backed by assets and earns nothing by itself.",
+    "backing": "none (utility/rewards token)",
+    "issuer": "Ripio",
+    "links": ["https://www.ripio.com/", "https://ethplorer.io/address/0xed025a9fe4b30bcd68460bca42583090c2266468"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Lista USD::lisUSD": {
+    "what": "Lista DAO overcollateralized CDP stablecoin on BNB Chain",
+    "body": "lisUSD (formerly HAY) is a decentralized, USD-soft-pegged stablecoin minted by Lista DAO on BNB Chain. Users mint it by locking crypto collateral such as BNB, slisBNB, ETH or BTCB in collateralized debt positions. The peg is maintained by overcollateralization, stability fees and liquidations.",
+    "backing": "Overcollateralized crypto (BNB, slisBNB, ETH, BTCB, etc.)",
+    "redemption": "No issuer redemption; borrowers repay lisUSD to unlock collateral, and holders exit via markets",
+    "issuer": "Lista DAO",
+    "links": ["https://docs.bsc.lista.org/introduction/collateral-debt-position-lisusd"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Ondo Short-Term US Government Treasuries::OUSG": {
+    "what": "Ondo tokenized short-term US Treasury fund",
+    "body": "OUSG is a token from Ondo Finance representing shares in a fund that holds short-term US Treasuries, mostly through tokenized money-market and Treasury funds such as BlackRock's BUIDL. Treasury interest builds up in the token's price.",
+    "backing": "Short-term US Treasuries (via funds such as BUIDL) and cash",
+    "yieldSource": "US Treasury bill interest",
+    "redemption": "KYC'd qualified investors on Ondo's allowlist can mint and redeem in stablecoins; instant mint/redeem is available within limits",
+    "issuer": "Ondo Finance",
+    "links": ["https://docs.ondo.finance/addresses", "https://ondo.finance/ousg"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "PT sUSDe (USDe) Plasma::PT-sUSDE-22OCT2026": {
+    "what": "Pendle principal token on sUSDe (Plasma) · fixed rate to 22 Oct 2026",
+    "body": "Pendle principal token for the sUSDe market on Plasma, which redeems 1:1 for USDe-equivalent value at maturity on 22 Oct 2026. sUSDe is Ethena's staked synthetic dollar, which earns yield from hedged ETH/BTC funding and basis plus reserve income. The PT holder gives up that floating yield in exchange for a fixed return from buying at a discount.",
+    "backing": "sUSDe (Ethena; delta-neutral hedged collateral)",
+    "yieldSource": "Fixed discount to maturity",
+    "redemption": "Redeem 1:1 for the USDe accounting asset via Pendle after 22 Oct 2026; before that, sell on the Pendle AMM",
+    "issuer": "Pendle (wrapper); Ethena (sUSDe)",
+    "links": [
+      "https://app.pendle.finance/",
+      "https://docs.ethena.fi/",
+      "https://governance.aave.com/t/direct-to-aip-onboard-pt-susde-22oct2026-to-aave-v3-plasma/25129"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "PT USDat (USDat) Monad::PT-USDat-14JAN2027": {
+    "what": "Pendle principal token on Saturn USDat (Monad) · fixed rate to 14 Jan 2027",
+    "body": "Pendle principal token for the USDat market on Monad, which redeems 1:1 for USDat at maturity on 14 Jan 2027. USDat is a non-yielding stablecoin from Saturn backed by tokenized US Treasuries; its staked version, sUSDat, is the one exposed to Strategy's STRC preferred stock. The PT's fixed return is its discount to maturity, priced from rewards (including Saturn points) that go to the matching yield token.",
+    "backing": "USDat (Saturn; tokenized US Treasuries)",
+    "yieldSource": "Fixed discount to maturity",
+    "redemption": "Redeem 1:1 for USDat via Pendle after 14 Jan 2027; before that, sell on the Pendle AMM",
+    "issuer": "Pendle (wrapper); Saturn (USDat)",
+    "links": [
+      "https://app.pendle.finance/",
+      "https://saturn.credit/",
+      "https://docs.strata.markets/markets/saturn-usdat"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "UNI": {
+    "what": "Uniswap governance token",
+    "body": "UNI is the governance token of the Uniswap protocol, a set of decentralized exchange contracts on Ethereum and many other chains. Holders vote on protocol upgrades, fee settings and use of the Uniswap treasury. It is not backed by any assets.",
+    "backing": "none (governance token)",
+    "issuer": "Uniswap Labs / Uniswap DAO",
+    "links": ["https://docs.uniswap.org/", "https://gov.uniswap.org/"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Midas Fasanara ONE::mF-ONE": {
+    "what": "Midas tokenized certificate · tracks Fasanara Capital's F-ONE private credit fund",
+    "body": "mF-ONE is issued by Midas and tracks Fasanara Capital's F-ONE fund, which allocates to fintech-originated receivables, SME and real-estate-backed private credit, and market-neutral digital asset strategies (the fund uses leverage). A liquidity sleeve holds Midas mTBILL (tokenized T-bills) and a Fasanara Digital Pareto vault to fund faster redemptions. Returns accrue to the token price via NAV.",
+    "backing": "shares in Fasanara F-ONE fund (private credit) plus mTBILL/Pareto liquidity sleeves",
+    "yieldSource": "private credit interest and market-neutral strategy returns of the F-ONE fund",
+    "redemption": "Midas-onboarded (KYC) holders only; instant from liquidity sleeve when available (fee), otherwise ~30-day notice + 5-day settlement; secondary transfers permissionless",
+    "issuer": "Midas (manager: Fasanara Capital)",
+    "links": [
+      "https://docs.midas.app/",
+      "https://kitchen.steakhouse.financial/p/midas-fasanara-mf-one-in-morpho-onchain",
+      "https://etherscan.io/token/0x238a700ed6165261cf8b2e544ba797bc11e466ba"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "PT USD3 (USDC) Ethereum::PT-USD3-17DEC2026": {
+    "what": "Pendle principal token on 3Jane USD3 · fixed rate to 17 Dec 2026",
+    "body": "Pendle principal token that redeems 1:1 for the USDC value of USD3 at maturity on 17 Dec 2026; its yield is the discount at which it trades before maturity. USD3 is 3Jane's senior-tranche ERC-4626 token: USDC deposits fund credit lines and asset-backed facilities to fintech and crypto-native borrowers, with the junior sUSD3 tranche absorbing losses first.",
+    "backing": "USD3 (3Jane senior tranche of USDC credit lending)",
+    "yieldSource": "fixed discount to maturity",
+    "redemption": "permissionless redemption via Pendle at/after 17 Dec 2026; before maturity sell on Pendle AMM",
+    "issuer": "Pendle (underlying: 3Jane)",
+    "links": [
+      "https://docs.3jane.xyz/usd3-susd3/suppliers",
+      "https://explorer.portals.fi/yield/ethereum:0x7f47c3e6b2c00fc4eb4d5ae50d0ab0ab6888eb4d"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Midas Fasanara Global::MGLOBAL": {
+    "what": "Midas tokenized certificate · tracks Fasanara Global Diversified Alternative Debt",
+    "body": "mGLOBAL is issued by Midas and tracks Fasanara Capital's Global Diversified Alternative Debt strategy, a short-duration private credit portfolio of SME asset-backed credit such as trade receivables and digital invoices across many countries. It is a security token issued from a bankruptcy-remote compartment of a Luxembourg securitisation vehicle; returns accrue to the token price via an onchain NAV oracle.",
+    "backing": "short-duration private credit (trade receivables, invoices)",
+    "yieldSource": "interest on the underlying alternative-debt portfolio",
+    "redemption": "Midas-onboarded (KYC) holders; instant routes via liquidity sleeve/credit facility when available, otherwise standard monthly NAV redemption (~35 days)",
+    "issuer": "Midas (manager: Fasanara Capital)",
+    "links": [
+      "https://www.theblock.co/post/405774/midas-mglobal-fasanara-aave-horizon",
+      "https://qiro.substack.com/p/inside-mglobal-tokenized-exposure",
+      "https://etherscan.io/token/0x7433806912eae67919e66aea853d46fa0aef98a8"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "CAKE": {
+    "what": "PancakeSwap governance and utility token",
+    "body": "CAKE is the native token of PancakeSwap, a multi-chain DEX originally on BNB Chain. It is used for governance, liquidity mining rewards and fee discounts; under Tokenomics 3.0 (2025) veCAKE locking was retired, emissions were cut and part of trading fees is used to buy and burn CAKE, with max supply reduced to 400M in 2026.",
+    "backing": "none (governance token)",
+    "issuer": "PancakeSwap",
+    "links": ["https://docs.pancakeswap.finance/", "https://en.cryptonomist.ch/2026/01/20/cake-token-max-supply-400m/"],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "alsoGroups": ["PancakeSwap::CAKE"]
+  },
+  "Astherus Staked BNB::asBNB": {
+    "what": "Aster (ex-Astherus) BNB yield token · wraps Lista slisBNB in Binance Launchpools",
+    "body": "asBNB is minted on Aster Earn by depositing BNB or slisBNB (Lista DAO's liquid staked BNB). The slisBNB is converted to clisBNB and used to farm Binance Launchpool, HODLer airdrop and Megadrop rewards, which are converted back and added to asBNB's value on top of BNB staking yield.",
+    "backing": "slisBNB (Lista liquid staked BNB)",
+    "yieldSource": "BNB staking rewards plus Binance Launchpool/HODLer airdrop/Megadrop rewards",
+    "redemption": "permissionless withdrawal to slisBNB; immediate when no Launchpool is active, otherwise queued (~3-5 business days); no fee",
+    "issuer": "Aster (formerly Astherus)",
+    "links": ["https://docs.asterdex.com/earn/overview/mint-asbnb.md"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Metronome Synth ETH::msETH": {
+    "what": "Metronome synthetic ETH · overcollateralized, minted against crypto deposits",
+    "body": "msETH is a synthetic asset from Metronome Synth that tracks the price of ETH. Users mint it as debt against overcollateralized deposits (ETH, LSTs, stablecoins and Vesper vault tokens), and it can be swapped with other Metronome synths in the protocol marketplace. It is a LayerZero OFT bridged across Ethereum, Optimism, Base and other chains. In July 2026 an oracle-latency issue left about 6,367 msETH unbacked; the DAO plans to close the gap via treasury buyback-and-burn.",
+    "backing": "overcollateralized user debt positions (partially underbacked since Jul 2026)",
+    "redemption": "no direct redemption for ETH; repay debt or swap via Synth marketplace/DEX pools",
+    "issuer": "MetronomeDAO",
+    "links": [
+      "https://docs.metronome.io/metronome-synth/metronome-synth-protocol",
+      "https://paragraph.com/@metronomedao/post-mortem-msethmsusd-underbacking"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "Jul 2026 post-mortem: ~6,367 msETH left unbacked; traded ~0.88 ETH on 2026-10-06."
+  },
+  "Midas Wellington Income Opportunities::MWIN": {
+    "what": "Midas tokenized certificate · Wellington investment-grade multi-sector fixed income",
+    "body": "mWIN is issued by Midas and represents a share in a Luxembourg vehicle holding Wellington Management's Income Opportunities strategy, run by Wellington's Financial Reserves team. The portfolio is investment-grade fixed income: CLOs, CMBS, agency and non-agency RMBS, ABS and IG corporate bonds. Northern Trust provides daily pricing and Ernst & Young audits; returns accrue to the token NAV.",
+    "backing": "investment-grade securitized and corporate bonds",
+    "yieldSource": "coupon income from the fixed income portfolio",
+    "redemption": "Midas-onboarded (KYC) holders; subscribe/redeem in USDC or PYUSD, instant redemption marketed subject to liquidity",
+    "issuer": "Midas (manager: Wellington Management)",
+    "links": [
+      "https://blog.midas.app/introducing-mwin-bringing-institutional-credit-onchain-with-wellington-management/",
+      "https://etherscan.io/token/0x4e72025984424e52838cf8953e2863eff036b67a"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "K3 x Galaxy Lending::gAUSD": {
+    "what": "Accountable vault share · AUSD credit facility from K3 Capital to Galaxy",
+    "body": "gAUSD is the share token of an Accountable vault on Monad through which depositors lend AUSD (Agora's stablecoin) to Galaxy, with K3 Capital managing the facility. Loans run in rollable 90-day terms and Accountable's verification layer reports onchain that capital, facility status and interest match what is stated. Interest paid by Galaxy accrues to the vault.",
+    "backing": "credit facility loans to Galaxy (AUSD)",
+    "yieldSource": "interest paid by Galaxy on the loans",
+    "redemption": "up to 30% of principal redeemable monthly; eligibility and jurisdictional restrictions apply",
+    "issuer": "K3 Capital via Accountable (borrower: Galaxy)",
+    "links": [
+      "https://chainwire.org/2026/07/28/k3-capital-extends-a-credit-facility-to-galaxy-through-accountables-vault-infrastructure-on-monad/"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "apyUSD::APYUSD": {
+    "what": "Apyx savings token · wraps apxUSD, earns DAT preferred-share dividends",
+    "body": "apyUSD is a non-rebasing ERC-4626 savings vault from Apyx that wraps apxUSD. apxUSD is a synthetic dollar backed by preferred shares issued by digital asset treasury companies (e.g. STRC, SATA) plus short-term Treasuries. Dividends from that basket are streamed to apyUSD through a rising exchange rate.",
+    "backing": "apxUSD (DAT preferred shares + short-term Treasuries)",
+    "yieldSource": "dividends from preferred shares and T-bill interest",
+    "redemption": "permissionless deposit; unlock to apxUSD via request, ~20-day cooldown, then claim (faster flexible exit with declining fee from 3 days)",
+    "issuer": "Apyx",
+    "links": [
+      "https://docs.apyx.fi/product-overview/apyusd-overview",
+      "https://docs.apyx.fi/product-overview/apxusd-overview"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Origin Ether::OETH": {
+    "what": "Origin liquid staking ETH · rebasing, staking yield",
+    "body": "OETH is Origin Protocol's ETH liquid staking token. ETH is staked on the Beacon Chain via compounding validators, and staking rewards are distributed to holders through rebases (wOETH is the non-rebasing wrapper).",
+    "backing": "staked ETH (plus ETH in strategies)",
+    "yieldSource": "Ethereum staking rewards",
+    "redemption": "permissionless 1:1 ETH withdrawal queue (typically 1-3 days, up to ~8), or swap on Curve",
+    "issuer": "Origin Protocol",
+    "links": [
+      "https://docs.originprotocol.com/yield-bearing-tokens/origin-ether-oeth",
+      "https://docs.originprotocol.com/registry/contracts/oeth-registry"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "PT sUSDS (USDS) Ethereum::PT-sUSDS-26NOV2026": {
+    "what": "Pendle principal token on sUSDS · fixed rate to 26 Nov 2026",
+    "body": "Pendle principal token that redeems 1:1 for USDS value of sUSDS at maturity on 26 Nov 2026; its yield is the discount at which it trades before maturity. sUSDS is Sky's (formerly MakerDAO) savings token, which earns the Sky Savings Rate funded by the protocol's lending and RWA revenue.",
+    "backing": "sUSDS (Sky savings USDS)",
+    "yieldSource": "fixed discount to maturity",
+    "redemption": "permissionless redemption via Pendle at/after 26 Nov 2026; before maturity sell on Pendle AMM",
+    "issuer": "Pendle (underlying: Sky)",
+    "links": [
+      "https://docs.pendle.finance/",
+      "https://explorer.portals.fi/yield/ethereum:0xdc169abe56461a2e0c034da431ac2a3ebf596094"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Staked thUSD::STHUSD": {
+    "what": "Theo staked dollar · wraps thUSD, hedged gold carry + T-bills",
+    "body": "sthUSD is the staked, yield-bearing form of Theo's thUSD stablecoin. thUSD is backed by thBILL (Theo's tokenized T-bill product) and an off-chain delta-neutral gold strategy (physical gold leased for interest and hedged with short CME gold futures). Unstaked thUSD earns nothing; yield accrues to sthUSD.",
+    "backing": "thBILL (T-bills) and hedged physical gold carry",
+    "yieldSource": "gold leasing/carry plus T-bill interest",
+    "redemption": "thUSD primary redemption KYC/whitelisted with a queue; sthUSD unstake queue around 2 weeks",
+    "issuer": "Theo Network",
+    "links": [
+      "https://docs.theo.xyz/platform/thusd",
+      "https://tidresearch.com/reports/thusd/",
+      "https://etherscan.io/token/0xa808bc9775cb41c52c7842f8b50427fe7a770326"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "An Aug 2026 independent report flags weak on-chain backing and unattested off-chain gold exposure."
+  },
+  "msY::msY": {
+    "what": "Main Street yield token · staked msUSD, CME box-spread strategy (collapsed)",
+    "body": "msY is Main Street Finance's strategy token, minted by staking msUSD and marketed as earning delta-neutral yield from CME options box spreads. In June 2026 Accountable ended its reserve verification for Main Street, msUSD lost about 90% of its value and msY fell 70-85%.",
+    "backing": "msUSD (claimed box-spread positions; backing unverified since June 2026)",
+    "yieldSource": "claimed CME options box spreads",
+    "issuer": "Main Street Finance",
+    "links": [
+      "https://mainstreet-finance.gitbook.io/mainstreet.finance",
+      "https://www.webacy.com/blog/msusd-anatomy-of-a-stablecoin-that-was-built-to-lose-a-run"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "Distressed: reserves attestation withdrawn Jun 2026; msY fell 70-85 %."
+  },
+  "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC": {
+    "what": "Accountable vault share · Hyperithm delta-neutral strategies on cbBTC",
+    "body": "aHyperBTC is the ERC-4626 share token of Hyperithm's Delta Neutral cbBTC Vault on Monad, built on Accountable's vault infrastructure. Depositors supply cbBTC, which Hyperithm, a Tokyo/Seoul digital asset manager, deploys in delta-neutral strategies to earn BTC-denominated yield. Accountable publishes ongoing proof-of-solvency data.",
+    "backing": "cbBTC deployed in delta-neutral strategies",
+    "yieldSource": "delta-neutral trading/lending strategies (e.g. funding-rate arbitrage, looping)",
+    "issuer": "Hyperithm (via Accountable)",
+    "links": ["https://github.com/DefiLlama/DefiLlama-Adapters/pull/21315", "https://defillama.com/protocol/hyperithm"],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Midas M1 USD Market Neutral::mM1-USD": {
+    "what": "Midas tokenized certificate · M1 Capital market-neutral USD strategy",
+    "body": "mM1-USD is issued by Midas and tracks M1 Capital's market-neutral USD strategies, including price arbitrage, recursive lending and basis trading, with M1 Capital as risk manager. Returns accrue to the token NAV. Strata also offers senior and junior tranches built on mM1-USD.",
+    "backing": "USDC deployed in market-neutral crypto strategies",
+    "yieldSource": "arbitrage, basis trading and lending returns",
+    "redemption": "Midas-onboarded (KYC) holders via Midas; terms not confirmed",
+    "issuer": "Midas (manager: M1 Capital)",
+    "links": [
+      "https://docs.strata.markets/markets/midas-mm1-usd",
+      "https://etherscan.io/token/0xcc5c22c7a6bcc25e66726aef011dde74289ed203"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "USDX": {
+    "what": "Stables Labs synthetic dollar · delta-neutral (depegged Nov 2025)",
+    "body": "USDX is a synthetic dollar issued by Stables Labs, marketed as backed by delta-neutral positions (spot hedged with perpetual shorts) on centralized exchanges. It depegged severely in November 2025, falling to about $0.30. Stables Labs then announced a voluntary, phased 'restoration arrangement' with a claim snapshot, but no guarantee of $1 redemption.",
+    "backing": "claimed delta-neutral CEX positions; reserves not transparently reported",
+    "redemption": "no reliable redemption; voluntary phased recovery plan for snapshot holders",
+    "issuer": "Stables Labs",
+    "links": [
+      "https://beosin.com/resources/analysis-of-the-stables-labs-usdx-collapse-incident-and-fund-flow-tracing",
+      "https://cryptorank.io/news/feed/f7219-stables-labs-starts-usdx-recovery-process"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "Depegged since Nov 2025 (~$0.30); recovery plan is voluntary, no guaranteed $1."
+  },
+  "Unit Bitcoin::uBTC": {
+    "what": "Unit wrapped BTC on Hyperliquid · BTC held by Unit guardians",
+    "body": "uBTC is the Bitcoin token of Unit (Hyperunit), the asset tokenization layer for Hyperliquid's HyperCore and HyperEVM. Each uBTC is minted when native BTC is deposited to a Unit-controlled Bitcoin address and is backed 1:1 by that BTC. Deposits and withdrawals are approved by a three-member Guardian network (Unit, Hyperliquid, Infinite Field) using 2-of-3 threshold signing. The token earns nothing itself.",
+    "backing": "native BTC held in Unit guardian-controlled addresses",
+    "redemption": "Permissionless withdrawal to a Bitcoin address via Unit; guardians release BTC after Hyperliquid finality",
+    "issuer": "Unit (Hyperunit)",
+    "links": [
+      "https://docs.hyperunit.xyz/",
+      "https://docs.hyperunit.xyz/how-to/withdraw",
+      "https://github.com/yearn/risk-score/blob/master/reports/report/unit-ubtc.md"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "FXRP::FXRP": {
+    "what": "Flare FAssets wrapped XRP · over-collateralized by agent collateral",
+    "body": "FXRP is XRP represented as an ERC-20 on Flare through the FAssets system, and bridged to other chains. XRP backing is held on the XRP Ledger by FAssets agents (and a system-controlled Core Vault since v1.3), and agents post over-collateralization on Flare in FLR and approved ERC-20s. If an agent fails to pay out on a redemption, the redeemer is compensated from that agent's collateral plus a premium. FXRP itself earns nothing.",
+    "backing": "XRP on the XRP Ledger plus over-collateral posted by FAssets agents",
+    "redemption": "Permissionless: burn FXRP via the Asset Manager; agents pay XRP on the XRP Ledger or collateral is paid out on default",
+    "issuer": "Flare Network (FAssets)",
+    "links": [
+      "https://flare.network/products/fassets",
+      "https://dev.flare.network/fassets/collateral",
+      "https://dev.flare.network/fassets/operational-parameters"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "vaSTETH Pool::vaSTETH": {
+    "what": "Vesper pool share on stETH · stETH staking plus strategy yield",
+    "body": "vaSTETH is the share token of Vesper Finance's stETH pool (underlying token is Lido stETH). Deposited stETH keeps its staking rewards, and Vesper strategies have used it as collateral to borrow stablecoins that are deployed in other yield venues, with profits converted back into stETH. The pool share's stETH value rises as that yield accrues. It is also accepted as collateral on Metronome Synth.",
+    "backing": "Lido stETH deposited in the Vesper pool",
+    "yieldSource": "stETH staking rewards plus Vesper strategy profits paid in stETH",
+    "redemption": "Withdraw from the Vesper pool for stETH, subject to pool liquidity; no KYC",
+    "issuer": "Vesper Finance",
+    "links": [
+      "https://docs.vesper.finance/vesper-pools-and-strategies/vespers-modular-pool-architecture",
+      "https://medium.com/vesperfinance/vesper-launches-steth-yield-aggregator-7caa372d982d",
+      "https://app.vesper.finance/eth/pools/0x4Dbe3f01aBe271D3E65432c74851625a8c30Aa7B"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Tori Staked trUSD::STRUSD": {
+    "what": "Tori staked trUSD · ERC-4626 vault on delta-neutral synthetic dollar",
+    "body": "strUSD is the staked form of trUSD, Tori Finance's synthetic dollar, issued as an ERC-4626 vault share whose trUSD exchange rate rises as strategies earn. trUSD is backed by delta-neutral trading positions rather than bank deposits, including cash-and-carry futures arbitrage and short-duration instruments with non-USD exposure hedged. Tori takes a performance fee inside the exchange rate.",
+    "backing": "delta-neutral trading positions (futures basis, short-duration instruments)",
+    "yieldSource": "returns from Tori's market-neutral strategies, net of a performance fee",
+    "redemption": "Unstake to trUSD after a 7-day cooldown; trUSD mint/redeem at NAV needs KYC, otherwise swap on market",
+    "issuer": "Tori Finance",
+    "links": ["https://docs.tori.finance/products/trusd", "https://docs.tori.finance/"],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "apxUSD::APXUSD": {
+    "what": "Apyx synthetic dollar · backed by Bitcoin-treasury preferred shares",
+    "body": "apxUSD is Apyx's synthetic dollar, over-collateralized by dividend-paying preferred shares issued by listed digital-asset-treasury companies, such as Strategy's STRC. It pays no yield itself; holders lock it into apyUSD to receive the preferred-share dividends. Because the collateral is preferred equity rather than cash, its value moves with those shares, and apxUSD traded around $0.92-0.93 in early June 2026 when STRC fell below par.",
+    "backing": "DAT preferred shares (e.g. STRC, SATA)",
+    "redemption": "Mint and redeem are permissioned for institutional partners; other users trade on DEXs",
+    "issuer": "Apyx",
+    "links": [
+      "https://docs.apyx.fi/resources/faq",
+      "https://defillama.com/stablecoin/apxusd",
+      "https://www.coindesk.com/markets/2026/06/04/apyx-s-stablecoin-suffers-a-brief-depeg-protocol-says-its-a-feature-not-bug"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "verify": "Fell to ~$0.92 in Jun 2026; the peg follows preferred-share prices, not cash reserves."
+  },
+  "Saturn sUSDat::SUSDAT": {
+    "what": "Saturn staked USDat · yield from Strategy STRC preferred dividends",
+    "body": "sUSDat is the staked, yield-bearing version of USDat, Saturn's dollar token whose reserves target M0's M (tokenized US Treasuries). When USDat is staked, Saturn moves the backing into STRC (Strategy's preferred stock) exposure, so sUSDat earns STRC dividends and also carries STRC price risk. Yield accrues through a rising sUSDat/USDat exchange rate.",
+    "backing": "STRC preferred stock exposure (USDat itself: tokenized T-bills via M0)",
+    "yieldSource": "STRC dividends",
+    "redemption": "Unstake to USDat; onboarded users mint/redeem USDat 1:1 with USDC in the Saturn app",
+    "issuer": "Saturn",
+    "links": [
+      "https://saturncredit.gitbook.io/saturn-docs/solution/how-usdat-and-susdat-works",
+      "https://saturncredit.gitbook.io/saturn-docs/solution/susdat-overview",
+      "https://etherscan.io/address/0xD166337499E176bbC38a1FBd113Ab144e5bd2Df7"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "PT apyUSD (apxUSD) Ethereum::PT-apyUSD-5NOV2026": {
+    "what": "Pendle principal token on apyUSD · fixed rate to 5 Nov 2026, redeems in apxUSD",
+    "body": "This is a Pendle principal token on apyUSD, Apyx's yield-bearing savings token that earns dividends from Bitcoin-treasury preferred shares backing apxUSD. The PT trades at a discount and redeems 1:1 for apxUSD (the accounting asset) at maturity on 5 Nov 2026. apxUSD is backed by preferred equity rather than cash, so its own price can move below $1.",
+    "backing": "apyUSD held in the Pendle SY, ultimately DAT preferred shares",
+    "yieldSource": "fixed discount to maturity",
+    "redemption": "Redeem on Pendle for apxUSD-equivalent at or after 5 Nov 2026; before then, sell on the Pendle AMM",
+    "issuer": "Pendle (underlying: Apyx)",
+    "links": ["https://blog.apyx.fi/apyx-are-now-live-on-pendle/", "https://docs.apyx.fi/resources/faq"],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "verify": "Underlying apxUSD depegged in Jun 2026."
+  },
+  "FBTC": {
+    "what": "Function (formerly Ignition) wrapped BTC · 1:1 BTC in custody",
+    "body": "FBTC (Fire Bitcoin) is an omnichain BTC token issued by Function, formerly Ignition, available on Ethereum and several L2s. It is backed 1:1 by BTC held with Cactus Custody and a federated MPC signer set, and reserves are published through Chainlink proof of reserve. The token earns nothing itself.",
+    "backing": "BTC held by custodians (Cactus Custody / MPC)",
+    "redemption": "Only KYC/KYB-onboarded qualified users and merchants can mint and burn for BTC",
+    "issuer": "Function (formerly Ignition)",
+    "links": [
+      "https://fbtc.com/home/FBTC-Whitepaper.pdf",
+      "https://docs.fbtc.com/security/roles",
+      "https://docs.fbtc.com/more/faqs"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Spark Savings USDG::spUSDG": {
+    "what": "Spark Savings vault on USDG (Robinhood Chain) · Spark Liquidity Layer yield",
+    "body": "spUSDG is a Spark Savings V2 vault (ERC-4626) on Robinhood Chain (chain 4663) that takes deposits of USDG, the Paxos-issued Global Dollar stablecoin. Spark deploys deposits through the Spark Liquidity Layer, and yield accrues to the share price. It launched as a Robinhood Chain day-one product.",
+    "backing": "USDG deployed by the Spark Liquidity Layer",
+    "yieldSource": "Spark Liquidity Layer deployments (Sky/USDS savings-rate linked)",
+    "redemption": "Permissionless ERC-4626 withdraw to USDG, subject to vault liquidity",
+    "issuer": "Spark",
+    "links": [
+      "https://docs.spark.finance/products/spark-savings",
+      "https://docs.spark.finance/dev/savings/spark-vaults-v2"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Coinbase Wrapped ADA::CBADA": {
+    "what": "Coinbase wrapped Cardano · ADA held by Coinbase",
+    "body": "cbADA is an ERC-20 on Base that represents ADA held in Coinbase custody 1:1. Coinbase launched it in June 2025 so ADA could be used in Base DeFi. The token earns nothing itself.",
+    "backing": "ADA in Coinbase custody",
+    "redemption": "Send to a Coinbase account to unwrap to ADA 1:1; Coinbase account (KYC) required",
+    "issuer": "Coinbase",
+    "links": [
+      "https://www.coindesk.com/markets/2025/06/26/coinbase-brings-wrapped-cardano-litecoin-to-base-with-cbada-cbltc"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC": {
+    "what": "Pareto credit vault senior tranche · USDC loan to FalconX",
+    "body": "AA_FalconXUSDC is the senior (AA) tranche token of Pareto's FalconX Credit Vault, where deposited USDC is lent to the prime broker FalconX. M11 Credit (Maven 11) curates the vault, handles credit checks and covenants, and runs the monthly epochs. Interest from FalconX accrues into the token's NAV. The junior BB tranche has reportedly never been funded, so the AA tranche has no first-loss buffer in practice.",
+    "backing": "loan receivable from FalconX (private credit)",
+    "yieldSource": "interest paid by FalconX",
+    "redemption": "Monthly epoch redemptions for KYC/KYB-verified non-US accredited lenders (Keyring); 250k USDC minimum",
+    "issuer": "Pareto / M11 Credit",
+    "links": [
+      "https://www.falconx.io/newsroom/bringing-institutional-lending-on-chain-exploring-falconxs-credit-vault",
+      "https://github.com/yearn/risk-score/pull/382",
+      "https://app.rwa.xyz/assets/AA_FalconXUSDC"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "verify": "Junior tranche reportedly unfunded: the senior AA tranche has no first-loss buffer."
+  },
+  "Superstate Short Duration US Government Securities Fund::USTB": {
+    "what": "Tokenized short-term US Treasury fund · now managed by Invesco",
+    "body": "USTB is the share token of a short-duration US government securities fund launched by Superstate. Since mid-2026 Invesco Advisers manages the portfolio and the fund was renamed the Invesco Short-Duration U.S. Government Securities Fund; Superstate still runs the token, transfer agency and contracts at the same address. The fund holds short-dated Treasuries and agency securities, and interest accrues to NAV. Only allowlisted investors can hold it.",
+    "backing": "short-term US Treasuries and agency securities",
+    "yieldSource": "interest on T-bills and agency securities",
+    "redemption": "Allowlisted qualified purchasers redeem at NAV by burning or sending to the redemption address",
+    "issuer": "Superstate (portfolio manager: Invesco)",
+    "links": [
+      "https://docs.superstate.com/investors/smart-contracts",
+      "https://superstate.co/ustb",
+      "https://www.blockhead.co/2026/03/25/invesco-takes-over-management-of-superstates-967m-tokenized-treasury-fund/"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Staked USDS::stUSDS": {
+    "what": "Sky stUSDS · USDS lent to SKY stakers who borrow against SKY",
+    "body": "stUSDS is issued by Sky Protocol when USDS is supplied to the stUSDS module, which funds loans to SKY stakers borrowing against their staked SKY. Borrowed USDS earns the SKY borrow rate, and unused USDS earns the Sky Savings Rate. The module is isolated from sUSDS, so stUSDS holders bear losses if liquidations of SKY collateral do not cover the loans.",
+    "backing": "USDS loans secured by staked SKY",
+    "yieldSource": "SKY borrow rate, plus Sky Savings Rate on idle funds",
+    "redemption": "Permissionless withdraw to USDS, limited to unborrowed liquidity in the module",
+    "issuer": "Sky",
+    "links": ["https://sky.money/stusds"],
+    "updated": "2026-10-06",
+    "confidence": "high"
+  },
+  "Midas Hyperithm BTC::mHyperBTC": {
+    "what": "Midas tokenized certificate · Hyperithm BTC market-neutral strategy",
+    "body": "mHyperBTC is a BTC-denominated tokenized certificate issued by Midas (Midas Software GmbH) that tracks a market-neutral strategy, with Hyperithm acting as the appointed risk manager. The strategy uses approaches such as basis trading and funding-rate arbitrage. Returns are reflected in the token's NAV, which is updated periodically.",
+    "backing": "BTC-denominated market-neutral strategy positions",
+    "yieldSource": "basis and funding-rate arbitrage returns",
+    "redemption": "Midas mint/redeem for onboarded (KYC) investors; 1 BTC minimum",
+    "issuer": "Midas (risk manager: Hyperithm)",
+    "links": [
+      "https://app.rwa.xyz/assets/mHYPERBTC",
+      "https://etherscan.io/token/0xc8495eaff71d3a563b906295fcf2f685b1783085"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  },
+  "Metronome Synth USD::msUSD": {
+    "what": "Metronome synthetic dollar · CDP over crypto and Vesper collateral",
+    "body": "msUSD is a synthetic dollar minted by users of Metronome Synth who deposit collateral such as USDC, ETH, WBTC, sfrxETH and Vesper vault tokens, at 75-85% collateral factors. It is a debt position, not a fiat-reserve stablecoin, and earns nothing itself. On 31 July 2026 msUSD fell about 11% below peg after oracle delays and low fees in the synth swap module left part of the supply unbacked; MetronomeDAO raised fees and committed treasury buybacks to restore backing.",
+    "backing": "over-collateralized crypto CDPs (USDC, ETH, WBTC, Vesper tokens)",
+    "redemption": "No direct 1:1 cash redemption; minters repay msUSD to unlock collateral, or swap on market",
+    "issuer": "MetronomeDAO",
+    "links": ["https://pharos.watch/stablecoin/msusd-metronome/", "https://www.bitget.com/news/detail/12560605573400"],
+    "updated": "2026-10-06",
+    "confidence": "medium",
+    "verify": "Depegged ~11 % on 31 Jul 2026 after a collateral shortfall; check the peg.",
+    "alsoGroups": ["Metronome Synth USD::MSUSD"]
+  },
+  "earnAUSD::earnAUSD": {
+    "what": "Upshift vault on Agora AUSD (Monad) · lending and LP allocation",
+    "body": "earnAUSD is a yield vault on Monad built by Upshift with Agora, whose AUSD is a dollar stablecoin backed 1:1 by cash and equivalents. Deposited AUSD is allocated by the curator, reported as Gamma Research, across Monad lending markets (e.g. Curvance, Euler, Neverland, Morpho) and DEX liquidity. Yield accrues to the share price against AUSD.",
+    "backing": "AUSD deployed in Monad lending markets and DEX pools",
+    "yieldSource": "lending interest and DEX trading fees",
+    "redemption": "Queued withdrawal, typically processed within 72 hours; instant exit for a fee if liquidity allows",
+    "issuer": "Upshift / Agora (curator: Gamma Research)",
+    "links": [
+      "https://upshift.finance/help-center/en/articles/14471701-earning-stablecoin-yield-on-monad-with-earnausd",
+      "https://docs.upshift.finance/vault-architecture/risk-management-framework"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "medium"
+  }
+}
