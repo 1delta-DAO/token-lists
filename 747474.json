@@ -68,6 +68,7 @@
           "underlyingAsset": "0x7f1f4b4b29f5058fa32cc7a97141b8d7e5abdc2d",
           "maturity": 1795046410
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -89,6 +90,11 @@
           "ibtAddress": "0x80c34bd3a3569e126e7055831036aa7b212cb159",
           "underlyingAsset": "0x203a662b0bd271a6ed5a60edfbd04bfce608fd36",
           "maturity": 1795305606
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
@@ -115,6 +121,11 @@
           "underlyingAsset": "0x7f1f4b4b29f5058fa32cc7a97141b8d7e5abdc2d",
           "maturity": 1795046410
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -132,6 +143,11 @@
           "type": "credit",
           "subType": "reinsurance",
           "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "oft": {
           "eid": 30375,
@@ -176,6 +192,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -233,7 +250,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/kat.svg",
       "assetGroup": "Katana Network Token::KAT",
       "currencyId": "Katana Network Token::KAT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x3ba1fbc4c3aea775d335b31fb53778f46fd3a330": {
       "chainId": "747474",
@@ -264,7 +284,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/sushi.svg",
       "assetGroup": "SushiToken::SUSHI",
       "currencyId": "SushiToken::SUSHI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xee7d8bcfb72bc1880d0cf19822eb0a2e6577ab62": {
       "chainId": "747474",
@@ -320,6 +343,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -347,6 +375,11 @@
               "peers": { "1": "0x839dc0cff5e263f56c9810560adf8ea40e95ab82" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
@@ -377,6 +410,7 @@
             }
           ]
         },
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -408,7 +442,10 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/morpho.svg",
       "assetGroup": "MORPHO",
       "currencyId": "Morpho Token::MORPHO",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9b8df6e244526ab5f6e6400d331db28c8fdddb55": {
       "chainId": "747474",
@@ -435,7 +472,8 @@
       "currencyId": "Polygon::POL",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "denomination": "POL"
+        "denomination": "POL",
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xb0f70c0bd6fd87dbeb7c10dc692a2a6106817072": {
@@ -498,7 +536,10 @@
       "logoURI": "https://static.debank.com/image/coin/logo_url/yearn/f14ac7f4efe5c51e1c6b32add3dea10c.png",
       "assetGroup": "yearn.finance::YFI",
       "currencyId": "yearn.finance::YFI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x4200000000000000000000000000000000000006": {
       "chainId": "747474",
@@ -509,7 +550,10 @@
       "logoURI": "https://static.debank.com/image/katana_token/logo_url/0x4200000000000000000000000000000000000006/61844453e63cf81301f845d7864236f6.png",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 2, "source": "issuer_inherit" }
+      }
     },
     "0x80c34bd3a3569e126e7055831036aa7b212cb159": {
       "chainId": "747474",
@@ -544,6 +588,11 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -559,6 +608,11 @@
       "currencyId": "Staked YUSD::sYUSD",
       "props": {
         "savings": { "underlying": "YUSD", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
       }
@@ -571,7 +625,8 @@
       "symbol": "KITSU",
       "logoURI": "https://assets.coingecko.com/coins/images/67868/thumb/KitsuPNG2.png?1754110292",
       "assetGroup": "Kitsu::KITSU",
-      "currencyId": "Kitsu::KITSU"
+      "currencyId": "Kitsu::KITSU",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "747474",
@@ -597,6 +652,7 @@
             }
           ]
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -609,7 +665,9 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbeth.svg",
       "assetGroup": "vbETH yVault::yvvbETH",
       "currencyId": "vbETH yVault::yvvbETH",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0xaa0362ecc584b985056e47812931270b99c91f9d": {
       "chainId": "747474",
@@ -718,6 +776,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
@@ -746,6 +809,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
@@ -768,7 +836,14 @@
       "symbol": "PT-yvvbUSDC(vbUSDC)-2026/02/13",
       "logoURI": "https://cdn.morpho.org/assets/logos/pt-yvvbusdc(vbusdc).svg",
       "assetGroup": "Principal Token: yvvbUSDC(vbUSDC) 2026/02/13::PT-yvvbUSDC(vbUSDC)-2026/02/13",
-      "currencyId": "Principal Token: yvvbUSDC(vbUSDC) 2026/02/13::PT-yvvbUSDC(vbUSDC)-2026/02/13"
+      "currencyId": "Principal Token: yvvbUSDC(vbUSDC) 2026/02/13::PT-yvvbUSDC(vbUSDC)-2026/02/13",
+      "props": {
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        }
+      }
     },
     "0x926a8a63fa1e1fdbbeb811a0319933b1a0f1edbb": {
       "chainId": "747474",
@@ -792,7 +867,8 @@
               "peers": {}
             }
           ]
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x7231dbacdfc968e07656d12389ab20de82fbfceb": {
@@ -803,7 +879,8 @@
       "symbol": "avKAT",
       "logoURI": "https://cdn.morpho.org/assets/logos/avkat.svg",
       "assetGroup": "Autocompounding vKAT::avKAT",
-      "currencyId": "Autocompounding vKAT::avKAT"
+      "currencyId": "Autocompounding vKAT::avKAT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x68943c066747690ecdaeb027fa722b090ee6f92d": {
       "chainId": "747474",
@@ -816,6 +893,11 @@
       "currencyId": "Staked InfiniFi USD::siUSD",
       "props": {
         "savings": { "underlying": "iUSD", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
       }
     },
@@ -826,7 +908,8 @@
       "address": "0x1b6e79f9da388387ed67a89cba06948e78d16796",
       "symbol": "MERC",
       "assetGroup": "MockERC20::MERC",
-      "currencyId": "MockERC20::MERC"
+      "currencyId": "MockERC20::MERC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x297612c171fc8adce32ac333085a9ee1f2bcc1da": {
       "chainId": "747474",
@@ -836,7 +919,11 @@
       "symbol": "avKAT",
       "assetGroup": "Autocompounding vKAT::avKAT::suspicious::297612c1",
       "currencyId": "Autocompounding vKAT::avKAT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x87f658d0e9d500214f3848536e070f45af10ae7e": {
       "chainId": "747474",
@@ -847,7 +934,13 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/pt-yvvbusdc(vbusdc).svg",
       "assetGroup": "Principal Token: yvvbUSDC(vbUSDC) 2026/08/02::PT-yvvbUSDC(vbUSDC)-2026/08/02",
       "currencyId": "Principal Token: yvvbUSDC(vbUSDC) 2026/08/02::PT-yvvbUSDC(vbUSDC)-2026/08/02",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        }
+      }
     },
     "0xbb5874022ae19e2060b4bed1f310cb8e4a677fd9": {
       "chainId": "747474",
@@ -857,7 +950,11 @@
       "symbol": "avKAT",
       "assetGroup": "Autocompounding vKAT::avKAT::suspicious::bb587402",
       "currencyId": "Autocompounding vKAT::avKAT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xcd6863bb697d7cee5b7ed8dea7d803374f7e4aa6": {
       "chainId": "747474",
@@ -867,7 +964,11 @@
       "symbol": "MERC",
       "assetGroup": "MockERC20::MERC::suspicious::cd6863bb",
       "currencyId": "MockERC20::MERC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf4f447e6afa04c9d11ef0e2fc0d7f19c24ee55de": {
       "chainId": "747474",
@@ -880,6 +981,11 @@
       "currencyId": "YieldFi vyUSD::vyUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -895,6 +1001,7 @@
       "currencyId": "Staked UTY::yUTY",
       "props": {
         "savings": { "underlying": "UTY", "base": "USD" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
       }
     },
@@ -929,6 +1036,11 @@
       "currencyId": "Staked Cap USD::stcUSD",
       "props": {
         "savings": { "underlying": "cUSD", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
       }
     },

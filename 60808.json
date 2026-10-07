@@ -47,6 +47,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -80,6 +81,7 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "risk": { "score": 4, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -137,6 +139,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -151,6 +154,11 @@
       "currencyId": "tBTC v2::tBTC",
       "props": {
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
@@ -165,6 +173,11 @@
       "currencyId": "Bridged USDC::USDC.e",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -264,6 +277,11 @@
       "currencyId": "Fire Bitcoin::FBTC",
       "props": {
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "function", "name": "Function", "kind": "protocol" }
       }
     },
@@ -278,6 +296,7 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -289,7 +308,8 @@
       "symbol": "HybridBTC.pendle",
       "logoURI": "https://tokens.debridge.finance/Logo/100000021/0x9998e05030aee3af9ad3df35a34f5c51e1628779/small/token-logo.svg",
       "assetGroup": "Hybrid Bitcoin::HybridBTC.pendle",
-      "currencyId": "Hybrid Bitcoin::HybridBTC.pendle"
+      "currencyId": "Hybrid Bitcoin::HybridBTC.pendle",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2d1da9a6a23724cbd65188b3f9a6758f2a57c059": {
       "chainId": "60808",
@@ -312,6 +332,7 @@
       "currencyId": "uniBTC::uniBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -454,6 +475,7 @@
           ]
         },
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -464,7 +486,8 @@
       "address": "0x4cbe838e2bd3b46247f80519b6ac79363298aa09",
       "symbol": "satUniBTC",
       "assetGroup": "SatLayer uniBTC::satUniBTC",
-      "currencyId": "SatLayer uniBTC::satUniBTC"
+      "currencyId": "SatLayer uniBTC::satUniBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x589f02cfaebf48f835ce43a8686f91857d7929cc": {
       "chainId": "60808",
@@ -473,7 +496,8 @@
       "address": "0x589f02cfaebf48f835ce43a8686f91857d7929cc",
       "symbol": "MOCK",
       "assetGroup": "MockERC20::MOCK",
-      "currencyId": "MockERC20::MOCK"
+      "currencyId": "MockERC20::MOCK",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "60808",

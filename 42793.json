@@ -28,6 +28,11 @@
       "currencyId": "Midas mTBILL::MTBILL",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "midas" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
@@ -43,6 +48,7 @@
       "currencyId": "Lombard Staked BTC::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30292,
           "routes": [
@@ -251,7 +257,14 @@
       "symbol": "USTBL",
       "logoURI": "https://assets.coingecko.com/coins/images/39666/thumb/USTB.png?1723541269",
       "assetGroup": "Spiko US T Bills Money Market Fund::USTBL",
-      "currencyId": "Spiko US T Bills Money Market Fund::USTBL"
+      "currencyId": "Spiko US T Bills Money Market Fund::USTBL",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0xa0769f7a8fc65e47de93797b4e21c073c117fc80": {
       "chainId": "42793",
@@ -261,7 +274,14 @@
       "symbol": "EUTBL",
       "logoURI": "https://assets.coingecko.com/coins/images/39657/thumb/EUTBL.png?1723517425",
       "assetGroup": "Spiko EU T Bills Money Market Fund::EUTBL",
-      "currencyId": "Spiko EU T Bills Money Market Fund::EUTBL"
+      "currencyId": "Spiko EU T Bills Money Market Fund::EUTBL",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x8ce7618e8f8e514d13889283f58ff03b794e6cc3": {
       "chainId": "42793",

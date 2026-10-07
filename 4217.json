@@ -27,6 +27,11 @@
       "currencyId": "PT srUSDe (USDe) Tempo::PT-srUSDe-25JUN2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1782345600, "expired": true },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -69,6 +74,11 @@
       "currencyId": "PT USDai (USDai) Tempo::PT-USDai-15OCT2026",
       "props": {
         "pendle": { "tokenType": "PT", "expiry": 1792022400 },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -136,6 +146,11 @@
       "currencyId": "Coinbase Wrapped BTC::cbBTC",
       "props": {
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BRIDGED",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
@@ -190,7 +205,7 @@
       "currencyId": "PathUSD::pathUSD",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -263,7 +278,11 @@
       "currencyId": "Staked Cap USD::stcUSD",
       "props": {
         "savings": { "underlying": "cUSD", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "cap", "name": "Cap", "kind": "protocol" }
       }
     },
@@ -288,7 +307,11 @@
       "currencyId": "Wrapped Savings rUSD::wsrUSD",
       "props": {
         "savings": { "underlying": "rUSD", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -359,7 +382,11 @@
       "currencyId": "InfiniFi Staked USD::siUSD",
       "props": {
         "savings": { "underlying": "iUSD", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
       }
     },
@@ -388,6 +415,11 @@
       "currencyId": "Staked USDe::sUSDe",
       "props": {
         "savings": { "underlying": "USDe", "base": "USD" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -422,6 +454,11 @@
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
@@ -436,11 +473,7 @@
       "assetGroup": "USDBridge::USDB",
       "currencyId": "USDBridge::USDB",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "bridge", "name": "Bridge", "kind": "institution" }
       }
@@ -473,11 +506,7 @@
       "assetGroup": "Deel USD::DLUSD",
       "currencyId": "Deel USD::DLUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "deel",
@@ -534,7 +563,7 @@
       "currencyId": "Agant GBP::GBPA",
       "props": {
         "risk": {
-          "score": 5,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -613,6 +642,11 @@
       "currencyId": "Hastra PRIME::PRIME",
       "props": {
         "savings": { "underlying": "wYLDS", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
       }
     },
@@ -645,6 +679,11 @@
       "assetGroup": "YLDS::YLDS",
       "currencyId": "YLDS::YLDS",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "figure", "name": "Figure", "kind": "institution" }
       }
@@ -659,6 +698,11 @@
       "assetGroup": "OpenUSD::OUSD",
       "currencyId": "OpenUSD::OUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "open-standard",

@@ -103,7 +103,10 @@
       "logoURI": "https://ss.new.klayswap.com/data/img/token/0x98a8345bb9d3dda9d808ca1c9142a28f6b0430e1/icon.svg?v=1709794027729",
       "assetGroup": "ETH",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x5c13e303a62fc5dedf5b52d66873f2e59fedadc2": {
       "chainId": "8217",
@@ -115,6 +118,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -130,6 +138,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -245,6 +258,11 @@
       "assetGroup": "DAI",
       "currencyId": "Dai Stablecoin::DAI",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
@@ -258,7 +276,10 @@
       "logoURI": "https://api.swapscanner.io/v0/tokens/0xac9c1e4787139af4c751b1c0fadfb513c44ed833/icon",
       "assetGroup": "BNB",
       "currencyId": "Wrapped BNB::WBNB",
-      "props": { "denomination": "BNB" }
+      "props": {
+        "denomination": "BNB",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xfaa03a2ac2d1b8481ec3ff44a0152ea818340e6d": {
       "chainId": "8217",
@@ -268,7 +289,8 @@
       "symbol": "SOL",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0xfaa03a2ac2d1b8481ec3ff44a0152ea818340e6d/icon",
       "assetGroup": "SOL",
-      "currencyId": "Wrapped SOL::SOL"
+      "currencyId": "Wrapped SOL::SOL",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x45830b92443a8f750247da2a76c85c70d0f1ebf3": {
       "chainId": "8217",
@@ -279,7 +301,10 @@
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x45830b92443a8f750247da2a76c85c70d0f1ebf3/icon",
       "assetGroup": "AVAX",
       "currencyId": "Wrapped AVAX::WAVAX",
-      "props": { "denomination": "AVAX" }
+      "props": {
+        "denomination": "AVAX",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xd068c52d81f4409b9502da926ace3301cc41f623": {
       "chainId": "8217",
@@ -4574,6 +4599,11 @@
       "currencyId": "Bridged DAI (Synapse)::DAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
@@ -8272,6 +8302,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -9105,7 +9136,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
       "currencyId": "sUSDa::sUSDa",
-      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0xdc3cf1961b08da169b078f7df6f26676bf6a4ff6": {
       "chainId": "8217",
@@ -9117,6 +9155,11 @@
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avalon", "name": "Avalon" }
       }
@@ -9443,6 +9486,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -10539,7 +10583,8 @@
       "symbol": "MIMATIC",
       "logoURI": "https://coin-images.coingecko.com/coins/images/15264/large/mimatic-red.png?1696514916",
       "assetGroup": "MAI::MIMATIC",
-      "currencyId": "MAI::MIMATIC"
+      "currencyId": "MAI::MIMATIC",
+      "props": { "risk": { "score": 2, "source": "issuer_inherit" } }
     },
     "0x6e6c55ac20c41669261969089fad7f7fcd9ba690": {
       "chainId": "8217",
@@ -10804,7 +10849,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/9576/thumb/BUSD.png?1568947766",
       "assetGroup": "BUSD",
       "currencyId": "BUSD Token::BUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xd0b995aebb7f0abf470f3ad90a9b1cd800f5417e": {
       "chainId": "8217",
@@ -11221,7 +11273,8 @@
       "symbol": "EarnUSDT",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x2e4e573d86c70688cd97d76bc5ddc1bb265bf5d6/icon",
       "assetGroup": "Super Vault::EarnUSDT",
-      "currencyId": "Super Vault::EarnUSDT"
+      "currencyId": "Super Vault::EarnUSDT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xa1338309658d3da331c747518d0bb414031f22fd": {
       "chainId": "8217",
@@ -11333,6 +11386,11 @@
       "assetGroup": "JPY Coin::JPYC",
       "currencyId": "JPY Coin::JPYC",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "JPY" },
         "issuer": { "id": "jpyc", "name": "JPYC", "kind": "institution" }
       }

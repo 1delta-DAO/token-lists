@@ -21,7 +21,7 @@
           "syAddress": "0x96a528f4414ac3ccd21342996c93f2ecdec24286",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lido", "name": "Lido", "kind": "protocol", "hops": 1 }
@@ -46,7 +46,7 @@
           "ptAddress": "0xf4225f061e5e01aa59de5e615729a9180301eb07",
           "ytAddress": "0x1dfe41cc7f7860ba7f1076ca6d0fedd707c87a00"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lido", "name": "Lido", "kind": "protocol", "hops": 1 }
@@ -71,7 +71,7 @@
           "ptAddress": "0xaa92ea52612fa5ee5aba5510682485c19750cb82",
           "ytAddress": "0xe8f0cf61598e0d7d20f99b978bdeff4d4222feb8"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -102,7 +102,11 @@
           "syAddress": "0x9d6d509c0354aca187aac6bea7d063d3ef68e2a0",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -133,7 +137,7 @@
           "syAddress": "0x9d6d509c0354aca187aac6bea7d063d3ef68e2a0",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -164,7 +168,11 @@
           "syAddress": "0x96a528f4414ac3ccd21342996c93f2ecdec24286",
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lido", "name": "Lido", "kind": "protocol", "hops": 1 }
@@ -10379,7 +10387,7 @@
       "currencyId": "Inception Restaked ETH::inETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "inception" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "inception", "name": "Inception", "kind": "protocol" }
       }
     },
@@ -10498,7 +10506,7 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 5, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -10612,7 +10620,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/33785/thumb/wUSDM_PNG_240px.png?1702981552",
       "assetGroup": "WUSDM",
       "currencyId": "Wrapped USDM::WUSDM",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x7e7d4467112689329f7e06571ed0e8cbad4910ee": {
       "chainId": "10",
@@ -10632,7 +10647,8 @@
       "symbol": "CRV",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/CRV.webp",
       "assetGroup": "CRV",
-      "currencyId": "Curve DAO Token::CRV"
+      "currencyId": "Curve DAO Token::CRV",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
       "chainId": "10",
@@ -11045,7 +11061,8 @@
       "symbol": "SNX",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC011a73ee8576Fb46F5E1c5751cA3B9Fe0af2a6F/logo.png",
       "assetGroup": "SNX",
-      "currencyId": "Synthetix Network Token::SNX"
+      "currencyId": "Synthetix Network Token::SNX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xcfd1d50ce23c46d3cf6407487b2f8934e96dc8f9": {
       "chainId": "10",
@@ -11232,7 +11249,8 @@
       "symbol": "BAL",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xba100000625a3754423978a60c9317c58a424e3D/logo.png",
       "assetGroup": "BAL",
-      "currencyId": "Balancer::BAL"
+      "currencyId": "Balancer::BAL",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x07ad578ff86b135be19a12759064b802cb88854d": {
       "chainId": "10",
@@ -11424,11 +11442,7 @@
       "assetGroup": "SUSD",
       "currencyId": "Synth sUSD::sUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 2, "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "synthetix", "name": "Synthetix", "kind": "protocol" }
       }
@@ -11622,6 +11636,7 @@
       "currencyId": "USDV::USDV",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "verified-usd",
@@ -11673,6 +11688,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
     },
@@ -11686,11 +11702,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -12148,6 +12160,11 @@
       "assetGroup": "CRVUSD",
       "currencyId": "Curve.Fi USD Stablecoin::crvUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
       }
@@ -12456,11 +12473,7 @@
       "assetGroup": "dForce USD::USX",
       "currencyId": "dForce USD::USX",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "dforce", "name": "dForce", "kind": "protocol" }
       }
@@ -12562,6 +12575,11 @@
       "currencyId": "EUROe Stablecoin::EUROe",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 3,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "membrane",
@@ -12663,11 +12681,7 @@
       "assetGroup": "Davos.xyz USD::DUSD",
       "currencyId": "Davos.xyz USD::DUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "davos", "name": "Davos", "kind": "protocol" }
       }
@@ -12705,8 +12719,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -12841,11 +12855,7 @@
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -12893,6 +12903,11 @@
           ]
         },
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -13097,6 +13112,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
@@ -13219,6 +13239,7 @@
           ]
         },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -13634,11 +13655,7 @@
       "assetGroup": "Overnight.fi DAI+::DAI+",
       "currencyId": "Overnight.fi DAI+::DAI+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -14506,6 +14523,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }
       }
@@ -15046,6 +15068,7 @@
       "currencyId": "StaFi Staked ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -15370,6 +15393,7 @@
           ]
         },
         "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -15433,6 +15457,11 @@
               "peers": { "1": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -15596,6 +15625,7 @@
       "currencyId": "Bitcoin::BTC.b",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
@@ -15669,7 +15699,6 @@
       "currencyId": "nUSD::nUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "synapse", "name": "Synapse", "kind": "protocol" }
       }
     },
@@ -16165,6 +16194,11 @@
       "currencyId": "Staked EURA::stEUR",
       "props": {
         "savings": { "underlying": "EURA", "base": "EUR" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -16192,7 +16226,7 @@
         "risk": {
           "score": 5,
           "category": "DISCONTINUED",
-          "source": "whitelist"
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -16355,6 +16389,11 @@
               }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
@@ -16531,7 +16570,11 @@
       "currencyId": "YieldFi yToken::YUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -16666,6 +16709,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -16891,6 +16939,7 @@
       "currencyId": "M by M0::M",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "m0", "name": "M0", "kind": "protocol" }
       }
@@ -17013,7 +17062,11 @@
       "currencyId": "YieldFi vyUSD::VYUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
       }
@@ -17038,7 +17091,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68576/thumb/JPYT_Logo_200x200_px.png?1756110424",
       "assetGroup": "Dephaser JPY::JPYT",
       "currencyId": "Dephaser JPY::JPYT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb5b2dc7fd34c249f4be7fb1fcea07950784229e0": {
       "chainId": "10",
@@ -17246,6 +17302,7 @@
       "assetGroup": "US Permissionless Dollar::USPD",
       "currencyId": "US Permissionless Dollar::USPD",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "uspd", "name": "USPD", "kind": "protocol" }
       }
@@ -17270,6 +17327,7 @@
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "allunity",
@@ -17366,7 +17424,8 @@
       "symbol": "deCRDX",
       "logoURI": "https://cdn.morpho.org/assets/logos/decrdx.svg",
       "assetGroup": "DeFi Anemoy Tokenized Diversified Credit Fund Token::deCRDX",
-      "currencyId": "DeFi Anemoy Tokenized Diversified Credit Fund Token::deCRDX"
+      "currencyId": "DeFi Anemoy Tokenized Diversified Credit Fund Token::deCRDX",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xa0a675d08ca63066f48408136f8a71fc65be4afc": {
       "chainId": "10",
@@ -17385,7 +17444,8 @@
       "address": "0x8a3ff2a7b858350cb8d44b26bb303a1dcdffbf6b",
       "symbol": "avWUSDC",
       "assetGroup": "Avantgarde Test Wrapped USDC::avWUSDC",
-      "currencyId": "Avantgarde Test Wrapped USDC::avWUSDC"
+      "currencyId": "Avantgarde Test Wrapped USDC::avWUSDC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe7ba07519dfa06e60059563f484d6090dedf21b3": {
       "chainId": "10",
@@ -17395,7 +17455,8 @@
       "symbol": "mRe7ETH",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xe7ba07519dfa06e60059563f484d6090dedf21b3/small/token-logo.png",
       "assetGroup": "Midas Re7 Ethereum::mRe7ETH",
-      "currencyId": "Midas Re7 Ethereum::mRe7ETH"
+      "currencyId": "Midas Re7 Ethereum::mRe7ETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x15f52286c0ff1d7a7ddbc9e300dd66628d46d4e6": {
       "chainId": "10",
@@ -17441,7 +17502,8 @@
       "symbol": "liquidRESERVE",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xca5921df65e2e1b0b98ae91c0187ba80d4124898/small/token-logo.png",
       "assetGroup": "EtherFi Liquid Reserve::liquidRESERVE",
-      "currencyId": "EtherFi Liquid Reserve::liquidRESERVE"
+      "currencyId": "EtherFi Liquid Reserve::liquidRESERVE",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xcc476b1a49bcdf5192561e87b6fb8ea78aa28c13": {
       "chainId": "10",
@@ -17451,7 +17513,8 @@
       "symbol": "weEUR",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xcc476b1a49bcdf5192561e87b6fb8ea78aa28c13/small/token-logo.png",
       "assetGroup": "Liquid Euro::weEUR",
-      "currencyId": "Liquid Euro::weEUR"
+      "currencyId": "Liquid Euro::weEUR",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0240c334172b699ce5f019616431cedebac05c82": {
       "chainId": "10",
@@ -18226,7 +18289,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0xd83e3d560ba6f05094d9d8b3eb8aaea571d1864e/small/token-logo.png",
       "assetGroup": "HYPE",
       "currencyId": "Wrapped HYPE::WHYPE",
-      "props": { "denomination": "HYPE" }
+      "props": {
+        "denomination": "HYPE",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xdcb612005417dc906ff72c87df732e5a90d49e11": {
       "chainId": "10",
@@ -18238,6 +18304,11 @@
       "assetGroup": "EURC::EURC",
       "currencyId": "EURC::EURC",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }

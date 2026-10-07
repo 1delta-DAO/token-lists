@@ -309,6 +309,11 @@
       "currencyId": "Dai Stablecoin::DAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
@@ -713,11 +718,7 @@
       "assetGroup": "USD+",
       "currencyId": "Overnight.fi USD+::USD+",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "overnight", "name": "Overnight", "kind": "protocol" }
       }
@@ -763,7 +764,7 @@
       "currencyId": "USDT+::USDT+",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -1086,7 +1087,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31020/thumb/download_%2816%29.png?1696529856",
       "assetGroup": "BUSD",
       "currencyId": "Binance USD::BUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
       "chainId": "59144",
@@ -1304,7 +1312,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/30540/thumb/wefi.png?1696529412",
       "assetGroup": "Wefi::WEFI",
       "currencyId": "Wefi::WEFI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xa8ae6365383eb907e6b4b1b7e82a35752cc5ef8c": {
       "chainId": "59144",
@@ -1692,6 +1703,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -1776,6 +1792,11 @@
       "assetGroup": "EURA::EURA",
       "currencyId": "EURA::EURA",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
@@ -1999,6 +2020,11 @@
               "peers": {}
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
@@ -2228,7 +2254,8 @@
       "symbol": "REX33",
       "logoURI": "https://assets.coingecko.com/coins/images/68282/thumb/rex33.png?1755242075",
       "assetGroup": "Etherex Liquid Staking Token::REX33",
-      "currencyId": "Etherex Liquid Staking Token::REX33"
+      "currencyId": "Etherex Liquid Staking Token::REX33",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x8cf881799e3b5ab24271a9b66b6ca2b0e575b1ef": {
       "chainId": "59144",
@@ -2283,7 +2310,10 @@
       "logoURI": "https://linea.build/icons/token_round.png",
       "assetGroup": "Linea::LINEA",
       "currencyId": "Linea::LINEA",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x7324a70d1a70cf0e9dab2ea8335ced1ec100bcf3": {
       "chainId": "59144",
@@ -2514,6 +2544,11 @@
       "assetGroup": "avUSD::avUSD",
       "currencyId": "avUSD::avUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -2526,7 +2561,8 @@
       "symbol": "sdeUSD",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/deUSD.svg",
       "assetGroup": "Staked deUSD::sdeUSD",
-      "currencyId": "Staked deUSD::sdeUSD"
+      "currencyId": "Staked deUSD::sdeUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "59144",
@@ -2551,6 +2587,11 @@
               "peers": { "1": "0xbb431abd156b960e5b77cc45c75f107e3991258a" }
             }
           ]
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
@@ -2586,6 +2627,11 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "savings": { "underlying": "avUSD", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -2597,7 +2643,8 @@
       "address": "0xb728946dd750c60c75c40f434c38e2f5afe48a01",
       "symbol": "deUSD",
       "assetGroup": "deUSD::deUSD",
-      "currencyId": "deUSD::deUSD"
+      "currencyId": "deUSD::deUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xf29ac58e23904ce3057afe2f9c430c87703da982": {
       "chainId": "59144",
@@ -2606,7 +2653,8 @@
       "address": "0xf29ac58e23904ce3057afe2f9c430c87703da982",
       "symbol": "eWETH-5",
       "assetGroup": "EVK Vault eWETH-5::eWETH-5",
-      "currencyId": "EVK Vault eWETH-5::eWETH-5"
+      "currencyId": "EVK Vault eWETH-5::eWETH-5",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x139c3d0d52c58fd1ea10b44981aaf21976f7ff51": {
       "chainId": "59144",
