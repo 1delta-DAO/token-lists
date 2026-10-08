@@ -41,6 +41,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const repoRoot = path.resolve(__dirname, '../..')
 
 const OMNI_PATH = path.join(repoRoot, 'omni-list.json')
+/**
+ * A token yield-tracer cannot match to another chain is filed under a chain-local group
+ * (`hyUSD::hyUSD::solana`) that only `solana.json` carries — omni-list is the EVM lists'
+ * union. Those groups take curated notes too (Hylo, Exponent), so they count as known.
+ */
+const SOLANA_PATH = path.join(repoRoot, 'solana.json')
 const CURATED_PATH = path.join(__dirname, 'notes.json')
 const OUT_PATH = path.join(repoRoot, 'asset-notes.json')
 
@@ -195,19 +201,24 @@ export function deriveWhat(group: string, entry: OmniCurrency): string | undefin
 }
 
 /** Problems with the curated file; empty when it is fit to ship. */
-export function validate(curated: Record<string, CuratedNote>, omni: OmniCurrencyList): string[] {
+export function validate(
+  curated: Record<string, CuratedNote>,
+  omni: OmniCurrencyList,
+  local: Set<string> = new Set(),
+): string[] {
   const errors: string[] = []
   const claimed = new Map<string, string>()
   for (const [group, n] of Object.entries(curated)) {
     const at = `notes.json["${group}"]`
-    if (!(group in omni)) errors.push(`${at}: no such assetGroup in omni-list.json`)
+    if (!(group in omni) && !local.has(group)) errors.push(`${at}: no such assetGroup in omni-list.json or solana.json`)
     if (typeof n.what !== 'string' || !n.what.trim()) errors.push(`${at}: empty \`what\``)
     else if (n.what.length > WHAT_MAX) errors.push(`${at}: \`what\` is ${n.what.length} chars (max ${WHAT_MAX})`)
     if (n.confidence && !['high', 'medium', 'low'].includes(n.confidence)) errors.push(`${at}: bad \`confidence\``)
     if (n.updated && !/^\d{4}-\d{2}-\d{2}$/.test(n.updated)) errors.push(`${at}: \`updated\` must be YYYY-MM-DD`)
     for (const l of n.links ?? []) if (!/^https:\/\//.test(l)) errors.push(`${at}: link is not https: ${l}`)
     for (const g of [group, ...(n.alsoGroups ?? [])]) {
-      if (g !== group && !(g in omni)) errors.push(`${at}: alsoGroups entry "${g}" is not an assetGroup`)
+      if (g !== group && !(g in omni) && !local.has(g))
+        errors.push(`${at}: alsoGroups entry "${g}" is not an assetGroup`)
       if (g !== group && g in curated) errors.push(`${at}: alsoGroups entry "${g}" has a note of its own`)
       const prev = claimed.get(g)
       if (prev) errors.push(`${at}: "${g}" is already covered by notes.json["${prev}"]`)
@@ -217,14 +228,19 @@ export function validate(curated: Record<string, CuratedNote>, omni: OmniCurrenc
   return errors
 }
 
-export function buildNotes(curated: Record<string, CuratedNote>, omni: OmniCurrencyList): Record<string, AssetNote> {
+export function buildNotes(
+  curated: Record<string, CuratedNote>,
+  omni: OmniCurrencyList,
+  local: Set<string> = new Set(),
+): Record<string, AssetNote> {
   const out: Record<string, AssetNote> = {}
   for (const [group, entry] of Object.entries(omni)) {
     const what = deriveWhat(group, entry)
     if (what) out[group] = { what, source: 'derived' }
   }
   for (const [group, { alsoGroups, ...note }] of Object.entries(curated)) {
-    for (const g of [group, ...(alsoGroups ?? [])]) if (g in omni) out[g] = { ...note, source: 'curated' }
+    for (const g of [group, ...(alsoGroups ?? [])])
+      if (g in omni || local.has(g)) out[g] = { ...note, source: 'curated' }
   }
   // stable key order so the file diffs cleanly
   return Object.fromEntries(
@@ -234,15 +250,27 @@ export function buildNotes(curated: Record<string, CuratedNote>, omni: OmniCurre
   )
 }
 
+/** The chain-local groups of the Solana list (those not in omni-list); empty when the list is absent. */
+function solanaGroups(): Set<string> {
+  if (!fs.existsSync(SOLANA_PATH)) return new Set()
+  const list = (JSON.parse(fs.readFileSync(SOLANA_PATH, 'utf-8')).list ?? {}) as Record<string, { assetGroup?: string }>
+  return new Set(
+    Object.values(list)
+      .map((t) => t.assetGroup)
+      .filter((g): g is string => !!g),
+  )
+}
+
 function main() {
   const check = process.argv.includes('--check')
   const omni: OmniCurrencyList = JSON.parse(fs.readFileSync(OMNI_PATH, 'utf-8'))
   const curated: Record<string, CuratedNote> = JSON.parse(fs.readFileSync(CURATED_PATH, 'utf-8'))
+  const local = solanaGroups()
 
-  const errors = validate(curated, omni)
+  const errors = validate(curated, omni, local)
   for (const e of errors) console.error(`[notes] ${e}`)
 
-  const notes = buildNotes(curated, omni)
+  const notes = buildNotes(curated, omni, local)
   const text = JSON.stringify(notes, null, 2) + '\n'
   const all = Object.values(notes)
   const nCurated = all.filter((n) => n.source === 'curated').length

@@ -3800,6 +3800,18 @@
   "EURS": { "what": "STASIS EUR stablecoin", "source": "derived" },
   "EURT": { "what": "Tether EUR stablecoin", "source": "derived" },
   "EZETH": { "what": "Renzo liquid-restaked ETH", "source": "derived" },
+  "Earn Hylo USD::eHYUSD::solana": {
+    "what": "Hylo Earn Pool share (ex-sHYUSD) · hyUSD earning LST yield and xAsset borrow fees",
+    "body": "eHYUSD (formerly sHYUSD) is a pro-rata share of the hyUSD deposited in Hylo's Earn Pool. Each epoch the harvested yield is minted as hyUSD into the pool, so eHYUSD's value in hyUSD rises; it does not rebase. It is first-loss capital: if a pool's collateral ratio falls below 100 %, Earn Pool hyUSD is burned to recapitalize it and harvesting pauses.",
+    "backing": "hyUSD in the Earn Pool, first-loss for the hyUSD pools",
+    "yieldSource": "SOL LST staking rewards from the SOL pool plus borrow fees paid by xBTC and xHYPE holders, after a treasury share",
+    "redemption": null,
+    "issuer": "Hylo",
+    "links": ["https://docs.hylo.so/protocol-overview/earn-pool"],
+    "updated": "2026-10-08",
+    "confidence": "medium",
+    "source": "curated"
+  },
   "East West Bancorp xStock::EWBCX": {
     "what": "Backed tokenized stock · tracks East West Bancorp",
     "source": "derived"
@@ -5354,6 +5366,21 @@
     "what": "Dinari tokenized ETF · tracks Hashdex Commodities Trust",
     "source": "derived"
   },
+  "Hastra AUTO::AUTO": {
+    "what": "Hastra staked wYLDS · funds near-prime US auto loans (Agora Data / Figure)",
+    "body": "AUTO is a share token you get by staking wYLDS with Hastra. The staked capital funds a Democratized Prime pool of near-prime US consumer auto loans, originated by Agora Data and structured by Figure on Provenance. It does not rebase: its value in wYLDS rises, read from Chainlink Data Streams. It carries more credit risk than PRIME.",
+    "backing": "near-prime US consumer auto loans (Agora Data originates, Figure structures), secured by the vehicles",
+    "yieldSource": "interest paid by the auto borrowers, at a utilization-based rate minus a 0.5 % Hastra fee; Hastra targets up to ~9 %, not guaranteed",
+    "redemption": "AUTO → wYLDS in one atomic step, no unbonding (fails while the price feed is stale); wYLDS → USDC through Hastra's operator-run redemption",
+    "issuer": "Hastra (incubated by Figure and the Provenance Blockchain Foundation)",
+    "links": [
+      "https://help.hastra.io/auto/what-is-auto",
+      "https://help.hastra.io/integration-guides/auto-hastra-sol-programmatic-integration-guide"
+    ],
+    "updated": "2026-10-08",
+    "confidence": "high",
+    "source": "curated"
+  },
   "Hastra PRIME::PRIME": {
     "what": "Hastra staked wYLDS · Figure HELOC lending yield",
     "body": "PRIME is a yield-bearing token from Hastra, a protocol incubated by Figure and the Provenance Blockchain Foundation. Users lock USDC for wYLDS (wrapped Figure YLDS) and stake wYLDS to mint PRIME, which earns interest from Figure's Democratized Prime facility that funds home equity lines of credit (HELOCs). Figure states it does not issue or sponsor PRIME.",
@@ -5367,6 +5394,22 @@
     ],
     "updated": "2026-10-06",
     "confidence": "medium",
+    "source": "curated"
+  },
+  "Hastra wYLDS::wYLDS": {
+    "what": "Hastra wrapper of Figure's YLDS · USDC in 1:1, SOFR − 0.5 % paid monthly",
+    "body": "wYLDS is Hastra's custodial wrapper over YLDS, Figure's SEC-registered yield-bearing stablecoin. You mint it 1:1 with USDC, which Hastra uses to buy YLDS for its reserve. The price stays about $1; yield is paid monthly as extra wYLDS that you claim on the Hastra dashboard. It is the base token every other Hastra asset (PRIME, AUTO, SMB) is staked from.",
+    "backing": "YLDS held 1:1 in reserve (Figure Certificate Company; prime money-market-type securities)",
+    "yieldSource": "the YLDS reserve's interest, SOFR minus 0.5 %, distributed monthly as claimable wYLDS; staked wYLDS stops earning it",
+    "redemption": "request_redeem / complete_redeem to USDC through Hastra's operator, batched (currently $2k minimum), can wait on banking hours, one pending request per address; or swap on Raydium",
+    "issuer": "Hastra / Figure (YLDS)",
+    "links": [
+      "https://help.hastra.io/wylds/what-is-wylds",
+      "https://help.hastra.io/wylds/claim-your-yields",
+      "https://github.com/provenance-io/hastra-sol-vault"
+    ],
+    "updated": "2026-10-08",
+    "confidence": "high",
     "source": "curated"
   },
   "Healthpeak Properties xStock::DOCX": {
@@ -5637,6 +5680,40 @@
   "Hyatt Hotels xStock::Hx": {
     "what": "Backed tokenized stock · tracks Hyatt Hotels",
     "source": "derived"
+  },
+  "Hylo Leveraged SOL::xSOL::solana": {
+    "what": "Hylo leveraged SOL · ~3x at the 150 % target, no liquidations or margin calls",
+    "body": "xSOL is the leveraged half of Hylo's SOL pool: its price is the pool's TVL minus the virtual stablecoin backing hyUSD, divided by xSOL supply. Leverage moves with the pool's collateral ratio (about 3x at the 150 % target), there are no liquidations or margin calls, and it loses value to volatility decay in sideways markets.",
+    "backing": "the residual of Hylo's SOL LST pool after the hyUSD claim",
+    "yieldSource": null,
+    "redemption": "mint and redeem against the pool at flat, configurable fees",
+    "issuer": "Hylo",
+    "links": ["https://docs.hylo.so/protocol-overview/xassets"],
+    "updated": "2026-10-08",
+    "confidence": "high",
+    "source": "curated"
+  },
+  "Hylo SOL Plus::hyloSOL+::solana": {
+    "what": "Hylo SOL Plus · SOL exposure at 0 % APR, its yield boosts hyloSOL; 5x Hylo XP",
+    "body": "hyloSOL+ gives SOL exposure without yield: its staking rewards go to boosting hyloSOL, and holders earn 5x points in Hylo's XP system instead.",
+    "backing": "staked SOL",
+    "yieldSource": null,
+    "issuer": "Hylo",
+    "links": ["https://docs.hylo.so"],
+    "updated": "2026-10-08",
+    "confidence": "medium",
+    "source": "curated"
+  },
+  "Hylo Staked SOL::hyloSOL::solana": {
+    "what": "Hylo liquid-staked SOL · collateral in hyUSD's SOL pool",
+    "body": "hyloSOL is Hylo's liquid staking token, staked to Hylo's validator (run with Sentinel and Phase Labs). It is collateral in hyUSD's SOL pool alongside jitoSOL.",
+    "backing": "SOL staked to Hylo's validator",
+    "yieldSource": "SOL staking rewards, 5–7 % (varies)",
+    "issuer": "Hylo",
+    "links": ["https://docs.hylo.so"],
+    "updated": "2026-10-08",
+    "confidence": "medium",
+    "source": "curated"
   },
   "Hyperbeat LST Vault::lstHYPE": {
     "what": "Hyperbeat liquid-staked HYPE",
@@ -7935,8 +8012,21 @@
     "source": "derived"
   },
   "Nest BlackOpal LiquidStone II Vault::nOPAL": {
-    "what": "Nest tokenized private-credit fund",
-    "source": "derived"
+    "what": "Nest vault share · BlackOpal LiquidStone II, Brazilian card receivables",
+    "body": "nOPAL is a Nest (Plume Vaults) share token. The vault takes USDC and holds BlackOpal's LiquidStone II fund, which buys short-dated Brazilian credit-card receivables and hedges the currency back to the dollar; about 96 % sits in LiquidStone, the rest in a Nest treasury vault and cash. Interest builds up in the token's price; nothing is paid out. It moves between EVM chains as one LayerZero token and is also issued on Solana.",
+    "backing": "BlackOpal LiquidStone II (FX-hedged Brazilian credit-card receivables), a Nest treasury vault, cash",
+    "yieldSource": "the discount at which card receivables are bought, collected at face value as Visa / Mastercard payments settle; BlackOpal targets ~12 % in USD",
+    "redemption": "through Nest: instant from a small liquid buffer for a fee (15 bp), otherwise a queue (Nest lists T+1); NAV reported by the issuer and posted on chain by Nest; not for US persons, 46 jurisdictions barred at mint",
+    "issuer": "Nest (Plume Vaults) / BlackOpal",
+    "links": [
+      "https://app.nest.credit/vaults/nest-opal-vault",
+      "https://blackopal.finance",
+      "https://docs.nest.credit/about/available-vaults",
+      "https://app.rwa.xyz/assets/nOPAL"
+    ],
+    "updated": "2026-10-08",
+    "confidence": "medium",
+    "source": "curated"
   },
   "Nest BlackRock iShares AAA CLO Active ETF Vault::nCLOA": {
     "what": "Nest tokenized ETF · tracks Nest BlackRock iShares AAA CLO Active ETF Vault",
@@ -22998,6 +23088,21 @@
   "hwHYPE HyperEVM::SY-hwHYPE": {
     "what": "Pendle standardized wrapper (SY) of hwHYPE",
     "source": "derived"
+  },
+  "hyUSD::hyUSD::solana": {
+    "what": "Hylo stablecoin · backed by the stable halves of SOL-LST, cbBTC, HYPE and USDC pools",
+    "body": "hyUSD is Hylo's $1 stablecoin on Solana. Each Hylo collateral pool (SOL LSTs, cbBTC, HYPE, USDC) is split into a leveraged xAsset that takes the price swings and a $1 virtual stablecoin; hyUSD is backed 1:1 by the sum of those. The protocol targets a 150 % collateral ratio and defends it with routing, fees, mint blocks and, last, the Earn Pool.",
+    "backing": "the $1 virtual-stablecoin halves of Hylo's collateral pools (SOL LSTs, cbBTC, HYPE, USDC); xAssets absorb the volatility",
+    "yieldSource": null,
+    "redemption": "mint from USDC at 0 %, redeem to USDC at 0.2 % while Pyth USDC/USD is near $1",
+    "issuer": "Hylo",
+    "links": [
+      "https://docs.hylo.so/product-guide/stablecoin",
+      "https://hylo.so"
+    ],
+    "updated": "2026-10-08",
+    "confidence": "high",
+    "source": "curated"
   },
   "hyWHYPE(mHYPE)-4 HyperEVM::SY-hyWHYPE(mHYPE)-4": {
     "what": "Pendle standardized wrapper (SY) of hyWHYPE(mHYPE)-4",

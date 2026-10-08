@@ -32,7 +32,7 @@ A curated note always wins. A group with neither gets no entry, because "no desc
 
 ## Adding a note
 
-1. Find the group id. Use the `assetGroup` on the token row, or the key in `omni-list.json`. **Never use a ticker**: KBTC alone is 4 groups.
+1. Find the group id. Use the `assetGroup` on the token row, or the key in `omni-list.json`; a Solana-only token has a chain-local group (`hyUSD::hyUSD::solana`) that only `solana.json` carries, which the check accepts too. **Never use a ticker**: KBTC alone is 4 groups.
 2. Add `"<group>": { "what": …, … }` to `notes.json`. If the same asset sits under more than one group (a duplicate or a per-chain split), list the others in `alsoGroups`.
 3. Run `npm run notes` to regenerate the file, then `npm run notes:check` (CI runs this too).
 
