@@ -51,6 +51,7 @@
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "risk": { "score": 3, "category": "LST", "source": "issuer_inherit" },
         "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
@@ -188,6 +189,11 @@
       "props": {
         "permit": { "type": 1, "version": "2" },
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -202,6 +208,11 @@
       "assetGroup": "Vesper V-Dollar (Legacy)::VUSD.L",
       "currencyId": "Vesper V-Dollar (Legacy)::VUSD.L",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "vesper", "name": "Vesper", "kind": "protocol" }
       }
@@ -217,6 +228,11 @@
       "currencyId": "Tether USD::USDT",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -263,7 +279,7 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/bfBTC.webp",
       "assetGroup": "BitFi Bitcoin::BFBTC",
       "currencyId": "BitFi Bitcoin::bfBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x03c7054bcb39f7b2e5b2c7acb37583e32d70cfa3": {
       "chainId": "43111",
@@ -276,6 +292,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -306,6 +323,7 @@
           ]
         },
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
@@ -393,7 +411,8 @@
       "symbol": "uBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/55079/thumb/uBTC.png?1743613297",
       "assetGroup": "UBTC",
-      "currencyId": "uBTC::uBTC"
+      "currencyId": "uBTC::uBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x9bfa177621119e64cecbeabe184ab9993e2ef727": {
       "chainId": "43111",
@@ -406,6 +425,7 @@
       "currencyId": "Merlin BTC::M-BTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
@@ -434,6 +454,7 @@
       "currencyId": "uniBTC::uniBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -454,7 +475,8 @@
       "symbol": "suBTC",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUBTC.webp",
       "assetGroup": "SUBTC",
-      "currencyId": "Sumerian BTC::suBTC"
+      "currencyId": "Sumerian BTC::suBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xc93b7aae2802f57eb9d98e2b6a68217d75a0658c": {
       "chainId": "43111",
@@ -485,7 +507,8 @@
       "symbol": "msETH",
       "logoURI": "https://cdn.sushi.com/image/upload/f_auto,c_limit,w_32/d_unknown.png/tokens/43111/0xBF7d0F62B64B23053949B3a88a03da5Bfd35b2E2.jpg",
       "assetGroup": "Metronome Synth ETH::msETH",
-      "currencyId": "Metronome Synth ETH::msETH"
+      "currencyId": "Metronome Synth ETH::msETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x1855911ab07ed5cd056008f409b709dfa9d01183": {
       "chainId": "43111",
@@ -571,7 +594,14 @@
       "symbol": "suUSD",
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/SUUSD.webp",
       "assetGroup": "SUUSD",
-      "currencyId": "Sumerian USD::suUSD"
+      "currencyId": "Sumerian USD::suUSD",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        }
+      }
     },
     "0x6c851f501a3f24e29a8e39a29591cddf09369080": {
       "chainId": "43111",
@@ -770,7 +800,11 @@
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/10/17::PT-sw-bfBTC(hemiBTC)-2025/10/17",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        }
       }
     },
     "0x42ca6ae4d7f0ff042ae0796685e82b12899a392e": {
@@ -783,7 +817,11 @@
       "currencyId": "Principal Token: sw-bfBTC(hemiBTC) 2025/12/27::PT-sw-bfBTC(hemiBTC)-2025/12/27",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        }
       }
     },
     "0x99e3de3817f6081b2568208337ef83295b7f591d": {

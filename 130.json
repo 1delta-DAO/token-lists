@@ -22,7 +22,11 @@
           "expiry": 1775088000,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -46,7 +50,11 @@
           "expiry": 1771459200,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -93,7 +101,11 @@
           "expiry": 1784764800,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -117,7 +129,11 @@
           "expiry": 1781740800,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -141,7 +157,11 @@
           "expiry": 1769644800,
           "expired": true
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -178,6 +198,11 @@
           "type": "credit",
           "subType": "reinsurance",
           "issuer": "reservoir"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "oft": {
           "eid": 30320,
@@ -3438,7 +3463,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/UNI.webp",
       "assetGroup": "UNI",
       "currencyId": "Uniswap::UNI",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x5eaff8fa6f3831bb86feeb701e6f98293e264d36": {
       "chainId": "130",
@@ -3462,6 +3490,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -3612,6 +3645,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -3855,6 +3889,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -3954,6 +3993,11 @@
           ]
         },
         "denomination": "BTC",
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -3988,7 +4032,10 @@
       "logoURI": "https://ethereum-optimism.github.io/data/GRG/logo.svg",
       "assetGroup": "Rigo Token::GRG",
       "currencyId": "Rigo Token::GRG",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x0555e30da8f98308edb960aa94c0db47230d2b9c": {
       "chainId": "130",
@@ -4117,6 +4164,7 @@
             }
           ]
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -4411,7 +4459,11 @@
       "symbol": "USDC",
       "assetGroup": "USD Coin::USDC::suspicious::050e9ed7",
       "currencyId": "USD Coin::USDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x21a29aeb1e7a5ffb333d50e78d15f23c3608e860": {
       "chainId": "130",
@@ -4420,7 +4472,8 @@
       "address": "0x21a29aeb1e7a5ffb333d50e78d15f23c3608e860",
       "symbol": "MOCK",
       "assetGroup": "MockERC20::MOCK",
-      "currencyId": "MockERC20::MOCK"
+      "currencyId": "MockERC20::MOCK",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718199693293ea98c8e60ee1fc8cadb8c5f850c": {
       "chainId": "130",
@@ -4429,7 +4482,8 @@
       "address": "0x2718199693293ea98c8e60ee1fc8cadb8c5f850c",
       "symbol": "TEST3",
       "assetGroup": "Test Token::TEST3",
-      "currencyId": "Test Token::TEST3"
+      "currencyId": "Test Token::TEST3",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x271820abb1e7565a3c90cca37771e42d2176113b": {
       "chainId": "130",
@@ -4438,7 +4492,8 @@
       "address": "0x271820abb1e7565a3c90cca37771e42d2176113b",
       "symbol": "BENTLEY",
       "assetGroup": "Bentley::BENTLEY",
-      "currencyId": "Bentley::BENTLEY"
+      "currencyId": "Bentley::BENTLEY",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x27183ca95744921d6e4c8be073c400d32ce3b550": {
       "chainId": "130",
@@ -4448,7 +4503,8 @@
       "symbol": "TEST",
       "logoURI": "https://api.swapscanner.io/v0/tokens/0x09e7be7ace149207f4c7e4494347ca7e45f22f14/icon",
       "assetGroup": "Test Token::TEST",
-      "currencyId": "Test Token::TEST"
+      "currencyId": "Test Token::TEST",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x271846fb94bf9aada9acf94e326ed6bad8b2a4ba": {
       "chainId": "130",
@@ -4457,7 +4513,8 @@
       "address": "0x271846fb94bf9aada9acf94e326ed6bad8b2a4ba",
       "symbol": "NEULER",
       "assetGroup": "Not Euler::NEULER",
-      "currencyId": "Not Euler::NEULER"
+      "currencyId": "Not Euler::NEULER",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x27185031bd5b9509d696c8e87771bc42a65ec05e": {
       "chainId": "130",
@@ -4466,7 +4523,8 @@
       "address": "0x27185031bd5b9509d696c8e87771bc42a65ec05e",
       "symbol": "YIELD",
       "assetGroup": "Yield Bearer::YIELD",
-      "currencyId": "Yield Bearer::YIELD"
+      "currencyId": "Yield Bearer::YIELD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x271897ce4c0a7d7e03683eb9b359640d9d38673c": {
       "chainId": "130",
@@ -4475,7 +4533,8 @@
       "address": "0x271897ce4c0a7d7e03683eb9b359640d9d38673c",
       "symbol": "UNICAT",
       "assetGroup": "Unicat::UNICAT",
-      "currencyId": "Unicat::UNICAT"
+      "currencyId": "Unicat::UNICAT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x27189af89312cf442f52bbdbc603b35ff54c18ac": {
       "chainId": "130",
@@ -4484,7 +4543,8 @@
       "address": "0x27189af89312cf442f52bbdbc603b35ff54c18ac",
       "symbol": "YIELD3",
       "assetGroup": "Yield Bearer 3::YIELD3",
-      "currencyId": "Yield Bearer 3::YIELD3"
+      "currencyId": "Yield Bearer 3::YIELD3",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718a6c867d4388b65a054c36439c627044856e3": {
       "chainId": "130",
@@ -4493,7 +4553,8 @@
       "address": "0x2718a6c867d4388b65a054c36439c627044856e3",
       "symbol": "DEMO",
       "assetGroup": "Demo Token::DEMO",
-      "currencyId": "Demo Token::DEMO"
+      "currencyId": "Demo Token::DEMO",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718ae9bea3efdebed1eac7f365cd882617fd3bc": {
       "chainId": "130",
@@ -4503,7 +4564,11 @@
       "symbol": "YIELD",
       "assetGroup": "Yield Bearer::YIELD::suspicious::2718ae9b",
       "currencyId": "Yield Bearer::YIELD",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x2718b4a402285d8dd6601b56c6ab79103258d812": {
       "chainId": "130",
@@ -4512,7 +4577,8 @@
       "address": "0x2718b4a402285d8dd6601b56c6ab79103258d812",
       "symbol": "TEST2",
       "assetGroup": "Another Test::TEST2",
-      "currencyId": "Another Test::TEST2"
+      "currencyId": "Another Test::TEST2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718c0288431196db20869925caa6b61521cc714": {
       "chainId": "130",
@@ -4521,7 +4587,8 @@
       "address": "0x2718c0288431196db20869925caa6b61521cc714",
       "symbol": "TIP2",
       "assetGroup": "Test In Prod 2::TIP2",
-      "currencyId": "Test In Prod 2::TIP2"
+      "currencyId": "Test In Prod 2::TIP2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718d8e8ff9334207ab03c9627a25dfc463be574": {
       "chainId": "130",
@@ -4531,7 +4598,11 @@
       "symbol": "YIELD",
       "assetGroup": "Yield Bearer::YIELD::suspicious::2718d8e8",
       "currencyId": "Yield Bearer::YIELD",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x2718d96b08775096c217ff5d3ce2e060e0d76a71": {
       "chainId": "130",
@@ -4540,7 +4611,8 @@
       "address": "0x2718d96b08775096c217ff5d3ce2e060e0d76a71",
       "symbol": "TIP",
       "assetGroup": "Test In Prod::TIP",
-      "currencyId": "Test In Prod::TIP"
+      "currencyId": "Test In Prod::TIP",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718e4bf0d2713232f778a45bb3716e81ad7b2aa": {
       "chainId": "130",
@@ -4549,7 +4621,8 @@
       "address": "0x2718e4bf0d2713232f778a45bb3716e81ad7b2aa",
       "symbol": "TIPLT",
       "assetGroup": "Test In Prod (Last Time)::TIPLT",
-      "currencyId": "Test In Prod (Last Time)::TIPLT"
+      "currencyId": "Test In Prod (Last Time)::TIPLT",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718ec99d7eb93db2424cbaffff77f8cdfff013a": {
       "chainId": "130",
@@ -4558,7 +4631,8 @@
       "address": "0x2718ec99d7eb93db2424cbaffff77f8cdfff013a",
       "symbol": "TIP3",
       "assetGroup": "Test In Prod 3::TIP3",
-      "currencyId": "Test In Prod 3::TIP3"
+      "currencyId": "Test In Prod 3::TIP3",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x2718eeff692c0f61cbfc185c39f7589635702b80": {
       "chainId": "130",
@@ -4567,7 +4641,8 @@
       "address": "0x2718eeff692c0f61cbfc185c39f7589635702b80",
       "symbol": "YIELD2",
       "assetGroup": "Yield Bearer 2::YIELD2",
-      "currencyId": "Yield Bearer 2::YIELD2"
+      "currencyId": "Yield Bearer 2::YIELD2",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x3a9c7b18f62e3f2a6e66a89d8720cbd0ce27c4fc": {
       "chainId": "130",
@@ -4577,7 +4652,11 @@
       "symbol": "USDC",
       "assetGroup": "USD Coin::USDC::suspicious::3a9c7b18",
       "currencyId": "USD Coin::USDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x51ec21be7fe26495a539951852784bd4102a9aa6": {
       "chainId": "130",
@@ -4587,7 +4666,11 @@
       "symbol": "USDT",
       "assetGroup": "Tether USD::USDT::suspicious::51ec21be",
       "currencyId": "Tether USD::USDT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x5333453ef82bcc1a73fb6241490caebebeb049e6": {
       "chainId": "130",
@@ -4597,7 +4680,11 @@
       "symbol": "WETH",
       "assetGroup": "Wrapped Ether::WETH::suspicious::5333453e",
       "currencyId": "Wrapped Ether::WETH",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x674b791996736ead95b5762127fdbbcedec6ac90": {
       "chainId": "130",
@@ -4607,7 +4694,11 @@
       "symbol": "USDT",
       "assetGroup": "Tether USD::USDT::suspicious::674b7919",
       "currencyId": "Tether USD::USDT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x70eb27d032913ecd4c7f3e91d6022519426bdbb5": {
       "chainId": "130",
@@ -4617,7 +4708,11 @@
       "symbol": "USDT",
       "assetGroup": "Tether USD::USDT::suspicious::70eb27d0",
       "currencyId": "Tether USD::USDT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x77bdd936be01aceefe4a304d4495f203eb91cb7b": {
       "chainId": "130",
@@ -4626,7 +4721,8 @@
       "address": "0x77bdd936be01aceefe4a304d4495f203eb91cb7b",
       "symbol": "MYRC",
       "assetGroup": "MYR Coin::MYRC",
-      "currencyId": "MYR Coin::MYRC"
+      "currencyId": "MYR Coin::MYRC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x846eab6dff1c9ec3ebeb44708d8328be0fe570de": {
       "chainId": "130",
@@ -4636,7 +4732,11 @@
       "symbol": "MOCK",
       "assetGroup": "MockERC20::MOCK::suspicious::846eab6d",
       "currencyId": "MockERC20::MOCK",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9cb28fd578602a51870f60c08f99820b4ea897ce": {
       "chainId": "130",
@@ -4646,7 +4746,11 @@
       "symbol": "MYRC",
       "assetGroup": "MYR Coin::MYRC::suspicious::9cb28fd5",
       "currencyId": "MYR Coin::MYRC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xa06137104da0eff7c9b096d286bf2a1f19a82229": {
       "chainId": "130",
@@ -4656,7 +4760,11 @@
       "symbol": "MYRC",
       "assetGroup": "MYR Coin::MYRC::suspicious::a0613710",
       "currencyId": "MYR Coin::MYRC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xba8482c94ea3708a906f90c2fcf522b88a496871": {
       "chainId": "130",
@@ -4666,7 +4774,11 @@
       "symbol": "USDT",
       "assetGroup": "Tether USD::USDT::suspicious::ba8482c9",
       "currencyId": "Tether USD::USDT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xc22c8ee9b25632492cf6c3bf720caf681fa1f593": {
       "chainId": "130",
@@ -4676,7 +4788,11 @@
       "symbol": "USDC",
       "assetGroup": "USD Coin::USDC::suspicious::c22c8ee9",
       "currencyId": "USD Coin::USDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xddf8b45fbc386001ec686836e417d5af8d68e6c1": {
       "chainId": "130",
@@ -4686,7 +4802,11 @@
       "symbol": "USDC",
       "assetGroup": "USD Coin::USDC::suspicious::ddf8b45f",
       "currencyId": "USD Coin::USDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xec7d9ef3f248e35f5a1273b4ba5faf3962b6770a": {
       "chainId": "130",
@@ -4696,7 +4816,11 @@
       "symbol": "USDT",
       "assetGroup": "Tether USD::USDT::suspicious::ec7d9ef3",
       "currencyId": "Tether USD::USDT",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xef65eb962403b9d016c0fd914e0f17980a1936f8": {
       "chainId": "130",
@@ -4706,7 +4830,11 @@
       "symbol": "USDC",
       "assetGroup": "USD Coin::USDC::suspicious::ef65eb96",
       "currencyId": "USD Coin::USDC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xf9876a59d279fac5f41ec780e73e7ecd45ff8ae8": {
       "chainId": "130",
@@ -4716,7 +4844,11 @@
       "symbol": "MYRC",
       "assetGroup": "MYR Coin::MYRC::suspicious::f9876a59",
       "currencyId": "MYR Coin::MYRC",
-      "props": { "suspicious": true, "mimic": true }
+      "props": {
+        "suspicious": true,
+        "mimic": true,
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x1ae5c230a480cd9226411271d137cb9bbd201f30": {
       "chainId": "130",
