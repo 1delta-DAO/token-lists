@@ -1180,6 +1180,11 @@
           "issuer": "nest",
           "denomination": "USD"
         },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
@@ -1198,6 +1203,11 @@
           "subType": "private-credit",
           "issuer": "nest",
           "denomination": "USD"
+        },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
@@ -1218,10 +1228,28 @@
           "issuer": "matrixdock",
           "underlying": "XAU"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": {
           "id": "matrixdock",
           "name": "Matrixdock",
           "kind": "institution"
+        }
+      }
+    },
+    "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
+      "chainId": "5042",
+      "decimals": 6,
+      "name": "Plume Factor Vault",
+      "address": "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925",
+      "symbol": "FACTOR",
+      "assetGroup": "Plume Factor Vault::FACTOR",
+      "currencyId": "Plume Factor Vault::FACTOR",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         }
       }
     },
@@ -1265,7 +1293,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178430/thumb/weth.png?1789552847",
       "assetGroup": "ETH",
       "currencyId": "Arc Bridged WETH (Arc)::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+      }
     },
     "0x0bffa97f774824e9da843699aedd2835cb1b8022": {
       "chainId": "5042",
@@ -1377,6 +1408,11 @@
       "assetGroup": "EURC::EURC",
       "currencyId": "EURC::EURC",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -1391,6 +1427,11 @@
       "assetGroup": "AllUnity EUR::EURAU",
       "currencyId": "AllUnity EUR::EURAU",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": {
           "id": "allunity",
@@ -1425,7 +1466,10 @@
       "symbol": "CIRBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/102172745/thumb/cirbtc.jpg?1775204071",
       "assetGroup": "Circle Wrapped BTC::CIRBTC",
-      "currencyId": "Circle Wrapped BTC::CIRBTC"
+      "currencyId": "Circle Wrapped BTC::CIRBTC",
+      "props": {
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+      }
     },
     "0xe205b4e7ac03e3f7b2060c3edf2171aa7126c0d5": {
       "chainId": "5042",
@@ -1447,6 +1491,7 @@
       "assetGroup": "PayFi Strategy Token::PST",
       "currencyId": "PayFi Strategy Token::PST",
       "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "huma", "name": "Huma", "kind": "protocol" }
       }
     },
@@ -1510,6 +1555,11 @@
       "assetGroup": "Agant GBP::GBPA",
       "currencyId": "Agant GBP::GBPA",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "agant", "name": "Agant", "kind": "institution" }
       }
@@ -1553,6 +1603,11 @@
       "currencyId": "sUSDai::SUSDAI",
       "props": {
         "savings": { "underlying": "USDai", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
       }
     },
@@ -1566,6 +1621,11 @@
       "assetGroup": "USDai::USDAI",
       "currencyId": "USDai::USDAI",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "usdai", "name": "USDai", "kind": "protocol" }
       }
@@ -2043,6 +2103,144 @@
       "assetGroup": "BAGFI::BAGFI",
       "currencyId": "BAGFI::BAGFI"
     },
+    "0xe6a2476f33ec1566288aa32ec3319a6b77dd1e3b": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Duke",
+      "address": "0xe6a2476f33ec1566288aa32ec3319a6b77dd1e3b",
+      "symbol": "DUKE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179289/thumb/duke.jpg?1791438260",
+      "assetGroup": "Duke::DUKE",
+      "currencyId": "Duke::DUKE"
+    },
+    "0xf80457274fa646c7a8e0942d48be703864ef3d01": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "ACAT",
+      "address": "0xf80457274fa646c7a8e0942d48be703864ef3d01",
+      "symbol": "ACAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179290/thumb/ACAT.jpg?1791438450",
+      "assetGroup": "ACAT::ACAT",
+      "currencyId": "ACAT::ACAT"
+    },
+    "0xa37c1f9b2483b3b45ced74b10e19223aa76d18f2": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Builders",
+      "address": "0xa37c1f9b2483b3b45ced74b10e19223aa76d18f2",
+      "symbol": "BUILDERS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179158/thumb/builder_400x400.jpg?1791298551",
+      "assetGroup": "Builders::BUILDERS",
+      "currencyId": "Builders::BUILDERS"
+    },
+    "0x2a7a8c69a7462a2737a3b41188bc7a36d5555f2f": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "$SOLD",
+      "address": "0x2a7a8c69a7462a2737a3b41188bc7a36d5555f2f",
+      "symbol": "SOLD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178999/thumb/Sold_Token_Logo_under2.9mb.png?1790840276",
+      "assetGroup": "$SOLD::SOLD",
+      "currencyId": "$SOLD::SOLD"
+    },
+    "0x303dbb88ba14626c7a927e983b73267c575315f7": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "KRW1",
+      "address": "0x303dbb88ba14626c7a927e983b73267c575315f7",
+      "symbol": "KRW1",
+      "logoURI": "https://assets.coingecko.com/coins/images/71665/thumb/_KRW1_Logo_v1.1-01.png?1768820330",
+      "assetGroup": "KRW1::KRW1",
+      "currencyId": "KRW1::KRW1",
+      "props": {
+        "stablecoin": { "base": "KRW" },
+        "issuer": { "id": "bdacs", "name": "BDACS", "kind": "institution" }
+      }
+    },
+    "0x8a1d45e102e886510e891d2ec656a708991e2d76": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Colombian Peso",
+      "address": "0x8a1d45e102e886510e891d2ec656a708991e2d76",
+      "symbol": "WCOP",
+      "logoURI": "https://assets.coingecko.com/coins/images/70887/thumb/wcop_logo_1.png?1764394538",
+      "assetGroup": "Colombian Peso::WCOP",
+      "currencyId": "Colombian Peso::WCOP",
+      "props": {
+        "stablecoin": { "base": "COP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Argentine Peso",
+      "address": "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d",
+      "symbol": "WARS",
+      "logoURI": "https://assets.coingecko.com/coins/images/70846/thumb/world_logos_wars_logo_3.png?1764176749",
+      "assetGroup": "Argentine Peso::WARS",
+      "currencyId": "Argentine Peso::WARS",
+      "props": {
+        "stablecoin": { "base": "ARS" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Brazilian real",
+      "address": "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0",
+      "symbol": "WBRL",
+      "logoURI": "https://assets.coingecko.com/coins/images/70862/thumb/wbrl.png?1764272108",
+      "assetGroup": "Brazilian real::WBRL",
+      "currencyId": "Brazilian real::WBRL",
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x337e7456b420bd3481e7fa61fa9850343d610d34": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Mexican Peso",
+      "address": "0x337e7456b420bd3481e7fa61fa9850343d610d34",
+      "symbol": "WMXN",
+      "logoURI": "https://assets.coingecko.com/coins/images/70880/thumb/wmxn_logo_1.png?1764392404",
+      "assetGroup": "Mexican Peso::WMXN",
+      "currencyId": "Mexican Peso::WMXN",
+      "props": {
+        "stablecoin": { "base": "MXN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Peruvian Sol",
+      "address": "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe",
+      "symbol": "WPEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/70975/thumb/wpen_logo_1.png?1764954695",
+      "assetGroup": "Peruvian Sol::WPEN",
+      "currencyId": "Peruvian Sol::WPEN",
+      "props": {
+        "stablecoin": { "base": "PEN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x61d450a098b6a7f69fc4b98ce68198fe59768651": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Chilean Peso",
+      "address": "0x61d450a098b6a7f69fc4b98ce68198fe59768651",
+      "symbol": "WCLP",
+      "logoURI": "https://assets.coingecko.com/coins/images/70976/thumb/wclp_logo_1.png?1764954870",
+      "assetGroup": "Chilean Peso::WCLP",
+      "currencyId": "Chilean Peso::WCLP",
+      "props": {
+        "stablecoin": { "base": "CLP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "5042",
       "decimals": 18,
@@ -2056,19 +2254,6 @@
         "isNative": true,
         "erc20": "0x3600000000000000000000000000000000000000",
         "wrapped": "0x3600000000000000000000000000000000000000"
-      }
-    },
-    "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
-      "chainId": "5042",
-      "decimals": 6,
-      "name": "Plume Factor Vault",
-      "address": "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925",
-      "symbol": "FACTOR",
-      "assetGroup": "Plume Factor Vault::FACTOR",
-      "currencyId": "Plume Factor Vault::FACTOR",
-      "props": {
-        "rwa": { "type": "fund", "issuer": "nest", "denomination": "USD" },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     }
   },

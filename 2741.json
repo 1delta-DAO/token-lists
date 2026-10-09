@@ -59,6 +59,11 @@
       "currencyId": "Bridged USDC (Stargate)::USDC.e",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -132,7 +137,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54027/thumb/weth.png?1738035079",
       "assetGroup": "ETH",
       "currencyId": "Bridged WETH::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x8041fbc255d6e6330e92a61325da515656bfd2dd": {
       "chainId": "2741",
@@ -354,6 +362,11 @@
       "assetGroup": "USDT",
       "currencyId": "USDT::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -386,7 +399,8 @@
               }
             }
           ]
-        }
+        },
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0xd63b0e99303d51713f947195bf37188a943255a1": {
@@ -943,6 +957,11 @@
               "peers": { "252": "0x88aa7854d3b2daa5e37e7ce73a1f39669623a361" }
             }
           ]
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "frax", "name": "Frax", "kind": "protocol" }

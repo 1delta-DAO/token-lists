@@ -2,6 +2,98 @@
   "chainId": "480",
   "version": "0",
   "list": {
+    "0x593ccca4c4bf58b7526a4c164ceef4003c6388db": {
+      "chainId": "480",
+      "decimals": 6,
+      "name": "Nest Alpha Vault",
+      "address": "0x593ccca4c4bf58b7526a4c164ceef4003c6388db",
+      "symbol": "nALPHA",
+      "assetGroup": "Nest Alpha Vault::nALPHA",
+      "currencyId": "Nest Alpha Vault::nALPHA",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
+    "0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9": {
+      "chainId": "480",
+      "decimals": 6,
+      "name": "Nest Treasuries Vault",
+      "address": "0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9",
+      "symbol": "nTBILL",
+      "assetGroup": "Nest Treasuries Vault::nTBILL",
+      "currencyId": "Nest Treasuries Vault::nTBILL",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
+    "0x11113ff3a60c2450f4b22515cb760417259ee94b": {
+      "chainId": "480",
+      "decimals": 6,
+      "name": "Nest Basis Vault",
+      "address": "0x11113ff3a60c2450f4b22515cb760417259ee94b",
+      "symbol": "nBASIS",
+      "assetGroup": "Nest Basis Vault::nBASIS",
+      "currencyId": "Nest Basis Vault::nBASIS",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "basis-trade",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
+    "0x119dd7daff816f29d7ee47596ae5e4bdc4299165": {
+      "chainId": "480",
+      "decimals": 6,
+      "name": "Nest BlackOpal LiquidStone II Vault",
+      "address": "0x119dd7daff816f29d7ee47596ae5e4bdc4299165",
+      "symbol": "nOPAL",
+      "assetGroup": "Nest BlackOpal LiquidStone II Vault::nOPAL",
+      "currencyId": "Nest BlackOpal LiquidStone II Vault::nOPAL",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "nest",
+          "denomination": "USD"
+        },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
     "0x2416092f143378750bb29b79ed961ab195cceea5": {
       "chainId": "480",
       "decimals": 18,
@@ -41,6 +133,7 @@
             }
           ]
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -55,6 +148,11 @@
       "currencyId": "USDC::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -70,6 +168,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -96,7 +195,10 @@
       "symbol": "WLD",
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x163f8c2467924be0ae7b5347228cabf260318753/30ac094d49a4b6e7561810c16ddc8c69.png",
       "assetGroup": "WLD::WLD",
-      "currencyId": "WLD::WLD"
+      "currencyId": "WLD::WLD",
+      "props": {
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+      }
     },
     "0x7077c71b4af70737a08287e279b717dcf64fdc57": {
       "chainId": "480",
@@ -128,6 +230,11 @@
       "assetGroup": "EURC::EURC",
       "currencyId": "EURC::EURC",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -142,6 +249,11 @@
       "assetGroup": "Peso Argentino::wARS",
       "currencyId": "Peso Argentino::wARS",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "ARS" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -180,78 +292,6 @@
       "props": {
         "isNative": true,
         "wrapped": "0x4200000000000000000000000000000000000006"
-      }
-    },
-    "0x593ccca4c4bf58b7526a4c164ceef4003c6388db": {
-      "chainId": "480",
-      "decimals": 6,
-      "name": "Nest Alpha Vault",
-      "address": "0x593ccca4c4bf58b7526a4c164ceef4003c6388db",
-      "symbol": "nALPHA",
-      "assetGroup": "Nest Alpha Vault::nALPHA",
-      "currencyId": "Nest Alpha Vault::nALPHA",
-      "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "private-credit",
-          "issuer": "nest",
-          "denomination": "USD"
-        },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
-      }
-    },
-    "0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9": {
-      "chainId": "480",
-      "decimals": 6,
-      "name": "Nest Treasuries Vault",
-      "address": "0xe72fe64840f4ef80e3ec73a1c749491b5c938cb9",
-      "symbol": "nTBILL",
-      "assetGroup": "Nest Treasuries Vault::nTBILL",
-      "currencyId": "Nest Treasuries Vault::nTBILL",
-      "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "treasury",
-          "issuer": "nest",
-          "denomination": "USD"
-        },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
-      }
-    },
-    "0x11113ff3a60c2450f4b22515cb760417259ee94b": {
-      "chainId": "480",
-      "decimals": 6,
-      "name": "Nest Basis Vault",
-      "address": "0x11113ff3a60c2450f4b22515cb760417259ee94b",
-      "symbol": "nBASIS",
-      "assetGroup": "Nest Basis Vault::nBASIS",
-      "currencyId": "Nest Basis Vault::nBASIS",
-      "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "basis-trade",
-          "issuer": "nest",
-          "denomination": "USD"
-        },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
-      }
-    },
-    "0x119dd7daff816f29d7ee47596ae5e4bdc4299165": {
-      "chainId": "480",
-      "decimals": 6,
-      "name": "Nest BlackOpal LiquidStone II Vault",
-      "address": "0x119dd7daff816f29d7ee47596ae5e4bdc4299165",
-      "symbol": "nOPAL",
-      "assetGroup": "Nest BlackOpal LiquidStone II Vault::nOPAL",
-      "currencyId": "Nest BlackOpal LiquidStone II Vault::nOPAL",
-      "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "private-credit",
-          "issuer": "nest",
-          "denomination": "USD"
-        },
-        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     }
   },

@@ -47,6 +47,7 @@
       "currencyId": "Lorenzo stBTC::stBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lorenzo" },
+        "risk": { "score": 3, "category": "LST", "source": "issuer_inherit" },
         "issuer": { "id": "lorenzo", "name": "Lorenzo", "kind": "protocol" }
       }
     },
@@ -61,6 +62,7 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "risk": { "score": 4, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -91,6 +93,11 @@
       "props": {
         "permit": { "type": 1, "version": "2" },
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -107,6 +114,11 @@
       "props": {
         "permit": { "type": 1, "version": "2" },
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -121,6 +133,11 @@
       "assetGroup": "USDT",
       "currencyId": "Bridged USDT (Stargate)::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -135,6 +152,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -259,6 +281,7 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -273,6 +296,7 @@
       "currencyId": "Merlin BTC::M-BTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "merlin", "name": "Merlin Chain", "kind": "protocol" }
       }
     },
@@ -406,6 +430,11 @@
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
       "props": {
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avalon", "name": "Avalon" }
       }
@@ -419,7 +448,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
       "assetGroup": "SUSDA",
       "currencyId": "sUSDa::sUSDa",
-      "props": { "issuer": { "id": "avalon", "name": "Avalon" } }
+      "props": {
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
+        "issuer": { "id": "avalon", "name": "Avalon" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "167000",

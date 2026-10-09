@@ -11,7 +11,10 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
       "assetGroup": "ETH",
       "currencyId": "Ronin Wrapped Ether::WETH",
-      "props": { "denomination": "ETH" }
+      "props": {
+        "denomination": "ETH",
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xe514d9deb7966c8be0ca922de8a064264ea6bcd4": {
       "chainId": "2020",
@@ -39,6 +42,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -51,7 +59,8 @@
       "symbol": "AXS",
       "logoURI": "https://assets.coingecko.com/coins/images/13029/thumb/axie_infinity_logo.png?1604471082",
       "assetGroup": "AXS",
-      "currencyId": "Axie Infinity Shard::AXS"
+      "currencyId": "Axie Infinity Shard::AXS",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "2020",
