@@ -37417,8 +37417,15 @@
       "props": {
         "rwa": {
           "type": "fund",
-          "subType": "treasury",
-          "issuer": "superstate"
+          "subType": "basis-trade",
+          "issuer": "superstate",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "allowlist",
+            "probedAt": "2026-10-09",
+            "evidence": "transfer reverts 0xc397ba60"
+          }
         },
         "risk": {
           "score": 2,
@@ -37629,7 +37636,15 @@
         "rwa": {
           "type": "fund",
           "subType": "treasury",
-          "issuer": "superstate"
+          "issuer": "superstate",
+          "underlying": "US T-Bill",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "allowlist",
+            "probedAt": "2026-10-09",
+            "evidence": "transfer reverts 0xc397ba60"
+          }
         },
         "risk": {
           "score": 3,
@@ -37740,7 +37755,15 @@
         "rwa": {
           "type": "fund",
           "subType": "money-market",
-          "issuer": "circle"
+          "issuer": "circle",
+          "underlying": "US T-Bill",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "allowlist",
+            "probedAt": "2026-10-09",
+            "evidence": "transfer reverts 0x7f63bd0f"
+          }
         },
         "risk": {
           "score": 1,
@@ -37954,7 +37977,14 @@
         "rwa": {
           "type": "fund",
           "subType": "private-credit",
-          "issuer": "securitize"
+          "issuer": "securitize",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "registry",
+            "probedAt": "2026-10-09",
+            "evidence": "Wallet not in registry service"
+          }
         },
         "risk": { "score": 4, "source": "default" },
         "issuer": {
@@ -38004,7 +38034,19 @@
       "assetGroup": "VanEck Treasury Fund::VBILL",
       "currencyId": "VanEck Treasury Fund::VBILL",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "vaneck" },
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "vaneck",
+          "underlying": "US T-Bill",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "registry",
+            "probedAt": "2026-10-09",
+            "evidence": "Wallet not in registry service"
+          }
+        },
         "risk": {
           "score": 3,
           "category": "YIELD_STABLE",
@@ -38023,7 +38065,19 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "currencyId": "Janus Henderson Anemoy Treasury Fund::JTRSY",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "rwa": {
+          "type": "fund",
+          "subType": "treasury",
+          "issuer": "anemoy",
+          "underlying": "US T-Bill",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "allowlist",
+            "probedAt": "2026-10-09",
+            "evidence": "transfer reverts 0xf90e674a; hook isMember=false"
+          }
+        },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
@@ -38038,7 +38092,19 @@
       "assetGroup": "Janus Henderson Anemoy AAA CLO Fund Token::JAAA",
       "currencyId": "Janus Henderson Anemoy AAA CLO Fund Token::JAAA",
       "props": {
-        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "rwa": {
+          "type": "fund",
+          "subType": "private-credit",
+          "issuer": "anemoy",
+          "underlying": "AAA CLO",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "allowlist",
+            "probedAt": "2026-10-09",
+            "evidence": "transfer reverts 0xf90e674a; hook isMember=false"
+          }
+        },
         "risk": {
           "score": 3,
           "category": "YIELD_STABLE",
@@ -173017,7 +173083,18 @@
       "assetGroup": "Midas Fasanara Global::MGLOBAL",
       "currencyId": "Midas Fasanara Global::MGLOBAL",
       "props": {
-        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" }
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
+        "rwa": {
+          "type": "fund",
+          "issuer": "midas",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "role",
+            "probedAt": "2026-10-09",
+            "evidence": "WMAC: hasnt role"
+          }
+        }
       }
     },
     "0x9fdbde76236998dc2836fe67a9954ede456a1d63": {
@@ -178859,6 +178936,15 @@
         "isNative": true,
         "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
       }
+    },
+    "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Staked Lista XAUE",
+      "address": "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624",
+      "symbol": "slisXAUE",
+      "assetGroup": "Staked Lista XAUE::slisXAUE",
+      "currencyId": "Staked Lista XAUE::slisXAUE"
     }
   },
   "mainTokens": [

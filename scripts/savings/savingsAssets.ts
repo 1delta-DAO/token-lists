@@ -124,6 +124,14 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'USD3::USD3': { underlying: 'USDC', base: 'USD' },
   '3Jane Staked USD3::sUSD3': { underlying: 'USD3', base: 'USD' },
   'sUSD3::sUSD3': { underlying: 'USD3', base: 'USD' },
+  // --- Lista USDT.Treasury (BNB) — Lista's permissionless 18-dec wrapper over the
+  // KYC-only Centrifuge JTRSY vault (Janus Henderson short-dated US T-bills). Passive by
+  // this list's test: deposit USDT, accrue the fund's interest (dripped weekly into the
+  // share price, 5 % to Lista), request USDT back on the fund's 5–14-day cycle. Its
+  // sibling USDT.AAA (0x82664f43…, over JAAA, AAA-rated CLOs) is deliberately ABSENT:
+  // an actively-managed credit fund, the syrupUSDC exclusion. Both are savings rows in
+  // margin-fetcher's SAVINGS_REGISTRY — the two lists answer different questions.
+  'USDT.Treasury::USDT.Treasury': { underlying: 'USDT', base: 'USD' },
   // --- Saturn sUSDat (over USDat) — passive by the test this list applies:
   // deposit USDat, accrue a distribution the protocol pays in every three
   // days, redeem USDat, with no allocation decisions on the depositor's

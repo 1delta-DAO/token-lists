@@ -127,6 +127,97 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
   //   '0x1234...': { type: 'fund', subType: 'treasury', issuer: 'ondo', underlying: 'US T-Bill' },
   // },
 
+  // Aave V3 Horizon's eight collaterals (Ethereum) — every one is TRANSFER-RESTRICTED to the
+  // issuer's allowlist. Probed 2026-10-09 by simulating `transfer(random, 1)` FROM each one's
+  // Horizon aToken (a real holder): USTB / USCC revert `0xc397ba60`, USYC `0x7f63bd0f`,
+  // JTRSY / JAAA `0xf90e674a` (Centrifuge V3 hook `isMember` false), VBILL / ACRED
+  // "Wallet not in registry service" (Securitize), mGLOBAL "WMAC: hasnt role" (Midas). So
+  // none of them can be held by an ordinary wallet, a router or a composer: the only
+  // permissionless route to any of them is a WRAPPER on another chain (Lista's
+  // USDT.Treasury / USDT.AAA on BNB over JTRSY / JAAA — lending-sdks registryLista.ts).
+  // Manual rows WIN over the rule seed, so each carries the full classification; two are
+  // corrections of it — JAAA is AAA-rated CLOs (corporate credit, not treasuries) and
+  // mGLOBAL was not classified at all.
+  '1': {
+    // Superstate USTB — short-duration US government securities fund.
+    '0x43415eb6ff9db7e26a15b704e7a3edce97d31c4e': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'superstate',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0xc397ba60' },
+    },
+    // Superstate USCC — crypto carry (basis) fund, not T-bills.
+    '0x14d60e7fdc0d71d8611742720e4c50e7a974020c': {
+      type: 'fund',
+      subType: 'basis-trade',
+      issuer: 'superstate',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0xc397ba60' },
+    },
+    // Circle (ex-Hashnote) USYC — tokenized money-market fund.
+    '0x136471a34f6ef19fe571effc1ca711fdb8e49f2b': {
+      type: 'fund',
+      subType: 'money-market',
+      issuer: 'circle',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0x7f63bd0f' },
+    },
+    // Janus Henderson Anemoy Treasury Fund (Centrifuge V3 share).
+    '0x8c213ee79581ff4984583c6a801e5263418c4b86': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'anemoy',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0xf90e674a; hook isMember=false' },
+    },
+    // Janus Henderson Anemoy AAA CLO Fund — corporate credit (the rule seed said treasury).
+    '0x5a0f93d040de44e78f251b03c43be9cf317dcf64': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'anemoy',
+      underlying: 'AAA CLO',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0xf90e674a; hook isMember=false' },
+    },
+    // VanEck Treasury Fund (Securitize).
+    '0x2255718832bc9fd3be1caf75084f4803da14ff01': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'vaneck',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'registry', probedAt: '2026-10-09', evidence: 'Wallet not in registry service' },
+    },
+    // Apollo Diversified Credit Securitize Fund.
+    '0x17418038ecf73ba4026c4f428547bf099706f27b': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'securitize',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'registry', probedAt: '2026-10-09', evidence: 'Wallet not in registry service' },
+    },
+    // Midas Fasanara Global — no sub-type: Midas names no single strategy and a guess would
+    // be a claim.
+    '0x7433806912eae67919e66aea853d46fa0aef98a8': {
+      type: 'fund',
+      issuer: 'midas',
+      denomination: 'USD',
+      transferRestricted: true,
+      transferGate: { kind: 'role', probedAt: '2026-10-09', evidence: 'WMAC: hasnt role' },
+    },
+  },
+
   // Robinhood Stock Tokens on Robinhood Chain — issued by Robinhood Assets (Jersey) Ltd
   // (terms: robinhood.com/stocktoken/…). The list names them like the company ("NVIDIA",
   // "Space Exploration Technologies Corp"), so no name rule can see them; they are keyed

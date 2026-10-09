@@ -481,6 +481,28 @@ export interface TokenProps {
      * $1.10). Set only where verified on-chain; consumers read it as the token's money.
      */
     denomination?: string
+    /**
+     * `true` ⇒ the TOKEN ITSELF refuses an unlisted holder: `transfer` to an
+     * address outside the issuer's allowlist / registry REVERTS, so an
+     * ordinary wallet, a router, a composer or a lending position of ours
+     * can never hold it. This is a stronger statement than a gated mint
+     * (`entry.mint.gated`): a KYC-minted token that transfers freely (XAUE,
+     * reUSD) is still usable through a wrapper or a market; a
+     * transfer-restricted one is not usable AT ALL outside the allowlist.
+     *
+     * Set only where probed — a `transfer` simulated from a real holder to an
+     * arbitrary address and seen to revert — and dated in `transferGate`.
+     * Absent means NOT PROBED, never "free".
+     */
+    transferRestricted?: boolean
+    /**
+     * What enforces {@link transferRestricted}: `allowlist` (an issuer-run
+     * set on the token), `registry` (an external compliance registry the
+     * token consults — Securitize's "Wallet not in registry service"),
+     * `role` (an access-control role on the token — Midas "WMAC: hasnt
+     * role"). `probedAt` is the date of the simulated transfer that proved it.
+     */
+    transferGate?: { kind: 'allowlist' | 'registry' | 'role'; probedAt: string; evidence?: string }
   }
   /** Liquid (re)staking token classification */
   lst?: {
