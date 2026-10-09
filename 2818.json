@@ -52,7 +52,8 @@
       "symbol": "BGBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/102172988/thumb/20260423-114744.png?1777014158",
       "assetGroup": "Bitget Wrapped BTC::BGBTC",
-      "currencyId": "Bitget Wrapped BTC::BGBTC"
+      "currencyId": "Bitget Wrapped BTC::BGBTC",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x5300000000000000000000000000000000000011": {
       "chainId": "2818",
@@ -89,6 +90,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -114,6 +120,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -128,6 +135,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -267,6 +279,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -335,6 +352,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -349,6 +371,11 @@
       "assetGroup": "USDa::USDa",
       "currencyId": "USDa::USDa",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avalon", "name": "Avalon" }
       }
@@ -1457,6 +1484,11 @@
       "currencyId": "USDC::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }

@@ -231,6 +231,11 @@
       "currencyId": "Backed NVIDIA::BNVDA",
       "props": {
         "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "risk": {
+          "score": 3,
+          "category": "TOKENIZED_EQUITY",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -364,7 +369,8 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x8e5bbbb09ed1ebde8674cda39a0c169401db4252": {
       "chainId": "100",
@@ -377,6 +383,7 @@
       "currencyId": "Wrapped BTC::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -479,6 +486,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -687,6 +699,11 @@
       "assetGroup": "BRLA",
       "currencyId": "BRLA Digital BRLA::BRLA",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "REAL" },
         "issuer": {
           "id": "brla",
@@ -947,8 +964,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -1104,7 +1121,8 @@
       "symbol": "REUSD",
       "logoURI": "https://rmm.realtoken.network/icons/tokens/realt-token.svg",
       "assetGroup": "Realtoken Ecosystem USD::REUSD",
-      "currencyId": "Realtoken Ecosystem USD::REUSD"
+      "currencyId": "Realtoken Ecosystem USD::REUSD",
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xb90d6bec20993be5d72a5ab353343f7a0281f158": {
       "chainId": "100",
@@ -1198,7 +1216,8 @@
       "symbol": "miMATIC",
       "logoURI": "https://assets.coingecko.com/coins/images/15264/thumb/mimatic-red.png?1696514916",
       "assetGroup": "MIMATIC",
-      "currencyId": "Mai Stablecoin::miMATIC"
+      "currencyId": "Mai Stablecoin::miMATIC",
+      "props": { "risk": { "score": 2, "source": "issuer_inherit" } }
     },
     "0x177127622c4a00f3d409b75571e12cb3c8973d3c": {
       "chainId": "100",
@@ -5478,6 +5497,7 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -7483,7 +7503,7 @@
         "risk": {
           "score": 5,
           "category": "DISCONTINUED",
-          "source": "whitelist"
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -7777,6 +7797,11 @@
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -7791,6 +7816,11 @@
       "assetGroup": "Frankencoin::ZCHF",
       "currencyId": "Frankencoin::ZCHF",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "CHF" },
         "issuer": {
           "id": "frankencoin",
@@ -7897,6 +7927,11 @@
       "assetGroup": "Argentine Peso::WARS",
       "currencyId": "Argentine Peso::WARS",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "ARS" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -7911,6 +7946,11 @@
       "assetGroup": "Mexican Peso::WMXN",
       "currencyId": "Mexican Peso::WMXN",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "MXN" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -7925,6 +7965,11 @@
       "assetGroup": "Brazilian real::WBRL",
       "currencyId": "Brazilian real::WBRL",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "REAL" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -7939,6 +7984,11 @@
       "assetGroup": "Peruvian Sol::WPEN",
       "currencyId": "Peruvian Sol::WPEN",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "PEN" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -7953,6 +8003,11 @@
       "assetGroup": "Colombian Peso::WCOP",
       "currencyId": "Colombian Peso::WCOP",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "COP" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -7967,6 +8022,11 @@
       "assetGroup": "Chilean Peso::WCLP",
       "currencyId": "Chilean Peso::WCLP",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "CLP" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -7981,6 +8041,11 @@
       "assetGroup": "Tokenised GBP::TGBP",
       "currencyId": "Tokenised GBP::TGBP",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "GBP" },
         "issuer": {
           "id": "bcp",

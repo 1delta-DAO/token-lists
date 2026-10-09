@@ -198,17 +198,22 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   // Loopscale's own vault shares: the `lpMint` of its curated vaults.
   Hj3avy8d4k1skU3aScok7VWxEQSw6Bchuu5C9oV6vNz5:
     'Loopscale "USDC Genesis" vault lpMint (oneUSDC); collateral on Loopscale USDC + SOL vaults',
-  GMGm82jMiMCVQZfnHcD96b8YF8BXvLHteKhEaj3fZjDe: 'Loopscale "SOL Genesis" vault lpMint (oneSOL); collateral on a Loopscale USDC vault',
+  GMGm82jMiMCVQZfnHcD96b8YF8BXvLHteKhEaj3fZjDe:
+    'Loopscale "SOL Genesis" vault lpMint (oneSOL); collateral on a Loopscale USDC vault',
   // Securitize funds — Token-2022 metadata on metadata.securitize.io.
-  FubtUcvhSCr3VPXEcxouoQjKQ7NWTCzXyECe76B7L3f8: 'Loopscale "ACRED / USDG" loop collateral; metadata.securitize.io/acred.json',
-  EuTtCw35R3BJnTmXCREctjCU9XTkZXsQjqnoNg7NwdnZ: 'Loopscale "HINC / USDG" loop collateral; metadata.securitize.io/hinc.json',
+  FubtUcvhSCr3VPXEcxouoQjKQ7NWTCzXyECe76B7L3f8:
+    'Loopscale "ACRED / USDG" loop collateral; metadata.securitize.io/acred.json',
+  EuTtCw35R3BJnTmXCREctjCU9XTkZXsQjqnoNg7NwdnZ:
+    'Loopscale "HINC / USDG" loop collateral; metadata.securitize.io/hinc.json',
   // Etherfuse stablebonds and the local-currency stables they loop against.
   CETES7CKqqKQizuSN6iWQwmTeFRjbJR6Vw2XRKfEDR8f:
     'Loopscale "CETES / MXNe" + "CETES / USDC" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
-  GiLTSeSFnNse7xQVYeKdMyckGw66AoRmyggGg1NNd4yr: 'Loopscale "GILTS / tGBP" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
+  GiLTSeSFnNse7xQVYeKdMyckGw66AoRmyggGg1NNd4yr:
+    'Loopscale "GILTS / tGBP" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
   BRNTNaZeTJANz9PeuD8drNbBHwGgg7ZTjiQYrFgWQ48p:
     'Loopscale "TESOURO / BRZ" + "TESOURO / USDC" loop collateral; metadata on stablebonds.s3 (Etherfuse)',
-  '6zYgzrT7X2wi9a9NeMtUvUWLLmf2a8vBsbYkocYdB9wa': 'Loopscale "CETES / MXNe" loop principal; metadata on brale.xyz (Real MXN)',
+  '6zYgzrT7X2wi9a9NeMtUvUWLLmf2a8vBsbYkocYdB9wa':
+    'Loopscale "CETES / MXNe" loop principal; metadata on brale.xyz (Real MXN)',
   '2zMqyX4AYCk6mgy5UZ2S7zUaLxwERhK5WjqDzkPPbSpW':
     'Loopscale "GILTS / tGBP" loop principal; metadata on superset-finance, CoinGecko `tokenised-gbp` names this mint',
   BRZbFNQDcWLfcdHmAkqEVnLHCAWKTRf6eHyEaWdZp3JN:

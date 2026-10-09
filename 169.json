@@ -89,7 +89,7 @@
       "currencyId": "Manta mETH::METH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "mantle" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
         "oft": {
           "eid": 30217,
           "routes": [
@@ -128,6 +128,11 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
@@ -142,6 +147,11 @@
       "assetGroup": "USDT",
       "currencyId": "Tether USD::USDT",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
@@ -420,6 +430,11 @@
             }
           ]
         },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }
       }
@@ -464,6 +479,11 @@
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
       "props": {
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "zoth", "name": "Zoth", "kind": "protocol" }
       }
@@ -526,6 +546,11 @@
               "peers": { "1": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2" }
             }
           ]
+        },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ethena", "name": "Ethena", "kind": "protocol" }

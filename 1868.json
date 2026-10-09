@@ -62,7 +62,7 @@
       "currencyId": "pufETH::PUFETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
@@ -77,6 +77,7 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "risk": { "score": 4, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -145,6 +146,7 @@
       "currencyId": "Bridged WBTC (LayerZero)::WBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -284,6 +286,7 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -378,6 +381,11 @@
       "currencyId": "Stargate Bridged USDT0::USDT0",
       "props": {
         "permit": { "type": 1, "version": "1" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }

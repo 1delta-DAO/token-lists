@@ -13,6 +13,7 @@
       "currencyId": "Ankr Staked ETH::ANKRETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "ankr" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "issuer": { "id": "ankr", "name": "Ankr", "kind": "protocol" }
       }
     },
@@ -1788,8 +1789,8 @@
       "props": {
         "risk": {
           "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
