@@ -3919,7 +3919,10 @@
           "ptAddress": "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1d27254125246873a19580b7364bff322c5def0f": {
@@ -4232,7 +4235,10 @@
           "ytAddress": "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1ec77f630ef8e8e0ae29aa44a48af8fa41c2f762": {
@@ -26292,7 +26298,10 @@
           "ptAddress": "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xb5be35d8ff83d431899b95851cb17a2b4bcef150": {
@@ -30327,7 +30336,10 @@
           "ytAddress": "0x1d03e1859e0b10fc4943fd9204c008c8293d416d",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd341a146a4fd20ea89898e4d86ae1829bf3a1c23": {
@@ -41636,11 +41648,7 @@
           "category": "YIELD_STABLE",
           "source": "whitelist"
         },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x7796f4e23a62ef3653829c21032a9e24beaf4cf5": {
@@ -60830,7 +60838,8 @@
           "score": 4,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
@@ -60847,7 +60856,32 @@
           "score": 4,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
+      }
+    },
+    "0x7433806912eae67919e66aea853d46fa0aef98a8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Midas Fasanara Global",
+      "address": "0x7433806912eae67919e66aea853d46fa0aef98a8",
+      "symbol": "MGLOBAL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172980/thumb/mglobal-Cm4yjVTI.png?1776956923",
+      "assetGroup": "Midas Fasanara Global::MGLOBAL",
+      "currencyId": "Midas Fasanara Global::MGLOBAL",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "issuer": "midas",
+          "denomination": "USD",
+          "transferRestricted": true,
+          "transferGate": {
+            "kind": "role",
+            "probedAt": "2026-10-09",
+            "evidence": "WMAC: hasnt role"
+          }
+        },
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" }
       }
     },
     "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb": {
@@ -173073,30 +173107,6 @@
       "assetGroup": "Mystery::MYSTERY::1::0",
       "currencyId": "Mystery::MYSTERY"
     },
-    "0x7433806912eae67919e66aea853d46fa0aef98a8": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Midas Fasanara Global",
-      "address": "0x7433806912eae67919e66aea853d46fa0aef98a8",
-      "symbol": "MGLOBAL",
-      "logoURI": "https://assets.coingecko.com/coins/images/102172980/thumb/mglobal-Cm4yjVTI.png?1776956923",
-      "assetGroup": "Midas Fasanara Global::MGLOBAL",
-      "currencyId": "Midas Fasanara Global::MGLOBAL",
-      "props": {
-        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
-        "rwa": {
-          "type": "fund",
-          "issuer": "midas",
-          "denomination": "USD",
-          "transferRestricted": true,
-          "transferGate": {
-            "kind": "role",
-            "probedAt": "2026-10-09",
-            "evidence": "WMAC: hasnt role"
-          }
-        }
-      }
-    },
     "0x9fdbde76236998dc2836fe67a9954ede456a1d63": {
       "chainId": "1",
       "decimals": 18,
@@ -178923,6 +178933,45 @@
       "assetGroup": "QSAVE Wealth Fund::QSAVE",
       "currencyId": "QSAVE Wealth Fund::QSAVE"
     },
+    "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Staked Lista XAUE",
+      "address": "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624",
+      "symbol": "slisXAUE",
+      "assetGroup": "Staked Lista XAUE::slisXAUE",
+      "currencyId": "Staked Lista XAUE::slisXAUE"
+    },
+    "0x41a4594575557efbf85cd950749bb0c1e99bcefd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Bunker Mode",
+      "address": "0x41a4594575557efbf85cd950749bb0c1e99bcefd",
+      "symbol": "BUNKER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179363/thumb/logo.png?1791546623",
+      "assetGroup": "Bunker Mode::BUNKER",
+      "currencyId": "Bunker Mode::BUNKER"
+    },
+    "0x2b82cdeb8477415d541799abb0cc48044c8ea5f3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "EmberEVO",
+      "address": "0x2b82cdeb8477415d541799abb0cc48044c8ea5f3",
+      "symbol": "EMBEO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179367/thumb/embeo-logo.png?1791570939",
+      "assetGroup": "EmberEVO::EMBEO",
+      "currencyId": "EmberEVO::EMBEO"
+    },
+    "0x41cf62ddb12bd287958616d43f5e1953cb422aac": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "TAU FA",
+      "address": "0x41cf62ddb12bd287958616d43f5e1953cb422aac",
+      "symbol": "TAUFA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179369/thumb/P6KS0NoD_400x400.png?1791590766",
+      "assetGroup": "TAU FA::TAUFA",
+      "currencyId": "TAU FA::TAUFA"
+    },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",
       "decimals": 18,
@@ -178936,15 +178985,6 @@
         "isNative": true,
         "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
       }
-    },
-    "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Staked Lista XAUE",
-      "address": "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624",
-      "symbol": "slisXAUE",
-      "assetGroup": "Staked Lista XAUE::slisXAUE",
-      "currencyId": "Staked Lista XAUE::slisXAUE"
     }
   },
   "mainTokens": [
