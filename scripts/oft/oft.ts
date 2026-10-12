@@ -108,6 +108,42 @@ interface LzChain {
 
 type LzMetadata = { [chainKey: string]: LzChain }
 
+/**
+ * OFT routes LayerZero's registry does not list, keyed by chain and the token
+ * they move. They go through the SAME on-chain verification as a registry
+ * row (`token()` must name the token, `peers` are read live), so a wrong row
+ * here is dropped, not published.
+ *
+ * pUSD (Plume USD, Nest/Veda): a BoringVault whose LayerZero teller
+ * `0xf6aa…1059` is a standard OFT (`send`/`quoteSend`, `token()` = pUSD,
+ * mint/burn through the vault, so no approval). Peered Ethereum <-> Plume
+ * only — checked against every LayerZero V2 endpoint on 2026-10-09.
+ */
+const EXTRA_ROUTES: { [chainId: string]: { token: string; route: OftRoute }[] } = {
+  '1': [
+    {
+      token: '0xdddd73f5df1f0dc31373357beac77545dc5a6f3f',
+      route: {
+        contract: '0xf6aada00bc2a206f06bce86ddd8348b70daa1059',
+        kind: 'adapter',
+        sharedDecimals: 6,
+        oapp: 'nest',
+      },
+    },
+  ],
+  '98866': [
+    {
+      token: '0xdddd73f5df1f0dc31373357beac77545dc5a6f3f',
+      route: {
+        contract: '0xf6aada00bc2a206f06bce86ddd8348b70daa1059',
+        kind: 'adapter',
+        sharedDecimals: 6,
+        oapp: 'nest',
+      },
+    },
+  ],
+}
+
 interface Candidate {
   token: string
   route: OftRoute
@@ -161,7 +197,7 @@ function bytes32ToAddress(v: unknown): string | undefined {
 }
 
 /** Candidate routes for the tokens this repo lists on one chain, from the registry alone. */
-function candidatesFor(chain: LzChain, listed: Set<string>): Candidate[] {
+function candidatesFor(chain: LzChain, listed: Set<string>, chainId: string): Candidate[] {
   const tokens = chain.tokens ?? {}
   const oapps = chain.addressToOApp ?? {}
   const out: Candidate[] = []
@@ -195,6 +231,12 @@ function candidatesFor(chain: LzChain, listed: Set<string>): Candidate[] {
       const pm = tokens[p]
       if (pm) consider(token, p, pm)
     }
+  }
+  for (const extra of EXTRA_ROUTES[chainId] ?? []) {
+    const key = `${extra.token}:${extra.route.contract}`
+    if (!listed.has(extra.token) || seen.has(key)) continue
+    seen.add(key)
+    out.push({ token: extra.token, route: { ...extra.route } })
   }
   return out
 }
@@ -323,7 +365,7 @@ async function generateOftMap() {
     if (isFrozenChain(chainId)) return
     const { chain, eid } = chains[chainId]
     const listed = new Set(tokens.map((t) => (t.address ?? '').toLowerCase()).filter(Boolean))
-    const candidates = candidatesFor(chain, listed)
+    const candidates = candidatesFor(chain, listed, chainId)
     if (candidates.length === 0) return
     const others = peerChains.filter((p) => p.chainId !== chainId)
     const rpcs = (chain.rpcs ?? []).map((r) => r.url).filter((u) => u.startsWith('https://'))
