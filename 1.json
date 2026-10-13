@@ -3919,7 +3919,10 @@
           "ptAddress": "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1d27254125246873a19580b7364bff322c5def0f": {
@@ -4232,7 +4235,10 @@
           "ytAddress": "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1ec77f630ef8e8e0ae29aa44a48af8fa41c2f762": {
@@ -26292,7 +26298,10 @@
           "ptAddress": "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xb5be35d8ff83d431899b95851cb17a2b4bcef150": {
@@ -30327,7 +30336,10 @@
           "ytAddress": "0x1d03e1859e0b10fc4943fd9204c008c8293d416d",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd341a146a4fd20ea89898e4d86ae1829bf3a1c23": {
@@ -41636,11 +41648,7 @@
           "category": "YIELD_STABLE",
           "source": "whitelist"
         },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x7796f4e23a62ef3653829c21032a9e24beaf4cf5": {
@@ -60830,7 +60838,8 @@
           "score": 4,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x1f37620a0e0660db3cdbb8cdbf62d8099f959925": {
@@ -60847,7 +60856,8 @@
           "score": 4,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0x7433806912eae67919e66aea853d46fa0aef98a8": {
@@ -62006,7 +62016,15 @@
       "currencyId": "fxSAVE Ethereum::SY-fxSAVE",
       "props": {
         "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "fx-protocol",
+            "name": "f(x) Protocol",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x836b888976294f75e006fb457760442d5903835e": {
@@ -101561,7 +101579,7 @@
               "oapp": "swell-network",
               "approvalRequired": true,
               "peers": {
-                "1923": "0x18d33689ae5d02649a859a1cf16c9f0563975258",
+                "56": "0x963132a22e8dd516ec65c2fad3a17f280c27de2d",
                 "8453": "0x850cdf416668210ed0c36bfff5d21921c7ada3b8",
                 "42161": "0xb1fe27b32ffb5ce54e272c096547f1e86c19e72f",
                 "48900": "0xd8b29106d4cebad087c30b10c0e41baa3a9ea703",

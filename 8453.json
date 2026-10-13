@@ -712,7 +712,14 @@
       "assetGroup": "YT superNVDA (NVDAc) Base::YT-superNVDA-8APR2027",
       "currencyId": "YT superNVDA (NVDAc) Base::YT-superNVDA-8APR2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1807142400 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xb06e7781ad4d205c67368fd01bf817977cfdecbe",
+          "expiry": 1807142400,
+          "underlyingAsset": "0xa4526dedb05efd6fbd889b6cd3d7e6a968afef4a",
+          "ptAddress": "0x7cd489d9afc11578c16524fc1a61265e45f4a33d",
+          "syAddress": "0xcf8d0b0e4488b390cd83bcd67e4f101623d21ee7"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1796,7 +1803,14 @@
       "assetGroup": "superTSLA Base::SY-superTSLA",
       "currencyId": "superTSLA Base::SY-superTSLA",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xadb822593f62752a15edefe9a31e1e9e05dcc13d",
+          "expiry": 1807142400,
+          "underlyingAsset": "0x0db207f8c9a74fbda3299ee4f482322d0498f291",
+          "ptAddress": "0xf28ac4d7f0be9b7bcdeb3db9537802fb8102b1ea",
+          "ytAddress": "0xcfcf6b5d2bae054399c40171ab28ac0c55776548"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1890,7 +1904,14 @@
       "assetGroup": "PT superNVDA (NVDAc) Base::PT-superNVDA-8APR2027",
       "currencyId": "PT superNVDA (NVDAc) Base::PT-superNVDA-8APR2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1807142400 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xb06e7781ad4d205c67368fd01bf817977cfdecbe",
+          "expiry": 1807142400,
+          "underlyingAsset": "0xa4526dedb05efd6fbd889b6cd3d7e6a968afef4a",
+          "ytAddress": "0x3144e311f7dcfa12c7e57a531df94d7d88b2db49",
+          "syAddress": "0xcf8d0b0e4488b390cd83bcd67e4f101623d21ee7"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -2710,7 +2731,14 @@
       "assetGroup": "superNVDA Base::SY-superNVDA",
       "currencyId": "superNVDA Base::SY-superNVDA",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xb06e7781ad4d205c67368fd01bf817977cfdecbe",
+          "expiry": 1807142400,
+          "underlyingAsset": "0xa4526dedb05efd6fbd889b6cd3d7e6a968afef4a",
+          "ptAddress": "0x7cd489d9afc11578c16524fc1a61265e45f4a33d",
+          "ytAddress": "0x3144e311f7dcfa12c7e57a531df94d7d88b2db49"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -2724,7 +2752,14 @@
       "assetGroup": "YT superTSLA (TSLAc) Base::YT-superTSLA-8APR2027",
       "currencyId": "YT superTSLA (TSLAc) Base::YT-superTSLA-8APR2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1807142400 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xadb822593f62752a15edefe9a31e1e9e05dcc13d",
+          "expiry": 1807142400,
+          "underlyingAsset": "0x0db207f8c9a74fbda3299ee4f482322d0498f291",
+          "ptAddress": "0xf28ac4d7f0be9b7bcdeb3db9537802fb8102b1ea",
+          "syAddress": "0x785685b3a6a2af752694fda7058965302e59f8e6"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -3175,7 +3210,14 @@
       "assetGroup": "PT superTSLA (TSLAc) Base::PT-superTSLA-8APR2027",
       "currencyId": "PT superTSLA (TSLAc) Base::PT-superTSLA-8APR2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1807142400 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xadb822593f62752a15edefe9a31e1e9e05dcc13d",
+          "expiry": 1807142400,
+          "underlyingAsset": "0x0db207f8c9a74fbda3299ee4f482322d0498f291",
+          "ytAddress": "0xcfcf6b5d2bae054399c40171ab28ac0c55776548",
+          "syAddress": "0x785685b3a6a2af752694fda7058965302e59f8e6"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -7459,7 +7501,8 @@
           "score": 4,
           "category": "YIELD_STABLE",
           "source": "whitelist"
-        }
+        },
+        "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
     "0xb2000000000000000000001347ccd9e83d5bf3e0": {

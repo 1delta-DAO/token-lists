@@ -168,7 +168,10 @@
           "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
           "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x2e570a44909df47c4cad13c626626f59d056e9da": {
@@ -298,7 +301,14 @@
       "assetGroup": "PT strUSD (trUSD) Monad::PT-strUSD-4FEB2027",
       "currencyId": "PT strUSD (trUSD) Monad::PT-strUSD-4FEB2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1801699200 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xa9983573da171b910ba48dd5372a0ad60f737096",
+          "expiry": 1801699200,
+          "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+          "ytAddress": "0x5dc15e884c80692a2d79becc7edcc380ca466ccf",
+          "syAddress": "0xeb9bfd1c1acfef4f9b4c4630dc1f373631073ef0"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -337,7 +347,14 @@
       "assetGroup": "YT strUSD (trUSD) Monad::YT-strUSD-4FEB2027",
       "currencyId": "YT strUSD (trUSD) Monad::YT-strUSD-4FEB2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1801699200 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xa9983573da171b910ba48dd5372a0ad60f737096",
+          "expiry": 1801699200,
+          "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+          "ptAddress": "0x49a27506a607658956afb03ecbbf803a7075ea83",
+          "syAddress": "0xeb9bfd1c1acfef4f9b4c4630dc1f373631073ef0"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -417,7 +434,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "vault_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x8c0ee449b8babc933047541249952d5084a7d99d": {
@@ -926,7 +946,14 @@
       "assetGroup": "strUSD Monad::SY-strUSD",
       "currencyId": "strUSD Monad::SY-strUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xa9983573da171b910ba48dd5372a0ad60f737096",
+          "expiry": 1801699200,
+          "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+          "ptAddress": "0x49a27506a607658956afb03ecbbf803a7075ea83",
+          "ytAddress": "0x5dc15e884c80692a2d79becc7edcc380ca466ccf"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
