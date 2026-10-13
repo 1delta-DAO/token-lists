@@ -196,6 +196,15 @@ export const GROUP_ALIAS: Record<string, string> = {
   // ticker (Celo Dollar, Chips USD, Chad USD, SyntheX), so the qualified form
   // is the safe one either way.
   'Staked Cap USD::stcUSD': 'Staked cap USD::stcUSD',
+  // Tori strUSD / trUSD — the Ethereum vault stores `Tori Staked trUSD::STRUSD`
+  // (name "Tori Staked trUSD"); the Monad (143, 9.2M strUSD, Morpho Blue
+  // collateral in two USDC markets) and Pharos (1672) mirrors are bare
+  // bridged ERC-20s named "Staked trUSD" whose 4626 surface reverts, so they
+  // stored `Staked trUSD::strUSD` and read NO intrinsic yield, no savings and
+  // no stablecoin props — the stcUSD trap again. Canonical is the Ethereum
+  // form, the key `toriFetcher` and the SAVINGS_REGISTRY row use.
+  'Staked trUSD::strUSD': 'Tori Staked trUSD::STRUSD',
+  'trUSD::trUSD': 'Tori trUSD::TRUSD',
   // Tempo (4217) deployments of the same assets arrive from the chain's own registry with
   // the on-chain `symbol()` casing (`cUSD`, `reUSD`) or a re-ordered `name()`
   // ("InfiniFi Staked USD"), while every other chain stores the CoinGecko/majority form.

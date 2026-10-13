@@ -5212,10 +5212,13 @@
       "address": "0x683fb58ee77172626d5b49087ddac71ef7825d20",
       "symbol": "strUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/strUSD/logo.svg",
-      "assetGroup": "Staked trUSD::strUSD",
+      "assetGroup": "Tori Staked trUSD::STRUSD",
       "currencyId": "Staked trUSD::strUSD",
       "props": {
-        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "trUSD", "base": "USD" },
+        "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
     },
     "0x770a579ea200784723b31b8668b0773ba80393c9": {
@@ -5225,8 +5228,12 @@
       "address": "0x770a579ea200784723b31b8668b0773ba80393c9",
       "symbol": "trUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/trUSD/logo.svg",
-      "assetGroup": "trUSD::trUSD",
-      "currencyId": "trUSD::trUSD"
+      "assetGroup": "Tori trUSD::TRUSD",
+      "currencyId": "trUSD::trUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
+      }
     },
     "0xccf3517f5b75b75aa599702c90a8a2cc297791f4": {
       "chainId": "143",

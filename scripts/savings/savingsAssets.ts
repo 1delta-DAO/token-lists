@@ -158,6 +158,11 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // distinction lives in margin-fetcher's SAVINGS_REGISTRY, not here. ---
   'Saturn sUSDat::SUSDAT': { underlying: 'USDat', base: 'USD' },
   'Staked Saturn USD::sUSDat': { underlying: 'USDat', base: 'USD' },
+  // --- Tori strUSD — same shape: chain 1 stores `Tori Staked trUSD::STRUSD`,
+  // the Monad (143) / Pharos (1672) CCIP mirrors `Staked trUSD::strUSD`,
+  // aliased to the chain-1 form AFTER this lookup (assetGroupUnifier). The
+  // chain-1 key is in the generated block below; this is the mirrors'. ---
+  'Staked trUSD::strUSD': { underlying: 'trUSD', base: 'USD' },
   // --- Strata (docs.strata.markets) — risk-tranched CDOs over yield-bearing
   // dollars, 5 listed markets × senior/junior. `underlying` is the tranche's
   // ERC-4626 `asset()` (what you deposit), NOT the market's staked collateral:

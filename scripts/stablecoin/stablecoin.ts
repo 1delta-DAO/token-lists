@@ -53,6 +53,14 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   // (hbfUSD / pbfUSD) render with no share price and $0 TVL, which is the "$0 row"
   // failure, not a small vault. See BITFI.md.
   'BitFi USD::BFUSD': { base: 'USD' },
+  // Tori trUSD / strUSD on the Monad (143) and Pharos (1672) CCIP mirrors — the chain-1
+  // groups (`Tori trUSD::TRUSD` / `Tori Staked trUSD::STRUSD`) come through the feed, but
+  // the mirrors store the bare on-chain names and the overlay runs BEFORE `aliasAssetGroup`
+  // folds them, so without these the mirrors carried no `stablecoin` (and Monad's strUSD is
+  // Morpho Blue collateral there). Both are USD: trUSD is Tori's delta-neutral dollar,
+  // strUSD its staked form (1 strUSD ≈ 1.03 trUSD).
+  'trUSD::trUSD': { base: 'USD' },
+  'Staked trUSD::strUSD': { base: 'USD' },
   // Tokenised GBP (tGBP) — GBP-pegged ERC-20, not in the DeFiLlama feed. The generator looks
   // the overlay up on the group it holds at that point, which for a `1delta`-tagged source is
   // the stored (already collision-suffixed) string — hence both forms.
