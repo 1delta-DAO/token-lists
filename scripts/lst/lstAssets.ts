@@ -18,7 +18,16 @@ export const LST_MANUAL: LstRegistry = {
   // makes the group vote unanimous so the x-chain overlay in lst-groups.json
   // picks up the same props.
   '1': { '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' } },
-  '56': { '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' } },
+  '56': {
+    '0xa2e3356610840701bdf5611a53974510ae27e2e1': { type: 'staking', asset: 'ETH', provider: 'binance' },
+    // Aster asBNB — a share over Lista slisBNB minted on Aster's AsBnbMinter
+    // (BNB or slisBNB in, slisBNB out). `asset` is the base staked asset
+    // (BNB), not the wrapper. Manual because "Astherus BNB" trips no
+    // `classifyRwaLst` rule; the risk whitelist already carries it as LST. The
+    // Launchpool leg it advertises has NOT compounded into the token since
+    // 2026-04 — lending-sdks ASTER.md §1.
+    '0x77734e70b6e88b4d82fe632a168edf6e700912b6': { type: 'staking', asset: 'BNB', provider: 'aster' },
+  },
 
   // Firelight stXRP (Flare 14) — FXRP (XRP's 1:1 FAsset) restaked to back
   // Firelight's cover markets. `restaking` = LRT: the capital secures OTHER

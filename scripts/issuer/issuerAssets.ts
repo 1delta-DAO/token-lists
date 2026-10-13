@@ -544,6 +544,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'VAI Stablecoin::VAI': { id: 'venus', name: 'Venus', kind: 'protocol' },
   'Astherus USDF::USDF': { id: 'aster', name: 'Aster', kind: 'protocol' }, // NOT Falcon USDf
   'Astherus Staked USDF::asUSDF': { id: 'aster', name: 'Aster', kind: 'protocol' },
+  'Astherus Staked BNB::asBNB': { id: 'aster', name: 'Aster', kind: 'protocol' }, // 56: 0x77734e70… share over Lista slisBNB
   'Aster USDF::USDF': { id: 'aster', name: 'Aster', kind: 'protocol' },
   'Real USD::USDR': { id: 'tangible', name: 'Tangible', kind: 'protocol' },
   'Magic Internet Money (Polygon)::MIM': { id: 'abracadabra', name: 'Abracadabra', kind: 'protocol' },
