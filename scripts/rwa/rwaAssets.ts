@@ -176,7 +176,11 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
       underlying: 'US T-Bill',
       denomination: 'USD',
       transferRestricted: true,
-      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0xf90e674a; hook isMember=false' },
+      transferGate: {
+        kind: 'allowlist',
+        probedAt: '2026-10-09',
+        evidence: 'transfer reverts 0xf90e674a; hook isMember=false',
+      },
     },
     // Janus Henderson Anemoy AAA CLO Fund — corporate credit (the rule seed said treasury).
     '0x5a0f93d040de44e78f251b03c43be9cf317dcf64': {
@@ -186,7 +190,11 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
       underlying: 'AAA CLO',
       denomination: 'USD',
       transferRestricted: true,
-      transferGate: { kind: 'allowlist', probedAt: '2026-10-09', evidence: 'transfer reverts 0xf90e674a; hook isMember=false' },
+      transferGate: {
+        kind: 'allowlist',
+        probedAt: '2026-10-09',
+        evidence: 'transfer reverts 0xf90e674a; hook isMember=false',
+      },
     },
     // VanEck Treasury Fund (Securitize).
     '0x2255718832bc9fd3be1caf75084f4803da14ff01': {
