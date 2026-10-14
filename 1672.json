@@ -2457,7 +2457,8 @@
       "address": "0x697322f0bb715fc1e4c1f1283a9f8e546cb4a342",
       "symbol": "sbPharosPrime",
       "assetGroup": "SharpByte Pharos Prime::sbPharosPrime",
-      "currencyId": "SharpByte Pharos Prime::sbPharosPrime"
+      "currencyId": "SharpByte Pharos Prime::sbPharosPrime",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x8dc0fd04247e3777a2ea4cfe340c9178b64bbdcf": {
       "chainId": "1672",
@@ -3404,8 +3405,8 @@
       "assetGroup": "Tori Staked trUSD::STRUSD",
       "currencyId": "Staked trUSD::strUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "trUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
     },
@@ -3439,12 +3440,25 @@
     },
     "0xf1098313838bfb0e7aada1e62f147c29bf726aed": {
       "chainId": "1672",
-      "decimals": 18,
+      "decimals": 0,
       "name": "ProShares UltraPro QQQ",
       "address": "0xf1098313838bfb0e7aada1e62f147c29bf726aed",
       "symbol": "TQQQs",
       "assetGroup": "ProShares UltraPro QQQ::TQQQs",
       "currencyId": "ProShares UltraPro QQQ::TQQQs"
+    },
+    "0x3816102cdaff06e2a5a362ca7f767ccfd2337003": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "trUSD",
+      "address": "0x3816102cdaff06e2a5a362ca7f767ccfd2337003",
+      "symbol": "trUSD",
+      "assetGroup": "Tori trUSD::TRUSD",
+      "currencyId": "trUSD::trUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1672",

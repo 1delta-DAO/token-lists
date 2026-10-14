@@ -564,7 +564,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbusdc.svg",
       "assetGroup": "vbUSDC yVault::yvvbUSDC",
       "currencyId": "vbUSDC yVault::yvvbUSDC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x9a6bd7b6fd5c4f87eb66356441502fc7dcdd185b": {
       "chainId": "747474",
@@ -575,7 +575,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbusdt.svg",
       "assetGroup": "vbUSDT yVault::yvvbUSDT",
       "currencyId": "vbUSDT yVault::yvvbUSDT",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x4772d2e014f9fc3a820c444e3313968e9a5c8121": {
       "chainId": "747474",
@@ -589,9 +589,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -609,9 +609,9 @@
       "props": {
         "savings": { "underlying": "YUSD", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "savings_inherit"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
@@ -678,7 +678,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvvbwbtc.svg",
       "assetGroup": "vbWBTC yVault::yvvbWBTC",
       "currencyId": "vbWBTC yVault::yvvbWBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0xc2c447b04e0ed3476ddbdae8e9e39be7159d27b6": {
       "chainId": "747474",
@@ -982,7 +982,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },

@@ -8031,7 +8031,7 @@
       "currencyId": "STASIS EURS::EURS",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -11789,7 +11789,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -15523,7 +15527,11 @@
       "assetGroup": "USC",
       "currencyId": "Classic USD::USC",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "brale", "name": "Brale", "kind": "institution" }
       }
@@ -18515,7 +18523,8 @@
       "address": "0x28f53ba70e5c8ce8d03b1fad41e9df11bb646c36",
       "symbol": "yvWMATIC-A",
       "assetGroup": "WMATIC yVault-A::yvWMATIC-A",
-      "currencyId": "WMATIC yVault-A::yvWMATIC-A"
+      "currencyId": "WMATIC yVault-A::yvWMATIC-A",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xa013fbd4b711f9ded6fb09c1c0d358e2fbc2eaa0": {
       "chainId": "137",
@@ -18524,7 +18533,8 @@
       "address": "0xa013fbd4b711f9ded6fb09c1c0d358e2fbc2eaa0",
       "symbol": "yvUSDC-A",
       "assetGroup": "USDC yVault-A::yvUSDC-A",
-      "currencyId": "USDC yVault-A::yvUSDC-A"
+      "currencyId": "USDC yVault-A::yvUSDC-A",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x305f25377d0a39091e99b975558b1bdfc3975654": {
       "chainId": "137",
@@ -18533,7 +18543,8 @@
       "address": "0x305f25377d0a39091e99b975558b1bdfc3975654",
       "symbol": "yvWETH-A",
       "assetGroup": "WETH yVault-A::yvWETH-A",
-      "currencyId": "WETH yVault-A::yvWETH-A"
+      "currencyId": "WETH yVault-A::yvWETH-A",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x8519d8deae7ba984c4c7850b11c4671b4f62b330": {
       "chainId": "137",
