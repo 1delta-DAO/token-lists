@@ -38,6 +38,7 @@ import { fileURLToPath } from 'url'
 import { Chain } from '@1delta/chain-registry'
 import { WRAPPED_NATIVE_INFO } from '@1delta/wnative'
 import { lookupNestIdentity, nestGroupOf } from './rwa/nestIdentity'
+import { isUsdt0Deployment, USDT0_IDENTITY } from './oft/usdt0Identity'
 // import { scrapeAllPermits } from '../permit/scrapeAllPermits'
 
 interface MinimalTokenNoChainId {
@@ -73,6 +74,13 @@ function withNestIdentity<T extends { address?: string; id?: string; chainId?: u
   const chain = AutoGenHelpers.safeparseChainId(t.chainId as any)
   const decimals = n.decimals?.[chain]
   return { ...t, name: n.name, symbol: n.symbol, ...(decimals !== undefined ? { decimals } : {}) }
+}
+
+/** The row with Tether's one USDT0 label applied (oft/usdt0Identity.ts), or unchanged. */
+function withUsdt0Identity<T extends { address?: string; id?: string; chainId?: unknown }>(t: T): T {
+  const key = t.address ?? t.id
+  if (!key || !isUsdt0Deployment(AutoGenHelpers.safeparseChainId(t.chainId as any), key)) return t
+  return { ...t, ...USDT0_IDENTITY }
 }
 
 function getNativeIcon(symb: string) {
@@ -269,7 +277,8 @@ async function readTokenLists(): Promise<{
           // Nest (Plume Vaults) products carry ONE name / symbol / decimals on every chain,
           // whatever the source list says (rwa/nestIdentity.ts). Applied before anything
           // reads the row so the currencyId and every label below agree with it.
-          const tokenInList = withNestIdentity(tokenInListRaw)
+          // USDT0 likewise: one ASCII label on every deployment (oft/usdt0Identity.ts).
+          const tokenInList = withUsdt0Identity(withNestIdentity(tokenInListRaw))
           const isPolkadotXc = tokenInList.symbol && tokenInList.symbol.toLowerCase().startsWith('xc')
           const enumKey = AutoGenHelpers.symbolToKey(tokenInList.symbol)
           const symbolParsed = AutoGenHelpers.normalizeSymbol(tokenInList.symbol)
@@ -355,9 +364,12 @@ async function readTokenLists(): Promise<{
                     // every run and only ever fill a missing key — so a seeded copy would make a
                     // published label permanent: an overlay fix (the bare-ticker stablecoin
                     // fallback that tagged Ethernity ERN as USD) or a removed desk could never
-                    // take effect. Drop them from the seed; nothing else sets them.
+                    // take effect. Drop them from the seed; nothing else sets them. `rwa` too:
+                    // RWA_LIST (rwa/rwa.json) re-derives it for every row a rule or the manual
+                    // registry matches, so a seeded copy only ever kept a label a rule had since
+                    // dropped (4663 `BACKED`, 143 `vUSD` — the two seed-only rows, 2026-10-14).
                     if (is1delta && tokenProps) {
-                      const { stablecoin: _s, issuer: _i, issuerExposures: _e, ...rest } = tokenProps
+                      const { stablecoin: _s, issuer: _i, issuerExposures: _e, rwa: _r, ...rest } = tokenProps
                       tokenProps = rest
                     }
 

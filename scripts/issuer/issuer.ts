@@ -431,6 +431,50 @@ function inheritSavings(
  */
 const SOLANA_CHAIN = 'solana'
 
+/**
+ * Today's `props.rwa` (rwa/rwa.json, written by `npm run rwa` earlier in the same
+ * `generate:formatted` run) laid over the previous omni-list's deployments, by
+ * (chainId, address) — on a COPY.
+ *
+ * Without it, an RWA the rule engine or the registry classifies on run N reaches
+ * `props.rwa` on run N but its desk only on run N+1, because the omni-list read
+ * above is run N-1's output. Measured 2026-10-14: 79 of the 91 Coinbase stock
+ * tokens on Base shipped `rwa.issuer = 'coinbase'` beside `props.issuer = null` —
+ * the run that first classified them (1b1b7d3) read an omni-list in which they
+ * had no `rwa` yet. rwa.json is what the generator merges first (RWA_LIST), so it
+ * is exactly the `rwa` the run will publish. Tokens absent from the omni-list
+ * entirely (brand-new deployments) still wait one run: they have no group yet.
+ */
+function withFreshRwa(omni: Record<string, OmniCurrencyLike>): Record<string, OmniCurrencyLike> {
+  let rows: any[]
+  try {
+    rows = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../rwa/rwa.json'), 'utf-8'))
+  } catch (error) {
+    console.warn('[issuer] could not read rwa/rwa.json, using the omni-list props alone:', (error as Error).message)
+    return omni
+  }
+  const fresh = new Map<string, any>()
+  for (const r of Array.isArray(rows) ? rows : []) {
+    if (r?.chainId && r?.address && r?.props?.rwa)
+      fresh.set(`${r.chainId}:${String(r.address).toLowerCase()}`, r.props.rwa)
+  }
+  const out: Record<string, OmniCurrencyLike> = {}
+  let n = 0
+  for (const [group, entry] of Object.entries(omni)) {
+    let touched = false
+    const currencies = (entry.currencies ?? []).map((c) => {
+      const rwa = c?.address ? fresh.get(`${c.chainId}:${String(c.address).toLowerCase()}`) : undefined
+      if (!rwa || c.props?.rwa?.issuer === rwa.issuer) return c
+      touched = true
+      n++
+      return { ...c, props: { ...c.props, rwa } }
+    })
+    out[group] = touched ? { ...entry, currencies } : entry
+  }
+  if (n) console.log(`  + ${n} deployment(s) took this run's rwa.issuer from rwa/rwa.json.`)
+  return out
+}
+
 function withSolana(omni: Record<string, OmniCurrencyLike>): Record<string, OmniCurrencyLike> {
   let list: Record<string, any>
   try {
@@ -477,7 +521,7 @@ function generateIssuerMap() {
     const omni: Record<string, OmniCurrencyLike> = JSON.parse(
       fs.readFileSync(path.resolve(__dirname, '../../omni-list.json'), 'utf-8'),
     )
-    omniGroups = withSolana(omni)
+    omniGroups = withSolana(withFreshRwa(omni))
     for (const [group, entry] of Object.entries(omniGroups)) {
       const issuer = fromProps(entry)
       if (issuer) {

@@ -1099,21 +1099,6 @@
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
-    "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365": {
-      "chainId": "143",
-      "decimals": 6,
-      "name": "RWA Backed Lending by Valos",
-      "address": "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365",
-      "symbol": "vUSD",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/vUSD/logo.svg",
-      "assetGroup": "RWA Backed Lending by Valos::vUSD",
-      "currencyId": "RWA Backed Lending by Valos::vUSD",
-      "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
-        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
-        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
-      }
-    },
     "0x8c213ee79581ff4984583c6a801e5263418c4b86": {
       "chainId": "143",
       "decimals": 6,
@@ -1294,7 +1279,12 @@
       "assetGroup": "iShares 20+ Year Treasury Bond aStock::ATLT",
       "currencyId": "iShares 20+ Year Treasury Bond aStock::ATLT",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "blackrock",
+          "underlying": "TLT"
+        },
         "issuer": {
           "id": "blackrock",
           "name": "Blackrock",
@@ -1312,7 +1302,12 @@
       "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "anchored",
+          "underlying": "SKHY"
+        },
         "issuer": {
           "id": "anchored",
           "name": "Anchored",
@@ -1330,7 +1325,12 @@
       "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "anchored",
+          "underlying": "SPCX"
+        },
         "risk": {
           "score": 3,
           "category": "TOKENIZED_EQUITY",
@@ -1581,6 +1581,19 @@
         "issuer": { "id": "fastlane", "name": "Fastlane", "kind": "protocol" }
       }
     },
+    "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "RWA Backed Lending by Valos",
+      "address": "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365",
+      "symbol": "vUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/vUSD/logo.svg",
+      "assetGroup": "RWA Backed Lending by Valos::vUSD",
+      "currencyId": "RWA Backed Lending by Valos::vUSD",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
+    },
     "0x2abc42250154752273a4560e875c858623f83ecc": {
       "chainId": "143",
       "decimals": 18,
@@ -1675,12 +1688,12 @@
     "0xe7cd86e13ac4309349f30b3435a9d337750fc82d": {
       "chainId": "143",
       "decimals": 6,
-      "name": "Tether USD",
+      "name": "USDT0",
       "address": "0xe7cd86e13ac4309349f30b3435a9d337750fc82d",
-      "symbol": "USDT",
+      "symbol": "USDT0",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
-      "currencyId": "Tether USD::USDT",
+      "currencyId": "USDT0::USDT0",
       "props": {
         "permit": { "type": 1, "version": "1" },
         "oft": {
@@ -5216,8 +5229,8 @@
       "currencyId": "Staked trUSD::strUSD",
       "props": {
         "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "trUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
     },

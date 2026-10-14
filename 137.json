@@ -36,7 +36,12 @@
       "assetGroup": "BCSPX",
       "currencyId": "Backed CSPX Core S&P 500::bCSPX",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "backed" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "backed",
+          "underlying": "CSPX"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -172,7 +177,12 @@
       "assetGroup": "BCOIN",
       "currencyId": "Backed Coinbase Global::bCOIN",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "COIN"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -200,7 +210,12 @@
       "assetGroup": "BGOOGL",
       "currencyId": "Backed Alphabet Class A::bGOOGL",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "GOOGL"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -214,7 +229,12 @@
       "assetGroup": "BNVDA",
       "currencyId": "Backed NVIDIA::bNVDA",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "NVDA"
+        },
         "risk": {
           "score": 3,
           "category": "TOKENIZED_EQUITY",
@@ -265,7 +285,12 @@
       "assetGroup": "BMSTR",
       "currencyId": "Backed MicroStrategy::bMSTR",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "MSTR"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -293,7 +318,12 @@
       "assetGroup": "BTSLA",
       "currencyId": "Backed Tesla::bTSLA",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "TSLA"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -336,9 +366,10 @@
       "currencyId": "Backed GameStop Corp::bGME",
       "props": {
         "rwa": {
-          "type": "credit",
-          "subType": "corporate-debt",
-          "issuer": "backed"
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "GME"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -353,7 +384,12 @@
       "assetGroup": "Wrapped Backed Coinbase Global::wbCOIN",
       "currencyId": "Wrapped Backed Coinbase Global::wbCOIN",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "COIN"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -367,7 +403,12 @@
       "assetGroup": "BMSFT",
       "currencyId": "Backed Microsoft::bMSFT",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "MSFT"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -395,7 +436,12 @@
       "assetGroup": "BNIU",
       "currencyId": "Backed NIU Technologies::bNIU",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "NIU"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -5977,12 +6023,12 @@
     "0xc2132d05d31c914a87c6611c10748aeb04b58e8f": {
       "chainId": "137",
       "decimals": 6,
-      "name": "Tether USD",
+      "name": "USDT0",
       "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
-      "symbol": "USDT",
+      "symbol": "USDT0",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
       "assetGroup": "USDT",
-      "currencyId": "Tether USD::USDT",
+      "currencyId": "USDT0::USDT0",
       "props": {
         "risk": {
           "score": 1,

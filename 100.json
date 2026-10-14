@@ -26,7 +26,12 @@
       "assetGroup": "BCOIN",
       "currencyId": "Backed Coinbase Global::BCOIN",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "COIN"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -86,7 +91,12 @@
       "assetGroup": "BNIU",
       "currencyId": "Backed NIU Technologies::BNIU",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "NIU"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -128,7 +138,12 @@
       "assetGroup": "BCSPX",
       "currencyId": "Backed CSPX Core S&P 500::BCSPX",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "backed" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "backed",
+          "underlying": "CSPX"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -156,7 +171,12 @@
       "assetGroup": "BTSLA",
       "currencyId": "Backed Tesla::BTSLA",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "TSLA"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -170,7 +190,12 @@
       "assetGroup": "BMSTR",
       "currencyId": "Backed MicroStrategy::BMSTR",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "MSTR"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -185,9 +210,10 @@
       "currencyId": "Backed GameStop Corp::BGME",
       "props": {
         "rwa": {
-          "type": "credit",
-          "subType": "corporate-debt",
-          "issuer": "backed"
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "GME"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -202,7 +228,12 @@
       "assetGroup": "BGOOGL",
       "currencyId": "Backed Alphabet Class A::BGOOGL",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "GOOGL"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -216,7 +247,12 @@
       "assetGroup": "BMSFT",
       "currencyId": "Backed Microsoft::BMSFT",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "MSFT"
+        },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
@@ -230,7 +266,12 @@
       "assetGroup": "BNVDA",
       "currencyId": "Backed NVIDIA::BNVDA",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "NVDA"
+        },
         "risk": {
           "score": 3,
           "category": "TOKENIZED_EQUITY",
@@ -251,6 +292,24 @@
       "props": {
         "rwa": { "type": "credit", "subType": "treasury", "issuer": "backed" },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "0x3e76f9caaf9b47089810b4579c598228735e7a11": {
+      "chainId": "100",
+      "decimals": 18,
+      "name": "Paxos Gold",
+      "address": "0x3e76f9caaf9b47089810b4579c598228735e7a11",
+      "symbol": "PAXG",
+      "assetGroup": "Paxos Gold::PAXG",
+      "currencyId": "Paxos Gold::PAXG",
+      "props": {
+        "rwa": {
+          "type": "commodity",
+          "subType": "gold",
+          "issuer": "paxos",
+          "underlying": "XAU"
+        },
+        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
       }
     },
     "0x6c76971f98945ae98dd7d4dfca8711ebea946ea6": {
@@ -7409,15 +7468,6 @@
       "symbol": "UMA",
       "assetGroup": "UMA Voting Token v1 on xDai::UMA",
       "currencyId": "UMA Voting Token v1 on xDai::UMA"
-    },
-    "0x3e76f9caaf9b47089810b4579c598228735e7a11": {
-      "chainId": "100",
-      "decimals": 18,
-      "name": "Paxos Gold",
-      "address": "0x3e76f9caaf9b47089810b4579c598228735e7a11",
-      "symbol": "PAXG",
-      "assetGroup": "Paxos Gold::PAXG",
-      "currencyId": "Paxos Gold::PAXG"
     },
     "0x7cc4d60a3c83e91d8c2ec2127a10bab5c6ab209d": {
       "chainId": "100",

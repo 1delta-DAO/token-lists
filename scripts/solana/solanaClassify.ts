@@ -1,4 +1,5 @@
 import { classifyRwaLst, isEtf } from '../labels/rwaLstRules'
+import { isEtfUnderlying } from '../labels/equityTicker'
 import { lookupLstGroup } from '../lst/lstGroupMap'
 import { lookupStablecoin } from '../stablecoin/stablecoinMap'
 import { lookupSavings } from '../savings/savingsMap'
@@ -102,7 +103,8 @@ function rwaFromTags(t: TaggedToken, tags: Set<string>): RwaProps | undefined {
     const issuer = issuerTag ? STOCK_ISSUER_BY_TAG[issuerTag] : undefined
     const strip = issuerTag ? TICKER_SUFFIX_BY_TAG[issuerTag] : undefined
     const underlying = strip ? t.symbol.replace(strip, '') : undefined
-    if (isEtf(t.name)) return { type: 'fund', subType: 'etf', issuer, underlying }
+    // ETF vs stock on the ticker first (labels/equityTicker.ts), the name only as the fallback.
+    if (isEtfUnderlying(underlying, t.name, isEtf)) return { type: 'fund', subType: 'etf', issuer, underlying }
     // Pre-IPO synthetic exposure (PreStocks, Tessera) and Shift's leveraged
     // long/short tokens are equity-shaped but are NOT a share of stock; the
     // sub-type is where that difference lives.

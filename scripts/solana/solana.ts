@@ -111,6 +111,12 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // 2026-10-04, when that row stopped matching. A group is an identity and
   // may not move between runs, so the join it already had is pinned.
   C4Kkr9NZU3VbyedcgutU6LKmi6MKz81sx6gRmk5pX519: 'VNX EURO::VEUR',
+  // Wrapped SOL (and so native SOL, which shares its group): joined `SOL` through
+  // CoinGecko's platform map until the 2026-10-14 run, when that row stopped
+  // matching and the mint fell through to `Wrapped SOL::SOL::solana` — every
+  // price / yield series and asset-group filter downstream keys `SOL`. Pinned,
+  // same rule as VEUR.
+  [WSOL]: 'SOL',
   // The rest of Nest's Solana shares: each is the `solana.mintAddress` that
   // `api.nest.credit/v1/vaults` publishes for the vault (LayerZero OFT of the
   // Plume share, same decimals, metadata on assets.plume.org). The group is

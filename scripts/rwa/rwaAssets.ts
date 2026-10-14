@@ -224,6 +224,50 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
       transferRestricted: true,
       transferGate: { kind: 'role', probedAt: '2026-10-09', evidence: 'WMAC: hasnt role' },
     },
+    // Franklin OnChain U.S. Government Money Fund (BENJI) — the list names it "Franklin
+    // Templeton BENJI", which the `franklin-benji` name rule cannot see; on-chain `name()` is
+    // "Franklin OnChain U.S. Government Money Fund" (read 2026-10-14). Same row as the rule
+    // gives it on 137 / 42161 / 43114 / 8453.
+    '0x3ddc84940ab509c11b20b76b466933f40b750dc9': { type: 'fund', subType: 'money-market', issuer: 'franklin' },
+  },
+
+  // PAX Gold bridged to Gnosis over the omnibridge — the list names it "Paxos Gold" (on-chain
+  // `name()` "Paxos Gold from Mainnet", read 2026-10-14), so the `pax-gold` rule misses it.
+  // Same row as every other PAXG deployment.
+  '100': {
+    '0x3e76f9caaf9b47089810b4579c598228735e7a11': {
+      type: 'commodity',
+      subType: 'gold',
+      issuer: 'paxos',
+      underlying: 'XAU',
+    },
+  },
+
+  // Circle (ex-Hashnote) USYC on Base — listed as "US Yield Coin", the token's own `name()`
+  // (read 2026-10-14: name "US Yield Coin", symbol USYC, 6 decimals, an EIP-1967 proxy over an
+  // ~11.5 kB implementation — the same answers as USYC on Ethereum and BNB). Same row as
+  // Ethereum's, minus the transfer gate and denomination, which were not probed here.
+  '8453': {
+    '0xeee7af832440884d2b693b4193fa2ec26a48c7d3': {
+      type: 'fund',
+      subType: 'money-market',
+      issuer: 'circle',
+      underlying: 'US T-Bill',
+    },
+  },
+
+  // Galaxy Digital Class A shares on Solana, tokenized by Superstate (Opening Bell). Read
+  // 2026-10-14: Token-2022 mint, metadata `name` "Galaxy Digital Inc." / `symbol` GLXY, `uri`
+  // https://api.superstate.com/v1/instruments/4/solana/token-metadata, default account state
+  // FROZEN + a permanent delegate (an allowlisted token — not set as `transferRestricted`,
+  // which needs a probed transfer).
+  solana: {
+    '2HehXG149TXuVptQhbiWAWDjbbuCsXSAtLTB5wc2aajK': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'superstate',
+      underlying: 'GLXY',
+    },
   },
 
   // Robinhood Stock Tokens on Robinhood Chain — issued by Robinhood Assets (Jersey) Ltd

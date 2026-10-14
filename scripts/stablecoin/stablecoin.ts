@@ -53,6 +53,15 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   // (hbfUSD / pbfUSD) render with no share price and $0 TVL, which is the "$0 row"
   // failure, not a small vault. See BITFI.md.
   'BitFi USD::BFUSD': { base: 'USD' },
+  // Ripe Protocol GREEN — an overcollateralised USD stablecoin minted against
+  // Ripe CDP positions, one asset bridged burn-and-mint across Base (8453) and
+  // Robinhood Chain (4663), plus its sGREEN savings vaults. Not in the feed;
+  // `GREEN` alone is not an identity (an unrelated Ethereum `Green::GREEN`
+  // exists). The Robinhood sGREEN is an INDEPENDENT vault (own share price),
+  // so it carries its own chain-suffixed group.
+  'Green USD Stablecoin::GREEN': { base: 'USD' },
+  'Savings Green USD::sGREEN': { base: 'USD' },
+  'Savings Green USD::sGREEN::4663::0': { base: 'USD' },
   // Tori trUSD / strUSD on the Monad (143) and Pharos (1672) CCIP mirrors — the chain-1
   // groups (`Tori trUSD::TRUSD` / `Tori Staked trUSD::STRUSD`) come through the feed, but
   // the mirrors store the bare on-chain names and the overlay runs BEFORE `aliasAssetGroup`

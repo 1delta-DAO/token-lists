@@ -1048,20 +1048,6 @@
         }
       }
     },
-    "0x7168563b0e70124f0c7c0cf2f13a8d1861baf4a5": {
-      "chainId": "4663",
-      "decimals": 18,
-      "name": "Backed",
-      "address": "0x7168563b0e70124f0c7c0cf2f13a8d1861baf4a5",
-      "symbol": "BACKED",
-      "logoURI": "https://assets.coingecko.com/coins/images/102174659/thumb/zpo16kazej461buko6zozopkfqdc.?1784446814",
-      "assetGroup": "Backed::BACKED",
-      "currencyId": "Backed::BACKED",
-      "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "backed" },
-        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
-      }
-    },
     "0x1c690498150252222c275a5ced69d3a6b1f52d5e": {
       "chainId": "4663",
       "decimals": 18,
@@ -1141,7 +1127,12 @@
       "assetGroup": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "currencyId": "SpaceX (Anchored Tokenized Stock)::ASPCX",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "anchored",
+          "underlying": "SPCX"
+        },
         "risk": {
           "score": 3,
           "category": "TOKENIZED_EQUITY",
@@ -1164,7 +1155,12 @@
       "assetGroup": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "currencyId": "SK Hynix (Anchored Tokenized Stock)::ASKHY",
       "props": {
-        "rwa": { "type": "equity", "subType": "stock", "issuer": "anchored" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "anchored",
+          "underlying": "SKHY"
+        },
         "issuer": {
           "id": "anchored",
           "name": "Anchored",
@@ -1182,7 +1178,12 @@
       "assetGroup": "iShares 20+ Year Treasury Bond aStock::ATLT",
       "currencyId": "iShares 20+ Year Treasury Bond aStock::ATLT",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "blackrock" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "blackrock",
+          "underlying": "TLT"
+        },
         "issuer": {
           "id": "blackrock",
           "name": "Blackrock",
@@ -5948,7 +5949,12 @@
       "assetGroup": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL",
       "currencyId": "SPDR Bloomberg 1-3 Month T-Bill ETF (Anchored Tokenized ETF)::ABIL",
       "props": {
-        "rwa": { "type": "fund", "subType": "etf", "issuer": "anchored" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "anchored",
+          "underlying": "BIL"
+        },
         "issuer": {
           "id": "anchored",
           "name": "Anchored",
@@ -6019,6 +6025,16 @@
         },
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
+    },
+    "0x7168563b0e70124f0c7c0cf2f13a8d1861baf4a5": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Backed",
+      "address": "0x7168563b0e70124f0c7c0cf2f13a8d1861baf4a5",
+      "symbol": "BACKED",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174659/thumb/zpo16kazej461buko6zozopkfqdc.?1784446814",
+      "assetGroup": "Backed::BACKED",
+      "currencyId": "Backed::BACKED"
     },
     "0xde770c84fe66e063336b31737cfe9790f18c4087": {
       "chainId": "4663",
@@ -17991,6 +18007,31 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179468/thumb/logo-mark-padded-black-2000.png?1791892149",
       "assetGroup": "CompanyMD::COMD",
       "currencyId": "CompanyMD::COMD"
+    },
+    "0x355bb7f0f6c730e4460d620420a300fa08ff82f3": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Green USD Stablecoin",
+      "address": "0x355bb7f0f6c730e4460d620420a300fa08ff82f3",
+      "symbol": "GREEN",
+      "logoURI": "https://www.ripe.finance/images/redesign/icons/green.png",
+      "assetGroup": "Green USD Stablecoin::GREEN",
+      "currencyId": "Green USD Stablecoin::GREEN",
+      "props": { "stablecoin": { "base": "USD" } }
+    },
+    "0x290a52380a88f743813b8c3e9f6b0e61db5fdf73": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Savings Green USD",
+      "address": "0x290a52380a88f743813b8c3e9f6b0e61db5fdf73",
+      "symbol": "sGREEN",
+      "logoURI": "https://www.ripe.finance/images/redesign/icons/green-staked.png",
+      "assetGroup": "Savings Green USD::sGREEN::4663::0",
+      "currencyId": "Savings Green USD::sGREEN",
+      "props": {
+        "savings": { "underlying": "GREEN", "base": "USD" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4663",

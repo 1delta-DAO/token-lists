@@ -163,6 +163,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // aliased to the chain-1 form AFTER this lookup (assetGroupUnifier). The
   // chain-1 key is in the generated block below; this is the mirrors'. ---
   'Staked trUSD::strUSD': { underlying: 'trUSD', base: 'USD' },
+  // --- Ripe sGREEN — plain instant ERC-4626 over GREEN on Base and Robinhood
+  // Chain. The two vaults are independent (different share prices), so
+  // Robinhood's stores a chain-suffixed group and must never be aliased onto
+  // Base's. ---
+  'Savings Green USD::sGREEN': { underlying: 'GREEN', base: 'USD' },
+  'Savings Green USD::sGREEN::4663::0': { underlying: 'GREEN', base: 'USD' },
   // --- Strata (docs.strata.markets) — risk-tranched CDOs over yield-bearing
   // dollars, 5 listed markets × senior/junior. `underlying` is the tranche's
   // ERC-4626 `asset()` (what you deposit), NOT the market's staked collateral:

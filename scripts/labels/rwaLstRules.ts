@@ -1,4 +1,5 @@
 import { LstProps, RwaProps } from '../utils/types'
+import { EquityFamily, equityTicker, isEtfUnderlying, isharesEtfTicker } from './equityTicker'
 
 /**
  * Shared RWA / LST classifier.
@@ -307,12 +308,23 @@ const LST_RULES: Rule[] = [
 
 const rwa = (type: RwaProps['type'], subType: string, issuer: string): RwaProps => ({ type, subType, issuer })
 
-/** Tokenized-equity issuers: single stock -> equity, index/ETF -> fund. */
+/**
+ * Tokenized-equity issuers: single stock -> equity, index/ETF -> fund. With a `family`, the
+ * real-world ticker is read off the issuer's symbol convention (labels/equityTicker.ts) into
+ * `underlying` — and left out wherever that convention does not make it certain.
+ */
 const equityIssuer =
-  (issuer: string) =>
-  (name: string): { rwa: RwaProps } => ({
-    rwa: isEtf(name) ? { type: 'fund', subType: 'etf', issuer } : { type: 'equity', subType: 'stock', issuer },
-  })
+  (issuer: string, family?: EquityFamily) =>
+  (name: string, symbol: string): { rwa: RwaProps } => {
+    const underlying = family ? equityTicker(family, name, symbol) : undefined
+    // ETF vs single stock is decided on the TICKER where it is known (labels/equityTicker.ts
+    // ETF_UNDERLYINGS / COMPANY_UNDERLYINGS): "SP500 xStock" never says ETF, "S&P Global
+    // xStock" is not one.
+    const base: RwaProps = isEtfUnderlying(underlying, name, isEtf)
+      ? { type: 'fund', subType: 'etf', issuer }
+      : { type: 'equity', subType: 'stock', issuer }
+    return { rwa: underlying ? { ...base, underlying } : base }
+  }
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
@@ -340,7 +352,7 @@ const RWA_RULES: Rule[] = [
     id: 'dinari-stock',
     confidence: 'auto',
     test: has('dinari tokenized', '(dinari to'),
-    build: equityIssuer('dinari'),
+    build: equityIssuer('dinari', 'dinari'),
   },
   // Every other "(<Provider> Tokenized Stock)" family. Same reasoning as Dinari: these all
   // used to fall through to a generic 'tokenized stock' match and were filed under Ondo,
@@ -355,10 +367,20 @@ const RWA_RULES: Rule[] = [
   //    Coinbase Onchain SPV. Filed under the existing `coinbase` desk (cbBTC, cbETH) rather
   //    than a new id: issuer facets group on `id`, and a holder of either is exposed to the
   //    same corporate group.
-  { id: 'bstocks-stock', confidence: 'auto', test: tokenizedBy('bstocks'), build: equityIssuer('bstocks') },
-  { id: 'anchored-stock', confidence: 'auto', test: tokenizedBy('anchored'), build: equityIssuer('anchored') },
-  { id: 'st0x-stock', confidence: 'auto', test: tokenizedBy('st0x'), build: equityIssuer('st0x') },
-  { id: 'coinbase-stock', confidence: 'auto', test: tokenizedBy('coinbase'), build: equityIssuer('coinbase') },
+  { id: 'bstocks-stock', confidence: 'auto', test: tokenizedBy('bstocks'), build: equityIssuer('bstocks', 'bstocks') },
+  {
+    id: 'anchored-stock',
+    confidence: 'auto',
+    test: tokenizedBy('anchored'),
+    build: equityIssuer('anchored', 'anchored'),
+  },
+  { id: 'st0x-stock', confidence: 'auto', test: tokenizedBy('st0x'), build: equityIssuer('st0x', 'st0x') },
+  {
+    id: 'coinbase-stock',
+    confidence: 'auto',
+    test: tokenizedBy('coinbase'),
+    build: equityIssuer('coinbase', 'coinbase'),
+  },
   // Ondo Global Markets — ONLY Ondo's own spellings: "(Ondo Tokenized Stock|ETF)",
   // "(Ondo Tokenized)", "<Name> Ondo Tokenized" and their truncations. Deliberately no
   // generic 'tokenized stock' fallback: an unrecognised "(Foo Tokenized Stock)" stays
@@ -370,19 +392,33 @@ const RWA_RULES: Rule[] = [
     id: 'ondo-stock',
     confidence: 'auto',
     test: (n, s) => tokenizedBy('ondo')(n) || (/ON$/i.test(s) && /\S\s+ondo(\s+t[a-z]*)?\s*$/i.test(n)),
-    build: equityIssuer('ondo'),
+    build: equityIssuer('ondo', 'ondo'),
   },
-  { id: 'sailing-stock', confidence: 'auto', test: has('tokenized by sailing'), build: equityIssuer('sailing') },
-  { id: 'xstocks', confidence: 'auto', test: has('xstock'), build: equityIssuer('backed') },
+  {
+    id: 'sailing-stock',
+    confidence: 'auto',
+    test: has('tokenized by sailing'),
+    build: equityIssuer('sailing', 'sailing'),
+  },
+  { id: 'xstocks', confidence: 'auto', test: has('xstock'), build: equityIssuer('backed', 'xstocks') },
   {
     id: 'backed',
     confidence: 'auto',
-    test: (n) => has('backed ')(n) || n.toLowerCase().startsWith('backed'),
-    build: (n) => {
-      if (isEtf(n)) return { rwa: { type: 'fund', subType: 'etf', issuer: 'backed' } }
-      const isDebt = has('treasury', 'bond', 'govies', 't-bill', 'bill', 'gilt', 'high yield', 'corp')(n)
-      if (!isDebt) return { rwa: { type: 'equity', subType: 'stock', issuer: 'backed' } }
-      const corporate = has('corp', 'high yield', 'corporate')(n)
+    // Backed's own names: "Backed <instrument>" or "Wrapped Backed <instrument>". A bare
+    // "Backed" (4663 `BACKED`) or prose ("RWA Backed Lending by Valos", 143 `vUSD`) is not.
+    test: (n) => /^(wrapped )?backed \S/i.test(n.trim()),
+    build: (n, s) => {
+      // Legacy Backed tokens are `b<TICKER>` ("Backed Tesla" = bTSLA); the debt products'
+      // `b<CODE>` names a fund code, not an equity ticker, so only the equity / ETF arms read it.
+      const underlying = equityTicker('backed', n, s)
+      const u = underlying ? { underlying } : {}
+      if (isEtfUnderlying(underlying, n, isEtf))
+        return { rwa: { type: 'fund', subType: 'etf', issuer: 'backed', ...u } }
+      // `corp` alone is a company suffix ("Backed GameStop Corp" is GME stock), never a debt
+      // word: Backed's corporate debt always says bond / high yield as well.
+      const isDebt = has('treasury', 'bond', 'govies', 't-bill', 'bill', 'gilt', 'high yield')(n)
+      if (!isDebt) return { rwa: { type: 'equity', subType: 'stock', issuer: 'backed', ...u } }
+      const corporate = has('corp bond', 'high yield', 'corporate')(n)
       return { rwa: { type: 'credit', subType: corporate ? 'corporate-debt' : 'treasury', issuer: 'backed' } }
     },
   },
@@ -429,8 +465,12 @@ const RWA_RULES: Rule[] = [
   {
     id: 'ishares-etf',
     confidence: 'auto',
-    rwa: rwa('fund', 'etf', 'blackrock'),
     test: (n) => has('ishares')(n) && has('etf', 'treasury bond')(n),
+    // The ticker only where one reading of the symbol is a known ETF (isharesEtfTicker).
+    build: (n, s) => {
+      const underlying = isharesEtfTicker(n, s)
+      return { rwa: { ...rwa('fund', 'etf', 'blackrock'), ...(underlying ? { underlying } : {}) } }
+    },
   },
   {
     id: 'securitize-credit',
