@@ -39,6 +39,7 @@ import { Chain } from '@1delta/chain-registry'
 import { WRAPPED_NATIVE_INFO } from '@1delta/wnative'
 import { lookupNestIdentity, nestGroupOf } from './rwa/nestIdentity'
 import { isUsdt0Deployment, USDT0_IDENTITY } from './oft/usdt0Identity'
+import { applyLogoOverrides } from './logos/logoOverrides'
 // import { scrapeAllPermits } from '../permit/scrapeAllPermits'
 
 interface MinimalTokenNoChainId {
@@ -986,6 +987,7 @@ async function main() {
 
   chainIds.map((chainId) => {
     const addressToAssetPath = `../${chainId}.json`
+    applyLogoOverrides(chainId, listOfLists[chainId])
     const data: List = {
       chainId,
       version: '0',
