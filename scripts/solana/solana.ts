@@ -8,6 +8,7 @@ import { TokenProps } from '../utils/types'
 import { classifySolanaToken } from './solanaClassify'
 import { lookupOft } from '../oft/oftMap'
 import { lookupNestIdentity, nestGroupOf } from '../rwa/nestIdentity'
+import { applyLogoOverrides } from '../logos/logoOverrides'
 
 /**
  * Generates `solana.json`, the chain list for `Chain.SOLANA = 'solana'`.
@@ -602,6 +603,7 @@ async function main() {
 
   const sortedList: { [address: string]: ListEntry } = {}
   for (const k of Object.keys(list).sort()) sortedList[k] = list[k]
+  applyLogoOverrides('solana', sortedList)
 
   const mainTokens = kept
     .filter((t) => list[t.id])
