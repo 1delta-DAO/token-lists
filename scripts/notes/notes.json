@@ -1356,17 +1356,6 @@
     "updated": "2026-10-12",
     "confidence": "high"
   },
-  "sUSDai::SUSDAI": {
-    "what": "USD.AI staked USDai · GPU-backed loans to AI data centers + T-bills on idle cash",
-    "body": "sUSDai is the staked form of USDai, USD.AI's dollar that its docs say is backed 1:1 by PYUSD. Staked capital funds loans to AI infrastructure operators, each held in a bankruptcy-remote SPV that owns the GPU hardware and revenue contracts, and capital not yet lent sits in short-term US Treasury bills. Loan interest and T-bill yield accrue into a rising sUSDai/USDai rate.",
-    "backing": "USDai (PYUSD) lent against GPU hardware; idle capital in T-bills",
-    "yieldSource": "interest on GPU-collateralized loans plus T-bill yield",
-    "redemption": "30-day epoch FIFO unstake queue paid from available cash, can roll over to later epochs; loans are not liquidated to meet redemptions",
-    "issuer": "USD.AI (Permian Labs)",
-    "links": ["https://docs.usd.ai/depositor/susdai.md", "https://docs.usd.ai/depositor/overview.md"],
-    "updated": "2026-10-12",
-    "confidence": "high"
-  },
   "sUSD1+::sUSD1+": {
     "what": "Lorenzo USD1+ fund share · RWA yield, CEX delta-neutral basis and DeFi in USD1",
     "body": "sUSD1+ is the non-rebasing share of Lorenzo Protocol's USD1+ On-chain Traded Fund on BNB Chain, run with World Liberty Financial's USD1; USD1+ is the rebasing version of the same fund. Deposits of USD1, USDT or USDC go into three sleeves: tokenized real-world assets, a delta-neutral basis strategy on centralized exchanges, and DeFi yield. Returns are settled in USD1 and show up as a rising NAV per sUSD1+.",
@@ -1695,5 +1684,152 @@
     "updated": "2026-10-12",
     "confidence": "medium",
     "verify": "Bitway's docs do not say what makes Absolute Return different from Core Alpha. Yield is off-chain at CEX/custodians and paid into the vault at a fixed rate that Bitway sets (Bitway keeps any surplus), so this is custodial credit risk with no on-chain proof of the strategy."
+  },
+  "Yuzu USD::yzUSD": {
+    "what": "Yuzu Alpha senior tranche · $1 token backed >100% by a leveraged DeFi carry book on Plasma",
+    "body": "yzUSD is the senior, non-yielding tranche of Yuzu Alpha. Only KYC/KYB-checked Eligible Investors (accredited, qualified or institutional; no retail) mint and redeem it 1:1 against USDT0. The collateral pool is a leveraged stablecoin carry book run from Fordefi MPC wallets across Aave, Pendle, Euler, Fluid, Morpho, Spark and Curvance, with Ethena USDe loops the largest slice, plus tokenized T-bills, AAA CLOs and Maple lending; Accountable attests the backing in near real time (collateral ratio 111.8% on 2026-10-14, about $59m of yzUSD, nearly all on Plasma). Losses hit the yzPP junior tranche first, then the Reserve Fund, and an OpenCover Covered Vault adds up to $50m of cover since Oct 2026. Holders stake into syzUSD to earn.",
+    "backing": "USDT0 deployed into leveraged DeFi stablecoin strategies (USDe loops, Aave, Pendle, Euler, Fluid, Morpho, Spark, Maple, tokenized T-bills and CLOs); overcollateralized, yzPP takes first loss",
+    "yieldSource": null,
+    "redemption": "Eligible Investors redeem 1:1 for USDT0 through Yuzu after KYC/KYB; Yuzu may pause mint, redeem and exits on any suspected loss; everyone else sells on DEXs (Plasma is the deep venue, Monad is thin)",
+    "issuer": "Yuzu Money (YUZU FINTECH LLC, VASP licence in Georgia's Kutaisi free zone)",
+    "links": [
+      "https://yuzu-money.gitbook.io/yuzu-money/yuzu-alpha/yuzu-stablecoin-yzusd.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/yuzu-alpha/mint-and-redeem.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/transparency/underlying-strategies.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/security-infrastructure/audits.md",
+      "https://pharos.watch/stablecoin/yzusd-yuzu/"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "high"
+  },
+  "Staked Yuzu USD::syzUSD": {
+    "what": "Staked yzUSD (ERC-4626) · weekly target yield from Yuzu's leveraged stablecoin book",
+    "body": "syzUSD is the ERC-4626 staking wrapper of yzUSD, the senior tranche of Yuzu Alpha. Each Friday Yuzu announces a target yield for the week's epoch and pays it in yzUSD into the vault, so the share price rises; the money comes from the collateral pool's strategies (Ethena USDe loops, Aave, Pendle, Euler, Fluid, Morpho, Spark, Maple, tokenized T-bills and CLOs), and Yuzu keeps a spread between earned and posted yield instead of a performance fee. Posted about 8% in Oct 2026 (12.5% in early epochs). Unstaking back to yzUSD is instant and permissionless; turning yzUSD into USDT0 needs Eligible Investor status or a DEX. Home chain is Plasma (about $59m); the Monad copy (about $10m) is bridged by LayerZero OFT and sits mostly in Euler and the YZM vault. Yuzu is active: $81m TVL and growing in Oct 2026, five Pashov/Dedaub audits to Jul 2026, OpenCover cover since Oct 2026.",
+    "backing": "yzUSD (senior claim on Yuzu Alpha's overcollateralized pool; yzPP absorbs first losses, then the Reserve Fund)",
+    "yieldSource": "weekly target yield set by Yuzu from leveraged DeFi stablecoin strategies (funding-rate arbitrage, loops, lending, T-bills, CLOs)",
+    "redemption": "unstake to yzUSD instantly from any wallet; yzUSD to USDT0 only for KYC'd Eligible Investors, else a DEX; Yuzu may pause exits on a suspected loss",
+    "issuer": "Yuzu Money (YUZU FINTECH LLC)",
+    "links": [
+      "https://yuzu-money.gitbook.io/yuzu-money/yuzu-alpha/staked-yzusd-syzusd.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/yuzu-alpha/staked-yzusd-syzusd/weekly-target-yield.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/faq/performance-fee.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/transparency/underlying-strategies.md",
+      "https://defillama.com/protocol/yuzu-money"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "high"
+  },
+  "Yuzu Protection Pool::yzPP": {
+    "what": "Yuzu Alpha junior tranche · first loss on the strategy book for a higher target yield",
+    "alsoGroups": [
+      "yzPP::Yuzu Protection Pool"
+    ],
+    "body": "yzPP is the first-loss tranche of Yuzu Alpha. It sits in the same backing pool as yzUSD and absorbs strategy losses before yzUSD does, with the Reserve Fund as the layer after it. In return it earns the syzUSD base yield plus a protocol-funded risk premium set daily at 04:00 UTC (posted about 24% on $6.5m in Oct 2026). Minted with USDT0 on Plasma by KYC-checked Eligible Investors only; the Monad token is a LayerZero OFT copy.",
+    "backing": "subordinated claim on Yuzu Alpha's collateral pool",
+    "yieldSource": "syzUSD base yield plus a daily protocol-funded risk premium, partly paid from the Reserve Fund",
+    "redemption": "30-day redemption period, minimum 5,000 yzPP, cancellable after 24 h; all yzPP minting and redemption pause after any loss until Yuzu finishes assessing it; Eligible Investors only",
+    "issuer": "Yuzu Money (YUZU FINTECH LLC)",
+    "links": [
+      "https://yuzu-money.gitbook.io/yuzu-money/yuzu-alpha/yuzu-protection-pool-yzpp.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/faq/loss-coverage-yuzu-alpha.md"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "high"
+  },
+  "Yuzu Money Vault::YZM": {
+    "what": "Accountable YieldApp vault on Monad · USDC in, holds syzUSD, 3% performance fee",
+    "body": "YZM is the ERC-4626 share of the Yuzu Money Vault on Accountable's YieldApp on Monad, launched Dec 2025 with a $10m cap that filled in days plus MON incentives. Deposits are USDC and the vault's core position is syzUSD, so the share price follows syzUSD's weekly yield less a 3% performance fee (no management, deposit or withdrawal fee); Accountable's Proof of Solvency verifies the vault's assets. It peaked near $20m and held about $2.2m in Oct 2026 with the share at about 1.06 USDC. On Monad it is collateral on Morpho (YZM/AUSD, YZM/USDC) and Curvance (YZM/AUSD).",
+    "backing": "syzUSD held by the vault, so Yuzu Alpha's collateral pool one layer down",
+    "yieldSource": "syzUSD yield passed through the share price, net of a 3% performance fee",
+    "redemption": "ERC-7540-style async redemption to USDC through YieldApp, listed as open and permissionless; bounded by syzUSD to USDC liquidity on Monad",
+    "issuer": "Yuzu Money, on Accountable YieldApp",
+    "links": [
+      "https://tradingstrategy.ai/vaults/yuzu-money-vault",
+      "https://app.rwa.xyz/assets/YZM",
+      "https://accountabledata.substack.com/p/real-time-proof-of-solvency-for-yzusd"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "medium",
+    "verify": "Yuzu's docs have no page for this vault; fees, cap and redemption terms come from Trading Strategy and rwa.xyz listings. Monad syzUSD liquidity is thin, so a large exit may have to route via Plasma."
+  },
+  "Yuzu Prime::YZPRIME": {
+    "what": "Yuzu Prime · levered tokenized T-bills, AAA CLOs and Maple lending, aims above SOFR",
+    "body": "yzPrime is Yuzu's lower-risk product: a leveraged basket of tokenized T-bills (BUIDL, VBILL, WTGXX, JTRSY), AAA CLO tokens (JAAA, STAC) and overcollateralized lending via Maple, targeting a return above SOFR and T-bills. Yield accrues continuously into NAV with no weekly epochs; Accountable attests the backing (100.25% on 2026-10-14, about $7.6m, posted about 6.8%). Minted and redeemed for USDC at NAV by KYC-checked Eligible Investors only; anyone can hold it via DEXs.",
+    "backing": "tokenized T-bills, AAA CLO tokens and Maple loans, with leverage",
+    "yieldSource": "T-bill, CLO and lending yield, levered",
+    "redemption": "Eligible Investors redeem for USDC at NAV through Yuzu; no retail primary access; timing not documented",
+    "issuer": "Yuzu Money (YUZU FINTECH LLC)",
+    "links": [
+      "https://yuzu-money.gitbook.io/yuzu-money/yuzu-prime/yuzu-prime.md",
+      "https://yuzu-money.gitbook.io/yuzu-money/transparency/underlying-strategies.md"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "medium"
+  },
+  "USDai::USDAI": {
+    "what": "USD.AI dollar · 1:1 PYUSD today, T-bills by design; stake for sUSDai to earn",
+    "body": "USDai is USD.AI's non-yielding synthetic dollar and the entry token to its GPU-loan protocol. The docs describe backing by Treasuries and cash equivalents but state it is currently 100% backed by PYUSD locked in the protocol, with no private-key minting; it carries no exposure to the GPU loans, which sit in sUSDai. Minted on Arbitrum (the hub), Ethereum, Base and Plasma and bridged by LayerZero OFT. From Q2 2026 direct mint and redeem are limited to KYC-verified market makers and institutional depositors; everyone else buys on a DEX or CEX and stakes on app.usd.ai. About $347m in Oct 2026, almost all on Arbitrum; the Plasma supply shrank from about $150m to under $1m during 2026.",
+    "backing": "PYUSD held 1:1 by the protocol (Treasuries and cash equivalents in principle)",
+    "yieldSource": null,
+    "redemption": "1:1 for PYUSD, but only approved counterparties redeem at the protocol and only subject to protocol liquidity; the Terms say not every holder has direct, instant redemption; others swap on Arbitrum DEXs",
+    "issuer": "USD.AI (USD.AI Foundation, Cayman Islands; built by Permian Labs)",
+    "links": [
+      "https://docs.usd.ai/depositor/usdai.md",
+      "https://docs.usd.ai/depositor/overview.md",
+      "https://docs.usd.ai/terms-of-service/usd.ai-terms-of-service.md",
+      "https://pharos.watch/stablecoin/usdai-usd-ai/"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "high"
+  },
+  "sUSDai::SUSDAI": {
+    "what": "USD.AI staked USDai · GPU-backed loans to AI data centers + T-bills on idle cash",
+    "body": "sUSDai is the staked form of USDai, USD.AI's dollar that its docs say is 100% backed by PYUSD. Staked capital funds non-recourse loans to AI infrastructure operators at 70-80% LTV, 3-year amortization and 7-15% APR, each held in a bankruptcy-remote Delaware SPV that owns the GPUs (NVIDIA B200, B300, H200) and their revenue contracts, with about three months of debt service in reserve and Wilmington Trust as escrow; capital not yet lent sits in short-term T-bills. Loan interest and T-bill yield raise the sUSDai/USDai rate (about 6.9% on about $548m in Oct 2026; the protocol's TVL swung from $690m in Dec 2025 to $170m in Aug 2026 and back to $350m). sUSDai is not a stablecoin and is not redeemable at par on demand.",
+    "backing": "USDai (PYUSD) lent against GPU hardware in Delaware SPVs; idle capital in T-bills",
+    "yieldSource": "interest on GPU-collateralized loans plus T-bill yield",
+    "redemption": "30-day epochs: queue on days 1-29, FIFO payout on day 30 from undeployed USDai, any unfilled remainder rolls to the next epoch; loans are never liquidated to pay exits, so high utilization stretches the queue; a small instant buffer exists",
+    "issuer": "USD.AI (USD.AI Foundation, Cayman Islands; built by Permian Labs)",
+    "links": [
+      "https://docs.usd.ai/depositor/susdai.md",
+      "https://docs.usd.ai/usdai/how-it-works.md",
+      "https://docs.usd.ai/usdai/risks-and-mitigants.md",
+      "https://docs.usd.ai/depositor/faq/usdai-and-susdai-101.md"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "high"
+  },
+  "Plasma USD::plUSD": {
+    "what": "Trevee's Plasma dollar, 1:1 USDT in a Midas vault · effectively wound down since Nov 2025",
+    "body": "plUSD was launched on Plasma by Trevee (formerly Rings Protocol) in Oct 2025: USDT deposits go into a Midas vault curated by Midas and Mithras Labs and lent on Aave, Fluid and Euler, plUSD is minted 1:1, and staking it gives splUSD. Trevee rehypothecated deposits and had about $14.7m lent to Stream Finance when Stream's xUSD collapsed in Nov 2025; it shut down rehypothecation and says splUSD holders were made whole, but its Plasma TVL on DefiLlama fell from about $50m to zero by early 2026 and the Chainlink plUSD and splUSD feeds were scheduled for deprecation in Sept 2026. What the index still sees is the stranded Euler eplUSD-2 vault, about $2.9m of plUSD lent against Stream xUSD at 100% utilization with withdrawals disabled, whose accruing but unpaid interest shows up as a bogus 22% supply APR.",
+    "backing": "USDT in a Midas vault on Plasma (lent on Aave, Fluid, Euler); part was lent to Stream Finance and is in recovery",
+    "yieldSource": null,
+    "redemption": "no official redemption terms or wind-down notice found; the Trevee Earn app still routes to a stake page; Euler positions in plUSD cannot be withdrawn",
+    "issuer": "Trevee (formerly Rings Protocol)",
+    "links": [
+      "https://x.com/Trevee_xyz/status/1973406315927011761",
+      "https://www.dlnews.com/articles/defi/how-the-stream-finance-debacle-affected-the-rest-of-defi/",
+      "https://github.com/euler-xyz/liquidation-bot-v3/pull/36",
+      "https://defillama.com/protocol/trevee-earn"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "low",
+    "verify": "Treat as discontinued: token-lists marks splUSD DISCONTINUED, DefiLlama shows $0 Plasma TVL for Trevee since early 2026, and Euler's liquidation bot blacklists every plUSD/splUSD vault as collapsed-asset collateral. No primary Trevee statement on redemption status was found; check trevee.xyz or @Trevee_xyz before relying on any number here."
+  },
+  "Staked Plasma USD::splUSD": {
+    "what": "Staked plUSD (Trevee, Plasma) · discontinued after the Nov 2025 Stream Finance collapse",
+    "body": "splUSD is the staked, auto-compounding form of Trevee's plUSD on Plasma: yield from the Midas vault's lending strategies (plus XPL rewards at launch) was minted as new plUSD into the staking contract. It traded as low as about $0.76-0.80 around the Stream Finance collapse in Nov 2025, when Trevee had about $14.7m lent to Stream. Trevee says splUSD holders were made whole, but Trevee's Plasma TVL is zero on DefiLlama, the Chainlink splUSD/plUSD feed was slated for deprecation in Sept 2026, and Euler's liquidation bot blacklists its vaults as collapsed collateral. The $10m the index shows as deposited is one frozen Euler esplUSD-1 position (10m splUSD backing about $8.7m of USDT0 debt), not live liquidity, and the $1 price is a stale oracle.",
+    "backing": "plUSD (USDT in a Midas vault on Plasma), with the Stream exposure in recovery",
+    "yieldSource": "lending yield from the Midas vault strategies, minted as plUSD into the staking contract; nothing observable since early 2026",
+    "redemption": "no working unstake or redeem path documented; only thin DEX liquidity near $0.99 on CoinGecko",
+    "issuer": "Trevee (formerly Rings Protocol)",
+    "links": [
+      "https://x.com/Trevee_xyz/status/1973406315927011761",
+      "https://rekt.news/loop-contagion",
+      "https://github.com/euler-xyz/liquidation-bot-v3/pull/36",
+      "https://www.coingecko.com/en/coins/trevee-staked-plasma-usd"
+    ],
+    "updated": "2026-10-14",
+    "confidence": "low",
+    "verify": "Treat as discontinued: token-lists marks it DISCONTINUED (risk 5), DefiLlama shows $0 Plasma TVL for Trevee since early 2026, and Euler blacklists the splUSD vaults. No primary Trevee statement on redemption status was found."
   }
 }
