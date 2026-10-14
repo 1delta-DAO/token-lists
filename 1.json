@@ -1437,8 +1437,8 @@
           "ytAddress": "0x47247749e976c54c6db2a9db68c5cadb05482e9f"
         },
         "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -2133,8 +2133,8 @@
           "ytAddress": "0x4d74ad0287f5a3a799659aad542e4d9d9f31d443"
         },
         "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -2944,7 +2944,11 @@
           "ptAddress": "0x207f7205fd6c4b602fa792c8b2b60e6006d4a0b8",
           "ytAddress": "0x946934554a2bf59039661f971986f0223e906264"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -3947,6 +3951,7 @@
           "ptAddress": "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -4263,6 +4268,11 @@
           "ytAddress": "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -4568,9 +4578,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -6636,8 +6646,8 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
-          "category": "PRINCIPAL_TOKEN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -7691,7 +7701,14 @@
       "assetGroup": "FLHYon Ethereum::SY-FLHYon",
       "currencyId": "FLHYon Ethereum::SY-FLHYon",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+          "expiry": 1796860800,
+          "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+          "ptAddress": "0xf1a905616171e1472b0c71eaa9caf7f224f04916",
+          "ytAddress": "0x509f15b4608d703516f4fc8544b0e5e7eef9d416"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -7783,9 +7800,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -7954,9 +7971,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -10743,7 +10760,11 @@
           "syAddress": "0x0a9b2c09f8756c743b0702973ed33970d16cf6f9",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -11513,8 +11534,8 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
-          "category": "PRINCIPAL_TOKEN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -11563,7 +11584,11 @@
           "syAddress": "0x10222f882f3594455343abc9831213854902ed8e",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -12168,7 +12193,14 @@
       "assetGroup": "YT FLHYon (FLHYon) Ethereum::YT-FLHYon-10DEC2026",
       "currencyId": "YT FLHYon (FLHYon) Ethereum::YT-FLHYon-10DEC2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1796860800 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+          "expiry": 1796860800,
+          "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+          "ptAddress": "0xf1a905616171e1472b0c71eaa9caf7f224f04916",
+          "syAddress": "0x3387db684c5cefe4244a243a4468c086591a5c12"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -12967,6 +12999,7 @@
           "syAddress": "0xc71c923445abdfc2c9b50292d8498745330f18ab",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "yieldfi", "name": "YieldFi", "kind": "protocol", "hops": 1 }
@@ -15250,7 +15283,11 @@
           "syAddress": "0x8b9d898327c0ac74b946ca3ca9fcfcbe9bc29c48",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -16579,7 +16616,11 @@
           "ptAddress": "0x9b02ca5685e9c332b158c01459562a161c8e8adf",
           "ytAddress": "0xfac0a88f74570478367ba1a52b4a30cfec6ec431"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -20078,7 +20119,11 @@
           "ptAddress": "0x9bca74f805ab0a22ddd0886db0942199a0feba71",
           "ytAddress": "0x65901ac9efa7cdaf1bdb4dbce4c53b151ae8d014"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -21393,7 +21438,11 @@
           "syAddress": "0x14ff57675c9c34eeb9e1516ffda7cac6ed1b9748",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -22495,9 +22544,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -22598,9 +22647,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -23741,9 +23790,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -26418,6 +26467,7 @@
           "ptAddress": "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -26706,7 +26756,7 @@
           "ptAddress": "0xa3ca92a69c6809607837bc3bd6b13e4c1e1e8ae9",
           "ytAddress": "0x4e99312e0beba4d73d8e8e9368fd24f4670624d9"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -27279,9 +27329,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -28813,6 +28863,11 @@
           "ptAddress": "0xdb63cfad2fe43132606cfef60c8ca3468c487677",
           "ytAddress": "0x562f3248cd47f06b4c24be7c42b73fbfe6cb2f96"
         },
+        "risk": {
+          "score": 4,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "yieldfi", "name": "YieldFi", "kind": "protocol", "hops": 1 }
@@ -29091,7 +29146,7 @@
           "ptAddress": "0x33e9a43b411000dd49c5ba66463f7dffaefa3fa6",
           "ytAddress": "0xa815a7cfa337d81e5d86286df9431488ec230abf"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -30179,7 +30234,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -30484,6 +30539,11 @@
           "ytAddress": "0x1d03e1859e0b10fc4943fd9204c008c8293d416d",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -30604,8 +30664,8 @@
           "ytAddress": "0x3fbd0dc8057145ce12a90499239f5ae0f22f750d"
         },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
+          "score": 4,
+          "category": "YIELD_STABLE",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -31566,6 +31626,11 @@
           "ytAddress": "0x562f3248cd47f06b4c24be7c42b73fbfe6cb2f96",
           "syAddress": "0xc71c923445abdfc2c9b50292d8498745330f18ab",
           "expired": true
+        },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -34964,7 +35029,14 @@
       "assetGroup": "PT FLHYon (FLHYon) Ethereum::PT-FLHYon-10DEC2026",
       "currencyId": "PT FLHYon (FLHYon) Ethereum::PT-FLHYon-10DEC2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1796860800 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+          "expiry": 1796860800,
+          "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+          "ytAddress": "0x509f15b4608d703516f4fc8544b0e5e7eef9d416",
+          "syAddress": "0x3387db684c5cefe4244a243a4468c086591a5c12"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -35590,7 +35662,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -61029,7 +61101,8 @@
             "evidence": "WMAC: hasnt role"
           }
         },
-        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" }
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb": {
@@ -76664,7 +76737,7 @@
       "currencyId": "STASIS EURO::EURS",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -81954,7 +82027,7 @@
       "currencyId": "Alchemix USD::ALUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -101579,7 +101652,6 @@
               "oapp": "swell-network",
               "approvalRequired": true,
               "peers": {
-                "56": "0x963132a22e8dd516ec65c2fad3a17f280c27de2d",
                 "8453": "0x850cdf416668210ed0c36bfff5d21921c7ada3b8",
                 "42161": "0xb1fe27b32ffb5ce54e272c096547f1e86c19e72f",
                 "48900": "0xd8b29106d4cebad087c30b10c0e41baa3a9ea703",
@@ -117577,7 +117649,11 @@
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -119133,7 +119209,11 @@
       "assetGroup": "Level USD::LVLUSD",
       "currencyId": "Level USD::LVLUSD",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -124100,9 +124180,9 @@
       "currencyId": "Staked Level USD::SLVLUSD",
       "props": {
         "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "lvlUSD", "base": "USD" },
         "oft": {
@@ -130005,9 +130085,9 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "savings": { "underlying": "USDC", "base": "USD" },
         "stablecoin": { "base": "USD" },
@@ -159170,7 +159250,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/bold.svg",
       "assetGroup": "Staked yBOLD::ysyBOLD",
       "currencyId": "Staked yBOLD::ysyBOLD",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x351caa9045d65107b9d311d922d15887cfd634e4": {
       "chainId": "1",
@@ -159896,7 +159976,7 @@
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/sUSDp.svg",
       "assetGroup": "Staked USDp::sUSDp",
       "currencyId": "Staked USDp::sUSDp",
-      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x07a36c630e3f072637da3445da733b29958d8cab": {
       "chainId": "1",
@@ -160314,7 +160394,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvusdc-1.svg",
       "assetGroup": "USDC-1 yVault::yvUSDC-1",
       "currencyId": "USDC-1 yVault::yvUSDC-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x310b7ea7475a0b449cfd73be81522f1b88efafaa": {
       "chainId": "1",
@@ -160324,7 +160404,7 @@
       "symbol": "yvUSDT-1",
       "assetGroup": "USDT-1 yVault::yvUSDT-1",
       "currencyId": "USDT-1 yVault::yvUSDT-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x182863131f9a4630ff9e27830d945b1413e347e8": {
       "chainId": "1",
@@ -160335,7 +160415,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvusds-1.svg",
       "assetGroup": "USDS-1 yVault::yvUSDS-1",
       "currencyId": "USDS-1 yVault::yvUSDS-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xc56413869c6cdf96496f2b1ef801fedbdfa7ddb0": {
       "chainId": "1",
@@ -160346,7 +160426,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvweth-1.svg",
       "assetGroup": "WETH-1 yVault::yvWETH-1",
       "currencyId": "WETH-1 yVault::yvWETH-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x69000195d5e3201cf73c9ae4a1559244df38d47c": {
       "chainId": "1",
@@ -161033,7 +161113,11 @@
       "currencyId": "Asymmetry USDaf Stablecoin::USDaf",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "asymmetry", "name": "Asymmetry", "kind": "protocol" }
       }
@@ -162488,7 +162572,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -164131,11 +164215,7 @@
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -165917,7 +165997,7 @@
       "logoURI": "https://raw.githubusercontent.com/cowprotocol/token-lists/main/src/public/images/1/0x89e93172aef8261db8437b90c3dcb61545a05317/logo.png",
       "assetGroup": "Savings USDaf::sUSDaf",
       "currencyId": "Savings USDaf::sUSDaf",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x972966bcc17f7d818de4f27dc146ef539c231bdf": {
       "chainId": "1",
@@ -171031,7 +171111,8 @@
       "address": "0x9f4330700a36b29952869fac9b33f45eedd8a3d8",
       "symbol": "yBOLD",
       "assetGroup": "Yearn BOLD::yBOLD",
-      "currencyId": "Yearn BOLD::yBOLD"
+      "currencyId": "Yearn BOLD::yBOLD",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x123ffe0a3c62878dcbee2742227dc8990058d9e1": {
       "chainId": "1",
@@ -171744,7 +171825,7 @@
       "symbol": "ysUSDS",
       "assetGroup": "Sky Rewards USDS Compounder::ysUSDS",
       "currencyId": "Sky Rewards USDS Compounder::ysUSDS",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x4f7310e8bda646a7da4b8f1bbe83073380c5dc53": {
       "chainId": "1",
@@ -175002,7 +175083,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -175431,7 +175512,7 @@
       "currencyId": "Hastra AUTO::AUTO",
       "props": {
         "savings": { "underlying": "wYLDS", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
       }
     },
@@ -175958,7 +176039,11 @@
       "assetGroup": "KRW1::KRW1",
       "currencyId": "KRW1::KRW1",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "KRW" },
         "issuer": { "id": "bdacs", "name": "BDACS", "kind": "institution" }
       }
@@ -178436,7 +178521,7 @@
       "currencyId": "Unity USD::UUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -179101,7 +179186,8 @@
       "address": "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624",
       "symbol": "slisXAUE",
       "assetGroup": "Staked Lista XAUE::slisXAUE",
-      "currencyId": "Staked Lista XAUE::slisXAUE"
+      "currencyId": "Staked Lista XAUE::slisXAUE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x7706b1a531a7a8cb4c26d24cdc9ae4094a3e0302": {
       "chainId": "1",
@@ -179270,6 +179356,26 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945",
       "assetGroup": "Incentiv::CENT",
       "currencyId": "Incentiv::CENT"
+    },
+    "0x4602e48a5b2e53f83b9bacf36249ccd443b3a430": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Temo",
+      "address": "0x4602e48a5b2e53f83b9bacf36249ccd443b3a430",
+      "symbol": "TEMO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179482/thumb/logo.jpg?1791932129",
+      "assetGroup": "Temo::TEMO",
+      "currencyId": "Temo::TEMO"
+    },
+    "0x2d8b65306a6c23da6342cb94d4251fb4302a624f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)",
+      "address": "0x2d8b65306a6c23da6342cb94d4251fb4302a624f",
+      "symbol": "SHVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179484/thumb/SHVON.png?1791952585",
+      "assetGroup": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON",
+      "currencyId": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

@@ -1940,8 +1940,8 @@
             "ytAddress": "0x47247749e976c54c6db2a9db68c5cadb05482e9f"
           },
           "risk": {
-            "score": 3,
-            "category": "STABLECOIN",
+            "score": 5,
+            "category": "DISCONTINUED",
             "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -2832,8 +2832,8 @@
             "ytAddress": "0x4d74ad0287f5a3a799659aad542e4d9d9f31d443"
           },
           "risk": {
-            "score": 3,
-            "category": "STABLECOIN",
+            "score": 5,
+            "category": "DISCONTINUED",
             "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -3868,7 +3868,11 @@
             "ptAddress": "0x207f7205fd6c4b602fa792c8b2b60e6006d4a0b8",
             "ytAddress": "0x946934554a2bf59039661f971986f0223e906264"
           },
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -5223,6 +5227,11 @@
             "ptAddress": "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1",
             "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
           },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -5647,6 +5656,11 @@
             "ytAddress": "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a",
             "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
           },
+          "risk": {
+            "score": 2,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -6044,9 +6058,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
-            "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -8732,8 +8746,8 @@
             "expired": true
           },
           "risk": {
-            "score": 3,
-            "category": "PRINCIPAL_TOKEN",
+            "score": 5,
+            "category": "DISCONTINUED",
             "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -10168,7 +10182,14 @@
         "chainId": "1",
         "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/a222f3ed-59ba-41ef-b085-7894eff06d1c.svg",
         "props": {
-          "pendle": { "tokenType": "SY" },
+          "pendle": {
+            "tokenType": "SY",
+            "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+            "expiry": 1796860800,
+            "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+            "ptAddress": "0xf1a905616171e1472b0c71eaa9caf7f224f04916",
+            "ytAddress": "0x509f15b4608d703516f4fc8544b0e5e7eef9d416"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -10284,9 +10305,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -10514,9 +10535,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -14164,9 +14185,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
-            "category": "YIELD_TOKEN",
-            "source": "default"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -15183,8 +15204,8 @@
             "expired": true
           },
           "risk": {
-            "score": 3,
-            "category": "PRINCIPAL_TOKEN",
+            "score": 5,
+            "category": "DISCONTINUED",
             "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -15246,9 +15267,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
-            "category": "YIELD_TOKEN",
-            "source": "default"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -16032,7 +16053,14 @@
         "chainId": "1",
         "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f42b5fe2-5917-4974-988a-bc3628588580.svg",
         "props": {
-          "pendle": { "tokenType": "YT", "expiry": 1796860800 },
+          "pendle": {
+            "tokenType": "YT",
+            "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+            "expiry": 1796860800,
+            "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+            "ptAddress": "0xf1a905616171e1472b0c71eaa9caf7f224f04916",
+            "syAddress": "0x3387db684c5cefe4244a243a4468c086591a5c12"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -17087,6 +17115,11 @@
             "ptAddress": "0xdb63cfad2fe43132606cfef60c8ca3468c487677",
             "syAddress": "0xc71c923445abdfc2c9b50292d8498745330f18ab",
             "expired": true
+          },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -20093,9 +20126,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
-            "category": "YIELD_TOKEN",
-            "source": "default"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -21840,7 +21873,11 @@
             "ptAddress": "0x9b02ca5685e9c332b158c01459562a161c8e8adf",
             "ytAddress": "0xfac0a88f74570478367ba1a52b4a30cfec6ec431"
           },
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -26511,7 +26548,11 @@
             "ptAddress": "0x9bca74f805ab0a22ddd0886db0942199a0feba71",
             "ytAddress": "0x65901ac9efa7cdaf1bdb4dbce4c53b151ae8d014"
           },
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -28224,9 +28265,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
-            "category": "YIELD_TOKEN",
-            "source": "default"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -29683,9 +29724,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -29818,9 +29859,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
-            "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -31294,9 +31335,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -34824,6 +34865,11 @@
             "ptAddress": "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5",
             "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
           },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -35218,7 +35264,7 @@
             "ptAddress": "0xa3ca92a69c6809607837bc3bd6b13e4c1e1e8ae9",
             "ytAddress": "0x4e99312e0beba4d73d8e8e9368fd24f4670624d9"
           },
-          "risk": { "score": 4, "source": "default" },
+          "risk": { "score": 2, "source": "pendle_inherit" },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -35982,9 +36028,9 @@
             "expired": true
           },
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "PRINCIPAL_TOKEN",
-            "source": "default"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -37999,6 +38045,11 @@
             "ptAddress": "0xdb63cfad2fe43132606cfef60c8ca3468c487677",
             "ytAddress": "0x562f3248cd47f06b4c24be7c42b73fbfe6cb2f96"
           },
+          "risk": {
+            "score": 4,
+            "category": "STABLECOIN",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             {
@@ -38366,7 +38417,7 @@
             "ptAddress": "0x33e9a43b411000dd49c5ba66463f7dffaefa3fa6",
             "ytAddress": "0xa815a7cfa337d81e5d86286df9431488ec230abf"
           },
-          "risk": { "score": 4, "source": "default" },
+          "risk": { "score": 2, "source": "pendle_inherit" },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -39769,7 +39820,7 @@
             "expired": true
           },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "PRINCIPAL_TOKEN",
             "source": "pendle_inherit"
           },
@@ -40169,6 +40220,11 @@
             "ytAddress": "0x1d03e1859e0b10fc4943fd9204c008c8293d416d",
             "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
           },
+          "risk": {
+            "score": 2,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
             { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -40319,8 +40375,8 @@
             "ytAddress": "0x3fbd0dc8057145ce12a90499239f5ae0f22f750d"
           },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
+            "score": 4,
+            "category": "YIELD_STABLE",
             "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -41582,6 +41638,11 @@
             "ytAddress": "0x562f3248cd47f06b4c24be7c42b73fbfe6cb2f96",
             "syAddress": "0xc71c923445abdfc2c9b50292d8498745330f18ab",
             "expired": true
+          },
+          "risk": {
+            "score": 4,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -46036,7 +46097,14 @@
         "chainId": "1",
         "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1579c681-d520-46d7-a7cb-1536e7c2fd7e.svg",
         "props": {
-          "pendle": { "tokenType": "PT", "expiry": 1796860800 },
+          "pendle": {
+            "tokenType": "PT",
+            "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+            "expiry": 1796860800,
+            "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+            "ytAddress": "0x509f15b4608d703516f4fc8544b0e5e7eef9d416",
+            "syAddress": "0x3387db684c5cefe4244a243a4468c086591a5c12"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -46865,7 +46933,7 @@
             "expired": true
           },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "PRINCIPAL_TOKEN",
             "source": "pendle_inherit"
           },
@@ -51346,7 +51414,10 @@
             "category": "PRINCIPAL_TOKEN",
             "source": "pendle_inherit"
           },
-          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+          "issuerExposures": [
+            { "id": "aster", "name": "Aster", "kind": "protocol", "hops": 1 }
+          ]
         }
       }
     ],
@@ -52218,7 +52289,10 @@
             "category": "YIELD_TOKEN",
             "source": "default"
           },
-          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+          "issuerExposures": [
+            { "id": "aster", "name": "Aster", "kind": "protocol", "hops": 1 }
+          ]
         }
       }
     ],
@@ -53574,7 +53648,10 @@
             "ytAddress": "0x89c625c475f33a78a8c60250137a3d51aa12b357"
           },
           "risk": { "score": 3, "category": "LST", "source": "pendle_inherit" },
-          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+          "issuerExposures": [
+            { "id": "aster", "name": "Aster", "kind": "protocol", "hops": 1 }
+          ]
         }
       }
     ],
@@ -54185,6 +54262,11 @@
             "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
             "ytAddress": "0xddb70adb30e61f6c4d36ce70d5a3e3c13d39136f"
           },
+          "risk": {
+            "score": 3,
+            "category": "YIELD_STABLE",
+            "source": "pendle_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -54310,6 +54392,11 @@
             "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
             "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
             "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
+          },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -54663,7 +54750,7 @@
           "risk": {
             "score": 2,
             "category": "PRINCIPAL_TOKEN",
-            "source": "vault_inherit"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -54906,7 +54993,7 @@
           "risk": {
             "score": 3,
             "category": "PRINCIPAL_TOKEN",
-            "source": "vault_inherit"
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -55220,6 +55307,11 @@
             "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
             "syAddress": "0x05938d5d7b7243a27d88b83272ab36f2034168f4"
           },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -55278,6 +55370,11 @@
             "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
             "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
             "ytAddress": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e"
+          },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "pendle_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
           "issuerExposures": [
@@ -63187,6 +63284,11 @@
             "ytAddress": "0xc987568603f10f8dca9169f7ea15ab38faf331ac",
             "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
           },
+          "risk": {
+            "score": 2,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "vault_inherit"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -63415,6 +63517,11 @@
             "underlyingAsset": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
             "ptAddress": "0xe1652479358a5968bcc8a36274a616422a2d357d",
             "syAddress": "0x346ae4fc5134f13655c65abb6dfd8728a6eb1235"
+          },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -63783,6 +63890,33 @@
     "symbol": "SY-USDG",
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/5c13b822-be38-4a86-bc71-3fc8cd701b8a.svg"
   },
+  "YT sNET (NET) Robinhood::YT-sNET-12NOV2026": {
+    "id": "YT sNET (NET) Robinhood::YT-sNET-12NOV2026",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "YT sNET (NET) Robinhood",
+        "address": "0x8e6584c1aff3a1f8117d8684103cff0c9be7a8b7",
+        "symbol": "YT-sNET-12NOV2026",
+        "chainId": "4663",
+        "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d85f163c-c834-4a2c-accb-a1ac16322899.svg",
+        "props": {
+          "pendle": {
+            "tokenType": "YT",
+            "marketAddress": "0xc5ceb0c5901421afc94bf365c73c915592123b19",
+            "expiry": 1794441600,
+            "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+            "ptAddress": "0xc019ee8fa7c20a95351c63f67f62d580719e4bbf",
+            "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5"
+          },
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        }
+      }
+    ],
+    "name": "YT sNET (NET) Robinhood",
+    "symbol": "YT-sNET-12NOV2026",
+    "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d85f163c-c834-4a2c-accb-a1ac16322899.svg"
+  },
   "YT NVDA (NVDA) Robinhood::YT-NVDA-15OCT2026": {
     "id": "YT NVDA (NVDA) Robinhood::YT-NVDA-15OCT2026",
     "currencies": [
@@ -64031,6 +64165,33 @@
     "symbol": "PT-sNUKE-24SEP2026",
     "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ed145770-4b66-4bbd-920f-183090842b44.svg"
   },
+  "PT sNET (NET) Robinhood::PT-sNET-12NOV2026": {
+    "id": "PT sNET (NET) Robinhood::PT-sNET-12NOV2026",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "PT sNET (NET) Robinhood",
+        "address": "0xc019ee8fa7c20a95351c63f67f62d580719e4bbf",
+        "symbol": "PT-sNET-12NOV2026",
+        "chainId": "4663",
+        "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/02e700f6-2975-445a-b423-909bf300602b.svg",
+        "props": {
+          "pendle": {
+            "tokenType": "PT",
+            "marketAddress": "0xc5ceb0c5901421afc94bf365c73c915592123b19",
+            "expiry": 1794441600,
+            "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+            "ytAddress": "0x8e6584c1aff3a1f8117d8684103cff0c9be7a8b7",
+            "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5"
+          },
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        }
+      }
+    ],
+    "name": "PT sNET (NET) Robinhood",
+    "symbol": "PT-sNET-12NOV2026",
+    "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/02e700f6-2975-445a-b423-909bf300602b.svg"
+  },
   "PT sNET (NET) Robinhood::PT-sNET-15OCT2026": {
     "id": "PT sNET (NET) Robinhood::PT-sNET-15OCT2026",
     "currencies": [
@@ -64097,6 +64258,11 @@
             "ptAddress": "0x07a1c3aa6be8140ec1cce06121640e56c8cb29d9",
             "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
           },
+          "risk": {
+            "score": 4,
+            "category": "YIELD_TOKEN",
+            "source": "default"
+          },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
       }
@@ -64156,6 +64322,11 @@
             "underlyingAsset": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
             "ytAddress": "0x4aec7f5ce469ff4717eceacb67a333fda09aacf0",
             "syAddress": "0x346ae4fc5134f13655c65abb6dfd8728a6eb1235"
+          },
+          "risk": {
+            "score": 2,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "vault_inherit"
           },
           "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
         }
@@ -69965,7 +70136,15 @@
             "ytAddress": "0x40eb4a62acf1fa0676732b62c4e55548ee7b819f",
             "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
           },
-          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+          "risk": {
+            "score": 2,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "vault_inherit"
+          },
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+          "issuerExposures": [
+            { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+          ]
         }
       }
     ],
@@ -70330,7 +70509,10 @@
             "ptAddress": "0x257561233419039bec3a28be717d14b4f490883d",
             "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
           },
-          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+          "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+          "issuerExposures": [
+            { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+          ]
         }
       }
     ],
@@ -96758,6 +96940,27 @@
         "props": {
           "rwa": { "type": "fund", "subType": "etf", "issuer": "backed" },
           "risk": { "score": 4, "source": "default" },
+          "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+        }
+      },
+      {
+        "decimals": 18,
+        "name": "Wrapped Nasdaq xStock",
+        "address": "0x4c1ae29c159838fc1b224636e28e086eb69101f7",
+        "symbol": "wQQQx",
+        "chainId": "42161",
+        "props": {
+          "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+        }
+      },
+      {
+        "decimals": 18,
+        "name": "Wrapped Nasdaq xStock",
+        "address": "0x4c1ae29c159838fc1b224636e28e086eb69101f7",
+        "symbol": "wQQQx",
+        "chainId": "999",
+        "logoURI": "https://tokens.debridge.finance/Logo/100000022/0x4c1ae29c159838fc1b224636e28e086eb69101f7/small/token-logo.png",
+        "props": {
           "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
         }
       }
@@ -190495,7 +190698,8 @@
               "evidence": "WMAC: hasnt role"
             }
           },
-          "risk": { "score": 3, "category": "OTHER", "source": "whitelist" }
+          "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
+          "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
         }
       },
       {
@@ -190504,7 +190708,10 @@
         "address": "0x25c2067d8b04931a6e2eb078ea8d65c8b8500031",
         "symbol": "MGLOBAL",
         "chainId": "43114",
-        "logoURI": "https://assets.coingecko.com/coins/images/102172980/thumb/mglobal-Cm4yjVTI.png?1776956923"
+        "logoURI": "https://assets.coingecko.com/coins/images/102172980/thumb/mglobal-Cm4yjVTI.png?1776956923",
+        "props": {
+          "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+        }
       }
     ],
     "name": "Midas Fasanara Global",
@@ -218174,7 +218381,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179142/thumb/sqqqb.png?1791294123",
         "props": {
-          "rwa": { "type": "fund", "subType": "etf", "issuer": "bstocks" }
+          "rwa": { "type": "fund", "subType": "etf", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218193,7 +218405,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179333/thumb/securitized.png?1791471789",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218212,7 +218429,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179140/thumb/mrnab.png?1791293265",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218231,7 +218453,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179332/thumb/jpmorgan.png?1791471543",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218250,7 +218477,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179331/thumb/lilly.png?1791471268",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218269,7 +218501,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179143/thumb/stxb.png?1791294259",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218288,7 +218525,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179334/thumb/usdeb.png?1791471953",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -218307,7 +218549,12 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/102179139/thumb/crwdb.png?1791293069",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "bstocks" },
+          "issuer": {
+            "id": "bstocks",
+            "name": "bStocks",
+            "kind": "institution"
+          }
         }
       }
     ],
@@ -219062,7 +219309,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179184/thumb/LYVc-icon-200.png?1791300878",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219081,7 +219329,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179183/thumb/IONQc-icon-200.png?1791300871",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219100,7 +219349,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179247/thumb/WULFc-icon-200.png?1791375046",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219119,7 +219369,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179168/thumb/921f1d48585625dde39570f4e406d9f019e1189be2b92dae5be6a7b7ec540212.png?1791299683",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219138,7 +219389,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179167/thumb/CAKEc-icon-200.png?1791299680",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219157,7 +219409,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179182/thumb/cc2d84b704e34b83b5fc1f3b0e89c67e5ccc9142e666a50a5cbde261cf09e2aa.png?1791300868",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219176,7 +219429,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179259/thumb/PMc-icon-200.png?1791375082",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219195,7 +219449,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179180/thumb/MARAc-icon-200.png?1791300861",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219214,7 +219469,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179181/thumb/HPQc-icon-200.png?1791300865",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219233,7 +219489,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179256/thumb/RDDTc-icon-200.png?1791375073",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219252,7 +219509,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179258/thumb/QUBTc-icon-200.png?1791375079",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219271,7 +219529,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179263/thumb/TTWOc-icon-200.png?1791375817",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219290,7 +219549,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179271/thumb/DJTc-icon-200.png?1791375840",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219309,7 +219569,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179257/thumb/RBLXc-icon-200.png?1791375077",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219328,7 +219589,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179199/thumb/AXONc-icon-200.png?1791301551",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219347,7 +219609,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179179/thumb/LCIDc-icon-200.png?1791300859",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219366,7 +219629,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179254/thumb/RIVNc-icon-200.png?1791375068",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219385,7 +219649,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179178/thumb/HUTc-icon-200.png?1791300357",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219404,7 +219669,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179177/thumb/KSSc-icon-200.png?1791300357",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219423,7 +219689,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179255/thumb/RGTIc-icon-200.png?1791375070",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219442,7 +219709,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179174/thumb/GMEc-icon-200.png?1791300346",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219461,7 +219729,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179253/thumb/4dde0edccaaf5a6e62a814beeef58402cc8a1aba58ca6aab50f65b2ae28d1127.png?1791375064",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219480,7 +219749,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179172/thumb/DUOLc-icon-200.png?1791300340",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219499,7 +219769,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179252/thumb/ROOTc-icon-200.png?1791375061",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219518,7 +219789,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179175/thumb/b396ed85244f93f0b85fb135c2e5090638f65393b49854637e168d77d2180020.png?1791300349",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219537,7 +219809,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179251/thumb/SOUNc-icon-200.png?1791375057",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219556,7 +219829,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179173/thumb/LLYc-icon-200.png?1791300343",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219575,7 +219849,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179250/thumb/TKOc-icon-200.png?1791375054",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219594,7 +219869,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179171/thumb/43c7fe215cc44bb5e9fd69cd7c3df620081f95199ce0546ed9106ee5f6576fd7.png?1791300337",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219613,7 +219889,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179246/thumb/WWc-icon-200.png?1791375043",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219632,7 +219909,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179170/thumb/CLSKc-icon-200.png?1791300335",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219651,7 +219929,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179160/thumb/AMCc-icon-200.png?1791299642",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219670,7 +219949,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179169/thumb/CRCLc-icon-200.png?1791300332",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219689,7 +219969,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179249/thumb/WENc-icon-200.png?1791375052",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219708,7 +219989,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179248/thumb/WINGc-icon-200.png?1791375049",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219727,7 +220009,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179166/thumb/AVGOc-icon-200.png?1791299678",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219746,7 +220029,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179165/thumb/BEc-icon-200.png?1791299675",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219765,7 +220049,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179164/thumb/XYZc-icon-200.png?1791299672",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219784,7 +220069,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179275/thumb/BMNR.png?1791375852",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219803,7 +220089,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179245/thumb/BRK.Bc-icon-200.png?1791375041",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219822,7 +220109,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179262/thumb/USDEc-icon-200.png?1791375815",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219841,7 +220129,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179163/thumb/BYNDc-icon-200.png?1791299669",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219860,7 +220149,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179244/thumb/CORZc-icon-200.png?1791375038",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219879,7 +220169,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179243/thumb/RIOTc-icon-200.png?1791375036",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219898,7 +220189,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179162/thumb/ASTSc-icon-200.png?1791299652",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219917,7 +220209,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179200/thumb/AXTIc-icon-200.png?1791302142",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219936,7 +220229,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179261/thumb/VKTXc-icon-200.png?1791375812",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219955,7 +220249,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179161/thumb/AEOc-icon-200.png?1791299646",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219974,7 +220269,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179276/thumb/BJc-icon-200.png?1791375854",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -219993,7 +220289,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179274/thumb/CELHc-icon-200.png?1791375848",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220012,7 +220309,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179277/thumb/BIRD.png?1791375858",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220031,7 +220329,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179260/thumb/VVVc-icon-200.png?1791375810",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220050,7 +220349,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179242/thumb/WDCc-icon-200.png?1791375033",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220069,7 +220369,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179241/thumb/symbol-small.png?1791375030",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220088,7 +220389,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179131/thumb/AMDc-icon-200.png?1791292080",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220107,7 +220409,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179198/thumb/AAOIc-icon-200.png?1791301547",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220126,7 +220429,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179197/thumb/PFEc-icon-200.png?1791301545",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220145,7 +220449,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179176/thumb/HIMSc-icon-200.png?1791300353",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220164,7 +220469,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179273/thumb/CLOVc-icon-200.png?1791375846",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220183,7 +220489,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179272/thumb/CROXc-icon-200.png?1791375843",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220202,7 +220509,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179196/thumb/PTONc-icon-200.png?1791301542",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220221,7 +220529,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179270/thumb/EATc-icon-200.png?1791375838",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220240,7 +220549,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179269/thumb/ELFc-icon-200.png?1791375835",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220259,7 +220569,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179195/thumb/PYPLc-icon-200.png?1791301538",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220278,7 +220589,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179194/thumb/ORCLc-icon-200.png?1791301534",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220297,7 +220609,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179267/thumb/LITEc-icon-200.png?1791375829",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220316,7 +220629,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179193/thumb/OPENc-icon-200.png?1791301532",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220335,7 +220649,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179268/thumb/KODKc-icon-200.png?1791375832",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220354,7 +220669,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179191/thumb/SMRc-icon-200.png?1791301526",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220373,7 +220689,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179192/thumb/OKLOc-icon-200.png?1791301529",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220392,7 +220709,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179190/thumb/NVAXc-icon-200.png?1791300894",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220411,7 +220729,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179187/thumb/MRVLc-icon-200.png?1791300885",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220430,7 +220749,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179188/thumb/MRNAc-icon-200.png?1791300887",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220449,7 +220769,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179189/thumb/NFLXc-icon-200.png?1791300891",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220468,7 +220789,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179186/thumb/GPROc-icon-200.png?1791300882",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220487,7 +220809,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179266/thumb/LUVc-icon-200.png?1791375825",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220506,7 +220829,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179265/thumb/PLNTc-icon-200.png?1791375824",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220525,7 +220849,8 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179264/thumb/SEZLc-icon-200.png?1791375821",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
@@ -220544,13 +220869,565 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/102179185/thumb/GLXYc-icon-200.png?1791300880",
         "props": {
-          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" },
+          "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
         }
       }
     ],
     "name": "Galaxy Digital Inc. (Coinbase Tokenized Stock)",
     "symbol": "GLXYC",
     "logoURI": "https://assets.coingecko.com/coins/images/102179185/thumb/GLXYc-icon-200.png?1791300880"
+  },
+  "Sweetgreen, Inc. (Coinbase Tokenized Stock)::SGC": {
+    "id": "Sweetgreen, Inc. (Coinbase Tokenized Stock)::SGC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Sweetgreen, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000b57f99acec3a7490d0",
+        "symbol": "SGC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179422/thumb/SGc-icon-200.png?1791738033",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Sweetgreen, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "SGC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179422/thumb/SGc-icon-200.png?1791738033"
+  },
+  "PDD Holdings Inc. (Coinbase Tokenized Stock)::PDDC": {
+    "id": "PDD Holdings Inc. (Coinbase Tokenized Stock)::PDDC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "PDD Holdings Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000c8a7223510467d8563",
+        "symbol": "PDDC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179413/thumb/PDDc-icon-200.png?1791736627",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "PDD Holdings Inc. (Coinbase Tokenized Stock)",
+    "symbol": "PDDC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179413/thumb/PDDc-icon-200.png?1791736627"
+  },
+  "NIO Inc. (Coinbase Tokenized Stock)::NIOC": {
+    "id": "NIO Inc. (Coinbase Tokenized Stock)::NIOC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "NIO Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000002d2b5dc53c61f1ba06",
+        "symbol": "NIOC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179411/thumb/NIOc-icon-200.png?1791736415",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "NIO Inc. (Coinbase Tokenized Stock)",
+    "symbol": "NIOC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179411/thumb/NIOc-icon-200.png?1791736415"
+  },
+  "Novo Nordisk A/S (Coinbase Tokenized Stock)::NVOC": {
+    "id": "Novo Nordisk A/S (Coinbase Tokenized Stock)::NVOC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Novo Nordisk A/S (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000008d5328e9208773dc58",
+        "symbol": "NVOC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179412/thumb/NVOc-icon-200.png?1791736529",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Novo Nordisk A/S (Coinbase Tokenized Stock)",
+    "symbol": "NVOC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179412/thumb/NVOc-icon-200.png?1791736529"
+  },
+  "SAP SE (Coinbase Tokenized Stock)::SAPC": {
+    "id": "SAP SE (Coinbase Tokenized Stock)::SAPC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "SAP SE (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000da6f64c306234127e0",
+        "symbol": "SAPC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179416/thumb/SAPc-icon-200.png?1791737205",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "SAP SE (Coinbase Tokenized Stock)",
+    "symbol": "SAPC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179416/thumb/SAPc-icon-200.png?1791737205"
+  },
+  "SK hynix Inc. (Coinbase Tokenized Stock)::SKHYC": {
+    "id": "SK hynix Inc. (Coinbase Tokenized Stock)::SKHYC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "SK hynix Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000187f7071d6e321a7d2",
+        "symbol": "SKHYC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179420/thumb/SKHYc-icon-200_%281%29.png?1791737580",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "SK hynix Inc. (Coinbase Tokenized Stock)",
+    "symbol": "SKHYC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179420/thumb/SKHYc-icon-200_%281%29.png?1791737580"
+  },
+  "Rocket Lab Corporation (Coinbase Tokenized Stock)::RKLBC": {
+    "id": "Rocket Lab Corporation (Coinbase Tokenized Stock)::RKLBC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Rocket Lab Corporation (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000e8e50cbbb9a3861a3c",
+        "symbol": "RKLBC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179415/thumb/RKLBc-icon-200.png?1791736984",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Rocket Lab Corporation (Coinbase Tokenized Stock)",
+    "symbol": "RKLBC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179415/thumb/RKLBc-icon-200.png?1791736984"
+  },
+  "Carvana Co. (Coinbase Tokenized Stock)::CVNAC": {
+    "id": "Carvana Co. (Coinbase Tokenized Stock)::CVNAC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Carvana Co. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000ffb10718f880a48274",
+        "symbol": "CVNAC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179408/thumb/CVNAc-icon-200.png?1791735924",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Carvana Co. (Coinbase Tokenized Stock)",
+    "symbol": "CVNAC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179408/thumb/CVNAc-icon-200.png?1791735924"
+  },
+  "Gemini Space Station, Inc. (Coinbase Tokenized Stock)::GEMIC": {
+    "id": "Gemini Space Station, Inc. (Coinbase Tokenized Stock)::GEMIC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Gemini Space Station, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000009c52748e1d1cbd5fd6",
+        "symbol": "GEMIC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179409/thumb/GEMIc-icon-200.png?1791736129",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Gemini Space Station, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "GEMIC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179409/thumb/GEMIc-icon-200.png?1791736129"
+  },
+  "Sony Group Corporation (Coinbase Tokenized Stock)::SONYC": {
+    "id": "Sony Group Corporation (Coinbase Tokenized Stock)::SONYC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Sony Group Corporation (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000a26326a922ffa87f6c",
+        "symbol": "SONYC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179421/thumb/SONYc-icon-200.png?1791737658",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Sony Group Corporation (Coinbase Tokenized Stock)",
+    "symbol": "SONYC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179421/thumb/SONYc-icon-200.png?1791737658"
+  },
+  "Sea Limited (Coinbase Tokenized Stock)::SEC": {
+    "id": "Sea Limited (Coinbase Tokenized Stock)::SEC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Sea Limited (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000003088798f6d0722aaac",
+        "symbol": "SEC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179417/thumb/SEc-icon-200.png?1791737292",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Sea Limited (Coinbase Tokenized Stock)",
+    "symbol": "SEC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179417/thumb/SEc-icon-200.png?1791737292"
+  },
+  "ServiceNow, Inc. (Coinbase Tokenized Stock)::NOWC": {
+    "id": "ServiceNow, Inc. (Coinbase Tokenized Stock)::NOWC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "ServiceNow, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb20000000000000000000082cd2c7801305808df",
+        "symbol": "NOWC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179418/thumb/NOWc-icon-200.png?1791737404",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "ServiceNow, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "NOWC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179418/thumb/NOWc-icon-200.png?1791737404"
+  },
+  "Vale S.A. (Coinbase Tokenized Stock)::VALEC": {
+    "id": "Vale S.A. (Coinbase Tokenized Stock)::VALEC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Vale S.A. (Coinbase Tokenized Stock)",
+        "address": "0xb20000000000000000000063376b142c0764b489",
+        "symbol": "VALEC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179424/thumb/VALEc-icon-200.png?1791738152",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Vale S.A. (Coinbase Tokenized Stock)",
+    "symbol": "VALEC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179424/thumb/VALEc-icon-200.png?1791738152"
+  },
+  "Walmart Inc. (Coinbase Tokenized Stock)::WMTC": {
+    "id": "Walmart Inc. (Coinbase Tokenized Stock)::WMTC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Walmart Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000008a7508619c717a7106",
+        "symbol": "WMTC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179425/thumb/WMTc-icon-200.png?1791738156",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Walmart Inc. (Coinbase Tokenized Stock)",
+    "symbol": "WMTC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179425/thumb/WMTc-icon-200.png?1791738156"
+  },
+  "SoFi Technologies, Inc. (Coinbase Tokenized Stock)::SOFIC": {
+    "id": "SoFi Technologies, Inc. (Coinbase Tokenized Stock)::SOFIC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "SoFi Technologies, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000003ef37a7c863dc1482a",
+        "symbol": "SOFIC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179419/thumb/SOFIc-icon-200.png?1791737478",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "SoFi Technologies, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "SOFIC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179419/thumb/SOFIc-icon-200.png?1791737478"
+  },
+  "Baidu, Inc. (Coinbase Tokenized Stock)::BIDUC": {
+    "id": "Baidu, Inc. (Coinbase Tokenized Stock)::BIDUC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Baidu, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000d2b7d9aee52f6c6bef",
+        "symbol": "BIDUC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179407/thumb/BIDUc-icon-200.png?1791735788",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Baidu, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "BIDUC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179407/thumb/BIDUc-icon-200.png?1791735788"
+  },
+  "Redwire Corporation (Coinbase Tokenized Stock)::RDWC": {
+    "id": "Redwire Corporation (Coinbase Tokenized Stock)::RDWC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Redwire Corporation (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000cd7dfaef0423f1f103",
+        "symbol": "RDWC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179414/thumb/RDWc-icon-200.png?1791736883",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Redwire Corporation (Coinbase Tokenized Stock)",
+    "symbol": "RDWC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179414/thumb/RDWc-icon-200.png?1791736883"
+  },
+  "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)::BUDC": {
+    "id": "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)::BUDC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000c36ce081dd09e86ca2",
+        "symbol": "BUDC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179388/thumb/BUDc-icon-200.png?1791655282",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)",
+    "symbol": "BUDC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179388/thumb/BUDc-icon-200.png?1791655282"
+  },
+  "Unity Software Inc. (Coinbase Tokenized Stock)::UC": {
+    "id": "Unity Software Inc. (Coinbase Tokenized Stock)::UC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Unity Software Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000902f48cba1f39149f7",
+        "symbol": "UC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179423/thumb/Uc-icon-200.png?1791738054",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Unity Software Inc. (Coinbase Tokenized Stock)",
+    "symbol": "UC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179423/thumb/Uc-icon-200.png?1791738054"
+  },
+  "Monster Beverage Corporation (Coinbase Tokenized Stock)::MNSTC": {
+    "id": "Monster Beverage Corporation (Coinbase Tokenized Stock)::MNSTC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Monster Beverage Corporation (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000005bcde0a6926919fef9",
+        "symbol": "MNSTC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179410/thumb/MNSTc-icon-200.png?1791736194",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Monster Beverage Corporation (Coinbase Tokenized Stock)",
+    "symbol": "MNSTC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179410/thumb/MNSTc-icon-200.png?1791736194"
+  },
+  "Bilibili Inc. (Coinbase Tokenized Stock)::BILIC": {
+    "id": "Bilibili Inc. (Coinbase Tokenized Stock)::BILIC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Bilibili Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000ca7c6d1438e7245eb6",
+        "symbol": "BILIC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179458/thumb/BILIc-icon-200.png?1791884707",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Bilibili Inc. (Coinbase Tokenized Stock)",
+    "symbol": "BILIC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179458/thumb/BILIc-icon-200.png?1791884707"
+  },
+  "Hesai Group (Coinbase Tokenized Stock)::HSAIC": {
+    "id": "Hesai Group (Coinbase Tokenized Stock)::HSAIC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Hesai Group (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000f3049f4aa834b23b64",
+        "symbol": "HSAIC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179459/thumb/HSAIc-icon-200.png?1791884710",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Hesai Group (Coinbase Tokenized Stock)",
+    "symbol": "HSAIC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179459/thumb/HSAIc-icon-200.png?1791884710"
+  },
+  "Li Auto Inc. (Coinbase Tokenized Stock)::LIC": {
+    "id": "Li Auto Inc. (Coinbase Tokenized Stock)::LIC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Li Auto Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000d61efd9f54a23ef9eb",
+        "symbol": "LIC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179461/thumb/LIc-icon-200.png?1791884716",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Li Auto Inc. (Coinbase Tokenized Stock)",
+    "symbol": "LIC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179461/thumb/LIc-icon-200.png?1791884716"
+  },
+  "Unilever Plc (Coinbase Tokenized Stock)::ULC": {
+    "id": "Unilever Plc (Coinbase Tokenized Stock)::ULC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Unilever Plc (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000349ef3aa93a0897476",
+        "symbol": "ULC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179463/thumb/ULc-icon-200.png?1791884721",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Unilever Plc (Coinbase Tokenized Stock)",
+    "symbol": "ULC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179463/thumb/ULc-icon-200.png?1791884721"
+  },
+  "Nokia Corporation (Coinbase Tokenized Stock)::NOKC": {
+    "id": "Nokia Corporation (Coinbase Tokenized Stock)::NOKC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Nokia Corporation (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000005ac674f707e357409c",
+        "symbol": "NOKC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179462/thumb/NOKc-icon-200.png?1791884719",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Nokia Corporation (Coinbase Tokenized Stock)",
+    "symbol": "NOKC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179462/thumb/NOKc-icon-200.png?1791884719"
+  },
+  "Infosys Limited (Coinbase Tokenized Stock)::INFYC": {
+    "id": "Infosys Limited (Coinbase Tokenized Stock)::INFYC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Infosys Limited (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000f6b0417af5f52341fc",
+        "symbol": "INFYC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179460/thumb/INFYc-icon-200.png?1791884713",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Infosys Limited (Coinbase Tokenized Stock)",
+    "symbol": "INFYC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179460/thumb/INFYc-icon-200.png?1791884713"
+  },
+  "Arm Holdings plc (Coinbase Tokenized Stock)::ARMC": {
+    "id": "Arm Holdings plc (Coinbase Tokenized Stock)::ARMC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Arm Holdings plc (Coinbase Tokenized Stock)",
+        "address": "0xb20000000000000000000026215d755356e5043f",
+        "symbol": "ARMC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179456/thumb/ARMc-icon-200.png?1791884689",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Arm Holdings plc (Coinbase Tokenized Stock)",
+    "symbol": "ARMC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179456/thumb/ARMc-icon-200.png?1791884689"
+  },
+  "Banco Santander, S.A. (Coinbase Tokenized Stock)::SANC": {
+    "id": "Banco Santander, S.A. (Coinbase Tokenized Stock)::SANC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Banco Santander, S.A. (Coinbase Tokenized Stock)",
+        "address": "0xb20000000000000000000017bb66e9301e913a99",
+        "symbol": "SANC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179457/thumb/SANc-icon-200.png?1791884704",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "Banco Santander, S.A. (Coinbase Tokenized Stock)",
+    "symbol": "SANC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179457/thumb/SANc-icon-200.png?1791884704"
+  },
+  "WeRide Inc. (Coinbase Tokenized Stock)::WRDC": {
+    "id": "WeRide Inc. (Coinbase Tokenized Stock)::WRDC",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "WeRide Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000e88efe88d8ade3f0da",
+        "symbol": "WRDC",
+        "chainId": "8453",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179464/thumb/WRDc-icon-200.png?1791884725",
+        "props": {
+          "rwa": { "type": "equity", "subType": "stock", "issuer": "coinbase" }
+        }
+      }
+    ],
+    "name": "WeRide Inc. (Coinbase Tokenized Stock)",
+    "symbol": "WRDC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179464/thumb/WRDc-icon-200.png?1791884725"
   },
   "Hyperstable XAUT0/USH::XAUT0/USH": {
     "id": "Hyperstable XAUT0/USH::XAUT0/USH",
@@ -223108,7 +223985,7 @@
         "logoURI": "https://static.debank.com/image/corn_token/logo_url/0xecac9c5f704e954931349da37f60e39f515c11c1/fb1b1e3acbf982e46618edc9e4fa09b7.png",
         "props": {
           "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
-          "risk": { "score": 4, "source": "issuer_inherit" },
+          "risk": { "score": 2, "source": "issuer_inherit" },
           "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
         }
       },
@@ -228584,7 +229461,6 @@
                 "oapp": "swell-network",
                 "approvalRequired": true,
                 "peers": {
-                  "56": "0x963132a22e8dd516ec65c2fad3a17f280c27de2d",
                   "8453": "0x850cdf416668210ed0c36bfff5d21921c7ada3b8",
                   "42161": "0xb1fe27b32ffb5ce54e272c096547f1e86c19e72f",
                   "48900": "0xd8b29106d4cebad087c30b10c0e41baa3a9ea703",
@@ -286250,7 +287126,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/5164/thumb/EURS_300x300.png?1696505680",
         "props": {
           "risk": {
-            "score": 2,
+            "score": 3,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -286267,7 +287143,7 @@
         "logoURI": "https://raw.githubusercontent.com/pro100skm/xdc-token-list/master/assets/0x1eBb2C8a71A9ec59bF558886a8Adf8F4a565814F/logo.png",
         "props": {
           "risk": {
-            "score": 2,
+            "score": 3,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -286284,7 +287160,7 @@
         "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/2989.png",
         "props": {
           "risk": {
-            "score": 2,
+            "score": 3,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -286302,7 +287178,7 @@
         "props": {
           "permit": { "type": 1, "version": "1" },
           "risk": {
-            "score": 2,
+            "score": 3,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -296303,7 +297179,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/14114/thumb/Alchemix_USD.png?1696513835",
         "props": {
           "risk": {
-            "score": 4,
+            "score": 3,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -362562,7 +363438,7 @@
         "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/USDa.webp",
         "props": {
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "YIELD_STABLE",
             "source": "issuer_inherit"
           },
@@ -366043,7 +366919,11 @@
         "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
         "props": {
           "permit": { "type": 1, "version": "1" },
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366061,7 +366941,11 @@
         "logoURI": "https://tokens.debridge.finance/Logo/10/0x59d9356e565ab3a36dd77763fc0d87feaf85508c/small/token-logo.png",
         "props": {
           "permit": { "type": 1, "version": "1" },
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366078,7 +366962,11 @@
         "chainId": "100",
         "logoURI": "https://tokens-data.1inch.io/images/100/0x59d9356e565ab3a36dd77763fc0d87feaf85508c_0x872a73a1cc49f0882a3a25674ae49f8cd963821ff12ed543ce8e9e15df0243d0.png",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366095,7 +366983,11 @@
         "chainId": "137",
         "logoURI": "https://tokens.debridge.finance/Logo/137/0x59d9356e565ab3a36dd77763fc0d87feaf85508c/small/token-logo.png",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366112,7 +367004,11 @@
         "chainId": "324",
         "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366129,7 +367025,11 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366146,7 +367046,11 @@
         "chainId": "42161",
         "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -366163,7 +367067,11 @@
         "chainId": "43114",
         "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "mountain",
@@ -367559,9 +368467,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "issuer_inherit"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -367577,9 +368485,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "issuer_inherit"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -367623,9 +368531,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "issuer_inherit"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -369481,7 +370389,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/51821/thumb/USDA.png?1732035172",
         "props": {
           "risk": {
-            "score": 4,
+            "score": 3,
             "category": "YIELD_STABLE",
             "source": "issuer_inherit"
           },
@@ -370450,7 +371358,11 @@
         "chainId": "1",
         "logoURI": "https://assets.coingecko.com/coins/images/53150/thumb/lvlusd-logo.png?1735406507",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "whitelist"
+          },
           "oft": {
             "eid": 30101,
             "routes": [
@@ -377102,7 +378014,7 @@
         "props": {
           "permit": { "type": 1, "version": "1" },
           "risk": {
-            "score": 3,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -387878,9 +388790,9 @@
         "logoURI": "https://assets.coingecko.com/coins/images/54094/thumb/slvlusd.png?1738222536",
         "props": {
           "risk": {
-            "score": 3,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 5,
+            "category": "DISCONTINUED",
+            "source": "savings_inherit"
           },
           "savings": { "underlying": "lvlUSD", "base": "USD" },
           "oft": {
@@ -400606,9 +401518,9 @@
         "logoURI": "https://cdn.morpho.org/assets/logos/yusd.svg",
         "props": {
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "savings": { "underlying": "USDC", "base": "USD" },
           "stablecoin": { "base": "USD" },
@@ -400625,9 +401537,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -400656,9 +401568,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "oft": {
             "eid": 30184,
@@ -400688,9 +401600,9 @@
         "logoURI": "https://cdn.morpho.org/assets/logos/yusd.svg",
         "props": {
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "savings": { "underlying": "USDC", "base": "USD" },
           "stablecoin": { "base": "USD" },
@@ -400707,9 +401619,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "oft": {
             "eid": 30110,
@@ -400740,9 +401652,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -400758,9 +401670,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -400776,9 +401688,9 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -453816,7 +454728,7 @@
         "symbol": "ysyBOLD",
         "chainId": "1",
         "logoURI": "https://cdn.morpho.org/assets/logos/bold.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "Staked yBOLD",
@@ -455842,7 +456754,7 @@
         "symbol": "sUSDp",
         "chainId": "1",
         "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/sUSDp.svg",
-        "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       },
       {
         "decimals": 18,
@@ -456681,7 +457593,7 @@
         "symbol": "yvUSDC-1",
         "chainId": "1",
         "logoURI": "https://cdn.morpho.org/assets/logos/yvusdc-1.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "USDC-1 yVault",
@@ -456697,7 +457609,7 @@
         "address": "0x310b7ea7475a0b449cfd73be81522f1b88efafaa",
         "symbol": "yvUSDT-1",
         "chainId": "1",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "USDT-1 yVault",
@@ -456713,7 +457625,7 @@
         "symbol": "yvUSDS-1",
         "chainId": "1",
         "logoURI": "https://cdn.morpho.org/assets/logos/yvusds-1.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "USDS-1 yVault",
@@ -456730,7 +457642,7 @@
         "symbol": "yvWETH-1",
         "chainId": "1",
         "logoURI": "https://cdn.morpho.org/assets/logos/yvweth-1.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "WETH-1 yVault",
@@ -457991,7 +458903,11 @@
         "logoURI": "https://raw.githubusercontent.com/cowprotocol/token-lists/main/src/public/images/1/0x9cf12ccd6020b6888e4d4c4e4c7aca33c1eb91f8/logo.png",
         "props": {
           "permit": { "type": 1, "version": "1" },
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 2,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": {
             "id": "asymmetry",
@@ -461330,7 +462246,7 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -461348,7 +462264,7 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -461366,7 +462282,7 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -461384,7 +462300,7 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -461402,7 +462318,7 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -462776,9 +463692,9 @@
         "props": {
           "savings": { "underlying": "YUSD", "base": "USD" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 4,
+            "category": "YIELD_STABLE",
+            "source": "savings_inherit"
           },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
@@ -464683,11 +465599,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/37760/thumb/Instagram_post_-_25.png?1715475306",
         "props": {
           "permit": { "type": 1, "version": "1" },
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "oft": {
             "eid": 30101,
             "routes": [
@@ -464721,11 +465633,7 @@
         "chainId": "56",
         "logoURI": "https://assets.coingecko.com/coins/images/37760/thumb/Instagram_post_-_25.png?1715475306",
         "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "oft": {
             "eid": 30102,
             "routes": [
@@ -464760,11 +465668,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/37760/thumb/Instagram_post_-_25.png?1715475306",
         "props": {
           "permit": { "type": 1, "version": "1" },
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "oft": {
             "eid": 30332,
             "routes": [
@@ -464819,11 +465723,7 @@
               }
             ]
           },
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "river", "name": "River", "kind": "protocol" }
         }
@@ -464836,11 +465736,7 @@
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/37760/thumb/Instagram_post_-_25.png?1715475306",
         "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "oft": {
             "eid": 30184,
             "routes": [
@@ -464874,11 +465770,7 @@
         "chainId": "42161",
         "logoURI": "https://assets.coingecko.com/coins/images/37760/thumb/Instagram_post_-_25.png?1715475306",
         "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "oft": {
             "eid": 30110,
             "routes": [
@@ -464914,9 +465806,9 @@
         "props": {
           "permit": { "type": 1, "version": "1" },
           "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
+            "score": 3,
+            "category": "YIELD_STABLE",
+            "source": "whitelist"
           },
           "oft": {
             "eid": 30329,
@@ -464951,11 +465843,7 @@
         "chainId": "60808",
         "logoURI": "https://tokens.debridge.finance/Logo/100000021/0xecf21b335b41f9d5a89f6186a99c19a3c467871f/small/token-logo.png",
         "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "oft": {
             "eid": 30279,
             "routes": [
@@ -468071,7 +468959,7 @@
         "symbol": "sUSDaf",
         "chainId": "1",
         "logoURI": "https://raw.githubusercontent.com/cowprotocol/token-lists/main/src/public/images/1/0x89e93172aef8261db8437b90c3dcb61545a05317/logo.png",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "Savings USDaf",
@@ -472542,6 +473430,11 @@
         "chainId": "5042",
         "logoURI": "https://assets.coingecko.com/coins/images/70846/thumb/world_logos_wars_logo_3.png?1764176749",
         "props": {
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "ARS" },
           "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
         }
@@ -473103,6 +473996,11 @@
         "chainId": "5042",
         "logoURI": "https://assets.coingecko.com/coins/images/70862/thumb/wbrl.png?1764272108",
         "props": {
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "REAL" },
           "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
         }
@@ -473208,6 +474106,11 @@
         "chainId": "5042",
         "logoURI": "https://assets.coingecko.com/coins/images/70880/thumb/wmxn_logo_1.png?1764392404",
         "props": {
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "MXN" },
           "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
         }
@@ -473313,6 +474216,11 @@
         "chainId": "5042",
         "logoURI": "https://assets.coingecko.com/coins/images/70887/thumb/wcop_logo_1.png?1764394538",
         "props": {
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "COP" },
           "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
         }
@@ -473801,6 +474709,11 @@
         "chainId": "5042",
         "logoURI": "https://assets.coingecko.com/coins/images/70975/thumb/wpen_logo_1.png?1764954695",
         "props": {
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "PEN" },
           "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
         }
@@ -473906,6 +474819,11 @@
         "chainId": "5042",
         "logoURI": "https://assets.coingecko.com/coins/images/70976/thumb/wclp_logo_1.png?1764954870",
         "props": {
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "CLP" },
           "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
         }
@@ -479255,7 +480173,8 @@
         "name": "Yearn BOLD",
         "address": "0x9f4330700a36b29952869fac9b33f45eedd8a3d8",
         "symbol": "yBOLD",
-        "chainId": "1"
+        "chainId": "1",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "Yearn BOLD",
@@ -480785,7 +481704,7 @@
         "address": "0x4ce9c93513dff543bc392870d57df8c04e89ba0a",
         "symbol": "ysUSDS",
         "chainId": "1",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "Sky Rewards USDS Compounder",
@@ -486376,7 +487295,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/102173681/thumb/USDSM-logo-2.png?1780931561",
         "props": {
           "risk": {
-            "score": 1,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -486397,7 +487316,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/102173681/thumb/USDSM-logo-2.png?1780931561",
         "props": {
           "risk": {
-            "score": 1,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -486418,7 +487337,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/102173681/thumb/USDSM-logo-2.png?1780931561",
         "props": {
           "risk": {
-            "score": 1,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -487053,6 +487972,17 @@
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
         }
+      },
+      {
+        "decimals": 18,
+        "name": "trUSD",
+        "address": "0x3816102cdaff06e2a5a362ca7f767ccfd2337003",
+        "symbol": "trUSD",
+        "chainId": "1672",
+        "props": {
+          "stablecoin": { "base": "USD" },
+          "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
+        }
       }
     ],
     "name": "Tori trUSD",
@@ -487089,8 +488019,8 @@
         "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/strUSD/logo.svg",
         "props": {
           "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
-          "stablecoin": { "base": "USD" },
           "savings": { "underlying": "trUSD", "base": "USD" },
+          "stablecoin": { "base": "USD" },
           "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
         }
       },
@@ -487101,8 +488031,8 @@
         "symbol": "strUSD",
         "chainId": "1672",
         "props": {
-          "stablecoin": { "base": "USD" },
           "savings": { "underlying": "trUSD", "base": "USD" },
+          "stablecoin": { "base": "USD" },
           "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
         }
       }
@@ -487203,7 +488133,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/102174221/thumb/AUTO_200x200_%281%29.png?1782569824",
         "props": {
           "savings": { "underlying": "wYLDS", "base": "USD" },
-          "risk": { "score": 4, "source": "default" },
+          "risk": { "score": 2, "source": "vault_inherit" },
           "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
         }
       }
@@ -488190,7 +489120,11 @@
         "chainId": "1",
         "logoURI": "https://assets.coingecko.com/coins/images/71665/thumb/_KRW1_Logo_v1.1-01.png?1768820330",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 5,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "KRW" },
           "issuer": { "id": "bdacs", "name": "BDACS", "kind": "institution" }
         }
@@ -497215,7 +498149,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/102172413/thumb/UUSD.png?1773390929",
         "props": {
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -497278,7 +498212,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/102172413/thumb/UUSD.png?1773390929",
         "props": {
           "risk": {
-            "score": 4,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -498637,7 +499571,8 @@
         "name": "Staked Lista XAUE",
         "address": "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624",
         "symbol": "slisXAUE",
-        "chainId": "1"
+        "chainId": "1",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "Staked Lista XAUE",
@@ -498854,6 +499789,78 @@
     ],
     "name": "USDS & USDT-SmartLP",
     "symbol": "USDS & USDT-SmartLP"
+  },
+  "DOGEBALL::DOGEBALL": {
+    "id": "DOGEBALL::DOGEBALL",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "DOGEBALL",
+        "address": "0xba41ff65fd0a19aa75dd4e6a04e9d3c15acab887",
+        "symbol": "DOGEBALL",
+        "chainId": "1",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179475/thumb/GIv8LZTJ_400x400.jpg?1791902036"
+      }
+    ],
+    "name": "DOGEBALL",
+    "symbol": "DOGEBALL",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179475/thumb/GIv8LZTJ_400x400.jpg?1791902036"
+  },
+  "Wrapped Compound USDT::WCUSDTV3": {
+    "id": "Wrapped Compound USDT::WCUSDTV3",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Wrapped Compound USDT",
+        "address": "0xd7c9f42a35c8d13b71d4c0b024ae9eb0e77b9cff",
+        "symbol": "WCUSDTV3",
+        "chainId": "1",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179466/thumb/compoundcUSDT_32.png.webp?1791890085"
+      }
+    ],
+    "name": "Wrapped Compound USDT",
+    "symbol": "WCUSDTV3",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179466/thumb/compoundcUSDT_32.png.webp?1791890085"
+  },
+  "Wrapped Compound Institutional USDC::WCIUSDCV3": {
+    "id": "Wrapped Compound Institutional USDC::WCIUSDCV3",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Wrapped Compound Institutional USDC",
+        "address": "0xc7eb9aa5b9ae154c1bab08872e90fc44e522e463",
+        "symbol": "WCIUSDCV3",
+        "chainId": "1",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179467/thumb/Compound_USDC.webp?1791890162"
+      }
+    ],
+    "name": "Wrapped Compound Institutional USDC",
+    "symbol": "WCIUSDCV3",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179467/thumb/Compound_USDC.webp?1791890162"
+  },
+  "Incentiv::CENT": {
+    "id": "Incentiv::CENT",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Incentiv",
+        "address": "0xbbde7efb7a1ab3ed9122a14b33dc5c07d982367e",
+        "symbol": "CENT",
+        "chainId": "1",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945"
+      },
+      {
+        "decimals": 18,
+        "name": "Incentiv",
+        "address": "0x1e9a8531548aed9b7fb83e80ef66422d182998c3",
+        "symbol": "CENT",
+        "chainId": "56",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945"
+      }
+    ],
+    "name": "Incentiv",
+    "symbol": "CENT",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945"
   },
   "OP": {
     "id": "OP",
@@ -512691,6 +513698,54 @@
     "symbol": "ULTON",
     "logoURI": "https://vvs-ui.vvs.finance/1864981ec0bdcd0be50d7895ac8d8774889e0d2830a8295ab9210051e6496aac.svg"
   },
+  "crojak::CROJAK": {
+    "id": "crojak::CROJAK",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "crojak",
+        "address": "0xd066455ee8855aaf285824844138c89b7d899b9d",
+        "symbol": "CROJAK",
+        "chainId": "25",
+        "logoURI": "https://vvs-ui.vvs.finance/46d33a51a22610a8dbe63804dceeca1078e59aeb446df43914098010de5250e5.svg"
+      }
+    ],
+    "name": "crojak",
+    "symbol": "CROJAK",
+    "logoURI": "https://vvs-ui.vvs.finance/46d33a51a22610a8dbe63804dceeca1078e59aeb446df43914098010de5250e5.svg"
+  },
+  "Bult::BULT": {
+    "id": "Bult::BULT",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Bult",
+        "address": "0x76eb951011792557f32cd4006d381c99ae8778d7",
+        "symbol": "BULT",
+        "chainId": "25",
+        "logoURI": "https://vvs-ui.vvs.finance/5639e0612844b4e8e827cadfbe9c7242dc010b6d140c78cca7c7ded9b9d1fd2e.svg"
+      }
+    ],
+    "name": "Bult",
+    "symbol": "BULT",
+    "logoURI": "https://vvs-ui.vvs.finance/5639e0612844b4e8e827cadfbe9c7242dc010b6d140c78cca7c7ded9b9d1fd2e.svg"
+  },
+  " UltCsilla::Csilla": {
+    "id": " UltCsilla::Csilla",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": " UltCsilla",
+        "address": "0x78078caa52f826848ddc4a6aca2a19765c2a46c8",
+        "symbol": "Csilla",
+        "chainId": "25",
+        "logoURI": "https://vvs-ui.vvs.finance/e7a3e127bec19a2b112726e42734c8bb8ea7ecc7434f6d1c8aea279d68902fdd.svg"
+      }
+    ],
+    "name": " UltCsilla",
+    "symbol": "Csilla",
+    "logoURI": "https://vvs-ui.vvs.finance/e7a3e127bec19a2b112726e42734c8bb8ea7ecc7434f6d1c8aea279d68902fdd.svg"
+  },
   "RIFPro::RIFP": {
     "id": "RIFPro::RIFP",
     "currencies": [
@@ -515051,7 +516106,7 @@
         "chainId": "56",
         "props": {
           "savings": { "underlying": "USDT", "base": "USD" },
-          "risk": { "score": 2, "source": "vault_inherit" }
+          "risk": { "score": 4, "source": "vault_inherit" }
         }
       }
     ],
@@ -515069,7 +516124,7 @@
         "chainId": "56",
         "props": {
           "savings": { "underlying": "U", "base": "USD" },
-          "risk": { "score": 2, "source": "vault_inherit" }
+          "risk": { "score": 4, "source": "vault_inherit" }
         }
       }
     ],
@@ -515087,7 +516142,7 @@
         "chainId": "56",
         "props": {
           "savings": { "underlying": "BTW" },
-          "risk": { "score": 2, "source": "vault_inherit" }
+          "risk": { "score": 4, "source": "vault_inherit" }
         }
       }
     ],
@@ -515105,7 +516160,7 @@
         "chainId": "56",
         "props": {
           "savings": { "underlying": "USDT", "base": "USD" },
-          "risk": { "score": 2, "source": "vault_inherit" }
+          "risk": { "score": 4, "source": "vault_inherit" }
         }
       }
     ],
@@ -515123,7 +516178,7 @@
         "chainId": "56",
         "props": {
           "savings": { "underlying": "USD1", "base": "USD" },
-          "risk": { "score": 2, "source": "vault_inherit" }
+          "risk": { "score": 4, "source": "vault_inherit" }
         }
       }
     ],
@@ -515141,7 +516196,7 @@
         "chainId": "56",
         "props": {
           "savings": { "underlying": "U", "base": "USD" },
-          "risk": { "score": 2, "source": "vault_inherit" }
+          "risk": { "score": 4, "source": "vault_inherit" }
         }
       }
     ],
@@ -590688,7 +591743,10 @@
         "address": "0x60512aeb641e960faaac7e2bfcb1819f993e7282",
         "symbol": "USDT.Treasury",
         "chainId": "56",
-        "props": { "savings": { "underlying": "USDT", "base": "USD" } }
+        "props": {
+          "savings": { "underlying": "USDT", "base": "USD" },
+          "risk": { "score": 2, "source": "vault_inherit" }
+        }
       }
     ],
     "name": "USDT.Treasury",
@@ -590702,7 +591760,8 @@
         "name": "USDT.AAA",
         "address": "0x82664f43676ffd81be2b472c5a2e2808952ecd56",
         "symbol": "USDT.AAA",
-        "chainId": "56"
+        "chainId": "56",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "USDT.AAA",
@@ -590788,6 +591847,38 @@
     "symbol": "ZKK",
     "logoURI": "https://assets.coingecko.com/coins/images/102179378/thumb/IMG_2535.jpeg?1791650919"
   },
+  "Liminalnet Token::LIM": {
+    "id": "Liminalnet Token::LIM",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Liminalnet Token",
+        "address": "0x1d6430fdfc63ea481fe157017b47530663c96001",
+        "symbol": "LIM",
+        "chainId": "56",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179473/thumb/WhatsApp_Image_2026-10-12_at_7.47.13_PM.jpeg?1791895103"
+      }
+    ],
+    "name": "Liminalnet Token",
+    "symbol": "LIM",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179473/thumb/WhatsApp_Image_2026-10-12_at_7.47.13_PM.jpeg?1791895103"
+  },
+  "蝴蝶勇士::蝴蝶勇士": {
+    "id": "蝴蝶勇士::蝴蝶勇士",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "蝴蝶勇士",
+        "address": "0x3abb4d1f2e15cb49211c033f2876985698807777",
+        "symbol": "蝴蝶勇士",
+        "chainId": "56",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179470/thumb/51222.png?1791893116"
+      }
+    ],
+    "name": "蝴蝶勇士",
+    "symbol": "蝴蝶勇士",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179470/thumb/51222.png?1791893116"
+  },
   "HebeBlock::HEBE": {
     "id": "HebeBlock::HEBE",
     "currencies": [
@@ -590827,7 +591918,11 @@
         "chainId": "137",
         "logoURI": "https://tokens.debridge.finance/Logo/137/0x131409b31bf446737dd04353d43dacada544b6fa/small/token-logo.png",
         "props": {
-          "risk": { "score": 4, "source": "default" },
+          "risk": {
+            "score": 4,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "brale", "name": "Brale", "kind": "institution" }
         }
@@ -612414,7 +613509,8 @@
         "name": "WMATIC yVault-A",
         "address": "0x28f53ba70e5c8ce8d03b1fad41e9df11bb646c36",
         "symbol": "yvWMATIC-A",
-        "chainId": "137"
+        "chainId": "137",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "WMATIC yVault-A",
@@ -612428,7 +613524,8 @@
         "name": "USDC yVault-A",
         "address": "0xa013fbd4b711f9ded6fb09c1c0d358e2fbc2eaa0",
         "symbol": "yvUSDC-A",
-        "chainId": "137"
+        "chainId": "137",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "USDC yVault-A",
@@ -612442,7 +613539,8 @@
         "name": "WETH yVault-A",
         "address": "0x305f25377d0a39091e99b975558b1bdfc3975654",
         "symbol": "yvWETH-A",
-        "chainId": "137"
+        "chainId": "137",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "WETH yVault-A",
@@ -626754,11 +627852,7 @@
         "chainId": "143",
         "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/GBPm/logo.svg",
         "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "stablecoin": { "base": "GBP" },
           "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
         }
@@ -627611,7 +628705,7 @@
         "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/EURm/logo.svg",
         "props": {
           "risk": {
-            "score": 3,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -633504,11 +634598,7 @@
         "chainId": "60808",
         "logoURI": "https://tokens.debridge.finance/Logo/100000021/0x78fea795cbfcc5ffd6fb5b845a4f53d25c283bdb/small/token-logo.png",
         "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
+          "risk": { "score": 4, "source": "default" },
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "river", "name": "River", "kind": "protocol" }
         }
@@ -649333,7 +650423,7 @@
         "props": {
           "permit": { "type": 1, "version": "1" },
           "risk": {
-            "score": 2,
+            "score": 3,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -664646,7 +665736,8 @@
         "name": "SharpByte Pharos Prime",
         "address": "0x697322f0bb715fc1e4c1f1283a9f8e546cb4a342",
         "symbol": "sbPharosPrime",
-        "chainId": "1672"
+        "chainId": "1672",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "SharpByte Pharos Prime",
@@ -666135,6 +667226,35 @@
     ],
     "name": "DLP_2fcc1206",
     "symbol": "DLP"
+  },
+  "AxilPrimeCredit-3M::APC3M::1672::1": {
+    "id": "AxilPrimeCredit-3M::APC3M::1672::1",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "AxilPrimeCredit-3M",
+        "address": "0xec47e6f3ef1e7bc8e00f670ac3d5016798fe44d0",
+        "symbol": "APC3M",
+        "chainId": "1672",
+        "props": { "risk": { "score": 4, "source": "default" } }
+      }
+    ],
+    "name": "AxilPrimeCredit-3M",
+    "symbol": "APC3M"
+  },
+  "ProShares UltraPro QQQ::TQQQs": {
+    "id": "ProShares UltraPro QQQ::TQQQs",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "ProShares UltraPro QQQ",
+        "address": "0xf1098313838bfb0e7aada1e62f147c29bf726aed",
+        "symbol": "TQQQs",
+        "chainId": "1672"
+      }
+    ],
+    "name": "ProShares UltraPro QQQ",
+    "symbol": "TQQQs"
   },
   "Reya USD::rUSD": {
     "id": "Reya USD::rUSD",
@@ -687090,6 +688210,38 @@
     "symbol": "OVO",
     "logoURI": "https://assets.coingecko.com/coins/images/102179371/thumb/fuov5aptcojyoww6o16w751knt3u.?1791613816"
   },
+  "NockAI::NOCKAI": {
+    "id": "NockAI::NOCKAI",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "NockAI",
+        "address": "0xb0f444a069d9264017610e0674ebf7e1d6e19cbb",
+        "symbol": "NOCKAI",
+        "chainId": "4663",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179481/thumb/g9snkpuvtt76y7atqaqgq7aaj46e.?1791903940"
+      }
+    ],
+    "name": "NockAI",
+    "symbol": "NOCKAI",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179481/thumb/g9snkpuvtt76y7atqaqgq7aaj46e.?1791903940"
+  },
+  "CompanyMD::COMD": {
+    "id": "CompanyMD::COMD",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "CompanyMD",
+        "address": "0xbfdac6235dbe77c0cd6edb01c810c7da858c6c41",
+        "symbol": "COMD",
+        "chainId": "4663",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179468/thumb/logo-mark-padded-black-2000.png?1791892149"
+      }
+    ],
+    "name": "CompanyMD",
+    "symbol": "COMD",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179468/thumb/logo-mark-padded-black-2000.png?1791892149"
+  },
   "ioTube Bridged GEOD::GEOD": {
     "id": "ioTube Bridged GEOD::GEOD",
     "currencies": [
@@ -707015,9 +708167,9 @@
             "maturity": 1791849608
           },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "PRINCIPAL_TOKEN",
-            "source": "vault_inherit"
+            "source": "default"
           },
           "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
         }
@@ -712908,7 +714060,7 @@
         "symbol": "MWEURC",
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/52386/thumb/Untitled_design_%281%29.png?1733265573",
-        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+        "props": { "risk": { "score": 4, "source": "vault_inherit" } }
       }
     ],
     "name": "Moonwell Flagship EURC  Morpho Vault",
@@ -741039,7 +742191,7 @@
         "symbol": "steakUSDC",
         "chainId": "8453",
         "logoURI": "https://cdn.morpho.org/assets/logos/steakusdc.svg",
-        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+        "props": { "risk": { "score": 4, "source": "vault_inherit" } }
       }
     ],
     "name": "Steakhouse Prime USDC",
@@ -755209,38 +756361,6 @@
     "symbol": "SCAI",
     "logoURI": "https://assets.coingecko.com/coins/images/55524/thumb/SecureChainAI.jpg?1746500907"
   },
-  "Sweetgreen, Inc. (Coinbase Tokenized Stock)::SGC": {
-    "id": "Sweetgreen, Inc. (Coinbase Tokenized Stock)::SGC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Sweetgreen, Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000b57f99acec3a7490d0",
-        "symbol": "SGC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179422/thumb/SGc-icon-200.png?1791738033"
-      }
-    ],
-    "name": "Sweetgreen, Inc. (Coinbase Tokenized Stock)",
-    "symbol": "SGC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179422/thumb/SGc-icon-200.png?1791738033"
-  },
-  "PDD Holdings Inc. (Coinbase Tokenized Stock)::PDDC": {
-    "id": "PDD Holdings Inc. (Coinbase Tokenized Stock)::PDDC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "PDD Holdings Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000c8a7223510467d8563",
-        "symbol": "PDDC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179413/thumb/PDDc-icon-200.png?1791736627"
-      }
-    ],
-    "name": "PDD Holdings Inc. (Coinbase Tokenized Stock)",
-    "symbol": "PDDC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179413/thumb/PDDc-icon-200.png?1791736627"
-  },
   "GachaPad::GACHA": {
     "id": "GachaPad::GACHA",
     "currencies": [
@@ -755257,294 +756377,6 @@
     "symbol": "GACHA",
     "logoURI": "https://assets.coingecko.com/coins/images/102179387/thumb/gacha-token-icon-transparent-200.png?1791654783"
   },
-  "NIO Inc. (Coinbase Tokenized Stock)::NIOC": {
-    "id": "NIO Inc. (Coinbase Tokenized Stock)::NIOC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "NIO Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000002d2b5dc53c61f1ba06",
-        "symbol": "NIOC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179411/thumb/NIOc-icon-200.png?1791736415"
-      }
-    ],
-    "name": "NIO Inc. (Coinbase Tokenized Stock)",
-    "symbol": "NIOC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179411/thumb/NIOc-icon-200.png?1791736415"
-  },
-  "Novo Nordisk A/S (Coinbase Tokenized Stock)::NVOC": {
-    "id": "Novo Nordisk A/S (Coinbase Tokenized Stock)::NVOC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Novo Nordisk A/S (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000008d5328e9208773dc58",
-        "symbol": "NVOC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179412/thumb/NVOc-icon-200.png?1791736529"
-      }
-    ],
-    "name": "Novo Nordisk A/S (Coinbase Tokenized Stock)",
-    "symbol": "NVOC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179412/thumb/NVOc-icon-200.png?1791736529"
-  },
-  "SAP SE (Coinbase Tokenized Stock)::SAPC": {
-    "id": "SAP SE (Coinbase Tokenized Stock)::SAPC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "SAP SE (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000da6f64c306234127e0",
-        "symbol": "SAPC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179416/thumb/SAPc-icon-200.png?1791737205"
-      }
-    ],
-    "name": "SAP SE (Coinbase Tokenized Stock)",
-    "symbol": "SAPC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179416/thumb/SAPc-icon-200.png?1791737205"
-  },
-  "SK hynix Inc. (Coinbase Tokenized Stock)::SKHYC": {
-    "id": "SK hynix Inc. (Coinbase Tokenized Stock)::SKHYC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "SK hynix Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000187f7071d6e321a7d2",
-        "symbol": "SKHYC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179420/thumb/SKHYc-icon-200_%281%29.png?1791737580"
-      }
-    ],
-    "name": "SK hynix Inc. (Coinbase Tokenized Stock)",
-    "symbol": "SKHYC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179420/thumb/SKHYc-icon-200_%281%29.png?1791737580"
-  },
-  "Rocket Lab Corporation (Coinbase Tokenized Stock)::RKLBC": {
-    "id": "Rocket Lab Corporation (Coinbase Tokenized Stock)::RKLBC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Rocket Lab Corporation (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000e8e50cbbb9a3861a3c",
-        "symbol": "RKLBC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179415/thumb/RKLBc-icon-200.png?1791736984"
-      }
-    ],
-    "name": "Rocket Lab Corporation (Coinbase Tokenized Stock)",
-    "symbol": "RKLBC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179415/thumb/RKLBc-icon-200.png?1791736984"
-  },
-  "Carvana Co. (Coinbase Tokenized Stock)::CVNAC": {
-    "id": "Carvana Co. (Coinbase Tokenized Stock)::CVNAC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Carvana Co. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000ffb10718f880a48274",
-        "symbol": "CVNAC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179408/thumb/CVNAc-icon-200.png?1791735924"
-      }
-    ],
-    "name": "Carvana Co. (Coinbase Tokenized Stock)",
-    "symbol": "CVNAC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179408/thumb/CVNAc-icon-200.png?1791735924"
-  },
-  "Gemini Space Station, Inc. (Coinbase Tokenized Stock)::GEMIC": {
-    "id": "Gemini Space Station, Inc. (Coinbase Tokenized Stock)::GEMIC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Gemini Space Station, Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000009c52748e1d1cbd5fd6",
-        "symbol": "GEMIC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179409/thumb/GEMIc-icon-200.png?1791736129"
-      }
-    ],
-    "name": "Gemini Space Station, Inc. (Coinbase Tokenized Stock)",
-    "symbol": "GEMIC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179409/thumb/GEMIc-icon-200.png?1791736129"
-  },
-  "Sony Group Corporation (Coinbase Tokenized Stock)::SONYC": {
-    "id": "Sony Group Corporation (Coinbase Tokenized Stock)::SONYC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Sony Group Corporation (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000a26326a922ffa87f6c",
-        "symbol": "SONYC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179421/thumb/SONYc-icon-200.png?1791737658"
-      }
-    ],
-    "name": "Sony Group Corporation (Coinbase Tokenized Stock)",
-    "symbol": "SONYC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179421/thumb/SONYc-icon-200.png?1791737658"
-  },
-  "Sea Limited (Coinbase Tokenized Stock)::SEC": {
-    "id": "Sea Limited (Coinbase Tokenized Stock)::SEC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Sea Limited (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000003088798f6d0722aaac",
-        "symbol": "SEC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179417/thumb/SEc-icon-200.png?1791737292"
-      }
-    ],
-    "name": "Sea Limited (Coinbase Tokenized Stock)",
-    "symbol": "SEC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179417/thumb/SEc-icon-200.png?1791737292"
-  },
-  "ServiceNow, Inc. (Coinbase Tokenized Stock)::NOWC": {
-    "id": "ServiceNow, Inc. (Coinbase Tokenized Stock)::NOWC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "ServiceNow, Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb20000000000000000000082cd2c7801305808df",
-        "symbol": "NOWC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179418/thumb/NOWc-icon-200.png?1791737404"
-      }
-    ],
-    "name": "ServiceNow, Inc. (Coinbase Tokenized Stock)",
-    "symbol": "NOWC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179418/thumb/NOWc-icon-200.png?1791737404"
-  },
-  "Vale S.A. (Coinbase Tokenized Stock)::VALEC": {
-    "id": "Vale S.A. (Coinbase Tokenized Stock)::VALEC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Vale S.A. (Coinbase Tokenized Stock)",
-        "address": "0xb20000000000000000000063376b142c0764b489",
-        "symbol": "VALEC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179424/thumb/VALEc-icon-200.png?1791738152"
-      }
-    ],
-    "name": "Vale S.A. (Coinbase Tokenized Stock)",
-    "symbol": "VALEC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179424/thumb/VALEc-icon-200.png?1791738152"
-  },
-  "Walmart Inc. (Coinbase Tokenized Stock)::WMTC": {
-    "id": "Walmart Inc. (Coinbase Tokenized Stock)::WMTC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Walmart Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000008a7508619c717a7106",
-        "symbol": "WMTC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179425/thumb/WMTc-icon-200.png?1791738156"
-      }
-    ],
-    "name": "Walmart Inc. (Coinbase Tokenized Stock)",
-    "symbol": "WMTC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179425/thumb/WMTc-icon-200.png?1791738156"
-  },
-  "SoFi Technologies, Inc. (Coinbase Tokenized Stock)::SOFIC": {
-    "id": "SoFi Technologies, Inc. (Coinbase Tokenized Stock)::SOFIC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "SoFi Technologies, Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000003ef37a7c863dc1482a",
-        "symbol": "SOFIC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179419/thumb/SOFIc-icon-200.png?1791737478"
-      }
-    ],
-    "name": "SoFi Technologies, Inc. (Coinbase Tokenized Stock)",
-    "symbol": "SOFIC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179419/thumb/SOFIc-icon-200.png?1791737478"
-  },
-  "Baidu, Inc. (Coinbase Tokenized Stock)::BIDUC": {
-    "id": "Baidu, Inc. (Coinbase Tokenized Stock)::BIDUC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Baidu, Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000d2b7d9aee52f6c6bef",
-        "symbol": "BIDUC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179407/thumb/BIDUc-icon-200.png?1791735788"
-      }
-    ],
-    "name": "Baidu, Inc. (Coinbase Tokenized Stock)",
-    "symbol": "BIDUC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179407/thumb/BIDUc-icon-200.png?1791735788"
-  },
-  "Redwire Corporation (Coinbase Tokenized Stock)::RDWC": {
-    "id": "Redwire Corporation (Coinbase Tokenized Stock)::RDWC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Redwire Corporation (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000cd7dfaef0423f1f103",
-        "symbol": "RDWC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179414/thumb/RDWc-icon-200.png?1791736883"
-      }
-    ],
-    "name": "Redwire Corporation (Coinbase Tokenized Stock)",
-    "symbol": "RDWC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179414/thumb/RDWc-icon-200.png?1791736883"
-  },
-  "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)::BUDC": {
-    "id": "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)::BUDC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000c36ce081dd09e86ca2",
-        "symbol": "BUDC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179388/thumb/BUDc-icon-200.png?1791655282"
-      }
-    ],
-    "name": "Anheuser-Busch InBev SA/NV (Coinbase Tokenized Stock)",
-    "symbol": "BUDC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179388/thumb/BUDc-icon-200.png?1791655282"
-  },
-  "Unity Software Inc. (Coinbase Tokenized Stock)::UC": {
-    "id": "Unity Software Inc. (Coinbase Tokenized Stock)::UC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Unity Software Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000902f48cba1f39149f7",
-        "symbol": "UC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179423/thumb/Uc-icon-200.png?1791738054"
-      }
-    ],
-    "name": "Unity Software Inc. (Coinbase Tokenized Stock)",
-    "symbol": "UC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179423/thumb/Uc-icon-200.png?1791738054"
-  },
-  "Monster Beverage Corporation (Coinbase Tokenized Stock)::MNSTC": {
-    "id": "Monster Beverage Corporation (Coinbase Tokenized Stock)::MNSTC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Monster Beverage Corporation (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000005bcde0a6926919fef9",
-        "symbol": "MNSTC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179410/thumb/MNSTc-icon-200.png?1791736194"
-      }
-    ],
-    "name": "Monster Beverage Corporation (Coinbase Tokenized Stock)",
-    "symbol": "MNSTC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179410/thumb/MNSTc-icon-200.png?1791736194"
-  },
   "KGeN::KGEN": {
     "id": "KGeN::KGEN",
     "currencies": [
@@ -755560,150 +756392,6 @@
     "name": "KGeN",
     "symbol": "KGEN",
     "logoURI": "https://assets.coingecko.com/coins/images/69816/thumb/kgen.png?1759733785"
-  },
-  "Bilibili Inc. (Coinbase Tokenized Stock)::BILIC": {
-    "id": "Bilibili Inc. (Coinbase Tokenized Stock)::BILIC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Bilibili Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000ca7c6d1438e7245eb6",
-        "symbol": "BILIC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179458/thumb/BILIc-icon-200.png?1791884707"
-      }
-    ],
-    "name": "Bilibili Inc. (Coinbase Tokenized Stock)",
-    "symbol": "BILIC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179458/thumb/BILIc-icon-200.png?1791884707"
-  },
-  "Hesai Group (Coinbase Tokenized Stock)::HSAIC": {
-    "id": "Hesai Group (Coinbase Tokenized Stock)::HSAIC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Hesai Group (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000f3049f4aa834b23b64",
-        "symbol": "HSAIC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179459/thumb/HSAIc-icon-200.png?1791884710"
-      }
-    ],
-    "name": "Hesai Group (Coinbase Tokenized Stock)",
-    "symbol": "HSAIC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179459/thumb/HSAIc-icon-200.png?1791884710"
-  },
-  "Li Auto Inc. (Coinbase Tokenized Stock)::LIC": {
-    "id": "Li Auto Inc. (Coinbase Tokenized Stock)::LIC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Li Auto Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000d61efd9f54a23ef9eb",
-        "symbol": "LIC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179461/thumb/LIc-icon-200.png?1791884716"
-      }
-    ],
-    "name": "Li Auto Inc. (Coinbase Tokenized Stock)",
-    "symbol": "LIC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179461/thumb/LIc-icon-200.png?1791884716"
-  },
-  "Unilever Plc (Coinbase Tokenized Stock)::ULC": {
-    "id": "Unilever Plc (Coinbase Tokenized Stock)::ULC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Unilever Plc (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000349ef3aa93a0897476",
-        "symbol": "ULC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179463/thumb/ULc-icon-200.png?1791884721"
-      }
-    ],
-    "name": "Unilever Plc (Coinbase Tokenized Stock)",
-    "symbol": "ULC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179463/thumb/ULc-icon-200.png?1791884721"
-  },
-  "Nokia Corporation (Coinbase Tokenized Stock)::NOKC": {
-    "id": "Nokia Corporation (Coinbase Tokenized Stock)::NOKC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Nokia Corporation (Coinbase Tokenized Stock)",
-        "address": "0xb2000000000000000000005ac674f707e357409c",
-        "symbol": "NOKC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179462/thumb/NOKc-icon-200.png?1791884719"
-      }
-    ],
-    "name": "Nokia Corporation (Coinbase Tokenized Stock)",
-    "symbol": "NOKC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179462/thumb/NOKc-icon-200.png?1791884719"
-  },
-  "Infosys Limited (Coinbase Tokenized Stock)::INFYC": {
-    "id": "Infosys Limited (Coinbase Tokenized Stock)::INFYC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Infosys Limited (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000f6b0417af5f52341fc",
-        "symbol": "INFYC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179460/thumb/INFYc-icon-200.png?1791884713"
-      }
-    ],
-    "name": "Infosys Limited (Coinbase Tokenized Stock)",
-    "symbol": "INFYC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179460/thumb/INFYc-icon-200.png?1791884713"
-  },
-  "Arm Holdings plc (Coinbase Tokenized Stock)::ARMC": {
-    "id": "Arm Holdings plc (Coinbase Tokenized Stock)::ARMC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Arm Holdings plc (Coinbase Tokenized Stock)",
-        "address": "0xb20000000000000000000026215d755356e5043f",
-        "symbol": "ARMC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179456/thumb/ARMc-icon-200.png?1791884689"
-      }
-    ],
-    "name": "Arm Holdings plc (Coinbase Tokenized Stock)",
-    "symbol": "ARMC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179456/thumb/ARMc-icon-200.png?1791884689"
-  },
-  "Banco Santander, S.A. (Coinbase Tokenized Stock)::SANC": {
-    "id": "Banco Santander, S.A. (Coinbase Tokenized Stock)::SANC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Banco Santander, S.A. (Coinbase Tokenized Stock)",
-        "address": "0xb20000000000000000000017bb66e9301e913a99",
-        "symbol": "SANC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179457/thumb/SANc-icon-200.png?1791884704"
-      }
-    ],
-    "name": "Banco Santander, S.A. (Coinbase Tokenized Stock)",
-    "symbol": "SANC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179457/thumb/SANc-icon-200.png?1791884704"
-  },
-  "WeRide Inc. (Coinbase Tokenized Stock)::WRDC": {
-    "id": "WeRide Inc. (Coinbase Tokenized Stock)::WRDC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "WeRide Inc. (Coinbase Tokenized Stock)",
-        "address": "0xb200000000000000000000e88efe88d8ade3f0da",
-        "symbol": "WRDC",
-        "chainId": "8453",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179464/thumb/WRDc-icon-200.png?1791884725"
-      }
-    ],
-    "name": "WeRide Inc. (Coinbase Tokenized Stock)",
-    "symbol": "WRDC",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179464/thumb/WRDc-icon-200.png?1791884725"
   },
   "Iota Velocimeter::IVM": {
     "id": "Iota Velocimeter::IVM",
@@ -756344,7 +757032,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/68253/thumb/vyUSD_image.png?1755201198",
         "props": {
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -756363,7 +757051,7 @@
         "props": {
           "savings": { "underlying": "USDC", "base": "USD" },
           "risk": {
-            "score": 2,
+            "score": 4,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -774368,7 +775056,7 @@
         "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/USND.png",
         "props": {
           "risk": {
-            "score": 3,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           },
@@ -775024,7 +775712,7 @@
         "symbol": "yUSND",
         "chainId": "42161",
         "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x252b965400862d94bda35fecf7ee0f204a53cc36.png",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "Yearn USND",
@@ -797144,7 +797832,7 @@
         "logoURI": "https://assets.coingecko.com/coins/images/16756/thumb/CEUR.png?1696516329",
         "props": {
           "risk": {
-            "score": 3,
+            "score": 2,
             "category": "STABLECOIN",
             "source": "stablecoin"
           }
@@ -797907,13 +798595,7 @@
         "symbol": "cGBP",
         "chainId": "42220",
         "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xccf663b1ff11028f0b19058d0f7b674004a40746.png",
-        "props": {
-          "risk": {
-            "score": 2,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          }
-        }
+        "props": { "risk": { "score": 4, "source": "default" } }
       }
     ],
     "name": "Celo British Pound",
@@ -812767,7 +813449,7 @@
         "symbol": "yvvbUSDC",
         "chainId": "747474",
         "logoURI": "https://cdn.morpho.org/assets/logos/yvvbusdc.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "vbUSDC yVault",
@@ -812784,7 +813466,7 @@
         "symbol": "yvvbUSDT",
         "chainId": "747474",
         "logoURI": "https://cdn.morpho.org/assets/logos/yvvbusdt.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
       }
     ],
     "name": "vbUSDT yVault",
@@ -812820,7 +813502,7 @@
         "symbol": "yvvbWBTC",
         "chainId": "747474",
         "logoURI": "https://cdn.morpho.org/assets/logos/yvvbwbtc.svg",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": { "risk": { "score": 3, "source": "vault_inherit" } }
       }
     ],
     "name": "vbWBTC yVault",
@@ -827946,82 +828628,37 @@
     "symbol": "stFUEL",
     "logoURI": "https://www.microchain.systems/images/stfuel.svg"
   },
-  "AxilPrimeCredit-3M::APC3M::1672::1": {
-    "id": "AxilPrimeCredit-3M::APC3M::1672::1",
+  "CROCRO::crocro": {
+    "id": "CROCRO::crocro",
     "currencies": [
       {
         "decimals": 18,
-        "name": "AxilPrimeCredit-3M",
-        "address": "0xec47e6f3ef1e7bc8e00f670ac3d5016798fe44d0",
-        "symbol": "APC3M",
-        "chainId": "1672",
-        "props": { "risk": { "score": 4, "source": "default" } }
-      }
-    ],
-    "name": "AxilPrimeCredit-3M",
-    "symbol": "APC3M"
-  },
-  "ProShares UltraPro QQQ::TQQQs": {
-    "id": "ProShares UltraPro QQQ::TQQQs",
-    "currencies": [
-      {
-        "decimals": 18,
-        "name": "ProShares UltraPro QQQ",
-        "address": "0xf1098313838bfb0e7aada1e62f147c29bf726aed",
-        "symbol": "TQQQs",
-        "chainId": "1672"
-      }
-    ],
-    "name": "ProShares UltraPro QQQ",
-    "symbol": "TQQQs"
-  },
-  "crojak::CROJAK": {
-    "id": "crojak::CROJAK",
-    "currencies": [
-      {
-        "decimals": 18,
-        "name": "crojak",
-        "address": "0xd066455ee8855aaf285824844138c89b7d899b9d",
-        "symbol": "CROJAK",
+        "name": "CROCRO",
+        "address": "0x7f3ce346cfab2f472685bcc9990ecb805efdc244",
+        "symbol": "crocro",
         "chainId": "25",
-        "logoURI": "https://vvs-ui.vvs.finance/46d33a51a22610a8dbe63804dceeca1078e59aeb446df43914098010de5250e5.svg"
+        "logoURI": "https://vvs-ui.vvs.finance/1494b44d60b9aa74ec6dc7ada0caf1d1bc65c656a37cb3e22e69a883ba25d74f.svg"
       }
     ],
-    "name": "crojak",
-    "symbol": "CROJAK",
-    "logoURI": "https://vvs-ui.vvs.finance/46d33a51a22610a8dbe63804dceeca1078e59aeb446df43914098010de5250e5.svg"
+    "name": "CROCRO",
+    "symbol": "crocro",
+    "logoURI": "https://vvs-ui.vvs.finance/1494b44d60b9aa74ec6dc7ada0caf1d1bc65c656a37cb3e22e69a883ba25d74f.svg"
   },
-  "Bult::BULT": {
-    "id": "Bult::BULT",
+  "ULTCORN::Ultcorn": {
+    "id": "ULTCORN::Ultcorn",
     "currencies": [
       {
         "decimals": 18,
-        "name": "Bult",
-        "address": "0x76eb951011792557f32cd4006d381c99ae8778d7",
-        "symbol": "BULT",
+        "name": "ULTCORN",
+        "address": "0x5313a6ba4d67ac4e031d3dc63e37c5f408734a7a",
+        "symbol": "Ultcorn",
         "chainId": "25",
-        "logoURI": "https://vvs-ui.vvs.finance/5639e0612844b4e8e827cadfbe9c7242dc010b6d140c78cca7c7ded9b9d1fd2e.svg"
+        "logoURI": "https://vvs-ui.vvs.finance/e3d0c2c0eda064f1e0a5973d309a25a0005b02f9fc607d0b1c652f9d766097af.svg"
       }
     ],
-    "name": "Bult",
-    "symbol": "BULT",
-    "logoURI": "https://vvs-ui.vvs.finance/5639e0612844b4e8e827cadfbe9c7242dc010b6d140c78cca7c7ded9b9d1fd2e.svg"
-  },
-  " UltCsilla::Csilla": {
-    "id": " UltCsilla::Csilla",
-    "currencies": [
-      {
-        "decimals": 18,
-        "name": " UltCsilla",
-        "address": "0x78078caa52f826848ddc4a6aca2a19765c2a46c8",
-        "symbol": "Csilla",
-        "chainId": "25",
-        "logoURI": "https://vvs-ui.vvs.finance/e7a3e127bec19a2b112726e42734c8bb8ea7ecc7434f6d1c8aea279d68902fdd.svg"
-      }
-    ],
-    "name": " UltCsilla",
-    "symbol": "Csilla",
-    "logoURI": "https://vvs-ui.vvs.finance/e7a3e127bec19a2b112726e42734c8bb8ea7ecc7434f6d1c8aea279d68902fdd.svg"
+    "name": "ULTCORN",
+    "symbol": "Ultcorn",
+    "logoURI": "https://vvs-ui.vvs.finance/e3d0c2c0eda064f1e0a5973d309a25a0005b02f9fc607d0b1c652f9d766097af.svg"
   },
   "DLP_a0b3323b::DLP": {
     "id": "DLP_a0b3323b::DLP",
@@ -828747,140 +829384,278 @@
     "symbol": "WALGO",
     "logoURI": "/images/tokens/algo.svg"
   },
-  "DOGEBALL::DOGEBALL": {
-    "id": "DOGEBALL::DOGEBALL",
+  "Temo::TEMO": {
+    "id": "Temo::TEMO",
     "currencies": [
       {
         "decimals": 18,
-        "name": "DOGEBALL",
-        "address": "0xba41ff65fd0a19aa75dd4e6a04e9d3c15acab887",
-        "symbol": "DOGEBALL",
+        "name": "Temo",
+        "address": "0x4602e48a5b2e53f83b9bacf36249ccd443b3a430",
+        "symbol": "TEMO",
         "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179475/thumb/GIv8LZTJ_400x400.jpg?1791902036"
+        "logoURI": "https://assets.coingecko.com/coins/images/102179482/thumb/logo.jpg?1791932129"
       }
     ],
-    "name": "DOGEBALL",
-    "symbol": "DOGEBALL",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179475/thumb/GIv8LZTJ_400x400.jpg?1791902036"
+    "name": "Temo",
+    "symbol": "TEMO",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179482/thumb/logo.jpg?1791932129"
   },
-  "Wrapped Compound USDT::WCUSDTV3": {
-    "id": "Wrapped Compound USDT::WCUSDTV3",
+  "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON": {
+    "id": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON",
     "currencies": [
       {
         "decimals": 18,
-        "name": "Wrapped Compound USDT",
-        "address": "0xd7c9f42a35c8d13b71d4c0b024ae9eb0e77b9cff",
-        "symbol": "WCUSDTV3",
+        "name": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)",
+        "address": "0x2d8b65306a6c23da6342cb94d4251fb4302a624f",
+        "symbol": "SHVON",
         "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179466/thumb/compoundcUSDT_32.png.webp?1791890085"
-      }
-    ],
-    "name": "Wrapped Compound USDT",
-    "symbol": "WCUSDTV3",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179466/thumb/compoundcUSDT_32.png.webp?1791890085"
-  },
-  "Wrapped Compound Institutional USDC::WCIUSDCV3": {
-    "id": "Wrapped Compound Institutional USDC::WCIUSDCV3",
-    "currencies": [
-      {
-        "decimals": 18,
-        "name": "Wrapped Compound Institutional USDC",
-        "address": "0xc7eb9aa5b9ae154c1bab08872e90fc44e522e463",
-        "symbol": "WCIUSDCV3",
-        "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179467/thumb/Compound_USDC.webp?1791890162"
-      }
-    ],
-    "name": "Wrapped Compound Institutional USDC",
-    "symbol": "WCIUSDCV3",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179467/thumb/Compound_USDC.webp?1791890162"
-  },
-  "Incentiv::CENT": {
-    "id": "Incentiv::CENT",
-    "currencies": [
-      {
-        "decimals": 18,
-        "name": "Incentiv",
-        "address": "0xbbde7efb7a1ab3ed9122a14b33dc5c07d982367e",
-        "symbol": "CENT",
-        "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945"
+        "logoURI": "https://assets.coingecko.com/coins/images/102179484/thumb/SHVON.png?1791952585"
       },
       {
         "decimals": 18,
-        "name": "Incentiv",
-        "address": "0x1e9a8531548aed9b7fb83e80ef66422d182998c3",
-        "symbol": "CENT",
+        "name": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)",
+        "address": "0xd8a7de1c33b59f8b017b0e1e3f64a0450094ef7e",
+        "symbol": "SHVON",
         "chainId": "56",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945"
+        "logoURI": "https://assets.coingecko.com/coins/images/102179484/thumb/SHVON.png?1791952585"
       }
     ],
-    "name": "Incentiv",
-    "symbol": "CENT",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945"
+    "name": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)",
+    "symbol": "SHVON",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179484/thumb/SHVON.png?1791952585"
   },
-  "Liminalnet Token::LIM": {
-    "id": "Liminalnet Token::LIM",
+  "Wrapped SP500 xStock::WSPYX": {
+    "id": "Wrapped SP500 xStock::WSPYX",
     "currencies": [
       {
         "decimals": 18,
-        "name": "Liminalnet Token",
-        "address": "0x1d6430fdfc63ea481fe157017b47530663c96001",
-        "symbol": "LIM",
-        "chainId": "56",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179473/thumb/WhatsApp_Image_2026-10-12_at_7.47.13_PM.jpeg?1791895103"
+        "name": "Wrapped SP500 xStock",
+        "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+        "symbol": "WSPYX",
+        "chainId": "42161",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080"
+      },
+      {
+        "decimals": 18,
+        "name": "Wrapped SP500 xStock",
+        "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+        "symbol": "WSPYX",
+        "chainId": "57073",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080"
+      },
+      {
+        "decimals": 18,
+        "name": "Wrapped SP500 xStock",
+        "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+        "symbol": "WSPYX",
+        "chainId": "196",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080"
+      },
+      {
+        "decimals": 18,
+        "name": "Wrapped SP500 xStock",
+        "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+        "symbol": "WSPYX",
+        "chainId": "999",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080"
       }
     ],
-    "name": "Liminalnet Token",
-    "symbol": "LIM",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179473/thumb/WhatsApp_Image_2026-10-12_at_7.47.13_PM.jpeg?1791895103"
+    "name": "Wrapped SP500 xStock",
+    "symbol": "WSPYX",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080"
   },
-  "蝴蝶勇士::蝴蝶勇士": {
-    "id": "蝴蝶勇士::蝴蝶勇士",
+  "Wrapped Nasdaq xStock::WQQQX": {
+    "id": "Wrapped Nasdaq xStock::WQQQX",
     "currencies": [
       {
         "decimals": 18,
-        "name": "蝴蝶勇士",
-        "address": "0x3abb4d1f2e15cb49211c033f2876985698807777",
-        "symbol": "蝴蝶勇士",
-        "chainId": "56",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179470/thumb/51222.png?1791893116"
+        "name": "Wrapped Nasdaq xStock",
+        "address": "0x4c1ae29c159838fc1b224636e28e086eb69101f7",
+        "symbol": "WQQQX",
+        "chainId": "57073",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179491/thumb/wqqqx.png?1791956037"
       }
     ],
-    "name": "蝴蝶勇士",
-    "symbol": "蝴蝶勇士",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179470/thumb/51222.png?1791893116"
+    "name": "Wrapped Nasdaq xStock",
+    "symbol": "WQQQX",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179491/thumb/wqqqx.png?1791956037"
   },
-  "NockAI::NOCKAI": {
-    "id": "NockAI::NOCKAI",
+  "IGNITION::IGNITION": {
+    "id": "IGNITION::IGNITION",
     "currencies": [
       {
         "decimals": 18,
-        "name": "NockAI",
-        "address": "0xb0f444a069d9264017610e0674ebf7e1d6e19cbb",
-        "symbol": "NOCKAI",
+        "name": "IGNITION",
+        "address": "0x9faf478c3f9b407523a3d12307c0d34739062182",
+        "symbol": "IGNITION",
         "chainId": "4663",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179481/thumb/g9snkpuvtt76y7atqaqgq7aaj46e.?1791903940"
+        "logoURI": "https://assets.coingecko.com/coins/images/102179497/thumb/logo.jpg?1791956378"
       }
     ],
-    "name": "NockAI",
-    "symbol": "NOCKAI",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179481/thumb/g9snkpuvtt76y7atqaqgq7aaj46e.?1791903940"
+    "name": "IGNITION",
+    "symbol": "IGNITION",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179497/thumb/logo.jpg?1791956378"
   },
-  "CompanyMD::COMD": {
-    "id": "CompanyMD::COMD",
+  "Altai the Tiger::ALTAI": {
+    "id": "Altai the Tiger::ALTAI",
     "currencies": [
       {
         "decimals": 18,
-        "name": "CompanyMD",
-        "address": "0xbfdac6235dbe77c0cd6edb01c810c7da858c6c41",
-        "symbol": "COMD",
+        "name": "Altai the Tiger",
+        "address": "0xf7f34c25cee15ea3d26c61fb6141ae90ed50158e",
+        "symbol": "ALTAI",
         "chainId": "4663",
-        "logoURI": "https://assets.coingecko.com/coins/images/102179468/thumb/logo-mark-padded-black-2000.png?1791892149"
+        "logoURI": "https://assets.coingecko.com/coins/images/102179499/thumb/logo.png?1791956512"
       }
     ],
-    "name": "CompanyMD",
-    "symbol": "COMD",
-    "logoURI": "https://assets.coingecko.com/coins/images/102179468/thumb/logo-mark-padded-black-2000.png?1791892149"
+    "name": "Altai the Tiger",
+    "symbol": "ALTAI",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179499/thumb/logo.png?1791956512"
+  },
+  "Gas::GAS": {
+    "id": "Gas::GAS",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Gas",
+        "address": "0x28da843c0223990fb57701319b30804b89eff111",
+        "symbol": "GAS",
+        "chainId": "4663",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179503/thumb/gas-symbol_%282%29.png?1791957507"
+      }
+    ],
+    "name": "Gas",
+    "symbol": "GAS",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179503/thumb/gas-symbol_%282%29.png?1791957507"
+  },
+  "Priors Agents::PRIORS": {
+    "id": "Priors Agents::PRIORS",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Priors Agents",
+        "address": "0xedbf91223639800bcd5756815caf908df3b890be",
+        "symbol": "PRIORS",
+        "chainId": "4663",
+        "logoURI": "https://assets.coingecko.com/coins/images/102178765/thumb/priors.jpg?1790233255"
+      }
+    ],
+    "name": "Priors Agents",
+    "symbol": "PRIORS",
+    "logoURI": "https://assets.coingecko.com/coins/images/102178765/thumb/priors.jpg?1790233255"
+  },
+  "MCAPS::MCAPS": {
+    "id": "MCAPS::MCAPS",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "MCAPS",
+        "address": "0xc97714b727ccfb3d3e4cb2946344351b262f6af9",
+        "symbol": "MCAPS",
+        "chainId": "4663",
+        "logoURI": "https://assets.coingecko.com/coins/images/102179505/thumb/mcaps-coingecko-200x200.webp?1791957620"
+      }
+    ],
+    "name": "MCAPS",
+    "symbol": "MCAPS",
+    "logoURI": "https://assets.coingecko.com/coins/images/102179505/thumb/mcaps-coingecko-200x200.webp?1791957620"
+  },
+  "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)::RXRXc": {
+    "id": "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)::RXRXc",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000501ef81f911eb57656",
+        "symbol": "RXRXc",
+        "chainId": "8453"
+      }
+    ],
+    "name": "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "RXRXc"
+  },
+  "YUM! Brands, Inc. (Coinbase Tokenized Stock)::YUMc": {
+    "id": "YUM! Brands, Inc. (Coinbase Tokenized Stock)::YUMc",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "YUM! Brands, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000005c8324136de0f4134a",
+        "symbol": "YUMc",
+        "chainId": "8453"
+      }
+    ],
+    "name": "YUM! Brands, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "YUMc"
+  },
+  "Chewy, Inc. (Coinbase Tokenized Stock)::CHWYc": {
+    "id": "Chewy, Inc. (Coinbase Tokenized Stock)::CHWYc",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Chewy, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb200000000000000000000a5e12a1842dfcdb118",
+        "symbol": "CHWYc",
+        "chainId": "8453"
+      }
+    ],
+    "name": "Chewy, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "CHWYc"
+  },
+  "Constellation Brands, Inc. (Coinbase Tokenized Stock)::STZc": {
+    "id": "Constellation Brands, Inc. (Coinbase Tokenized Stock)::STZc",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "Constellation Brands, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000001ac12227a8ae0ef3ac",
+        "symbol": "STZc",
+        "chainId": "8453"
+      }
+    ],
+    "name": "Constellation Brands, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "STZc"
+  },
+  "CAVA Group, Inc. (Coinbase Tokenized Stock)::CAVAc": {
+    "id": "CAVA Group, Inc. (Coinbase Tokenized Stock)::CAVAc",
+    "currencies": [
+      {
+        "decimals": 8,
+        "name": "CAVA Group, Inc. (Coinbase Tokenized Stock)",
+        "address": "0xb2000000000000000000001b6e407239eb31edcf",
+        "symbol": "CAVAc",
+        "chainId": "8453"
+      }
+    ],
+    "name": "CAVA Group, Inc. (Coinbase Tokenized Stock)",
+    "symbol": "CAVAc"
+  },
+  "Wrapped TSMC xStock::wTSMx": {
+    "id": "Wrapped TSMC xStock::wTSMx",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Wrapped TSMC xStock",
+        "address": "0x27d62249488fc66ecbb92c8da3f56f700b8e8501",
+        "symbol": "wTSMx",
+        "chainId": "42161"
+      }
+    ],
+    "name": "Wrapped TSMC xStock",
+    "symbol": "wTSMx"
+  },
+  "Wrapped Bitmine xStock::wBMNRx": {
+    "id": "Wrapped Bitmine xStock::wBMNRx",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Wrapped Bitmine xStock",
+        "address": "0xdad5623b32c81aeaa75478fcfe934e9e97018c58",
+        "symbol": "wBMNRx",
+        "chainId": "42161"
+      }
+    ],
+    "name": "Wrapped Bitmine xStock",
+    "symbol": "wBMNRx"
   }
 }

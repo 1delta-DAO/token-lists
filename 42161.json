@@ -29226,7 +29226,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -35346,7 +35346,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -39855,9 +39859,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "oft": {
           "eid": 30110,
@@ -45044,7 +45048,7 @@
       "currencyId": "US Nerite Dollar::USND",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -45587,7 +45591,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -45947,11 +45951,7 @@
       "assetGroup": "Satoshi Stablecoin::SATUSD",
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30110,
           "routes": [
@@ -46129,7 +46129,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x252b965400862d94bda35fecf7ee0f204a53cc36.png",
       "assetGroup": "Yearn USND::yUSND",
       "currencyId": "Yearn USND::yUSND",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xe4783824593a50bfe9dc873204cec171ebc62de0": {
       "chainId": "42161",
@@ -47755,7 +47755,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -61935,6 +61935,46 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179306/thumb/MSFTs.png?1791446566",
       "assetGroup": "Microsoft (Stove Tokenized Stock)::MSFTS",
       "currencyId": "Microsoft (Stove Tokenized Stock)::MSFTS"
+    },
+    "0xe7e553cd128f0011777323a0b44a7b96ea1cb540": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped SP500 xStock",
+      "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+      "symbol": "WSPYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080",
+      "assetGroup": "Wrapped SP500 xStock::WSPYX",
+      "currencyId": "Wrapped SP500 xStock::WSPYX"
+    },
+    "0x27d62249488fc66ecbb92c8da3f56f700b8e8501": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped TSMC xStock",
+      "address": "0x27d62249488fc66ecbb92c8da3f56f700b8e8501",
+      "symbol": "wTSMx",
+      "assetGroup": "Wrapped TSMC xStock::wTSMx",
+      "currencyId": "Wrapped TSMC xStock::wTSMx"
+    },
+    "0xdad5623b32c81aeaa75478fcfe934e9e97018c58": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped Bitmine xStock",
+      "address": "0xdad5623b32c81aeaa75478fcfe934e9e97018c58",
+      "symbol": "wBMNRx",
+      "assetGroup": "Wrapped Bitmine xStock::wBMNRx",
+      "currencyId": "Wrapped Bitmine xStock::wBMNRx"
+    },
+    "0x4c1ae29c159838fc1b224636e28e086eb69101f7": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped Nasdaq xStock",
+      "address": "0x4c1ae29c159838fc1b224636e28e086eb69101f7",
+      "symbol": "wQQQx",
+      "assetGroup": "Wrapped Nasdaq xStock::wQQQx",
+      "currencyId": "Wrapped Nasdaq xStock::wQQQx",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42161",

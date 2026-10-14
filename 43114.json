@@ -8783,7 +8783,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -14674,9 +14678,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -15104,7 +15108,10 @@
       "symbol": "MGLOBAL",
       "logoURI": "https://assets.coingecko.com/coins/images/102172980/thumb/mglobal-Cm4yjVTI.png?1776956923",
       "assetGroup": "Midas Fasanara Global::MGLOBAL",
-      "currencyId": "Midas Fasanara Global::MGLOBAL"
+      "currencyId": "Midas Fasanara Global::MGLOBAL",
+      "props": {
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
     },
     "0x61daeeb998bc5415df8512a4be1b71f4275ef314": {
       "chainId": "43114",
