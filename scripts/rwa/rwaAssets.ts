@@ -256,6 +256,19 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
     },
   },
 
+  // Solon Stocks on Arc: `<TICKER>.sol` tokens, each backed 1:1 by the Robinhood Stock Token of the
+  // same ticker held in Solon's reserve vault on Robinhood Chain (defillama.com/protocol/solon-stocks).
+  // Read 2026-10-15: name() "Solon NVDA", symbol NVDA.sol, 18 decimals; collateral in a Morpho
+  // market against USDC. The `.sol` suffix is Solon's, not Solana's. Issuer is the tokenizer.
+  '5042': {
+    '0x2312290792cf429605d09a42fa43dab810486c18': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'solon',
+      underlying: 'NVDA',
+    },
+  },
+
   // Galaxy Digital Class A shares on Solana, tokenized by Superstate (Opening Bell). Read
   // 2026-10-14: Token-2022 mint, metadata `name` "Galaxy Digital Inc." / `symbol` GLXY, `uri`
   // https://api.superstate.com/v1/instruments/4/solana/token-metadata, default account state

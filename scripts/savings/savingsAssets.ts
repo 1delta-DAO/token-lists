@@ -246,6 +246,10 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Syrup USDC::syrupUSDC': { underlying: 'USDC', base: 'USD' },
   'Syrup USDT::syrupUSDT': { underlying: 'USDT', base: 'USD' },
   'Syrup USDG::syrupUSDG': { underlying: 'USDG', base: 'USD' },
+  // --- Huma PayFi Strategy Token — USDC in, PayFi receivables yield accrues to the share.
+  // Solana's original already reads `savings: {base: USD}` (solanaClassify, from its tags); this
+  // gives its CCIP mirrors on 1 / 5042, one group, the same money. ---
+  'PayFi Strategy Token::PST': { underlying: 'USDC', base: 'USD' },
   // --- Wren wstGBP (over tGBP — GBP-pegged). `underlying` is PINNED because the wrapper
   // exposes no 4626 surface at all (`asset()`/`underlying()`/`token()` all revert), so the
   // on-chain resolver cannot fill it in. The link was verified by backing instead: the wstGBP

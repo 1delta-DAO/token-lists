@@ -1500,6 +1500,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'QCOM',
     },
+    '0x2d8b65306a6c23da6342cb94d4251fb4302a624f': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'SHV' },
     '0x2d9fc6c5dd136658ab6190f356ae3186c4daa7d5': {
       type: 'equity',
       subType: 'stock',
@@ -18706,6 +18707,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'ondo',
       underlying: 'ONDS',
     },
+    '0xd8a7de1c33b59f8b017b0e1e3f64a0450094ef7e': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'SHV' },
     '0xd8b95b1987741849ca7e71e976aeb535fd2e55a2': { type: 'credit', subType: 'treasury', issuer: 'backed' },
     '0xd8cd1c1ff337b2d4dc61b70aa8006e0eba401f58': {
       type: 'equity',
@@ -20839,6 +20841,12 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'ANET',
     },
+    '0x27d62249488fc66ecbb92c8da3f56f700b8e8501': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'TSM',
+    },
     '0x27ff2d53a2d8bc9a28adfa24c9e05c2fd415b7e1': {
       type: 'equity',
       subType: 'stock',
@@ -21360,6 +21368,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'WCC',
     },
+    '0x4c1ae29c159838fc1b224636e28e086eb69101f7': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'QQQ' },
     '0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6': {
       type: 'equity',
       subType: 'stock',
@@ -23852,6 +23861,12 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'CMG',
     },
+    '0xdad5623b32c81aeaa75478fcfe934e9e97018c58': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'BMNR',
+    },
     '0xdb0245163fda906f27dc5813d2d2b51673c33bde': {
       type: 'equity',
       subType: 'stock',
@@ -24080,6 +24095,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'TROW',
     },
+    '0xe7e553cd128f0011777323a0b44a7b96ea1cb540': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SPY' },
     '0xe840946ffebcd66b7c4e95095effafadfa0d0e56': {
       type: 'equity',
       subType: 'stock',
@@ -25753,6 +25769,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'WCC',
     },
+    '0x4c1ae29c159838fc1b224636e28e086eb69101f7': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'QQQ' },
     '0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6': {
       type: 'equity',
       subType: 'stock',
@@ -28488,6 +28505,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'TROW',
     },
+    '0xe7e553cd128f0011777323a0b44a7b96ea1cb540': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SPY' },
     '0xe7e6c5d49ab25913d7352d600eed3c85525c8894': { type: 'fund', subType: 'etf', issuer: 'dinari', underlying: 'GLD' },
     '0xe89de69f13e1e732b26d5dda2c3f32d6011ec387': {
       type: 'equity',
@@ -34871,6 +34889,18 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'coinbase',
       underlying: 'CORZ',
     },
+    '0xb2000000000000000000001ac12227a8ae0ef3ac': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'STZ',
+    },
+    '0xb2000000000000000000001b6e407239eb31edcf': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'CAVA',
+    },
     '0xb2000000000000000000001e800a7f5189430cd0': {
       type: 'equity',
       subType: 'stock',
@@ -35027,6 +35057,12 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'coinbase',
       underlying: 'AXON',
     },
+    '0xb200000000000000000000501ef81f911eb57656': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'RXRX',
+    },
     '0xb200000000000000000000535fe96f18204bfd96': {
       type: 'equity',
       subType: 'stock',
@@ -35068,6 +35104,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'RBLX',
+    },
+    '0xb2000000000000000000005c8324136de0f4134a': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'YUM',
     },
     '0xb2000000000000000000006064f8ec027f042294': {
       type: 'equity',
@@ -35260,6 +35302,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'MARA',
+    },
+    '0xb200000000000000000000a5e12a1842dfcdb118': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'CHWY',
     },
     '0xb200000000000000000000a613d12deafbbb1db7': {
       type: 'equity',
@@ -36846,6 +36894,12 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'CRESM',
     },
+    '0x27d62249488fc66ecbb92c8da3f56f700b8e8501': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'TSM',
+    },
     '0x27ff2d53a2d8bc9a28adfa24c9e05c2fd415b7e1': {
       type: 'equity',
       subType: 'stock',
@@ -37597,6 +37651,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'WCC',
     },
+    '0x4c1ae29c159838fc1b224636e28e086eb69101f7': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'QQQ' },
     '0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6': {
       type: 'equity',
       subType: 'stock',
@@ -41113,6 +41168,12 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'CMG',
     },
+    '0xdad5623b32c81aeaa75478fcfe934e9e97018c58': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'BMNR',
+    },
     '0xdb0245163fda906f27dc5813d2d2b51673c33bde': {
       type: 'equity',
       subType: 'stock',
@@ -41414,6 +41475,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'TROW',
     },
+    '0xe7e553cd128f0011777323a0b44a7b96ea1cb540': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SPY' },
     '0xe89de69f13e1e732b26d5dda2c3f32d6011ec387': {
       type: 'equity',
       subType: 'stock',
@@ -44755,6 +44817,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'WCC',
     },
+    '0x4c1ae29c159838fc1b224636e28e086eb69101f7': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'QQQ' },
     '0x4c543cb8aca9f7eb28f3f3b6796cd2102f6ec0e6': {
       type: 'equity',
       subType: 'stock',
@@ -47435,6 +47498,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'TROW',
     },
+    '0xe7e553cd128f0011777323a0b44a7b96ea1cb540': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SPY' },
     '0xe89de69f13e1e732b26d5dda2c3f32d6011ec387': {
       type: 'equity',
       subType: 'stock',

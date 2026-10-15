@@ -1669,6 +1669,23 @@
         "issuer": { "id": "nest", "name": "Nest", "kind": "institution" }
       }
     },
+    "0x2312290792cf429605d09a42fa43dab810486c18": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Solon NVDA",
+      "address": "0x2312290792cf429605d09a42fa43dab810486c18",
+      "symbol": "NVDA.sol",
+      "assetGroup": "Solon NVDA::NVDA.sol",
+      "currencyId": "Solon NVDA::NVDA.sol",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "solon",
+          "underlying": "NVDA"
+        }
+      }
+    },
     "0x3600000000000000000000000000000000000000": {
       "chainId": "5042",
       "decimals": 6,
@@ -1885,8 +1902,8 @@
       "currencyId": "Circle Wrapped BTC::CIRBTC",
       "props": {
         "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
-        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" },
-        "denomination": "BTC"
+        "denomination": "BTC",
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0xe205b4e7ac03e3f7b2060c3edf2171aa7126c0d5": {
@@ -1910,6 +1927,7 @@
       "currencyId": "PayFi Strategy Token::PST",
       "props": {
         "risk": { "score": 2, "source": "vault_inherit" },
+        "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "huma", "name": "Huma", "kind": "protocol" }
       }
     },
@@ -2687,6 +2705,21 @@
         },
         "stablecoin": { "base": "CLP" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x0dc6b79f3c3854e4d74514fd4d29be6c96beee39": {
+      "chainId": "5042",
+      "decimals": 6,
+      "name": "Syrup USDC",
+      "address": "0x0dc6b79f3c3854e4d74514fd4d29be6c96beee39",
+      "symbol": "syrupUSDC",
+      "assetGroup": "SYRUPUSDC",
+      "currencyId": "Syrup USDC::syrupUSDC",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
     },
     "0x0000000000000000000000000000000000000000": {
