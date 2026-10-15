@@ -6302,7 +6302,8 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
-      "currencyId": "Wrapped SOL (Wormhole)::SOL"
+      "currencyId": "Wrapped SOL (Wormhole)::SOL",
+      "props": { "denomination": "SOL" }
     },
     "0xce1bffbd5374dac86a2893119683f4911a2f7814": {
       "chainId": "43114",
@@ -10124,7 +10125,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -15093,7 +15098,8 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/68694/thumb/solana.jpg?1756285572",
       "assetGroup": "SOL",
-      "currencyId": "Wormhole Bridged SOL::SOL"
+      "currencyId": "Wormhole Bridged SOL::SOL",
+      "props": { "denomination": "SOL" }
     },
     "0x14a84f1a61ccd7d1be596a6cc11fe33a36bc1646": {
       "chainId": "43114",
@@ -16015,9 +16021,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }

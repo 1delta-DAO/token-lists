@@ -66,6 +66,11 @@
           "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
           "ytAddress": "0xddb70adb30e61f6c4d36ce70d5a3e3c13d39136f"
         },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -168,6 +173,7 @@
           "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
           "syAddress": "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
@@ -432,7 +438,7 @@
         "risk": {
           "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -633,7 +639,7 @@
         "risk": {
           "score": 3,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -883,6 +889,7 @@
           "ptAddress": "0xa8c8e7fdf0457442eb19bced060017f6998b250f",
           "syAddress": "0x05938d5d7b7243a27d88b83272ab36f2034168f4"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -929,6 +936,11 @@
           "underlyingAsset": "0x00000000efe302beaa2b3e6e1b18d08d69a9012a",
           "ptAddress": "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57",
           "ytAddress": "0x211edf350b927c6eae808a63d5f6318bac5a7e5e"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -1663,7 +1675,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
       "currencyId": "SOL Wormhole ::SOL",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "denomination": "SOL"
+      }
     },
     "0x754704bc059f8c67012fed69bc8a327a5aafb603": {
       "chainId": "143",
@@ -2848,11 +2863,7 @@
       "assetGroup": "Mento British Pound::GBPm",
       "currencyId": "Mento British Pound::GBPm",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -3579,7 +3590,7 @@
       "currencyId": "Mento Euro::EURm",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },

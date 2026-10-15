@@ -3947,9 +3947,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "issuer_inherit"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -4562,11 +4562,7 @@
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30332,
           "routes": [
@@ -4887,7 +4883,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },

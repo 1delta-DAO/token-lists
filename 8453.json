@@ -11175,9 +11175,9 @@
           "maturity": 1791849608
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "default"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
@@ -17021,7 +17021,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/52386/thumb/Untitled_design_%281%29.png?1733265573",
       "assetGroup": "Moonwell Flagship EURC  Morpho Vault::MWEURC",
       "currencyId": "Moonwell Flagship EURC  Morpho Vault::MWEURC",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x4287105ffac106eb98a71cab46586906181e35ff": {
       "chainId": "8453",
@@ -24805,7 +24805,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -31404,9 +31408,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "oft": {
           "eid": 30184,
@@ -37479,11 +37483,7 @@
       "assetGroup": "Satoshi Stablecoin::SATUSD",
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30184,
           "routes": [
@@ -39954,7 +39954,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -44851,7 +44851,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/steakusdc.svg",
       "assetGroup": "Steakhouse Prime USDC::steakUSDC",
       "currencyId": "Steakhouse Prime USDC::steakUSDC",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x65d88916d9fa10762e62d26592610fe52de31d5a": {
       "chainId": "8453",
@@ -45024,7 +45024,8 @@
       "assetGroup": "SOL",
       "currencyId": "Bridged SOL::SOL",
       "props": {
-        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
+        "denomination": "SOL"
       }
     },
     "0x3ad8539cf0e010c77d276fb197061ac613511cae": {
@@ -54141,7 +54142,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -56641,7 +56642,7 @@
       "currencyId": "Unity USD::UUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -57051,6 +57052,56 @@
       "logoURI": "https://www.ripe.finance/images/redesign/tokens/underscore-aero.png",
       "assetGroup": "Underscore Blue Chip AERO::undyAERO",
       "currencyId": "Underscore Blue Chip AERO::undyAERO"
+    },
+    "0xb2000000000000000000005c8324136de0f4134a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "YUM! Brands, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000005c8324136de0f4134a",
+      "symbol": "YUMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179496/thumb/YUMc-icon-200.png?1791956249",
+      "assetGroup": "YUM! Brands, Inc. (Coinbase Tokenized Stock)::YUMC",
+      "currencyId": "YUM! Brands, Inc. (Coinbase Tokenized Stock)::YUMC"
+    },
+    "0xb200000000000000000000501ef81f911eb57656": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000501ef81f911eb57656",
+      "symbol": "RXRXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179495/thumb/RXRXc-icon-200.png?1791956242",
+      "assetGroup": "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)::RXRXC",
+      "currencyId": "Recursion Pharmaceuticals, Inc. (Coinbase Tokenized Stock)::RXRXC"
+    },
+    "0xb200000000000000000000a5e12a1842dfcdb118": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Chewy, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000a5e12a1842dfcdb118",
+      "symbol": "CHWYC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179493/thumb/CHWYc-icon-200.png?1791956207",
+      "assetGroup": "Chewy, Inc. (Coinbase Tokenized Stock)::CHWYC",
+      "currencyId": "Chewy, Inc. (Coinbase Tokenized Stock)::CHWYC"
+    },
+    "0xb2000000000000000000001ac12227a8ae0ef3ac": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Constellation Brands, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001ac12227a8ae0ef3ac",
+      "symbol": "STZC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179494/thumb/STZc-icon-200.png?1791956237",
+      "assetGroup": "Constellation Brands, Inc. (Coinbase Tokenized Stock)::STZC",
+      "currencyId": "Constellation Brands, Inc. (Coinbase Tokenized Stock)::STZC"
+    },
+    "0xb2000000000000000000001b6e407239eb31edcf": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "CAVA Group, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001b6e407239eb31edcf",
+      "symbol": "CAVAC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179492/thumb/CAVAc-icon-200.png?1791956127",
+      "assetGroup": "CAVA Group, Inc. (Coinbase Tokenized Stock)::CAVAC",
+      "currencyId": "CAVA Group, Inc. (Coinbase Tokenized Stock)::CAVAC"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",

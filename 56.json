@@ -443,7 +443,8 @@
             "chainId": "42161",
             "address": "0xb459db106f645d698e74027eef6019a26a0675cc"
           },
-          "expiry": 1792022400
+          "expiry": 1792022400,
+          "expired": true
         },
         "risk": {
           "score": 4,
@@ -31413,7 +31414,7 @@
       "currencyId": "Bitway Absolute Return USDT::bwUSDT",
       "props": {
         "savings": { "underlying": "USDT", "base": "USD" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0xaa3d2534b4b87a2859e28c223f18265244ffffb7": {
@@ -31426,7 +31427,7 @@
       "currencyId": "Bitway Absolute Return U::bwU",
       "props": {
         "savings": { "underlying": "U", "base": "USD" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0x82356c921422a2202e0f96dfccc352598ca8ef71": {
@@ -31439,7 +31440,7 @@
       "currencyId": "Bitway Absolute Return BTW::bwBTW",
       "props": {
         "savings": { "underlying": "BTW" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0x73af543d809c8d3414e5b92b3aa2c25b182ba3a1": {
@@ -31452,7 +31453,7 @@
       "currencyId": "Bitway Core Alpha USDT::BTWUSDT",
       "props": {
         "savings": { "underlying": "USDT", "base": "USD" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0xb5c3617d4f077851cc6c7fae558d32e9782307f9": {
@@ -31465,7 +31466,7 @@
       "currencyId": "Bitway Core Alpha USD1::BTWUSD1",
       "props": {
         "savings": { "underlying": "USD1", "base": "USD" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0x4effb6bce5cad64d7162c7f7f15f557221b106d5": {
@@ -31478,7 +31479,7 @@
       "currencyId": "Bitway Core Alpha U::BTWU",
       "props": {
         "savings": { "underlying": "U", "base": "USD" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0xafbe3b8b0939a5538de32f7752a78e08c8492295": {
@@ -34217,7 +34218,8 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
-      "currencyId": "Wrapped SOL (Wormhole)::SOL"
+      "currencyId": "Wrapped SOL (Wormhole)::SOL",
+      "props": { "denomination": "SOL" }
     },
     "0x8357c604c5533fa0053beaaa1494da552cea38f7": {
       "chainId": "56",
@@ -38023,7 +38025,8 @@
       "assetGroup": "SOL",
       "currencyId": "SOLANA::SOL",
       "props": {
-        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" }
+        "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
+        "denomination": "SOL"
       }
     },
     "0x6d106c0b8d2f47c5465bdbd58d1be253762cbbc1": {
@@ -71018,11 +71021,7 @@
       "assetGroup": "Satoshi Stablecoin::SATUSD",
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30102,
           "routes": [
@@ -80720,9 +80719,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yieldfi", "name": "YieldFi", "kind": "protocol" }
@@ -93163,7 +93162,10 @@
       "symbol": "USDT.Treasury",
       "assetGroup": "USDT.Treasury::USDT.Treasury",
       "currencyId": "USDT.Treasury::USDT.Treasury",
-      "props": { "savings": { "underlying": "USDT", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "USDT", "base": "USD" },
+        "risk": { "score": 2, "source": "vault_inherit" }
+      }
     },
     "0x82664f43676ffd81be2b472c5a2e2808952ecd56": {
       "chainId": "56",
@@ -93172,7 +93174,8 @@
       "address": "0x82664f43676ffd81be2b472c5a2e2808952ecd56",
       "symbol": "USDT.AAA",
       "assetGroup": "USDT.AAA::USDT.AAA",
-      "currencyId": "USDT.AAA::USDT.AAA"
+      "currencyId": "USDT.AAA::USDT.AAA",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x589f84b19933c1a8edac82a37ed329b327f97777": {
       "chainId": "56",
@@ -93253,6 +93256,46 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945",
       "assetGroup": "Incentiv::CENT",
       "currencyId": "Incentiv::CENT"
+    },
+    "0x5d01b8174a661600cf4f016bea9b073557847777": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "FreeDuck",
+      "address": "0x5d01b8174a661600cf4f016bea9b073557847777",
+      "symbol": "自由鸭",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179525/thumb/free_duck.jpg?1792027997",
+      "assetGroup": "FreeDuck::自由鸭",
+      "currencyId": "FreeDuck::自由鸭"
+    },
+    "0x21cf16b1349038c2103a90d012403865c2667777": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "咩都有",
+      "address": "0x21cf16b1349038c2103a90d012403865c2667777",
+      "symbol": "咩都有",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179510/thumb/mie.webp?1791999644",
+      "assetGroup": "咩都有::咩都有",
+      "currencyId": "咩都有::咩都有"
+    },
+    "0xf46c57c84326240825dbd8cb010dc22e4e2ae97b": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "TipDrop",
+      "address": "0xf46c57c84326240825dbd8cb010dc22e4e2ae97b",
+      "symbol": "TDP",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179507/thumb/tipdrop_400x400.jpg?1791973805",
+      "assetGroup": "TipDrop::TDP",
+      "currencyId": "TipDrop::TDP"
+    },
+    "0xd8a7de1c33b59f8b017b0e1e3f64a0450094ef7e": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)",
+      "address": "0xd8a7de1c33b59f8b017b0e1e3f64a0450094ef7e",
+      "symbol": "SHVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179484/thumb/SHVON.png?1791952585",
+      "assetGroup": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON",
+      "currencyId": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "56",

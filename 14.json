@@ -1013,7 +1013,8 @@
       "currencyId": "Wrapped Flare::WFLR",
       "props": {
         "wnative": true,
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "denomination": "FLR"
       }
     },
     "0xad552a648c74d49e10027ab8a618a3ad4901c5be": {
@@ -1316,18 +1317,22 @@
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "14",
-      "address": "0x0000000000000000000000000000000000000000",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/flr.webp",
-      "currencyId": "Flare::FLR",
-      "name": "Flare",
-      "symbol": "FLR",
       "decimals": 18,
+      "name": "Flare",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "FLR",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/flr.webp",
       "assetGroup": "FLR",
-      "props": { "isNative": true }
+      "currencyId": "Flare::FLR",
+      "props": {
+        "isNative": true,
+        "wrapped": "0x1d80c49bbbcd1c0911346656b529df9e5c2f783d"
+      }
     }
   },
   "mainTokens": [
     "0x0000000000000000000000000000000000000000",
-    "0x0b38e83b86d491735feaa0a791f65c2b99535396"
+    "0x0b38e83b86d491735feaa0a791f65c2b99535396",
+    "0x1d80c49bbbcd1c0911346656b529df9e5c2f783d"
   ]
 }

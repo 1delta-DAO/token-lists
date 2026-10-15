@@ -269,6 +269,11 @@
           "ytAddress": "0x40eb4a62acf1fa0676732b62c4e55548ee7b819f",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -3439,9 +3444,9 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "savings": { "underlying": "USDC", "base": "USD" },
         "stablecoin": { "base": "USD" },
@@ -3566,7 +3571,7 @@
       "currencyId": "YieldFi vyUSD::vyUSD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },

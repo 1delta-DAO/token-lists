@@ -48,6 +48,8 @@ const BTC_GROUPS = [
   'eBTC::EBTC',
   // OKX's 1:1 custodial BTC on X Layer (196 0xb7c0…6b4f); desk okx in issuer.json.
   'OKX Wrapped BTC::xBTC',
+  // Circle's 1:1 custodial BTC on Ethereum (0x72df…075e) and Arc (0x171a…baa0); desk circle.
+  'Circle Wrapped BTC::CIRBTC',
 ] as const
 
 /** assetGroup → denomination, for FXRP — Flare's 1:1 FAsset representation of

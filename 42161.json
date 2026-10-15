@@ -475,7 +475,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
           "ptAddress": "0xb459db106f645d698e74027eef6019a26a0675cc",
-          "syAddress": "0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62"
+          "syAddress": "0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -4650,7 +4651,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
           "ptAddress": "0xc9d24ad0bb25f34098e226a8c5192dea7bacccae",
-          "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
+          "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -4846,7 +4848,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0x0b2b2b2076d95dda7817e785989fe353fe955ef9",
           "ytAddress": "0x11456849c38ea4af212ab8d4324b39983716516a",
-          "syAddress": "0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62"
+          "syAddress": "0x30ccf4bbee313fcd19f3e295b3ba2920a24e2f62",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -5487,7 +5490,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0x0a1a1a107e45b7ced86833863f482bc5f4ed82ef",
           "ytAddress": "0xaf67341456151ab8c270e0962966092181c2eb80",
-          "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82"
+          "syAddress": "0x5edcbc20cac67adc2e724d4348ff85132b085b82",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -30603,7 +30607,8 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
-      "currencyId": "Wrapped SOL (Wormhole)::SOL"
+      "currencyId": "Wrapped SOL (Wormhole)::SOL",
+      "props": { "denomination": "SOL" }
     },
     "0x3e6648c5a70a150a88bce65f4ad4d506fe15d2af": {
       "chainId": "42161",
@@ -33029,7 +33034,8 @@
       "symbol": "SOL",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/sol.png",
       "assetGroup": "SOL",
-      "currencyId": "Wrapped SOL (Wormhole)::SOL"
+      "currencyId": "Wrapped SOL (Wormhole)::SOL",
+      "props": { "denomination": "SOL" }
     },
     "0x004626a008b1acdc4c74ab51644093b155e59a23": {
       "chainId": "42161",
@@ -34447,7 +34453,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -40567,7 +40573,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -45076,9 +45086,9 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "oft": {
           "eid": 30110,
@@ -50265,7 +50275,7 @@
       "currencyId": "US Nerite Dollar::USND",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -50808,7 +50818,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -51168,11 +51178,7 @@
       "assetGroup": "Satoshi Stablecoin::SATUSD",
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30110,
           "routes": [
@@ -51350,7 +51356,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x252b965400862d94bda35fecf7ee0f204a53cc36.png",
       "assetGroup": "Yearn USND::yUSND",
       "currencyId": "Yearn USND::yUSND",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xe4783824593a50bfe9dc873204cec171ebc62de0": {
       "chainId": "42161",
@@ -52976,7 +52982,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -67156,6 +67162,61 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179306/thumb/MSFTs.png?1791446566",
       "assetGroup": "Microsoft (Stove Tokenized Stock)::MSFTS",
       "currencyId": "Microsoft (Stove Tokenized Stock)::MSFTS"
+    },
+    "0xe7e553cd128f0011777323a0b44a7b96ea1cb540": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped SP500 xStock",
+      "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+      "symbol": "WSPYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080",
+      "assetGroup": "Wrapped SP500 xStock::WSPYX",
+      "currencyId": "Wrapped SP500 xStock::WSPYX"
+    },
+    "0x27d62249488fc66ecbb92c8da3f56f700b8e8501": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped TSMC xStock",
+      "address": "0x27d62249488fc66ecbb92c8da3f56f700b8e8501",
+      "symbol": "WTSMX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179498/thumb/tsmcx.png?1791956389",
+      "assetGroup": "Wrapped TSMC xStock::WTSMX",
+      "currencyId": "Wrapped TSMC xStock::WTSMX"
+    },
+    "0x4c1ae29c159838fc1b224636e28e086eb69101f7": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped Nasdaq xStock",
+      "address": "0x4c1ae29c159838fc1b224636e28e086eb69101f7",
+      "symbol": "WQQQX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179491/thumb/wqqqx.png?1791956037",
+      "assetGroup": "Wrapped Nasdaq xStock::WQQQX",
+      "currencyId": "Wrapped Nasdaq xStock::WQQQX"
+    },
+    "0xdad5623b32c81aeaa75478fcfe934e9e97018c58": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Wrapped Bitmine xStock",
+      "address": "0xdad5623b32c81aeaa75478fcfe934e9e97018c58",
+      "symbol": "WBMNRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179500/thumb/bmnrx.png?1791956702",
+      "assetGroup": "Wrapped Bitmine xStock::WBMNRX",
+      "currencyId": "Wrapped Bitmine xStock::WBMNRX"
+    },
+    "0xe1b0dc5a21b10f1634fbfbe9976fba2ee2e1c762": {
+      "chainId": "42161",
+      "decimals": 6,
+      "name": "syrupUSDG",
+      "address": "0xe1b0dc5a21b10f1634fbfbe9976fba2ee2e1c762",
+      "symbol": "SYRUPUSDG",
+      "logoURI": "https://assets.coingecko.com/coins/images/102174289/thumb/syrupUSDG.png?1790836053",
+      "assetGroup": "syrupUSDG::SYRUPUSDG",
+      "currencyId": "syrupUSDG::SYRUPUSDG",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42161",

@@ -287,6 +287,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   WBTC: { id: 'bitgo', name: 'BitGo', kind: 'institution' },
   'Wrapped BTC::WBTC': { id: 'bitgo', name: 'BitGo', kind: 'institution' },
   CBBTC: { id: 'coinbase', name: 'Coinbase', kind: 'cex' },
+  'Circle Wrapped BTC::CIRBTC': { id: 'circle', name: 'Circle', kind: 'institution' }, // "Circle Wrapped BTC": 1 0x72df…075e, 5042 0x171a…baa0
   LBTC: { id: 'lombard', name: 'Lombard', kind: 'protocol' },
   SOLVBTC: { id: 'solv', name: 'Solv', kind: 'protocol' },
   'Solv Protocol BTC::SOLVBTC': { id: 'solv', name: 'Solv', kind: 'protocol' },

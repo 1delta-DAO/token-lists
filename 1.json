@@ -1437,8 +1437,8 @@
           "ytAddress": "0x47247749e976c54c6db2a9db68c5cadb05482e9f"
         },
         "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -2133,8 +2133,8 @@
           "ytAddress": "0x4d74ad0287f5a3a799659aad542e4d9d9f31d443"
         },
         "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -2944,7 +2944,11 @@
           "ptAddress": "0x207f7205fd6c4b602fa792c8b2b60e6006d4a0b8",
           "ytAddress": "0x946934554a2bf59039661f971986f0223e906264"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -3947,6 +3951,7 @@
           "ptAddress": "0xd2e5a2467552a8df873177c02fc6fde4720d1bf1",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -4263,6 +4268,11 @@
           "ytAddress": "0xb52ff2ee15ed61564f150f12ce28b350e3dce26a",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -4568,9 +4578,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -4931,7 +4941,7 @@
       "assetGroup": "YT ynRWAx (USDC) Ethereum::YT-ynRWAx-15OCT2026",
       "currencyId": "YT ynRWAx (USDC) Ethereum::YT-ynRWAx-15OCT2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1792022400 },
+        "pendle": { "tokenType": "YT", "expiry": 1792022400, "expired": true },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -6636,8 +6646,8 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
-          "category": "PRINCIPAL_TOKEN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -7691,8 +7701,18 @@
       "assetGroup": "FLHYon Ethereum::SY-FLHYon",
       "currencyId": "FLHYon Ethereum::SY-FLHYon",
       "props": {
-        "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+          "expiry": 1796860800,
+          "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+          "ptAddress": "0xf1a905616171e1472b0c71eaa9caf7f224f04916",
+          "ytAddress": "0x509f15b4608d703516f4fc8544b0e5e7eef9d416"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x338e2cafa81e72ff422983e124e265eeccd718cb": {
@@ -7783,9 +7803,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -7954,9 +7974,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -10743,7 +10763,11 @@
           "syAddress": "0x0a9b2c09f8756c743b0702973ed33970d16cf6f9",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -11023,8 +11047,18 @@
       "assetGroup": "YT apyUSD (apxUSD) Ethereum::YT-apyUSD-11FEB2027",
       "currencyId": "YT apyUSD (apxUSD) Ethereum::YT-apyUSD-11FEB2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1802304000 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x313826e7029fdf742f3076741ed220e0e7b4968d",
+          "expiry": 1802304000,
+          "underlyingAsset": "0x38eeb52f0771140d10c4e9a9a72349a329fe8a6a",
+          "ptAddress": "0x60b1e75ede859e496c281d308bc94b6965ac4847",
+          "syAddress": "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x483fc6702c353efd4ea734f7385359333fbd59fe": {
@@ -11513,8 +11547,8 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
-          "category": "PRINCIPAL_TOKEN",
+          "score": 5,
+          "category": "DISCONTINUED",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -11563,7 +11597,11 @@
           "syAddress": "0x10222f882f3594455343abc9831213854902ed8e",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -12168,8 +12206,18 @@
       "assetGroup": "YT FLHYon (FLHYon) Ethereum::YT-FLHYon-10DEC2026",
       "currencyId": "YT FLHYon (FLHYon) Ethereum::YT-FLHYon-10DEC2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1796860800 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+          "expiry": 1796860800,
+          "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+          "ptAddress": "0xf1a905616171e1472b0c71eaa9caf7f224f04916",
+          "syAddress": "0x3387db684c5cefe4244a243a4468c086591a5c12"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x50bf5c6445b79b79e368856095a70c564d0c6966": {
@@ -12967,6 +13015,7 @@
           "syAddress": "0xc71c923445abdfc2c9b50292d8498745330f18ab",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "yieldfi", "name": "YieldFi", "kind": "protocol", "hops": 1 }
@@ -14564,8 +14613,18 @@
       "assetGroup": "PT apyUSD (apxUSD) Ethereum::PT-apyUSD-11FEB2027",
       "currencyId": "PT apyUSD (apxUSD) Ethereum::PT-apyUSD-11FEB2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1802304000 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x313826e7029fdf742f3076741ed220e0e7b4968d",
+          "expiry": 1802304000,
+          "underlyingAsset": "0x38eeb52f0771140d10c4e9a9a72349a329fe8a6a",
+          "ytAddress": "0x4829d6c7f40eac2642e269d4198321891ee4449f",
+          "syAddress": "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x60cb28103608c41bfd04ad09d3f7e6221a713b07": {
@@ -15250,7 +15309,11 @@
           "syAddress": "0x8b9d898327c0ac74b946ca3ca9fcfcbe9bc29c48",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -16579,7 +16642,11 @@
           "ptAddress": "0x9b02ca5685e9c332b158c01459562a161c8e8adf",
           "ytAddress": "0xfac0a88f74570478367ba1a52b4a30cfec6ec431"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -16660,8 +16727,18 @@
       "assetGroup": "PT apxUSD (apxUSD) Ethereum::PT-apxUSD-11FEB2027",
       "currencyId": "PT apxUSD (apxUSD) Ethereum::PT-apxUSD-11FEB2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1802304000 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x99f8c4d0038cda3adcbcd78eb37fcb5916d23e7a",
+          "expiry": 1802304000,
+          "underlyingAsset": "0x98a878b1cd98131b271883b390f68d2c90674665",
+          "ytAddress": "0xcdb208749782811525866b22146561e13e20667e",
+          "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x70af3e726836ca37093912dcd421b09f113f7332": {
@@ -17732,7 +17809,7 @@
       "assetGroup": "PT ynRWAx (USDC) Ethereum::PT-ynRWAx-15OCT2026",
       "currencyId": "PT ynRWAx (USDC) Ethereum::PT-ynRWAx-15OCT2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1792022400 },
+        "pendle": { "tokenType": "PT", "expiry": 1792022400, "expired": true },
         "risk": {
           "score": 3,
           "category": "PRINCIPAL_TOKEN",
@@ -18417,7 +18494,14 @@
       "assetGroup": "fxSAVE Ethereum::SY-fxSAVE::1::0",
       "currencyId": "fxSAVE Ethereum::SY-fxSAVE",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x9df10b8c99dc1a48dd7048a9a524bff9b54a0a30",
+          "expiry": 1808956800,
+          "underlyingAsset": "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39",
+          "ptAddress": "0xc1ea9419dd1dab4dd54aa13b13a766e4de22ebc3",
+          "ytAddress": "0x8d71fe7195de73ea534b7ad95e6db384d7cb8d07"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -20078,7 +20162,11 @@
           "ptAddress": "0x9bca74f805ab0a22ddd0886db0942199a0feba71",
           "ytAddress": "0x65901ac9efa7cdaf1bdb4dbce4c53b151ae8d014"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -20357,8 +20445,23 @@
       "assetGroup": "YT fxSAVE (fxSP) Ethereum::YT-fxSAVE-29APR2027",
       "currencyId": "YT fxSAVE (fxSP) Ethereum::YT-fxSAVE-29APR2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1808956800 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x9df10b8c99dc1a48dd7048a9a524bff9b54a0a30",
+          "expiry": 1808956800,
+          "underlyingAsset": "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39",
+          "ptAddress": "0xc1ea9419dd1dab4dd54aa13b13a766e4de22ebc3",
+          "syAddress": "0x7ca334286e9519de99703ab49d4eff6e5559499f"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "fx-protocol",
+            "name": "f(x) Protocol",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x8d8b981e034b188c754eb5b4b592cedce7ad8ab5": {
@@ -21393,7 +21496,11 @@
           "syAddress": "0x14ff57675c9c34eeb9e1516ffda7cac6ed1b9748",
           "expired": true
         },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
@@ -22495,9 +22602,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -22598,9 +22705,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -23741,9 +23848,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -26418,6 +26525,7 @@
           "ptAddress": "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5",
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -26706,7 +26814,7 @@
           "ptAddress": "0xa3ca92a69c6809607837bc3bd6b13e4c1e1e8ae9",
           "ytAddress": "0x4e99312e0beba4d73d8e8e9368fd24f4670624d9"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -27279,9 +27387,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -28101,8 +28209,23 @@
       "assetGroup": "PT fxSAVE (fxSP) Ethereum::PT-fxSAVE-29APR2027",
       "currencyId": "PT fxSAVE (fxSP) Ethereum::PT-fxSAVE-29APR2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1808956800 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x9df10b8c99dc1a48dd7048a9a524bff9b54a0a30",
+          "expiry": 1808956800,
+          "underlyingAsset": "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39",
+          "ytAddress": "0x8d71fe7195de73ea534b7ad95e6db384d7cb8d07",
+          "syAddress": "0x7ca334286e9519de99703ab49d4eff6e5559499f"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "fx-protocol",
+            "name": "f(x) Protocol",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xc1eb2aef318994fd3e077626ffd0749b039ed8bd": {
@@ -28813,6 +28936,11 @@
           "ptAddress": "0xdb63cfad2fe43132606cfef60c8ca3468c487677",
           "ytAddress": "0x562f3248cd47f06b4c24be7c42b73fbfe6cb2f96"
         },
+        "risk": {
+          "score": 4,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "yieldfi", "name": "YieldFi", "kind": "protocol", "hops": 1 }
@@ -29091,7 +29219,7 @@
           "ptAddress": "0x33e9a43b411000dd49c5ba66463f7dffaefa3fa6",
           "ytAddress": "0xa815a7cfa337d81e5d86286df9431488ec230abf"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -29712,8 +29840,18 @@
       "assetGroup": "YT apxUSD (apxUSD) Ethereum::YT-apxUSD-11FEB2027",
       "currencyId": "YT apxUSD (apxUSD) Ethereum::YT-apxUSD-11FEB2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1802304000 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x99f8c4d0038cda3adcbcd78eb37fcb5916d23e7a",
+          "expiry": 1802304000,
+          "underlyingAsset": "0x98a878b1cd98131b271883b390f68d2c90674665",
+          "ptAddress": "0x70a3b0fd5d7781b759a60398a1e9edb465aa420e",
+          "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xce0bd0de35a39508916e1f63fbdaf15221c66d18": {
@@ -30179,7 +30317,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -30484,6 +30622,11 @@
           "ytAddress": "0x1d03e1859e0b10fc4943fd9204c008c8293d416d",
           "syAddress": "0xc9bfebc79a722c05dc34bd2a227ef2db19fd1b8e"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -30604,8 +30747,8 @@
           "ytAddress": "0x3fbd0dc8057145ce12a90499239f5ae0f22f750d"
         },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
+          "score": 4,
+          "category": "YIELD_STABLE",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -31566,6 +31709,11 @@
           "ytAddress": "0x562f3248cd47f06b4c24be7c42b73fbfe6cb2f96",
           "syAddress": "0xc71c923445abdfc2c9b50292d8498745330f18ab",
           "expired": true
+        },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -34964,8 +35112,18 @@
       "assetGroup": "PT FLHYon (FLHYon) Ethereum::PT-FLHYon-10DEC2026",
       "currencyId": "PT FLHYon (FLHYon) Ethereum::PT-FLHYon-10DEC2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1796860800 },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x81516d5c0924bdaed5ecffc65ba23d555d1511a1",
+          "expiry": 1796860800,
+          "underlyingAsset": "0x54c1ff361b402f66c13107421e6a431c3375ef24",
+          "ytAddress": "0x509f15b4608d703516f4fc8544b0e5e7eef9d416",
+          "syAddress": "0x3387db684c5cefe4244a243a4468c086591a5c12"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ondo", "name": "Ondo", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xf1c9a56010b76ed39a3dca7e3bb25d7ed75e61c1": {
@@ -35590,7 +35748,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -37296,61 +37454,6 @@
         ]
       }
     },
-    "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Principal Token: ynRWAx(USDC) 2026/10/15 Ethereum",
-      "address": "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5",
-      "symbol": "PT-ynRWAx(USDC)-2026/10/15",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8.svg",
-      "assetGroup": "Principal Token: ynRWAx(USDC) 2026/10/15 Ethereum::PT-ynRWAx(USDC)-2026/10/15",
-      "currencyId": "Principal Token: ynRWAx(USDC) 2026/10/15 Ethereum::PT-ynRWAx(USDC)-2026/10/15",
-      "props": {
-        "spectra": {
-          "tokenType": "PT",
-          "poolAddress": "0x8ee494461b402abf3b26cbcb87030847fcbf6183",
-          "ptAddress": "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5",
-          "ytAddress": "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113",
-          "ibtAddress": "0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8",
-          "underlyingAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-          "maturity": 1792022416
-        },
-        "risk": {
-          "score": 2,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
-        "issuerExposures": [
-          { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
-        ]
-      }
-    },
-    "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Yield Token: ynRWAx(USDC) 2026/10/15 Ethereum",
-      "address": "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113",
-      "symbol": "YT-ynRWAx(USDC)-2026/10/15",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8.svg",
-      "assetGroup": "Yield Token: ynRWAx(USDC) 2026/10/15 Ethereum::YT-ynRWAx(USDC)-2026/10/15",
-      "currencyId": "Yield Token: ynRWAx(USDC) 2026/10/15 Ethereum::YT-ynRWAx(USDC)-2026/10/15",
-      "props": {
-        "spectra": {
-          "tokenType": "YT",
-          "poolAddress": "0x8ee494461b402abf3b26cbcb87030847fcbf6183",
-          "ptAddress": "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5",
-          "ytAddress": "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113",
-          "ibtAddress": "0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8",
-          "underlyingAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-          "maturity": 1792022416
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
-        "issuerExposures": [
-          { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
-        ]
-      }
-    },
     "0x3af4b295a730408568fa8d7af70cb6c282ffb698": {
       "chainId": "1",
       "decimals": 18,
@@ -37380,28 +37483,6 @@
         "issuerExposures": [
           { "id": "lido", "name": "Lido", "kind": "protocol", "hops": 1 }
         ]
-      }
-    },
-    "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Yield Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum",
-      "address": "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556",
-      "symbol": "YT-STAK(yn-RWA/USD)-2026/10/15",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0xd1573de52fff44dd92d275e20fdab0296ccff141.svg",
-      "assetGroup": "Yield Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::YT-STAK(yn-RWA/USD)-2026/10/15",
-      "currencyId": "Yield Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::YT-STAK(yn-RWA/USD)-2026/10/15",
-      "props": {
-        "spectra": {
-          "tokenType": "YT",
-          "poolAddress": "0x09b1d5860e50a67ce46788813892f7028caa64ae",
-          "ptAddress": "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b",
-          "ytAddress": "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556",
-          "ibtAddress": "0xd1573de52fff44dd92d275e20fdab0296ccff141",
-          "underlyingAsset": "0xffd3b4d343a8964a5c3c1caac20f319c41a97bff",
-          "maturity": 1792022423
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
     "0xae27f0e72475f6b3af3b92ddc78da36acf994d7e": {
@@ -37457,28 +37538,6 @@
         "issuerExposures": [
           { "id": "lido", "name": "Lido", "kind": "protocol", "hops": 1 }
         ]
-      }
-    },
-    "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Principal Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum",
-      "address": "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b",
-      "symbol": "PT-STAK(yn-RWA/USD)-2026/10/15",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0xd1573de52fff44dd92d275e20fdab0296ccff141.svg",
-      "assetGroup": "Principal Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::PT-STAK(yn-RWA/USD)-2026/10/15",
-      "currencyId": "Principal Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::PT-STAK(yn-RWA/USD)-2026/10/15",
-      "props": {
-        "spectra": {
-          "tokenType": "PT",
-          "poolAddress": "0x09b1d5860e50a67ce46788813892f7028caa64ae",
-          "ptAddress": "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b",
-          "ytAddress": "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556",
-          "ibtAddress": "0xd1573de52fff44dd92d275e20fdab0296ccff141",
-          "underlyingAsset": "0xffd3b4d343a8964a5c3c1caac20f319c41a97bff",
-          "maturity": 1792022423
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
     "0xefaa6014bbdc9ccb5568fb918ba73816a94fdc8c": {
@@ -69662,6 +69721,105 @@
         "issuer": { "id": "binance", "name": "Binance", "kind": "cex" }
       }
     },
+    "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Principal Token: ynRWAx(USDC) 2026/10/15 Ethereum",
+      "address": "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5",
+      "symbol": "PT-ynRWAx(USDC)-2026/10/15",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8.svg",
+      "assetGroup": "Principal Token: ynRWAx(USDC) 2026/10/15 Ethereum::PT-ynRWAx(USDC)-2026/10/15",
+      "currencyId": "Principal Token: ynRWAx(USDC) 2026/10/15 Ethereum::PT-ynRWAx(USDC)-2026/10/15",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0x8ee494461b402abf3b26cbcb87030847fcbf6183",
+          "ptAddress": "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5",
+          "ytAddress": "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113",
+          "ibtAddress": "0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8",
+          "underlyingAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "maturity": 1792022416
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
+        ]
+      }
+    },
+    "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Yield Token: ynRWAx(USDC) 2026/10/15 Ethereum",
+      "address": "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113",
+      "symbol": "YT-ynRWAx(USDC)-2026/10/15",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8.svg",
+      "assetGroup": "Yield Token: ynRWAx(USDC) 2026/10/15 Ethereum::YT-ynRWAx(USDC)-2026/10/15",
+      "currencyId": "Yield Token: ynRWAx(USDC) 2026/10/15 Ethereum::YT-ynRWAx(USDC)-2026/10/15",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0x8ee494461b402abf3b26cbcb87030847fcbf6183",
+          "ptAddress": "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5",
+          "ytAddress": "0x1d4311f2412cf1d5eaf901cc994ff7cb658a3113",
+          "ibtAddress": "0x01ba69727e2860b37bc1a2bd56999c1afb4c15d8",
+          "underlyingAsset": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "maturity": 1792022416
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
+        ]
+      }
+    },
+    "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Yield Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum",
+      "address": "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556",
+      "symbol": "YT-STAK(yn-RWA/USD)-2026/10/15",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0xd1573de52fff44dd92d275e20fdab0296ccff141.svg",
+      "assetGroup": "Yield Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::YT-STAK(yn-RWA/USD)-2026/10/15",
+      "currencyId": "Yield Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::YT-STAK(yn-RWA/USD)-2026/10/15",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0x09b1d5860e50a67ce46788813892f7028caa64ae",
+          "ptAddress": "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b",
+          "ytAddress": "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556",
+          "ibtAddress": "0xd1573de52fff44dd92d275e20fdab0296ccff141",
+          "underlyingAsset": "0xffd3b4d343a8964a5c3c1caac20f319c41a97bff",
+          "maturity": 1792022423
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
+    "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Principal Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum",
+      "address": "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b",
+      "symbol": "PT-STAK(yn-RWA/USD)-2026/10/15",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/1/0xd1573de52fff44dd92d275e20fdab0296ccff141.svg",
+      "assetGroup": "Principal Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::PT-STAK(yn-RWA/USD)-2026/10/15",
+      "currencyId": "Principal Token: STAK(yn-RWA/USD) 2026/10/15 Ethereum::PT-STAK(yn-RWA/USD)-2026/10/15",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0x09b1d5860e50a67ce46788813892f7028caa64ae",
+          "ptAddress": "0xded720ef5558a1607c4fe39299cd2a95e88a0b4b",
+          "ytAddress": "0x72c5ad070b5de94cd07fc965bdbbf1dcff192556",
+          "ibtAddress": "0xd1573de52fff44dd92d275e20fdab0296ccff141",
+          "underlyingAsset": "0xffd3b4d343a8964a5c3c1caac20f319c41a97bff",
+          "maturity": 1792022423
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
     "0x316f61a5b02118b37230814e008b547de671e505": {
       "chainId": "1",
       "decimals": 18,
@@ -79677,7 +79835,8 @@
       "symbol": "SOL",
       "logoURI": "https://assets.coingecko.com/coins/images/22876/thumb/SOL_wh_small.png?1644224316",
       "assetGroup": "SOL",
-      "currencyId": "Wrapped SOL (Wormhole)::SOL"
+      "currencyId": "Wrapped SOL (Wormhole)::SOL",
+      "props": { "denomination": "SOL" }
     },
     "0x446c9033e7516d820cc9a2ce2d0b7328b579406f": {
       "chainId": "1",
@@ -84243,7 +84402,7 @@
       "currencyId": "STASIS EURO::EURS",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -89533,7 +89692,7 @@
       "currencyId": "Alchemix USD::ALUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -109158,7 +109317,6 @@
               "oapp": "swell-network",
               "approvalRequired": true,
               "peers": {
-                "56": "0x963132a22e8dd516ec65c2fad3a17f280c27de2d",
                 "8453": "0x850cdf416668210ed0c36bfff5d21921c7ada3b8",
                 "42161": "0xb1fe27b32ffb5ce54e272c096547f1e86c19e72f",
                 "48900": "0xd8b29106d4cebad087c30b10c0e41baa3a9ea703",
@@ -125156,7 +125314,11 @@
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -126712,7 +126874,11 @@
       "assetGroup": "Level USD::LVLUSD",
       "currencyId": "Level USD::LVLUSD",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -131679,9 +131845,9 @@
       "currencyId": "Staked Level USD::SLVLUSD",
       "props": {
         "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "savings_inherit"
         },
         "savings": { "underlying": "lvlUSD", "base": "USD" },
         "oft": {
@@ -137584,9 +137750,9 @@
       "currencyId": "YieldFi yUSD::yUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "savings": { "underlying": "USDC", "base": "USD" },
         "stablecoin": { "base": "USD" },
@@ -166739,7 +166905,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/bold.svg",
       "assetGroup": "Staked yBOLD::ysyBOLD",
       "currencyId": "Staked yBOLD::ysyBOLD",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x351caa9045d65107b9d311d922d15887cfd634e4": {
       "chainId": "1",
@@ -167465,7 +167631,7 @@
       "logoURI": "https://raw.githubusercontent.com/parallel-protocol/parallel-brand-kit/main/Tokens/USDp/sUSDp.svg",
       "assetGroup": "Staked USDp::sUSDp",
       "currencyId": "Staked USDp::sUSDp",
-      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x07a36c630e3f072637da3445da733b29958d8cab": {
       "chainId": "1",
@@ -167883,7 +168049,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvusdc-1.svg",
       "assetGroup": "USDC-1 yVault::yvUSDC-1",
       "currencyId": "USDC-1 yVault::yvUSDC-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x310b7ea7475a0b449cfd73be81522f1b88efafaa": {
       "chainId": "1",
@@ -167893,7 +168059,7 @@
       "symbol": "yvUSDT-1",
       "assetGroup": "USDT-1 yVault::yvUSDT-1",
       "currencyId": "USDT-1 yVault::yvUSDT-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x182863131f9a4630ff9e27830d945b1413e347e8": {
       "chainId": "1",
@@ -167904,7 +168070,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvusds-1.svg",
       "assetGroup": "USDS-1 yVault::yvUSDS-1",
       "currencyId": "USDS-1 yVault::yvUSDS-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0xc56413869c6cdf96496f2b1ef801fedbdfa7ddb0": {
       "chainId": "1",
@@ -167915,7 +168081,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/yvweth-1.svg",
       "assetGroup": "WETH-1 yVault::yvWETH-1",
       "currencyId": "WETH-1 yVault::yvWETH-1",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x69000195d5e3201cf73c9ae4a1559244df38d47c": {
       "chainId": "1",
@@ -168602,7 +168768,11 @@
       "currencyId": "Asymmetry USDaf Stablecoin::USDaf",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "asymmetry", "name": "Asymmetry", "kind": "protocol" }
       }
@@ -170057,7 +170227,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -171700,11 +171870,7 @@
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -173486,7 +173652,7 @@
       "logoURI": "https://raw.githubusercontent.com/cowprotocol/token-lists/main/src/public/images/1/0x89e93172aef8261db8437b90c3dcb61545a05317/logo.png",
       "assetGroup": "Savings USDaf::sUSDaf",
       "currencyId": "Savings USDaf::sUSDaf",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x972966bcc17f7d818de4f27dc146ef539c231bdf": {
       "chainId": "1",
@@ -178600,7 +178766,8 @@
       "address": "0x9f4330700a36b29952869fac9b33f45eedd8a3d8",
       "symbol": "yBOLD",
       "assetGroup": "Yearn BOLD::yBOLD",
-      "currencyId": "Yearn BOLD::yBOLD"
+      "currencyId": "Yearn BOLD::yBOLD",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x123ffe0a3c62878dcbee2742227dc8990058d9e1": {
       "chainId": "1",
@@ -179313,7 +179480,7 @@
       "symbol": "ysUSDS",
       "assetGroup": "Sky Rewards USDS Compounder::ysUSDS",
       "currencyId": "Sky Rewards USDS Compounder::ysUSDS",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x4f7310e8bda646a7da4b8f1bbe83073380c5dc53": {
       "chainId": "1",
@@ -182571,7 +182738,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -183000,7 +183167,7 @@
       "currencyId": "Hastra AUTO::AUTO",
       "props": {
         "savings": { "underlying": "wYLDS", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "source": "vault_inherit" },
         "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
       }
     },
@@ -183527,7 +183694,11 @@
       "assetGroup": "KRW1::KRW1",
       "currencyId": "KRW1::KRW1",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "KRW" },
         "issuer": { "id": "bdacs", "name": "BDACS", "kind": "institution" }
       }
@@ -184142,7 +184313,11 @@
       "symbol": "CIRBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/102172745/thumb/cirbtc.jpg?1775204071",
       "assetGroup": "Circle Wrapped BTC::CIRBTC",
-      "currencyId": "Circle Wrapped BTC::CIRBTC"
+      "currencyId": "Circle Wrapped BTC::CIRBTC",
+      "props": {
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" },
+        "denomination": "BTC"
+      }
     },
     "0x015c477a4e2881c4b3bb8999f59ee4a04e812344": {
       "chainId": "1",
@@ -186005,7 +186180,7 @@
       "currencyId": "Unity USD::UUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -186670,7 +186845,8 @@
       "address": "0x97b0a9c6a4d9fd51bf8bebf04015f74c2e36a624",
       "symbol": "slisXAUE",
       "assetGroup": "Staked Lista XAUE::slisXAUE",
-      "currencyId": "Staked Lista XAUE::slisXAUE"
+      "currencyId": "Staked Lista XAUE::slisXAUE",
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x7706b1a531a7a8cb4c26d24cdc9ae4094a3e0302": {
       "chainId": "1",
@@ -186839,6 +187015,26 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179471/thumb/cent.jpg?1791893945",
       "assetGroup": "Incentiv::CENT",
       "currencyId": "Incentiv::CENT"
+    },
+    "0x4602e48a5b2e53f83b9bacf36249ccd443b3a430": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Temo",
+      "address": "0x4602e48a5b2e53f83b9bacf36249ccd443b3a430",
+      "symbol": "TEMO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179482/thumb/logo.jpg?1791932129",
+      "assetGroup": "Temo::TEMO",
+      "currencyId": "Temo::TEMO"
+    },
+    "0x2d8b65306a6c23da6342cb94d4251fb4302a624f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)",
+      "address": "0x2d8b65306a6c23da6342cb94d4251fb4302a624f",
+      "symbol": "SHVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179484/thumb/SHVON.png?1791952585",
+      "assetGroup": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON",
+      "currencyId": "iShares 0-1 Year Treasury Bond ETF (Ondo Tokenized ETF)::SHVON"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

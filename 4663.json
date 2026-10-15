@@ -77,6 +77,11 @@
           "ytAddress": "0xc987568603f10f8dca9169f7ea15ab38faf331ac",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -194,7 +199,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
           "ptAddress": "0xc50f040f9a38f7cd94fe87be56325eaac48e770e",
-          "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5"
+          "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -258,6 +264,7 @@
           "ptAddress": "0xe1652479358a5968bcc8a36274a616422a2d357d",
           "syAddress": "0x346ae4fc5134f13655c65abb6dfd8728a6eb1235"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -277,7 +284,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
           "ytAddress": "0x9cc22e51c6f0cb4aa1bfd1f18e85df1451ebb9b3",
-          "syAddress": "0x82cc738064816ed7441e3c4d917503ca5388dfe9"
+          "syAddress": "0x82cc738064816ed7441e3c4d917503ca5388dfe9",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -546,6 +554,27 @@
         ]
       }
     },
+    "0x8e6584c1aff3a1f8117d8684103cff0c9be7a8b7": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "YT sNET (NET) Robinhood",
+      "address": "0x8e6584c1aff3a1f8117d8684103cff0c9be7a8b7",
+      "symbol": "YT-sNET-12NOV2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/d85f163c-c834-4a2c-accb-a1ac16322899.svg",
+      "assetGroup": "YT sNET (NET) Robinhood::YT-sNET-12NOV2026",
+      "currencyId": "YT sNET (NET) Robinhood::YT-sNET-12NOV2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xc5ceb0c5901421afc94bf365c73c915592123b19",
+          "expiry": 1794441600,
+          "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+          "ptAddress": "0xc019ee8fa7c20a95351c63f67f62d580719e4bbf",
+          "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x9cc22e51c6f0cb4aa1bfd1f18e85df1451ebb9b3": {
       "chainId": "4663",
       "decimals": 18,
@@ -562,7 +591,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
           "ptAddress": "0x4bcb25fce9618e62e9f9fba8d65af50cf867b812",
-          "syAddress": "0x82cc738064816ed7441e3c4d917503ca5388dfe9"
+          "syAddress": "0x82cc738064816ed7441e3c4d917503ca5388dfe9",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -734,6 +764,27 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0xc019ee8fa7c20a95351c63f67f62d580719e4bbf": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "PT sNET (NET) Robinhood",
+      "address": "0xc019ee8fa7c20a95351c63f67f62d580719e4bbf",
+      "symbol": "PT-sNET-12NOV2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/02e700f6-2975-445a-b423-909bf300602b.svg",
+      "assetGroup": "PT sNET (NET) Robinhood::PT-sNET-12NOV2026",
+      "currencyId": "PT sNET (NET) Robinhood::PT-sNET-12NOV2026",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xc5ceb0c5901421afc94bf365c73c915592123b19",
+          "expiry": 1794441600,
+          "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
+          "ytAddress": "0x8e6584c1aff3a1f8117d8684103cff0c9be7a8b7",
+          "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xc50f040f9a38f7cd94fe87be56325eaac48e770e": {
       "chainId": "4663",
       "decimals": 18,
@@ -750,7 +801,8 @@
           "expiry": 1792022400,
           "underlyingAsset": "0x53176cadd446700fa6b89f840357ac586d7e33db",
           "ytAddress": "0x3d9e0f83834e015d25d07444de0296359ebfb6e3",
-          "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5"
+          "syAddress": "0x5d446a2be952f4f9ba241b382a73ad3b1819aaf5",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -787,6 +839,7 @@
           "ptAddress": "0x07a1c3aa6be8140ec1cce06121640e56c8cb29d9",
           "syAddress": "0xe24a28fe8ecd859db4280d1291783a10017d6fc4"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -830,6 +883,11 @@
           "underlyingAsset": "0xaa07a0e9209e16ac99708c3ec70159c6ef3128a3",
           "ytAddress": "0x4aec7f5ce469ff4717eceacb67a333fda09aacf0",
           "syAddress": "0x346ae4fc5134f13655c65abb6dfd8728a6eb1235"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -18036,6 +18094,166 @@
         "savings": { "underlying": "GREEN", "base": "USD" },
         "stablecoin": { "base": "USD" }
       }
+    },
+    "0xfc5a5c521c80d8e1d6b5aee6454b8c9483c91bff": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Lighthouse",
+      "address": "0xfc5a5c521c80d8e1d6b5aee6454b8c9483c91bff",
+      "symbol": "LLL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179527/thumb/lighthouse.jpg?1792028981",
+      "assetGroup": "Lighthouse::LLL",
+      "currencyId": "Lighthouse::LLL"
+    },
+    "0x9faf478c3f9b407523a3d12307c0d34739062182": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "IGNITION",
+      "address": "0x9faf478c3f9b407523a3d12307c0d34739062182",
+      "symbol": "IGNITION",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179497/thumb/logo.jpg?1791956378",
+      "assetGroup": "IGNITION::IGNITION",
+      "currencyId": "IGNITION::IGNITION"
+    },
+    "0xd0ca71118ca21d674f9018a53026a38a0ab54dbf": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Ducat",
+      "address": "0xd0ca71118ca21d674f9018a53026a38a0ab54dbf",
+      "symbol": "DUCAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179526/thumb/Ducat.jpg?1792028367",
+      "assetGroup": "Ducat::DUCAT",
+      "currencyId": "Ducat::DUCAT"
+    },
+    "0xc97714b727ccfb3d3e4cb2946344351b262f6af9": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "MCAPS",
+      "address": "0xc97714b727ccfb3d3e4cb2946344351b262f6af9",
+      "symbol": "MCAPS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179505/thumb/mcaps-coingecko-200x200.webp?1791957620",
+      "assetGroup": "MCAPS::MCAPS",
+      "currencyId": "MCAPS::MCAPS"
+    },
+    "0x351f65928a40657c31f51bb543f8bb3844d123fa": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Commander Vrax",
+      "address": "0x351f65928a40657c31f51bb543f8bb3844d123fa",
+      "symbol": "VRAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179512/thumb/logo.png?1792019536",
+      "assetGroup": "Commander Vrax::VRAX::4663::1",
+      "currencyId": "Commander Vrax::VRAX"
+    },
+    "0xa60b9797c9ba8e9524b4573d2241e9cf272f14c6": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Influence",
+      "address": "0xa60b9797c9ba8e9524b4573d2241e9cf272f14c6",
+      "symbol": "INFLUENCE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179509/thumb/logo.png?1791985000",
+      "assetGroup": "Influence::INFLUENCE",
+      "currencyId": "Influence::INFLUENCE"
+    },
+    "0xbfe3e08e96ffa81563bd26be1d5ad31dd1dad1fe": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Veilora",
+      "address": "0xbfe3e08e96ffa81563bd26be1d5ad31dd1dad1fe",
+      "symbol": "VEIL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179518/thumb/hiazq8haetg0awv8mmav853olqnp.?1792026481",
+      "assetGroup": "Veilora::VEIL",
+      "currencyId": "Veilora::VEIL"
+    },
+    "0xf7f34c25cee15ea3d26c61fb6141ae90ed50158e": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Altai the Tiger",
+      "address": "0xf7f34c25cee15ea3d26c61fb6141ae90ed50158e",
+      "symbol": "ALTAI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179499/thumb/logo.png?1791956512",
+      "assetGroup": "Altai the Tiger::ALTAI",
+      "currencyId": "Altai the Tiger::ALTAI"
+    },
+    "0xa4f22f4b690fb7e3cb5c830db4d02eedd437508f": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Sword Inu",
+      "address": "0xa4f22f4b690fb7e3cb5c830db4d02eedd437508f",
+      "symbol": "SI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179508/thumb/logo.jpg?1791984439",
+      "assetGroup": "Sword Inu::SI",
+      "currencyId": "Sword Inu::SI"
+    },
+    "0x710a0414dc599112987515ac8d76e0cd28546bc1": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "MorrowFunds",
+      "address": "0x710a0414dc599112987515ac8d76e0cd28546bc1",
+      "symbol": "MORROW",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179506/thumb/morrow_logo_new.png?1791957875",
+      "assetGroup": "MorrowFunds::MORROW",
+      "currencyId": "MorrowFunds::MORROW"
+    },
+    "0xedbf91223639800bcd5756815caf908df3b890be": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Priors Agents",
+      "address": "0xedbf91223639800bcd5756815caf908df3b890be",
+      "symbol": "PRIORS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178765/thumb/priors.jpg?1790233255",
+      "assetGroup": "Priors Agents::PRIORS",
+      "currencyId": "Priors Agents::PRIORS"
+    },
+    "0x5108cda97b40cebe635a2031454c1524da9350b0": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "PolarAI",
+      "address": "0x5108cda97b40cebe635a2031454c1524da9350b0",
+      "symbol": "POLAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179514/thumb/logo_polar.jpg?1792025647",
+      "assetGroup": "PolarAI::POLAR",
+      "currencyId": "PolarAI::POLAR"
+    },
+    "0x28da843c0223990fb57701319b30804b89eff111": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Gas",
+      "address": "0x28da843c0223990fb57701319b30804b89eff111",
+      "symbol": "GAS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179503/thumb/gas-symbol_%282%29.png?1791957507",
+      "assetGroup": "Gas::GAS",
+      "currencyId": "Gas::GAS"
+    },
+    "0x15f3385625d7e364c5a6216fbbceadf10fa90e7d": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Abyss",
+      "address": "0x15f3385625d7e364c5a6216fbbceadf10fa90e7d",
+      "symbol": "ABYSS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179528/thumb/abyss.jpg?1792029280",
+      "assetGroup": "Abyss::ABYSS",
+      "currencyId": "Abyss::ABYSS"
+    },
+    "0x5f78b48a50f94b1f794aebb72ad6d3f99eca13ca": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Snarket AI",
+      "address": "0x5f78b48a50f94b1f794aebb72ad6d3f99eca13ca",
+      "symbol": "SNARKET",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179524/thumb/148n3njp0wct935s0gpio1ns045s.?1792027559",
+      "assetGroup": "Snarket AI::SNARKET",
+      "currencyId": "Snarket AI::SNARKET"
+    },
+    "0xfbb5818cbd59be30d6c5822c9e33620a0fadc4aa": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Save The Seals",
+      "address": "0xfbb5818cbd59be30d6c5822c9e33620a0fadc4aa",
+      "symbol": "SEALS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179511/thumb/logo-0.png?1792001580",
+      "assetGroup": "Save The Seals::SEALS",
+      "currencyId": "Save The Seals::SEALS"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4663",
