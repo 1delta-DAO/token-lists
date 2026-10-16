@@ -231,6 +231,14 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   CHa1NzoGsJ8wAEQUBjwtyUcv7rQBDW2yk3c8LvqaA8Lb: 'Loopscale "chainSOL / SOL" loop collateral (Chainflow Staked SOL)',
   G4L8PeENzfepB3jBpDKJ5McnHbXA7nh8gQQsZJQptVM7:
     'Loopscale "sUSD.tel / USDG" loop collateral (Dawn telecom-revenue vault); Metaplex metadata on its own pinata gateway',
+  // Upshift curator vault shares (August's shared `august_vault` program,
+  // up12…): the `receipt.address` app.upshift.finance/api/proxy/vaults
+  // publishes for each Solana vault, whose mint authority is the vault's own
+  // VaultState PDA. Served as earn rows; a holder needs the row.
+  DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x:
+    'Upshift "Gamma Research USDC Vault" share (upGammaUSD); mint published by app.upshift.finance, authority = its august_vault VaultState',
+  CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs:
+    'Upshift "Y10k GMTrade MetaVault" share (y10kGMV); mint published by app.upshift.finance, authority = its august_vault VaultState',
 }
 
 /**
@@ -251,6 +259,10 @@ const SOLANA_IDENTITY: { [mint: string]: { name: string; symbol: string } } = {
   // its EVM deployments, so `currencyId` is not `::PRIME`.
   '8fr7WGTVFszfyNWRMXj6fRjZZAnDwmXwEpCrtzmUkdih': { name: 'Hastra wYLDS', symbol: 'wYLDS' },
   '3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7': { name: 'Hastra PRIME', symbol: 'PRIME' },
+  // Upshift vault shares: the vault name and receipt symbol Upshift's listing
+  // publishes — Jupiter answers y10kGMV blank and upGammaUSD as "upGammaUSD Solana".
+  DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x: { name: 'Gamma Research USDC Vault', symbol: 'upGammaUSD' },
+  CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs: { name: 'Y10k GMTrade MetaVault', symbol: 'y10kGMV' },
 }
 
 /**
@@ -267,6 +279,11 @@ const SOLANA_LOGOS: { [mint: string]: string } = {
   '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5': 'https://cdn.exponent.finance/senior-tokens/srnOPAL.svg',
   // The `image` of metadata.securitize.io/hinc.json.
   EuTtCw35R3BJnTmXCREctjCU9XTkZXsQjqnoNg7NwdnZ: 'https://metadata.securitize.io/hinc_logo.png',
+  // The `logoUrl` of each vault in app.upshift.finance/api/proxy/vaults.
+  DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x:
+    'https://imagedelivery.net/JKqfgGWnlUbSJb3LhpWg6w/a4149528-4dc0-43f7-1895-c0aa0b293d00/public',
+  CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs:
+    'https://imagedelivery.net/JKqfgGWnlUbSJb3LhpWg6w/04e323ee-0c2d-4a2c-c072-177dbcaabf00/public',
 }
 
 interface JupToken {
