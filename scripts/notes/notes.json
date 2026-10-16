@@ -146,6 +146,21 @@
     "confidence": "high",
     "alsoGroups": ["ChainLink Token::LINK"]
   },
+  "Re Protocol reUSD::REUSD": {
+    "what": "Re senior reinsurance tranche · SOFR or sUSDe rate + 2.5%, price accrues",
+    "body": "reUSD is the senior tranche of Re, an on-chain reinsurance marketplace. Capital that funds Re's partner reinsurers, held as admitted collateral in a Regulation 114 trust, earns SOFR + 250 bps; capital kept on-chain earns the 7-day trailing sUSDe rate + 250 bps. It does not rebase: the price is reset daily at 00:00 UTC, by at most 50 bps per update. Underwriting losses hit the reinsurer's own equity first, then reUSDe, and reUSD last.",
+    "backing": "reinsurance collateral in a Regulation 114 trust (attested daily by The Network Firm via Chainlink) + on-chain stablecoins",
+    "yieldSource": "SOFR + 250 bps on reinsurance capital, 7-day sUSDe rate + 250 bps on on-chain capital",
+    "redemption": "KYC, non-US only: instant at NAV from an on-chain buffer (daily and per-wallet caps), else a quarterly queue; or sell on market",
+    "issuer": "Re",
+    "links": [
+      "https://docs.re.xyz/insurance-capital-layers/what-is-reusd",
+      "https://docs.re.xyz/minting-and-redemptions/redemptions.md",
+      "https://docs.re.xyz/products/smart-contracts.md"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high"
+  },
   "PT reUSD (USDC) Ethereum::PT-reUSD-10DEC2026": {
     "what": "Pendle principal token on reUSD · fixed rate to 10 Dec 2026",
     "body": "Pendle principal token that redeems 1:1 for reUSD's accounting asset (USDC) at maturity on 10 Dec 2026; its yield is the fixed discount to maturity. The underlying reUSD is Re Protocol's senior-tranche token, whose deposits back real-world reinsurance treaties via licensed reinsurers and earn a blend of reinsurance premiums and on-chain basis yield.",
