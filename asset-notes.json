@@ -5813,8 +5813,19 @@
     "source": "derived"
   },
   "Green USD Stablecoin::GREEN": {
-    "what": "Token denominated in USD",
-    "source": "derived"
+    "what": "Ripe Protocol stablecoin · minted against CDPs, a USDC/USDG PSM and protocol pool mints",
+    "body": "GREEN is the USD stablecoin of Ripe Protocol on Base and Robinhood Chain. It is minted in three ways: borrowers mint it against multi-asset collateral, a PSM mints it 1:1 for USDC or USDG, and Ripe's Endaoment mints it into its own Curve pool to hold the peg. In October 2026 borrower debt was only about a fifth of supply. The protocol-held assets identified covered roughly three quarters of circulating GREEN. A 2-of-3 Safe controls the protocol, with no time locks on most settings.",
+    "backing": "Borrower collateral (debt ~21% of supply), PSM reserves (USDC in Underscore's undyUSDC), protocol-owned Curve liquidity",
+    "yieldSource": null,
+    "redemption": "Redemptions against Ripe positions inside their redemption zone; the PSM redeem is allowlisted on Base and empty on Robinhood Chain; otherwise Curve pools",
+    "issuer": "Ripe Protocol",
+    "links": [
+      "https://docs.ripe.finance"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "verify": "About a quarter of circulating GREEN had no identified backing asset on 2026-10-15",
+    "source": "curated"
   },
   "Grindr (Dinari Tokenized Stock)::GRND": {
     "what": "Dinari tokenized stock · tracks Grindr",
@@ -15914,12 +15925,32 @@
     "source": "curated"
   },
   "Savings Green USD::sGREEN": {
-    "what": "Savings wrapper of GREEN · earns its savings rate",
-    "source": "derived"
+    "what": "Ripe savings vault on Base · ERC-4626 over GREEN, earns Ripe borrow interest",
+    "body": "sGREEN is the ERC-4626 savings vault over GREEN on Base. Ripe Protocol pays borrowers' interest and origination fees into it, so its share price rises against GREEN. It holds only GREEN and carries all of GREEN's risk. The Robinhood Chain sGREEN is a separate vault with its own share price.",
+    "backing": "GREEN",
+    "yieldSource": "Interest and origination fees paid by Ripe borrowers",
+    "redemption": "Instant redeem for GREEN",
+    "issuer": "Ripe Protocol",
+    "links": [
+      "https://docs.ripe.finance"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
   },
   "Savings Green USD::sGREEN::4663::0": {
-    "what": "Savings wrapper of GREEN · earns its savings rate",
-    "source": "derived"
+    "what": "Ripe savings vault on Robinhood Chain · ERC-4626 over GREEN, earns borrow interest",
+    "body": "sGREEN on Robinhood Chain is the ERC-4626 savings vault over GREEN there. Ripe Protocol pays borrowers' interest and origination fees into it, so its share price rises against GREEN. It holds only GREEN and carries all of GREEN's risk. It is independent of the Base sGREEN, with a different share price.",
+    "backing": "GREEN",
+    "yieldSource": "Interest and origination fees paid by Ripe borrowers on Robinhood Chain",
+    "redemption": "Instant redeem for GREEN",
+    "issuer": "Ripe Protocol",
+    "links": [
+      "https://docs.ripe.finance"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
   },
   "Savings USDS from Ethereum::sUSDS": {
     "what": "Sky savings rate on USDS · RWA T-bills + crypto-collateral loan fees",
@@ -24241,9 +24272,111 @@
     "what": "Stakestone liquid-staked ETH",
     "source": "derived"
   },
+  "Yield Optimizer BTC::YOBTC": {
+    "what": "YO cbBTC vault · currently holds idle cbBTC and earns nothing",
+    "body": "yoBTC is the share token of YO Protocol's cbBTC vault, an operator-managed ERC-4626. In October 2026 almost all of its cbBTC sat idle in the vault (mostly on Ethereum), and its 1-, 7- and 30-day yields were 0%. YO can deploy it into lending markets at any time. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "backing": "cbBTC, nearly all held idle (Ethereum ~78%, Base ~22%)",
+    "yieldSource": null,
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
+  },
+  "Yield Optimizer ETH::YOETH": {
+    "what": "YO WETH vault · lends WETH on lending markets against USDC, cbBTC, cbETH and wstETH",
+    "body": "yoETH is the share token of YO Protocol's WETH vault, an operator-managed ERC-4626. YO lends the WETH on overcollateralized markets on Ethereum and Base. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "backing": "WETH lent on overcollateralized markets (Ethereum ~65%, Base ~35%)",
+    "yieldSource": "Interest paid by WETH borrowers",
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
+  },
+  "Yield Optimizer EUR::yoEUR": {
+    "what": "YO EURC vault · lends EURC on lending markets against wstETH, cbBTC and WETH",
+    "body": "yoEUR is the share token of YO Protocol's EURC vault, an operator-managed ERC-4626. YO lends the EURC on overcollateralized markets on Base and Ethereum, borrowed against wstETH, cbBTC, WETH and cbETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "backing": "EURC lent on overcollateralized markets (Base ~79%, Ethereum ~21%)",
+    "yieldSource": "Interest paid by EURC borrowers",
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
+  },
+  "Yield Optimizer Gold::YOGOLD": {
+    "what": "YO XAUt vault on Ethereum · holds idle Tether Gold, no strategy yet",
+    "body": "yoGOLD is the share token of YO Protocol's Tether Gold (XAUt) vault on Ethereum, an operator-managed ERC-4626. In October 2026 all of its XAUt sat idle in the vault, with almost no yield. Its value follows gold through XAUt, so it carries Tether's custody of the physical gold. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "backing": "XAUt (Tether Gold), 100% idle in the vault",
+    "yieldSource": null,
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
+  },
+  "Yield Optimizer USD Edge::YOUSDEDGE": {
+    "what": "YO higher-yield USDC vault · lends against PTs, synthetic dollars and cbXRP",
+    "body": "yoUSD Edge is YO Protocol's riskier USDC vault, an operator-managed ERC-4626 that YO itself rates 'moderate'. It lends USDC and USDG on markets whose collateral is Pendle PT-reUSD, fxSAVE, syrupUSDG and cbXRP. Those collaterals are yield-bearing synthetic dollars, PTs and an alt, which is a layer of risk yoUSD does not take. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "backing": "USDC and USDG lent against PT-reUSD, fxSAVE, syrupUSDG, cbXRP (mostly Ethereum)",
+    "yieldSource": "Interest paid by borrowers against riskier collateral",
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
+  },
   "Yield Optimizer USD::YOUSD": {
-    "what": "YO USD stablecoin",
-    "source": "derived"
+    "what": "YO USDC vault · lends USDC on lending markets against cbBTC, WETH and wstETH",
+    "body": "yoUSD is the share token of YO Protocol's USDC vault, an operator-managed ERC-4626. YO deploys the USDC into overcollateralized lending markets, mostly on Base, borrowed against cbBTC, WETH and wstETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "backing": "USDC lent on overcollateralized markets (Base ~97%, Ethereum, Arbitrum)",
+    "yieldSource": "Interest paid by borrowers on the lending markets YO allocates to",
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
+  },
+  "Yield Optimizer yoloETH::YOLOETH": {
+    "what": "Deprecated YO ETH vault · paused with zero supply",
+    "body": "yoloETH was a YO Protocol WETH vault. Its contract is paused, it has no supply and no assets, its share price has stayed at 1.0 since mid-2026, and YO's vault list no longer includes it.",
+    "backing": "None (empty)",
+    "yieldSource": null,
+    "redemption": "None: the vault is paused",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "verify": "Deprecated: paused, zero supply",
+    "source": "curated"
   },
   "Yield TRYB::YTRYB": {
     "what": "BiLira USD stablecoin",
@@ -27394,9 +27527,40 @@
     "what": "Pendle standardized wrapper (SY) of yoEUR",
     "source": "derived"
   },
+  "yoTest::yoTest": {
+    "what": "YO's test USDC vault · experimental strategy, $1M cap",
+    "body": "yoTest is a USDC vault YO Protocol runs as a test, with a $1M deposit cap and a 'moderate' rating from YO. It holds live deposits (about $14k in October 2026) lent on Ethereum and HyperEVM against PT-reUSD, WHYPE, kHYPE and fxSAVE. A test product, with no commitment that it will be maintained.",
+    "backing": "USDC lent on Ethereum and HyperEVM against PT-reUSD, WHYPE, kHYPE, fxSAVE",
+    "yieldSource": "Interest paid by borrowers",
+    "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "verify": "Test vault: YO names it a test product; do not treat it as a maintained vault",
+    "source": "curated"
+  },
   "yoUSD Base::SY-yoUSD": {
     "what": "Pendle standardized wrapper (SY) of yoUSD",
     "source": "derived"
+  },
+  "yoUSDT::yoUSDT": {
+    "what": "USDT entry to YO's yoUSD · forwards 95% of deposits into yoUSD, priced as yoUSD",
+    "body": "yoUSDT is a YO Protocol vault on Ethereum that takes USDT deposits, forwards 95% of each deposit into the yoUSD vault, and keeps 5% as USDT for redemptions. Its shares are priced from yoUSD's share price, so a holder earns yoUSD's yield. Small: about $13k in October 2026.",
+    "backing": "USDT, 95% forwarded into yoUSD",
+    "yieldSource": "yoUSD's lending yield",
+    "redemption": "Instant from the 5% USDT buffer; anything larger is queued until YO's operator fulfils it",
+    "issuer": "YO Protocol",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats"
+    ],
+    "updated": "2026-10-16",
+    "confidence": "high",
+    "source": "curated"
   },
   "ysUSDC Ethereum::SY-ysUSDC": {
     "what": "Pendle standardized wrapper (SY) of ysUSDC",

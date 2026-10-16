@@ -328,4 +328,39 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Exponent Senior AUTO::srAUTO::solana': { underlying: 'AUTO', base: 'USD' },
   'Exponent Senior ONyc::srONyc::solana': { underlying: 'ONyc', base: 'USD' },
   'Exponent Senior nOPAL::srnOPAL::solana': { underlying: 'nOPAL', base: 'USD' },
+
+  // --- 2026-10-16 earn integrations (lending-sdks registryEthStablesA / EthSavingsB /
+  // EthStructuredC / L2sD / Jarvis). Each is a margin-fetcher savings row; the keys are the
+  // stored groups verbatim (the yield fetchers key the same strings).
+  //
+  // Credit-book caveat, the syrupUSDC line above: SIERRA (OpenTrade LYT pool — CLO/CP/basis
+  // book), sAID (GAIB — off-chain AI-infrastructure financing) and sUSDfr (Forest Road — one
+  // originator's specialty-finance credit) are operator-run credit, admitted here because the
+  // depositor's position takes no allocation decision of its own and every exit pays the
+  // underlying at NAV; the credit risk lives in risk-data (all three score 4).
+  // Deliberately NOT here: Piku USP (the "USP actively-managed" exclusion above — a
+  // fund-of-funds over synthetic dollars, TRY carry and FX-arbitrage vaults), Solstice stSLX
+  // (SLX-denominated: no fiat `base`, the spETH rule), Alchemix mixUSDC / mixWETH (strategy
+  // vaults, the Vesper precedent).
+  'Sierra::SIERRA::1::0': { underlying: 'USDC', base: 'USD' }, // Ethereum-native pool 0xbceb…; the Avalanche OFT keeps `Sierra::SIERRA`
+  'Staked Axis USD::SUSDX': { underlying: 'USDx', base: 'USD' }, // Axis, NOT Stables Labs' bare `SUSDX`
+  'GAIB sAID::SAID': { underlying: 'AID', base: 'USD' },
+  'Staked Forest Road USDfr::SUSDFR': { underlying: 'USDfr', base: 'USD' },
+  'sBold::sBOLD': { underlying: 'BOLD', base: 'USD' },
+  'Wrapped OUSD::WOUSD': { underlying: 'OUSD', base: 'USD' },
+  'Savings USG::sUSG': { underlying: 'USG', base: 'USD' },
+  'aptUSD::APTUSD': { underlying: 'alqUSD', base: 'USD' },
+  // Royco v2 tranches over apyUSD — the junior is first-loss capital (registered `volatile` in
+  // margin-fetcher), included on the Strata-junior / 3Jane sUSD3 rule: `savings` classifies
+  // the WRAPPER and its money, never the principal.
+  'Royco Senior Tranche apyUSD::ROY-ST-apyUSD': { underlying: 'apyUSD', base: 'USD' },
+  'Royco Junior Tranche apyUSD::ROY-JT-apyUSD': { underlying: 'apyUSD', base: 'USD' },
+  // Unitas sUSDu (BNB) — StakedUSDeV2 clone over USDu.
+  'Staked USDu::sUSDu': { underlying: 'USDu', base: 'USD' },
+  // Jarvis sjEUR (Base) — 4626 over jEUR, a Jarvis Synthereum EURO synthetic: `base: 'EUR'`.
+  'Super Jarvis Synthetic Euro::sjEUR': { underlying: 'jEUR', base: 'EUR' },
+  // Loopscale lending vault over USD.infra (Solana; curator and sole borrower DAWN). A curated
+  // lending vault is the steakUSDC shape; admitted because it lends one dollar to one
+  // borrower on fixed terms rather than allocating across markets.
+  'sUSD.infra::sUSD.infra::solana': { underlying: 'USD.infra', base: 'USD' },
 }

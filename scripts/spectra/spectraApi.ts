@@ -92,6 +92,23 @@ function isSpectraWrapper(ibt: SpectraToken): boolean {
   return name.startsWith('spectra erc4626') || symbol.startsWith('sw-')
 }
 
+/**
+ * Spectra wrappers verified to be EXACTLY 1:1 with their `baseIbt`, keyed
+ * `"<chainId>:<wrapper>"` → the base IBT. Emitted as `props.receipt` so
+ * margin-fetcher's `propagateReceiptYields` carries the base IBT's rate onto
+ * the wrapper's own group (a Spectra wrapper keeps its own group by the rule
+ * above, so the yield join cannot see through it otherwise). Curated, never
+ * derived: most wrappers are NOT 1:1 (a wrapper over a rebasing or 4626 vault
+ * accrues against it), and a wrong entry would hand a wrapper someone else's
+ * rate.
+ */
+const SPECTRA_RECEIPTS: Record<string, string> = {
+  // Flare sw-sFLR over Sceptre sFLR — `previewWrap(1e18) == previewUnwrap(1e18)
+  // == 1e18` and wrapper `totalSupply` == the sFLR it holds (68,111,835.45 on
+  // both sides), read 2026-10-16 (lending-sdks spectraE).
+  '14:0xb9003d5bed06afd570139d21c64817298dd47ec1': '0x12e605bc104e93b45e1ad99f9e555f659051c2bb',
+}
+
 /** Fetch one network's listing. A failure is logged and yields nothing. */
 async function fetchNetwork(network: string): Promise<SpectraMarket[]> {
   const url = `https://app.spectra.finance/api/v1/${network}/pools`
@@ -117,7 +134,11 @@ export interface SpectraTokenEntry {
   decimals: number
   logoURI?: string
   tags?: string[]
-  props?: { spectra: SpectraProps }
+  props?: {
+    spectra: SpectraProps
+    /** 1:1 wrapper → its base IBT ({@link SPECTRA_RECEIPTS}); same shape as `TokenProps.receipt`. */
+    receipt?: { protocol: 'spectra-4626-wrapper'; underlying: string }
+  }
 }
 
 export interface SpectraProps {
@@ -278,6 +299,9 @@ export async function processSpectraAssets(): Promise<SpectraAssetList> {
               baseIbtAddress: shared.baseIbtAddress,
               underlyingAsset: underlying,
             },
+            ...(SPECTRA_RECEIPTS[`${chainId}:${ibt}`] && {
+              receipt: { protocol: 'spectra-4626-wrapper', underlying: SPECTRA_RECEIPTS[`${chainId}:${ibt}`] },
+            }),
           },
         })
       }

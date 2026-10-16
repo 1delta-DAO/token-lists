@@ -243,6 +243,20 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
     },
   },
 
+  // Unitas XGLD on BNB (0xe601…ac91, 6-decimal OFT; Base 0xea95…5882 is a dust mirror) —
+  // "Unitas Gold": XAUt held as Bybit off-exchange collateral and run delta-neutral, NAV in
+  // XAUt per XGLD (`XGLDExchangeRate`, 1e6 precision; 1.0102 read 2026-10-16), so the money is
+  // GOLD. Mint and the 7-day redemption are whitelisted; the public route is the PancakeSwap
+  // XAUt/XGLD pool (lending-sdks registryL2sD `secondaryMarketOnly`). No name rule matches it.
+  '56': {
+    '0xe60106a5cab7e7c64830919d36ab20caaf50ac91': {
+      type: 'commodity',
+      subType: 'gold',
+      issuer: 'unitas',
+      underlying: 'XAU',
+    },
+  },
+
   // Circle (ex-Hashnote) USYC on Base — listed as "US Yield Coin", the token's own `name()`
   // (read 2026-10-14: name "US Yield Coin", symbol USYC, 6 decimals, an EIP-1967 proxy over an
   // ~11.5 kB implementation — the same answers as USYC on Ethereum and BNB). Same row as
@@ -253,6 +267,13 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
       subType: 'money-market',
       issuer: 'circle',
       underlying: 'US T-Bill',
+    },
+    // Unitas XGLD's Base OFT mirror (dust, 0.0188 XGLD read 2026-10-16) — same row as BNB's.
+    '0xea953ea6634d55dac6697c436b1e81a679db5882': {
+      type: 'commodity',
+      subType: 'gold',
+      issuer: 'unitas',
+      underlying: 'XAU',
     },
   },
 

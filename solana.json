@@ -26196,7 +26196,11 @@
       "logoURI": "https://res.cloudinary.com/tnzampcs/image/upload/f_auto,q_auto/sUSD.infra_icon",
       "assetGroup": "sUSD.infra::sUSD.infra::solana",
       "currencyId": "sUSD.infra::sUSD.infra",
-      "props": { "solana": { "tokenProgram": "token-2022" } }
+      "props": {
+        "savings": { "underlying": "USD.infra", "base": "USD" },
+        "issuer": { "id": "dawn", "name": "DAWN", "kind": "protocol" },
+        "solana": { "tokenProgram": "token-2022" }
+      }
     },
     "GvJ8HtPYqaNDTn21NVjzvGwAGtASPCWctSMhQJ9uQzZb": {
       "chainId": "solana",
@@ -26311,7 +26315,10 @@
       "logoURI": "https://app.solstice.finance/solstice_slx_staking_icon.svg",
       "assetGroup": "Solstice stSLX::stSLX::solana",
       "currencyId": "Solstice stSLX::stSLX",
-      "props": { "solana": { "tokenProgram": "token-2022" } }
+      "props": {
+        "issuer": { "id": "solstice", "name": "Solstice", "kind": "protocol" },
+        "solana": { "tokenProgram": "token-2022" }
+      }
     },
     "GxdTh6udNstGmLLk9ztBb6bkrms7oLbrJp5yzUaVpump": {
       "chainId": "solana",
@@ -70253,6 +70260,21 @@
       "props": {
         "solana": { "tokenProgram": "spl-token" },
         "lst": { "type": "staking", "asset": "SOL" }
+      }
+    },
+    "FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Fragmetric Restaked SOL",
+      "address": "FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo",
+      "symbol": "fragSOL",
+      "logoURI": "https://fragmetric-assets.s3.ap-northeast-2.amazonaws.com/fragsol.png",
+      "assetGroup": "Fragmetric Restaked SOL::fragSOL::solana",
+      "currencyId": "Fragmetric Restaked SOL::fragSOL",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "lst": { "type": "restaking", "asset": "SOL", "provider": "fragmetric" },
+        "issuer": { "id": "fragmetric", "name": "Fragmetric", "kind": "protocol" }
       }
     }
   },

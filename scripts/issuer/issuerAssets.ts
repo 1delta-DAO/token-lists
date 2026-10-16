@@ -257,8 +257,8 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Wrapped USDX::USDX': { id: 'stables-labs', name: 'Stables Labs', kind: 'protocol' },
   'Wrapped sUSDX::sUSDX': { id: 'stables-labs', name: 'Stables Labs', kind: 'protocol' },
   // Axis — "Staked Axis USD" (0xeb89…); its `asset()` 0xa1fa… answers only
-  // `name() == 'USDx'`, which is too weak to key `USDx::USDx` on, so only the
-  // named share is attributed.
+  // `name() == 'USDx'`, which is too weak to key `USDx::USDx` on — so that group
+  // is aliased to `Axis USD::USDx` (assetGroupUnifier.ts), attributed below.
   'Staked Axis USD::SUSDX': { id: 'axis', name: 'Axis', kind: 'protocol' },
 
   // --- Largest unattributed stable/savings groups (reconciliation gate) ----
@@ -849,6 +849,49 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   // that name (SAVEDpx3…, and sctmpFDK… which the list numbers `::0`).
   'Save Staked SOL::saveSOL::solana': { id: 'save', name: 'Save', kind: 'protocol' },
   'Save Staked SOL::saveSOL::solana::0': { id: 'save', name: 'Save', kind: 'protocol' },
+
+  // --- 2026-10-16 earn integrations (lending-sdks; the rows carry `savings` / `stablecoin`,
+  // so the reconciliation gate wants a desk). Every key is a full `Name::SYMBOL` group whose
+  // name is the desk's own product name, so no ticker does the attributing. ---
+  // Axis USDx — `USDx::USDx` is aliased to this qualified group (assetGroupUnifier.ts); the
+  // old note above (too weak to key the bare form) is why the alias exists.
+  'Axis USD::USDx': { id: 'axis', name: 'Axis', kind: 'protocol' },
+  // Sierra — the Ethereum-native LYT pool (0xbceb…, collision-suffixed) and the Avalanche
+  // pool with its Ethereum OFT (`Sierra::SIERRA`, 43114 0x6e60… / 1 0x6bf7…). Two pools, one
+  // desk (Sierra Reserve Ltd, reserves in OpenTrade vaults).
+  'Sierra::SIERRA::1::0': { id: 'sierra', name: 'Sierra', kind: 'protocol' },
+  'Sierra::SIERRA': { id: 'sierra', name: 'Sierra', kind: 'protocol' },
+  // Forest Road USDfr / sUSDfr (Ethereum).
+  'Forest Road USDfr::USDFR': { id: 'forest-road', name: 'Forest Road', kind: 'protocol' },
+  'Staked Forest Road USDfr::SUSDFR': { id: 'forest-road', name: 'Forest Road', kind: 'protocol' },
+  // Tangent USG (Ethereum CDP dollar, TANGENT.md) and its Yearn-v3 savings vault sUSG.
+  'Tangent USD::USG': { id: 'tangent', name: 'Tangent', kind: 'protocol' },
+  'Savings USG::sUSG': { id: 'tangent', name: 'Tangent', kind: 'protocol' },
+  // Apyx alqUSD (T-bill dollar) and aptUSD (an `ApyUSD` instance over it), Ethereum.
+  'alqUSD::ALQUSD': { id: 'apyx', name: 'Apyx', kind: 'protocol' },
+  'aptUSD::APTUSD': { id: 'apyx', name: 'Apyx', kind: 'protocol' },
+  // Royco v2 tranches over apyUSD — the tranche is Royco's instrument; the apyUSD it holds
+  // is Apyx's (the exposure walk adds that).
+  'Royco Senior Tranche apyUSD::ROY-ST-apyUSD': { id: 'royco', name: 'Royco', kind: 'protocol' },
+  'Royco Junior Tranche apyUSD::ROY-JT-apyUSD': { id: 'royco', name: 'Royco', kind: 'protocol' },
+  // Unitas (BNB): sUSDu over USDu, and XGLD (gold, XAUt collateral run delta-neutral).
+  'Staked USDu::sUSDu': { id: 'unitas', name: 'Unitas', kind: 'protocol' },
+  'Unitas Gold::XGLD': { id: 'unitas', name: 'Unitas', kind: 'protocol' },
+  // Jarvis sjEUR (Base) — Jarvis' staked jEUR.
+  'Super Jarvis Synthetic Euro::sjEUR': { id: 'jarvis', name: 'Jarvis', kind: 'protocol' },
+  // HyperEVM vaults: Liminal limUSD, Harmonix haHYPE, Kinetiq vkHYPE (a Veda vault over kHYPE).
+  'limUSD::LIMUSD': { id: 'liminal', name: 'Liminal', kind: 'protocol' },
+  'haHYPE::haHYPE': { id: 'harmonix', name: 'Harmonix', kind: 'protocol' },
+  'Kinetiq Earn Vault::vkHYPE': { id: 'kinetiq', name: 'Kinetiq', kind: 'protocol' },
+  // Kaito sKAITO (Base) — staked KAITO.
+  'Staked KAITO::sKAITO': { id: 'kaito', name: 'Kaito', kind: 'protocol' },
+  // Sceptre sFLR (Flare) — also reachable through `lst.provider` once `npm run issuer` reruns.
+  'Sceptre Staked FLR::SFLR': { id: 'sceptre', name: 'Sceptre', kind: 'protocol' },
+  // Solana: Solstice stSLX (a GLAM vault over SLX), DAWN's sUSD.infra (a Loopscale lending
+  // vault whose curator and sole borrower is DAWN), Fragmetric fragSOL (SOLANA_EXTRA_MINTS).
+  'Solstice stSLX::stSLX::solana': { id: 'solstice', name: 'Solstice', kind: 'protocol' },
+  'sUSD.infra::sUSD.infra::solana': { id: 'dawn', name: 'DAWN', kind: 'protocol' },
+  'Fragmetric Restaked SOL::fragSOL::solana': { id: 'fragmetric', name: 'Fragmetric', kind: 'protocol' },
 }
 
 /**

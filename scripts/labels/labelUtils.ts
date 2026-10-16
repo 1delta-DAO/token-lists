@@ -89,6 +89,12 @@ const IMPOSTOR_EXEMPT = new Set<string>([
   // Web 3 Dollar (0x0d86…). 3Jane's sUSD3 (0xf689…) answers `asset()` = this
   // address, and GROUP_ALIAS already folds it into `3Jane USD3::USD3`.
   '1:0x056b269eb1f75477a8666ae8c7fe01b64dd55ecc',
+  // Axis USDx — `name() == 'USDx'`, and CoinGecko's chain-1 USDX is Stables Labs'
+  // (0xf352…) / Hex Trust's (0xf875…). Axis' Staked Axis USD (0xeb89…) answers
+  // `asset()` = this address (read 2026-10-16), and GROUP_ALIAS qualifies its
+  // group to `Axis USD::USDx`. Without the exemption the stablecoin / issuer
+  // overlays never reach it.
+  '1:0xa1fa7777974312f7d801a8880714a218f76233f8',
 ])
 
 export function makeImpostorCheck(): (chainId: string, address: string, name?: string, symbol?: string) => boolean {

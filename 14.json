@@ -620,6 +620,7 @@
       "assetGroup": "Spectra ERC4626 Wrapper: Staked FLR Flare::sw-sFLR",
       "currencyId": "Spectra ERC4626 Wrapper: Staked FLR Flare::sw-sFLR",
       "props": {
+        "receipt": { "protocol": "spectra-4626-wrapper", "underlying": "0x12e605bc104e93b45e1ad99f9e555f659051c2bb" },
         "spectra": {
           "tokenType": "IBT",
           "ibtAddress": "0xb9003d5bed06afd570139d21c64817298dd47ec1",
@@ -1222,7 +1223,11 @@
       "logoURI": "https://assets.coingecko.com/coins/images/38940/thumb/sFLR.png?1719569593",
       "assetGroup": "Sceptre Staked FLR::SFLR",
       "currencyId": "Sceptre Staked FLR::SFLR",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "lst": { "type": "staking", "asset": "FLR", "provider": "sceptre" },
+        "issuer": { "id": "sceptre", "name": "Sceptre", "kind": "protocol" },
+        "risk": { "score": 2, "source": "vault_inherit" }
+      }
     },
     "0x0b38e83b86d491735feaa0a791f65c2b99535396": {
       "chainId": "14",

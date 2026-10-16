@@ -114,6 +114,18 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   'ether.fi USD::eUSD': { base: 'USD' },
   //  - 3Jane USD3 (1: 0x056b269e…, IMPOSTOR_EXEMPT) — `name()` is the bare ticker.
   '3Jane USD3::USD3': { base: 'USD' },
+  //  - Axis USDx (1: 0xa1fa…33f8). The feed carries it as `USDx::USDx`; GROUP_ALIAS now
+  //    qualifies that to `Axis USD::USDx`, the group the stored row holds — keyed so the
+  //    overlay survives the rename before the feed (risk-data) catches up.
+  'Axis USD::USDx': { base: 'USD' },
+  //  - Forest Road USDfr (1: 0xcc07…f83d) and its staked sUSDfr (0xaf55…e234): a
+  //    specialty-finance-credit dollar; not in the feed.
+  'Forest Road USDfr::USDFR': { base: 'USD' },
+  'Staked Forest Road USDfr::SUSDFR': { base: 'USD' },
+  //  - Tangent USG (1: 0xb1c2…b1b1) — Tangent's CDP dollar (TANGENT.md); not in the feed.
+  'Tangent USD::USG': { base: 'USD' },
+  //  - Apyx alqUSD (1: 0x15c9…9671) — Apyx's T-bill-backed dollar under aptUSD; not in the feed.
+  'alqUSD::ALQUSD': { base: 'USD' },
 }
 
 /**

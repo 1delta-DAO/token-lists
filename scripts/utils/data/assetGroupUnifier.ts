@@ -103,6 +103,20 @@ export const GROUP_ALIAS: Record<string, string> = {
   // split one asset into two groups. Canonical = the uppercase form, matching the
   // majority of chains and the stablecoin overlay key.
   'Tokenised GBP::tGBP': 'Tokenised GBP::TGBP',
+  // YO Protocol vaults — ONE vault per asset at ONE address on Ethereum, Base and
+  // Arbitrum, with one share price (YoOracle) across all of them. CoinGecko lists only
+  // one chain per vault ("Yield Optimizer USD"/YOUSD on Base, …), so every deployment
+  // `onchain-fetch` adds arrives under its on-chain `name()::symbol()`. Arbitrum yoUSD
+  // even answers `yoVaultUSD`. Canonical = the CoinGecko-named group that already holds
+  // the issuer, risk and note overlays. (yoUSDT and yoTest have no CoinGecko row and
+  // keep their on-chain groups.)
+  'yoUSD::yoUSD': 'Yield Optimizer USD::YOUSD',
+  'yoVaultUSD::yoUSD': 'Yield Optimizer USD::YOUSD',
+  'yoETH::yoETH': 'Yield Optimizer ETH::YOETH',
+  'yoBTC::yoBTC': 'Yield Optimizer BTC::YOBTC',
+  'yoEUR::yoEUR': 'Yield Optimizer EUR::yoEUR',
+  'yoUSD Edge::yoUSD Edge': 'Yield Optimizer USD Edge::YOUSDEDGE',
+  'yoloETH::yoloETH': 'Yield Optimizer yoloETH::YOLOETH',
   // BitFi bfBTC — ONE asset at two vanity addresses across eight chains (`0xCdFb…fb15`
   // on 1/1116/200901, `0x623F…d9DF` on 56/8453/43111/1672/239/2345). The external lists
   // uppercase the ticker (`BFBTC`) on 1/56/8453/1116/200901 while the on-chain `symbol()`
@@ -455,6 +469,23 @@ export const GROUP_ALIAS: Record<string, string> = {
   // (the stETH/ETH shape). wsNET is the non-rebasing wrap (sNET × index) and keeps its own
   // group `Wrapped Staked NET::wsNET`; merging it here would price it with NET's feed.
   'Staked NET::sNET': 'NetNet::NET',
+  // Axis USDx (Ethereum 0xa1fa…33f8, the asset under `Staked Axis USD::SUSDX`) — its on-chain
+  // name is the bare ticker "USDx", so it stored the unqualified group `USDx::USDx` in a ticker
+  // space it shares with dForce's USDx and Stables Labs' / Hex Trust's USDX. Qualified to the
+  // issuer's name so no other USDx can ever join it. NOT a merge of two assets.
+  'USDx::USDx': 'Axis USD::USDx',
+  // Strata srUSDat on Monad (0x17b8…b3fa) — a LayerZero OFT of the Ethereum senior tranche
+  // (the Ethereum adapter locks exactly the Monad supply; risk-data 2026-10-16), stored under
+  // its bare on-chain `srUSDat::srUSDat`. Same asset → the Ethereum group, which the savings /
+  // stablecoin / issuer overlays and margin-fetcher's `SRUSDAT_KEY` already key.
+  'srUSDat::srUSDat': 'Strata Senior USDat::SRUSDAT',
+  // Hyperwave hwHLP — ONE OFT at one address (0x9fd7…72d1) on Ethereum and HyperEVM; chain 1
+  // stores `hwHLP::hwHLP` (on-chain name "hwHLP"), 999 `Hyperwave HLP::hwHLP`. Canonical = the
+  // HyperEVM (home-chain, CoinGecko-named) form.
+  'hwHLP::hwHLP': 'Hyperwave HLP::hwHLP',
+  // Swell swETH — Arbitrum's bridged row (0xbc01…cf18) stores the on-chain casing `swETH`,
+  // Ethereum the CoinGecko `SWETH`. Canonical = Ethereum's, the LST / issuer / yield key.
+  'Swell Ethereum::swETH': 'Swell Ethereum::SWETH',
 }
 
 export function aliasAssetGroup(gr: string) {

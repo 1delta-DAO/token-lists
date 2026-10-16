@@ -64,6 +64,10 @@ export const LST_GROUP_MANUAL: LstGroupMap = {
   'ynETH MAX::YNETHX': { type: 'restaking', asset: 'ETH', provider: 'yieldnest' },
   'ynETH MAX::ynETHx': { type: 'restaking', asset: 'ETH', provider: 'yieldnest' },
   'YieldNest Restaked ETH::YNETH': { type: 'restaking', asset: 'ETH', provider: 'yieldnest' },
+  // Fragmetric fragSOL (Solana, FRAGSEth…, SOLANA_EXTRA_MINTS) — Jupiter tags it `unknown`, so
+  // the `fragmetric-sol` name rule (gated on an `lst` / `yield` tag) never fires for it; its
+  // wrapper wfragSOL gets the same props through that rule.
+  'Fragmetric Restaked SOL::fragSOL::solana': { type: 'restaking', asset: 'SOL', provider: 'fragmetric' },
 }
 
 export const LST_GROUP_MAP: LstGroupMap = { ...loadSnapshot(), ...LST_GROUP_MANUAL }

@@ -228,6 +228,8 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   // Staked / wrapped collateral on Loopscale vault offers and loops.
   WFRGB49tP8CdKubqCdt5Spo2BdGS4BpgoinNER5TYUm:
     'Loopscale zBTC vault collateral (wfragBTC); mint authority owned by Fragmetric (fragnAis…), icon on fragmetric-assets',
+  FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo:
+    'Fragmetric fragSOL — the receipt wfragSOL wraps 1:1 (Exponent PT-fragSOL underlying); Token-2022, mint authority = the Fragmetric fund 3TK9fNeP…, icon on fragmetric-assets',
   CHa1NzoGsJ8wAEQUBjwtyUcv7rQBDW2yk3c8LvqaA8Lb: 'Loopscale "chainSOL / SOL" loop collateral (Chainflow Staked SOL)',
   G4L8PeENzfepB3jBpDKJ5McnHbXA7nh8gQQsZJQptVM7:
     'Loopscale "sUSD.tel / USDG" loop collateral (Dawn telecom-revenue vault); Metaplex metadata on its own pinata gateway',

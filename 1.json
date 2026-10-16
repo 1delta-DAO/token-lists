@@ -70023,7 +70023,11 @@
       "address": "0xab2ab53e1e2e2c5d7202918ec8c873712bcc4a2d",
       "symbol": "ROY-JT-apyUSD",
       "assetGroup": "Royco Junior Tranche apyUSD::ROY-JT-apyUSD",
-      "currencyId": "Royco Junior Tranche apyUSD::ROY-JT-apyUSD"
+      "currencyId": "Royco Junior Tranche apyUSD::ROY-JT-apyUSD",
+      "props": {
+        "savings": { "underlying": "apyUSD", "base": "USD" },
+        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" }
+      }
     },
     "0xf6ebea08a0dfd44825f67fa9963911c81be2a947": {
       "chainId": "1",
@@ -70070,7 +70074,11 @@
       "symbol": "ROY-ST-apyUSD",
       "assetGroup": "Royco Senior Tranche apyUSD::ROY-ST-apyUSD",
       "currencyId": "Royco Senior Tranche apyUSD::ROY-ST-apyUSD",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "savings": { "underlying": "apyUSD", "base": "USD" },
+        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x36bdaefd92579da58bfe207e16dafa39835bbcb3": {
       "chainId": "1",
@@ -94255,6 +94263,7 @@
       "assetGroup": "Wrapped OUSD::WOUSD",
       "currencyId": "Wrapped OUSD::WOUSD",
       "props": {
+        "savings": { "underlying": "OUSD", "base": "USD" },
         "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "origin", "name": "Origin", "kind": "protocol" }
       }
@@ -165892,6 +165901,7 @@
       "assetGroup": "sBold::sBOLD",
       "currencyId": "sBold::sBOLD",
       "props": {
+        "savings": { "underlying": "BOLD", "base": "USD" },
         "risk": {
           "score": 3,
           "category": "YIELD_STABLE",
@@ -168914,7 +168924,7 @@
       "address": "0x9fd7466f987fd4c45a5bbde22ed8aba5bc8d72d1",
       "symbol": "hwHLP",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x9fd7466f987fd4c45a5bbde22ed8aba5bc8d72d1.png",
-      "assetGroup": "hwHLP::hwHLP",
+      "assetGroup": "Hyperwave HLP::hwHLP",
       "currencyId": "hwHLP::hwHLP",
       "props": {
         "permit": { "type": 1, "version": "1" },
@@ -175858,6 +175868,7 @@
       "assetGroup": "Sierra::SIERRA",
       "currencyId": "Sierra::SIERRA",
       "props": {
+        "issuer": { "id": "sierra", "name": "Sierra", "kind": "protocol" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -177403,6 +177414,7 @@
       "assetGroup": "GAIB sAID::SAID",
       "currencyId": "GAIB sAID::SAID",
       "props": {
+        "savings": { "underlying": "AID", "base": "USD" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "gaib", "name": "GAIB", "kind": "protocol" }
       }
@@ -182130,7 +182142,11 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xf17d6f98a5c6eaa99d149079984119e0a4ef6900.png",
       "assetGroup": "Savings USG::sUSG",
       "currencyId": "Savings USG::sUSG",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "savings": { "underlying": "USG", "base": "USD" },
+        "issuer": { "id": "tangent", "name": "Tangent", "kind": "protocol" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1": {
       "chainId": "1",
@@ -182140,7 +182156,11 @@
       "symbol": "USG",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1.png",
       "assetGroup": "Tangent USD::USG",
-      "currencyId": "Tangent USD::USG"
+      "currencyId": "Tangent USD::USG",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tangent", "name": "Tangent", "kind": "protocol" }
+      }
     },
     "0x5f602133653237f362eb69826ba8237f4f7ab0c3": {
       "chainId": "1",
@@ -183741,7 +183761,11 @@
       "symbol": "SIERRA",
       "logoURI": "https://assets.coingecko.com/coins/images/102174862/thumb/Sierra_Icon-Light_%281%29.png?1785234262",
       "assetGroup": "Sierra::SIERRA::1::0",
-      "currencyId": "Sierra::SIERRA"
+      "currencyId": "Sierra::SIERRA",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "sierra", "name": "Sierra", "kind": "protocol" }
+      }
     },
     "0x7b9f36a2f331ece03a7483d2713cfd806f9beef2": {
       "chainId": "1",
@@ -184067,9 +184091,11 @@
       "address": "0xa1fa7777974312f7d801a8880714a218f76233f8",
       "symbol": "USDx",
       "logoURI": "https://assets.coingecko.com/coins/images/102172783/thumb/usdx-logo-transparent-200.png?1787893161",
-      "assetGroup": "USDx::USDx",
+      "assetGroup": "Axis USD::USDx",
       "currencyId": "USDx::USDx",
       "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "axis", "name": "Axis", "kind": "protocol" },
         "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
@@ -185446,7 +185472,11 @@
       "symbol": "APTUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102176657/thumb/aptusd.png?1788419762",
       "assetGroup": "aptUSD::APTUSD",
-      "currencyId": "aptUSD::APTUSD"
+      "currencyId": "aptUSD::APTUSD",
+      "props": {
+        "savings": { "underlying": "alqUSD", "base": "USD" },
+        "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
+      }
     },
     "0xbd49537cc9105e8c1651ed12b94cd9a3d79bf3d9": {
       "chainId": "1",
@@ -185518,6 +185548,7 @@
       "assetGroup": "Staked Axis USD::SUSDX",
       "currencyId": "Staked Axis USD::SUSDX",
       "props": {
+        "savings": { "underlying": "USDx", "base": "USD" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "axis", "name": "Axis", "kind": "protocol" }
       }
@@ -186352,7 +186383,11 @@
       "symbol": "USDFR",
       "logoURI": "https://assets.coingecko.com/coins/images/102178570/thumb/photo_2026-09-16_05.42.20.jpeg?1790017548",
       "assetGroup": "Forest Road USDfr::USDFR",
-      "currencyId": "Forest Road USDfr::USDFR"
+      "currencyId": "Forest Road USDfr::USDFR",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "forest-road", "name": "Forest Road", "kind": "protocol" }
+      }
     },
     "0x2b02da0a074b690075f0b8e6921e2526b0ff7896": {
       "chainId": "1",
@@ -186587,7 +186622,12 @@
       "symbol": "SUSDFR",
       "logoURI": "https://assets.coingecko.com/coins/images/102178928/thumb/Gemini_Generated_Image_yausquyausquyaus.jpeg?1790689840",
       "assetGroup": "Staked Forest Road USDfr::SUSDFR",
-      "currencyId": "Staked Forest Road USDfr::SUSDFR"
+      "currencyId": "Staked Forest Road USDfr::SUSDFR",
+      "props": {
+        "savings": { "underlying": "USDfr", "base": "USD" },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "forest-road", "name": "Forest Road", "kind": "protocol" }
+      }
     },
     "0x9102a20f4ad56026eeffa8e121b14a9f7575f43f": {
       "chainId": "1",
@@ -187059,6 +187099,100 @@
         "isNative": true,
         "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
       }
+    },
+    "0x0000000f2eb9f69274678c76222b35eec7588a65": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "yoUSD",
+      "address": "0x0000000f2eb9f69274678c76222b35eec7588a65",
+      "symbol": "yoUSD",
+      "assetGroup": "Yield Optimizer USD::YOUSD",
+      "currencyId": "Yield Optimizer USD::YOUSD"
+    },
+    "0x3a43aec53490cb9fa922847385d82fe25d0e9de7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "yoETH",
+      "address": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
+      "symbol": "yoETH",
+      "assetGroup": "Yield Optimizer ETH::YOETH",
+      "currencyId": "Yield Optimizer ETH::YOETH"
+    },
+    "0xbcbc8cb4d1e8ed048a6276a5e94a3e952660bcbc": {
+      "chainId": "1",
+      "decimals": 8,
+      "name": "yoBTC",
+      "address": "0xbcbc8cb4d1e8ed048a6276a5e94a3e952660bcbc",
+      "symbol": "yoBTC",
+      "assetGroup": "Yield Optimizer BTC::YOBTC",
+      "currencyId": "Yield Optimizer BTC::YOBTC"
+    },
+    "0x50c749ae210d3977adc824ae11f3c7fd10c871e9": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "yoEUR",
+      "address": "0x50c749ae210d3977adc824ae11f3c7fd10c871e9",
+      "symbol": "yoEUR",
+      "assetGroup": "Yield Optimizer EUR::yoEUR",
+      "currencyId": "Yield Optimizer EUR::yoEUR"
+    },
+    "0xb9a7da9e90d3b428083bae04b860faa6325b721e": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "yoUSDT",
+      "address": "0xb9a7da9e90d3b428083bae04b860faa6325b721e",
+      "symbol": "yoUSDT",
+      "assetGroup": "yoUSDT::yoUSDT",
+      "currencyId": "yoUSDT::yoUSDT"
+    },
+    "0xcf0fe5ab46cf260eb281650e8f999237684846aa": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "yoTest",
+      "address": "0xcf0fe5ab46cf260eb281650e8f999237684846aa",
+      "symbol": "yoTest",
+      "assetGroup": "yoTest::yoTest",
+      "currencyId": "yoTest::yoTest"
+    },
+    "0x15c91ebccb2c659b3a208214a103cbcb9d5f9671": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "alqUSD",
+      "address": "0x15c91ebccb2c659b3a208214a103cbcb9d5f9671",
+      "symbol": "alqUSD",
+      "assetGroup": "alqUSD::ALQUSD",
+      "currencyId": "alqUSD::ALQUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
+      }
+    },
+    "0xcd3c0f51798d1daa92fb192e57844ae6cee8a6c7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Mellow stRATEGY",
+      "address": "0xcd3c0f51798d1daa92fb192e57844ae6cee8a6c7",
+      "symbol": "strETH",
+      "assetGroup": "Mellow stRATEGY::strETH",
+      "currencyId": "Mellow stRATEGY::strETH"
+    },
+    "0x606462126e4bd5c4d153fe09967e4c46c9c7fecf": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Aladdin sdPENDLE",
+      "address": "0x606462126e4bd5c4d153fe09967e4c46c9c7fecf",
+      "symbol": "asdPENDLE",
+      "assetGroup": "Aladdin sdPENDLE::asdPENDLE",
+      "currencyId": "Aladdin sdPENDLE::asdPENDLE"
+    },
+    "0xb8a451107a9f87fde481d4d686247d6e43ed715e": {
+      "chainId": "1",
+      "decimals": 20,
+      "name": "Fusion stETH looping Ethereum",
+      "address": "0xb8a451107a9f87fde481d4d686247d6e43ed715e",
+      "symbol": "fusnstETH",
+      "assetGroup": "Fusion stETH looping Ethereum::fusnstETH",
+      "currencyId": "Fusion stETH looping Ethereum::fusnstETH"
     }
   },
   "mainTokens": [

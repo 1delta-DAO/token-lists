@@ -11608,7 +11608,10 @@
       "address": "0x548d3b444da39686d1a6f1544781d154e7cd1ef7",
       "symbol": "sKAITO",
       "assetGroup": "Staked KAITO::sKAITO",
-      "currencyId": "Staked KAITO::sKAITO"
+      "currencyId": "Staked KAITO::sKAITO",
+      "props": {
+        "issuer": { "id": "kaito", "name": "Kaito", "kind": "protocol" }
+      }
     },
     "0x665062e427d53f3f1b851c12f26e4ccfabf8636b": {
       "chainId": "8453",
@@ -57160,6 +57163,61 @@
       "props": {
         "isNative": true,
         "wrapped": "0x4200000000000000000000000000000000000006"
+      }
+    },
+    "0x5dd8bfa6c5c68d05d25ef6143e05c11e26c4cdb7": {
+      "chainId": "8453",
+      "decimals": 6,
+      "name": "yoUSD Edge",
+      "address": "0x5dd8bfa6c5c68d05d25ef6143e05c11e26c4cdb7",
+      "symbol": "yoUSD Edge",
+      "assetGroup": "Yield Optimizer USD Edge::YOUSDEDGE",
+      "currencyId": "Yield Optimizer USD Edge::YOUSDEDGE"
+    },
+    "0xe92eb2bcf6425ca3b2967e33eb9a770ff89c1243": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "yoloETH",
+      "address": "0xe92eb2bcf6425ca3b2967e33eb9a770ff89c1243",
+      "symbol": "yoloETH",
+      "assetGroup": "Yield Optimizer yoloETH::YOLOETH",
+      "currencyId": "Yield Optimizer yoloETH::YOLOETH"
+    },
+    "0xcf0fe5ab46cf260eb281650e8f999237684846aa": {
+      "chainId": "8453",
+      "decimals": 6,
+      "name": "yoTest",
+      "address": "0xcf0fe5ab46cf260eb281650e8f999237684846aa",
+      "symbol": "yoTest",
+      "assetGroup": "yoTest::yoTest",
+      "currencyId": "yoTest::yoTest"
+    },
+    "0x89cc2a57223fa803852b6b4e65c6e376d49909f9": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Super Jarvis Synthetic Euro",
+      "address": "0x89cc2a57223fa803852b6b4e65c6e376d49909f9",
+      "symbol": "sjEUR",
+      "assetGroup": "Super Jarvis Synthetic Euro::sjEUR",
+      "currencyId": "Super Jarvis Synthetic Euro::sjEUR",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "savings": { "underlying": "jEUR", "base": "EUR" },
+        "issuer": { "id": "jarvis", "name": "Jarvis", "kind": "protocol" }
+      }
+    },
+    "0xea953ea6634d55dac6697c436b1e81a679db5882": {
+      "chainId": "8453",
+      "decimals": 6,
+      "name": "Unitas Gold",
+      "address": "0xea953ea6634d55dac6697c436b1e81a679db5882",
+      "symbol": "XGLD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102173632/thumb/XGLD_200.png?1780589002",
+      "assetGroup": "Unitas Gold::XGLD",
+      "currencyId": "Unitas Gold::XGLD",
+      "props": {
+        "rwa": { "type": "commodity", "subType": "gold", "issuer": "unitas", "underlying": "XAU" },
+        "issuer": { "id": "unitas", "name": "Unitas", "kind": "protocol" }
       }
     }
   },

@@ -418,7 +418,14 @@ export interface TokenProps {
    * this prop is how a consumer gets back to it without the lender's table.
    */
   receipt?: {
-    protocol: 'dolomite-isolation'
+    /**
+     * `spectra-4626-wrapper`: Spectra's `sw-` ERC-4626 wrapper over a share token it holds
+     * 1:1 (Flare sw-sFLR over Sceptre sFLR — `previewWrap(1e18) == previewUnwrap(1e18) ==
+     * 1e18`, wrapper supply == sFLR held). Unlike a Dolomite receipt it IS transferable; it
+     * carries the prop so margin-fetcher's `propagateReceiptYields` copies the underlying's
+     * rate onto the wrapper's own group. Hand-set on the row (no generator derives it).
+     */
+    protocol: 'dolomite-isolation' | 'spectra-4626-wrapper'
     /** the token the receipt wraps 1:1 (same chain, lowercase) */
     underlying: string
   }

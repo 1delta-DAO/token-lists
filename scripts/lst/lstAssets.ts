@@ -34,7 +34,14 @@ export const LST_MANUAL: LstRegistry = {
   // protocols, like weETH/ezETH/rsETH. `asset` is the base staked asset (XRP),
   // not the wrapper (FXRP). Manual because "Firelight stXRP" trips no
   // `classifyRwaLst` rule.
-  '14': { '0x4c18ff3c89632c3dd62e796c0afa5c07c4c1b2b3': { type: 'restaking', asset: 'XRP', provider: 'firelight' } },
+  //
+  // Sceptre sFLR (Flare 14) — FLR liquid staking (a BENQI sAVAX fork plus an instant-redeem
+  // leg); shares, not rebasing, valued by `getPooledFlrByShares`. Manual because "Sceptre
+  // Staked FLR" trips no `classifyRwaLst` rule; stXRP beside it already carried one.
+  '14': {
+    '0x4c18ff3c89632c3dd62e796c0afa5c07c4c1b2b3': { type: 'restaking', asset: 'XRP', provider: 'firelight' },
+    '0x12e605bc104e93b45e1ad99f9e555f659051c2bb': { type: 'staking', asset: 'FLR', provider: 'sceptre' },
+  },
 
   // Monad (143) liquid staking. None of these names trips a `classifyRwaLst`
   // rule ("ShMonad", "gMON", "aPriori Monad LST"), so without an entry every
