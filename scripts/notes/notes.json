@@ -587,18 +587,22 @@
     "verify": "An Aug 2026 independent report flags weak on-chain backing and unattested off-chain gold exposure."
   },
   "msY::msY": {
-    "what": "Main Street yield token · staked msUSD, CME box-spread strategy (collapsed)",
-    "body": "msY is Main Street Finance's strategy token, minted by staking msUSD and marketed as earning delta-neutral yield from CME options box spreads. In June 2026 Accountable ended its reserve verification for Main Street, msUSD lost about 90% of its value and msY fell 70-85%.",
+    "what": "Main Street yield token · ERC-4626 over msUSD (box spreads); collapsed with msUSD",
+    "body": "msY is Main Street Finance's strategy token, an ERC-4626 vault over msUSD with a 7-day cooldown, marketed as earning delta-neutral yield from CME options box spreads. In June 2026 Main Street's proof-of-reserves dashboard went dark and Accountable ended its reserve verification; msUSD fell to about $0.06 and has since traded back to about $0.54. One msY converted to 1.082 msUSD on 2026-10-17, so it is worth about $0.59; the RedStone feed Morpho priced it with has reverted stale since 2026-06-20.",
     "backing": "msUSD (claimed box-spread positions; backing unverified since June 2026)",
-    "yieldSource": "claimed CME options box spreads",
+    "yieldSource": "claimed CME options box spreads; the share-price accrual is in msUSD, which trades about 45 % below par",
+    "redemption": "7-day cooldown into msUSD, which has no working redemption; exit is the market",
     "issuer": "Main Street Finance",
     "links": [
       "https://mainstreet-finance.gitbook.io/mainstreet.finance",
       "https://www.webacy.com/blog/msusd-anatomy-of-a-stablecoin-that-was-built-to-lose-a-run"
     ],
-    "updated": "2026-10-06",
+    "updated": "2026-10-17",
     "confidence": "medium",
-    "verify": "Distressed: reserves attestation withdrawn Jun 2026; msY fell 70-85 %."
+    "alsoGroups": [
+      "Main Street Yield::msY"
+    ],
+    "verify": "Distressed: reserve attestation withdrawn Jun 2026; msUSD ~-45 % (low ~-94 %), msY ~$0.59."
   },
   "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC": {
     "what": "Accountable vault share · Hyperithm delta-neutral strategies on cbBTC",
@@ -1437,32 +1441,35 @@
     "confidence": "high"
   },
   "Strata Senior NUSD::srNUSD": {
-    "what": "Strata senior tranche of Neutrl sNUSD · sUSDe-rate floor, junior first-loss cover",
-    "body": "srNUSD is the senior (protected) tranche of Strata's Neutrl market, an ERC-4626 token over pooled NUSD that is staked as sNUSD. sNUSD earns Neutrl's market-neutral strategies: OTC arbitrage of discounted locked tokens with hedges, perp funding-rate arbitrage and DeFi strategies. srNUSD takes a share of that yield with a floor at Ethena's sUSDe APY; jrNUSD absorbs underperformance and NUSD default first.",
-    "backing": "NUSD staked as sNUSD, protected by the jrNUSD first-loss tranche",
-    "yieldSource": "sNUSD yield (OTC locked-token arbitrage, funding-rate arbitrage, DeFi), floored at sUSDe APY",
-    "redemption": "permissionless; instant redeem to sNUSD, or NUSD after Neutrl's 10-day unstake; 0-5 bps fee by coverage",
+    "what": "Strata senior tranche of Neutrl sNUSD · impaired with NUSD (~$0.63/share), deposits shut",
+    "body": "srNUSD is the senior tranche of Strata's Neutrl market, an ERC-4626 token over pooled NUSD staked as sNUSD, junior-protected. Neutrl's August 2026 reserve impairment cut NUSD to a 0.51 USDC recovery rate; that loss exceeded jrNUSD's cover, which went to ~0, and the senior took the rest. On 2026-10-17 one srNUSD converted to 1.2397 NUSD, about $0.63 at the portal rate, Strata's own feed marks it 0.632 and both tranches read maxDeposit = 0.",
+    "backing": "NUSD staked as sNUSD; NUSD redeems at 0.51 USDC; junior cover exhausted",
+    "yieldSource": null,
+    "redemption": "to sNUSD through Strata's cooldown contracts, then NUSD (sNUSD cooldown 1 s) into Neutrl's 0.51 USDC portal until 2026-11-14",
     "issuer": "Strata",
     "links": [
       "https://docs.strata.markets/markets/neutrl-nusd/srnusd",
-      "https://docs.strata.markets/markets/neutrl-nusd"
+      "https://s3.strata.money/tranches/analytics-v19.json",
+      "https://stablecoininsider.org/neutrl-opens-nusd-snusd-redemptions-0-51/"
     ],
-    "updated": "2026-10-12",
-    "confidence": "high"
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Impaired: Neutrl NUSD reserve loss (Aug 2026) wiped the junior and marked the senior to ~0.63 USD per share; no yield."
   },
   "Strata Junior NUSD::JRNUSD": {
-    "what": "Strata junior tranche of Neutrl sNUSD · levered residual yield, first loss on NUSD",
-    "body": "jrNUSD is the junior (first-loss) tranche of Strata's Neutrl market, an ERC-4626 token over pooled sNUSD. It keeps the sNUSD yield (OTC locked-token arbitrage, funding-rate arbitrage, DeFi strategies) left after srNUSD is paid its sUSDe-linked floor, plus the senior's risk premium. It covers any shortfall and is first to lose principal if NUSD becomes insolvent.",
-    "backing": "NUSD staked as sNUSD; subordinated to srNUSD",
-    "yieldSource": "residual sNUSD yield after paying senior, plus senior risk premium",
-    "redemption": "cooldown 0-35 days and 0-20 bps fee depending on senior coverage (+10 days to unstake to NUSD); paused below min coverage",
+    "what": "Strata junior tranche of Neutrl sNUSD · written to ~0 by the NUSD haircut",
+    "body": "jrNUSD was the first-loss tranche of Strata's Neutrl market. Neutrl's August 2026 reserve impairment cut NUSD to a 0.51 USDC recovery rate, more than the junior could absorb: on 2026-10-17 one jrNUSD converted to 3.6e-6 NUSD and deposits were shut (maxDeposit = 0).",
+    "backing": "nothing material; the junior cover was consumed by the NUSD loss",
+    "yieldSource": null,
+    "redemption": "through Strata's cooldown contracts into sNUSD/NUSD; worth ~0",
     "issuer": "Strata",
     "links": [
       "https://docs.strata.markets/markets/neutrl-nusd/jrnusd",
-      "https://docs.strata.markets/markets/neutrl-nusd"
+      "https://s3.strata.money/tranches/analytics-v19.json"
     ],
-    "updated": "2026-10-12",
-    "confidence": "high"
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Wiped out by the Neutrl NUSD impairment (Aug-Sep 2026)."
   },
   "Strata Senior USDat::SRUSDAT": {
     "what": "Strata senior tranche of Saturn sUSDat · fixed 65% of STRC dividend, junior covers NAV",
@@ -1979,5 +1986,56 @@
     "links": ["https://docs.ripe.finance"],
     "updated": "2026-10-16",
     "confidence": "high"
+  },
+  "Neutrl USD::NUSD": {
+    "what": "Neutrl synthetic dollar · reserves impaired Aug 2026, redeems at 0.51 USDC",
+    "body": "NUSD is Neutrl's synthetic dollar, minted against USDC, USDT or USDe and backed by hedged OTC purchases of locked altcoins, basis trades and stablecoins. On 13 August 2026 Neutrl froze minting and redemptions after a strategy position impaired reserve liquidity. Since 17 September a recovery contract (0xB3f07D33…3828) burns NUSD for USDC at a fixed rate of 0.51, open until 14 November 2026; no DEX market of size remains and lending oracles still read 1.0.",
+    "backing": "NUSD reserves: hedged OTC altcoins, basis positions, stablecoins (partly illiquid)",
+    "yieldSource": null,
+    "redemption": "minting/redemption frozen; recovery portal pays 0.51 USDC per NUSD until 2026-11-14 (one acknowledgement tx first)",
+    "issuer": "Neutrl",
+    "links": [
+      "https://stablecoininsider.org/neutrl-opens-nusd-snusd-redemptions-0-51/",
+      "https://crypto.news/neutrl-opens-nusd-redemptions-as-contract-reads-0-51/",
+      "https://etherscan.io/address/0xB3f07D3392102fC23264a78e2A1A8B6421123828#readContract"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Impaired: realizable value is the 0.51 USDC portal rate, not $1."
+  },
+  "msUSD::msUSD": {
+    "what": "Main Street synthetic dollar · reserve attestation withdrawn Jun 2026, ~$0.54",
+    "body": "msUSD is Main Street Finance's synthetic dollar, backed by an issuer-run book of CME options box spreads and redeemable 1:1 only by KYC'd users out of a USDC buffer. Around 20 June 2026 its proof-of-reserves dashboard went offline and Accountable ended its attestation; the buffer ran dry, redemptions stopped and msUSD fell to about $0.06. It traded back to about $0.54-0.56 by October 2026 with no redemption path reopened, while lending oracles (Euler) still read 1.0.",
+    "backing": "claimed box-spread positions and an insurance fund; unverified since June 2026",
+    "yieldSource": null,
+    "redemption": "KYC-only two-step redemption, unavailable since June 2026; exit is the market",
+    "issuer": "Main Street Finance",
+    "links": [
+      "https://www.webacy.com/blog/msusd-anatomy-of-a-stablecoin-that-was-built-to-lose-a-run",
+      "https://incrypted.com/en/msusd-stablecoin-loses-dollar-peg-after-split-reserve-verification-provider/",
+      "https://coins.llama.fi/chart/ethereum:0x4ba01f22827018b4772cd326c7627fb4956a7c00"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "alsoGroups": [
+      "Main Street USD::MSUSD"
+    ],
+    "verify": "Depegged: reserves unverified since Jun 2026, trades ~45 % below par with no redemption."
+  },
+  "Altura Vault Tokens::AVLT": {
+    "what": "Altura USDT0 vault share (HyperEVM) · wound down Jun 2026, NAV frozen, trades ~$0.015",
+    "body": "AVLT is the share token of Altura's USDT0 vault on HyperEVM (LayerZero mirrors on Ethereum, Arbitrum, Optimism, Polygon and Base), which ran off-chain market making, basis trades and a gold RWA leg. After an $8.5M run on 21 June 2026 Altura announced an orderly wind-down and paused withdrawals over a maturity mismatch. On 2026-10-17 the vault held about $0 of USDT0 against 29.6M shares while its NAV oracle was still re-reported daily at the same 1.0945; the shares trade around $0.015 in thin pools.",
+    "backing": "off-chain trading and RWA positions under wind-down; vault idle balance ~0",
+    "yieldSource": null,
+    "redemption": "withdrawals paused since June 2026; no recovery schedule published",
+    "issuer": "Altura",
+    "links": [
+      "https://protos.com/latest-defi-yield-vault-drama-wipes-out-69m-of-msusd-and-avlt-market-cap-1/",
+      "https://crypto.news/altura-shuts-stablecoin-vault-after-8-5m-redemption-rush/",
+      "https://tradingstrategy.ai/vaults/altura-vault-tokens"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Wound down: NAV 1.0945 is frozen and unrealizable; market ~$0.015."
   }
 }
