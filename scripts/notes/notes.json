@@ -599,9 +599,7 @@
     ],
     "updated": "2026-10-17",
     "confidence": "medium",
-    "alsoGroups": [
-      "Main Street Yield::msY"
-    ],
+    "alsoGroups": ["Main Street Yield::msY"],
     "verify": "Distressed: reserve attestation withdrawn Jun 2026; msUSD ~-45 % (low ~-94 %), msY ~$0.59."
   },
   "Hyperithm Delta Neutral cbBTC Vault::aHyperBTC": {
@@ -949,14 +947,16 @@
     "confidence": "medium"
   },
   "Hylo SOL Plus::hyloSOL+::solana": {
-    "what": "Hylo SOL Plus · SOL exposure at 0 % APR, its yield boosts hyloSOL; 5x Hylo XP",
-    "body": "hyloSOL+ gives SOL exposure without yield: its staking rewards go to boosting hyloSOL, and holders earn 5x points in Hylo's XP system instead.",
-    "backing": "staked SOL",
+    "what": "Hylo SOL Plus · SOL stake pool that pays holders 0 % staking yield, Hylo XP only",
+    "body": "hyloSOL+ is a Sanctum SPL stake pool whose epoch fee is 100 %: every staking reward goes to Hylo, which uses it to boost hyloSOL and fund incentives, so holders get no staking yield at all. Its rate has stayed at 1.0000092 SOL epoch after epoch. Holders earn 5x Hylo XP points instead, whose value is undisclosed. It tracks SOL 1:1 and is fully SOL-backed (about 10.9k SOL, single validator).",
+    "backing": "staked SOL, 1:1",
     "yieldSource": null,
+    "redemption": "withdraw as a stake account (permissionless, 5 bps); instant SOL withdrawals are gated to Hylo",
     "issuer": "Hylo",
-    "links": ["https://docs.hylo.so"],
-    "updated": "2026-10-08",
-    "confidence": "medium"
+    "links": ["https://docs.hylo.so", "https://docs.hylo.so/security/audits"],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Not a yield token: 100 % epoch fee, so holders earn 0 % staking yield (points only)."
   },
   "sUSDS::SUSDS": {
     "what": "Sky savings rate on USDS · RWA T-bills + crypto-collateral loan fees",
@@ -1213,16 +1213,17 @@
   },
   "SUSN": {
     "what": "Noon staked USN · T-bills, CLOs, private credit, DeFi lending + perp funding arb",
-    "body": "sUSN is Noon's staked form of the USN stablecoin; its value comes from the USN held in the staking pool divided by sUSN supply, and strategy returns are added by minting USN into that pool. USN reserves are spread across governance-approved strategies: tokenized T-bills, AAA CLO tranches, private-credit funds, DeFi stablecoin lending, Pendle-style principal tokens, looping and delta-neutral funding-rate arbitrage. Returns are split 80/10/10, with sUSN holders getting the 80% share.",
+    "body": "sUSN is Noon's staking vault over the USN stablecoin; Noon adds strategy returns by a daily rebase that moves USN into the vault, so one sUSN was worth about 1.23 USN in October 2026. USN reserves are spread across governance-approved strategies: tokenized T-bills, AAA CLO tranches, private-credit funds, DeFi stablecoin lending, principal tokens, looping and delta-neutral funding-rate arbitrage. Net returns are split 80/10/10 between sUSN holders, an insurance fund and operations. Ethereum holds the vault; the copies on other chains are bridged shares.",
     "backing": "USN (reserves across T-bills, CLOs, private credit, DeFi and basis trades)",
     "yieldSource": "T-bill, CLO and private-credit interest, DeFi lending, funding-rate arbitrage",
-    "redemption": "unstake to USN with a 7-day cooldown; USN mint/redeem with Noon requires KYB",
+    "redemption": "redeem into Noon's withdrawal handler (payout fixed at request), claim USN after 7 days, no cancel; USN mint/redeem only for KYC'd institutions ($1M minimum, up to 20 % of TVL a day)",
     "issuer": "Noon",
     "links": [
       "https://docs.noon.capital/3.-the-yield-engine/overview.md",
-      "https://docs.noon.capital/getting-started/quickstart.md"
+      "https://docs.noon.capital/2.-usdusn-and-usdsusn/mint-and-redeem.md",
+      "https://docs.noon.capital/5.-the-security-framework/overview.md"
     ],
-    "updated": "2026-10-12",
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Savings Usdd::sUSDD": {
@@ -1299,30 +1300,35 @@
   },
   "Staked UTY::YUTY": {
     "what": "YieldPoint (ex-XSY) staked UTY · market-neutral perp funding and basis trades",
-    "body": "yUTY is the yield-bearing vault share on UTY (Unity), YieldPoint's dollar token; YieldPoint is the rebrand of XSY. UTY is minted 1:1 against USDC on Base, the USDC is swept to a custodian, and it is deployed into market-neutral strategies (originally long AVAX spot / short AVAX perps) that earn funding and basis. Those returns accrue to yUTY through a rising yUTY/UTY rate; plain UTY does not earn. The vaults are ERC-7540 on the Base hub with LayerZero OFT copies on Avalanche and Katana.",
-    "backing": "UTY (USDC held with a custodian, deployed into delta-neutral positions)",
+    "body": "yUTY is the yield-bearing vault share on UTY (Unity), YieldPoint's dollar token; YieldPoint is the rebrand of XSY. UTY is minted against USDC/USDT, which is moved to third-party custody and deployed into delta-neutral positions (originally long AVAX spot / short AVAX perps) that earn funding and basis. Those returns accrue to yUTY through a rising yUTY/UTY rate (1.1355 UTY, about 10.7 % APR in October 2026); plain UTY does not earn. The Base vault at 0xba515eed… is current and its asset is UTY at 0xba515304…, the address Pendle lists; Avalanche and Katana carry LayerZero copies.",
+    "backing": "UTY (USDC/USDT with a custodian, deployed into delta-neutral positions)",
     "yieldSource": "perp funding rates and basis from hedged spot/perp positions",
-    "redemption": "yUTY to UTY is instant on Base; UTY to USDC takes a 7-day async redemption on Base",
+    "redemption": "ERC-7540 on Base: requestRedeem fixes the payout, claim after the bonding period (0 today, owner-settable); UTY to USDC is an async redemption with YieldPoint",
     "issuer": "YieldPoint (formerly XSY)",
-    "links": ["https://yieldpoint.io", "https://docs.yieldpoint.io/protocol/architecture/flows.md"],
-    "updated": "2026-10-12",
+    "links": [
+      "https://yieldpoint.io",
+      "https://docs.yieldpoint.io/protocol/architecture/flows.md",
+      "https://basescan.org/address/0xba515eed0119acb7cfe8fab3acd6b362f3ed5319"
+    ],
+    "updated": "2026-10-17",
     "confidence": "medium",
-    "verify": "Project rebranded XSY -> YieldPoint and UTY migrated to a new Base contract; check the indexed yUTY address is the current one. Current strategy mix is described only as market-neutral.",
+    "verify": "Off-chain custody and basis book are not verifiable on-chain; owner is a Safe with no timelock.",
     "alsoGroups": ["Staked UTY::yUTY"]
   },
   "Staked YUSD::sYUSD": {
     "what": "Aegis staked YUSD · BTC collateral hedged with short perps, earns funding",
-    "body": "sYUSD is the ERC-4626 staking vault for YUSD, Aegis's synthetic dollar backed by bitcoin held with institutional custodians (Fireblocks, Copper, Ceffu). The BTC is hedged with short BTC perpetuals on major exchanges, so the position is delta-neutral, and the funding paid by longs is the yield. sYUSD auto-compounds that yield into a rising sYUSD/YUSD rate instead of the weekly claims plain YUSD holders make.",
+    "body": "sYUSD is the ERC-4626 staking vault for YUSD, Aegis's synthetic dollar backed by bitcoin held with institutional custodians (Fireblocks, Copper, Ceffu). The BTC is hedged with short BTC perpetuals on major exchanges, so the position is delta-neutral, and the funding paid by longs is the yield, compounded into a rising sYUSD/YUSD rate (about 4.3 % APR in October 2026). Fee and cooldown are admin dials on an upgradeable contract with no timelock observed.",
     "backing": "YUSD (custodied BTC hedged with short BTC perps)",
     "yieldSource": "BTC perpetual funding rates",
-    "redemption": "unstake to YUSD after a cooldown; YUSD redeemed via Aegis mint/redeem",
+    "redemption": "free: cooldownShares, wait 7 days, unstake to YUSD; instant: redeem with a 50 bps fee to Aegis's insurance fund (previewRedeem does not show the fee)",
     "issuer": "Aegis",
     "links": [
       "https://iq.wiki/wiki/staked-yusd.md",
-      "https://blog.portals.fi/what-is-aegis-yusd-bitcoin-backed-yield-bearing-stablecoin-explained/"
+      "https://blog.portals.fi/what-is-aegis-yusd-bitcoin-backed-yield-bearing-stablecoin-explained/",
+      "https://etherscan.io/address/0xfe0ccc9942e98c963fe6b4e5194eb6e3baa4cb64"
     ],
-    "updated": "2026-10-12",
-    "confidence": "medium"
+    "updated": "2026-10-17",
+    "confidence": "high"
   },
   "Staked avUSD::savUSD": {
     "what": "Avant staked avUSD · senior tranche of delta-neutral basis, lending and LP strategies",
@@ -1473,16 +1479,16 @@
   },
   "Strata Senior USDat::SRUSDAT": {
     "what": "Strata senior tranche of Saturn sUSDat · fixed 65% of STRC dividend, junior covers NAV",
-    "body": "srUSDat is the senior (protected) tranche of Strata's Saturn market, an ERC-4626 token over pooled sUSDat. sUSDat earns T-bill interest and dividends on Strategy's STRC preferred stock, and its NAV moves with STRC's price. srUSDat targets a fixed yield of 65% of the STRC dividend rate with no NAV volatility; jrUSDat absorbs STRC price swings and losses first.",
+    "body": "srUSDat is the senior (protected) tranche of Strata's Saturn market, an ERC-4626 token over pooled sUSDat. sUSDat earns T-bill interest and dividends on Strategy's STRC preferred stock, and its NAV moves with STRC's price. srUSDat targets a fixed yield of 65% of the STRC dividend rate; jrUSDat absorbs STRC price swings and losses first, but it was only ~16 % of the pool in October 2026 after the mid-2026 sUSDat drawdown halved it. On Monad, srUSDat is a LayerZero OFT copy of the Ethereum token (an adapter locks the Ethereum shares 1:1), not a separate Strata deployment.",
     "backing": "USDat staked as sUSDat (T-bills + Strategy STRC preferred), protected by jrUSDat",
     "yieldSource": "STRC preferred dividends and T-bill interest; senior fixed at 65% of STRC dividend rate",
-    "redemption": "permissionless; instant redeem to sUSDat; 0-5 bps fee by coverage; mint paused below 107.5% coverage",
+    "redemption": "permissionless on Ethereum; redeem to sUSDat through the cooldown contract (0 s on this leg); 0-5 bps fee by coverage; mint paused below 107.5% coverage; Monad copies bridge back first",
     "issuer": "Strata",
     "links": [
       "https://docs.strata.markets/markets/saturn-usdat/srusdat",
       "https://docs.strata.markets/markets/saturn-usdat"
     ],
-    "updated": "2026-10-12",
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Strata Junior USDat::JRUSDAT": {
@@ -1854,79 +1860,107 @@
   },
   "Yield Optimizer USD::YOUSD": {
     "what": "YO USDC vault · lends USDC on lending markets against cbBTC, WETH and wstETH",
-    "body": "yoUSD is the share token of YO Protocol's USDC vault, an operator-managed ERC-4626. YO deploys the USDC into overcollateralized lending markets, mostly on Base, borrowed against cbBTC, WETH and wstETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "body": "yoUSD is the share token of YO Protocol's USDC vault, an operator-managed ERC-4626. YO deploys the USDC into overcollateralized lending markets, mostly on Base, borrowed against cbBTC, WETH and wstETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. On 12-13 January 2026 an operator rebalancing swap in this vault (stkGHO to USDC through Odos, with no effective slippage limit) lost about $3.7M; YO covered the loss from its own funds. The same operator setup still runs the vaults: a 4-of-6 Safe with no timelock over strategy calls and an EOA that posts the share price.",
     "backing": "USDC lent on overcollateralized markets (Base ~97%, Ethereum, Arbitrum)",
     "yieldSource": "Interest paid by borrowers on the lending markets YO allocates to",
     "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Yield Optimizer ETH::YOETH": {
     "what": "YO WETH vault · lends WETH on lending markets against USDC, cbBTC, cbETH and wstETH",
-    "body": "yoETH is the share token of YO Protocol's WETH vault, an operator-managed ERC-4626. YO lends the WETH on overcollateralized markets on Ethereum and Base. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "body": "yoETH is the share token of YO Protocol's WETH vault, an operator-managed ERC-4626. YO lends the WETH on overcollateralized markets on Ethereum and Base. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. In January 2026 a YO operator swap in the yoUSD vault lost about $3.7M to slippage (covered by the team); the same operator setup, a 4-of-6 Safe with no timelock and an EOA price updater, runs this vault.",
     "backing": "WETH lent on overcollateralized markets (Ethereum ~65%, Base ~35%)",
     "yieldSource": "Interest paid by WETH borrowers",
     "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Yield Optimizer BTC::YOBTC": {
     "what": "YO cbBTC vault · currently holds idle cbBTC and earns nothing",
-    "body": "yoBTC is the share token of YO Protocol's cbBTC vault, an operator-managed ERC-4626. In October 2026 almost all of its cbBTC sat idle in the vault (mostly on Ethereum), and its 1-, 7- and 30-day yields were 0%. YO can deploy it into lending markets at any time. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "body": "yoBTC is the share token of YO Protocol's cbBTC vault, an operator-managed ERC-4626. In October 2026 almost all of its cbBTC sat idle in the vault (mostly on Ethereum), and its 1-, 7- and 30-day yields were 0%. YO can deploy it into lending markets at any time. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. In January 2026 a YO operator swap in the yoUSD vault lost about $3.7M to slippage (covered by the team); the same operator setup, a 4-of-6 Safe with no timelock and an EOA price updater, runs this vault.",
     "backing": "cbBTC, nearly all held idle (Ethereum ~78%, Base ~22%)",
     "yieldSource": null,
     "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Yield Optimizer EUR::yoEUR": {
     "what": "YO EURC vault · lends EURC on lending markets against wstETH, cbBTC and WETH",
-    "body": "yoEUR is the share token of YO Protocol's EURC vault, an operator-managed ERC-4626. YO lends the EURC on overcollateralized markets on Base and Ethereum, borrowed against wstETH, cbBTC, WETH and cbETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "body": "yoEUR is the share token of YO Protocol's EURC vault, an operator-managed ERC-4626. YO lends the EURC on overcollateralized markets on Base and Ethereum, borrowed against wstETH, cbBTC, WETH and cbETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. In January 2026 a YO operator swap in the yoUSD vault lost about $3.7M to slippage (covered by the team); the same operator setup, a 4-of-6 Safe with no timelock and an EOA price updater, runs this vault.",
     "backing": "EURC lent on overcollateralized markets (Base ~79%, Ethereum ~21%)",
     "yieldSource": "Interest paid by EURC borrowers",
     "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Yield Optimizer Gold::YOGOLD": {
     "what": "YO XAUt vault on Ethereum · holds idle Tether Gold, no strategy yet",
-    "body": "yoGOLD is the share token of YO Protocol's Tether Gold (XAUt) vault on Ethereum, an operator-managed ERC-4626. In October 2026 all of its XAUt sat idle in the vault, with almost no yield. Its value follows gold through XAUt, so it carries Tether's custody of the physical gold. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "body": "yoGOLD is the share token of YO Protocol's Tether Gold (XAUt) vault on Ethereum, an operator-managed ERC-4626. In October 2026 all of its XAUt sat idle in the vault, with almost no yield. Its value follows gold through XAUt, so it carries Tether's custody of the physical gold. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. In January 2026 a YO operator swap in the yoUSD vault lost about $3.7M to slippage (covered by the team); the same operator setup, a 4-of-6 Safe with no timelock and an EOA price updater, runs this vault.",
     "backing": "XAUt (Tether Gold), 100% idle in the vault",
     "yieldSource": null,
     "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "Yield Optimizer USD Edge::YOUSDEDGE": {
     "what": "YO higher-yield USDC vault · lends against PTs, synthetic dollars and cbXRP",
-    "body": "yoUSD Edge is YO Protocol's riskier USDC vault, an operator-managed ERC-4626 that YO itself rates 'moderate'. It lends USDC and USDG on markets whose collateral is Pendle PT-reUSD, fxSAVE, syrupUSDG and cbXRP. Those collaterals are yield-bearing synthetic dollars, PTs and an alt, which is a layer of risk yoUSD does not take. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains.",
+    "body": "yoUSD Edge is YO Protocol's riskier USDC vault, an operator-managed ERC-4626 that YO itself rates 'moderate'. It lends USDC and USDG on markets whose collateral is Pendle PT-reUSD, fxSAVE, syrupUSDG and cbXRP. Those collaterals are yield-bearing synthetic dollars, PTs and an alt, which is a layer of risk yoUSD does not take. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. In January 2026 a YO operator swap in the yoUSD vault lost about $3.7M to slippage (covered by the team); the same operator setup, a 4-of-6 Safe with no timelock and an EOA price updater, runs this vault.",
     "backing": "USDC and USDG lent against PT-reUSD, fxSAVE, syrupUSDG, cbXRP (mostly Ethereum)",
     "yieldSource": "Interest paid by borrowers against riskier collateral",
     "redemption": "Instant from the vault's idle balance on that chain; anything larger is queued until YO's operator fulfils it (0.001% fee)",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "yoUSDT::yoUSDT": {
     "what": "USDT entry to YO's yoUSD · forwards 95% of deposits into yoUSD, priced as yoUSD",
-    "body": "yoUSDT is a YO Protocol vault on Ethereum that takes USDT deposits, forwards 95% of each deposit into the yoUSD vault, and keeps 5% as USDT for redemptions. Its shares are priced from yoUSD's share price, so a holder earns yoUSD's yield. Small: about $13k in October 2026.",
+    "body": "yoUSDT is a YO Protocol vault on Ethereum that takes USDT deposits, forwards 95% of each deposit into the yoUSD vault, and keeps 5% as USDT for redemptions. Its shares are priced from yoUSD's share price, so a holder earns yoUSD's yield. Small: about $13k in October 2026. In January 2026 a YO operator swap in the yoUSD vault lost about $3.7M to slippage (covered by the team); the same operator setup, a 4-of-6 Safe with no timelock and an EOA price updater, runs this vault.",
     "backing": "USDT, 95% forwarded into yoUSD",
     "yieldSource": "yoUSD's lending yield",
     "redemption": "Instant from the 5% USDT buffer; anything larger is queued until YO's operator fulfils it",
     "issuer": "YO Protocol",
-    "links": ["https://docs.yo.xyz/protocol/yo-protocol", "https://api.yo.xyz/api/v1/vault/stats"],
-    "updated": "2026-10-16",
+    "links": [
+      "https://docs.yo.xyz/protocol/yo-protocol",
+      "https://api.yo.xyz/api/v1/vault/stats",
+      "https://rekt.news/yo-protocols-slippage-bomb"
+    ],
+    "updated": "2026-10-17",
     "confidence": "high"
   },
   "yoTest::yoTest": {
@@ -2017,9 +2051,7 @@
     ],
     "updated": "2026-10-17",
     "confidence": "medium",
-    "alsoGroups": [
-      "Main Street USD::MSUSD"
-    ],
+    "alsoGroups": ["Main Street USD::MSUSD"],
     "verify": "Depegged: reserves unverified since Jun 2026, trades ~45 % below par with no redemption."
   },
   "Altura Vault Tokens::AVLT": {
@@ -2037,5 +2069,859 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "Wound down: NAV 1.0945 is frozen and unrealizable; market ~$0.015."
+  },
+  "Sierra::SIERRA::1::0": {
+    "what": "Sierra USDC yield token · OpenTrade basket of CLOs, commercial paper, Morpho, basis",
+    "body": "SIERRA is a USDC 'liquid yield token' issued by Sierra Reserve Ltd (BVI) on OpenTrade's LYT pool contracts. Deposited USDC goes to an issuer wallet and is lent to OpenTrade vaults: AAA CLOs, investment-grade commercial paper, Morpho Gauntlet Prime USDC, trade finance, a SOL basis trade and FalconX credit via Pareto. An operator sets each pool's exchange rate daily from those vaults, so SIERRA rises against USDC (about 5.4 % APR realized in October 2026). The native Ethereum pool and the Avalanche pool, whose token also circulates on Ethereum as a LayerZero OFT, keep separate rates (1.0411 and 1.0420 on 2026-10-16).",
+    "backing": "USDC lent to OpenTrade vaults (CLOs, commercial paper, Morpho, trade finance, SOL basis, FalconX credit)",
+    "yieldSource": "interest and spreads from the OpenTrade vault basket, passed through a daily-set exchange rate",
+    "redemption": "mint and redeem only for KYB'd Authorized Participants (request, ~2 business days); everyone else trades it (Uniswap v4, ~0.2 % from NAV at $100k)",
+    "issuer": "Sierra (Sierra Reserve Ltd)",
+    "links": [
+      "https://docs.sierra.money/sierra/reserve-strategy.md",
+      "https://docs.sierra.money/building-with-sierra/minting-and-redeeming.md",
+      "https://docs.sierra.money/building-with-sierra/legal-structure.md"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "On Ethereum the pool admin and the reserve wallet are EOAs with no timelock; reserves are reported weekly (Five Sigma), with no full attestation.",
+    "alsoGroups": ["Sierra::SIERRA"]
+  },
+  "Axis USD::USDx": {
+    "what": "Axis synthetic dollar · off-chain market-neutral trading (funding, FX, OTC arbitrage)",
+    "body": "USDx is the dollar token of Axis (Coordinate Labs); it is not Stables Labs' USDX or dForce's USDx. Approved institutions mint and redeem it with signed orders (minimum $1M), and the reserves are deployed with external custodians and trading venues into cross-venue, funding-rate, cross-currency and OTC arbitrage. Plain USDx earns nothing; the trading returns are paid to stakers of sUSDx. It launched in August 2026 with no proof of reserves or attestation, and Axis's own material says USDx 'is not a stablecoin'.",
+    "backing": "reserves at unnamed custodians and trading venues running market-neutral arbitrage",
+    "yieldSource": null,
+    "redemption": "mint and redeem only for whitelisted institutions via signed orders ($1M minimum); others trade on Curve",
+    "issuer": "Axis",
+    "links": [
+      "https://iq.wiki/wiki/axis",
+      "https://www.openzeppelin.com/news/axis-coordinate-v2-contracts-audit",
+      "https://etherscan.io/address/0xa1fa7777974312f7d801a8880714a218f76233f8"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "No proof of reserves; custodians and legal entity not named; the admin Safe can grant mint rights without a timelock."
+  },
+  "Staked Axis USD::SUSDX": {
+    "what": "Axis staked USDx · trading returns paid as rewards, 7-day request exit",
+    "body": "sUSDx is the ERC-4626 staking vault over Axis USDx (not Stables Labs' sUSDX). Axis funds rewards from its trading book every ~3 days, at its discretion, and they vest over 3 days into a rising sUSDx/USDx rate; the vault does not lend the staked USDx. The exit is an ERC-7540 request: requestRedeem burns the shares and fixes the payout, Axis's servicer processes it after 7 days, then the holder claims. On 2026-10-15 about a quarter of the vault was queued to exit.",
+    "backing": "Axis USDx",
+    "yieldSource": "Axis trading returns, distributed as discretionary USDx rewards",
+    "redemption": "requestRedeem → serviced after 7 days → claim USDx; payout fixed at request; cancel currently disabled",
+    "issuer": "Axis",
+    "links": ["https://iq.wiki/wiki/axis", "https://www.upshift.finance/blog/axis-origin-vault"],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Forest Road USDfr::USDFR": {
+    "what": "Forest Road dollar · USDC reserve plus secured specialty-finance loans; earns nothing",
+    "body": "USDfr is minted 1:1 from USDC by KYC'd holders and backed by a USDC reserve plus Forest Road's secured credit facilities in film and TV tax credits, renewable energy, life sciences, real estate and digital assets, each recorded on-chain as a loan NFT. Losses fall first on Forest Road's own capital, then on a backstop reserve, then on holders. Plain USDfr earns nothing: all facility interest goes to sUSDfr. Transfers are open apart from sanctions screening, and a Uniswap v4 pool holds about 2.3M USDfr.",
+    "backing": "USDC reserve plus Forest Road specialty-finance loan facilities",
+    "yieldSource": null,
+    "redemption": "mint and redeem with Forest Road for KYC'd holders (terms not published); others trade on Uniswap v4",
+    "issuer": "Forest Road",
+    "links": ["https://forestroadvault.com", "https://etherscan.io/address/0xcc07e7c4e5e35affd47b351e420a22c667d7f83d"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "No third-party attestation or named audit found; redemption terms and first-loss sizes are not published."
+  },
+  "Staked Forest Road USDfr::SUSDFR": {
+    "what": "Forest Road staked USDfr · specialty-finance loan interest, 21-day queued exit",
+    "body": "sUSDfr is an ERC-4626 vault over USDfr, opened about 22 September 2026. Interest from Forest Road's loan facilities accrues into it continuously, less a 10 % performance fee, and an impairment source can mark declared losses into its price. The ~30 % APR it showed in October 2026 is real but comes from the whole book's interest landing on the roughly half of USDfr that is staked, so it dilutes as more is staked. Exits are throttled: after a 21-day hold a daily keeper settles requests out of about 1.67 % of idle reserves per epoch, priced at settlement.",
+    "backing": "USDfr (USDC reserve plus Forest Road loan facilities)",
+    "yieldSource": "interest from Forest Road specialty-finance facilities, less a 10 % performance fee",
+    "redemption": "request through the redemption queue (approve shares), 21-day hold, FIFO daily settlement capped at ~1.67 % of idle reserves, then claim; no cancel",
+    "issuer": "Forest Road",
+    "links": ["https://forestroadvault.com", "https://etherscan.io/address/0xaf559d1d59b33ca4b950ab2091372af8a773e234"],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Young and small (~$2.4M, opened Sep 2026), one originator; the headline rate will fall as staking grows."
+  },
+  "USP Yield Optimized Stablecoin::USP": {
+    "what": "Piku USP · NAV-priced fund over synthetic dollars and Turkish-lira carry/FX trades",
+    "body": "USP is not a $1 stablecoin: it launched at $1 and is priced by Piku's oracle, 1.1503 USDC on 2026-10-16. Morini Capital manages the backing as a fund of funds: Tori etrUSD, Axis sUSDx and Brix wiTRY, plus Morini's own USD/TRY FX-arbitrage, leveraged USD/TRY carry and Turkish stock-market basis vaults. Part of the return is Turkish-lira carry, so holders carry lira FX and Turkish-market risk; the weights are not published. The price moves in irregular steps, so short windows misstate the rate.",
+    "backing": "synthetic-dollar vaults plus Morini Capital TRY carry, FX-arbitrage and basis vaults",
+    "yieldSource": "rising oracle NAV: synthetic-dollar yields plus Turkish-lira carry and FX/basis trades",
+    "redemption": "mint and redeem only for Piku-KYC'd users through the funding manager (FIFO queue, 0.2 % redeem fee); others trade thin DEX pools (~$90k)",
+    "issuer": "Piku (managed by Morini Capital)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault/reserve-backing.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault/usp-backing-wallets.md"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Carries Turkish-lira FX and carry exposure; backing wallets are EOAs; basket weights unpublished."
+  },
+  "GAIB sAID::SAID": {
+    "what": "GAIB staked AID · financing for GPUs and AI infrastructure, 30-day FIFO exit",
+    "body": "sAID is GAIB's ERC-4626 vault over its AID dollar. Its value tracks a portfolio of off-chain AI-infrastructure financings (GPU and robotics deals) plus a T-bill and stablecoin buffer; rewards arrive about monthly and vest over ~30 days, and an operator can declare an unrealized loss that lowers the exit rate. sAID holds almost all AID in existence. Unstaking queues the value for 30 days, after which anyone can process the queue, but only out of liquidity GAIB's operator recalls: on 2026-10-16 that was 995 AID against 1.07M queued.",
+    "backing": "AID deployed into off-chain AI-infrastructure financings plus a T-bill/stablecoin buffer",
+    "yieldSource": "interest from GPU and AI-infrastructure financing deals, distributed monthly",
+    "redemption": "unstake (one request at a time), 30-day cooldown, then FIFO payout limited by operator-provided liquidity; cancel re-mints shares",
+    "issuer": "GAIB",
+    "links": [
+      "https://docs.gaib.ai/products/gaib-products/staked-ai-dollar-said.md",
+      "https://docs.gaib.ai/products/gaib-products/transparency.md"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Exit liquidity is operator-controlled (995 AID free vs 1.07M queued, Oct 2026); an EOA holds admin on both sAID and AID."
+  },
+  "GAIB AID::AID": {
+    "what": "GAIB AI Dollar · synthetic dollar, nearly all of it staked in sAID's financing book",
+    "body": "AID is GAIB's dollar token. GAIB's docs describe it as backed by T-bills and stablecoins, but about 17.0M of its 17.02M supply sits in sAID, so in practice it funds sAID's AI-infrastructure financing book. Minting 1:1 from USDC through GAIB's minter worked permissionlessly on-chain in October 2026 (the docs call it whitelisted); redemption is whitelisted. AID itself earns nothing.",
+    "backing": "USDC reserves per GAIB; in practice deployed via sAID into AI-infrastructure financings",
+    "yieldSource": null,
+    "redemption": "redemption only for whitelisted parties; others sell on DEXes (the GAIB app charges a 10 bps sell fee)",
+    "issuer": "GAIB",
+    "links": ["https://docs.gaib.ai/products/gaib-products/ai-dollar-aid.md"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Upgradeable token with an EOA among its admins; reserve composition not verified."
+  },
+  "sBold::sBOLD": {
+    "what": "K3 Capital sBOLD · BOLD in Liquity V2 stability pools (WETH/wstETH/rETH)",
+    "body": "sBOLD is a non-upgradeable ERC-4626 built by K3 Capital over Liquity V2's BOLD. It splits deposits across the WETH (30 %), wstETH (60 %) and rETH (10 %) stability pools, which earn 75 % of borrower interest plus collateral from liquidations; anyone can call swap() to sell that collateral back into BOLD, and until then oracles value it. Deposits and withdrawals stop while unswapped collateral exceeds 7,500 BOLD, while paused, or if an oracle fails. A 2-of-3 Safe with no timelock sets the swap adapter, oracles and fees.",
+    "backing": "BOLD in Liquity V2 stability pools, plus unswapped liquidation collateral",
+    "yieldSource": "Liquity V2 borrower interest (stability-pool share) and liquidation gains",
+    "redemption": "instant redeem to BOLD, capped by the BOLD in the pools; blocked while unswapped collateral is above 7,500 BOLD",
+    "issuer": "K3 Capital",
+    "links": [
+      "https://docs.liquity.org/v2-faq/bold-and-earn",
+      "https://reports.chainsecurity.com/K3Capital/ChainSecurity_K3Capital_SBOLD_Audit.pdf",
+      "https://dedaub.com/audits/k3-capital/sbold-may-19-2025/"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Wrapped OUSD::WOUSD": {
+    "what": "Origin wrapped OUSD · non-rebasing 4626 over OUSD (USDC in Morpho, Curve AMO)",
+    "body": "wOUSD is the ERC-4626 wrapper of Origin Dollar (OUSD): OUSD raises holders' balances by rebasing, and wOUSD turns that into a rising share price (1.315 OUSD on 2026-10-16). OUSD's vault now holds USDC only, deployed mainly into a Morpho V2 vault, a Curve OUSD/USDC AMO and a cross-chain strategy on Base, about 100 % backed. Upgrades go through Origin governance behind a 48 h timelock. OUSD lost ~$7.7M to a November 2020 exploit and was relaunched; its book is now about $6.8M.",
+    "backing": "OUSD (USDC in lending strategies and a Curve AMO)",
+    "yieldSource": "USDC lending yield and AMO fees, passed through OUSD rebases",
+    "redemption": "instant unwrap to OUSD, no fee; OUSD exits through Origin's vault or the Curve OUSD/USDC pool",
+    "issuer": "Origin",
+    "links": ["https://docs.originprotocol.com", "https://docs.originprotocol.com/security-and-risk/audits"],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Savings USG::sUSG": {
+    "what": "Tangent savings USG · Yearn-v3 vault paid from Tangent protocol revenue",
+    "body": "sUSG is a Yearn v3 vault clone over USG, Tangent's CDP stablecoin. It runs no strategies: everything sits idle in the vault, and the yield is a share of Tangent's protocol revenue (25 %), dropped in periodically and unlocked over 7 days. There are no fees and no cooldown. The role manager is a 3-of-5 Safe with no timelock, the same Safe that runs USG.",
+    "backing": "USG held idle in the vault",
+    "yieldSource": "Tangent protocol revenue (borrow interest and collateral rewards), unlocked over 7 days",
+    "redemption": "instant redeem to USG, no fee",
+    "issuer": "Tangent",
+    "links": [
+      "https://docs.tangent.finance/docs/faq/audits",
+      "https://etherscan.io/address/0xf17d6f98a5c6eaa99d149079984119e0a4ef6900"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Tangent USD::USG": {
+    "what": "Tangent CDP stablecoin · minted against Curve/Convex/StakeDAO stable-LP collateral",
+    "body": "USG is borrowed into existence in Tangent's 12 isolated markets against productive Curve-ecosystem LP receipts (Curve gauge, Convex and StakeDAO), at 84-90 % LTV; it launched in May 2026. User debt was only about $3.5M under a $4.9M DAO cap in October 2026, while 40M of the ~44M supply is Peg Keeper inventory, so supply overstates the book. The borrow rate follows USG's market price, not utilization. USG itself earns nothing; sUSG receives a share of revenue.",
+    "backing": "overcollateralized CDP debt against stable-LP receipts, plus Peg Keeper inventory",
+    "yieldSource": null,
+    "redemption": "no direct redemption for holders was found; exit through Curve pools, where Peg Keepers defend the peg",
+    "issuer": "Tangent",
+    "links": ["https://docs.tangent.finance", "https://docs.tangent.finance/docs/faq/audits"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Whether holders can redeem USG directly was not checked."
+  },
+  "aptUSD::APTUSD": {
+    "what": "Apyx aptUSD · savings vault over alqUSD (T-bills, cash) at an Apyx-set rate",
+    "body": "aptUSD is Apyx's T-bill savings token: a second instance of the apyUSD vault contract over alqUSD ('Apyx Liquid USD'), separate from the apxUSD preferred-stock product. Apyx sets the payout rate (around the Fed Funds lower bound) and streams it through a 10-day linear vest into a rising share price, about 3.8 % APR in October 2026. A redeem pays nothing at once: it escrows alqUSD in an unlock-receipt NFT that is claimable free after 1 day, although Apyx's docs say there is no unlock period. Apyx's own app exits through the Curve aptUSD/alqUSD and Uniswap pools.",
+    "backing": "alqUSD (described as T-bills and cash equivalents)",
+    "yieldSource": "T-bill and cash interest paid at an Apyx-set rate, vested over 10 days",
+    "redemption": "permissionless deposit; redeem → unlock-receipt NFT → claim alqUSD after 1 day, no fee, no cancel; or trade on Curve/Uniswap",
+    "issuer": "Apyx",
+    "links": ["https://docs.apyx.fi/product-overview/aptusd.md", "https://docs.apyx.fi/resources/audits.md"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "No fund, custodian or aptUSD-specific attestation is named; the same issuer's apxUSD depegged to ~$0.75 in Jun 2026."
+  },
+  "alqUSD::ALQUSD": {
+    "what": "Apyx Liquid USD · non-yielding dollar described as backed by T-bills and cash",
+    "body": "alqUSD is an Apyx dollar token, described as backed by US Treasury bills and cash equivalents held in third-party prime-brokerage accounts and redeemable 1:1 through approved channels; minting is whitelisted. It earns nothing itself; aptUSD holds it and pays the T-bill rate. Retail users reach it through DEX pools (USDC → alqUSD → aptUSD). Supply was about 5.1M in October 2026.",
+    "backing": "T-bills and cash equivalents per Apyx (not independently verified)",
+    "yieldSource": null,
+    "redemption": "1:1 through Apyx-approved channels only; others trade on Curve and Uniswap",
+    "issuer": "Apyx",
+    "links": ["https://docs.apyx.fi/product-overview/alqusd.md"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "No named fund, custodian or token-specific attestation."
+  },
+  "USDC Mix Yield Token::mixUSDC": {
+    "what": "Alchemix V3 USDC yield token · Morpho Vault V2 over Yearn, infiniFi, Fluid, Tokemak",
+    "body": "mixUSDC is Alchemix V3's USDC 'Mix Yield Token', the vault that holds Alchemist deposits. It is a Morpho Vault V2 whose adapters are Alchemix strategies rather than Morpho markets: Yearn's USD yVault (~42 %), infiniFi siUSD (~38 %), Fluid Lite USD (~20 %) and Tokemak autoUSD. Anyone can deposit; a 15 % performance fee applies. All curator timelocks are 0, so the allocation can change instantly.",
+    "backing": "USDC in Yearn yvUSD, infiniFi siUSD, Fluid Lite USD and Tokemak autoUSD",
+    "yieldSource": "yield of the underlying USDC strategies, net of a 15 % performance fee",
+    "redemption": "instant up to idle cash plus the Yearn liquidity adapter (~42 % of assets in Oct 2026); deposits capped by the Yearn vault's limit",
+    "issuer": "Alchemix",
+    "links": ["https://sourcify.dev/server/v2/contract/1/0x9b44efca3e2a707b63dc00ce79d646e5e5d24ba5"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "The curator is an unverified contract and timelocks are zero."
+  },
+  "WETH Mix Yield Token::mixWETH": {
+    "what": "Alchemix V3 WETH yield token · Morpho Vault V2 over Yearn, Tokemak and ETH LSTs",
+    "body": "mixWETH is Alchemix V3's WETH 'Mix Yield Token', a Morpho Vault V2 whose adapters are Alchemix strategies: Yearn WETH-1 (~33 %), Tokemak autoETH (~29 %), wstETH (~23 %), ether.fi eETH (~8 %) and sfrxETH (~7 %). It is ETH-denominated with a 5 % performance fee; the LST legs carry depeg risk and all curator timelocks are 0. Its yield stalled to near zero over a week in mid-October 2026 (about 1.7 % APR over 30 days).",
+    "backing": "WETH in Yearn, Tokemak autoETH and liquid staking tokens",
+    "yieldSource": "staking and lending yield of the underlying ETH strategies, net of a 5 % performance fee",
+    "redemption": "instant up to idle plus the Yearn liquidity adapter (~30 % of assets in Oct 2026); deposits capped by the Yearn vault's limit",
+    "issuer": "Alchemix",
+    "links": ["https://sourcify.dev/server/v2/contract/1/0x29bcfed246ce37319d94eba107db90c453d4c43d"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "The curator is an unverified contract, timelocks are zero, and the Tokemak autoETH leg is unscored."
+  },
+  "Royco Senior Tranche apyUSD::ROY-ST-apyUSD": {
+    "what": "Royco senior tranche on apyUSD · protected share of yield, junior takes losses first",
+    "body": "ROY-ST-apyUSD is the senior tranche of Royco V2's apyUSD market. It holds apyUSD, earns apyUSD's yield minus a premium paid to the junior tranche (ROY-JT), and is covered by that junior up to its size, about 28 % of the pool in October 2026. Its NAV is in dollars: apyUSD's share price times a Chainlink 'APXUSD / USD Exchange Rate' feed that reads 1.0, so an apxUSD market depeg is not marked. Senior deposits are capped by coverage. Exits pay apyUSD at the NAV of the request, so the day's yield while waiting is forfeited, and apyUSD's own exit takes 3-20 more days.",
+    "backing": "apyUSD (Apyx, backed by apxUSD), protected by the junior tranche",
+    "yieldSource": "apyUSD dividends minus the junior's risk premium",
+    "redemption": "request through Royco's EntryPoint (approve shares), wait 1 day, then anyone executes; cancel allowed before execution",
+    "issuer": "Royco",
+    "links": [
+      "https://tradingstrategy.ai/vaults/royco-senior-tranche-apyusd",
+      "https://cantina.xyz/competitions/9c6e38e2-535e-47b2-83ef-29df91fbb774"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "The tranche can seize shares and blacklist accounts (role holder unverified); its oracle does not mark an apxUSD depeg."
+  },
+  "Royco Junior Tranche apyUSD::ROY-JT-apyUSD": {
+    "what": "Royco junior (first-loss) tranche on apyUSD · levered, impaired to ~0.87 per share",
+    "body": "ROY-JT-apyUSD is the first-loss tranche under ROY-ST: it earns its own apyUSD yield plus a premium from the senior and absorbs every apyUSD shortfall before the senior does. While its feed marked apxUSD at 0.88-0.99 between June and mid-July 2026, its NAV per share fell from 1.019 to 0.670 (about -34 %); it had recovered to about 0.87 by October. Its published ~33 % APR is recovery-inflated, and its ERC-4626 views return 0, so they cannot price it. Exits work as for the senior, limited by the coverage the senior requires.",
+    "backing": "apyUSD, subordinated to the senior tranche",
+    "yieldSource": "apyUSD yield plus the senior risk premium, net of losses absorbed",
+    "redemption": "request through Royco's EntryPoint, wait 1 day, execute; paid in apyUSD at request-time NAV; limited by senior coverage",
+    "issuer": "Royco",
+    "links": ["https://tradingstrategy.ai/vaults/protocols/royco"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "First-loss and already impaired: ~0.87 per share in Oct 2026 vs 1.02 in Jun 2026; principal can fall further."
+  },
+  "Strata Senior nOPAL::SRNOPAL": {
+    "what": "Strata senior tranche on Nest nOPAL · USDC-accounted, protected by jrnOPAL",
+    "body": "srnOPAL is the senior tranche of Strata's nOPAL market. The pool holds Nest's nOPAL, a vault over BlackOpal's LiquidStone II private credit (Brazilian card receivables), and is accounted in USDC; srnOPAL earns a protected rate while jrnOPAL takes losses first. The junior was about 78 % of the pool in October 2026, a deep buffer, but the book is small (~$109k senior). Unlike Strata's other markets, this one accepts and pays only nOPAL, not USDC.",
+    "backing": "Nest nOPAL (BlackOpal private credit), protected by jrnOPAL",
+    "yieldSource": "senior share of nOPAL private-credit returns",
+    "redemption": "redeem pays nOPAL immediately at a 5 bps fee (cooldown 0 today, governance can raise it to 7 days); nOPAL then exits via Nest's instant or queued redemption",
+    "issuer": "Strata",
+    "links": [
+      "https://docs.strata.markets/technical-documentation/audits",
+      "https://etherscan.io/address/0x8a646edc4633adba5ec87dedaf3af958e268fe96"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Strata Junior nOPAL::JRNOPAL": {
+    "what": "Strata junior tranche on Nest nOPAL · residual yield, first loss on the pool",
+    "body": "jrnOPAL is the junior (first-loss) tranche of Strata's nOPAL market. It keeps the nOPAL return left after paying srnOPAL its protected rate and takes credit losses on Nest's nOPAL (BlackOpal LiquidStone II private credit) before the senior does; Neutrl's collapse showed how a Strata junior can be wiped out. The pool is accounted in USDC but accepts and pays only nOPAL. About $384k in October 2026.",
+    "backing": "Nest nOPAL (BlackOpal private credit), subordinated to srnOPAL",
+    "yieldSource": "residual nOPAL private-credit returns after the senior is paid",
+    "redemption": "redeem pays nOPAL immediately at a 15 bps fee (cooldown 0 today, governance can raise it); nOPAL then exits via Nest; can pause under minimum senior coverage",
+    "issuer": "Strata",
+    "links": [
+      "https://docs.strata.markets/technical-documentation/audits",
+      "https://etherscan.io/address/0x1b2b8cfef0b7b1fad216b55fefeeb0c3349da141"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Strategy PP Variable xStock::STRCX": {
+    "what": "xStocks STRC tracker · Strategy's variable-rate perpetual preferred, dividends reinvested",
+    "body": "STRCx is a Backed Assets (Jersey) tracker certificate on STRC, Strategy's variable-rate perpetual preferred stock, backed 1:1 by STRC held at Alpaca per xStocks' proof of reserves. STRC's monthly cash dividends are reinvested through a balance multiplier (1.0973 after 16 updates since January 2026, about 12 % a year). The price is equity-like: STRC fell from about $103 to $78.5 (-24 %) between late May and late June 2026 before recovering to about $106. A lending pool holding STRCx may keep the multiplier growth itself rather than pass it to the depositor.",
+    "backing": "STRC shares held at Alpaca, 1:1",
+    "yieldSource": "STRC monthly dividends, reinvested via the balance multiplier",
+    "redemption": "mint and redeem only for KYC'd institutions through xStocks; everyone else trades it",
+    "issuer": "xStocks (Backed Assets)",
+    "links": [
+      "https://api.xstocks.fi/api/v2/public/proof-of-reserves/STRCx",
+      "https://api.xstocks.fi/api/v2/public/assets/STRCx"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Principal is a market price of a preferred stock (-24 % drawdown in 2026), not a dollar claim."
+  },
+  "Franklin High Yield Corporate ETF (Ondo Tokenized)::FLHYON": {
+    "what": "Ondo tokenized Franklin High Yield Corporate ETF · junk-bond ETF, payouts reinvested",
+    "body": "FLHYon is an Ondo Global Markets token tracking FLHY, Franklin Templeton's high-yield corporate bond ETF. It is a secured note of an Ondo GM SPV (BVI) with Ankura Trust as security agent. Distributions are reinvested through a shares multiplier (1.0316 in October 2026), so the price is the ETF price times the multiplier, and the yield is roughly the ETF's ~6.8 % distribution yield. On Ethereum about 98 % of supply sat in a single wallet in October 2026.",
+    "backing": "FLHY ETF shares held for the SPV",
+    "yieldSource": "the ETF's bond-coupon distributions, reinvested via the multiplier",
+    "redemption": "mint and redeem only for KYC'd non-US holders through Ondo; transfers are open",
+    "issuer": "Ondo Global Markets",
+    "links": ["https://docs.ondo.finance/ondo-stocks/legal-and-regulatory.md"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Principal is a junk-bond ETF price, not a dollar claim."
+  },
+  "Universal ETH::uniETH": {
+    "what": "Bedrock uniETH · liquid-staked ETH, non-rebasing rising exchange ratio",
+    "body": "uniETH is Bedrock's ETH liquid staking token. ETH deposited into Bedrock's staking contract is staked on Ethereum validators, and uniETH's exchange ratio against ETH rises with staking rewards (about 2.4 % APR in October 2026, ~9k uniETH). The Arbitrum and Linea copies are bridged.",
+    "backing": "ETH staked on Ethereum validators through Bedrock",
+    "yieldSource": "Ethereum staking rewards",
+    "redemption": "mint by depositing ETH; exit through Bedrock's staking contract (asynchronous) or a DEX sale",
+    "issuer": "Bedrock",
+    "links": ["https://etherscan.io/address/0xf1376bcef0f78459c0ed0ba5ddce976f1ddf51f4"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Redemption timing and fees were not checked."
+  },
+  "SUSDA": {
+    "what": "Avalon savings USDa · USDa deposited at Avalon's protocol-set target rate (~4 %)",
+    "body": "sUSDa is Avalon Labs' savings token for USDa, Avalon's CeDeFi stablecoin minted against bitcoin collateral. Its value in USDa rises through Avalon's savings account, whose on-chain target APR was 4 % in October 2026 (1 sUSDa ≈ 1.132 USDa); the yield comes from USDa borrowing fees and Avalon's lending revenue. The same token runs on 13 chains under one group; Ethereum held about 516k sUSDa.",
+    "backing": "USDa (Avalon stablecoin backed by BTC-collateralized loans)",
+    "yieldSource": "USDa borrow interest and Avalon lending revenue, at a protocol-set target rate",
+    "redemption": "redeem to USDa through Avalon's savings account; USDa itself is redeemed through Avalon",
+    "issuer": "Avalon Labs",
+    "links": ["https://iq.wiki/wiki/susda", "https://etherscan.io/address/0x2b66aade1e9c062ff411bd47c44e0ad696d43bd9"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Exit terms and USDa's backing were not checked against Avalon's docs."
+  },
+  "Pareto Staked USP::SUSP": {
+    "what": "Pareto staked USP · loans to institutional borrowers through Pareto Credit Vaults",
+    "body": "sUSP is the ERC-4626 staking vault over USP, Pareto's synthetic dollar (not Piku's USP). The USDC or USDS used to mint USP is placed in Pareto Credit Vaults that lend to institutional borrowers; the interest goes to sUSP as a rising price (about 6.3 % APR, ~765k USP staked in October 2026). sUSP holders take borrower defaults through a lower conversion rate, after a protocol-funded stability reserve.",
+    "backing": "USP (stablecoins lent through Pareto Credit Vaults)",
+    "yieldSource": "interest from institutional credit lines in Pareto Credit Vaults",
+    "redemption": "unstake to USP; USP is minted and redeemed through Pareto, partly KYC-gated",
+    "issuer": "Pareto",
+    "links": [
+      "https://paragraph.xyz/@pareto/pareto-launches-usp-synthetic-dollar",
+      "https://defillama.com/stablecoin/pareto-usp"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Unstake cooldown and fees were not checked."
+  },
+  "stETH ARM LP Token::ARM-WETH-STETH": {
+    "what": "Lido ARM LP (Origin) · WETH buys stETH at a discount, redeems via Lido's queue",
+    "body": "The Lido ARM (Automated Redemption Manager) is Origin's stETH/WETH market maker. LPs deposit WETH; the ARM buys stETH slightly below 1:1 from sellers who want an instant exit and redeems it 1:1 through Lido's withdrawal queue, earning the spread, and lends idle WETH. The LP token is an ERC-4626 over WETH (about 1,880 WETH and 2.4 % APR in October 2026), and its price can dip if stETH is held through a depeg.",
+    "backing": "WETH and stETH waiting in Lido's withdrawal queue",
+    "yieldSource": "discount captured buying stETH and redeeming it through Lido's queue, plus lending idle WETH",
+    "redemption": "request a redeem, then claim WETH after a short delay, subject to the ARM having WETH",
+    "issuer": "Origin",
+    "links": [
+      "https://docs.originprotocol.com",
+      "https://etherscan.io/address/0x85b78aca6deae198fbf201c82daf6ca21942acc6"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Exit delay and fees were not re-checked."
+  },
+  "Aladdin sdCRV::ASDCRV": {
+    "what": "Aladdin asdCRV · auto-compounding StakeDAO sdCRV (Curve vote-escrow yield)",
+    "body": "asdCRV is Aladdin DAO's ERC-4626 compounder over StakeDAO's sdCRV, a liquid wrapper of permanently locked veCRV. It claims sdCRV's rewards (Curve fees and vote incentives) and reinvests them into more sdCRV, so its share price rises: about 14.7 % APR measured in sdCRV over 30 days in October 2026, on 17.2M sdCRV. Its value rests on sdCRV, which trades at a market discount to CRV and cannot be unlocked back into CRV.",
+    "backing": "sdCRV (StakeDAO-locked veCRV)",
+    "yieldSource": "Curve fees and vote incentives earned by sdCRV, compounded",
+    "redemption": "redeem to sdCRV; sdCRV to CRV only through the market",
+    "issuer": "Aladdin DAO",
+    "links": ["https://etherscan.io/address/0x43e54c2e7b3e294de3a155785f52ab49d87b9922"],
+    "updated": "2026-10-17",
+    "confidence": "medium"
+  },
+  "Aladdin sdPENDLE::asdPENDLE": {
+    "what": "Aladdin asdPENDLE · auto-compounding StakeDAO sdPENDLE",
+    "body": "asdPENDLE is Aladdin DAO's ERC-4626 compounder over StakeDAO's sdPENDLE, a liquid wrapper of locked PENDLE. It reinvests sdPENDLE's rewards into more sdPENDLE, so its share price rises (about 4.6 % APR in sdPENDLE, October 2026). Its value rests on sdPENDLE, which trades at a market discount to PENDLE.",
+    "backing": "sdPENDLE (StakeDAO-locked PENDLE)",
+    "yieldSource": "Pendle protocol rewards earned by sdPENDLE, compounded",
+    "redemption": "redeem to sdPENDLE; sdPENDLE to PENDLE only through the market",
+    "issuer": "Aladdin DAO",
+    "links": ["https://etherscan.io/address/0x606462126e4bd5c4d153fe09967e4c46c9c7fecf"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Pendle replaced vePENDLE with sPENDLE in Jan 2026; whether sdPENDLE's reward stream continues was not checked."
+  },
+  "Fusion stETH looping Ethereum::fusnstETH": {
+    "what": "IPOR Fusion stETH looping vault · leveraged staked ETH against borrowed WETH",
+    "body": "fusnstETH is a Fusion by IPOR vault on Ethereum that loops staked ETH: it posts (w)stETH as collateral, borrows WETH across lending markets, and repeats via flash loans, with leverage managed by IPOR's off-chain 'Alpha' from staking yield, borrow rates and the stETH/ETH price. It earns the staking yield times the leverage minus borrow cost (about 4.1 % in October 2026) and loses money if WETH borrow rates exceed staking yield or stETH depegs. Its shares have 20 decimals.",
+    "backing": "leveraged stETH position against WETH debt",
+    "yieldSource": "leveraged ETH staking yield minus WETH borrow cost",
+    "redemption": "ERC-4626 withdraw; the vault unwinds leverage to pay",
+    "issuer": "IPOR (Fusion)",
+    "links": [
+      "https://docs.ipor.io/ipor-fusion/architecture-overview",
+      "https://defillama.com/yields/pool/eddd84ad-dda7-49ea-9313-662e25e9e518"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Size and exit terms were not checked; the vault had shrunk sharply."
+  },
+  "Dialectic USD::DUSD": {
+    "what": "Makina DUSD · USD strategy vault run by Dialectic across DeFi",
+    "body": "DUSD is the token of Makina's USD 'Machine', a strategy vault operated by Dialectic since October 2025 (before that it lent on Morpho). Deposits in a dollar accounting token mint DUSD at the machine's share price, Dialectic's portfolio managers deploy the capital across DeFi yield strategies, and returns accrue to the share price (about 7.0 % APR on ~$1.9M in October 2026). It also exists on Ink.",
+    "backing": "USD deployed by Dialectic across DeFi strategies",
+    "yieldSource": "returns of the operator-managed DeFi strategies",
+    "redemption": "through the Makina machine's redemption flow; also traded on Curve",
+    "issuer": "Makina (operator Dialectic)",
+    "links": [
+      "https://makinafi.substack.com/p/operator-deep-dive-dialectic",
+      "https://makinafi.substack.com/p/makina-protocol-launch-the-machines"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Strategy holdings, deposit permissions and exit terms were not checked."
+  },
+  "Dialectic ETH::DETH": {
+    "what": "Makina DETH · ETH strategy vault run by Dialectic across DeFi",
+    "body": "DETH is the token of Makina's ETH 'Machine', a strategy vault operated by Dialectic since October 2025 (before that it lent on Morpho). Deposits in ETH mint DETH at the machine's share price, Dialectic's portfolio managers deploy the capital across DeFi yield strategies, and returns accrue to the share price (about 4.1 % APR on ~2,500 ETH in October 2026). It also exists on Ink.",
+    "backing": "ETH deployed by Dialectic across DeFi strategies",
+    "yieldSource": "returns of the operator-managed DeFi strategies",
+    "redemption": "through the Makina machine's redemption flow; also traded on Curve",
+    "issuer": "Makina (operator Dialectic)",
+    "links": [
+      "https://makinafi.substack.com/p/operator-deep-dive-dialectic",
+      "https://makinafi.substack.com/p/makina-protocol-launch-the-machines"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Strategy holdings, deposit permissions and exit terms were not checked."
+  },
+  "Dialectic BTC::DBIT": {
+    "what": "Makina DBIT · BTC strategy vault run by Dialectic across DeFi",
+    "body": "DBIT is the token of Makina's BTC 'Machine', a strategy vault operated by Dialectic since October 2025 (before that it lent on Morpho). Deposits in BTC mint DBIT at the machine's share price, Dialectic's portfolio managers deploy the capital across DeFi yield strategies, and returns accrue to the share price (about 1.1 % APR on ~8.5 BTC in October 2026). It also exists on Ink.",
+    "backing": "BTC deployed by Dialectic across DeFi strategies",
+    "yieldSource": "returns of the operator-managed DeFi strategies",
+    "redemption": "through the Makina machine's redemption flow; also traded on Curve",
+    "issuer": "Makina (operator Dialectic)",
+    "links": [
+      "https://makinafi.substack.com/p/operator-deep-dive-dialectic",
+      "https://makinafi.substack.com/p/makina-protocol-launch-the-machines"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Strategy holdings, deposit permissions and exit terms were not checked."
+  },
+  "Ember Earn::eEARN": {
+    "what": "Ember Earn USDC vault · lending spreads, looping and funding-rate trades",
+    "body": "eEARN is the share token of Ember Protocol's Earn vault on Ethereum, which takes USDC. Its curator runs stablecoin strategies (lending spreads, looping on established protocols and delta-neutral funding-rate trades), and an operator pushes the vault's rate, so the token rises against USDC (about 8.5 % APR on ~$3.7M in October 2026). Fees are set by the curator and netted inside the rate.",
+    "backing": "USDC deployed by the curator into lending, looping and basis strategies",
+    "yieldSource": "lending spreads, looping and perp funding, net of curator fees",
+    "redemption": "withdrawal request joins an operator-processed queue (typically about T+4)",
+    "issuer": "Ember",
+    "links": [
+      "https://tradingstrategy.ai/vaults/ember-earn",
+      "https://etherscan.io/address/0x9be9294722f8aad37b11a9792be2c782182cafa2"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Assumed to use Ember's standard vault (operator-pushed rate, queued exit); not checked on this contract."
+  },
+  "Lido Earn ETH::EARNETH": {
+    "what": "Lido earnETH · Mellow-curated ETH vault allocating to GGV and stRATEGY",
+    "body": "earnETH is Lido Earn's ETH vault. Mellow curates it as a meta-vault over two sub-vaults, GGV and stRATEGY (strETH), which deploy ETH and wstETH across Aave, Morpho, Pendle, Gearbox, Maple and other protocols. It accepts ETH, WETH, wstETH, GG or strETH, with deposits settling within about 24 hours, and charges a 1 % platform fee plus 10 % of performance. About $206M and 3.1 % APR in October 2026.",
+    "backing": "ETH and wstETH in the GGV and stRATEGY sub-vaults",
+    "yieldSource": "ETH staking plus DeFi lending and looping yield, net of fees",
+    "redemption": "two steps: request, then claim, typically about 3 days",
+    "issuer": "Lido (curator Mellow)",
+    "links": ["https://docs.lido.fi/earn", "https://blog.lido.fi/lido-earn-expands-with-earneth-and-earnusd/"],
+    "updated": "2026-10-17",
+    "confidence": "medium"
+  },
+  "Lido EarnUSD::EARNUSD": {
+    "what": "Lido earnUSD · Mellow-curated stablecoin vault across lending and structured strategies",
+    "body": "earnUSD is Lido Earn's stablecoin vault. It accepts USDC and USDT and allocates them across curated lending, liquidity and structured stablecoin strategies, with the share price rising as they earn (about 5.5 % APR on ~$32M in October 2026).",
+    "backing": "USDC and USDT deployed across curated DeFi strategies",
+    "yieldSource": "stablecoin lending and structured-strategy yield, net of fees",
+    "redemption": "two steps: request, then claim after the vault processes it",
+    "issuer": "Lido (curator Mellow)",
+    "links": ["https://docs.lido.fi/earn", "https://blog.lido.fi/lido-earn-expands-with-earneth-and-earnusd/"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Underlying strategy list and exit timing were not checked."
+  },
+  "Mellow stRATEGY::strETH": {
+    "what": "Mellow stRATEGY (strETH) · Lido's ETH strategy vault, a sub-vault of earnETH",
+    "body": "strETH is the share token of Lido's stRATEGY vault, curated by Mellow. It deploys ETH and wstETH into DeFi strategies (lending, looping and Pendle positions) and is one of the two sub-vaults behind Lido earnETH, which holds most of it (about $205M in October 2026). Its rate was about 3.8 % APR.",
+    "backing": "ETH and wstETH deployed across DeFi strategies",
+    "yieldSource": "ETH staking plus DeFi strategy yield, net of fees",
+    "redemption": "request and claim through Mellow's queue; or deposit into earnETH",
+    "issuer": "Lido (curator Mellow)",
+    "links": ["https://docs.lido.fi/earn", "https://etherscan.io/address/0xcd3c0f51798d1daa92fb192e57844ae6cee8a6c7"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Direct exit terms for strETH were not checked."
+  },
+  "Gains Network USDC::gUSDC": {
+    "what": "gTrade USDC vault (Arbitrum) · counterparty to gTrade's leveraged traders",
+    "body": "gUSDC is the ERC-4626 vault share behind gTrade, Gains Network's leveraged trading platform, on Arbitrum. The vault is the counterparty to every trade: it pays traders' profits, keeps their losses and earns a share of fees, so returns can turn negative for weeks. In October 2026 it showed about 4.3 % APR over 90 days but -9.5 % over 30 days, on about $4.1M.",
+    "backing": "USDC, exposed to traders' net P&L",
+    "yieldSource": "trading fees and trader losses, minus trader profits",
+    "redemption": "withdrawal request that unlocks after one or more epochs, longer when the vault is under-collateralized",
+    "issuer": "Gains Network",
+    "links": [
+      "https://tradingstrategy.ai/vaults/gtrade-gains-network-usdc",
+      "https://arbiscan.io/address/0xd3443ee1e91af28e5fb858fbd0d72a63ba8046e0"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Withdrawal epoch terms come from older documentation and were not re-checked."
+  },
+  "Swell Ethereum::SWETH": {
+    "what": "Swell swETH · liquid-staked ETH, non-rebasing rising rate",
+    "body": "swETH is Swell's ETH liquid staking token: ETH is staked with Swell's node operators and swETH's rate against ETH rises with staking rewards (about 2.4 % APR in October 2026). The Arbitrum copy is bridged and shares this group.",
+    "backing": "ETH staked on Ethereum validators through Swell",
+    "yieldSource": "Ethereum staking rewards",
+    "redemption": "Swell withdrawal queue (request, then claim after validator exits) or a DEX sale",
+    "issuer": "Swell",
+    "links": [
+      "https://docs.swellnetwork.io",
+      "https://etherscan.io/address/0xf951e335afb289353dc249e82926178eac7ded78"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium"
+  },
+  "Restaked Swell ETH::RSWETH": {
+    "what": "Swell rswETH · ETH staked and restaked on EigenLayer, rising rate",
+    "body": "rswETH is Swell's liquid restaking token: deposited ETH is staked and restaked through EigenLayer, and rswETH's rate against ETH rises with staking and restaking rewards. The rate is updated in lumps (about 2.6 % APR over 90 days in October 2026, 5.1 % over 30), so short windows mislead. Bridged copies on several chains share this group.",
+    "backing": "ETH staked and restaked on EigenLayer through Swell",
+    "yieldSource": "Ethereum staking plus EigenLayer restaking rewards",
+    "redemption": "Swell withdrawal queue or a DEX sale",
+    "issuer": "Swell",
+    "links": [
+      "https://docs.swellnetwork.io",
+      "https://etherscan.io/address/0xfae103dc9cf190ed75350761e95403b7b8afa6c0"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Restaked ETH can be slashed by EigenLayer services."
+  },
+  "Hyperwave HLP::hwHLP": {
+    "what": "Hyperwave liquid HLP · Hyperliquid's market-making vault as a token",
+    "body": "hwHLP tokenizes a deposit in HLP, Hyperliquid's protocol vault that makes markets and takes over liquidations on HyperCore. Users deposit USDT0, USDe or USDHL and receive hwHLP, whose price follows HLP's profit and loss and can fall (about 3.6 % APR over 30 days in October 2026). The same address exists on HyperEVM and Ethereum.",
+    "backing": "a position in Hyperliquid's HLP vault",
+    "yieldSource": "HLP market-making and liquidation profits",
+    "redemption": "withdrawal request processed by Hyperwave, typically a few days (HLP itself has a lockup)",
+    "issuer": "Hyperwave",
+    "links": ["https://thedefiant.io/news/defi/hyperwave-unveils-liquid-hlp-token-with-zero-fees-for-three-months"],
+    "updated": "2026-10-17",
+    "confidence": "medium"
+  },
+  "Hyperwave HYPE::hwHYPE": {
+    "what": "Hyperwave HYPE vault · deploys HYPE across HyperEVM DeFi",
+    "body": "hwHYPE is Hyperwave's HYPE vault: depositors bring WHYPE or HYPE liquid staking tokens and Hyperwave deploys them across HyperEVM DeFi. Its price in HYPE moves with those strategies and can fall: over 30 days to mid-October 2026 it read -9.3 % annualized, after +3.7 % over the prior 7 days.",
+    "backing": "HYPE and HYPE derivatives deployed in HyperEVM DeFi",
+    "yieldSource": "returns of the deployed HYPE strategies (can be negative)",
+    "redemption": "withdrawal request processed by Hyperwave",
+    "issuer": "Hyperwave",
+    "links": ["https://wavereport.beehiiv.com/p/wave-report-august-2025-a52707e4ebb7f1a1"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Strategy composition and exit terms were not checked; 30-day return was negative."
+  },
+  "WSUPEROETHB": {
+    "what": "Origin wrapped Super OETH (Base) · ETH yield from staking and an Aerodrome AMO",
+    "body": "wsuperOETHb is the non-rebasing ERC-4626 wrapper of Origin's Super OETH on Base, an ETH token whose yield comes from staked ETH and Origin's liquidity strategy on Aerodrome. Wrapping turns superOETHb's rebases into a rising share price (about 2.8 % APR on ~1,345 superOETHb in October 2026).",
+    "backing": "superOETHb (ETH, staked ETH and Aerodrome AMO positions)",
+    "yieldSource": "ETH staking yield plus Aerodrome AMO fees and rewards",
+    "redemption": "instant unwrap to superOETHb; superOETHb exits through Origin's withdrawal flow or Aerodrome",
+    "issuer": "Origin",
+    "links": [
+      "https://docs.originprotocol.com",
+      "https://basescan.org/address/0x7fcd174e80f264448ebee8c88a7c4476aaf58ea6"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium"
+  },
+  "Plasma USD Vault::PlasmaUSD": {
+    "what": "Veda Plasma USD Vault · USDT0 savings vault on Plasma, mostly Aave lending",
+    "body": "PlasmaUSD is a Veda BoringVault on Plasma that started as Plasma's pre-deposit vault and stayed on as a USDT0 savings product, lending mainly on Aave. Veda's accountant sets the share price (about 1.04, 4.1 % APR and $30.6M in October 2026).",
+    "backing": "USDT0 deployed mostly into Aave on Plasma",
+    "yieldSource": "stablecoin lending interest",
+    "redemption": "Veda withdrawal queue (request, then solver payout)",
+    "issuer": "Veda",
+    "links": ["https://docs.veda.tech/vault-deployments/plasma", "https://veda.tech/solutions/veda-x-plasma"],
+    "updated": "2026-10-17",
+    "confidence": "medium"
+  },
+  "Shadow Liquid Staking Token::X33": {
+    "what": "Shadow x33 · liquid xSHADOW on Sonic, compounds DEX fees and vote rewards",
+    "body": "x33 is Shadow Exchange's liquid wrapper of xSHADOW, the non-transferable staked SHADOW that votes in Shadow's ve(3,3) DEX on Sonic. The wrapper votes and reinvests the fees, incentives and rebases into more xSHADOW, so x33's rate rises (about 26 % APR in xSHADOW in October 2026). The yield and the principal are both in SHADOW, a governance token, so dollar value moves with its price.",
+    "backing": "xSHADOW (staked SHADOW)",
+    "yieldSource": "Shadow DEX fees, vote incentives and rebases, compounded in xSHADOW",
+    "redemption": "trade on Shadow pools (thin); unwrapping to xSHADOW keeps the non-transferable lock",
+    "issuer": "Shadow Exchange",
+    "links": [
+      "https://www.gate.com/learn/articles/understanding-shadow-exchange/8105",
+      "https://sonicscan.org/address/0x3333111a391cc08fa51353e9195526a70b333333"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Principal is a governance-token price."
+  },
+  "Harmonix kHYPE::HAKHYPE": {
+    "what": "Harmonix kHYPE vault · ERC-4626 over Kinetiq kHYPE, earns in HYPE",
+    "body": "hakHYPE is a Harmonix Finance ERC-4626 vault over kHYPE, Kinetiq's staked HYPE. Measured in HYPE it earned about 2.2 % APR in October 2026, which includes kHYPE's own staking yield; it held about 59.7k kHYPE.",
+    "backing": "kHYPE (Kinetiq staked HYPE)",
+    "yieldSource": "kHYPE staking yield plus Harmonix strategy returns",
+    "redemption": "through Harmonix (request-based exits on its other vaults); not checked here",
+    "issuer": "Harmonix",
+    "links": ["https://github.com/harmonixfi/core-smart-contract/tree/main/audits"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Strategy, admin keys and exit terms were not checked."
+  },
+  "Looped Hype::LHYPE": {
+    "what": "Looped HYPE · automated stHYPE/HYPE leverage loop on HyperEVM lending markets",
+    "body": "LHYPE is the receipt token of loopedHYPE, an automated leverage strategy: deposited HYPE is staked into stHYPE, which is posted as collateral to borrow more HYPE on HyperEVM lending markets, repeatedly. It earns staking yield times leverage minus HYPE borrow cost (about 1.3 % APR on $6.5M in October 2026) and loses when borrow rates exceed staking yield.",
+    "backing": "leveraged stHYPE position against HYPE debt",
+    "yieldSource": "leveraged HYPE staking yield minus borrow cost",
+    "redemption": "time-bound withdrawal requests paid in stHYPE, with a fee; or a DEX sale",
+    "issuer": "Looping Collective",
+    "links": ["https://velog.io/@goffmen/Looping-Collective-Tokenized-DeFi-Yield-Explained"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "Operator identity and current exit terms were not checked against official docs."
+  },
+  "xHYPE::XHYPE": {
+    "what": "Liminal xHYPE · delta-neutral HYPE (spot/LST long + perp short), earns funding",
+    "body": "xHYPE is one of Liminal's delta-neutral 'xTokens' on Hyperliquid: it holds HYPE (partly as liquid staking tokens) and shorts an equal amount of HYPE perps, so it earns perp funding plus staking yield with little HYPE price exposure. About 8.9 % APR on $8.5M in October 2026; Liminal takes 10 % of funding gains. Negative funding lowers the value.",
+    "backing": "spot HYPE/LSTs hedged with HYPE perp shorts on Hyperliquid",
+    "yieldSource": "HYPE perp funding plus staking yield, minus a 10 % performance fee",
+    "redemption": "through Liminal (instant buffer or queued, as for limUSD)",
+    "issuer": "Liminal",
+    "links": ["https://docs.liminal.money/tokenized/limusd.md"],
+    "updated": "2026-10-17",
+    "confidence": "low",
+    "verify": "xHYPE contract and exit terms were not checked."
+  },
+  "limUSD::LIMUSD": {
+    "what": "Liminal limUSD · allocator over delta-neutral Hyperliquid funding and lending xTokens",
+    "body": "limUSD is Liminal's USD allocator on HyperEVM (LayerZero copies on Ethereum and Arbitrum). It spreads deposits over Liminal's xTokens: delta-neutral HYPE and BTC carry positions on Hyperliquid that earn perp funding and staking yield, and a lending sleeve. Its price is not computed on-chain: Liminal posts the NAV (bounded per update), and price per share = NAV / supply (1.0362 USDC on 2026-10-16, about 8 % APR on $8.9M). Liminal takes 10 % of performance on top of the xTokens' own fees.",
+    "backing": "USDC and Hyperliquid spot/perp positions held by Liminal's strategist",
+    "yieldSource": "perp funding, staking and money-market yield of the xTokens",
+    "redemption": "instant from a buffer at a 0.3 % fee (capped by the strategist's USDC, ~$374k in Oct 2026), or a free queued request paid automatically within ~3 days",
+    "issuer": "Liminal",
+    "links": [
+      "https://docs.liminal.money/tokenized/limusd.md",
+      "https://docs.liminal.money/tokenized/risks.md",
+      "https://docs.liminal.money/tokenized/developers/limusd.md"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "NAV is posted by Liminal with no attestation; the instant buffer is held by an EOA."
+  },
+  "Staked HYPE::STHYPE": {
+    "what": "Valantis stHYPE · rebasing staked HYPE, the same ledger as wstHYPE",
+    "body": "stHYPE is the rebasing balance token of Valantis's (formerly Thunderhead) HYPE liquid staking: HYPE is delegated to HyperCore validators and holders' balances grow with staking rewards (about 1.5 % APR in October 2026). It is a view of the same accounting as wstHYPE, the non-rebasing wrapper, about 1.036 HYPE per wstHYPE share, so the two are one $175M book. Upgrades sit behind a 48 h timelock and a 4-of-6 Safe.",
+    "backing": "HYPE staked with HyperCore validators",
+    "yieldSource": "HYPE staking rewards",
+    "redemption": "unstake through Valantis (HyperCore unbonding) or trade",
+    "issuer": "Valantis (stakedhype)",
+    "links": ["https://docs.stakedhype.fi/technical/audits"],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "haHYPE::haHYPE": {
+    "what": "Harmonix haHYPE · HYPE strategy vault across Felix, HyperLend, Kinetiq and Pendle",
+    "body": "haHYPE is a Harmonix Finance ERC-4626 vault over WHYPE. Harmonix deploys the HYPE across Hyperliquid and HyperEVM protocols (Felix, HyperLend, Kinetiq, Pendle) at its discretion, so the share price in HYPE rises with those returns (1.0475 HYPE, about 2.2 % APR on ~16k HYPE in October 2026). Its admin and role holders could not be identified on-chain.",
+    "backing": "WHYPE deployed across HyperEVM lending, staking and Pendle positions",
+    "yieldSource": "HYPE lending, staking and Pendle returns, managed by Harmonix",
+    "redemption": "initiateWithdrawal locks shares at the current price; once Harmonix funds it, redeem to WHYPE",
+    "issuer": "Harmonix",
+    "links": ["https://github.com/harmonixfi/core-smart-contract/tree/main/audits"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Small discretionary vault; keyholders and strategy limits not verified."
+  },
+  "Kinetiq Earn Vault::vkHYPE": {
+    "what": "Kinetiq Earn vkHYPE · Veda vault deploying kHYPE and HYPE across HyperEVM DeFi",
+    "body": "vkHYPE is Kinetiq Earn, a Veda BoringVault on HyperEVM curated by Seven Seas: it takes kHYPE or HYPE and deploys it across HyperEVM DeFi. Its HYPE price is an accountant mark bounded to ±1 % per update, and it can fall (1.0365 → 1.0343 between 2026-09-17 and 2026-10-01); over 90 days it grew about 1.1 % APR, less than kHYPE itself (~2 %). 20 % performance fee; about 472k HYPE ($37M).",
+    "backing": "kHYPE and HYPE deployed in HyperEVM DeFi strategies",
+    "yieldSource": "kHYPE staking plus DeFi strategy returns, net of a 20 % performance fee",
+    "redemption": "shares locked 1 day after deposit; then an on-chain queue request (1-10 bps discount) paid in kHYPE by a solver after ~1 hour; cancellable",
+    "issuer": "Kinetiq",
+    "links": ["https://kinetiq.xyz/docs/earn", "https://docs.yield.xyz/docs/kinetiq"],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "An untimelocked 4-of-6 Safe can widen the strategy set; the rate is a mark that can fall."
+  },
+  "Staked KAITO::sKAITO": {
+    "what": "Kaito staked KAITO · KAITO reward distributions, 7-day cooldown",
+    "body": "sKAITO is Kaito's official staking vault on Base, an immutable ERC-4626 over the KAITO token built like Ethena's sUSDe. Kaito pays about 250k KAITO a month into it, vesting over 30 days, so sKAITO rises against KAITO (about 11.4 % APR in KAITO over 90 days, October 2026). Both yield and principal are KAITO, so the dollar value moves with KAITO's price. A 2-of-3 Safe can blacklist holders and move a blacklisted holder's balance.",
+    "backing": "KAITO",
+    "yieldSource": "KAITO rewards distributed by Kaito",
+    "redemption": "cooldownShares, wait 7 days, then claim KAITO from the escrow",
+    "issuer": "Kaito",
+    "links": ["https://kaito.ai/stake", "https://basescan.org/address/0x548d3b444da39686d1a6f1544781d154e7cd1ef7"],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Principal is a governance-token price."
+  },
+  "Super Jarvis Synthetic Euro::sjEUR": {
+    "what": "Jarvis staked jEUR (Base) · euro-denominated, paid by a Superfluid stream",
+    "body": "sjEUR is an immutable ERC-4626 on Base over jEURx, a Superfluid wrapper of jEUR, Jarvis Network's euro synthetic. Its yield is a constant Superfluid stream of jEURx from a Jarvis wallet into the vault, a discretionary subsidy: about 4.7 % APR in October 2026, and 0 whenever the stream is closed (it has been closed and reopened 8+ times since Dec 2024). Rate and value are in euros, so a dollar holder carries EUR/USD risk. Jarvis is near-dormant and jEUR traded about 0.5 % below EURC.",
+    "backing": "jEUR (Jarvis euro synthetic, via the jEURx wrapper)",
+    "yieldSource": "a discretionary Jarvis jEURx stream into the vault",
+    "redemption": "instant wrappedRedeem to jEUR, any receiver, no fee",
+    "issuer": "Jarvis Network",
+    "links": [
+      "https://old.spectra.finance/proposal/0x9b7aae332e820b5f1ae048ab1c63ec93ccf68eace9ea9b40d8940da4c9574c44",
+      "https://basescan.org/address/0x89cc2a57223fa803852b6b4e65c6e376d49909f9"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Euro-denominated; jEUR's backing on Base was not verified; a forwarder set in Jarvis's Finder can act for holders."
+  },
+  "Staked USDu::sUSDu": {
+    "what": "Unitas staked USDu · JLP fees plus perp hedge, 7-day cooldown",
+    "body": "sUSDu is the staking vault over Unitas's USDu on BNB Chain, a clone of Ethena's sUSDe. USDu is a synthetic dollar whose collateral sits in Jupiter's JLP pool hedged with perp shorts, earning JLP fees and funding; staked returns vest into sUSDu over 8 hours, about 11 % APR on $36.8M in October 2026. Staking is permissionless, while USDu mint and redeem are for whitelisted institutions. A 3-of-5 Safe with no timelock holds blacklist powers.",
+    "backing": "USDu (JLP position hedged with perp shorts)",
+    "yieldSource": "JLP trading fees and perp funding",
+    "redemption": "cooldownShares, wait 7 days, unstake to USDu",
+    "issuer": "Unitas",
+    "links": [
+      "https://github.com/UnipayFi/Audit",
+      "https://bscscan.com/address/0x385c279445581a186a4182a5503094ebb652ec71"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Custody of the hedge positions is not verified."
+  },
+  "Unitas Gold::XGLD": {
+    "what": "Unitas Gold · XAUt on Bybit backing delta-neutral USDT strategies, priced in gold",
+    "body": "XGLD is Unitas's gold yield token on BNB Chain. Tether Gold (XAUt) is held as collateral on Bybit (off-exchange settlement), USDT is borrowed against it and run in delta-neutral strategies, and the returns raise XGLD's on-chain exchange rate in XAUt (1.0102 XAUt per XGLD, about 3.35 % a year in gold, October 2026). Rate updates are capped at +5 bps each behind a 2-day timelock. The Base copy holds only dust.",
+    "backing": "XAUt held on Bybit, plus delta-neutral USDT positions",
+    "yieldSource": "returns of delta-neutral strategies funded by borrowing against the gold",
+    "redemption": "mint and 7-day redemption only for whitelisted users; others trade PancakeSwap XAUt/XGLD (~$330k), 0.6-1.6 % below NAV",
+    "issuer": "Unitas",
+    "links": ["https://bscscan.com/address/0xe60106a5cab7e7c64830919d36ab20caaf50ac91"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Exchange custody (Bybit) and the strategies are off-chain and not verified."
+  },
+  "Sceptre Staked FLR::SFLR": {
+    "what": "Sceptre sFLR · liquid-staked FLR, P-chain staking rewards, 14.5-day unlock",
+    "body": "sFLR is Sceptre's liquid staking token on Flare (a BENQI sAVAX fork). Deposited FLR is moved by operator keys to stake on Flare's P-chain, and rewards are pushed back about every 3 days after Sceptre's 10 % cut, so the FLR value per sFLR (1.8913 on 2026-10-16) rises in steps: about 7.4 % APR over 30 days, while shorter windows mislead. One EOA owns the upgrade key and admin role with no timelock, and 34 operator EOAs move the staked FLR, so solvency is not provable on-chain.",
+    "backing": "FLR staked on the P-chain by Sceptre operators, plus an instant-redeem WFLR buffer",
+    "yieldSource": "Flare P-chain staking rewards, net of a 10 % protocol share",
+    "redemption": "instant redeem to WFLR at a 0.5 % fee (capped by the buffer, ~40.5M WFLR), or free unlock request: 14.5 days, then a 2-day window to claim WFLR (a missed window returns the shares)",
+    "issuer": "Sceptre",
+    "links": [
+      "https://defillama.com/protocol/sceptre-liquid",
+      "https://flare-explorer.flare.network/address/0x12e605bc104e93b45e1ad99f9e555f659051c2bb"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Single-EOA upgrade and admin key; staked FLR held by operator keys."
+  },
+  "Spectra ERC4626 Wrapper: Staked FLR Flare::sw-sFLR": {
+    "what": "Spectra wrapper of Sceptre sFLR · 1:1, the yield token behind Spectra's sFLR PTs",
+    "body": "sw-sFLR is Spectra's ERC-4626 wrapper that turns Sceptre sFLR into the interest-bearing token of Spectra's PT/YT markets on Flare. It holds exactly one sFLR per share (68.1M on 2026-10-16) and carries sFLR's rate, about 1.891 WFLR per share and ~7.4 % APR. It adds Spectra's contract risk (upgradeable, 3-of-5 Safe) on top of sFLR's.",
+    "backing": "Sceptre sFLR, 1:1",
+    "yieldSource": "sFLR's FLR staking rewards",
+    "redemption": "unwrap to sFLR, then Sceptre's instant (0.5 % fee) or 14.5-day exit",
+    "issuer": "Spectra (over Sceptre)",
+    "links": ["https://flare-explorer.flare.network/address/0xb9003d5bed06afd570139d21c64817298dd47ec1"],
+    "updated": "2026-10-17",
+    "confidence": "high"
+  },
+  "Firelight stXRP::stXRP": {
+    "what": "Firelight stXRP · FXRP staked as slashable cover capital for DeFi insurance",
+    "body": "stXRP is Firelight's ERC-4626 vault on Flare over FXRP (XRP bridged from the XRP Ledger). Since the cover protocol went live on 6 October 2026, staked FXRP backs insurance cover sold in 30-day periods: premiums raise the share price, and a validated claim that exhausts the first-loss buffer is slashed pro rata from every staker, including pending withdrawals. Premiums began landing on 7 October in steps, so a 7-day window read about 2.7 % APR while a 30-day one (e.g. Spectra's 0.85 %) still averaged in the weeks before. About 42.8M FXRP, down from 60M in July.",
+    "backing": "FXRP (agent-collateralized XRP bridge), at risk to insurance claims",
+    "yieldSource": "cover premiums (plus premium-funded emissions)",
+    "redemption": "request, then withdraw one full 30-day period later (30-60 days) and claim manually",
+    "issuer": "Firelight",
+    "links": [
+      "https://docs.firelight.finance/for-stakers/risk-and-exposure.md",
+      "https://docs.firelight.finance/for-stakers/deployments-and-withdrawals.md",
+      "https://docs.firelight.finance/resources/audits-and-security.md"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Principal can be slashed by insurance claims; first-loss buffer size and active cover volume were not verified."
+  },
+  "Autocompounding vKAT::avKAT": {
+    "what": "Katana avKAT · autocompounding vote-escrowed KAT, 60-day exit up to 25 % fee",
+    "body": "avKAT is an Aragon ve-governance autocompounder on Katana: it holds one large vKAT lock and claims KAT voting rewards through Merkl, relocking them, so avKAT rises against KAT (1.374 KAT, about 35 % APR in KAT over 30 days, October 2026). Both yield and principal are KAT emissions and KAT's price, so dollar value moves with KAT (~$0.004). Redeeming does not pay KAT: it splits off a vKAT lock NFT that must go through the escrow's 60-day exit queue with a fee from 25 % falling to 2.5 %, so the practical exit is selling avKAT.",
+    "backing": "KAT locked as vKAT",
+    "yieldSource": "KAT voting rewards (emissions) claimed via Merkl and relocked",
+    "redemption": "redeem to a vKAT lock NFT, then a 60-day escrow exit with a 2.5-25 % fee; or sell avKAT on a DEX",
+    "issuer": "Katana",
+    "links": ["https://www.fxempire.com/crypto/autocompounding-voting-kat/profile", "https://iq.wiki/wiki/katana"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Principal is a governance-token price; the stack is upgradeable behind a 3-of-7 multisig with no timelock."
+  },
+  "Solstice stSLX::stSLX::solana": {
+    "what": "Solstice stSLX · SLX governance token in a GLAM vault, earns SLX emissions",
+    "body": "stSLX is a GLAM single-asset vault over SLX, Solstice's governance token. Solstice's treasury streams SLX into it hourly through a keeper, so stSLX rises against SLX (1.0559 SLX per share on 2026-10-16, about 12.8 % APR in SLX over 30 days). Cycle 1 (Sept-Dec 2026) targets 20 % minus eUSX's 7-day APY, set by a multisig, and the stream paused for at least four days from 12 October. This is an emission of the same volatile token, not revenue, and it does not share USX's backing.",
+    "backing": "SLX held in the GLAM vault",
+    "yieldSource": "SLX emissions streamed from the Solstice treasury",
+    "redemption": "queued redeem with a hard 7-day notice, then anyone can fulfil and the holder claims SLX at that day's NAV; cancel allowed before fulfilment",
+    "issuer": "Solstice",
+    "links": [
+      "https://www.coindesk.com/price/solstice",
+      "https://solscan.io/token/GxHksENo754dKj6kv5d2z7ey9KwE7YSRYgRCtoFYd2yq"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "high",
+    "verify": "Principal and yield are SLX; the vault owner is a single key and the stream is keeper-driven."
+  },
+  "sUSD.infra::sUSD.infra::solana": {
+    "what": "DAWN sUSD.infra · Loopscale credit vault lending USD.infra to DAWN infrastructure deals",
+    "body": "sUSD.infra is the share token of a Loopscale lending vault over USD.infra, curated by Dawn Internet (DAWN), whose single borrower is DAWN's telecom and AI-infrastructure deals. In October 2026 it held $9.6M, 87 % idle, with 16 fixed-rate loans at 15-20 % against 27 unlisted collateral tokens marked by DAWN's own service. Its ~5.8 % APR is 2.26 % net interest plus a 3.56 % DAWN-funded stream paid in USD.infra into the share price, scheduled to end 2026-10-23.",
+    "backing": "USD.infra, partly lent to DAWN's infrastructure deals",
+    "yieldSource": "interest from DAWN infrastructure loans plus a time-boxed DAWN-funded USD.infra stream",
+    "redemption": "instant up to idle liquidity in the vault, otherwise queued; Loopscale can pause",
+    "issuer": "DAWN (Dawn Internet)",
+    "links": ["https://immunefi.com/bug-bounty/dawn/information/", "https://app.rwa.xyz/assets/sUSD.infra"],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "Single borrower with collateral marked off-chain; the 3.56 % stream ends 2026-10-23 unless renewed."
+  },
+  "USD.infra::USD.infra::solana": {
+    "what": "DAWN USD.infra · M0 wrapped-M stablecoin on Solana, backed by M0's T-bill dollar",
+    "body": "USD.infra is DAWN's branded M0 extension stablecoin on Solana: its supply moves only by wrapping and unwrapping M0's $M, which is backed by US Treasury bills, so DAWN cannot mint at will. DAWN's Squads multisig holds freeze and global-pause authority over every holder. Most of it sits in the sUSD.infra lending vault; supply was about 14M in October 2026. Plain USD.infra earns nothing for holders.",
+    "backing": "M0's $M (US Treasury bills), 1:1",
+    "yieldSource": null,
+    "redemption": "unwrap to $M through M0's swap facility (whether that is open to anyone was not verified), or trade",
+    "issuer": "DAWN (on M0)",
+    "links": [
+      "https://immunefi.com/bug-bounty/dawn/information/",
+      "https://solscan.io/token/dawn7ZUF7h7anFuEsDdAU1Y3HYwikwqNMAENZsQJdNL"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "DAWN can pause or freeze any holder; permissionless wrap/unwrap not verified."
+  },
+  "Fragmetric Restaked SOL::fragSOL::solana": {
+    "what": "Fragmetric fragSOL · restaked SOL via Jito Restaking vaults, Token-2022",
+    "body": "fragSOL is Fragmetric's liquid restaking token: SOL and SOL LSTs are staked and restaked through Jito Restaking vaults, and fragSOL's value rises against SOL (1.1422 SOL per fragSOL on 2026-10-16, about 4.8 % APR). Fragmetric takes a 4 % performance fee. It is a Token-2022 mint with a transfer hook, so many venues use the 1:1 SPL wrapper wfragSOL instead. The book was about $4.9M, down roughly 99 % from its mid-2025 peak.",
+    "backing": "SOL and SOL LSTs staked and restaked via Jito Restaking",
+    "yieldSource": "SOL staking plus Jito Restaking (NCN) rewards, net of a 4 % fee",
+    "redemption": "withdrawal request processed in batches, claimable after about 3 epochs (up to ~6 days), 20 bps fee",
+    "issuer": "Fragmetric",
+    "links": [
+      "https://defillama.com/protocol/fragmetric",
+      "https://solscan.io/token/FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "No audit found; liquidity is thin after a ~99 % drop in TVL."
+  },
+  "Wrapped Fragmetric Restaked SOL::wfragSOL::solana": {
+    "what": "Fragmetric wfragSOL · 1:1 SPL wrapper of fragSOL (restaked SOL)",
+    "body": "wfragSOL is the plain SPL-token wrapper of Fragmetric's fragSOL, for venues that cannot hold Token-2022 tokens; one wfragSOL is one fragSOL (1.1422 SOL on 2026-10-16) and carries its ~4.8 % restaking yield. About 19.6k fragSOL was wrapped (~$2.3M), most of the protocol.",
+    "backing": "fragSOL, 1:1",
+    "yieldSource": "fragSOL's SOL staking plus Jito Restaking rewards",
+    "redemption": "unwrap to fragSOL, then Fragmetric's batched withdrawal (up to ~6 days, 20 bps); or trade thin DEX pools",
+    "issuer": "Fragmetric",
+    "links": [
+      "https://defillama.com/protocol/fragmetric",
+      "https://solscan.io/token/WFRGSWjaz8tbAxsJitmbfRuFV2mSNwy7BMWcCwaA28U"
+    ],
+    "updated": "2026-10-17",
+    "confidence": "medium",
+    "verify": "No audit found; DEX liquidity is thin."
   }
 }
