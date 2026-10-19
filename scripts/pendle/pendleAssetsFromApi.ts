@@ -154,6 +154,141 @@ async function fetchBridgedOrigins(
 }
 
 /**
+ * The legs a PT/YT names on-chain. `SY()`/`YT()`/`PT()`/`expiry()` are
+ * immutables of every Pendle PT and YT, and `yieldToken()` on the SY is what
+ * the API serves as the market's `underlyingAsset` (checked on 8 random
+ * Ethereum markets, 2026-10-19).
+ */
+const PENDLE_LEG_ABI = [
+  { inputs: [], name: 'SY', outputs: [{ name: '', type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'YT', outputs: [{ name: '', type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'PT', outputs: [{ name: '', type: 'address' }], stateMutability: 'view', type: 'function' },
+  { inputs: [], name: 'expiry', outputs: [{ name: '', type: 'uint256' }], stateMutability: 'view', type: 'function' },
+  {
+    inputs: [],
+    name: 'yieldToken',
+    outputs: [{ name: '', type: 'address' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+] as const
+
+/** The market-derived fields of a PT/YT entry, minus the market itself where unknown. */
+interface PendleLegs {
+  marketAddress?: string
+  syAddress?: string
+  ytAddress?: string
+  ptAddress?: string
+  underlyingAsset?: string
+  expiry?: number
+}
+
+const resultOf = (r: unknown) => (r && typeof r === 'object' && 'result' in (r as any) ? (r as any).result : r)
+
+/**
+ * Read the legs of PTs/YTs that have no market in the API, keyed by lower-cased
+ * address.
+ *
+ * Why this exists: the legs used to come ONLY from `markets/all`, and Pendle
+ * drops markets from that feed — and from `markets/inactive` — some time after
+ * they expire (both 27AUG2026 Royco markets were gone by 2026-10-19). The next
+ * regen then wrote the PT with `{ tokenType, expiry, expired }` and nothing
+ * else, and a PT with no `syAddress`/`ytAddress` cannot be REDEEMED by
+ * anything that routes on this list: the matured-PT redeem needs exactly those
+ * two addresses and no market at all. 90 of 541 expired Ethereum PTs were in
+ * that state. The contracts still name their legs, so read them.
+ *
+ * Best-effort per token: a failed read leaves that token as it was.
+ */
+async function fetchOnChainLegs(
+  chainId: string,
+  tokens: { address: string; type: 'PT' | 'YT' }[],
+): Promise<Record<string, PendleLegs>> {
+  const out: Record<string, PendleLegs> = {}
+  if (tokens.length === 0) return out
+  // PT → [SY, YT, expiry], YT → [SY, PT, expiry]
+  const calls = tokens.flatMap((t) => [
+    { address: t.address, name: 'SY', args: [] },
+    { address: t.address, name: t.type === 'PT' ? 'YT' : 'PT', args: [] },
+    { address: t.address, name: 'expiry', args: [] },
+  ])
+  let res: unknown[]
+  try {
+    res = (await multicallRetryUniversal({
+      chain: chainId,
+      calls,
+      abi: PENDLE_LEG_ABI,
+      allowFailure: true,
+    })) as unknown[]
+  } catch (e) {
+    console.warn(`  pendle: leg read failed on chain ${chainId} — keeping previous legs`, e)
+    return out
+  }
+  tokens.forEach((t, i) => {
+    const sy = resultOf(res[3 * i])
+    const other = resultOf(res[3 * i + 1])
+    const expiry = resultOf(res[3 * i + 2])
+    if (!isAddressString(sy) || !isAddressString(other)) return
+    const legs: PendleLegs = { syAddress: sy.toLowerCase() }
+    if (t.type === 'PT') legs.ytAddress = other.toLowerCase()
+    else legs.ptAddress = other.toLowerCase()
+    if (typeof expiry === 'bigint' && expiry > 0n) legs.expiry = Number(expiry)
+    out[t.address] = legs
+  })
+
+  const sys = [...new Set(Object.values(out).map((l) => l.syAddress!))]
+  if (sys.length) {
+    try {
+      const yt = (await multicallRetryUniversal({
+        chain: chainId,
+        calls: sys.map((address) => ({ address, name: 'yieldToken', args: [] })),
+        abi: PENDLE_LEG_ABI,
+        allowFailure: true,
+      })) as unknown[]
+      const bySy: Record<string, string> = {}
+      yt.forEach((r, i) => {
+        const v = resultOf(r)
+        if (isAddressString(v)) bySy[sys[i]] = v.toLowerCase()
+      })
+      for (const legs of Object.values(out)) {
+        const u = bySy[legs.syAddress!]
+        if (u) legs.underlyingAsset = u
+      }
+    } catch (e) {
+      console.warn(`  pendle: yieldToken() read failed on chain ${chainId} — legs without underlyingAsset`, e)
+    }
+  }
+  return out
+}
+
+/**
+ * Market-derived legs from the LAST generated list, keyed `chainId:address` —
+ * the same FLOOR rule as the origin suffix below: a market the API stopped
+ * serving keeps the legs (and the market address) it was published with. Legs
+ * are immutable, so a recorded one can never be wrong, only missing.
+ */
+function loadPreviousLegs(): Record<string, PendleLegs> {
+  try {
+    const dir = path.dirname(fileURLToPath(import.meta.url))
+    const prev = JSON.parse(fs.readFileSync(path.resolve(dir, './pendle.json'), 'utf8'))
+    const out: Record<string, PendleLegs> = {}
+    for (const t of prev) {
+      const p = t?.props?.pendle
+      if (!p?.syAddress) continue
+      const legs: PendleLegs = {}
+      for (const k of ['marketAddress', 'syAddress', 'ytAddress', 'ptAddress', 'underlyingAsset'] as const) {
+        if (isAddressString(p[k])) legs[k] = p[k].toLowerCase()
+      }
+      if (typeof p.expiry === 'number') legs.expiry = p.expiry
+      out[`${t.chainId}:${String(t.address).toLowerCase()}`] = legs
+    }
+    return out
+  } catch {
+    return {}
+  }
+}
+
+/**
  * A failed read must never be mistaken for an answer.
  *
  * `multicallRetryUniversal` hands back the RAW return data when it cannot decode
@@ -293,6 +428,7 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
   const [assetsData, marketsData] = await Promise.all([fetchAllAssetsData(), fetchAllMarketsData()])
 
   const { symbols: previousOriginSymbols, origins: previousOrigins } = loadPreviousOriginSymbols()
+  const previousLegs = loadPreviousLegs()
   const assetList: PendleAssetList = {}
   const marketsByChain = marketsData
 
@@ -368,6 +504,19 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
       if (origin) bridgedOnChain.push({ address, originCode: origin[1] })
     }
     const onChainOrigins = await fetchBridgedOrigins(chainId, bridgedOnChain)
+
+    // Legs of every NATIVE PT/YT the API no longer maps to a market (see
+    // `fetchOnChainLegs`). A bridged PT has no SY or YT on this chain.
+    const bridgedSet = new Set(bridgedOnChain.map((b) => b.address))
+    const unmapped: { address: string; type: 'PT' | 'YT' }[] = []
+    // @ts-ignore
+    for (const asset of assets) {
+      const address = asset.address.toLowerCase()
+      if (bridgedSet.has(address)) continue
+      if (asset.tags?.includes('PT') && !ptToMarketMap[chainId]?.[address]) unmapped.push({ address, type: 'PT' })
+      else if (asset.tags?.includes('YT') && !ytToMarketMap[chainId]?.[address]) unmapped.push({ address, type: 'YT' })
+    }
+    const onChainLegs = await fetchOnChainLegs(chainId, unmapped)
 
     // @ts-ignore
     for (const asset of assets) {
@@ -457,6 +606,21 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
         } else if (isSY) {
           pendleProps.ptAddress = marketData.ptAddress.split('-')[1]?.toLowerCase()
           pendleProps.ytAddress = marketData.ytAddress
+        }
+      } else if (isPT || isYT) {
+        // No market in the API: what the last list recorded, gaps filled from
+        // the contracts. Never `marketAddress` from the chain — a PT does not
+        // name its market — so only a previously recorded one survives.
+        const legs: PendleLegs = { ...onChainLegs[address], ...previousLegs[`${chainId}:${address}`] }
+        if (legs.marketAddress) pendleProps.marketAddress = legs.marketAddress
+        if (legs.expiry !== undefined) pendleProps.expiry = legs.expiry
+        if (legs.underlyingAsset) pendleProps.underlyingAsset = legs.underlyingAsset
+        if (isPT && legs.ytAddress && legs.syAddress) {
+          pendleProps.ytAddress = legs.ytAddress
+          pendleProps.syAddress = legs.syAddress
+        } else if (isYT && legs.ptAddress && legs.syAddress) {
+          pendleProps.ptAddress = legs.ptAddress
+          pendleProps.syAddress = legs.syAddress
         }
       }
 

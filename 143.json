@@ -245,7 +245,13 @@
       "assetGroup": "PT sUSDe (USDe) Monad::PT-sUSDE-28JAN2027",
       "currencyId": "PT sUSDe (USDe) Monad::PT-sUSDE-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "ytAddress": "0xd0d72f0a23031dd3c7994fe340aa8551736c4efd",
+          "syAddress": "0xd1279361528c3c4588506e1746f81175dfa5f64e"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -413,7 +419,13 @@
       "assetGroup": "PT USDe (USDe) Monad::PT-USDe-22OCT2026",
       "currencyId": "PT USDe (USDe) Monad::PT-USDe-22OCT2026",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1792627200 },
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1792627200,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ytAddress": "0xee0b5281dd0b0eacde23cc9029c8b442cafde67c",
+          "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -772,7 +784,13 @@
       "assetGroup": "YT sUSDe (USDe) Monad::YT-sUSDE-28JAN2027",
       "currencyId": "YT sUSDe (USDe) Monad::YT-sUSDE-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "ptAddress": "0x39148079bca3abf3f3b40f6f1c1b1ae1f2927d13",
+          "syAddress": "0xd1279361528c3c4588506e1746f81175dfa5f64e"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1031,7 +1049,13 @@
       "assetGroup": "YT USDe (USDe) Monad::YT-USDe-22OCT2026",
       "currencyId": "YT USDe (USDe) Monad::YT-USDe-22OCT2026",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1792627200 },
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1792627200,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ptAddress": "0x8382329da318db59c4e33706faac0a883740daea",
+          "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -3979,7 +4003,9 @@
         "savings": { "underlying": "USDat", "base": "USD" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" },
-        "issuerExposures": [{ "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }]
+        "issuerExposures": [
+          { "id": "saturn", "name": "Saturn", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x8959f4e6ed1f4567a464959793d5f8f6f33c1c8b": {
