@@ -655,7 +655,14 @@
       "assetGroup": "YT PPLUS (USDC) Ethereum::YT-PPLUS-28JAN2027",
       "currencyId": "YT PPLUS (USDC) Ethereum::YT-PPLUS-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "YT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x2928811b5fb320cef61a86650899d055cb0512c4",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x555c26e265b4e8e0e4026adaa8971cfcdcac9043",
+          "ptAddress": "0x1a984c796efa96957746f8127fb205fa3a8226cd",
+          "syAddress": "0x836b888976294f75e006fb457760442d5903835e"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -3614,7 +3621,14 @@
       "assetGroup": "PT PPLUS (USDC) Ethereum::PT-PPLUS-28JAN2027",
       "currencyId": "PT PPLUS (USDC) Ethereum::PT-PPLUS-28JAN2027",
       "props": {
-        "pendle": { "tokenType": "PT", "expiry": 1801094400 },
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x2928811b5fb320cef61a86650899d055cb0512c4",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x555c26e265b4e8e0e4026adaa8971cfcdcac9043",
+          "ytAddress": "0x05b33b68c4ed0807e8824fe2ae6e5b657b5117ec",
+          "syAddress": "0x836b888976294f75e006fb457760442d5903835e"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -19196,7 +19210,14 @@
       "assetGroup": "PPLUS Ethereum::SY-PPLUS",
       "currencyId": "PPLUS Ethereum::SY-PPLUS",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x2928811b5fb320cef61a86650899d055cb0512c4",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x555c26e265b4e8e0e4026adaa8971cfcdcac9043",
+          "ptAddress": "0x1a984c796efa96957746f8127fb205fa3a8226cd",
+          "ytAddress": "0x05b33b68c4ed0807e8824fe2ae6e5b657b5117ec"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -68689,6 +68710,48 @@
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
+    "0x827ce7e8e35861d9ac7fe002755767b695a5594a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Morini StockMarketTRBasisTrade Vault",
+      "address": "0x827ce7e8e35861d9ac7fe002755767b695a5594a",
+      "symbol": "StockMarketTRBasisTrade",
+      "logoURI": "https://assets.coingecko.com/coins/images/102173651/thumb/morini.png?1780723891",
+      "assetGroup": "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade",
+      "currencyId": "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "basis-trade",
+          "issuer": "midas",
+          "denomination": "USD",
+          "transferRestricted": false
+        },
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
+    },
+    "0x2bf11d2e04bc40daa95c24b8b90ec4f5c57dd326": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Morini CarryTradeUSDTRYLeverage Vault",
+      "address": "0x2bf11d2e04bc40daa95c24b8b90ec4f5c57dd326",
+      "symbol": "CarryTradeUSDTRYLeverage",
+      "logoURI": "https://assets.coingecko.com/coins/images/102173652/thumb/CarryTradeUSDTRYLeverage.png?1780724480",
+      "assetGroup": "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage",
+      "currencyId": "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "carry-trade",
+          "issuer": "midas",
+          "denomination": "USD",
+          "transferRestricted": false
+        },
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
+    },
     "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb": {
       "chainId": "1",
       "decimals": 18,
@@ -70076,8 +70139,8 @@
       "currencyId": "Royco Senior Tranche apyUSD::ROY-ST-apyUSD",
       "props": {
         "savings": { "underlying": "apyUSD", "base": "USD" },
-        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" }
       }
     },
     "0x36bdaefd92579da58bfe207e16dafa39835bbcb3": {
@@ -175868,7 +175931,6 @@
       "assetGroup": "Sierra::SIERRA",
       "currencyId": "Sierra::SIERRA",
       "props": {
-        "issuer": { "id": "sierra", "name": "Sierra", "kind": "protocol" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -175881,7 +175943,8 @@
               "peers": { "43114": "0xc472d3a47719de5f9d808ca91d7b70bd2138bcaa" }
             }
           ]
-        }
+        },
+        "issuer": { "id": "sierra", "name": "Sierra", "kind": "protocol" }
       }
     },
     "0xba83b5ed3f12bfa44f066f03ee0433419b74f469": {
@@ -182144,8 +182207,8 @@
       "currencyId": "Savings USG::sUSG",
       "props": {
         "savings": { "underlying": "USG", "base": "USD" },
-        "issuer": { "id": "tangent", "name": "Tangent", "kind": "protocol" },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "tangent", "name": "Tangent", "kind": "protocol" }
       }
     },
     "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1": {
@@ -182428,48 +182491,6 @@
       "currencyId": "OCBC-LionGlobal Physical Gold Fund Token::GOLDX",
       "props": { "risk": { "score": 4, "source": "default" } }
     },
-    "0x827ce7e8e35861d9ac7fe002755767b695a5594a": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Morini StockMarketTRBasisTrade Vault",
-      "address": "0x827ce7e8e35861d9ac7fe002755767b695a5594a",
-      "symbol": "StockMarketTRBasisTrade",
-      "logoURI": "https://assets.coingecko.com/coins/images/102173651/thumb/morini.png?1780723891",
-      "assetGroup": "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade",
-      "currencyId": "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade",
-      "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "basis-trade",
-          "issuer": "midas",
-          "denomination": "USD",
-          "transferRestricted": false
-        },
-        "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
-      }
-    },
-    "0x2bf11d2e04bc40daa95c24b8b90ec4f5c57dd326": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Morini CarryTradeUSDTRYLeverage Vault",
-      "address": "0x2bf11d2e04bc40daa95c24b8b90ec4f5c57dd326",
-      "symbol": "CarryTradeUSDTRYLeverage",
-      "logoURI": "https://assets.coingecko.com/coins/images/102173652/thumb/CarryTradeUSDTRYLeverage.png?1780724480",
-      "assetGroup": "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage",
-      "currencyId": "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage",
-      "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "carry-trade",
-          "issuer": "midas",
-          "denomination": "USD",
-          "transferRestricted": false
-        },
-        "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
-      }
-    },
     "0x1f752250f518e419f2f03804e25728c5c6dff73f": {
       "chainId": "1",
       "decimals": 9,
@@ -182519,7 +182540,13 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102173669/thumb/aFXArbUSDTRY.png?1780832595",
       "assetGroup": "Morini FXArbUSDTRY::aFXArbUSDTRY",
       "currencyId": "Morini FXArbUSDTRY::aFXArbUSDTRY",
-      "props": { "issuer": { "id": "morini-capital", "name": "Morini Capital", "kind": "institution" } }
+      "props": {
+        "issuer": {
+          "id": "morini-capital",
+          "name": "Morini Capital",
+          "kind": "institution"
+        }
+      }
     },
     "0x4cff203005b24aa1083b35063d684a76b1080f22": {
       "chainId": "1",
@@ -184115,9 +184142,13 @@
       "assetGroup": "Axis USD::USDx",
       "currencyId": "USDx::USDx",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
-        "issuer": { "id": "axis", "name": "Axis", "kind": "protocol" },
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "issuer": { "id": "axis", "name": "Axis", "kind": "protocol" }
       }
     },
     "0xe5544a2a5fa9b175da60d8eec67add5582bb31b0": {
@@ -186407,7 +186438,11 @@
       "currencyId": "Forest Road USDfr::USDFR",
       "props": {
         "stablecoin": { "base": "USD" },
-        "issuer": { "id": "forest-road", "name": "Forest Road", "kind": "protocol" }
+        "issuer": {
+          "id": "forest-road",
+          "name": "Forest Road",
+          "kind": "protocol"
+        }
       }
     },
     "0x2b02da0a074b690075f0b8e6921e2526b0ff7896": {
@@ -186647,7 +186682,11 @@
       "props": {
         "savings": { "underlying": "USDfr", "base": "USD" },
         "stablecoin": { "base": "USD" },
-        "issuer": { "id": "forest-road", "name": "Forest Road", "kind": "protocol" }
+        "issuer": {
+          "id": "forest-road",
+          "name": "Forest Road",
+          "kind": "protocol"
+        }
       }
     },
     "0x9102a20f4ad56026eeffa8e121b14a9f7575f43f": {
@@ -187107,20 +187146,6 @@
       "assetGroup": "Temo::TEMO",
       "currencyId": "Temo::TEMO"
     },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Ether",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "ETH",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
-      "assetGroup": "ETH",
-      "currencyId": "Ether::ETH",
-      "props": {
-        "isNative": true,
-        "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
-      }
-    },
     "0x0000000f2eb9f69274678c76222b35eec7588a65": {
       "chainId": "1",
       "decimals": 6,
@@ -187128,7 +187153,11 @@
       "address": "0x0000000f2eb9f69274678c76222b35eec7588a65",
       "symbol": "yoUSD",
       "assetGroup": "Yield Optimizer USD::YOUSD",
-      "currencyId": "Yield Optimizer USD::YOUSD"
+      "currencyId": "yoUSD::yoUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "yo", "name": "YO", "kind": "protocol" }
+      }
     },
     "0x3a43aec53490cb9fa922847385d82fe25d0e9de7": {
       "chainId": "1",
@@ -187137,7 +187166,7 @@
       "address": "0x3a43aec53490cb9fa922847385d82fe25d0e9de7",
       "symbol": "yoETH",
       "assetGroup": "Yield Optimizer ETH::YOETH",
-      "currencyId": "Yield Optimizer ETH::YOETH"
+      "currencyId": "yoETH::yoETH"
     },
     "0xbcbc8cb4d1e8ed048a6276a5e94a3e952660bcbc": {
       "chainId": "1",
@@ -187146,7 +187175,7 @@
       "address": "0xbcbc8cb4d1e8ed048a6276a5e94a3e952660bcbc",
       "symbol": "yoBTC",
       "assetGroup": "Yield Optimizer BTC::YOBTC",
-      "currencyId": "Yield Optimizer BTC::YOBTC"
+      "currencyId": "yoBTC::yoBTC"
     },
     "0x50c749ae210d3977adc824ae11f3c7fd10c871e9": {
       "chainId": "1",
@@ -187155,7 +187184,7 @@
       "address": "0x50c749ae210d3977adc824ae11f3c7fd10c871e9",
       "symbol": "yoEUR",
       "assetGroup": "Yield Optimizer EUR::yoEUR",
-      "currencyId": "Yield Optimizer EUR::yoEUR"
+      "currencyId": "yoEUR::yoEUR"
     },
     "0xb9a7da9e90d3b428083bae04b860faa6325b721e": {
       "chainId": "1",
@@ -187182,7 +187211,7 @@
       "address": "0x15c91ebccb2c659b3a208214a103cbcb9d5f9671",
       "symbol": "alqUSD",
       "assetGroup": "alqUSD::ALQUSD",
-      "currencyId": "alqUSD::ALQUSD",
+      "currencyId": "alqUSD::alqUSD",
       "props": {
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
@@ -187247,6 +187276,20 @@
       "assetGroup": "Morini USDC Emerging Yield::morUSDCemerging",
       "currencyId": "Morini USDC Emerging Yield::morUSDCemerging",
       "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ether",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
+      "assetGroup": "ETH",
+      "currencyId": "Ether::ETH",
+      "props": {
+        "isNative": true,
+        "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
     }
   },
   "mainTokens": [
