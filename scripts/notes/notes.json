@@ -11,7 +11,24 @@
   "AUSD": { "what": "Agora stablecoin" },
   "FRXUSD": { "what": "Frax stablecoin" },
   "CRVUSD": { "what": "Curve stablecoin" },
-  "DOLA": { "what": "Inverse Finance stablecoin" },
+  "DOLA": {
+    "what": "Inverse Finance stablecoin · minted against collateral on FiRM fixed-rate loans",
+    "body": "DOLA is Inverse Finance's USD stablecoin, minted mostly by the FiRM Fed into FiRM, Inverse's fixed-rate lending market, and burned when loans are repaid; borrowers pay interest by holding and burning DBR (DOLA Borrowing Rights). The peg rests on that loop: above $1 borrowers mint at par and sell, below $1 they buy cheap DOLA to repay, and a Peg Stability Module swaps it against USDS. Some legacy supply is unbacked: bad debt from the 2022 oracle exploits on the now-retired Frontier market is still being repaid over time. Minting is on Ethereum only; DOLA on Arbitrum, Base, Optimism and other chains is bridged.",
+    "backing": "Over-collateralized FiRM loans (sUSDe, sDOLA/DOLA LP tokens, wETH, wstETH, wBTC, cbBTC, CVX, cvxCRV, INV and others), USDS (held as sUSDS) in the PSM, plus legacy unbacked Frontier debt",
+    "yieldSource": null,
+    "redemption": "PSM on Ethereum swaps DOLA for USDS at 0.998 (20 bps fee, capacity not stated); otherwise sell on Curve and other DEX pools",
+    "issuer": "Inverse Finance",
+    "links": [
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/tokens/dola",
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/tokens/dola/dola-peg-mechanism",
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/peg-stability-module",
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/dola-feds",
+      "https://www.inverse.finance/transparency/dola",
+      "https://etherscan.io/token/0x865377367054516e17014ccded1e7d814edc9ce4"
+    ],
+    "updated": "2026-10-20",
+    "confidence": "high"
+  },
   "USD1::USD1": { "what": "World Liberty stablecoin", "alsoGroups": ["World Liberty Financial USD::USD1"] },
   "FRAX": { "what": "Frax stablecoin" },
   "USDtb::USDTB": { "what": "Ethena / BlackRock BUIDL-backed dollar" },
@@ -1087,13 +1104,17 @@
   },
   "sDOLA::SDOLA": {
     "what": "Inverse Finance staked DOLA · FiRM fixed-rate borrower DBR revenue",
-    "body": "sDOLA is an ERC-4626 wrapper around Inverse Finance's DOLA Savings Account; its exchange rate rises as revenue accrues. FiRM borrowers pay for fixed-rate loans by spending DBR (DOLA Borrowing Rights); part of that revenue goes to the savings account as DBR, which is converted to DOLA through the DAO's XY=K auction and compounded. Deposited DOLA is not rehypothecated.",
+    "body": "sDOLA is an ERC-4626 wrapper around Inverse Finance's DOLA Savings Account; its exchange rate rises as revenue accrues. FiRM borrowers pay for fixed-rate loans by spending DBR (DOLA Borrowing Rights); part of that revenue goes to the savings account as DBR, which is converted to DOLA through the DAO's XY=K auction and compounded weekly, with no set minimum or maximum rate. Deposited DOLA is not rehypothecated. It is the senior layer under jrDOLA, which holds its deposits as sDOLA and takes FiRM bad debt first; sDOLA lives on Ethereum only, its CCIP bridge lanes having been shut down.",
     "backing": "DOLA held in the DOLA Savings Account",
     "yieldSource": "DBR revenue from FiRM fixed-rate lending, auctioned into DOLA",
     "redemption": "permissionless, instant unwrap to DOLA, no penalty",
     "issuer": "Inverse Finance",
-    "links": ["https://docs.inverse.finance/inverse-finance/inverse-finance/product-guide/tokens/sdola"],
-    "updated": "2026-10-12",
+    "links": [
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/tokens/dola/sdola",
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/tokens/dola/jrdola",
+      "https://etherscan.io/token/0xb45ad160634c528cc3d2926d9807104fa3157305"
+    ],
+    "updated": "2026-10-20",
     "confidence": "high"
   },
   "f(x) USD Saving::fxSAVE": {
@@ -3015,5 +3036,66 @@
     "updated": "2026-10-19",
     "confidence": "medium",
     "verify": "Lira FX exposure inside a USD token; positions are off-chain."
+  },
+  "Resupply USD::REUSD": {
+    "what": "Resupply CDP stablecoin · minted against crvUSD/frxUSD lending positions",
+    "body": "reUSD is the stablecoin of Resupply, a Convex and Yearn sub-DAO. Borrowers deposit crvUSD or frxUSD into a Resupply pair; the pair supplies it to a Curve LlamaLend or Fraxlend market, and that lending position is the collateral reUSD is minted against. The borrow rate is the highest of 50% of the underlying market's rate, 50% of the sfrxUSD rate, or 2%, and rises toward 60% while reUSD trades below $1. On 26 Jun 2025 a donation attack on the cvcrvUSD-vault (wstUSR) pair minted about $9.6M of reUSD against almost no collateral; the bad debt was covered by the treasury, a 6M reUSD burn from the Insurance Pool, donations and a Yearn loan.",
+    "backing": "crvUSD/frxUSD lent on Curve LlamaLend and Fraxlend markets (themselves lent against WETH, wstETH, WBTC, sfrxUSD, sDOLA, syrupUSDC, sUSDe and others); Insurance Pool as first loss",
+    "yieldSource": null,
+    "redemption": "Permissionless: burn reUSD against a chosen pair's collateral at $1 minus a 1% fee (the fee grows if crvUSD/frxUSD trade above $1); else sell on Curve",
+    "issuer": "Resupply",
+    "links": [
+      "https://docs.resupply.finance/resupply-protocol/collateralized-debt-positions",
+      "https://docs.resupply.finance/resupply-protocol/stability-mechanics",
+      "https://docs.resupply.finance/faq/risks",
+      "https://ackee.xyz/blog/resupply-hack-analysis/",
+      "https://etherscan.io/token/0x57ab1e0003f623289cd798b1824be09a793e4bec"
+    ],
+    "updated": "2026-10-20",
+    "confidence": "high"
+  },
+  "Savings reUSD::sreUSD": {
+    "what": "Savings reUSD · ERC-4626 vault earning a share of Resupply protocol revenue",
+    "body": "sreUSD is Resupply's auto-compounding ERC-4626 vault over reUSD, with no lockup, cooldown or fee. It is paid 15% of the weekly protocol revenue (borrow interest and redemption fees), plus the whole surcharge borrowers pay while reUSD trades below $1, so it earns most when the peg is under stress. Unlike the Insurance Pool (7-day cooldown), it does not absorb bad debt, but it carries all of reUSD's peg risk.",
+    "backing": "reUSD held in the vault",
+    "yieldSource": "15% of Resupply's weekly revenue (borrow interest, redemption fees) plus the full below-peg borrow surcharge",
+    "redemption": "Permissionless, instant ERC-4626 redeem to reUSD, no fee; reaching $1 goes through reUSD redemption or a DEX",
+    "issuer": "Resupply",
+    "links": [
+      "https://docs.resupply.finance/resupply-protocol/savings-reusd",
+      "https://docs.resupply.finance/resupply-protocol/overview",
+      "https://etherscan.io/token/0x557ab1e003951a73c12d16f0fea8490e39c33c35"
+    ],
+    "updated": "2026-10-20",
+    "confidence": "high"
+  },
+  "Junior DOLA::JRDOLA::1::0": {
+    "what": "Inverse junior DOLA · first-loss sDOLA vault backstopping FiRM bad debt",
+    "body": "jrDOLA is an ERC-4626 vault that holds DOLA as sDOLA and earns the sDOLA rate plus a governance-set DBR insurance premium, auctioned into DOLA and compounded on 7-day cycles. In return it takes FiRM bad debt first: when liquidations fall short, governance or the guardian multisig slashes vault assets pro rata, with no cap, so a total loss is possible. PSM depeg risk is not covered in the current phase.",
+    "backing": "sDOLA, exposed first to FiRM bad debt",
+    "yieldSource": "sDOLA rate plus a DBR first-loss premium set by Inverse governance",
+    "redemption": "Queue then claim sDOLA: 1 day with an empty queue up to 10 days, 2-day claim window, 5 bps fee; still slashable while queued, and governance can freeze withdrawals for up to 90 days",
+    "issuer": "Inverse Finance",
+    "links": [
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/tokens/dola/jrdola",
+      "https://etherscan.io/token/0x6f80a22a57c7f0257094ea8d426af3f747defbc7"
+    ],
+    "updated": "2026-10-20",
+    "confidence": "high"
+  },
+  "Junior DOLA::JRDOLA": {
+    "what": "Inverse junior DOLA · first-loss sDOLA vault backstopping FiRM bad debt",
+    "body": "jrDOLA is an ERC-4626 vault that holds DOLA as sDOLA and earns the sDOLA rate plus a governance-set DBR insurance premium, auctioned into DOLA and compounded on 7-day cycles. In return it takes FiRM bad debt first: when liquidations fall short, governance or the guardian multisig slashes vault assets pro rata, with no cap, so a total loss is possible. PSM depeg risk is not covered in the current phase.",
+    "backing": "sDOLA, exposed first to FiRM bad debt",
+    "yieldSource": "sDOLA rate plus a DBR first-loss premium set by Inverse governance",
+    "redemption": "Queue then claim sDOLA: 1 day with an empty queue up to 10 days, 2-day claim window, 5 bps fee; still slashable while queued, and governance can freeze withdrawals for up to 90 days",
+    "issuer": "Inverse Finance",
+    "links": [
+      "https://docs.inverse.finance/inverse-finance/inverse-finance/products/tokens/dola/jrdola",
+      "https://etherscan.io/token/0x633821b8e003344e5223509277f2084ea809a452"
+    ],
+    "updated": "2026-10-20",
+    "confidence": "high",
+    "verify": "Superseded v1 contract (0x6338…452): Inverse moved jrDOLA to 0x6f80…bc7 in July 2026 and says not to use this one"
   }
 }
