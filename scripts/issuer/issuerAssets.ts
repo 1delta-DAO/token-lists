@@ -395,6 +395,9 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Anzen Staked USDz::sUSDz': { id: 'anzen', name: 'Anzen', kind: 'protocol' },
   'Alchemix USD::ALUSD': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'Alchemix USD::alUSD': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  // Alchemix V3 mix yield tokens (MYT) — the vaults behind alUSD/alETH.
+  'USDC Mix Yield Token::mixUSDC': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  'WETH Mix Yield Token::mixWETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'ZeUSD::ZEUSD': { id: 'zoth', name: 'Zoth', kind: 'protocol' },
   'ZeUSD::ZeUSD': { id: 'zoth', name: 'Zoth', kind: 'protocol' },
   'R Stablecoin::R': { id: 'raft', name: 'Raft', kind: 'protocol' },
@@ -910,6 +913,11 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   // vault whose curator and sole borrower is DAWN), Fragmetric fragSOL (SOLANA_EXTRA_MINTS).
   'Solstice stSLX::stSLX::solana': { id: 'solstice', name: 'Solstice', kind: 'protocol' },
   'sUSD.infra::sUSD.infra::solana': { id: 'dawn', name: 'DAWN', kind: 'protocol' },
+  // …and the dollar under it (dawn7ZUF…), which the lists left unattributed, so the app named a desk after the ticker.
+  'USD.infra::USD.infra::solana': { id: 'dawn', name: 'DAWN', kind: 'protocol' },
+  // Ripe's GREEN (a CDP dollar on Base and Robinhood Chain) and its savings wrapper — ripe.finance serves both icons.
+  'Green USD Stablecoin::GREEN': { id: 'ripe', name: 'Ripe', kind: 'protocol' },
+  'Savings Green USD::sGREEN': { id: 'ripe', name: 'Ripe', kind: 'protocol' },
   'Fragmetric Restaked SOL::fragSOL::solana': { id: 'fragmetric', name: 'Fragmetric', kind: 'protocol' },
 }
 

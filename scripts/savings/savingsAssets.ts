@@ -187,12 +187,17 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // and down 22.8 % peak to trough. **USDat itself never lost its peg** — it
   // traded at $0.9997 throughout — so "the USDat depeg", which this comment
   // used to say, named the wrong token.
+  // Liminal limUSD (HyperEVM) — delta-neutral USD NAV token; no `asset()`, so the
+  // candidate generator could not resolve it (a miss, not an exclusion).
+  'limUSD::LIMUSD': { underlying: 'USDC', base: 'USD' },
   'Strata Senior USDe::SRUSDE': { underlying: 'USDe', base: 'USD' },
   'Strata Junior USDe::jrUSDe': { underlying: 'USDe', base: 'USD' },
   'Strata Senior NUSD::srNUSD': { underlying: 'NUSD', base: 'USD' },
   'Strata Junior NUSD::JRNUSD': { underlying: 'NUSD', base: 'USD' },
   'Strata Senior mHYPER::srmHYPER': { underlying: 'USDC', base: 'USD' },
   'Strata Junior mHYPER::JRMHYPER': { underlying: 'USDC', base: 'USD' },
+  'Strata Senior nOPAL::SRNOPAL': { underlying: 'USDC', base: 'USD' },
+  'Strata Junior nOPAL::JRNOPAL': { underlying: 'USDC', base: 'USD' },
   'Strata Senior mM1-USD::SRMM1-USD': { underlying: 'USDC', base: 'USD' },
   'Strata Junior mM1-USD::JRMM1-USD': { underlying: 'USDC', base: 'USD' },
   'Strata Senior USDat::SRUSDAT': { underlying: 'USDat', base: 'USD' },

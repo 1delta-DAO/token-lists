@@ -115,6 +115,24 @@ const trace = (...cols: (string | undefined)[]) => {
  * A bare ticker is never enough: `Ethernity Chain::ERN`, `Hacken::HAI`, `Modefi::MOD`
  * share a DefiLlama stablecoin's ticker and are not dollars.
  */
+/**
+ * Tokens that a feed lists as a stablecoin but that are NOT pegged — a NAV
+ * share whose price has left $1 behind and can fall. Refused on every path
+ * (group, variant, ticker), so a DefiLlama re-listing cannot bring the tag
+ * back. Keyed by assetGroup and by `chainId:address`.
+ *
+ * - Piku USP: a USD NAV token (1.15 USDC on 2026-10-19) over Morini Capital's
+ *   lira carry / FX-arbitrage / basis books, restated in steps that have gone
+ *   down (5 step-downs since 2025-09). DefiLlama listed it as peggedUSD (id
+ *   331) until 2026-10-15.
+ */
+export const STABLECOIN_DENY_GROUPS = new Set<string>(['USP Yield Optimized Stablecoin::USP'])
+export const STABLECOIN_DENY_ADDRESSES = new Set<string>(['1:0x098697ba3fee4ea76294c5d6a466a4e3b3e95fe6'])
+
+const isDenied = (assetGroup?: string, chainId?: string, address?: string) =>
+  (!!assetGroup && STABLECOIN_DENY_GROUPS.has(assetGroup)) ||
+  (!!chainId && !!address && STABLECOIN_DENY_ADDRESSES.has(`${chainId}:${address.toLowerCase()}`))
+
 export function lookupStablecoin(
   assetGroup: string,
   symbol?: string,
@@ -122,6 +140,10 @@ export function lookupStablecoin(
   chainId?: string,
   address?: string,
 ): StablecoinProps | undefined {
+  if (isDenied(assetGroup, chainId, address)) {
+    trace('deny', assetGroup, name, symbol, '')
+    return undefined
+  }
   if (assetGroup && STABLECOIN_MAP[assetGroup]) {
     trace('group', assetGroup, name, symbol, STABLECOIN_MAP[assetGroup].base)
     return STABLECOIN_MAP[assetGroup]

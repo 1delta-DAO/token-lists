@@ -8,6 +8,7 @@ import { StablecoinGroupMap } from '../utils/types'
 import { isFrozenChain } from '../utils/frozenChains'
 import { loadRiskDataFile } from '../utils/riskDataSource'
 import { normName, StablecoinSymbolEntry, StablecoinSymbolMap } from './identity'
+import { STABLECOIN_DENY_ADDRESSES, STABLECOIN_DENY_GROUPS } from './stablecoinMap'
 
 // @ts-ignore
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -75,6 +76,13 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   // the stored (already collision-suffixed) string — hence both forms.
   'Tokenised GBP::TGBP': { base: 'GBP' },
   'Tokenised GBP::tGBP': { base: 'GBP' },
+  // Jarvis Synthetic Euro (jEUR) — EUR-pegged (0.24 % under EURC on 2026-10-19), not in the
+  // DeFiLlama feed. The token lists store it under the bare `JEUR` group on every chain; jEURx
+  // is its Superfluid super-token (1:1 wrapper), named differently on Base and Polygon. sjEUR,
+  // the savings vault over jEURx, was rendering a non-fiat denomination without these.
+  JEUR: { base: 'EUR' },
+  'Superfluid Jarvis Synthetic Euro::jEURx': { base: 'EUR' },
+  'Super jEUR::jEURx': { base: 'EUR' },
   // Splinter groups the phantom address forced the real token into. They disappear once
   // the blacklisted twin is out of the PUBLISHED lists (which the generator re-seeds from),
   // so these are transitional — safe to drop after a full CI cycle.
@@ -218,6 +226,8 @@ async function generateStablecoinMap() {
     }
     // Merge manual overlays last so they win and survive feed refreshes.
     Object.assign(map, STABLECOIN_MANUAL)
+    // Denied groups (NAV shares a feed calls stablecoins) never enter the snapshot.
+    for (const g of STABLECOIN_DENY_GROUPS) delete map[g]
 
     // Symbol-keyed fallback for fragmented group variants (collision suffix, PoS bridge,
     // rename, casing). A ticker is NOT an identity — every DefiLlama ticker keyed bare
@@ -270,6 +280,8 @@ async function generateStablecoinMap() {
       const e = entryOf(sym)
       for (const n of m.names) e.names[normName(n)] = m.base // manual wins
     }
+    for (const e of Object.values(symbolMap))
+      for (const k of Object.keys(e.addresses ?? {})) if (STABLECOIN_DENY_ADDRESSES.has(k)) delete e.addresses![k]
     for (const [sym, e] of Object.entries(symbolMap)) {
       e.names = sortKeys(e.names)
       if (e.addresses) e.addresses = sortKeys(e.addresses)

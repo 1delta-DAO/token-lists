@@ -4,6 +4,16 @@ import { fileURLToPath } from 'url'
 import { Chain } from '@1delta/chain-registry'
 import { multicallRetryUniversal } from '@1delta/providers'
 import { fetchAllAssetsData, fetchAllMarketsData, PendleMarketMapping } from './pendleUtils'
+import {
+  applyUnmappedLegs,
+  decodeLegReads,
+  isAddressString,
+  legReadCalls,
+  previousLegsFromList,
+  resultOf,
+  type LegTokenType,
+  type PendleLegs,
+} from './legs'
 
 const SYMBOL_ABI = [
   {
@@ -69,10 +79,6 @@ function bytes32ToAddress(v: unknown): string | undefined {
   if (typeof v !== 'string' || !/^0x0{24}[0-9a-fA-F]{40}$/.test(v)) return undefined
   const a = '0x' + v.slice(26).toLowerCase()
   return /^0x0{40}$/.test(a) ? undefined : a
-}
-
-function isAddressString(v: unknown): v is string {
-  return typeof v === 'string' && /^0x[0-9a-fA-F]{40}$/.test(v) && !/^0x0{40}$/.test(v)
 }
 
 /**
@@ -173,18 +179,6 @@ const PENDLE_LEG_ABI = [
   },
 ] as const
 
-/** The market-derived fields of a PT/YT entry, minus the market itself where unknown. */
-interface PendleLegs {
-  marketAddress?: string
-  syAddress?: string
-  ytAddress?: string
-  ptAddress?: string
-  underlyingAsset?: string
-  expiry?: number
-}
-
-const resultOf = (r: unknown) => (r && typeof r === 'object' && 'result' in (r as any) ? (r as any).result : r)
-
 /**
  * Read the legs of PTs/YTs that have no market in the API, keyed by lower-cased
  * address.
@@ -202,16 +196,10 @@ const resultOf = (r: unknown) => (r && typeof r === 'object' && 'result' in (r a
  */
 async function fetchOnChainLegs(
   chainId: string,
-  tokens: { address: string; type: 'PT' | 'YT' }[],
+  tokens: { address: string; type: LegTokenType }[],
 ): Promise<Record<string, PendleLegs>> {
-  const out: Record<string, PendleLegs> = {}
-  if (tokens.length === 0) return out
-  // PT → [SY, YT, expiry], YT → [SY, PT, expiry]
-  const calls = tokens.flatMap((t) => [
-    { address: t.address, name: 'SY', args: [] },
-    { address: t.address, name: t.type === 'PT' ? 'YT' : 'PT', args: [] },
-    { address: t.address, name: 'expiry', args: [] },
-  ])
+  if (tokens.length === 0) return {}
+  const calls = legReadCalls(tokens)
   let res: unknown[]
   try {
     res = (await multicallRetryUniversal({
@@ -222,19 +210,9 @@ async function fetchOnChainLegs(
     })) as unknown[]
   } catch (e) {
     console.warn(`  pendle: leg read failed on chain ${chainId} — keeping previous legs`, e)
-    return out
+    return {}
   }
-  tokens.forEach((t, i) => {
-    const sy = resultOf(res[3 * i])
-    const other = resultOf(res[3 * i + 1])
-    const expiry = resultOf(res[3 * i + 2])
-    if (!isAddressString(sy) || !isAddressString(other)) return
-    const legs: PendleLegs = { syAddress: sy.toLowerCase() }
-    if (t.type === 'PT') legs.ytAddress = other.toLowerCase()
-    else legs.ptAddress = other.toLowerCase()
-    if (typeof expiry === 'bigint' && expiry > 0n) legs.expiry = Number(expiry)
-    out[t.address] = legs
-  })
+  const out = decodeLegReads(tokens, res)
 
   const sys = [...new Set(Object.values(out).map((l) => l.syAddress!))]
   if (sys.length) {
@@ -270,19 +248,7 @@ async function fetchOnChainLegs(
 function loadPreviousLegs(): Record<string, PendleLegs> {
   try {
     const dir = path.dirname(fileURLToPath(import.meta.url))
-    const prev = JSON.parse(fs.readFileSync(path.resolve(dir, './pendle.json'), 'utf8'))
-    const out: Record<string, PendleLegs> = {}
-    for (const t of prev) {
-      const p = t?.props?.pendle
-      if (!p?.syAddress) continue
-      const legs: PendleLegs = {}
-      for (const k of ['marketAddress', 'syAddress', 'ytAddress', 'ptAddress', 'underlyingAsset'] as const) {
-        if (isAddressString(p[k])) legs[k] = p[k].toLowerCase()
-      }
-      if (typeof p.expiry === 'number') legs.expiry = p.expiry
-      out[`${t.chainId}:${String(t.address).toLowerCase()}`] = legs
-    }
-    return out
+    return previousLegsFromList(JSON.parse(fs.readFileSync(path.resolve(dir, './pendle.json'), 'utf8')))
   } catch {
     return {}
   }
@@ -508,7 +474,7 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
     // Legs of every NATIVE PT/YT the API no longer maps to a market (see
     // `fetchOnChainLegs`). A bridged PT has no SY or YT on this chain.
     const bridgedSet = new Set(bridgedOnChain.map((b) => b.address))
-    const unmapped: { address: string; type: 'PT' | 'YT' }[] = []
+    const unmapped: { address: string; type: LegTokenType }[] = []
     // @ts-ignore
     for (const asset of assets) {
       const address = asset.address.toLowerCase()
@@ -609,19 +575,8 @@ export async function processPendleAssets(): Promise<PendleAssetList> {
         }
       } else if (isPT || isYT) {
         // No market in the API: what the last list recorded, gaps filled from
-        // the contracts. Never `marketAddress` from the chain — a PT does not
-        // name its market — so only a previously recorded one survives.
-        const legs: PendleLegs = { ...onChainLegs[address], ...previousLegs[`${chainId}:${address}`] }
-        if (legs.marketAddress) pendleProps.marketAddress = legs.marketAddress
-        if (legs.expiry !== undefined) pendleProps.expiry = legs.expiry
-        if (legs.underlyingAsset) pendleProps.underlyingAsset = legs.underlyingAsset
-        if (isPT && legs.ytAddress && legs.syAddress) {
-          pendleProps.ytAddress = legs.ytAddress
-          pendleProps.syAddress = legs.syAddress
-        } else if (isYT && legs.ptAddress && legs.syAddress) {
-          pendleProps.ptAddress = legs.ptAddress
-          pendleProps.syAddress = legs.syAddress
-        }
+        // the contracts — see `applyUnmappedLegs`.
+        applyUnmappedLegs(pendleProps, isPT ? 'PT' : 'YT', onChainLegs[address], previousLegs[`${chainId}:${address}`])
       }
 
       if (asset.expiry) {

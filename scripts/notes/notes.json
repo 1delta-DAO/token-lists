@@ -2965,5 +2965,55 @@
     ],
     "updated": "2026-10-18",
     "confidence": "high"
+  },
+  "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade": {
+    "what": "Piku · Midas-issued Turkish stock-market basis-trade fund, run by Morini Capital",
+    "body": "A Midas mToken sold on Piku as the Morini StockMarketTRBasisTrade Vault: USDC in, a transferable share whose price is set by a custom oracle. Morini Capital runs what it describes as a market-neutral basis trade on Turkish equity-market pricing differences, so the share is in USD but the positions sit in the Turkish market. It is also one of the vaults backing Piku's USP.",
+    "backing": "Morini Capital's Turkish equity basis-trade positions, held off-chain",
+    "yieldSource": "Turkish equity-market basis and pricing differences, reflected in an oracle-set share price",
+    "redemption": "KYC/KYB mint on piku.co (100 USDC minimum); redemption requests through the Midas redemption vault, processed every two Turkish business days with T+2 settlement at the fund",
+    "issuer": "Midas (Morini Capital manages the strategy; distributed by Piku)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-stockmarkettrbasistrade-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-stockmarkettrbasistrade-vault/how-to-withdraw.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-stockmarkettrbasistrade-vault/mint-and-redeem-stockmarkettrbasistrade-at-the-contract-level.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault/reserve-backing.md"
+    ],
+    "updated": "2026-10-19",
+    "confidence": "medium",
+    "verify": "Turkish equity-market and lira exposure inside a USD token; positions and NAV come from Morini's off-chain books through a custom oracle."
+  },
+  "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage": {
+    "what": "Piku · Midas-issued leveraged USD/TRY carry-trade fund, run by Morini Capital",
+    "body": "A Midas mToken sold on Piku as the Morini CarryTradeUSDTRYLeverage Vault: USDC in, a transferable share whose price is set by a custom oracle. Morini Capital runs a leveraged carry trade, earning Turkish-lira interest rates against US-dollar funding, so a sharp fall of the lira hits the share price directly.",
+    "backing": "Morini Capital's leveraged USD/TRY carry positions, held off-chain",
+    "yieldSource": "Turkish-lira interest-rate carry over US-dollar funding, levered, reflected in an oracle-set share price",
+    "redemption": "KYC/KYB mint on piku.co (100 USDC minimum); redemption requests through the Midas redemption vault, processed every two Turkish business days with T+2 settlement at the fund",
+    "issuer": "Midas (Morini Capital manages the strategy; distributed by Piku)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-carrytradeusdtryleverage-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-carrytradeusdtryleverage-vault/how-to-withdraw.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-carrytradeusdtryleverage-vault/mint-and-redeem-carrytradeusdtryleverage-at-the-contract-level.md"
+    ],
+    "updated": "2026-10-19",
+    "confidence": "medium",
+    "verify": "Leveraged lira FX exposure inside a USD token; positions and NAV come from Morini's off-chain books through a custom oracle."
+  },
+  "Morini FXArbUSDTRY::aFXArbUSDTRY": {
+    "what": "Piku · Morini Capital USD/TRY FX-arbitrage vault on Accountable",
+    "body": "An Accountable vault sold on Piku as the Morini FXArbUSDTRY Vault: USDC in, a transferable share. Morini Capital runs a USD/TRY FX-arbitrage strategy it describes as delta-neutral; Accountable provides the vault and the reporting of its positions. It is also one of the vaults backing Piku's USP.",
+    "backing": "Morini Capital's USD/TRY FX-arbitrage positions, held off-chain",
+    "yieldSource": "USD/TRY FX-arbitrage spreads, reflected in the share price",
+    "redemption": "KYC/KYB deposit on piku.co (1,000 USDC minimum); redemptions processed daily on Turkish business days with T+0 settlement at the fund",
+    "issuer": "Morini Capital (on Accountable; distributed by Piku)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-fxarbusdtry-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-fxarbusdtry-vault/how-to-deposit.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-fxarbusdtry-vault/how-to-withdraw.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault/reserve-backing.md"
+    ],
+    "updated": "2026-10-19",
+    "confidence": "medium",
+    "verify": "Lira FX exposure inside a USD token; positions are off-chain."
   }
 }

@@ -9077,12 +9077,57 @@
     "source": "derived"
   },
   "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage": {
-    "what": "Midas tokenized FX carry-trade fund",
-    "source": "derived"
+    "what": "Piku · Midas-issued leveraged USD/TRY carry-trade fund, run by Morini Capital",
+    "body": "A Midas mToken sold on Piku as the Morini CarryTradeUSDTRYLeverage Vault: USDC in, a transferable share whose price is set by a custom oracle. Morini Capital runs a leveraged carry trade, earning Turkish-lira interest rates against US-dollar funding, so a sharp fall of the lira hits the share price directly.",
+    "backing": "Morini Capital's leveraged USD/TRY carry positions, held off-chain",
+    "yieldSource": "Turkish-lira interest-rate carry over US-dollar funding, levered, reflected in an oracle-set share price",
+    "redemption": "KYC/KYB mint on piku.co (100 USDC minimum); redemption requests through the Midas redemption vault, processed every two Turkish business days with T+2 settlement at the fund",
+    "issuer": "Midas (Morini Capital manages the strategy; distributed by Piku)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-carrytradeusdtryleverage-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-carrytradeusdtryleverage-vault/how-to-withdraw.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-carrytradeusdtryleverage-vault/mint-and-redeem-carrytradeusdtryleverage-at-the-contract-level.md"
+    ],
+    "updated": "2026-10-19",
+    "confidence": "medium",
+    "verify": "Leveraged lira FX exposure inside a USD token; positions and NAV come from Morini's off-chain books through a custom oracle.",
+    "source": "curated"
+  },
+  "Morini FXArbUSDTRY::aFXArbUSDTRY": {
+    "what": "Piku · Morini Capital USD/TRY FX-arbitrage vault on Accountable",
+    "body": "An Accountable vault sold on Piku as the Morini FXArbUSDTRY Vault: USDC in, a transferable share. Morini Capital runs a USD/TRY FX-arbitrage strategy it describes as delta-neutral; Accountable provides the vault and the reporting of its positions. It is also one of the vaults backing Piku's USP.",
+    "backing": "Morini Capital's USD/TRY FX-arbitrage positions, held off-chain",
+    "yieldSource": "USD/TRY FX-arbitrage spreads, reflected in the share price",
+    "redemption": "KYC/KYB deposit on piku.co (1,000 USDC minimum); redemptions processed daily on Turkish business days with T+0 settlement at the fund",
+    "issuer": "Morini Capital (on Accountable; distributed by Piku)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-fxarbusdtry-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-fxarbusdtry-vault/how-to-deposit.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-fxarbusdtry-vault/how-to-withdraw.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault/reserve-backing.md"
+    ],
+    "updated": "2026-10-19",
+    "confidence": "medium",
+    "verify": "Lira FX exposure inside a USD token; positions are off-chain.",
+    "source": "curated"
   },
   "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade": {
-    "what": "Midas tokenized basis-trade fund",
-    "source": "derived"
+    "what": "Piku · Midas-issued Turkish stock-market basis-trade fund, run by Morini Capital",
+    "body": "A Midas mToken sold on Piku as the Morini StockMarketTRBasisTrade Vault: USDC in, a transferable share whose price is set by a custom oracle. Morini Capital runs what it describes as a market-neutral basis trade on Turkish equity-market pricing differences, so the share is in USD but the positions sit in the Turkish market. It is also one of the vaults backing Piku's USP.",
+    "backing": "Morini Capital's Turkish equity basis-trade positions, held off-chain",
+    "yieldSource": "Turkish equity-market basis and pricing differences, reflected in an oracle-set share price",
+    "redemption": "KYC/KYB mint on piku.co (100 USDC minimum); redemption requests through the Midas redemption vault, processed every two Turkish business days with T+2 settlement at the fund",
+    "issuer": "Midas (Morini Capital manages the strategy; distributed by Piku)",
+    "links": [
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-stockmarkettrbasistrade-vault.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-stockmarkettrbasistrade-vault/how-to-withdraw.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/morini-stockmarkettrbasistrade-vault/mint-and-redeem-stockmarkettrbasistrade-at-the-contract-level.md",
+      "https://docs.piku.co/piku/piku-finance/vaults/usp-yield-vault/reserve-backing.md"
+    ],
+    "updated": "2026-10-19",
+    "confidence": "medium",
+    "verify": "Turkish equity-market and lira exposure inside a USD token; positions and NAV come from Morini's off-chain books through a custom oracle.",
+    "source": "curated"
   },
   "Motorola Solutions xStock::MSIX": {
     "what": "Backed tokenized stock · tracks Motorola Solutions",
@@ -10791,6 +10836,10 @@
     "what": "Pendle principal token on USDai · matured 20 Nov 2025",
     "source": "derived"
   },
+  "PT USDai (USDai) Arbitrum::PT-USDai-24JUN2027": {
+    "what": "Pendle principal token on USDai · redeems for USDai on 24 Jun 2027 · fixed rate",
+    "source": "derived"
+  },
   "PT USDai (USDai) Arbitrum::PT-USDai-25FEB2027": {
     "what": "Pendle principal token on USDai · redeems for USDai on 25 Feb 2027 · fixed rate",
     "source": "derived"
@@ -11504,6 +11553,10 @@
     "source": "derived"
   },
   "PT deJAAA (USDC) Base::PT-deJAAA-26NOV2026": {
+    "what": "Pendle principal token on deJAAA · redeems for USDC on 26 Nov 2026 · fixed rate",
+    "source": "derived"
+  },
+  "PT deJAAA (USDC) Base::PT-deJAAA-26NOV2026::8453::0": {
     "what": "Pendle principal token on deJAAA · redeems for USDC on 26 Nov 2026 · fixed rate",
     "source": "derived"
   },
@@ -12771,6 +12824,10 @@
   },
   "PT sUSDai (USDai) Arbitrum::PT-sUSDai-20NOV2025": {
     "what": "Pendle principal token on sUSDai · matured 20 Nov 2025",
+    "source": "derived"
+  },
+  "PT sUSDai (USDai) Arbitrum::PT-sUSDai-24JUN2027": {
+    "what": "Pendle principal token on sUSDai · redeems for USDai on 24 Jun 2027 · fixed rate",
     "source": "derived"
   },
   "PT sUSDai (USDai) Arbitrum::PT-sUSDai-25FEB2027": {
@@ -18128,10 +18185,6 @@
     "confidence": "medium",
     "source": "curated"
   },
-  "Swell Ethereum::swETH": {
-    "what": "Swell liquid-staked ETH",
-    "source": "derived"
-  },
   "Swell Restaked BTC::SWBTC": {
     "what": "Swell liquid-restaked ETH",
     "source": "derived"
@@ -21923,6 +21976,10 @@
     "what": "Pendle yield token on USDai · matured 20 Nov 2025",
     "source": "derived"
   },
+  "YT USDai (USDai) Arbitrum::YT-USDai-24JUN2027": {
+    "what": "Pendle yield token on USDai · earns its yield until 24 Jun 2027",
+    "source": "derived"
+  },
   "YT USDai (USDai) Arbitrum::YT-USDai-25FEB2027": {
     "what": "Pendle yield token on USDai · earns its yield until 25 Feb 2027",
     "source": "derived"
@@ -22556,6 +22613,10 @@
     "source": "derived"
   },
   "YT deJAAA (USDC) Base::YT-deJAAA-26NOV2026": {
+    "what": "Pendle yield token on deJAAA · earns its yield until 26 Nov 2026",
+    "source": "derived"
+  },
+  "YT deJAAA (USDC) Base::YT-deJAAA-26NOV2026::8453::0": {
     "what": "Pendle yield token on deJAAA · earns its yield until 26 Nov 2026",
     "source": "derived"
   },
@@ -23781,6 +23842,10 @@
   },
   "YT sUSDai (USDai) Arbitrum::YT-sUSDai-20NOV2025": {
     "what": "Pendle yield token on sUSDai · matured 20 Nov 2025",
+    "source": "derived"
+  },
+  "YT sUSDai (USDai) Arbitrum::YT-sUSDai-24JUN2027": {
+    "what": "Pendle yield token on sUSDai · earns its yield until 24 Jun 2027",
     "source": "derived"
   },
   "YT sUSDai (USDai) Arbitrum::YT-sUSDai-25FEB2027": {
@@ -26222,6 +26287,10 @@
     "source": "derived"
   },
   "deJAAA Base::SY-deJAAA": {
+    "what": "Pendle standardized wrapper (SY) of deJAAA",
+    "source": "derived"
+  },
+  "deJAAA Base::SY-deJAAA::8453::0": {
     "what": "Pendle standardized wrapper (SY) of deJAAA",
     "source": "derived"
   },
