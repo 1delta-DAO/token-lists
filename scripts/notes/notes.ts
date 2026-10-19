@@ -116,6 +116,7 @@ const RWA_KIND: Record<string, string> = {
   'fund/private-credit': 'tokenized private-credit fund',
   'fund/closed-end': 'tokenized closed-end fund',
   'fund/basis-trade': 'tokenized basis-trade fund',
+  'fund/carry-trade': 'tokenized FX carry-trade fund',
   'credit/reinsurance': 'tokenized reinsurance',
   'credit/corporate-debt': 'tokenized corporate debt',
   'commodity/gold': 'tokenized gold',

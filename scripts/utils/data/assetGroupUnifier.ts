@@ -486,6 +486,15 @@ export const GROUP_ALIAS: Record<string, string> = {
   // Swell swETH — Arbitrum's bridged row (0xbc01…cf18) stores the on-chain casing `swETH`,
   // Ethereum the CoinGecko `SWETH`. Canonical = Ethereum's, the LST / issuer / yield key.
   'Swell Ethereum::swETH': 'Swell Ethereum::SWETH',
+  // Morini Capital vaults on Ethereum (Piku) — the chain-1 rows were seeded from CoinGecko,
+  // which stores a symbol TRUNCATED to 20 characters and UPPER-CASED. `1.json` now carries the
+  // on-chain `symbol()` (read 2026-10-19); the old CoinGecko groups fold into it so a row or a
+  // downstream join still keyed on them lands on the same asset.
+  'Morini CarryTradeUSDTRYLeverage Vault::CARRYTRADEUSDTRYLEVE':
+    'Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage',
+  'Morini StockMarketTRBasisTrade Vault::STOCKMARKETTRBASISTR':
+    'Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade',
+  'Morini FXArbUSDTRY::AFXARBUSDTRY': 'Morini FXArbUSDTRY::aFXArbUSDTRY',
 }
 
 export function aliasAssetGroup(gr: string) {

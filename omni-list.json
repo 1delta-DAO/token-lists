@@ -528881,38 +528881,58 @@
     "symbol": "GOLDX",
     "logoURI": "https://cdn.morpho.org/assets/logos/goldx.svg"
   },
-  "Morini StockMarketTRBasisTrade Vault::STOCKMARKETTRBASISTR": {
-    "id": "Morini StockMarketTRBasisTrade Vault::STOCKMARKETTRBASISTR",
+  "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade": {
+    "id": "Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade",
     "currencies": [
       {
         "decimals": 18,
         "name": "Morini StockMarketTRBasisTrade Vault",
         "address": "0x827ce7e8e35861d9ac7fe002755767b695a5594a",
-        "symbol": "STOCKMARKETTRBASISTR",
+        "symbol": "StockMarketTRBasisTrade",
         "chainId": "1",
         "logoURI": "https://assets.coingecko.com/coins/images/102173651/thumb/morini.png?1780723891",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": {
+          "rwa": {
+            "type": "fund",
+            "subType": "basis-trade",
+            "issuer": "midas",
+            "denomination": "USD",
+            "transferRestricted": false
+          },
+          "risk": { "score": 4, "source": "default" },
+          "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+        }
       }
     ],
     "name": "Morini StockMarketTRBasisTrade Vault",
-    "symbol": "STOCKMARKETTRBASISTR",
+    "symbol": "StockMarketTRBasisTrade",
     "logoURI": "https://assets.coingecko.com/coins/images/102173651/thumb/morini.png?1780723891"
   },
-  "Morini CarryTradeUSDTRYLeverage Vault::CARRYTRADEUSDTRYLEVE": {
-    "id": "Morini CarryTradeUSDTRYLeverage Vault::CARRYTRADEUSDTRYLEVE",
+  "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage": {
+    "id": "Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage",
     "currencies": [
       {
         "decimals": 18,
         "name": "Morini CarryTradeUSDTRYLeverage Vault",
         "address": "0x2bf11d2e04bc40daa95c24b8b90ec4f5c57dd326",
-        "symbol": "CARRYTRADEUSDTRYLEVE",
+        "symbol": "CarryTradeUSDTRYLeverage",
         "chainId": "1",
         "logoURI": "https://assets.coingecko.com/coins/images/102173652/thumb/CarryTradeUSDTRYLeverage.png?1780724480",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": {
+          "rwa": {
+            "type": "fund",
+            "subType": "carry-trade",
+            "issuer": "midas",
+            "denomination": "USD",
+            "transferRestricted": false
+          },
+          "risk": { "score": 4, "source": "default" },
+          "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+        }
       }
     ],
     "name": "Morini CarryTradeUSDTRYLeverage Vault",
-    "symbol": "CARRYTRADEUSDTRYLEVE",
+    "symbol": "CarryTradeUSDTRYLeverage",
     "logoURI": "https://assets.coingecko.com/coins/images/102173652/thumb/CarryTradeUSDTRYLeverage.png?1780724480"
   },
   "Robonomics Network::XRT::1::0": {
@@ -528979,21 +528999,73 @@
     "symbol": "TBRL",
     "logoURI": "https://assets.coingecko.com/coins/images/102173628/thumb/tBRL.png?1780557193"
   },
-  "Morini FXArbUSDTRY::AFXARBUSDTRY": {
-    "id": "Morini FXArbUSDTRY::AFXARBUSDTRY",
+  "Morini FXArbUSDTRY::aFXArbUSDTRY": {
+    "id": "Morini FXArbUSDTRY::aFXArbUSDTRY",
     "currencies": [
       {
         "decimals": 6,
         "name": "Morini FXArbUSDTRY",
         "address": "0x99351baed3d8ab544ccb08af96a105910fda71e7",
-        "symbol": "AFXARBUSDTRY",
+        "symbol": "aFXArbUSDTRY",
         "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/102173669/thumb/aFXArbUSDTRY.png?1780832595"
+        "logoURI": "https://assets.coingecko.com/coins/images/102173669/thumb/aFXArbUSDTRY.png?1780832595",
+        "props": { "issuer": { "id": "morini-capital", "name": "Morini Capital", "kind": "institution" } }
       }
     ],
     "name": "Morini FXArbUSDTRY",
-    "symbol": "AFXARBUSDTRY",
+    "symbol": "aFXArbUSDTRY",
     "logoURI": "https://assets.coingecko.com/coins/images/102173669/thumb/aFXArbUSDTRY.png?1780832595"
+  },
+  "9Summits Piku Ecosystem USDC::pikuUSDC": {
+    "id": "9Summits Piku Ecosystem USDC::pikuUSDC",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "9Summits Piku Ecosystem USDC",
+        "address": "0xc30c60de46dec551b96326cbd05592c9245773ef",
+        "symbol": "pikuUSDC",
+        "chainId": "1",
+        "logoURI": "https://cdn.morpho.org/v2/assets/images/9summits.png",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      }
+    ],
+    "name": "9Summits Piku Ecosystem USDC",
+    "symbol": "pikuUSDC",
+    "logoURI": "https://cdn.morpho.org/v2/assets/images/9summits.png"
+  },
+  "Alpha USDC Forex V2::alphaForexV2": {
+    "id": "Alpha USDC Forex V2::alphaForexV2",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Alpha USDC Forex V2",
+        "address": "0x153bd1abe60104bd46aa05a27fa12d1346d64a57",
+        "symbol": "alphaForexV2",
+        "chainId": "1",
+        "logoURI": "https://cdn.morpho.org/v2/assets/images/alphaping.png",
+        "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+      }
+    ],
+    "name": "Alpha USDC Forex V2",
+    "symbol": "alphaForexV2",
+    "logoURI": "https://cdn.morpho.org/v2/assets/images/alphaping.png"
+  },
+  "Morini USDC Emerging Yield::morUSDCemerging": {
+    "id": "Morini USDC Emerging Yield::morUSDCemerging",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Morini USDC Emerging Yield",
+        "address": "0x58e0f0b81576f23c5f002d949b2bb11a5d2714d6",
+        "symbol": "morUSDCemerging",
+        "chainId": "1",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/curators/morini-capital.webp",
+        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      }
+    ],
+    "name": "Morini USDC Emerging Yield",
+    "symbol": "morUSDCemerging",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/curators/morini-capital.webp"
   },
   "FONQ::FONQ": {
     "id": "FONQ::FONQ",

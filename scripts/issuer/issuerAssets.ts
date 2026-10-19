@@ -422,6 +422,25 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Spark USDC::SUSDC': { id: 'spark', name: 'Spark', kind: 'protocol' },
   'Midas mRe7YIELD::MRE7YIELD': { id: 'midas', name: 'Midas', kind: 'institution' },
   'Midas mRe7YIELD::mRe7YIELD': { id: 'midas', name: 'Midas', kind: 'institution' },
+  // Morini Capital's two Midas mTokens on Ethereum (Piku's USD/TRY carry and Turkish
+  // stock-market basis vaults). Midas issues them — DepositVault / RedemptionVault, Midas data
+  // feeds — and Morini only MANAGES the strategy, so the desk is Midas, exactly as for
+  // mRe7YIELD (Re7 manages it). Keyed on the on-chain group AND the CoinGecko-truncated one
+  // the lists held before 2026-10-19 (GROUP_ALIAS folds the latter).
+  'Morini CarryTradeUSDTRYLeverage Vault::CarryTradeUSDTRYLeverage': {
+    id: 'midas',
+    name: 'Midas',
+    kind: 'institution',
+  },
+  'Morini CarryTradeUSDTRYLeverage Vault::CARRYTRADEUSDTRYLEVE': { id: 'midas', name: 'Midas', kind: 'institution' },
+  'Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade': { id: 'midas', name: 'Midas', kind: 'institution' },
+  'Morini StockMarketTRBasisTrade Vault::STOCKMARKETTRBASISTR': { id: 'midas', name: 'Midas', kind: 'institution' },
+  // Morini's USD/TRY FX-arbitrage vault is an ACCOUNTABLE vault: Accountable is the vault and
+  // verification infrastructure, not the issuer, so the desk is the manager — the notes'
+  // "Hyperithm (on Accountable)" reading for aHYPER. Morini Capital is an off-chain asset
+  // manager, hence `institution`.
+  'Morini FXArbUSDTRY::aFXArbUSDTRY': { id: 'morini-capital', name: 'Morini Capital', kind: 'institution' },
+  'Morini FXArbUSDTRY::AFXARBUSDTRY': { id: 'morini-capital', name: 'Morini Capital', kind: 'institution' },
   'Etherfuse KTB::KTB': { id: 'etherfuse', name: 'Etherfuse', kind: 'institution' },
   SYRUPUSDG: { id: 'maple', name: 'Maple', kind: 'protocol' }, // Maple syrupUSDG, 1: 0x87b6…
   'syrupUSDG::SYRUPUSDG': { id: 'maple', name: 'Maple', kind: 'protocol' },

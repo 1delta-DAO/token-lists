@@ -229,6 +229,29 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
     // "Franklin OnChain U.S. Government Money Fund" (read 2026-10-14). Same row as the rule
     // gives it on 137 / 42161 / 43114 / 8453.
     '0x3ddc84940ab509c11b20b76b466933f40b750dc9': { type: 'fund', subType: 'money-market', issuer: 'franklin' },
+    // Morini Capital's Midas mTokens (Piku): a leveraged USD/TRY carry trade and a Turkish
+    // stock-market basis trade, minted and redeemed through Midas DepositVault /
+    // RedemptionVault at a Midas-fed USD NAV. The stock vault is a `basis-trade` (single-stock
+    // futures vs cash equity, lira hedged); the carry vault is NOT — it earns the lira
+    // overnight rate on an UNHEDGED, leveraged lira book, hence its own `carry-trade`. NOT
+    // transfer-restricted, unlike mGLOBAL: a fork (2026-10-19) moved both with plain ERC-20
+    // transfers between two fresh wallets; the tokens carry only a sanctions/blacklist list,
+    // no holder allowlist or role. No `transferGate`, which describes what ENFORCES a
+    // restriction.
+    '0x2bf11d2e04bc40daa95c24b8b90ec4f5c57dd326': {
+      type: 'fund',
+      subType: 'carry-trade',
+      issuer: 'midas',
+      denomination: 'USD',
+      transferRestricted: false,
+    },
+    '0x827ce7e8e35861d9ac7fe002755767b695a5594a': {
+      type: 'fund',
+      subType: 'basis-trade',
+      issuer: 'midas',
+      denomination: 'USD',
+      transferRestricted: false,
+    },
   },
 
   // PAX Gold bridged to Gnosis over the omnibridge — the list names it "Paxos Gold" (on-chain

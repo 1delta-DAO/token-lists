@@ -2923,5 +2923,47 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "No audit found; DEX liquidity is thin."
+  },
+  "Binance Staked SOL::BNSOL::solana": {
+    "what": "Binance liquid-staked SOL · SPL stake pool over five validators",
+    "body": "BNSOL is Binance's liquid staking token on the SPL Stake Pool program: SOL deposited into the pool is staked to five validators (one holds about 80 %) and BNSOL rises against SOL (1.1364 SOL per BNSOL on 2026-10-18, about 4.5 % APR after Binance's 10 % fee on rewards). With about 10.5M SOL it is one of the largest Solana LSTs. Anyone can mint it from SOL on chain at the pool rate with no fee.",
+    "backing": "SOL in the stake pool, delegated to five validators chosen by Binance",
+    "yieldSource": "SOL staking rewards, net of a 10 % fee on rewards",
+    "redemption": "On chain the pool's instant SOL withdrawal needs Binance's signature, so holders unstake into a stake account (0.1 % fee, about one epoch to deactivate) or sell; Binance users can also redeem in their Binance account",
+    "issuer": "Binance",
+    "links": [
+      "https://www.binance.com/en/bnsol",
+      "https://solscan.io/account/Hr9pzexrBge3vgmBNRR8u42CNQgBXdHm4UkUN2DH4a7r"
+    ],
+    "updated": "2026-10-18",
+    "confidence": "high"
+  },
+  "Jito Staked SOL::JitoSOL": {
+    "what": "Jito liquid-staked SOL · SPL stake pool with MEV rewards",
+    "body": "JitoSOL is Jito's liquid staking token on the SPL Stake Pool program: deposited SOL is spread over about 670 validators chosen by StakeNet's on-chain rules, and staking plus MEV tip rewards raise JitoSOL against SOL (1.3070 SOL per JitoSOL on 2026-10-18, about 4.7 % APR after Jito's 4 % fee). It holds about 10.5M SOL. On chains other than Solana the token is a bridged representation of the Solana JitoSOL.",
+    "backing": "SOL in the stake pool, delegated across ~670 validators",
+    "yieldSource": "SOL staking rewards plus Jito MEV tips, net of a 4 % fee",
+    "redemption": "instant SOL from the pool reserve (0.1 % fee, capped by the reserve), or unstake into a stake account (0.1 %, about one epoch), or sell",
+    "issuer": "Jito",
+    "links": [
+      "https://www.jito.network/docs/jitosol/",
+      "https://solscan.io/account/Jito4APyf642JPZPx3hGc6WWJ8zPKtRbRs4P815Awbb"
+    ],
+    "updated": "2026-10-18",
+    "confidence": "high"
+  },
+  "BlazeStake Staked SOL (bSOL)::bSOL::solana": {
+    "what": "BlazeStake liquid-staked SOL · SPL stake pool over ~680 validators",
+    "body": "bSOL is SolBlaze's liquid staking token on the SPL Stake Pool program: deposited SOL is spread over about 680 validators and bSOL rises against SOL (1.3213 SOL per bSOL on 2026-10-18, about 4.5 % APR after a 5 % fee on rewards). The pool holds about 876k SOL.",
+    "backing": "SOL in the stake pool, delegated across ~680 validators",
+    "yieldSource": "SOL staking rewards, net of a 5 % fee",
+    "redemption": "instant SOL from the pool reserve (0.1 % fee, capped by the reserve), or unstake into a stake account (0.1 %, about one epoch), or sell",
+    "issuer": "SolBlaze",
+    "links": [
+      "https://stake-docs.solblaze.org",
+      "https://solscan.io/account/stk9ApL5HeVAwPLr3TLhDXdZS8ptVu7zp6ov8HFDuMi"
+    ],
+    "updated": "2026-10-18",
+    "confidence": "high"
   }
 }
