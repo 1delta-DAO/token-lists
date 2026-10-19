@@ -398,6 +398,16 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   // Alchemix V3 mix yield tokens (MYT) — the vaults behind alUSD/alETH.
   'USDC Mix Yield Token::mixUSDC': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'WETH Mix Yield Token::mixWETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  // The L2 MYTs (one separate Vault V2 per chain; each name carries its chain except Base's,
+  // which is looked up here PRE-override as the Ethereum string above).
+  'Optimism USDC Mix Yield Token::mixUSDC': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  'Optimism WETH Mix Yield Token::mixWETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  'Arbitrum USDC Mix Yield Token::mixUSDC': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  'Arbitrum WETH Mix Yield Token::mixWETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  'Alchemix ETH::ALETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  'Alchemix ETH::alETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  // alUSDb — Base's alAsset ("Alchemic USD Base"), minted by the Base Alchemist; NOT alUSD.
+  'Alchemic USD Base::alUSDb': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'ZeUSD::ZEUSD': { id: 'zoth', name: 'Zoth', kind: 'protocol' },
   'ZeUSD::ZeUSD': { id: 'zoth', name: 'Zoth', kind: 'protocol' },
   'R Stablecoin::R': { id: 'raft', name: 'Raft', kind: 'protocol' },

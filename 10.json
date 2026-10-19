@@ -15263,9 +15263,12 @@
       "address": "0x3e29d3a9316dab217754d13b28646b76607c5f04",
       "symbol": "alETH",
       "logoURI": "https://assets.smold.app/api/token/10/0x3E29D3A9316dAB217754d13b28646B76607c5f04/logo-128.png",
-      "assetGroup": "Alchemix ETH::alETH",
+      "assetGroup": "Alchemix ETH::ALETH",
       "currencyId": "Alchemix ETH::alETH",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
     },
     "0x528cdc92eab044e1e39fe43b9514bfdab4412b98": {
       "chainId": "10",
@@ -15355,7 +15358,7 @@
       "address": "0xcb8fa9a76b8e203d8c3797bf438d8fb81ea3326a",
       "symbol": "alUSD",
       "logoURI": "https://assets.smold.app/api/token/10/0xCB8FA9a76b8e203D8C3797bF438d8FB81Ea3326A/logo-128.png",
-      "assetGroup": "Alchemix USD::alUSD",
+      "assetGroup": "Alchemix USD::ALUSD",
       "currencyId": "Alchemix USD::alUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
@@ -22044,6 +22047,30 @@
       "props": {
         "isNative": true,
         "wrapped": "0x4200000000000000000000000000000000000006"
+      }
+    },
+    "0x91b8657aea26caa8a0e9d6dd4e24727ccf32f822": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Optimism WETH Mix Yield Token",
+      "address": "0x91b8657aea26caa8a0e9d6dd4e24727ccf32f822",
+      "symbol": "mixWETH",
+      "assetGroup": "Optimism WETH Mix Yield Token::mixWETH",
+      "currencyId": "Optimism WETH Mix Yield Token::mixWETH",
+      "props": {
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
+    },
+    "0xaf510a560744880410f0f65e3341a020fbc2ca41": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Optimism USDC Mix Yield Token",
+      "address": "0xaf510a560744880410f0f65e3341a020fbc2ca41",
+      "symbol": "mixUSDC",
+      "assetGroup": "Optimism USDC Mix Yield Token::mixUSDC",
+      "currencyId": "Optimism USDC Mix Yield Token::mixUSDC",
+      "props": {
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     }
   },

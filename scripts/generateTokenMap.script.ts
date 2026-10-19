@@ -16,7 +16,7 @@ import {
 import { isAddress, zeroAddress } from 'viem'
 import { PRESET_SYMBOLS } from './presets'
 import { FUEL_MAPPEDS } from './utils/data/knownAssets'
-import { aliasAssetGroup, mapAssetGroup } from './utils/data/assetGroupUnifier'
+import { aliasAssetGroup, mapAssetGroup, overrideAssetGroupByAddress } from './utils/data/assetGroupUnifier'
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
@@ -516,6 +516,9 @@ async function readTokenLists(): Promise<{
                     // the same-chain dedup suffix and any list's casing.
                     const nestIdentity = lookupNestIdentity(lcAddress)
                     if (nestIdentity) assetGroup = nestGroupOf(nestIdentity)
+                    // …and a per-deployment override wins over everything: two different assets
+                    // that share one `name::symbol` string (assetGroupUnifier ADDRESS_GROUP_OVERRIDE).
+                    assetGroup = overrideAssetGroupByAddress(chainId, lcAddress, assetGroup)
 
                     let parsedEntry = {
                       chainId,

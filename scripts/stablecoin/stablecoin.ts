@@ -43,6 +43,10 @@ function fiatBase(pegType?: string): string | undefined {
  * PRE-alias group, list every pre-unification variant (cf. savingsAssets.ts wsrUSD case-split).
  */
 const STABLECOIN_MANUAL: StablecoinGroupMap = {
+  // Alchemix alUSDb ("Alchemic USD Base", Base 0x8770…9b9f) — Base's own alAsset, the debt
+  // of the Base v3 Alchemist over mixUSDC, redeemable 1:1 for USDC through its Transmuter.
+  // A DIFFERENT asset from alUSD (own group), so the alUSD feed row does not cover it.
+  'Alchemic USD Base::alUSDb': { base: 'USD' },
   // Reservoir rUSD — ERC-20 dollar-denominated stablecoin (1:1 vs USDC/USDT/USD1), also
   // RWA-backed (reinsurance / real-world + digital assets). Not in the DeFiLlama feed.
   'Reservoir rUSD::RUSD': { base: 'USD' },

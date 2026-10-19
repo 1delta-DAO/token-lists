@@ -495,6 +495,40 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Morini StockMarketTRBasisTrade Vault::STOCKMARKETTRBASISTR':
     'Morini StockMarketTRBasisTrade Vault::StockMarketTRBasisTrade',
   'Morini FXArbUSDTRY::AFXARBUSDTRY': 'Morini FXArbUSDTRY::aFXArbUSDTRY',
+  // Alchemix alUSD / alETH — one asset per ticker, split by CASING only: Ethereum (and
+  // Fantom, and Arbitrum's alUSD) store the CoinGecko form `ALUSD` / `ALETH`, while Optimism,
+  // Arbitrum's alETH, Metis and Linea store the on-chain `symbol()` `alUSD` / `alETH`. The L2
+  // deployments are Alchemix's own cross-chain canonical alAssets — OP and Arbitrum alUSD AND
+  // alETH run the SAME implementation bytecode (read 2026-10-19), Metis and Linea an earlier
+  // version of it — and Alchemix v3's L2 Alchemists mint them as debt (data-sdk alchemix.ts),
+  // so they are the asset the chain-1 group names. Canonical = the chain-1 form (the
+  // stablecoin overlay key `Alchemix USD::ALUSD` and every price row already use it).
+  // NOT folded: Arbitrum's `0x95d2…f84e` — a STANDARD Arbitrum-gateway bridge token of L1
+  // alUSD (`l1Address()` = mainnet alUSD, `l2Gateway()` = Arbitrum's ERC20 gateway, 10 alUSD
+  // supply), which Alchemix's contracts do not accept; it gets its own group below
+  // (ADDRESS_GROUP_OVERRIDE). And Base `alUSDb` ("Alchemic USD Base") is a separate asset.
+  'Alchemix USD::alUSD': 'Alchemix USD::ALUSD',
+  'Alchemix ETH::alETH': 'Alchemix ETH::ALETH',
+}
+
+/**
+ * Per-DEPLOYMENT group overrides, keyed `chainId:lowercaseAddress`, applied LAST (after
+ * GROUP_ALIAS). For the case GROUP_ALIAS cannot express: two different assets whose
+ * `name::symbol` is the SAME string, so any group-keyed alias would move both.
+ */
+export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
+  // Alchemix v3 MYT on Base answers `name() == 'USDC Mix Yield Token'` — byte-identical to
+  // Ethereum's mixUSDC — but it is a SEPARATE Morpho Vault V2 with its own strategies and
+  // share price (1.00316 vs Ethereum's 1.02406 on 2026-10-19). The other L2 MYTs carry the
+  // chain in their own name ("Optimism USDC Mix Yield Token"); Base gets the same shape.
+  // margin-fetcher's `alchemixMyt.ts` keys the Base vault's APR on this string.
+  '8453:0xb8befe5a6941ca4022a52042075ff269c3c67467': 'Base USDC Mix Yield Token::mixUSDC',
+  // Arbitrum standard-gateway bridge token of L1 alUSD — see the alUSD note in GROUP_ALIAS.
+  '42161:0x95d2c35934f4ea0076e6f5e8d6edd8080666f84e': 'Arbitrum Bridged Alchemix USD::alUSD',
+}
+
+export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {
+  return ADDRESS_GROUP_OVERRIDE[`${chainId}:${lcAddress}`] ?? gr
 }
 
 export function aliasAssetGroup(gr: string) {

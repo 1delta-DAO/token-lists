@@ -346,7 +346,7 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // Deliberately NOT here: Piku USP (the "USP actively-managed" exclusion above — a
   // fund-of-funds over synthetic dollars, TRY carry and FX-arbitrage vaults), Solstice stSLX
   // (SLX-denominated: no fiat `base`, the spETH rule), Alchemix mixUSDC / mixWETH (strategy
-  // vaults, the Vesper precedent).
+  // vaults, the Vesper precedent — the Optimism / Arbitrum / Base MYTs likewise).
   'Sierra::SIERRA::1::0': { underlying: 'USDC', base: 'USD' }, // Ethereum-native pool 0xbceb…; the Avalanche OFT keeps `Sierra::SIERRA`
   'Staked Axis USD::SUSDX': { underlying: 'USDx', base: 'USD' }, // Axis, NOT Stables Labs' bare `SUSDX`
   'GAIB sAID::SAID': { underlying: 'AID', base: 'USD' },
