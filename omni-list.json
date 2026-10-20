@@ -275050,13 +275050,16 @@
         "address": "0x29bcfed246ce37319d94eba107db90c453d4c43d",
         "symbol": "mixWETH",
         "chainId": "1",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp",
         "props": {
+          "savings": { "underlying": "WETH", "base": "ETH" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
         }
       }
     ],
     "name": "WETH Mix Yield Token",
-    "symbol": "mixWETH"
+    "symbol": "mixWETH",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp"
   },
   "USDC Mix Yield Token::mixUSDC": {
     "id": "USDC Mix Yield Token::mixUSDC",
@@ -275067,13 +275070,16 @@
         "address": "0x9b44efca3e2a707b63dc00ce79d646e5e5d24ba5",
         "symbol": "mixUSDC",
         "chainId": "1",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
         "props": {
+          "savings": { "underlying": "USDC", "base": "USD" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
         }
       }
     ],
     "name": "USDC Mix Yield Token",
-    "symbol": "mixUSDC"
+    "symbol": "mixUSDC",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp"
   },
   "Royco Junior Tranche apyUSD::ROY-JT-apyUSD": {
     "id": "Royco Junior Tranche apyUSD::ROY-JT-apyUSD",
@@ -283938,7 +283944,10 @@
         "symbol": "CVXCRV",
         "chainId": "1",
         "logoURI": "https://assets.coingecko.com/coins/images/15586/large/convex-crv.png?1621255952",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": {
+          "risk": { "score": 4, "source": "default" },
+          "issuer": { "id": "convex", "name": "Convex", "kind": "protocol" }
+        }
       },
       {
         "decimals": 18,
@@ -283946,7 +283955,10 @@
         "address": "0x6220d3d80020a4023eb29a9f9e206100f7bb581e",
         "symbol": "CVXCRV",
         "chainId": "137",
-        "logoURI": "https://assets.coingecko.com/coins/images/15586/large/convex-crv.png?1621255952"
+        "logoURI": "https://assets.coingecko.com/coins/images/15586/large/convex-crv.png?1621255952",
+        "props": {
+          "issuer": { "id": "convex", "name": "Convex", "kind": "protocol" }
+        }
       },
       {
         "decimals": 18,
@@ -283955,7 +283967,10 @@
         "symbol": "CVXCRV",
         "chainId": "42161",
         "logoURI": "https://assets.coingecko.com/coins/images/15586/large/convex-crv.png?1621255952",
-        "props": { "permit": { "type": 1, "version": "1" } }
+        "props": {
+          "permit": { "type": 1, "version": "1" },
+          "issuer": { "id": "convex", "name": "Convex", "kind": "protocol" }
+        }
       }
     ],
     "name": "Convex CRV",
@@ -358370,7 +358385,10 @@
         "address": "0xfcc5c47be19d06bf83eb04298b026f81069ff65b",
         "symbol": "YCRV",
         "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/27622/thumb/yearncrvnew_32.png?1696526653"
+        "logoURI": "https://assets.coingecko.com/coins/images/27622/thumb/yearncrvnew_32.png?1696526653",
+        "props": {
+          "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+        }
       }
     ],
     "name": "Yearn CRV",
@@ -362642,7 +362660,10 @@
         "symbol": "ST-YCRV",
         "chainId": "1",
         "logoURI": "https://assets.coingecko.com/coins/images/27623/thumb/st-yCRV-128-0x27B5739e22ad9033bcBf192059122d163b60349D.png?1696526654",
-        "props": { "risk": { "score": 4, "source": "default" } }
+        "props": {
+          "risk": { "score": 4, "source": "default" },
+          "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+        }
       }
     ],
     "name": "Staked Yearn CRV Vault",
@@ -499891,7 +499912,11 @@
         "symbol": "ysyBOLD",
         "chainId": "1",
         "logoURI": "https://cdn.morpho.org/assets/logos/bold.svg",
-        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+        "props": {
+          "risk": { "score": 2, "source": "vault_inherit" },
+          "savings": { "underlying": "BOLD", "base": "USD" },
+          "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+        }
       }
     ],
     "name": "Staked yBOLD",
@@ -525357,7 +525382,10 @@
         "address": "0x9f4330700a36b29952869fac9b33f45eedd8a3d8",
         "symbol": "yBOLD",
         "chainId": "1",
-        "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+        "props": {
+          "risk": { "score": 2, "source": "vault_inherit" },
+          "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+        }
       }
     ],
     "name": "Yearn BOLD",
@@ -545412,6 +545440,84 @@
     "symbol": "morUSDCemerging",
     "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/curators/morini-capital.webp"
   },
+  "Staked invUSD Stablecoin::sinvUSD": {
+    "id": "Staked invUSD Stablecoin::sinvUSD",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Staked invUSD Stablecoin",
+        "address": "0x3ff361197036ae1d24b939146d8a449a80f8427d",
+        "symbol": "sinvUSD",
+        "chainId": "1",
+        "props": {
+          "savings": { "underlying": "invUSD", "base": "USD" },
+          "issuer": {
+            "id": "inverse",
+            "name": "Inverse Finance",
+            "kind": "protocol"
+          }
+        }
+      }
+    ],
+    "name": "Staked invUSD Stablecoin",
+    "symbol": "sinvUSD"
+  },
+  "Tenor savUSD/USDC Collateral Vault::savUSD-USDC-collat": {
+    "id": "Tenor savUSD/USDC Collateral Vault::savUSD-USDC-collat",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Tenor savUSD/USDC Collateral Vault",
+        "address": "0x10ffd9ca0cbf71fff388bc9d6e032ba0d4fcde8d",
+        "symbol": "savUSD-USDC-collat",
+        "chainId": "1"
+      }
+    ],
+    "name": "Tenor savUSD/USDC Collateral Vault",
+    "symbol": "savUSD-USDC-collat"
+  },
+  "Tenor savETH/WETH Collateral Vault::savETH-WETH-collat": {
+    "id": "Tenor savETH/WETH Collateral Vault::savETH-WETH-collat",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Tenor savETH/WETH Collateral Vault",
+        "address": "0x4f65de1753f4a6e2942a5e3fb0ff295b4cc94f91",
+        "symbol": "savETH-WETH-collat",
+        "chainId": "1"
+      }
+    ],
+    "name": "Tenor savETH/WETH Collateral Vault",
+    "symbol": "savETH-WETH-collat"
+  },
+  "Tenor wemUSD/USDC Collateral Vault::wemUSD-USDC-collat": {
+    "id": "Tenor wemUSD/USDC Collateral Vault::wemUSD-USDC-collat",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Tenor wemUSD/USDC Collateral Vault",
+        "address": "0x8e44b1cbfad6b63f27a074ff50df30edbaa8b934",
+        "symbol": "wemUSD-USDC-collat",
+        "chainId": "1"
+      }
+    ],
+    "name": "Tenor wemUSD/USDC Collateral Vault",
+    "symbol": "wemUSD-USDC-collat"
+  },
+  "Wrapped eToken Sr::weUSDSr": {
+    "id": "Wrapped eToken Sr::weUSDSr",
+    "currencies": [
+      {
+        "decimals": 18,
+        "name": "Wrapped eToken Sr",
+        "address": "0x067f025c8b4a7e16ad65722222eed2da278c905d",
+        "symbol": "weUSDSr",
+        "chainId": "1"
+      }
+    ],
+    "name": "Wrapped eToken Sr",
+    "symbol": "weUSDSr"
+  },
   "OP": {
     "id": "OP",
     "currencies": [
@@ -553820,13 +553926,16 @@
         "address": "0x91b8657aea26caa8a0e9d6dd4e24727ccf32f822",
         "symbol": "mixWETH",
         "chainId": "10",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp",
         "props": {
+          "savings": { "underlying": "WETH", "base": "ETH" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
         }
       }
     ],
     "name": "Optimism WETH Mix Yield Token",
-    "symbol": "mixWETH"
+    "symbol": "mixWETH",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp"
   },
   "Optimism USDC Mix Yield Token::mixUSDC": {
     "id": "Optimism USDC Mix Yield Token::mixUSDC",
@@ -553837,13 +553946,16 @@
         "address": "0xaf510a560744880410f0f65e3341a020fbc2ca41",
         "symbol": "mixUSDC",
         "chainId": "10",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
         "props": {
+          "savings": { "underlying": "USDC", "base": "USD" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
         }
       }
     ],
     "name": "Optimism USDC Mix Yield Token",
-    "symbol": "mixUSDC"
+    "symbol": "mixUSDC",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp"
   },
   "Principal Token: sw-sFLR(WFLR) 2026/09/30 Flare::PT-sw-sFLR(WFLR)-2026/09/30": {
     "id": "Principal Token: sw-sFLR(WFLR) 2026/09/30 Flare::PT-sw-sFLR(WFLR)-2026/09/30",
@@ -802342,11 +802454,17 @@
         "name": "USDC Mix Yield Token",
         "address": "0xb8befe5a6941ca4022a52042075ff269c3c67467",
         "symbol": "mixUSDC",
-        "chainId": "8453"
+        "chainId": "8453",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
+        "props": {
+          "savings": { "underlying": "USDC", "base": "USD" },
+          "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+        }
       }
     ],
     "name": "USDC Mix Yield Token",
-    "symbol": "mixUSDC"
+    "symbol": "mixUSDC",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp"
   },
   "Alchemic USD Base::alUSDb": {
     "id": "Alchemic USD Base::alUSDb",
@@ -802357,6 +802475,7 @@
         "address": "0x877014e21c32fea108b6a1f45f367efc9a2d9b9f",
         "symbol": "alUSDb",
         "chainId": "8453",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ALUSDB.webp",
         "props": {
           "stablecoin": { "base": "USD" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
@@ -802364,7 +802483,8 @@
       }
     ],
     "name": "Alchemic USD Base",
-    "symbol": "alUSDb"
+    "symbol": "alUSDb",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ALUSDB.webp"
   },
   "Iota Velocimeter::IVM": {
     "id": "Iota Velocimeter::IVM",
@@ -820333,7 +820453,10 @@
         "symbol": "alUSD",
         "chainId": "42161",
         "logoURI": "https://assets.coingecko.com/coins/images/14114/thumb/Alchemix_USD.png?1696513835",
-        "props": { "stablecoin": { "base": "USD" } }
+        "props": {
+          "stablecoin": { "base": "USD" },
+          "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+        }
       }
     ],
     "name": "Alchemix USD",
@@ -820750,7 +820873,10 @@
         "symbol": "yCRV",
         "chainId": "42161",
         "logoURI": "https://assets.coingecko.com/coins/images/27622/thumb/yearncrvnew_32.png?1696526653",
-        "props": { "permit": { "type": 1, "version": "1" } }
+        "props": {
+          "permit": { "type": 1, "version": "1" },
+          "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+        }
       }
     ],
     "name": "Yearn CRV",
@@ -843558,13 +843684,16 @@
         "address": "0xfe8f223f3d81462f55bf8609897b8cecfa4b195c",
         "symbol": "mixWETH",
         "chainId": "42161",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp",
         "props": {
+          "savings": { "underlying": "WETH", "base": "ETH" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
         }
       }
     ],
     "name": "Arbitrum WETH Mix Yield Token",
-    "symbol": "mixWETH"
+    "symbol": "mixWETH",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp"
   },
   "Arbitrum USDC Mix Yield Token::mixUSDC": {
     "id": "Arbitrum USDC Mix Yield Token::mixUSDC",
@@ -843575,13 +843704,16 @@
         "address": "0xeba62b842081cef5a8184318dc5c4e4aaca9f651",
         "symbol": "mixUSDC",
         "chainId": "42161",
+        "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
         "props": {
+          "savings": { "underlying": "USDC", "base": "USD" },
           "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
         }
       }
     ],
     "name": "Arbitrum USDC Mix Yield Token",
-    "symbol": "mixUSDC"
+    "symbol": "mixUSDC",
+    "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp"
   },
   "Arbius::AIUS::42170::0": {
     "id": "Arbius::AIUS::42170::0",

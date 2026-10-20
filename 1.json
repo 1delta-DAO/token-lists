@@ -72003,9 +72003,11 @@
       "name": "WETH Mix Yield Token",
       "address": "0x29bcfed246ce37319d94eba107db90c453d4c43d",
       "symbol": "mixWETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp",
       "assetGroup": "WETH Mix Yield Token::mixWETH",
       "currencyId": "WETH Mix Yield Token::mixWETH",
       "props": {
+        "savings": { "underlying": "WETH", "base": "ETH" },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
@@ -72015,9 +72017,11 @@
       "name": "USDC Mix Yield Token",
       "address": "0x9b44efca3e2a707b63dc00ce79d646e5e5d24ba5",
       "symbol": "mixUSDC",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
       "assetGroup": "USDC Mix Yield Token::mixUSDC",
       "currencyId": "USDC Mix Yield Token::mixUSDC",
       "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
@@ -74648,7 +74652,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/15586/large/convex-crv.png?1621255952",
       "assetGroup": "CVXCRV",
       "currencyId": "Convex CRV::CVXCRV",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "convex", "name": "Convex", "kind": "protocol" }
+      }
     },
     "0xe74dc43867e0cbeb208f1a012fc60dcbbf0e3044": {
       "chainId": "1",
@@ -99491,7 +99498,10 @@
       "symbol": "YCRV",
       "logoURI": "https://assets.coingecko.com/coins/images/27622/thumb/yearncrvnew_32.png?1696526653",
       "assetGroup": "Yearn CRV::YCRV",
-      "currencyId": "Yearn CRV::YCRV"
+      "currencyId": "Yearn CRV::YCRV",
+      "props": {
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
     },
     "0xc97232527b62efb0d8ed38cf3ea103a6cca4037e": {
       "chainId": "1",
@@ -101551,7 +101561,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/27623/thumb/st-yCRV-128-0x27B5739e22ad9033bcBf192059122d163b60349D.png?1696526654",
       "assetGroup": "Staked Yearn CRV Vault::ST-YCRV",
       "currencyId": "Staked Yearn CRV Vault::ST-YCRV",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
     },
     "0xf6ccfd6ef2850e84b73adeace9a075526c5910d4": {
       "chainId": "1",
@@ -168952,7 +168965,11 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/bold.svg",
       "assetGroup": "Staked yBOLD::ysyBOLD",
       "currencyId": "Staked yBOLD::ysyBOLD",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "savings": { "underlying": "BOLD", "base": "USD" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
     },
     "0x351caa9045d65107b9d311d922d15887cfd634e4": {
       "chainId": "1",
@@ -180815,7 +180832,10 @@
       "symbol": "yBOLD",
       "assetGroup": "Yearn BOLD::yBOLD",
       "currencyId": "Yearn BOLD::yBOLD",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
     },
     "0x123ffe0a3c62878dcbee2742227dc8990058d9e1": {
       "chainId": "1",
@@ -189238,6 +189258,59 @@
       "assetGroup": "Morini USDC Emerging Yield::morUSDCemerging",
       "currencyId": "Morini USDC Emerging Yield::morUSDCemerging",
       "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+    },
+    "0x3ff361197036ae1d24b939146d8a449a80f8427d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Staked invUSD Stablecoin",
+      "address": "0x3ff361197036ae1d24b939146d8a449a80f8427d",
+      "symbol": "sinvUSD",
+      "assetGroup": "Staked invUSD Stablecoin::sinvUSD",
+      "currencyId": "Staked invUSD Stablecoin::sinvUSD",
+      "props": {
+        "savings": { "underlying": "invUSD", "base": "USD" },
+        "issuer": {
+          "id": "inverse",
+          "name": "Inverse Finance",
+          "kind": "protocol"
+        }
+      }
+    },
+    "0x10ffd9ca0cbf71fff388bc9d6e032ba0d4fcde8d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Tenor savUSD/USDC Collateral Vault",
+      "address": "0x10ffd9ca0cbf71fff388bc9d6e032ba0d4fcde8d",
+      "symbol": "savUSD-USDC-collat",
+      "assetGroup": "Tenor savUSD/USDC Collateral Vault::savUSD-USDC-collat",
+      "currencyId": "Tenor savUSD/USDC Collateral Vault::savUSD-USDC-collat"
+    },
+    "0x4f65de1753f4a6e2942a5e3fb0ff295b4cc94f91": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Tenor savETH/WETH Collateral Vault",
+      "address": "0x4f65de1753f4a6e2942a5e3fb0ff295b4cc94f91",
+      "symbol": "savETH-WETH-collat",
+      "assetGroup": "Tenor savETH/WETH Collateral Vault::savETH-WETH-collat",
+      "currencyId": "Tenor savETH/WETH Collateral Vault::savETH-WETH-collat"
+    },
+    "0x8e44b1cbfad6b63f27a074ff50df30edbaa8b934": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Tenor wemUSD/USDC Collateral Vault",
+      "address": "0x8e44b1cbfad6b63f27a074ff50df30edbaa8b934",
+      "symbol": "wemUSD-USDC-collat",
+      "assetGroup": "Tenor wemUSD/USDC Collateral Vault::wemUSD-USDC-collat",
+      "currencyId": "Tenor wemUSD/USDC Collateral Vault::wemUSD-USDC-collat"
+    },
+    "0x067f025c8b4a7e16ad65722222eed2da278c905d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Wrapped eToken Sr",
+      "address": "0x067f025c8b4a7e16ad65722222eed2da278c905d",
+      "symbol": "weUSDSr",
+      "assetGroup": "Wrapped eToken Sr::weUSDSr",
+      "currencyId": "Wrapped eToken Sr::weUSDSr"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

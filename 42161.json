@@ -29611,7 +29611,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/15586/large/convex-crv.png?1621255952",
       "assetGroup": "CVXCRV",
       "currencyId": "Convex CRV::CVXCRV",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "issuer": { "id": "convex", "name": "Convex", "kind": "protocol" }
+      }
     },
     "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1": {
       "chainId": "42161",
@@ -49848,7 +49851,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14114/thumb/Alchemix_USD.png?1696513835",
       "assetGroup": "Arbitrum Bridged Alchemix USD::alUSD",
       "currencyId": "Alchemix USD::alUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
     },
     "0xa96d3946fe70d57789fd2256185c799c66cc2ea4": {
       "chainId": "42161",
@@ -50324,7 +50330,10 @@
       "logoURI": "https://assets.coingecko.com/coins/images/27622/thumb/yearncrvnew_32.png?1696526653",
       "assetGroup": "Yearn CRV::yCRV",
       "currencyId": "Yearn CRV::yCRV",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
     },
     "0x43cd680215a5322cf90a3b910b81ff87819ad455": {
       "chainId": "42161",
@@ -67790,9 +67799,11 @@
       "name": "Arbitrum WETH Mix Yield Token",
       "address": "0xfe8f223f3d81462f55bf8609897b8cecfa4b195c",
       "symbol": "mixWETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXWETH.webp",
       "assetGroup": "Arbitrum WETH Mix Yield Token::mixWETH",
       "currencyId": "Arbitrum WETH Mix Yield Token::mixWETH",
       "props": {
+        "savings": { "underlying": "WETH", "base": "ETH" },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
@@ -67802,9 +67813,11 @@
       "name": "Arbitrum USDC Mix Yield Token",
       "address": "0xeba62b842081cef5a8184318dc5c4e4aaca9f651",
       "symbol": "mixUSDC",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
       "assetGroup": "Arbitrum USDC Mix Yield Token::mixUSDC",
       "currencyId": "Arbitrum USDC Mix Yield Token::mixUSDC",
       "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },

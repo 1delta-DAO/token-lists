@@ -230,6 +230,17 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Staked YUSD::sYUSD': { id: 'aegis', name: 'Aegis', kind: 'protocol' },
   // Inverse — sDOLA (0xb45a…) `asset()` = DOLA 0x8653…, already `inverse`.
   'sDOLA::SDOLA': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
+  // Inverse sinvUSD (0x3ff3…427d) — the Monolith savings vault over invUSD.
+  'Staked invUSD Stablecoin::sinvUSD': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
+  // Yearn's own instruments: yBOLD / ysyBOLD (BOLD in Liquity's stability pools — Liquity is the
+  // exposure, found by the wrapper walk) and yCRV / st-yCRV (CRV locked as veCRV for good).
+  'Yearn BOLD::yBOLD': { id: 'yearn', name: 'Yearn', kind: 'protocol' },
+  'Staked yBOLD::ysyBOLD': { id: 'yearn', name: 'Yearn', kind: 'protocol' },
+  'Yearn CRV::YCRV': { id: 'yearn', name: 'Yearn', kind: 'protocol' },
+  'Yearn CRV::yCRV': { id: 'yearn', name: 'Yearn', kind: 'protocol' },
+  'Staked Yearn CRV Vault::ST-YCRV': { id: 'yearn', name: 'Yearn', kind: 'protocol' },
+  // Convex cvxCRV — CRV locked as veCRV by Convex, one-way (mint-only via CrvDepositor).
+  CVXCRV: { id: 'convex', name: 'Convex', kind: 'protocol' },
   // Aave — sGho (0xe175…) `asset()` = GHO 0x40d1…, already `aave`.
   'sGho::sGho': { id: 'aave', name: 'Aave', kind: 'protocol' },
   // Moved upstream from pos-indexer's config/issuer-overrides.json (tickets/0011)
@@ -406,6 +417,11 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Optimism WETH Mix Yield Token::mixWETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'Arbitrum USDC Mix Yield Token::mixUSDC': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'Arbitrum WETH Mix Yield Token::mixWETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  // Base's post-override group: the repo's own published list feeds the row back carrying it, so
+  // the pre-override (Ethereum) string above no longer matches and Base mixUSDC lost its desk.
+  'Base USDC Mix Yield Token::mixUSDC': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
+  // Arbitrum's alUSD (0x95d2…) — the unifier gives it its own bridged group; same Alchemix desk.
+  'Arbitrum Bridged Alchemix USD::alUSD': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'Alchemix ETH::ALETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   'Alchemix ETH::alETH': { id: 'alchemix', name: 'Alchemix', kind: 'protocol' },
   // alUSDb — Base's alAsset ("Alchemic USD Base"), minted by the Base Alchemist; NOT alUSD.

@@ -351,8 +351,37 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // underlying at NAV; the credit risk lives in risk-data (all three score 4).
   // Deliberately NOT here: Piku USP (the "USP actively-managed" exclusion above — a
   // fund-of-funds over synthetic dollars, TRY carry and FX-arbitrage vaults), Solstice stSLX
-  // (SLX-denominated: no fiat `base`, the spETH rule), Alchemix mixUSDC / mixWETH (strategy
-  // vaults, the Vesper precedent — the Optimism / Arbitrum / Base MYTs likewise).
+  // (SLX-denominated: no fiat `base`, the spETH rule), Yearn st-yCRV (yCRV / CRV-denominated —
+  // CRV is no money any consumer of `savings.base` knows; it is a savings row in margin-fetcher
+  // all the same).
+  //
+  // Alchemix mixUSDC — the MYT behind alUSD, a Morpho Vault V2 the Alchemix curator allocates
+  // across Yearn / Fluid / InfiniFi / Tokemak USDC legs. Excluded at first on the Vesper
+  // precedent (a strategy vault); classified 2026-10-20 because every leg is a USDC lending /
+  // savings position, both legs are synchronous at par (fork-proven through the
+  // Erc4626Composite on 1 / 10 / 8453) and it is the earn row a user holding alUSD's backing
+  // actually holds. Base's vault answers the Ethereum name, so its pre-override group is the
+  // Ethereum string before ADDRESS_GROUP_OVERRIDE runs — but once the override is published the
+  // repo's own list feeds the row back already carrying `Base USDC …`, so BOTH strings are keyed.
+  'USDC Mix Yield Token::mixUSDC': { underlying: 'USDC', base: 'USD' },
+  'Base USDC Mix Yield Token::mixUSDC': { underlying: 'USDC', base: 'USD' },
+  'Optimism USDC Mix Yield Token::mixUSDC': { underlying: 'USDC', base: 'USD' },
+  'Arbitrum USDC Mix Yield Token::mixUSDC': { underlying: 'USDC', base: 'USD' },
+  // Alchemix mixWETH — the alETH-side MYT. `base: 'ETH'` breaks the fiat-only habit of this
+  // list on purpose: `issuer:check:eth-btc` reads `savings.base` as an ETH/BTC money (and failed
+  // on these three groups without one), and YieldCircle compares it with the debt's money, so a
+  // mixWETH/WETH loop reads as an ETH carry, which it is. NB its share price is a MARK (staked-ETH
+  // legs) — margin-fetcher registers it `volatile` (VOLATILE_VAULT_OVERRIDES, 1 + 10).
+  'WETH Mix Yield Token::mixWETH': { underlying: 'WETH', base: 'ETH' },
+  'Optimism WETH Mix Yield Token::mixWETH': { underlying: 'WETH', base: 'ETH' },
+  'Arbitrum WETH Mix Yield Token::mixWETH': { underlying: 'WETH', base: 'ETH' },
+  // Inverse sinvUSD (0x3ff3…427d) — the Monolith savings vault: a plain 4626 over invUSD that
+  // accrues the interest invUSD borrowers pay (~8 % APR realized, 2026-10-20). FiRM collateral.
+  'Staked invUSD Stablecoin::sinvUSD': { underlying: 'invUSD', base: 'USD' },
+  // Yearn ysyBOLD (0x2334…91cd) — "Staked yBOLD", a Yearn V3 vault over yBOLD, which is itself
+  // a par 4626 over BOLD deposited in Liquity V2's stability pools; the yield accrues HERE
+  // (yBOLD's own price stays 1). The money is BOLD's. FiRM and Morpho collateral.
+  'Staked yBOLD::ysyBOLD': { underlying: 'BOLD', base: 'USD' },
   'Sierra::SIERRA::1::0': { underlying: 'USDC', base: 'USD' }, // Ethereum-native pool 0xbceb…; the Avalanche OFT keeps `Sierra::SIERRA`
   'Staked Axis USD::SUSDX': { underlying: 'USDx', base: 'USD' }, // Axis, NOT Stables Labs' bare `SUSDX`
   'GAIB sAID::SAID': { underlying: 'AID', base: 'USD' },

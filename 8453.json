@@ -57580,8 +57580,13 @@
       "name": "USDC Mix Yield Token",
       "address": "0xb8befe5a6941ca4022a52042075ff269c3c67467",
       "symbol": "mixUSDC",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/MIXUSDC.webp",
       "assetGroup": "Base USDC Mix Yield Token::mixUSDC",
-      "currencyId": "USDC Mix Yield Token::mixUSDC"
+      "currencyId": "USDC Mix Yield Token::mixUSDC",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
     },
     "0x877014e21c32fea108b6a1f45f367efc9a2d9b9f": {
       "chainId": "8453",
@@ -57589,6 +57594,7 @@
       "name": "Alchemic USD Base",
       "address": "0x877014e21c32fea108b6a1f45f367efc9a2d9b9f",
       "symbol": "alUSDb",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ALUSDB.webp",
       "assetGroup": "Alchemic USD Base::alUSDb",
       "currencyId": "Alchemic USD Base::alUSDb",
       "props": {
@@ -57609,6 +57615,43 @@
         "isNative": true,
         "wrapped": "0x4200000000000000000000000000000000000006"
       }
+    },
+    "0xa6ef20fe18cd529ca15a8a53a29d1832b1f848ff": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Staked avUSD",
+      "address": "0xa6ef20fe18cd529ca15a8a53a29d1832b1f848ff",
+      "symbol": "savUSD",
+      "assetGroup": "Staked avUSD::savUSD",
+      "currencyId": "Staked avUSD::savUSD",
+      "props": {
+        "savings": { "underlying": "avUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
+      }
+    },
+    "0x34a2798d47b238a7cba9d87d49618dee6c4d999f": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Staked USN",
+      "address": "0x34a2798d47b238a7cba9d87d49618dee6c4d999f",
+      "symbol": "sUSN",
+      "assetGroup": "SUSN",
+      "currencyId": "Staked USN::sUSN",
+      "props": {
+        "savings": { "underlying": "USN", "base": "USD" },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "noon", "name": "Noon", "kind": "protocol" }
+      }
+    },
+    "0x46b5e25e46416cf728fdf9dc400d3ce628f7fb05": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Tenor cbXRP/USDC Collateral Vault",
+      "address": "0x46b5e25e46416cf728fdf9dc400d3ce628f7fb05",
+      "symbol": "cbXRP-USDC-collat",
+      "assetGroup": "Tenor cbXRP/USDC Collateral Vault::cbXRP-USDC-collat",
+      "currencyId": "Tenor cbXRP/USDC Collateral Vault::cbXRP-USDC-collat"
     }
   },
   "mainTokens": [
