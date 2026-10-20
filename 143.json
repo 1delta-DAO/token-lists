@@ -45,7 +45,10 @@
           "ptAddress": "0x355e82c60d51d6942bdfd0f2b95a204acd068963",
           "syAddress": "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x05938d5d7b7243a27d88b83272ab36f2034168f4": {
@@ -232,7 +235,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "vault_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x39148079bca3abf3f3b40f6f1c1b1ae1f2927d13": {
@@ -252,7 +258,10 @@
           "ytAddress": "0xd0d72f0a23031dd3c7994fe340aa8551736c4efd",
           "syAddress": "0xd1279361528c3c4588506e1746f81175dfa5f64e"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x3ebb97649af955e86699444aabc5aee3787bb7ce": {
@@ -426,7 +435,10 @@
           "ytAddress": "0xee0b5281dd0b0eacde23cc9029c8b442cafde67c",
           "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x8b562578b2f9aa8c14ccda3c5d6cbcead3b06a57": {
@@ -593,7 +605,10 @@
           "ptAddress": "0x355e82c60d51d6942bdfd0f2b95a204acd068963",
           "ytAddress": "0x0435a599e3fcf2e53028760060499350e25c3dd2"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa7deac306a4520f4f2f94d150ca2fbd13080b607": {
@@ -791,7 +806,10 @@
           "ptAddress": "0x39148079bca3abf3f3b40f6f1c1b1ae1f2927d13",
           "syAddress": "0xd1279361528c3c4588506e1746f81175dfa5f64e"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd1279361528c3c4588506e1746f81175dfa5f64e": {
@@ -1056,7 +1074,10 @@
           "ptAddress": "0x8382329da318db59c4e33706faac0a883740daea",
           "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf104c6cd68f81579c6a1d85849cb12fcc64bd72a": {
@@ -2810,7 +2831,11 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/YZM/logo.svg",
       "assetGroup": "Yuzu Money Vault::YZM",
       "currencyId": "Yuzu Money Vault::YZM",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
+      }
     },
     "0xd18b7ec58cdf4876f6afebd3ed1730e4ce10414b": {
       "chainId": "143",
@@ -3340,7 +3365,9 @@
       "assetGroup": "Yuzu Prime::YZPRIME",
       "currencyId": "Yuzu Prime::YZPRIME",
       "props": {
-        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },
     "0x1111b3ded9f1fe1801ad4ebef8e2788183a24111": {

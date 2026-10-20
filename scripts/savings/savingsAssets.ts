@@ -319,6 +319,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // and instant against wYLDS — fork-proven on Ethereum 2026-10-06, so the
   // earlier "whitelist-gated" flag no longer holds. ---
   'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
+  // --- Yuzu yzPrime (Monad 0xc9ea…7DA, 4626 over USDC, linear manager-set daily accrual —
+  // 179 ppm/day = 6.5 % APR on 2026-10-20; mint/redeem role-gated) and the Yuzu Money Vault YZM
+  // (USDC-denominated, holds syzUSD). Both are Euler / Morpho / Curvance collateral on Monad;
+  // without a money YieldCircle read every loop on them as "not mapped". ---
+  'Yuzu Prime::YZPRIME': { underlying: 'USDC', base: 'USD' },
+  'Yuzu Money Vault::YZM': { underlying: 'USDC', base: 'USD' },
   'Hastra AUTO::AUTO': { underlying: 'wYLDS', base: 'USD' },
   // Solstice eUSX (Solana): USX staked in the YieldVault, a rising price. Jupiter tags it `yb` but
   // `savingsFromTags` cannot read a money off "eUSX", so it shipped as `savings: {}`.

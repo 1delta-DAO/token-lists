@@ -442,7 +442,10 @@
           "ytAddress": "0xc5f92ffc0f0ee08e161b275926b07fe01620137c",
           "syAddress": "0x44a4ff3934cf3833903a04261bd0d962f008d2c3"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x7eee53b86290e58179ed96bea7887a37e8a1b7b9": {
@@ -844,7 +847,10 @@
           "ptAddress": "0x79ea6792f7cd6f65b90898798e2413a027445879",
           "syAddress": "0x44a4ff3934cf3833903a04261bd0d962f008d2c3"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xc987568603f10f8dca9169f7ea15ab38faf331ac": {
@@ -18105,7 +18111,10 @@
       "logoURI": "https://www.ripe.finance/images/redesign/icons/green.png",
       "assetGroup": "Green USD Stablecoin::GREEN",
       "currencyId": "Green USD Stablecoin::GREEN",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ripe", "name": "Ripe", "kind": "protocol" }
+      }
     },
     "0x290a52380a88f743813b8c3e9f6b0e61db5fdf73": {
       "chainId": "4663",
@@ -18118,7 +18127,8 @@
       "currencyId": "Savings Green USD::sGREEN",
       "props": {
         "savings": { "underlying": "GREEN", "base": "USD" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "ripe", "name": "Ripe", "kind": "protocol" }
       }
     },
     "0xfc5a5c521c80d8e1d6b5aee6454b8c9483c91bff": {

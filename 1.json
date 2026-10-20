@@ -22,6 +22,81 @@
           "expired": true
         },
         "risk": {
+          "0x0de1e4d8a6ab41be1955cbd94c6f70e2110c5e22": {
+            "score": 4,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x1b2b8cfef0b7b1fad216b55fefeeb0c3349da141": {
+            "score": 4,
+            "category": "OTHER",
+            "source": "whitelist"
+          },
+          "0x1e47528b06e814e7a3d5aa7518d640edc8b407e5": {
+            "score": 3,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x460783e7917b191e80954edd674bf46f66e3015e": {
+            "score": 5,
+            "category": "OTHER",
+            "source": "pendle_inherit"
+          },
+          "0x505afb4376ca3f2803bd2419a0543eb43197050e": {
+            "score": 5,
+            "category": "YIELD_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x53f3373f0d811902405f91eb0d5cc3957887220d": {
+            "score": 3,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x5b2922c27f9f4f9ba36ed6b745dee97fa2a31c7f": {
+            "score": 3,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x7703c5258c766b6dcf7885116cc699fe1cc3d7ef": {
+            "score": 5,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x906ac88054b40eaf5eabac0a92f83022f52c0032": {
+            "score": 5,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0x9786a09cbb2efb23046542576ffd9a235aa3ca07": {
+            "score": 3,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0xa26938b7eb9f097e23e73af30c8f2ad6d06e3c6a": {
+            "score": 5,
+            "category": "OTHER",
+            "source": "pendle_inherit"
+          },
+          "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1": {
+            "score": 3,
+            "category": "STABLECOIN",
+            "source": "whitelist"
+          },
+          "0xd0609ac13000d88b0bebf5bb21074916edd92bb1": {
+            "score": 3,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0xd46fdff6d4d4e19c3e6d31ce2bf2239ba07bf71c": {
+            "score": 3,
+            "category": "PRINCIPAL_TOKEN",
+            "source": "pendle_inherit"
+          },
+          "0xee7280386b4d829b7b44cc85d559917f69dd9075": {
+            "score": 5,
+            "category": "YIELD_TOKEN",
+            "source": "pendle_inherit"
+          },
           "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
@@ -581,7 +656,10 @@
           "ptAddress": "0xacb89f068d19ce5fb93a94e7c67e7b885ccf813d",
           "syAddress": "0x43a437cf73187303ec024b61ddf98d27448b9722"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6": {
@@ -662,7 +740,15 @@
           "syAddress": "0x64b9140bfa68ba8fbc39cdf1de122f430d7ef760",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x0529f301e210bffc9e3a1558789f86753ee7906b": {
@@ -683,7 +769,10 @@
           "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x05402a3a056563187c75c4e1d6799d55e2442b7c": {
@@ -704,7 +793,10 @@
           "syAddress": "0xca4fe88658073cadafd40045ba1c170a684d6e78",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x05b33b68c4ed0807e8824fe2ae6e5b657b5117ec": {
@@ -1328,7 +1420,10 @@
           "syAddress": "0x508defdb5dd2adeefe36f58fdcd75d6efa36697b",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sky", "name": "Sky", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x09c8b191ff8c8d693cd6b5b34c4e3fa11b01d499": {
@@ -1855,7 +1950,7 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -1883,7 +1978,15 @@
           "ptAddress": "0x45c00ec1a2797b507d3e955b208fb275795da669",
           "ytAddress": "0x89c7d1cdb6b2a5c09f25de59fd4bee47921bbf4d"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x0e125e7ec4a537594ea9d481c30d36ee15203243": {
@@ -1983,7 +2086,10 @@
           "syAddress": "0x399e426e6812943ac22976333698e16eaa80a209",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0ee69a11b4391c5af5eb2fb088c2df5dd2a0d075": {
@@ -2208,7 +2314,10 @@
           "syAddress": "0x92899026d06343929c61e0987e09caeea6873fe5",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x10222f882f3594455343abc9831213854902ed8e": {
@@ -2603,7 +2712,10 @@
           "syAddress": "0x1b4a157b4df492c3ef293219548a1349a8360642",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "elixir", "name": "Elixir", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1211a5b5f5a87b677074c391f0a80019adf6bbd8": {
@@ -2676,7 +2788,10 @@
           "syAddress": "0x399e426e6812943ac22976333698e16eaa80a209",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x129e6b5dbc0ecc12f9e486c5bc9cdf1a6a80bc6a": {
@@ -2749,7 +2864,10 @@
           "syAddress": "0x10222f882f3594455343abc9831213854902ed8e",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x136389d329968bd82efe05f0911eeb20ee74a138": {
@@ -3428,7 +3546,10 @@
           "ytAddress": "0x9dafdd6a02d49d821f140cb6863f185223fc5f58",
           "syAddress": "0x9845bbb51d326fe4d5e7cbd47ce157a33d7936ef"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x181721e2f83af836f9dd7f7142a095f29581977b": {
@@ -3566,7 +3687,15 @@
           "syAddress": "0x6ada3d3a4304aa7c5d9e5801cba45bc1e6c59319",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "openeden",
+            "name": "OpenEden",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x198139f26d42f2028c10427a161e2d0e8bb00346": {
@@ -3654,7 +3783,10 @@
           "syAddress": "0x730a5e2acebccaa5e9095723b3cb862739da793c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "kelp", "name": "Kelp", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1a4485101815e5afeb4d83e7a4febb822e683d99": {
@@ -3729,7 +3861,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "default"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1a7096563c94029dfd55e625a19f099726ac4f3f": {
@@ -3927,7 +4062,15 @@
           "ptAddress": "0x931881a5bc9e230876264030c0c26676f207e79c",
           "syAddress": "0xbeefe990f4099e11c6ab745555621cdfa161f18d"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "threshold",
+            "name": "Threshold",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x1c085195437738d73d75dc64bc5a3e098b7f93b1": {
@@ -4207,7 +4350,15 @@
           "ytAddress": "0x80e159f4f82a9e480c109c06288c2d457e6e36cc",
           "syAddress": "0xef10d4ed86e12b57f1fa178d3ab7bfd5cc2f97df"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "forest-road",
+            "name": "Forest Road",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x1d69402390657308c91179aa184bf992908c1e08": {
@@ -4288,7 +4439,15 @@
           "syAddress": "0x10f124962d911f32ae96982d37b4562c6b9d1296",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x1ddad0c1c834dfa11a4ed8495ce887f02a78927c": {
@@ -4463,7 +4622,7 @@
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -4678,7 +4837,10 @@
           "syAddress": "0xa09482f2f6cb5f2177b05144bc276d06b8b818eb"
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1ff9c3b5d9969ddec8e3f801b638da08d769fde5": {
@@ -5306,7 +5468,10 @@
           "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x23dbaab01bdda67c6daea0f180d0bccc5649a466": {
@@ -5786,7 +5951,10 @@
           "syAddress": "0x1605a410c8480a18a3e958faff3b6d2834fbae22",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x26564c11d16e5b5e58061ba513deb4d1fd6fdaa2": {
@@ -6317,7 +6485,10 @@
           "syAddress": "0xa08c5b18a05317dc0ed43c9eea9ea6db85d84ed1",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "nest", "name": "Nest", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x29859bb7c30c0e36b69ef1ecb40396ab9b970b60": {
@@ -6402,7 +6573,8 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [{ "id": "resolv", "name": "Resolv", "hops": 1 }]
       }
     },
     "0x2a21f68b60156860615bd27ac958df817df45aa3": {
@@ -6966,7 +7138,10 @@
           "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x2cdb89969a8c206624c1173d1da3284b26dcb03d": {
@@ -7089,7 +7264,10 @@
           "syAddress": "0x149bd983030e14e8b2f1ebdc8bbd9c419411fbc9",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "usdd", "name": "USDD", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x2d3c279e5fcdf5b793c0a75ed90738d7369b0b83": {
@@ -7402,7 +7580,10 @@
           "syAddress": "0xca4fe88658073cadafd40045ba1c170a684d6e78",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x2ed065f447971768c1117e4a36c80f4a54eb88fa": {
@@ -7450,7 +7631,10 @@
           "syAddress": "0x212bfcb33fcdaa603cff2abef25444ae5519dee8",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x2fe0be7e4e248fd6dadec01bde35397748412f84": {
@@ -8245,7 +8429,10 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "resolv", "name": "Resolv", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x346488ffbd53434f03360ba075bc07342868d115": {
@@ -8327,7 +8514,10 @@
           "syAddress": "0x730a5e2acebccaa5e9095723b3cb862739da793c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "kelp", "name": "Kelp", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x3566069b5bef9fbc1ab97bfb951909d4c6f9d8c7": {
@@ -8915,7 +9105,10 @@
           "ptAddress": "0x1a69154f6f6247e4457332860fb173251a36e03f",
           "ytAddress": "0x8a9e90fe18e9d243f804022224fbd8380d6b76f6"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x39d979f73ced09b3e8821478e86f9498d9816d54": {
@@ -9304,7 +9497,10 @@
           "syAddress": "0x0a9b2c09f8756c743b0702973ed33970d16cf6f9",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x3b3fb9c57858ef816833dc91565efcd85d96f634": {
@@ -10757,7 +10953,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "vault_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x44f8325fe444a837dfea457440f62ae340fa2be2": {
@@ -10778,7 +10977,10 @@
           "syAddress": "0x8b9d898327c0ac74b946ca3ca9fcfcbe9bc29c48",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x450e39fe80936c502c7c0d9d032c46c9a8b040b3": {
@@ -10959,7 +11161,15 @@
           "ytAddress": "0x89c7d1cdb6b2a5c09f25de59fd4bee47921bbf4d",
           "syAddress": "0x0e012d6a77a7f6c91de7cb74c2732553876d1d61"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x45dc4460777ec5d210d2b1791126db2b72dcc3e8": {
@@ -11012,11 +11222,6 @@
       "assetGroup": "jrmHYPER Ethereum::SY-jrmHYPER",
       "currencyId": "jrmHYPER Ethereum::SY-jrmHYPER",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "OTHER",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "SY",
           "marketAddress": "0xc653dec003b80593ff56dec9f94095da360a9aa7",
@@ -11049,7 +11254,10 @@
           "ptAddress": "0xd70be760f0bc3009db4563fe0b9eee54883adb50",
           "ytAddress": "0x56467eef9be9bcd025c24d4437525e02acbe310b"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x469c74c25c6bdedff41ab69370ceea55f9f64e6d": {
@@ -12465,11 +12673,7 @@
           "ptAddress": "0xd0609ac13000d88b0bebf5bb21074916edd92bb1",
           "ytAddress": "0xa595fc1b1d45ea8c3f1cd73078f5104e716327bc"
         },
-        "risk": {
-          "score": 3,
-          "category": "OTHER",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 3, "category": "OTHER", "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -12573,11 +12777,6 @@
       "assetGroup": "YT jrmHYPER (USDC) Ethereum::YT-jrmHYPER-2JUL2026",
       "currencyId": "YT jrmHYPER (USDC) Ethereum::YT-jrmHYPER-2JUL2026",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "YIELD_TOKEN",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "YT",
           "marketAddress": "0xc653dec003b80593ff56dec9f94095da360a9aa7",
@@ -12611,11 +12810,7 @@
           "ptAddress": "0x53f3373f0d811902405f91eb0d5cc3957887220d",
           "ytAddress": "0x1ec77f630ef8e8e0ae29aa44a48af8fa41c2f762"
         },
-        "risk": {
-          "score": 3,
-          "category": "OTHER",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 3, "category": "OTHER", "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -12955,7 +13150,10 @@
           "syAddress": "0x149bd983030e14e8b2f1ebdc8bbd9c419411fbc9",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "usdd", "name": "USDD", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5271be3516a36316465ee50c4288ce91e58f7759": {
@@ -13119,7 +13317,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -13194,7 +13392,10 @@
           "syAddress": "0x508defdb5dd2adeefe36f58fdcd75d6efa36697b",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sky", "name": "Sky", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5439c3ef0072e4a19c44478cdf947f5d957e66c7": {
@@ -13330,7 +13531,10 @@
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x54c398b3dff91759119f83965cfc2cd1c4f7bc75": {
@@ -13399,7 +13603,10 @@
           "ytAddress": "0x71f4226837c0a24b1899ddd9eb070a762aca6caa",
           "syAddress": "0x2d3dabae14732cd9a53325a008aee4af59b193a6"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x553cd5e6d2072723f5fe5457576ed6d06b0905b2": {
@@ -13536,7 +13743,10 @@
           "ptAddress": "0xd70be760f0bc3009db4563fe0b9eee54883adb50",
           "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x56bb34a12b70046b0a03ee63392c09cdddaaa430": {
@@ -13653,7 +13863,10 @@
           "syAddress": "0xa08c5b18a05317dc0ed43c9eea9ea6db85d84ed1",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "nest", "name": "Nest", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x57badd19a4756d0190bfcd8f444ae6ebcdb38e86": {
@@ -14339,11 +14552,6 @@
       "assetGroup": "PT USG (USG) Ethereum::PT-USG-26NOV2026",
       "currencyId": "PT USG (USG) Ethereum::PT-USG-26NOV2026",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "PT",
           "expiry": 1795651200,
@@ -14351,7 +14559,10 @@
           "ytAddress": "0xa01ee56be712343ec8fc65b658cf9c2a0cac023a",
           "syAddress": "0xaf27a9c4cd90c4ef8471033a8ee7651bd699c093"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5b2e2aaf4cca1d987b03efa76c0c156af14838a7": {
@@ -14494,7 +14705,10 @@
           "syAddress": "0x611fcc0350b493907de7ee010d1061933bd9e742",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "aegis", "name": "Aegis", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5c2363d17ab36fc5038d8585e7eea7d2015e3b97": {
@@ -15930,7 +16144,8 @@
           "syAddress": "0xfcedb00b1c68732a68c4adb47df222359bea1593",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [{ "id": "usual", "name": "Usual", "hops": 1 }]
       }
     },
     "0x6636a9f992e9d2335e1e6dae7b2dfc4c4d982c5a": {
@@ -16142,7 +16357,15 @@
           "syAddress": "0x72f5fca5e8437302b666c4366e8ed090975c28c6",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "openeden",
+            "name": "OpenEden",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x67aeeed39c1675e0df93ad8bab543b17992d433b": {
@@ -16222,7 +16445,10 @@
           "syAddress": "0x7acdf2012aac69d70b86677fe91eb66e08961880",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "etherfi", "name": "Ether.fi", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x690559c7bd75c9a301e15515a8ea3316840f17be": {
@@ -16737,7 +16963,10 @@
           "ptAddress": "0xae684a4817fcace6df8611d6abcdd5341095c712",
           "syAddress": "0xe78392ecb40939c1c29d9d47429913dd88b5daed"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "3jane", "name": "3Jane", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x6cc3237ae1bbeba960c35b47b0424d34b6404037": {
@@ -17239,7 +17468,10 @@
           "syAddress": "0x29ac34026c369d21fe3b2c7735ec986e2880b347",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x6fc5b9eebf6f19556db8c8fdcc8d4a52e6dc106d": {
@@ -17547,7 +17779,10 @@
           "ptAddress": "0x553421b6359ff9fbb3e6a87852217b964ed5fb9e",
           "syAddress": "0x2d3dabae14732cd9a53325a008aee4af59b193a6"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x725e18142472384e45e15084e308dbeae43381aa": {
@@ -17637,7 +17872,15 @@
           "ptAddress": "0xcc8ca5c2a0862a37ee3946b80e12ebb2bfb524f0",
           "syAddress": "0x3870cf5e2eab623a74d2af1007295963b1c5a12f"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x72d120b9c47da21ed704e843b2c970ca743db175": {
@@ -17815,7 +18058,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x742b4166878bfd339db65a29a17e49b81a6b6aac": {
@@ -18103,7 +18349,15 @@
           "syAddress": "0xdd18e736f425b570329c69d81d0f74133fb3e25a",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "mu-digital",
+            "name": "Mu Digital",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x76543ac61ba84c6feeee76c6a918127bf0ca5fd1": {
@@ -18177,11 +18431,6 @@
       "assetGroup": "PT jrmHYPER (USDC) Ethereum::PT-jrmHYPER-2JUL2026",
       "currencyId": "PT jrmHYPER (USDC) Ethereum::PT-jrmHYPER-2JUL2026",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "PT",
           "marketAddress": "0xc653dec003b80593ff56dec9f94095da360a9aa7",
@@ -19242,7 +19491,10 @@
           "syAddress": "0x0a9b2c09f8756c743b0702973ed33970d16cf6f9",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x7cf9ea7bc05c6b3f8517b71f8d87feecb006def4": {
@@ -19264,7 +19516,10 @@
           "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411"
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x7d00afaf9c7847602264497a810a1e587f54338c": {
@@ -19315,7 +19570,10 @@
           "ptAddress": "0xea1f4119e39f28e21948152439634805a6431f88",
           "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x7d128742816aa09af2e9f0ca8c96450ceec17d7a": {
@@ -19690,7 +19948,15 @@
           "ptAddress": "0x1d5aaa79322d825bc4689ee25ccb868374af2662",
           "syAddress": "0xef10d4ed86e12b57f1fa178d3ab7bfd5cc2f97df"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "forest-road",
+            "name": "Forest Road",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x8117fc0b6fe7fec1a01def19ce118a39a97a165d": {
@@ -20102,7 +20368,10 @@
           "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x85cc1b74fc95abb6b9b6060c56334ba3e4b88ed4": {
@@ -20218,7 +20487,15 @@
           "syAddress": "0x64b9140bfa68ba8fbc39cdf1de122f430d7ef760",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x86e2a16a5abc67467ce502e3dab511c909c185a8": {
@@ -20456,7 +20733,10 @@
           "ytAddress": "0xc082266de75051cc13042d45461a1f5781f5df88",
           "syAddress": "0xd9a5a7ba8094daf3af47e8e4af4bd13f96fdc7ab"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x87f9793f0260ac0eb481755a46851c8dee2ce129": {
@@ -20477,7 +20757,10 @@
           "syAddress": "0x3d99935c992cb9fb9d86acf9082aacf1bd5bcae4",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x880cc97a7222c6b7ed77232143a220fd2dcb3004": {
@@ -20627,7 +20910,15 @@
           "ptAddress": "0x45c00ec1a2797b507d3e955b208fb275795da669",
           "syAddress": "0x0e012d6a77a7f6c91de7cb74c2732553876d1d61"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x89cedb3c823315c9922d8eb841c114782d5a4de2": {
@@ -20649,7 +20940,10 @@
           "syAddress": "0xe31b01ce6f29107cf8870599911703fa2aa36e1c"
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x89e0b2b7ef52cc1d84489f409138ca00294909d1": {
@@ -20779,7 +21073,10 @@
           "syAddress": "0x399e426e6812943ac22976333698e16eaa80a209",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x8ac5fc4085f6baeabad8f4a6bb1dd7d18a320230": {
@@ -20800,7 +21097,10 @@
           "syAddress": "0xf6193c65cf3d1cedde0ff9d8cb9781ad21ec980f",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x8b4a52d28e49a9e8994d563420422e1a26a83df1": {
@@ -21163,7 +21463,10 @@
           "syAddress": "0x29ac34026c369d21fe3b2c7735ec986e2880b347",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x8d59ce9da9ede913b548ba8f2a56d8d32be5cf2b": {
@@ -21593,11 +21896,6 @@
       "assetGroup": "PT jrUSDat (USDat) Ethereum::PT-jrUSDat-27AUG2026",
       "currencyId": "PT jrUSDat (USDat) Ethereum::PT-jrUSDat-27AUG2026",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "PT",
           "marketAddress": "0x8cef2919a8cb98ad74e1e12392bc9f9fc4e3270a",
@@ -21663,7 +21961,10 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "resolv", "name": "Resolv", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x90a7e3396403634942acc24906fbda19f1418a41": {
@@ -21767,7 +22068,15 @@
           "syAddress": "0x2b8a81d92e36137bde99c70449776e2837a0c0a9",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "asymmetry",
+            "name": "Asymmetry",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x917459337caac939d41d7493b3999f571d20d667": {
@@ -21865,7 +22174,8 @@
           "syAddress": "0xa004dd9439c2cf00794786c9662267bee6d9f723",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [{ "id": "resolv", "name": "Resolv", "hops": 1 }]
       }
     },
     "0x925a15bd6a1582fa7c0ebbfc3dbd29c34f58340e": {
@@ -22024,7 +22334,8 @@
           "syAddress": "0xfcedb00b1c68732a68c4adb47df222359bea1593",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [{ "id": "usual", "name": "Usual", "hops": 1 }]
       }
     },
     "0x9304037325e7ec5b2e0a9dcdf33c785ee2f5b179": {
@@ -22096,7 +22407,15 @@
           "ytAddress": "0x1beecff8cbf629d13bff2d8140d7b6b42f1e8061",
           "syAddress": "0xbeefe990f4099e11c6ab745555621cdfa161f18d"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "threshold",
+            "name": "Threshold",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x9335a7a9208cda49f287ea9af7b3d1faadfcfe80": {
@@ -22818,7 +23137,7 @@
           "syAddress": "0x4f6673346ab4813f1665327ab39087008cc7d76f"
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -23056,7 +23375,10 @@
           "ptAddress": "0x17c47b0cedec9b41e639f5ec1a053e9135db2a6d",
           "ytAddress": "0x9dafdd6a02d49d821f140cb6863f185223fc5f58"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x98601e27d41ccff643da9d981dc708cf9ef1f150": {
@@ -23356,7 +23678,15 @@
           "syAddress": "0x2b8a81d92e36137bde99c70449776e2837a0c0a9",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "asymmetry",
+            "name": "Asymmetry",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x9a34eb848c06d438d8747060a383dd13cff33317": {
@@ -23475,7 +23805,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "default"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "elixir", "name": "Elixir", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x9b02ca5685e9c332b158c01459562a161c8e8adf": {
@@ -23502,7 +23835,15 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "asymmetry",
+            "name": "Asymmetry",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x9b56ba75a896176b4ae76b4853b39737974f0668": {
@@ -23792,7 +24133,15 @@
           "ptAddress": "0xdbd5fb715b833fbea448ab756f02c7617ecb97be",
           "syAddress": "0xa6e23d9a6f7f4fb5ec305b50b29418dd119eb692"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "forest-road",
+            "name": "Forest Road",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x9cfc9917c171a384c7168d3529fc7e851a2e0d6d": {
@@ -23911,7 +24260,10 @@
           "ptAddress": "0x17c47b0cedec9b41e639f5ec1a053e9135db2a6d",
           "syAddress": "0x9845bbb51d326fe4d5e7cbd47ce157a33d7936ef"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x9db057e02582d1ceaec287be9861fbe25cecc765": {
@@ -24264,7 +24616,10 @@
           "ptAddress": "0x5b2922c27f9f4f9ba36ed6b745dee97fa2a31c7f",
           "syAddress": "0xaf27a9c4cd90c4ef8471033a8ee7651bd699c093"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa0664439377467ef14fd820f4a55df330bc00227": {
@@ -24486,11 +24841,6 @@
       "assetGroup": "jrUSDat Ethereum::SY-jrUSDat",
       "currencyId": "jrUSDat Ethereum::SY-jrUSDat",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "OTHER",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "SY",
           "marketAddress": "0x8cef2919a8cb98ad74e1e12392bc9f9fc4e3270a",
@@ -24988,7 +25338,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "axis", "name": "Axis", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa53ad7e3a87546cca450992d54d517c3c939c2bf": {
@@ -25267,7 +25620,15 @@
           "ptAddress": "0xdbd5fb715b833fbea448ab756f02c7617ecb97be",
           "ytAddress": "0x9ce7a40030918ecc11de14431192a6845a9a8912"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "forest-road",
+            "name": "Forest Road",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xa73fb4f3a3f3889e41387973afc542fa06785981": {
@@ -25327,7 +25688,10 @@
           "category": "STABLECOIN",
           "source": "pendle_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "axis", "name": "Axis", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa76f0c6e5f286bff151b891d2a0245077f1ad74c": {
@@ -25435,7 +25799,10 @@
           "syAddress": "0xc9e9c85b33e87fde85c44dbf72b4b842a071551d",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "maple", "name": "Maple", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa8778dd6b7f1f61f2cfda5d3cb18be8f99a8db30": {
@@ -25584,7 +25951,10 @@
           "syAddress": "0xa7606952845269dc7377cba3c7c7bda133dd97f7"
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "axis", "name": "Axis", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa91751e6f7fba8a6a4f5a7803fabb85bca78b0d6": {
@@ -25659,7 +26029,10 @@
           "ytAddress": "0x7cf9ea7bc05c6b3f8517b71f8d87feecb006def4"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa9ab6ec90ff9059cd0b2ff27c325835d9179f4f7": {
@@ -25868,7 +26241,15 @@
           "syAddress": "0x9843d6129ad455839262a1f3acb80507be601b5e",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "stream",
+            "name": "Stream Finance",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xaaa576f3c8b1f6f12afd37f3936ced36e1a6ab94": {
@@ -26370,7 +26751,10 @@
           "syAddress": "0x92899026d06343929c61e0987e09caeea6873fe5",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xad20225471238b56274302fe6866beb250c0c397": {
@@ -26573,7 +26957,10 @@
           "ytAddress": "0x6cc155877ed0245606b4869a02a461317beef15c",
           "syAddress": "0xe78392ecb40939c1c29d9d47429913dd88b5daed"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "3jane", "name": "3Jane", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xae754a3b4553ea2ea4794d0171a56ac12fdb2782": {
@@ -26670,7 +27057,10 @@
           "syAddress": "0xf6193c65cf3d1cedde0ff9d8cb9781ad21ec980f",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xaf1e3473ef58dc991d622e83397335c926f05286": {
@@ -27522,7 +27912,15 @@
           "syAddress": "0x6ada3d3a4304aa7c5d9e5801cba45bc1e6c59319",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "openeden",
+            "name": "OpenEden",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xb522cc39c1c3a1ea75ac90b90c5c06329d336192": {
@@ -27758,7 +28156,10 @@
           "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xb77b5a903ddb7a3cce06ffc92eab36c20ace1c7f": {
@@ -27924,7 +28325,10 @@
           "syAddress": "0x10222f882f3594455343abc9831213854902ed8e",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xb8be5689e0d91741ca55a68bc0f989970aaa170b": {
@@ -28192,7 +28596,15 @@
           "category": "COMPROMISED",
           "source": "whitelist"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "stream",
+            "name": "Stream Finance",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xba31c7c0189e9b6ab6cf6b27cd3d1a4d6d3d0fd6": {
@@ -28970,7 +29382,15 @@
           "syAddress": "0x72f5fca5e8437302b666c4366e8ed090975c28c6",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "openeden",
+            "name": "OpenEden",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xbf98480425a29197e5d99d003017f63a1e595d02": {
@@ -29074,7 +29494,10 @@
           "ptAddress": "0x87f3a8c7b3db5d342163b078d02deeb1ea56af05",
           "syAddress": "0xd9a5a7ba8094daf3af47e8e4af4bd13f96fdc7ab"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xc08aaed663c1c257f677f9d4b92a7a265967e54f": {
@@ -29596,7 +30019,10 @@
           "syAddress": "0x611fcc0350b493907de7ee010d1061933bd9e742",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "aegis", "name": "Aegis", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xc3c7e5e277d31cd24a3ac4cc9af3b6770f30ea33": {
@@ -29743,7 +30169,10 @@
           "syAddress": "0x7e8a16e87fa6b0f2e657db47f3dbfe2e981ef211"
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xc4ed348c56223c5953939e932e315f9d72cd83ff": {
@@ -29946,7 +30375,15 @@
           "syAddress": "0x982be58c67689e0bab9e884c30e7a6e78e064c9d",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "falcon",
+            "name": "Falcon Finance",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xc653f79de1274ee65674befda54986020d6f8fc1": {
@@ -30885,7 +31322,15 @@
           "ytAddress": "0x729c3798d061eb9fbd88f1348aa73a244ec166e9",
           "syAddress": "0x3870cf5e2eab623a74d2af1007295963b1c5a12f"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xcc9c8c24e81bee793f655ef41cb68d41808f0296": {
@@ -30983,7 +31428,15 @@
           "syAddress": "0x10f124962d911f32ae96982d37b4562c6b9d1296",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "alchemix",
+            "name": "Alchemix",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xcd85af1944fedda49f6ddf086ea4f746d1aa38b7": {
@@ -31339,7 +31792,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -32026,7 +32479,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -32300,7 +32753,10 @@
           "ytAddress": "0x56467eef9be9bcd025c24d4437525e02acbe310b",
           "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd7158ee345dab25b4fc95266c2bd8d062f243a13": {
@@ -32718,7 +33174,10 @@
           "ptAddress": "0x87f3a8c7b3db5d342163b078d02deeb1ea56af05",
           "ytAddress": "0xc082266de75051cc13042d45461a1f5781f5df88"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd9bb4fe05c409c603b5138e00455523866335299": {
@@ -33009,7 +33468,15 @@
           "ytAddress": "0x9ce7a40030918ecc11de14431192a6845a9a8912",
           "syAddress": "0xa6e23d9a6f7f4fb5ec305b50b29418dd119eb692"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "forest-road",
+            "name": "Forest Road",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xdbd6b83ae33952a2272ed3e900d3a00f1b2d611e": {
@@ -33653,7 +34120,10 @@
           "syAddress": "0x399e426e6812943ac22976333698e16eaa80a209",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xdf6031c175febdfb90bff2b640de0b0d8a450e94": {
@@ -34098,7 +34568,10 @@
           "syAddress": "0x3d99935c992cb9fb9d86acf9082aacf1bd5bcae4",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe1d9b789da5b5375eacf66f036022b019a2af307": {
@@ -34312,7 +34785,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "vault_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe31b01ce6f29107cf8870599911703fa2aa36e1c": {
@@ -34334,7 +34810,10 @@
           "ytAddress": "0x89cedb3c823315c9922d8eb841c114782d5a4de2"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe3685d56ddd9d1e9dd635a74cfd8c7edf9045658": {
@@ -34355,7 +34834,10 @@
           "syAddress": "0x1b4a157b4df492c3ef293219548a1349a8360642",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "elixir", "name": "Elixir", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe36c6c271779c080ba2e68e1e68410291a1b3f7a": {
@@ -34792,7 +35274,10 @@
           "syAddress": "0x399e426e6812943ac22976333698e16eaa80a209",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe82db015e01e93381991d14b5baa30fe73bb3240": {
@@ -35113,7 +35598,10 @@
           "ytAddress": "0x7d07f197bf20ede1fdf397772d7549761711efa5",
           "syAddress": "0xa36ecca8b7624d224f01cd6649c8afad3da12c3d"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xea3bc608f32847b97965c5e1648bdfcd4c2c40d0": {
@@ -35180,7 +35668,10 @@
           "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xead01319c2ab0dc2c690eff5dfc5f465cd38fc87": {
@@ -35395,7 +35886,10 @@
           "syAddress": "0xb258a604282f765fc752e5afd88974a5d6b40166",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "elixir", "name": "Elixir", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xec11ba2b8a9e77f69fdb0890de2c27343db28314": {
@@ -35802,11 +36296,6 @@
       "assetGroup": "YT jrUSDat (USDat) Ethereum::YT-jrUSDat-27AUG2026",
       "currencyId": "YT jrUSDat (USDat) Ethereum::YT-jrUSDat-27AUG2026",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "YIELD_TOKEN",
-          "source": "pendle_inherit"
-        },
         "pendle": {
           "tokenType": "YT",
           "marketAddress": "0x8cef2919a8cb98ad74e1e12392bc9f9fc4e3270a",
@@ -36005,7 +36494,15 @@
           "ptAddress": "0x1d5aaa79322d825bc4689ee25ccb868374af2662",
           "ytAddress": "0x80e159f4f82a9e480c109c06288c2d457e6e36cc"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "forest-road",
+            "name": "Forest Road",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xef2f8f0a3159ca952572d1e41336f0e0af10413b": {
@@ -36026,7 +36523,15 @@
           "syAddress": "0x982be58c67689e0bab9e884c30e7a6e78e064c9d",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "falcon",
+            "name": "Falcon Finance",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xef6122835a2bbf575d0117d394fda24ab7d09d4e": {
@@ -36148,7 +36653,8 @@
           "syAddress": "0xd0763c2f509cbd11b432d19af89660b024c5c6c7",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [{ "id": "resolv", "name": "Resolv", "hops": 1 }]
       }
     },
     "0xf0219f5d57b261c41187e10d8471ba89ed3fd379": {
@@ -36754,7 +37260,10 @@
           "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "royco", "name": "Royco", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf3dbde762e5b67fad09d88da3dfd38a83f753ffe": {
@@ -37110,7 +37619,10 @@
           "syAddress": "0x7acdf2012aac69d70b86677fe91eb66e08961880",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "etherfi", "name": "Ether.fi", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf5d47f240e675199a28cc97b1e5acc4ac20472fb": {
@@ -37493,7 +38005,8 @@
           "syAddress": "0xd0763c2f509cbd11b432d19af89660b024c5c6c7",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [{ "id": "resolv", "name": "Resolv", "hops": 1 }]
       }
     },
     "0xf77205f5a1eeab54555b13b231fa5e4e0cf2fc1c": {
@@ -37588,7 +38101,10 @@
           "syAddress": "0x1605a410c8480a18a3e958faff3b6d2834fbae22",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf88cf36c49f19713e2bb6fdfad02c5e73e3019d0": {
@@ -37779,7 +38295,15 @@
           "syAddress": "0xdd18e736f425b570329c69d81d0f74133fb3e25a",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "mu-digital",
+            "name": "Mu Digital",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xfa780e1c8169c83dd63ccd22a4b89e2fefdb97b2": {
@@ -37858,7 +38382,15 @@
           "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "asymmetry",
+            "name": "Asymmetry",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xfae86383d512722a50192d9e6b414dc3f067519c": {
@@ -37982,7 +38514,10 @@
           "syAddress": "0x8b9d898327c0ac74b946ca3ca9fcfcbe9bc29c48",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "level", "name": "Level", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xfbc0d6439b9dc7b8ff6c581f25724adbd8375a4e": {
@@ -38077,7 +38612,10 @@
           "syAddress": "0xc9e9c85b33e87fde85c44dbf72b4b842a071551d",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "maple", "name": "Maple", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xfc94aeaf21ab0124fb369bf40982dbad804d682e": {
@@ -38593,7 +39131,10 @@
           "syAddress": "0x10c5e7711eaddc1b6b64e40ef1976fc462666409",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "neutrl", "name": "Neutrl", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xff11b91362b1949890ea653011728976ea5f6fe8": {
@@ -70131,11 +70672,7 @@
           "denomination": "USD",
           "transferRestricted": false
         },
-        "risk": {
-          "score": 5,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
@@ -71308,7 +71845,10 @@
           "underlyingAsset": "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1",
           "maturity": 1790294601
         },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x807f99d44b25edbbb163047119a2e6a1a3b0af3a": {
@@ -71330,7 +71870,10 @@
           "underlyingAsset": "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1",
           "maturity": 1790294601
         },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x939778d83b46b456224a33fb59630b11dec56663": {
@@ -71372,7 +71915,10 @@
           "underlyingAsset": "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1",
           "maturity": 1788220825
         },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xadc8a6dfb57ff6124ca0750384154aaa655fc137": {
@@ -71436,7 +71982,10 @@
           "underlyingAsset": "0xb1c2db5d6ca03fce73dbd304d320bf76c55ae1b1",
           "maturity": 1788220825
         },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tangent", "name": "Tangent", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa036823b9a24f63c32553367bf181ee04229c3ac": {
@@ -71482,7 +72031,10 @@
       "currencyId": "Royco Junior Tranche apyUSD::ROY-JT-apyUSD",
       "props": {
         "savings": { "underlying": "apyUSD", "base": "USD" },
-        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" }
+        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf6ebea08a0dfd44825f67fa9963911c81be2a947": {
@@ -71533,7 +72085,10 @@
       "props": {
         "savings": { "underlying": "apyUSD", "base": "USD" },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" }
+        "issuer": { "id": "royco", "name": "Royco", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x36bdaefd92579da58bfe207e16dafa39835bbcb3": {
@@ -93153,7 +93708,8 @@
       "symbol": "JEUR",
       "logoURI": "https://assets.coingecko.com/coins/images/15725/thumb/jEUR.png?1696515352",
       "assetGroup": "JEUR",
-      "currencyId": "Jarvis Synthetic Euro::JEUR"
+      "currencyId": "Jarvis Synthetic Euro::JEUR",
+      "props": { "stablecoin": { "base": "EUR" } }
     },
     "0x5d858bcd53e085920620549214a8b27ce2f04670": {
       "chainId": "1",
@@ -167370,7 +167926,10 @@
           "id": "k3-capital",
           "name": "K3 Capital",
           "kind": "protocol"
-        }
+        },
+        "issuerExposures": [
+          { "id": "liquity", "name": "Liquity", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x7bafb26a485bf7bb4b0d0b02996c79c5af6493bc": {
@@ -175716,11 +176275,7 @@
       "assetGroup": "Strata Junior USDe::jrUSDe",
       "currencyId": "Strata Junior USDe::jrUSDe",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
         "savings": { "underlying": "USDe", "base": "USD" },
         "oft": {
           "eid": 30101,
@@ -181909,11 +182464,7 @@
       "currencyId": "Strata Junior mHYPER::JRMHYPER",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": {
-          "score": 5,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" }
       }
@@ -181972,11 +182523,7 @@
       "currencyId": "Strata Junior mM1-USD::JRMM1-USD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": {
-          "score": 4,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" }
       }
@@ -183632,11 +184179,7 @@
       "assetGroup": "Tangent USD::USG",
       "currencyId": "Tangent USD::USG",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
-          "source": "whitelist"
-        },
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tangent", "name": "Tangent", "kind": "protocol" }
       }
@@ -185160,11 +185703,7 @@
       "currencyId": "Strata Junior USDat::JRUSDAT",
       "props": {
         "savings": { "underlying": "USDat", "base": "USD" },
-        "risk": {
-          "score": 5,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" },
         "issuerExposures": [
@@ -187187,11 +187726,7 @@
       "assetGroup": "Strata Junior PRIME::JRPRIME",
       "currencyId": "Strata Junior PRIME::JRPRIME",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" }
       }
     },
@@ -187225,11 +187760,7 @@
       "assetGroup": "Strata Junior nOPAL::JRNOPAL",
       "currencyId": "Strata Junior nOPAL::JRNOPAL",
       "props": {
-        "risk": {
-          "score": 4,
-          "category": "OTHER",
-          "source": "whitelist"
-        },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" }
       }

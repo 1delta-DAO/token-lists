@@ -381,6 +381,8 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Staked Yuzu USD::syzUSD': { id: 'yuzu', name: 'Yuzu', kind: 'protocol' },
   'Staked Yuzu USD::SYZUSD': { id: 'yuzu', name: 'Yuzu', kind: 'protocol' },
   'Yuzu USD::yzUSD': { id: 'yuzu', name: 'Yuzu', kind: 'protocol' },
+  'Yuzu Prime::YZPRIME': { id: 'yuzu', name: 'Yuzu', kind: 'protocol' },
+  'Yuzu Money Vault::YZM': { id: 'yuzu', name: 'Yuzu', kind: 'protocol' },
   'YieldFi vyUSD::VYUSD': { id: 'yieldfi', name: 'YieldFi', kind: 'protocol' },
   'YieldFi vyUSD::vyUSD': { id: 'yieldfi', name: 'YieldFi', kind: 'protocol' },
   'M by M0::M': { id: 'm0', name: 'M0', kind: 'protocol' },

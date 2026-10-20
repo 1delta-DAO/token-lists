@@ -17901,7 +17901,10 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x79af5dd14e855823fa3e9ecacdf001d99647d043.png",
       "assetGroup": "JEUR",
       "currencyId": "Jarvis Synthetic Euro::jEUR",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "stablecoin": { "base": "EUR" }
+      }
     },
     "0x676f784d19c7f1ac6c6beaeaac78b02a73427852": {
       "chainId": "10",
@@ -22035,20 +22038,6 @@
       "assetGroup": "Wowbit::WWB",
       "currencyId": "Wowbit::WWB"
     },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "10",
-      "decimals": 18,
-      "name": "Ether",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "ETH",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
-      "assetGroup": "ETH",
-      "currencyId": "Ether::ETH",
-      "props": {
-        "isNative": true,
-        "wrapped": "0x4200000000000000000000000000000000000006"
-      }
-    },
     "0x91b8657aea26caa8a0e9d6dd4e24727ccf32f822": {
       "chainId": "10",
       "decimals": 18,
@@ -22071,6 +22060,20 @@
       "currencyId": "Optimism USDC Mix Yield Token::mixUSDC",
       "props": {
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Ether",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
+      "assetGroup": "ETH",
+      "currencyId": "Ether::ETH",
+      "props": {
+        "isNative": true,
+        "wrapped": "0x4200000000000000000000000000000000000006"
       }
     }
   },
