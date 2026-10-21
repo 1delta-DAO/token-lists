@@ -122,6 +122,116 @@ for (const n of NEST_SHARES) {
   if (n.solana) (NEST_ROWS.solana ??= {})[n.solana] = rwa
 }
 
+/**
+ * Midas mTokens the lists carried with no money (a `risk` block only), so every consumer read each
+ * as its own money and its NAV growth as a price move (pos-indexer, 2026-10-20: ~$150 m held in
+ * lending positions). The NAV money is read ON CHAIN, 2026-10-21, never off the ticker:
+ *   - minted here: the DepositVault that minted it (a mint `Transfer` from 0x0, the vault whose
+ *     `mToken()` is the token) → `mTokenDataFeed()` → `aggregator()` → `description()`;
+ *   - bridged (no vault on the chain): the Morpho market that takes it as collateral →
+ *     `idToMarketParams(id).oracle` → `BASE_FEED_1()` → `description()`.
+ * `<mToken>/USD` → USD, `<mToken>/BTC` → BTC (mevBTC, mHyperBTC: a BTC NAV). No sub-type: Midas
+ * names no single strategy for these and a guess would be a claim. Not probed for transfer gates
+ * (`transferRestricted` absent = not probed). Midas mMEV (1 0x030b…0bf3, 98866 0x7d61…7473) and
+ * the Monad mHyperBTC answered neither route and stay out.
+ */
+const MIDAS_TOKENS: {
+  symbol: string
+  chain: string
+  address: string
+  denomination: 'USD' | 'BTC'
+  evidence: string
+}[] = [
+  {
+    symbol: 'mF-ONE',
+    chain: '1',
+    address: '0x238a700ed6165261cf8b2e544ba797bc11e466ba',
+    denomination: 'USD',
+    evidence: 'vault 0x4143…c3de feed mF-ONE/USD',
+  },
+  {
+    symbol: 'mM1-USD',
+    chain: '1',
+    address: '0xcc5c22c7a6bcc25e66726aef011dde74289ed203',
+    denomination: 'USD',
+    evidence: 'vault 0x0f7e…189e feed mM1USD/USD',
+  },
+  {
+    symbol: 'mWIN',
+    chain: '1',
+    address: '0x4e72025984424e52838cf8953e2863eff036b67a',
+    denomination: 'USD',
+    evidence: 'vault 0xf7f1…7db4 feed mWIN/USD',
+  },
+  {
+    symbol: 'mHYPER',
+    chain: '1',
+    address: '0x9b5528528656dbc094765e2abb79f293c21191b9',
+    denomination: 'USD',
+    evidence: 'vault 0xba9f…1024 feed mHYPER/USD',
+  },
+  {
+    symbol: 'mAPOLLO',
+    chain: '1',
+    address: '0x7cf9dec92ca9fd46f8d86e7798b72624bc116c05',
+    denomination: 'USD',
+    evidence: 'vault 0xc215…5921 feed mAPOLLO/USD',
+  },
+  {
+    symbol: 'mFARM',
+    chain: '1',
+    address: '0xa19f6e0df08a7917f2f8a33db66d0af31ff5eca6',
+    denomination: 'USD',
+    evidence: 'vault 0x695f…0c81 feed mFARM/USD',
+  },
+  {
+    symbol: 'mevBTC',
+    chain: '1',
+    address: '0xb64c014307622eb15046c66ff71d04258f5963dc',
+    denomination: 'BTC',
+    evidence: 'vault 0xa6d6…1e37 feed mevBTC/BTC',
+  },
+  {
+    symbol: 'mHyperBTC',
+    chain: '1',
+    address: '0xc8495eaff71d3a563b906295fcf2f685b1783085',
+    denomination: 'BTC',
+    evidence: 'vault 0xed22…e65e feed mHyperBTC/BTC',
+  },
+  {
+    symbol: 'mGLO',
+    chain: '8453',
+    address: '0xfcc9cc1209651ed8867332d6f664cf82743a2584',
+    denomination: 'USD',
+    evidence: 'Morpho oracle 0x182e…a109 BASE_FEED_1 mGLO/USD',
+  },
+  {
+    symbol: 'mGLO',
+    chain: '4663',
+    address: '0xfed493f38c1aacb4ea4e6a11f8b9287849ee0096',
+    denomination: 'USD',
+    evidence: 'Morpho oracle 0xCb6E…f650 BASE_FEED_1 mGLO/USD',
+  },
+  {
+    symbol: 'mROX',
+    chain: '143',
+    address: '0x6cf55183ea297ba200cf88419bba156eba2ed206',
+    denomination: 'USD',
+    evidence: 'Morpho oracle 0xA78e…CA2D BASE_FEED_1 mROX/USD',
+  },
+  {
+    symbol: 'mHYPER',
+    chain: '143',
+    address: '0xd90f6bfed23ffde40106fc4498dd2e9edb95e4e7',
+    denomination: 'USD',
+    evidence: 'Morpho oracle 0x3A89…1E9C BASE_FEED_1 mHYPER/USD',
+  },
+]
+
+const MIDAS_ROWS: RwaRegistry = {}
+for (const m of MIDAS_TOKENS)
+  (MIDAS_ROWS[m.chain] ??= {})[m.address] = { type: 'fund', issuer: 'midas', denomination: m.denomination }
+
 const RWA_MANUAL_ROWS: RwaRegistry = {
   // '1': {
   //   '0x1234...': { type: 'fund', subType: 'treasury', issuer: 'ondo', underlying: 'US T-Bill' },
@@ -1549,12 +1659,11 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
   },
 }
 
-/** Curated rows win over the generated seed; the Nest table is merged per chain under the literal. */
+/** Curated rows win over the generated seed; the Nest and Midas tables are merged per chain under the literal. */
 export const RWA_MANUAL: RwaRegistry = Object.fromEntries(
-  [...new Set([...Object.keys(NEST_ROWS), ...Object.keys(RWA_MANUAL_ROWS)])].map((chain) => [
-    chain,
-    { ...NEST_ROWS[chain], ...RWA_MANUAL_ROWS[chain] },
-  ]),
+  [...new Set([...Object.keys(NEST_ROWS), ...Object.keys(MIDAS_ROWS), ...Object.keys(RWA_MANUAL_ROWS)])].map(
+    (chain) => [chain, { ...NEST_ROWS[chain], ...MIDAS_ROWS[chain], ...RWA_MANUAL_ROWS[chain] }],
+  ),
 )
 
 /** Merge two registries; `override` wins per (chainId,address). */
