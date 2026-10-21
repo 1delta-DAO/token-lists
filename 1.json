@@ -2018,7 +2018,10 @@
           "ytAddress": "0xb1a8467a7c09aa0eab664dc2e0c8725c6ee6f39d",
           "syAddress": "0x9845bbb51d326fe4d5e7cbd47ce157a33d7936ef"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0ed3a1d45dfdcf85bcc6c7bafdc0170a357b974c": {
@@ -27812,7 +27815,10 @@
           "ptAddress": "0x0e87d41e64c64f28a3840d73541540b1fc27e84e",
           "syAddress": "0x9845bbb51d326fe4d5e7cbd47ce157a33d7936ef"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "sierra", "name": "Sierra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xb1b9150f2085f6a553b547099977181ca802752a": {
@@ -184728,7 +184734,18 @@
       "symbol": "EVAETH",
       "logoURI": "https://assets.coingecko.com/coins/images/102173285/thumb/evaETH.png?1778830690",
       "assetGroup": "evaETH::EVAETH",
-      "currencyId": "evaETH::EVAETH"
+      "currencyId": "evaETH::EVAETH",
+      "props": {
+        "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "wintermute",
+            "name": "Wintermute",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
+      }
     },
     "0x501ebf66d76a96d4fb26ccead42957653e16b8b8": {
       "chainId": "1",
@@ -184738,7 +184755,19 @@
       "symbol": "EVAUSDT",
       "logoURI": "https://assets.coingecko.com/coins/images/102173286/thumb/token-usdt.png?1778830738",
       "assetGroup": "evaUSDT::EVAUSDT",
-      "currencyId": "evaUSDT::EVAUSDT"
+      "currencyId": "evaUSDT::EVAUSDT",
+      "props": {
+        "savings": { "underlying": "USDT", "base": "USD" },
+        "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "wintermute",
+            "name": "Wintermute",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
+      }
     },
     "0x741bd193b6b40f8703d2e116fd1965421f290f58": {
       "chainId": "1",
@@ -184748,7 +184777,19 @@
       "symbol": "EVAUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/102173288/thumb/token-evaUSDC.png?1778830856",
       "assetGroup": "evaUSDC::EVAUSDC",
-      "currencyId": "evaUSDC::EVAUSDC"
+      "currencyId": "evaUSDC::EVAUSDC",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "wintermute",
+            "name": "Wintermute",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
+      }
     },
     "0x9d70bae2944ffa477f37bae227fd981e6eb31982": {
       "chainId": "1",
@@ -190155,6 +190196,76 @@
       "props": {
         "isNative": true,
         "wrapped": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+      }
+    },
+    "0x696d02db93291651ed510704c9b286841d506987": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "USD yVault",
+      "address": "0x696d02db93291651ed510704c9b286841d506987",
+      "symbol": "yvUSD",
+      "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0x696d02db93291651ed510704c9b286841d506987/logo-128.png",
+      "assetGroup": "USD yVault::yvUSD",
+      "currencyId": "USD yVault::yvUSD",
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
+    },
+    "0xbf319ddc2edc1eb6fdf9910e39b37be221c8805f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "crvUSD-2 yVault",
+      "address": "0xbf319ddc2edc1eb6fdf9910e39b37be221c8805f",
+      "symbol": "yvcrvUSD-2",
+      "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0xbf319ddc2edc1eb6fdf9910e39b37be221c8805f/logo-128.png",
+      "assetGroup": "crvUSD-2 yVault::yvcrvUSD-2",
+      "currencyId": "crvUSD-2 yVault::yvcrvUSD-2",
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
+    },
+    "0xac37729b76db6438ce62042ae1270ee574ca7571": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "WETH-2 yVault",
+      "address": "0xac37729b76db6438ce62042ae1270ee574ca7571",
+      "symbol": "yvWETH-2",
+      "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0xac37729b76db6438ce62042ae1270ee574ca7571/logo-128.png",
+      "assetGroup": "WETH-2 yVault::yvWETH-2",
+      "currencyId": "WETH-2 yVault::yvWETH-2",
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
+    },
+    "0x863687e4e9751b57f38b4b0eba04744c72d0f7b8": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Flex USDC yVault",
+      "address": "0x863687e4e9751b57f38b4b0eba04744c72d0f7b8",
+      "symbol": "yvFlexUSDC",
+      "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0x863687e4e9751b57f38b4b0eba04744c72d0f7b8/logo-128.png",
+      "assetGroup": "Flex USDC yVault::yvFlexUSDC",
+      "currencyId": "Flex USDC yVault::yvFlexUSDC",
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
+      }
+    },
+    "0xfac55fafd0b55bfb8dd41f735efcc195ada9891f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Flex WETH yVault",
+      "address": "0xfac55fafd0b55bfb8dd41f735efcc195ada9891f",
+      "symbol": "yvFlexWETH",
+      "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0xfac55fafd0b55bfb8dd41f735efcc195ada9891f/logo-128.png",
+      "assetGroup": "Flex WETH yVault::yvFlexWETH",
+      "currencyId": "Flex WETH yVault::yvFlexWETH",
+      "props": {
+        "risk": { "score": 4, "source": "vault_inherit" },
+        "issuer": { "id": "yearn", "name": "Yearn", "kind": "protocol" }
       }
     }
   },

@@ -1,4 +1,4 @@
-import { IssuerGroupMap, IssuerProps } from '../utils/types'
+import { IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
 import { RWA_MANUAL } from '../rwa/rwaAssets'
 
 /**
@@ -472,6 +472,12 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   // manager, hence `institution`.
   'Morini FXArbUSDTRY::aFXArbUSDTRY': { id: 'morini-capital', name: 'Morini Capital', kind: 'institution' },
   'Morini FXArbUSDTRY::AFXARBUSDTRY': { id: 'morini-capital', name: 'Morini Capital', kind: 'institution' },
+  // eva.markets' tokens are eva's instrument — an ERC-4626 + LayerZero OFT whose redemption
+  // runs through eva's operator — over ONE Wildcat market each, lent unsecured to Wintermute.
+  // Wintermute's credit is the EXPOSURE (ISSUER_EXPOSURE_CURATED below), the Strata shape.
+  'evaUSDC::EVAUSDC': { id: 'eva', name: 'eva', kind: 'protocol' },
+  'evaUSDT::EVAUSDT': { id: 'eva', name: 'eva', kind: 'protocol' },
+  'evaETH::EVAETH': { id: 'eva', name: 'eva', kind: 'protocol' },
   'Etherfuse KTB::KTB': { id: 'etherfuse', name: 'Etherfuse', kind: 'institution' },
   SYRUPUSDG: { id: 'maple', name: 'Maple', kind: 'protocol' }, // Maple syrupUSDG, 1: 0x87b6…
   'syrupUSDG::SYRUPUSDG': { id: 'maple', name: 'Maple', kind: 'protocol' },
@@ -1079,4 +1085,23 @@ export const ISSUER_BY_ADDRESS: Record<string, IssuerProps> = {
   // api.nest.credit publishes). Its group is new on every chain, so the derived arm
   // (`rwa.issuer`) only reaches it on the run after issuer.json picks it up.
   'solana:6esvavhfwc4rxhhhzmr6ajg7nlml6x5ukpzuacoa7xj7': { id: 'nest', name: 'Nest', kind: 'institution' },
+}
+
+/**
+ * Hand-curated CREDIT exposures, keyed by `assetGroup` — for wrappers whose
+ * underlying no declared hop reaches. The walk in `issuer.ts` follows the
+ * pendle / spectra / exponent / receipt / savings hops; a wrapper over a
+ * PRIVATE CREDIT market has none of them, because the market share is not a
+ * listed token.
+ *
+ * eva.markets: each eva token holds one Wildcat V2 market's shares (wmtUSDC /
+ * wmtUSDT / wmtWETH), and the borrower of all three is Wintermute
+ * (`borrower()` = 0x5b15…1fEb, checked on-chain 2026-10-19). eva pins the share
+ * price at 1, so the holder is left holding Wintermute's promise to repay.
+ * `kind: 'institution'` — an off-chain trading firm, not a contract.
+ */
+export const ISSUER_EXPOSURE_CURATED: IssuerExposureGroupMap = {
+  'evaUSDC::EVAUSDC': [{ id: 'wintermute', name: 'Wintermute', kind: 'institution', hops: 1 }],
+  'evaUSDT::EVAUSDT': [{ id: 'wintermute', name: 'Wintermute', kind: 'institution', hops: 1 }],
+  'evaETH::EVAETH': [{ id: 'wintermute', name: 'Wintermute', kind: 'institution', hops: 1 }],
 }

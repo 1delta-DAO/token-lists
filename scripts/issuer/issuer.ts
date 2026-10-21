@@ -5,7 +5,7 @@ import * as path from 'path'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { IssuerExposure, IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
-import { ISSUER_BY_ADDRESS, ISSUER_CURATED } from './issuerAssets'
+import { ISSUER_BY_ADDRESS, ISSUER_CURATED, ISSUER_EXPOSURE_CURATED } from './issuerAssets'
 import { WRAPPER_ISSUERS, wrapperHop } from './wrappers'
 import { STABLECOIN_MAP } from '../stablecoin/stablecoinMap'
 
@@ -624,6 +624,9 @@ function generateIssuerMap() {
     const list = [...merged.values()].sort((a, b) => a.hops! - b.hops! || a.id.localeCompare(b.id))
     if (list.length) exposures[group] = list
   }
+  // Curated exposures (a wrapper over an unlisted credit market — eva over Wildcat)
+  // win over the walk for their group, as `ISSUER_CURATED` does for the issuer.
+  Object.assign(exposures, ISSUER_EXPOSURE_CURATED)
   fs.writeFileSync(path.resolve(__dirname, './issuerExposure.json'), serialize(exposures))
   console.log(
     `Wrote issuerExposure.json with ${Object.keys(exposures).length} wrapper groups ` +

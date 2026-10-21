@@ -128,6 +128,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'USD3::USD3': { underlying: 'USDC', base: 'USD' },
   '3Jane Staked USD3::sUSD3': { underlying: 'USD3', base: 'USD' },
   'sUSD3::sUSD3': { underlying: 'USD3', base: 'USD' },
+  // --- eva.markets evaUSDC / evaUSDT (Ethereum vault + OFT mirrors) ---
+  // A 4626 over USDC / USDT whose price is PINNED at 1: the Wildcat interest is skimmed to
+  // eva's operator, so the holder earns nothing — `savings` classifies the SHAPE (a 4626 over a
+  // dollar), never a yield. evaETH is absent on the spETH rule (dollar wrappers only).
+  'evaUSDC::EVAUSDC': { underlying: 'USDC', base: 'USD' },
+  'evaUSDT::EVAUSDT': { underlying: 'USDT', base: 'USD' },
   // --- Lista USDT.Treasury (BNB) — Lista's permissionless 18-dec wrapper over the
   // KYC-only Centrifuge JTRSY vault (Janus Henderson short-dated US T-bills). Passive by
   // this list's test: deposit USDT, accrue the fund's interest (dripped weekly into the

@@ -719,7 +719,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "avant", "name": "Avant", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x2a9e9256e0d1ad0f7f9d7c7248cb7e2f06072deb": {
@@ -1429,7 +1432,10 @@
           "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19"
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "avant", "name": "Avant", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5d746848005507da0b1717c137a10c30ad9ee307": {
@@ -53220,7 +53226,18 @@
       "symbol": "EVAETH",
       "logoURI": "https://assets.coingecko.com/coins/images/102173285/thumb/evaETH.png?1778830690",
       "assetGroup": "evaETH::EVAETH",
-      "currencyId": "evaETH::EVAETH"
+      "currencyId": "evaETH::EVAETH",
+      "props": {
+        "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "wintermute",
+            "name": "Wintermute",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
+      }
     },
     "0x501ebf66d76a96d4fb26ccead42957653e16b8b8": {
       "chainId": "8453",
@@ -53230,7 +53247,19 @@
       "symbol": "EVAUSDT",
       "logoURI": "https://assets.coingecko.com/coins/images/102173286/thumb/token-usdt.png?1778830738",
       "assetGroup": "evaUSDT::EVAUSDT",
-      "currencyId": "evaUSDT::EVAUSDT"
+      "currencyId": "evaUSDT::EVAUSDT",
+      "props": {
+        "savings": { "underlying": "USDT", "base": "USD" },
+        "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "wintermute",
+            "name": "Wintermute",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
+      }
     },
     "0x741bd193b6b40f8703d2e116fd1965421f290f58": {
       "chainId": "8453",
@@ -53240,7 +53269,19 @@
       "symbol": "EVAUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/102173288/thumb/token-evaUSDC.png?1778830856",
       "assetGroup": "evaUSDC::EVAUSDC",
-      "currencyId": "evaUSDC::EVAUSDC"
+      "currencyId": "evaUSDC::EVAUSDC",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "wintermute",
+            "name": "Wintermute",
+            "kind": "institution",
+            "hops": 1
+          }
+        ]
+      }
     },
     "0x1f86071a55bdee5601687679a2947b3bf1f24ba3": {
       "chainId": "8453",

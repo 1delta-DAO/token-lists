@@ -3097,5 +3097,50 @@
     "updated": "2026-10-20",
     "confidence": "high",
     "verify": "Superseded v1 contract (0x6338…452): Inverse moved jrDOLA to 0x6f80…bc7 in July 2026 and says not to use this one"
+  },
+  "evaUSDC::EVAUSDC": {
+    "what": "eva · 1:1 wrapper of Wildcat's unsecured USDC loan to Wintermute; earns 0 % itself",
+    "body": "evaUSDC is an ERC-4626 vault and LayerZero token in one contract, minted 1:1 for USDC on Ethereum. Every deposit goes into Wildcat's wmtUSDC market, an unsecured USDC loan to the trading firm Wintermute at 8.50 % fixed. The token itself earns nothing: its price is fixed at 1 USDC, and eva mints the loan's interest to its own operator to pay liquidity-pool incentives (Curve, Stake DAO, Convex). Holders still carry the full credit risk of the loan.",
+    "backing": "Wildcat wmtUSDC market shares — an unsecured loan to Wintermute",
+    "yieldSource": "none to the holder; the loan's 8.50 % is minted to eva's operator and paid out as LP incentives",
+    "redemption": "Ethereum only: request a redemption, eva's operator queues it into a Wildcat 24 h withdrawal batch, then claim once Wintermute has repaid into it; 2,000 USDC minimum. Other chains bridge to Ethereum first",
+    "issuer": "eva (Wildcat market, borrower Wintermute)",
+    "links": [
+      "https://www.eva.markets/docs",
+      "https://sourcify.dev/server/v2/contract/1/0xdc9f47c2cc5647be812f9ba3e2fc94ae16582e2e"
+    ],
+    "updated": "2026-10-21",
+    "confidence": "high",
+    "verify": "The eva vault and its bridge config are owned by a 2-of-3 Safe with no timelock on the bridge (eva's docs say 3-of-5)"
+  },
+  "evaUSDT::EVAUSDT": {
+    "what": "eva · 1:1 wrapper of Wildcat's unsecured USDT loan to Wintermute; earns 0 % itself",
+    "body": "evaUSDT is an ERC-4626 vault and LayerZero token in one contract, minted 1:1 for USDT on Ethereum. Every deposit goes into Wildcat's wmtUSDT market, an unsecured USDT loan to the trading firm Wintermute at 8.75 % fixed. The token itself earns nothing: its price is fixed at 1 USDT, and eva mints the loan's interest to its own operator to pay liquidity-pool incentives (Curve, Stake DAO, Convex). Holders still carry the full credit risk of the loan.",
+    "backing": "Wildcat wmtUSDT market shares — an unsecured loan to Wintermute",
+    "yieldSource": "none to the holder; the loan's 8.75 % is minted to eva's operator and paid out as LP incentives",
+    "redemption": "Ethereum only: request a redemption, eva's operator queues it into a Wildcat 24 h withdrawal batch, then claim once Wintermute has repaid into it; 2,000 USDT minimum. Other chains bridge to Ethereum first",
+    "issuer": "eva (Wildcat market, borrower Wintermute)",
+    "links": [
+      "https://www.eva.markets/docs",
+      "https://sourcify.dev/server/v2/contract/1/0xdc9f47c2cc5647be812f9ba3e2fc94ae16582e2e"
+    ],
+    "updated": "2026-10-21",
+    "confidence": "high",
+    "verify": "The eva vault and its bridge config are owned by a 2-of-3 Safe with no timelock on the bridge (eva's docs say 3-of-5)"
+  },
+  "evaETH::EVAETH": {
+    "what": "eva · 1:1 wrapper of Wildcat's unsecured WETH loan to Wintermute; earns 0 % itself",
+    "body": "evaETH is an ERC-4626 vault and LayerZero token in one contract, minted 1:1 for WETH on Ethereum. Every deposit goes into Wildcat's wmtWETH market, an unsecured WETH loan to the trading firm Wintermute at 3.75 % fixed. The token itself earns nothing: its price is fixed at 1 WETH, and eva mints the loan's interest to its own operator to pay liquidity-pool incentives (Curve, Stake DAO, Convex). Holders still carry the full credit risk of the loan. eva has closed it to new deposits; holders can still redeem.",
+    "backing": "Wildcat wmtWETH market shares — an unsecured loan to Wintermute",
+    "yieldSource": "none to the holder; the loan's 3.75 % is minted to eva's operator and paid out as LP incentives",
+    "redemption": "Ethereum only: request a redemption, eva's operator queues it into a Wildcat 24 h withdrawal batch, then claim once Wintermute has repaid into it; 2 WETH minimum. Other chains bridge to Ethereum first",
+    "issuer": "eva (Wildcat market, borrower Wintermute)",
+    "links": [
+      "https://www.eva.markets/docs",
+      "https://sourcify.dev/server/v2/contract/1/0xdc9f47c2cc5647be812f9ba3e2fc94ae16582e2e"
+    ],
+    "updated": "2026-10-21",
+    "confidence": "high",
+    "verify": "The eva vault and its bridge config are owned by a 2-of-3 Safe with no timelock on the bridge (eva's docs say 3-of-5)"
   }
 }
