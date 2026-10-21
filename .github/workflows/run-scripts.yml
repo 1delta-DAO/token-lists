@@ -12,12 +12,14 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    # A full run takes ~2–3 min; anything near this means a source is hanging, not slow.
+    timeout-minutes: 30
 
     steps:
       # GH_PAT is needed twice below: the private risk-data checkout (whose
       # failure silently degrades the overlays via continue-on-error) and the
       # final PR creation, where an expired token otherwise only surfaces
-      # after ~6 minutes of generation. Prove it authenticates before doing
+      # after ~2 minutes of generation. Prove it authenticates before doing
       # any work — expired and revoked tokens both come back as HTTP 401.
       # (Validity check only — it can't verify the token's granular
       # permissions on this repo or risk-data.)

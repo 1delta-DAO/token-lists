@@ -90,6 +90,10 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // margin-fetcher's `capFetcher` and SAVINGS_REGISTRY row use. ---
   'Staked Cap USD::stcUSD': { underlying: 'cUSD', base: 'USD' },
   'Staked cap USD::stcUSD': { underlying: 'cUSD', base: 'USD' },
+  // --- Flying Tulip ssftUSD (Ethereum) — auto-compounding ERC-4626 over
+  // ftUSD whose epoch rewards vest into the share price over 8 h; Morpho Blue
+  // collateral. Shares are 18-dec over 6-dec ftUSD. ---
+  'Stable Staked Flying Tulip USD::ssftUSD': { underlying: 'ftUSD', base: 'USD' },
   // --- Staked YUSD (sYUSD) — NOT 'Synnax Stablecoin::SYUSD' (a different token) ---
   'Staked YUSD::sYUSD': { underlying: 'YUSD', base: 'USD' },
   // --- YieldFi vyUSD (vault yUSD) — NOT 'Vyro vyUSD' (different issuer) ---

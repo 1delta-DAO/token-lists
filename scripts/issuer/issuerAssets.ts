@@ -580,6 +580,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'GAIB sAID::SAID': { id: 'gaib', name: 'GAIB', kind: 'protocol' },
   'Flying Tulip USD::FTUSD': { id: 'flying-tulip', name: 'Flying Tulip', kind: 'protocol' },
   'Flying Tulip USD::ftUSD': { id: 'flying-tulip', name: 'Flying Tulip', kind: 'protocol' },
+  'Stable Staked Flying Tulip USD::ssftUSD': { id: 'flying-tulip', name: 'Flying Tulip', kind: 'protocol' },
   "Let's Get HAI::HAI": { id: 'hai', name: 'HAI', kind: 'protocol' },
   'Defi.money::MONEY': { id: 'defi-money', name: 'Defi.money', kind: 'protocol' },
   'Defi money::MONEY': { id: 'defi-money', name: 'Defi.money', kind: 'protocol' },

@@ -3,6 +3,7 @@ import * as fs from 'fs'
 import { AutoGenHelpers } from './utils'
 import { FROZEN_WNATIVE, isFrozenChain } from './utils/frozenChains'
 import { accessListUnfiltered, ALL_LISTS, defaultmutateEntry } from './externalLists'
+import { listCacheFile, prefetchLists, USE_LIST_CACHE, writeListCache } from './listFetch'
 
 import {
   BLACKLIST_PER_CHAIN,
@@ -31,8 +32,6 @@ import { lookupIssuer, lookupIssuerByAddress, lookupIssuerExposures } from './is
 import { wrapperIssuer } from './issuer/wrappers'
 // @ts-ignore-next-line
 import * as path from 'path'
-// @ts-ignore-next-line
-import * as crypto from 'crypto'
 // @ts-ignore-next-line
 import { fileURLToPath } from 'url'
 import { Chain } from '@1delta/chain-registry'
@@ -114,21 +113,6 @@ const isImpostor = makeImpostorCheck()
  */
 const isTestToken = (name: string | undefined): boolean => !!name && /\b(tests?|prepaid|testnet)\b/i.test(name)
 
-/**
- * External-list fetch cache. Every fresh run writes each fetched list here; running with
- * `GEN_CACHE=1` reuses it (no network, no rate-limit waits) — for reprocessing minor generator
- * changes (asset-group aliases, symbol overrides, …) without re-fetching ~100 sources.
- */
-const LIST_CACHE_DIR = path.resolve(__dirname, '.list-cache')
-const USE_LIST_CACHE = process.env.GEN_CACHE === '1'
-function listCacheFile(list: { url: string; method?: string; body?: string }): string {
-  const h = crypto
-    .createHash('sha1')
-    .update(`${list.url}|${list.method ?? ''}|${list.body ?? ''}`)
-    .digest('hex')
-  return path.resolve(LIST_CACHE_DIR, `${h}.json`)
-}
-
 const BANNED_NETWORKS = [
   '167009', // taiko test
 ]
@@ -209,6 +193,15 @@ async function readTokenLists(): Promise<{
   let listOfMainTokens: ListOfMainTokens = {}
   let listOfBridgeTokens: ListOfBridgeTokens = {}
   let permitMaps: { [c: string]: any } = {}
+  // Start every network fetch up front (same skip rules as the loop below); the loop then
+  // consumes them in ALL_LISTS order, so first-list-wins merging is unchanged.
+  const prefetched = prefetchLists(
+    ALL_LISTS.filter(
+      (list) =>
+        !list.url.startsWith('file://') &&
+        !(USE_LIST_CACHE && list.tag !== '1delta' && fs.existsSync(listCacheFile(list))),
+    ),
+  )
   for (let list of ALL_LISTS) {
     console.log('processing', list.url)
     const is1delta = list.tag === '1delta'
@@ -228,20 +221,9 @@ async function readTokenLists(): Promise<{
           // Cached mode (GEN_CACHE=1): reuse the last fetch — skips network AND the rate-limit waits.
           data = JSON.parse(fs.readFileSync(cacheFile, 'utf-8'))
         } else {
-          const listDataRaw = await fetch(list.url, {
-            method: list.method ?? 'GET',
-            headers: list.headers,
-            body: list.body,
-          })
-          if (list.wait) {
-            await AutoGenHelpers.sleep(list.wait)
-          }
-          data = await listDataRaw.json()
+          data = await prefetched.get(list)!
           // Always populate the cache so a later GEN_CACHE=1 run is instant.
-          try {
-            fs.mkdirSync(LIST_CACHE_DIR, { recursive: true })
-            fs.writeFileSync(cacheFile, JSON.stringify(data))
-          } catch {}
+          writeListCache(list, data)
         }
       }
 
