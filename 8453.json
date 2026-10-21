@@ -82,9 +82,9 @@
           "syAddress": "0x797f9d67a878250e0aa572c41a8a4e862ad09d5c"
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -111,9 +111,9 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "whitelist"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -174,6 +174,7 @@
           "syAddress": "0x7c7cd4acc9729b1d45c3f67624a59c5f38f6435a",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "origin", "name": "Origin", "kind": "protocol", "hops": 1 }
@@ -357,6 +358,11 @@
           "ptAddress": "0x0177055f7429d3bd6b19f2dd591127db871a510e",
           "syAddress": "0xe181aed8e14469231618504df46e8c069314589b",
           "expired": true
+        },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_TOKEN",
+          "source": "whitelist"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -708,6 +714,11 @@
           "ytAddress": "0x5cfcfa42936f1ee9935fcb97446a553bb82856b2",
           "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19"
         },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -908,6 +919,11 @@
           "syAddress": "0x94f2b17c451bcc28bd3210124d3ca1e8848d2c07",
           "expired": true
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -988,6 +1004,11 @@
           "syAddress": "0xfd26b239f919ce94daf5c71362ff4aa1199ad8ab",
           "expired": true
         },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -1016,6 +1037,11 @@
           "ytAddress": "0xe029f05239d5b6c3b654579e3699f1721cb827f5",
           "syAddress": "0xb261266cb30c255cb9c73ebf4a3ead9398d23ab4",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -1071,6 +1097,7 @@
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kaito", "name": "Kaito", "kind": "protocol", "hops": 1 }
@@ -1145,6 +1172,7 @@
           "syAddress": "0xaee0844a089d4de3677cdb1d0ae4595a89963e78",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lombard", "name": "Lombard", "kind": "protocol", "hops": 1 }
@@ -1177,11 +1205,13 @@
       "props": {
         "pendle": {
           "tokenType": "YT",
+          "marketAddress": "0x6c23193128f7907a3570234a6f6f1c2932f1e84b",
           "expiry": 1795651200,
           "underlyingAsset": "0xaaa0008c8cf3a7dca931adaf04336a5d808c82cc",
           "ptAddress": "0xbb4fa06ea64e777c037aad9db404643100584b3d",
           "syAddress": "0xea8b6cb6157762ad63b9272bd82fc3fc06410c10"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1203,6 +1233,7 @@
           "ptAddress": "0x87244f834fc4f74266f6e1c247c7f0dfc8b21d81",
           "ytAddress": "0x45497c2063d9d87f840d1793424217caa9ba740e"
         },
+        "risk": { "score": 3, "category": "OTHER", "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kaito", "name": "Kaito", "kind": "protocol", "hops": 1 }
@@ -1226,6 +1257,11 @@
           "underlyingAsset": "0x548d3b444da39686d1a6f1544781d154e7cd1ef7",
           "ytAddress": "0xbcd065d430a237aa4791a789ff8eace37550e899",
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30"
+        },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -1315,6 +1351,11 @@
           "syAddress": "0xfd26b239f919ce94daf5c71362ff4aa1199ad8ab",
           "expired": true
         },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -1387,6 +1428,7 @@
           "ptAddress": "0x29a2338194cb32f4fcfd559b1c7976c91fc0d3ff",
           "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1468,6 +1510,7 @@
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kaito", "name": "Kaito", "kind": "protocol", "hops": 1 }
@@ -1680,6 +1723,7 @@
           "syAddress": "0x94f2b17c451bcc28bd3210124d3ca1e8848d2c07",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1891,6 +1935,11 @@
           "syAddress": "0x7c7cd4acc9729b1d45c3f67624a59c5f38f6435a",
           "expired": true
         },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "origin", "name": "Origin", "kind": "protocol", "hops": 1 }
@@ -2033,7 +2082,11 @@
           "ptAddress": "0x0112e4d09bc228534eef9d52d5a06d6b94244e8e",
           "ytAddress": "0x9108f8d0a19dd4896d68aabf6d4be5f500a1ac84"
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "xsy", "name": "XSY", "kind": "protocol", "hops": 1 }
@@ -2057,6 +2110,11 @@
           "ytAddress": "0x475a89c208281d2bf952690b1172c56f366c1489",
           "syAddress": "0xaee0844a089d4de3677cdb1d0ae4595a89963e78",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -2228,6 +2286,11 @@
           "ytAddress": "0x45497c2063d9d87f840d1793424217caa9ba740e",
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
           "expired": true
+        },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -2412,6 +2475,11 @@
           "ptAddress": "0x3d94e67179d6d87b79b6d600ed83ee0fe15034c8",
           "ytAddress": "0x625f92ec1fa7ea5b437c5c7bf9268800de0503a0"
         },
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -2454,6 +2522,11 @@
           "ytAddress": "0x5f42d7365ed7b51a77c275e9f36a8d8f9cc56750",
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
           "expired": true
+        },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -2719,10 +2792,16 @@
       "props": {
         "pendle": {
           "tokenType": "PT",
+          "marketAddress": "0x6c23193128f7907a3570234a6f6f1c2932f1e84b",
           "expiry": 1795651200,
           "underlyingAsset": "0xaaa0008c8cf3a7dca931adaf04336a5d808c82cc",
           "ytAddress": "0x482154032019ce24b9fbb8558faac010891f096f",
           "syAddress": "0xea8b6cb6157762ad63b9272bd82fc3fc06410c10"
+        },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -2770,6 +2849,7 @@
           "ptAddress": "0x5137c0505dde0e7f104ab96b41ebc55fc2057e5d",
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kaito", "name": "Kaito", "kind": "protocol", "hops": 1 }
@@ -2826,6 +2906,7 @@
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kaito", "name": "Kaito", "kind": "protocol", "hops": 1 }
@@ -2967,6 +3048,11 @@
           "ytAddress": "0xbf0741d9ec96d2e94b6982247c1cd6c23d5ead08",
           "syAddress": "0x4b272672a58da22b213e733f5aba48cfec534d30",
           "expired": true
+        },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -3251,6 +3337,7 @@
           "syAddress": "0xb261266cb30c255cb9c73ebf4a3ead9398d23ab4",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lombard", "name": "Lombard", "kind": "protocol", "hops": 1 }
@@ -3409,7 +3496,7 @@
           "ptAddress": "0xde4f5adc052aed60000f3171785b168a3d27dcd7",
           "ytAddress": "0x621bede1ca0043e96735bf7d1bede903d55cd62a"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 2, "category": "OTHER", "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -3498,7 +3585,14 @@
       "assetGroup": "deJAAA Base::SY-deJAAA::8453::0",
       "currencyId": "deJAAA Base::SY-deJAAA",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x6c23193128f7907a3570234a6f6f1c2932f1e84b",
+          "expiry": 1795651200,
+          "underlyingAsset": "0xaaa0008c8cf3a7dca931adaf04336a5d808c82cc",
+          "ptAddress": "0xbb4fa06ea64e777c037aad9db404643100584b3d",
+          "ytAddress": "0x482154032019ce24b9fbb8558faac010891f096f"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -3805,6 +3899,11 @@
           "underlyingAsset": "0xfcdecfe37463912c03a644128eb02a1147715e36",
           "maturity": 1799798406
         },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -3852,6 +3951,7 @@
           "underlyingAsset": "0xfcdecfe37463912c03a644128eb02a1147715e36",
           "maturity": 1799798406
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -3951,11 +4051,6 @@
           "ibtAddress": "0xbeef0e0834849acc03f0089f01f4f1eeb06873c9",
           "underlyingAsset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
           "maturity": 1793577609
-        },
-        "risk": {
-          "score": 3,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
@@ -4132,6 +4227,34 @@
           "baseIbtAddress": "0xb200000000000000000000ab99cfa739e253872b",
           "underlyingAsset": "0xb1caf74f8ef9059209a88ee3cb95b1e0571be0e4"
         },
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
+    "0xb43326e29631891d069ed21970b09fca0b624cee": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Principal Token: fWETH(WETH) 2027/04/19 Base",
+      "address": "0xb43326e29631891d069ed21970b09fca0b624cee",
+      "symbol": "PT-fWETH(WETH)-2027/04/19",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xe78285a51f51916f2311b7017db036d8351f3cf9.svg",
+      "assetGroup": "Principal Token: fWETH(WETH) 2027/04/19 Base::PT-fWETH(WETH)-2027/04/19",
+      "currencyId": "Principal Token: fWETH(WETH) 2027/04/19 Base::PT-fWETH(WETH)-2027/04/19",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0x7785ffa9c710ca2ebfa98e8c0f1d2f34dbb92d4e",
+          "ptAddress": "0xb43326e29631891d069ed21970b09fca0b624cee",
+          "ytAddress": "0xef5bca3661bb126cd4b9ab37207ade05306b3c83",
+          "ibtAddress": "0xe78285a51f51916f2311b7017db036d8351f3cf9",
+          "underlyingAsset": "0x4200000000000000000000000000000000000006",
+          "maturity": 1808092809
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "vault_inherit"
+        },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -4151,6 +4274,7 @@
           "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
           "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -4207,6 +4331,28 @@
         "issuerExposures": [
           { "id": "coinbase", "name": "Coinbase", "kind": "cex", "hops": 1 }
         ]
+      }
+    },
+    "0xef5bca3661bb126cd4b9ab37207ade05306b3c83": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Yield Token: fWETH(WETH) 2027/04/19 Base",
+      "address": "0xef5bca3661bb126cd4b9ab37207ade05306b3c83",
+      "symbol": "YT-fWETH(WETH)-2027/04/19",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xe78285a51f51916f2311b7017db036d8351f3cf9.svg",
+      "assetGroup": "Yield Token: fWETH(WETH) 2027/04/19 Base::YT-fWETH(WETH)-2027/04/19",
+      "currencyId": "Yield Token: fWETH(WETH) 2027/04/19 Base::YT-fWETH(WETH)-2027/04/19",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0x7785ffa9c710ca2ebfa98e8c0f1d2f34dbb92d4e",
+          "ptAddress": "0xb43326e29631891d069ed21970b09fca0b624cee",
+          "ytAddress": "0xef5bca3661bb126cd4b9ab37207ade05306b3c83",
+          "ibtAddress": "0xe78285a51f51916f2311b7017db036d8351f3cf9",
+          "underlyingAsset": "0x4200000000000000000000000000000000000006",
+          "maturity": 1808092809
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
     "0xfc72de4009148a730f89db04f287a28178898a9c": {
@@ -11266,7 +11412,7 @@
       "currencyId": "KelpDAO Restaked ETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "source": "default" },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30184,
           "routes": [
@@ -11555,7 +11701,7 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 5, "category": "LRT", "source": "whitelist" },
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -11621,6 +11767,7 @@
           "underlyingAsset": "0xfcdecfe37463912c03a644128eb02a1147715e36",
           "maturity": 1791849608
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -11646,7 +11793,7 @@
         "risk": {
           "score": 4,
           "category": "PRINCIPAL_TOKEN",
-          "source": "default"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
@@ -11713,6 +11860,7 @@
           "baseIbtAddress": "0xb20000000000000000000078ee7ce2fe4908108c",
           "underlyingAsset": "0x3852283c467694897460ccaf5308b10d66d6f82b"
         },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
@@ -11984,6 +12132,7 @@
       "assetGroup": "Staked KAITO::sKAITO",
       "currencyId": "Staked KAITO::sKAITO",
       "props": {
+        "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "kaito", "name": "Kaito", "kind": "protocol" }
       }
     },
@@ -26089,7 +26238,6 @@
       "assetGroup": "Web 3 Dollar::USD3",
       "currencyId": "Web 3 Dollar::USD3",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "reserve", "name": "Reserve", "kind": "protocol" }
       }
     },
@@ -29601,7 +29749,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54932/thumb/yoETH.png?1742627957",
       "assetGroup": "Yield Optimizer ETH::YOETH",
       "currencyId": "Yield Optimizer ETH::YOETH",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "category": "OTHER", "source": "issuer_inherit" }
+      }
     },
     "0xfdca15bd55f350a36e63c47661914d80411d2c22": {
       "chainId": "8453",
@@ -30372,7 +30522,9 @@
       "logoURI": "https://assets.coingecko.com/coins/images/55189/thumb/yoBTC.png?1744443242",
       "assetGroup": "Yield Optimizer BTC::YOBTC",
       "currencyId": "Yield Optimizer BTC::YOBTC",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 2, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x5fc190dee34cd5202cc571ec5c8efd60a02bd06d": {
       "chainId": "8453",
@@ -37959,7 +38111,11 @@
       "assetGroup": "Satoshi Stablecoin::SATUSD",
       "currencyId": "Satoshi Stablecoin::SATUSD",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "oft": {
           "eid": 30184,
           "routes": [
@@ -41100,7 +41256,14 @@
       "symbol": "yoEUR",
       "logoURI": "https://assets.coingecko.com/coins/images/68746/thumb/yoEUR_color.png?1756451014",
       "assetGroup": "Yield Optimizer EUR::yoEUR",
-      "currencyId": "Yield Optimizer EUR::yoEUR"
+      "currencyId": "Yield Optimizer EUR::yoEUR",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0x911abc29f0dbdec68c01d58d67877887b5e651d8": {
       "chainId": "8453",
@@ -50351,7 +50514,11 @@
       "currencyId": "Staked UTY::YUTY",
       "props": {
         "savings": { "underlying": "UTY", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
       }
     },
@@ -54583,7 +54750,7 @@
       "assetGroup": "Galaxy USDC Quality (Base)::BASEETH:GUSDCQ",
       "currencyId": "Galaxy USDC Quality (Base)::BASEETH:GUSDCQ",
       "props": {
-        "risk": { "score": 1, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -54618,7 +54785,7 @@
       "currencyId": "Stable Mint USD::USDSM",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -54638,7 +54805,10 @@
       "symbol": "AVLT",
       "logoURI": "https://assets.coingecko.com/coins/images/102172640/thumb/AVLT_200x200_Kopie.png?1774446611",
       "assetGroup": "Altura Vault Tokens::AVLT",
-      "currencyId": "Altura Vault Tokens::AVLT"
+      "currencyId": "Altura Vault Tokens::AVLT",
+      "props": {
+        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x9aff49c8392a8756cc6cedce76a3987f33dd0ba3": {
       "chainId": "8453",
@@ -55412,7 +55582,7 @@
       "symbol": "steakEURC",
       "assetGroup": "Steakhouse Prime EURC::steakEURC",
       "currencyId": "Steakhouse Prime EURC::steakEURC",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x25c448101c36d7306ed8053b96b090bb56a87b07": {
       "chainId": "8453",
@@ -55492,7 +55662,7 @@
       "assetGroup": "jvhhVault::JVHHUSDC",
       "currencyId": "jvhhVault::JVHHUSDC",
       "props": {
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -57464,6 +57634,7 @@
       "assetGroup": "Green USD Stablecoin::GREEN",
       "currencyId": "Green USD Stablecoin::GREEN",
       "props": {
+        "risk": { "score": 5, "category": "STABLECOIN", "source": "whitelist" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ripe", "name": "Ripe", "kind": "protocol" }
       }
@@ -57479,6 +57650,11 @@
       "currencyId": "Savings Green USD::sGREEN",
       "props": {
         "savings": { "underlying": "GREEN", "base": "USD" },
+        "risk": {
+          "score": 5,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ripe", "name": "Ripe", "kind": "protocol" }
       }
@@ -57540,7 +57716,14 @@
       "address": "0x5dd8bfa6c5c68d05d25ef6143e05c11e26c4cdb7",
       "symbol": "yoUSD Edge",
       "assetGroup": "Yield Optimizer USD Edge::YOUSDEDGE",
-      "currencyId": "yoUSD Edge::yoUSD Edge"
+      "currencyId": "yoUSD Edge::yoUSD Edge",
+      "props": {
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        }
+      }
     },
     "0xe92eb2bcf6425ca3b2967e33eb9a770ff89c1243": {
       "chainId": "8453",
@@ -57549,7 +57732,14 @@
       "address": "0xe92eb2bcf6425ca3b2967e33eb9a770ff89c1243",
       "symbol": "yoloETH",
       "assetGroup": "Yield Optimizer yoloETH::YOLOETH",
-      "currencyId": "yoloETH::yoloETH"
+      "currencyId": "yoloETH::yoloETH",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        }
+      }
     },
     "0xcf0fe5ab46cf260eb281650e8f999237684846aa": {
       "chainId": "8453",
@@ -57558,7 +57748,10 @@
       "address": "0xcf0fe5ab46cf260eb281650e8f999237684846aa",
       "symbol": "yoTest",
       "assetGroup": "yoTest::yoTest",
-      "currencyId": "yoTest::yoTest"
+      "currencyId": "yoTest::yoTest",
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x89cc2a57223fa803852b6b4e65c6e376d49909f9": {
       "chainId": "8453",
@@ -57569,7 +57762,11 @@
       "assetGroup": "Super Jarvis Synthetic Euro::sjEUR",
       "currencyId": "Super Jarvis Synthetic Euro::sjEUR",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "savings": { "underlying": "jEUR", "base": "EUR" },
         "issuer": { "id": "jarvis", "name": "Jarvis", "kind": "protocol" }
       }
@@ -57602,20 +57799,6 @@
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "Ether",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "ETH",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
-      "assetGroup": "ETH",
-      "currencyId": "Ether::ETH",
-      "props": {
-        "isNative": true,
-        "wrapped": "0x4200000000000000000000000000000000000006"
-      }
-    },
     "0xa6ef20fe18cd529ca15a8a53a29d1832b1f848ff": {
       "chainId": "8453",
       "decimals": 18,
@@ -57626,6 +57809,11 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "savings": { "underlying": "avUSD", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -57640,6 +57828,11 @@
       "currencyId": "Staked USN::sUSN",
       "props": {
         "savings": { "underlying": "USN", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "issuer_inherit"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "noon", "name": "Noon", "kind": "protocol" }
       }
@@ -57652,6 +57845,190 @@
       "symbol": "cbXRP-USDC-collat",
       "assetGroup": "Tenor cbXRP/USDC Collateral Vault::cbXRP-USDC-collat",
       "currencyId": "Tenor cbXRP/USDC Collateral Vault::cbXRP-USDC-collat"
+    },
+    "0xb2000000000000000000001ca01a48688ec7d3cc": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "ChargePoint Holdings, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001ca01a48688ec7d3cc",
+      "symbol": "CHPTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179611/thumb/CHPTc-icon-200.png?1792396656",
+      "assetGroup": "ChargePoint Holdings, Inc. (Coinbase Tokenized Stock)::CHPTC",
+      "currencyId": "ChargePoint Holdings, Inc. (Coinbase Tokenized Stock)::CHPTC"
+    },
+    "0xb200000000000000000000879a74c76c73a27d71": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Under Armour, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000879a74c76c73a27d71",
+      "symbol": "UAAC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179620/thumb/UAAc-icon-200.png?1792399760",
+      "assetGroup": "Under Armour, Inc. (Coinbase Tokenized Stock)::UAAC",
+      "currencyId": "Under Armour, Inc. (Coinbase Tokenized Stock)::UAAC"
+    },
+    "0xb200000000000000000000613c15f118df2b189b": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "YETI Holdings, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000613c15f118df2b189b",
+      "symbol": "YETIC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179623/thumb/YETIc-icon-200.png?1792400165",
+      "assetGroup": "YETI Holdings, Inc. (Coinbase Tokenized Stock)::YETIC",
+      "currencyId": "YETI Holdings, Inc. (Coinbase Tokenized Stock)::YETIC"
+    },
+    "0xb20000000000000000000077d13d6c79b6c11c5a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "ImmunityBio, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000077d13d6c79b6c11c5a",
+      "symbol": "IBRXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179615/thumb/IBRXc-icon-200.png?1792398041",
+      "assetGroup": "ImmunityBio, Inc. (Coinbase Tokenized Stock)::IBRXC",
+      "currencyId": "ImmunityBio, Inc. (Coinbase Tokenized Stock)::IBRXC"
+    },
+    "0xb2000000000000000000007a90b2d9ed101035a8": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Enphase Energy, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000007a90b2d9ed101035a8",
+      "symbol": "ENPHC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179614/thumb/ENPHc-icon-200.png?1792397965",
+      "assetGroup": "Enphase Energy, Inc. (Coinbase Tokenized Stock)::ENPHC",
+      "currencyId": "Enphase Energy, Inc. (Coinbase Tokenized Stock)::ENPHC"
+    },
+    "0xb20000000000000000000068987dacde1db79cd4": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Papa John’s International, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000068987dacde1db79cd4",
+      "symbol": "PZZAC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179616/thumb/PZZAc-icon-200.png?1792398436",
+      "assetGroup": "Papa John’s International, Inc. (Coinbase Tokenized Stock)::PZZAC",
+      "currencyId": "Papa John’s International, Inc. (Coinbase Tokenized Stock)::PZZAC"
+    },
+    "0xc2d8236c326c6effe0657185c61d7395be9c80e2": {
+      "chainId": "8453",
+      "decimals": 9,
+      "name": "DGEN",
+      "address": "0xc2d8236c326c6effe0657185c61d7395be9c80e2",
+      "symbol": "DGEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/31294/thumb/dgen-new-200-200.png?1696530114",
+      "assetGroup": "DGEN",
+      "currencyId": "DGEN::DGEN"
+    },
+    "0xb20000000000000000000087d144f2c70cd1a5f6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Dave & Buster’s Entertainment, Inc. (Coinbase Tokenized Stoc",
+      "address": "0xb20000000000000000000087d144f2c70cd1a5f6",
+      "symbol": "PLAYC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179613/thumb/PLAYc-icon-200.png?1792397655",
+      "assetGroup": "Dave & Buster’s Entertainment, Inc. (Coinbase Tokenized Stoc::PLAYC",
+      "currencyId": "Dave & Buster’s Entertainment, Inc. (Coinbase Tokenized Stoc::PLAYC"
+    },
+    "0xb200000000000000000000045beafafbe0dc7664": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Airbnb, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000045beafafbe0dc7664",
+      "symbol": "ABNBC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179607/thumb/ABNBc-icon-200.png?1792396018",
+      "assetGroup": "Airbnb, Inc. (Coinbase Tokenized Stock)::ABNBC",
+      "currencyId": "Airbnb, Inc. (Coinbase Tokenized Stock)::ABNBC"
+    },
+    "0xb20000000000000000000089bc72c3e637a02adb": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Wayfair Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000089bc72c3e637a02adb",
+      "symbol": "WC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179621/thumb/Wc-icon-200.png?1792400009",
+      "assetGroup": "Wayfair Inc. (Coinbase Tokenized Stock)::WC",
+      "currencyId": "Wayfair Inc. (Coinbase Tokenized Stock)::WC"
+    },
+    "0xb2000000000000000000003e5e2892158e25dd7b": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Boot Barn Holdings, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003e5e2892158e25dd7b",
+      "symbol": "BOOTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179609/thumb/BOOTc-icon-200.png?1792396141",
+      "assetGroup": "Boot Barn Holdings, Inc. (Coinbase Tokenized Stock)::BOOTC",
+      "currencyId": "Boot Barn Holdings, Inc. (Coinbase Tokenized Stock)::BOOTC"
+    },
+    "0xb2000000000000000000001409f816682b7772b7": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "The Simply Good Foods Company (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001409f816682b7772b7",
+      "symbol": "SMPLC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179617/thumb/SMPLc-icon-200_%281%29.png?1792398702",
+      "assetGroup": "The Simply Good Foods Company (Coinbase Tokenized Stock)::SMPLC",
+      "currencyId": "The Simply Good Foods Company (Coinbase Tokenized Stock)::SMPLC"
+    },
+    "0xb2000000000000000000008baf7bb82e4c37743f": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "The Trade Desk, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000008baf7bb82e4c37743f",
+      "symbol": "TTDC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179619/thumb/TTDc-icon-200.png?1792399602",
+      "assetGroup": "The Trade Desk, Inc. (Coinbase Tokenized Stock)::TTDC",
+      "currencyId": "The Trade Desk, Inc. (Coinbase Tokenized Stock)::TTDC"
+    },
+    "0xb20000000000000000000006f910a0e7bbd3c168": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "AppLovin Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000006f910a0e7bbd3c168",
+      "symbol": "APPC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179606/thumb/APPc-icon-200.png?1792395863",
+      "assetGroup": "AppLovin Corporation (Coinbase Tokenized Stock)::APPC",
+      "currencyId": "AppLovin Corporation (Coinbase Tokenized Stock)::APPC"
+    },
+    "0xb200000000000000000000747bffa52fe2c2510b": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Ball Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000747bffa52fe2c2510b",
+      "symbol": "BALLC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179608/thumb/BALLc-icon-200.png?1792396081",
+      "assetGroup": "Ball Corporation (Coinbase Tokenized Stock)::BALLC",
+      "currencyId": "Ball Corporation (Coinbase Tokenized Stock)::BALLC"
+    },
+    "0x5be75e3b0aff5d1a042a5363ae36acb1d6d755ea": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Axis Robotics",
+      "address": "0x5be75e3b0aff5d1a042a5363ae36acb1d6d755ea",
+      "symbol": "AXIS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178869/thumb/axisrobotics.png?1790578974",
+      "assetGroup": "Axis Robotics::AXIS",
+      "currencyId": "Axis Robotics::AXIS"
+    },
+    "0xb2000000000000000000008df9bc22db1d7da2a5": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Wolfspeed, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000008df9bc22db1d7da2a5",
+      "symbol": "WOLFC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179622/thumb/WOLFc-icon-200.png?1792400089",
+      "assetGroup": "Wolfspeed, Inc. (Coinbase Tokenized Stock)::WOLFC",
+      "currencyId": "Wolfspeed, Inc. (Coinbase Tokenized Stock)::WOLFC"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Ether",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "ETH",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/eth.webp",
+      "assetGroup": "ETH",
+      "currencyId": "Ether::ETH",
+      "props": {
+        "isNative": true,
+        "wrapped": "0x4200000000000000000000000000000000000006"
+      }
     }
   },
   "mainTokens": [

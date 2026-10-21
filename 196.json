@@ -69,6 +69,11 @@
           "ytAddress": "0x9f5fd9097d8902e5a1b3bbe6cf06e19b56b014de",
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -172,6 +177,11 @@
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b",
           "expired": true
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -196,6 +206,7 @@
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -248,6 +259,7 @@
           "ptAddress": "0x25eaaa5339ce6f20d31a024cb924d4091442a2c8",
           "syAddress": "0x1f336f899f77b084133bc14a81170837ed618d1b"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "paxos", "name": "Paxos", "kind": "institution", "hops": 1 }
@@ -15423,7 +15435,11 @@
             }
           ]
         },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "river", "name": "River", "kind": "protocol" }
       }

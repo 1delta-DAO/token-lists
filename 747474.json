@@ -44,6 +44,7 @@
           "underlyingAsset": "0x203a662b0bd271a6ed5a60edfbd04bfce608fd36",
           "maturity": 1795305606
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
           { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
@@ -95,7 +96,7 @@
         "risk": {
           "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
@@ -123,9 +124,9 @@
           "maturity": 1795046410
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
@@ -881,7 +882,9 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/avkat.svg",
       "assetGroup": "Autocompounding vKAT::avKAT",
       "currencyId": "Autocompounding vKAT::avKAT",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+      }
     },
     "0x68943c066747690ecdaeb027fa722b090ee6f92d": {
       "chainId": "747474",
@@ -1002,7 +1005,11 @@
       "currencyId": "Staked UTY::yUTY",
       "props": {
         "savings": { "underlying": "UTY", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
       }
     },

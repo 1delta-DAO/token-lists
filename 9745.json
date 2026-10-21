@@ -119,6 +119,7 @@
           "syAddress": "0x601afacd8fbdbf44e71201b13d449441621332b9",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -282,7 +283,7 @@
         "risk": {
           "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -501,6 +502,11 @@
           "syAddress": "0x601afacd8fbdbf44e71201b13d449441621332b9",
           "expired": true
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -580,6 +586,7 @@
           "ptAddress": "0x257561233419039bec3a28be717d14b4f490883d",
           "syAddress": "0x9838b0450e311962aed969ba7d0fe0bb9d8620eb"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -1317,6 +1324,11 @@
           "syAddress": "0xe090d9d417e54116c50e5d5dde1509af91102ec3",
           "expired": true
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -1618,6 +1630,7 @@
           "ptAddress": "0xe1fec15061604c01d682bd7a61b23b8243923bc9",
           "syAddress": "0xaf8857ae2d2ddeaa23b2e8414d2031eb10621e19"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -1817,6 +1830,7 @@
           "syAddress": "0xe090d9d417e54116c50e5d5dde1509af91102ec3",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "usdai", "name": "USDai", "kind": "protocol", "hops": 1 }
@@ -1955,6 +1969,11 @@
           "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
           "ytAddress": "0xce5e022e02e5ade88c4ccbf7c3477708032d3113",
           "syAddress": "0xaf8857ae2d2ddeaa23b2e8414d2031eb10621e19"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -2481,7 +2500,7 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "whitelist" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },

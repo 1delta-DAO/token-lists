@@ -45,6 +45,7 @@
           "ptAddress": "0x355e82c60d51d6942bdfd0f2b95a204acd068963",
           "syAddress": "0xa544d9b7961d1db86ab81e9e3fa5659838c28b51"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
@@ -233,7 +234,7 @@
         "risk": {
           "score": 2,
           "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -253,10 +254,16 @@
       "props": {
         "pendle": {
           "tokenType": "PT",
+          "marketAddress": "0x9bf15c1824a4158d6f9c4ba8a19819e700f5e88b",
           "expiry": 1801094400,
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ytAddress": "0xd0d72f0a23031dd3c7994fe340aa8551736c4efd",
           "syAddress": "0xd1279361528c3c4588506e1746f81175dfa5f64e"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -435,6 +442,11 @@
           "ytAddress": "0xee0b5281dd0b0eacde23cc9029c8b442cafde67c",
           "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -604,6 +616,11 @@
           "underlyingAsset": "0x17b8f7373ecd556192abfc85be314e5d4fb6b3fa",
           "ptAddress": "0x355e82c60d51d6942bdfd0f2b95a204acd068963",
           "ytAddress": "0x0435a599e3fcf2e53028760060499350e25c3dd2"
+        },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -801,11 +818,13 @@
       "props": {
         "pendle": {
           "tokenType": "YT",
+          "marketAddress": "0x9bf15c1824a4158d6f9c4ba8a19819e700f5e88b",
           "expiry": 1801094400,
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0x39148079bca3abf3f3b40f6f1c1b1ae1f2927d13",
           "syAddress": "0xd1279361528c3c4588506e1746f81175dfa5f64e"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -822,7 +841,14 @@
       "assetGroup": "sUSDe Monad::SY-sUSDE::143::0",
       "currencyId": "sUSDe Monad::SY-sUSDE",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x9bf15c1824a4158d6f9c4ba8a19819e700f5e88b",
+          "expiry": 1801094400,
+          "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
+          "ptAddress": "0x39148079bca3abf3f3b40f6f1c1b1ae1f2927d13",
+          "ytAddress": "0xd0d72f0a23031dd3c7994fe340aa8551736c4efd"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -1074,6 +1100,7 @@
           "ptAddress": "0x8382329da318db59c4e33706faac0a883740daea",
           "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -3506,7 +3533,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xe1bca19baa63894d374578320551633320436523.png",
       "assetGroup": "Clearstar Earn USDC::CSUSDC",
       "currencyId": "Clearstar Earn USDC::CSUSDC",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0xc6221856e45ed806f8325a084bed3d69d32c526d": {
       "chainId": "143",
@@ -4028,6 +4055,11 @@
       "currencyId": "srUSDat::srUSDat",
       "props": {
         "savings": { "underlying": "USDat", "base": "USD" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "strata", "name": "Strata", "kind": "protocol" },
         "issuerExposures": [
@@ -5298,7 +5330,11 @@
       "assetGroup": "Tori Staked trUSD::STRUSD",
       "currencyId": "Staked trUSD::strUSD",
       "props": {
-        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "savings": { "underlying": "trUSD", "base": "USD" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
@@ -5337,6 +5373,96 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179212/thumb/atlantis.jpg?1791348912",
       "assetGroup": "Atlantis::ATL",
       "currencyId": "Atlantis::ATL"
+    },
+    "0x3d78455e22d5dd49709ec135a59cb1c5a87ac3c6": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "apxUSD",
+      "address": "0x3d78455e22d5dd49709ec135a59cb1c5a87ac3c6",
+      "symbol": "apxUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/apxUSD/logo.png",
+      "assetGroup": "apxUSD::apxUSD",
+      "currencyId": "apxUSD::apxUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
+      }
+    },
+    "0xfd957d7e27d239da5455b82303b2f618f73a9c49": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "apyUSD",
+      "address": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+      "symbol": "apyUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/apyUSD/logo.png",
+      "assetGroup": "apyUSD::APYUSD",
+      "currencyId": "apyUSD::apyUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "apxUSD", "base": "USD" },
+        "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
+      }
+    },
+    "0x9d753059f0abdd90b197f3be9d3cbc49bc01d31a": {
+      "chainId": "143",
+      "decimals": 6,
+      "name": "Ember Zodiac Treasury Plus",
+      "address": "0x9d753059f0abdd90b197f3be9d3cbc49bc01d31a",
+      "symbol": "eTPLUS",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/eTPLUS/logo.png",
+      "assetGroup": "Ember Zodiac Treasury Plus::eTPLUS",
+      "currencyId": "Ember Zodiac Treasury Plus::eTPLUS"
+    },
+    "0x06ab4f89b4abaee213a8cf64188dea47e4ab11eb": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Holistic MON",
+      "address": "0x06ab4f89b4abaee213a8cf64188dea47e4ab11eb",
+      "symbol": "hMON",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/hMON/logo.svg",
+      "assetGroup": "Holistic MON::hMON",
+      "currencyId": "Holistic MON::hMON"
+    },
+    "0x127066e1982940c33fdc882d9c138296ab15f97f": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "InfiniFi USD",
+      "address": "0x127066e1982940c33fdc882d9c138296ab15f97f",
+      "symbol": "iUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/iUSD/logo.svg",
+      "assetGroup": "infiniFi USD::iUSD",
+      "currencyId": "InfiniFi USD::iUSD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
+      }
+    },
+    "0x5855e6b9b3cd6960fa3e751a87353c3e40401b9b": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "InfiniFi Staked USD",
+      "address": "0x5855e6b9b3cd6960fa3e751a87353c3e40401b9b",
+      "symbol": "siUSD",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/siUSD/logo.svg",
+      "assetGroup": "Staked infiniFi USD::siUSD",
+      "currencyId": "InfiniFi Staked USD::siUSD",
+      "props": {
+        "savings": { "underlying": "iUSD", "base": "USD" },
+        "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
+      }
+    },
+    "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "SP500 xStock",
+      "address": "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48",
+      "symbol": "SPYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/66695/thumb/Ticker_SPX__Company_Name_SP500__size_200x200_2x.png?1750266819",
+      "assetGroup": "SP500 xStock::SPYX",
+      "currencyId": "SP500 xStock::SPYX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",

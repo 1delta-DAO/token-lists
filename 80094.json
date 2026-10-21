@@ -20,6 +20,7 @@
           "syAddress": "0x68b698803ebc74738884eeb3de00951a60918829",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "bedrock", "name": "Bedrock", "kind": "protocol", "hops": 1 }
@@ -95,6 +96,11 @@
           "ytAddress": "0x004279ab3b8bb651a61fb3e96fffbe855ccdda08",
           "syAddress": "0x68b698803ebc74738884eeb3de00951a60918829",
           "expired": true
+        },
+        "risk": {
+          "score": 4,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "default"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -202,6 +208,11 @@
           "syAddress": "0xc61c866b6fdc36f88ec368b969c6d7cb810cafa9",
           "expired": true
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -222,6 +233,11 @@
           "ytAddress": "0x7cda39768b382969a0e3295bde73eb863c3feff7",
           "syAddress": "0xc61c866b6fdc36f88ec368b969c6d7cb810cafa9",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -668,6 +684,7 @@
           "syAddress": "0xc61c866b6fdc36f88ec368b969c6d7cb810cafa9",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -884,6 +901,7 @@
           "syAddress": "0xc61c866b6fdc36f88ec368b969c6d7cb810cafa9",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1352,7 +1370,7 @@
       "currencyId": "KelpDao Restaked ETH::rsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "issuer_inherit" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30362,
           "routes": [

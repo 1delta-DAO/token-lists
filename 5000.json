@@ -168,6 +168,7 @@
           "syAddress": "0xddceec69d4a705970a5c60c8e6406ec81f2370bc",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -296,6 +297,7 @@
           "syAddress": "0x1b14708a978e4ebea083048f7d17cd844ca6ceb6",
           "expired": true
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "mantle", "name": "Mantle", "kind": "protocol", "hops": 1 }
@@ -319,6 +321,11 @@
           "ytAddress": "0x25f30f56b5f56392490418f9689d1fe2903a0ed5",
           "syAddress": "0xddceec69d4a705970a5c60c8e6406ec81f2370bc",
           "expired": true
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -561,6 +568,11 @@
           "syAddress": "0x1b14708a978e4ebea083048f7d17cd844ca6ceb6",
           "expired": true
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "mantle", "name": "Mantle", "kind": "protocol", "hops": 1 }
@@ -634,11 +646,7 @@
       "currencyId": "Ondo U.S. Dollar Yield::USDY",
       "props": {
         "rwa": { "type": "fund", "subType": "treasury", "issuer": "ondo" },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30181,
           "routes": [
@@ -14978,7 +14986,7 @@
       "currencyId": "Kelp DAO Restaked ETH::RSETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "issuer_inherit" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
         "oft": {
           "eid": 30181,
           "routes": [
@@ -15113,7 +15121,7 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "whitelist" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -15445,6 +15453,8 @@
               "approvalRequired": false,
               "peers": {
                 "1": "0x420fca0121dc28039145009570975747295f2329",
+                "56": "0x420fca0121dc28039145009570975747295f2329",
+                "4663": "0x420fca0121dc28039145009570975747295f2329",
                 "8453": "0x420fca0121dc28039145009570975747295f2329",
                 "42161": "0x420fca0121dc28039145009570975747295f2329",
                 "43114": "0x347f7268ad43f3f7b68c4d64a8c0523830100c8b",

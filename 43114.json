@@ -40,6 +40,11 @@
           "underlyingAsset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
           "maturity": 1821139205
         },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
           { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
@@ -61,6 +66,11 @@
           "ibtAddress": "0x92fbb58342164546325602588599b05802c69bbe",
           "baseIbtAddress": "0x4dc1ce9b9f9ef00c144bfad305f16c62293dc0e8",
           "underlyingAsset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+        },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
@@ -88,9 +98,9 @@
           "maturity": 1821139205
         },
         "risk": {
-          "score": 2,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "vault_inherit"
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
@@ -118,6 +128,11 @@
           "underlyingAsset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
           "maturity": 1821139211
         },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
           { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
@@ -143,6 +158,11 @@
           "baseIbtAddress": "0x4dc1ce9b9f9ef00c144bfad305f16c62293dc0e8",
           "underlyingAsset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
           "maturity": 1821139211
+        },
+        "risk": {
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
         "issuerExposures": [
@@ -5802,7 +5822,7 @@
       "currencyId": "Wrapped rsETH::wrsETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
-        "risk": { "score": 4, "source": "whitelist" },
+        "risk": { "score": 2, "source": "whitelist" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
@@ -7309,6 +7329,8 @@
               "approvalRequired": true,
               "peers": {
                 "1": "0x420fca0121dc28039145009570975747295f2329",
+                "56": "0x420fca0121dc28039145009570975747295f2329",
+                "4663": "0x420fca0121dc28039145009570975747295f2329",
                 "5000": "0x420fca0121dc28039145009570975747295f2329",
                 "8453": "0x420fca0121dc28039145009570975747295f2329",
                 "42161": "0x420fca0121dc28039145009570975747295f2329",
@@ -12368,7 +12390,11 @@
       "currencyId": "Staked UTY::yUTY",
       "props": {
         "savings": { "underlying": "UTY", "base": "USD" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "xsy", "name": "XSY", "kind": "protocol" }
       }
     },
@@ -15217,7 +15243,10 @@
       "symbol": "mevUSDC",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x4dc1ce9b9f9ef00c144bfad305f16c62293dc0e8.png",
       "assetGroup": "MEV USDC::mevUSDC",
-      "currencyId": "MEV USDC::mevUSDC"
+      "currencyId": "MEV USDC::mevUSDC",
+      "props": {
+        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x94f9bb5c972285728dcee7eaece48bec2ff341ce": {
       "chainId": "43114",
@@ -15230,9 +15259,9 @@
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "whitelist"
         },
         "stablecoin": { "base": "USD" },
         "issuer": {

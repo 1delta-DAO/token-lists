@@ -2717,25 +2717,14 @@
       "assetGroup": "SYRUPUSDC",
       "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 1,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "savings": { "underlying": "USDC", "base": "USD" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
-      }
-    },
-    "0x0000000000000000000000000000000000000000": {
-      "chainId": "5042",
-      "decimals": 18,
-      "name": "USDC",
-      "address": "0x0000000000000000000000000000000000000000",
-      "symbol": "USDC",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/usdc.webp",
-      "assetGroup": "USDC",
-      "currencyId": "USDC::USDC",
-      "props": {
-        "isNative": true,
-        "erc20": "0x3600000000000000000000000000000000000000",
-        "wrapped": "0x3600000000000000000000000000000000000000"
       }
     },
     "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa": {
@@ -2764,6 +2753,31 @@
       "symbol": "USDC-EURC-collat",
       "assetGroup": "Tenor USDC/EURC Collateral Vault::USDC-EURC-collat",
       "currencyId": "Tenor USDC/EURC Collateral Vault::USDC-EURC-collat"
+    },
+    "0x0da0b0c9198d47bc718cc26e4fded1c3e079767b": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "Arcvein",
+      "address": "0x0da0b0c9198d47bc718cc26e4fded1c3e079767b",
+      "symbol": "ARCVEIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179647/thumb/arcvein_400x400.png?1792422795",
+      "assetGroup": "Arcvein::ARCVEIN",
+      "currencyId": "Arcvein::ARCVEIN"
+    },
+    "0x0000000000000000000000000000000000000000": {
+      "chainId": "5042",
+      "decimals": 18,
+      "name": "USDC",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "USDC",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/usdc.webp",
+      "assetGroup": "USDC",
+      "currencyId": "USDC::USDC",
+      "props": {
+        "isNative": true,
+        "erc20": "0x3600000000000000000000000000000000000000",
+        "wrapped": "0x3600000000000000000000000000000000000000"
+      }
     }
   },
   "mainTokens": [

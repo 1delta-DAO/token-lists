@@ -8082,7 +8082,7 @@
       "currencyId": "STASIS EURS::EURS",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -12467,7 +12467,11 @@
       "assetGroup": "Neutrino Index Token::USDN",
       "currencyId": "Neutrino Index Token::USDN",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -15057,11 +15061,7 @@
       "assetGroup": "Stabl.fi CASH::CASH",
       "currencyId": "Stabl.fi CASH::CASH",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "stabl", "name": "Stabl.fi", "kind": "protocol" }
       }
@@ -15579,7 +15579,7 @@
       "currencyId": "Classic USD::USC",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 5,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -28800,7 +28800,10 @@
       "symbol": "AVLT",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x74db7a52773a52699dbc0c01b1254e5301e3e119/small/token-logo.png",
       "assetGroup": "Altura Vault Tokens::AVLT",
-      "currencyId": "Altura Vault Tokens::AVLT"
+      "currencyId": "Altura Vault Tokens::AVLT",
+      "props": {
+        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+      }
     },
     "0x6a92b1e99de09f71cd96bc91f934826d96b8b26e": {
       "chainId": "137",
