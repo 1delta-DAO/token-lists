@@ -466,6 +466,27 @@ export const GROUP_ALIAS: Record<string, string> = {
   // and lost the savings / risk / notes overlays and margin-fetcher's intrinsic yield (0 % on
   // its Morpho collateral). Same asset → the mainnet group.
   'syrupUSDG::SYRUPUSDG': 'SYRUPUSDG',
+  // --- Cross-chain splits found by the 2026-10-22 CoinGecko-platform sweep (same coin id, same
+  // contract identity read on-chain, different group per chain) ---
+  // Reserve eUSD on Arbitrum (0x1227…b844): Arbitrum standard-gateway token, `l1Address()` =
+  // mainnet eUSD 0xa0d6…482f; named "Electronic Dollar" so it grouped apart and lost the
+  // stablecoin / issuer overlays.
+  'Electronic Dollar::eUSD': 'Electronic USD::EUSD',
+  // Angle EURA on Linea (same address 0x1a7e…bce8 as mainnet; on-chain name "EURA") and on
+  // Polygon zkEVM (0xa61b…25b4, "EURA (previously agEUR)") — every other deployment is `EURA`.
+  'EURA::EURA': 'EURA',
+  'EURA (previously agEUR)::EURA': 'EURA',
+  // Hamilton Lane HLSCOPE — Ethereum / OP rows carry a 39-char truncated list name; same
+  // Securitize token (owner 0x59c1…76ee) as Polygon's full-name group.
+  'Hamilton Lane Senior Credit Opportuniti::HLSCOPE':
+    'Hamilton Lane Senior Credit Opportunities Securitize Fund::HLSCOPE',
+  // deJTRSY on Monad was listed under the fund's long name; on-chain it answers "JTRSY deRWA"
+  // like 1 / 8453 / 196.
+  'DeFi Janus Henderson Anemoy Treasury Fund Token::deJTRSY': 'JTRSY deRWA::DEJTRSY',
+  // MetaMask USD (0xaca9…35da, same address everywhere): Linea's list name still says "(Test)"
+  // while `name()` reads "MetaMask USD" (5.78M supply), and Monad's group is upper-cased.
+  'MetaMask USD (Test)::mUSD': 'MetaMask USD::mUSD',
+  'MetaMask USD::MUSD': 'MetaMask USD::mUSD',
   // Tether Gold XAUt0 on BNB (0x21ca…a3bf) — the one XAUt0 deployment the OFT registry does
   // not carry, so the mesh unification (oft/mesh-groups.json) cannot reach it. Same coin as
   // every other XAUt0: CoinGecko files it under `tether-gold-tokens` exactly as it does

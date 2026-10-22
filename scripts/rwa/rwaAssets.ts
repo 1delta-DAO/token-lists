@@ -249,6 +249,25 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
   // corrections of it — JAAA is AAA-rated CLOs (corporate credit, not treasuries) and
   // mGLOBAL was not classified at all.
   '1': {
+    // JTRSY deRWA (deJTRSY) — Centrifuge's freely-transferable DeFi wrapper of the Janus Henderson
+    // Anemoy Treasury Fund; on-chain name "JTRSY deRWA", so the name rule that tags Monad's row
+    // (listed under the long fund name) misses it here. Same product on 1 / 8453 (0xa623…) and
+    // 196 / 143 (0x8de0…), read 2026-10-22.
+    '0xa6233014b9b7aaa74f38fa1977ffc7a89642dc72': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'anemoy',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
+    },
+    // Hamilton Lane SCOPE Securitize Tokenized Feeder Fund (HLSCOPE) — same owner 0x59c1…76ee as
+    // Polygon's 0x4c5c… row the rule already tags; the 39-char list name escaped the rule here.
+    '0xda2ffa104356688e74d9340519b8c17f00d7752e': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'securitize',
+      denomination: 'USD',
+    },
     // Superstate USTB — short-duration US government securities fund.
     '0x43415eb6ff9db7e26a15b704e7a3edce97d31c4e': {
       type: 'fund',
@@ -395,6 +414,17 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
   // ~11.5 kB implementation — the same answers as USYC on Ethereum and BNB). Same row as
   // Ethereum's, minus the transfer gate and denomination, which were not probed here.
   '8453': {
+    // JTRSY deRWA (deJTRSY) — Centrifuge's freely-transferable DeFi wrapper of the Janus Henderson
+    // Anemoy Treasury Fund; on-chain name "JTRSY deRWA", so the name rule that tags Monad's row
+    // (listed under the long fund name) misses it here. Same product on 1 / 8453 (0xa623…) and
+    // 196 / 143 (0x8de0…), read 2026-10-22.
+    '0xa6233014b9b7aaa74f38fa1977ffc7a89642dc72': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'anemoy',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
+    },
     '0xeee7af832440884d2b693b4193fa2ec26a48c7d3': {
       type: 'fund',
       subType: 'money-market',
@@ -1655,6 +1685,29 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
       subType: 'stock',
       issuer: 'robinhood',
       underlying: 'ZS',
+    },
+  },
+  '10': {
+    // Hamilton Lane SCOPE Securitize Tokenized Feeder Fund (HLSCOPE) — same owner 0x59c1…76ee as
+    // Polygon's 0x4c5c… row the rule already tags; the 39-char list name escaped the rule here.
+    '0x720f86f4b5b5d5d0ea3e5718ec43071d4d05134b': {
+      type: 'fund',
+      subType: 'private-credit',
+      issuer: 'securitize',
+      denomination: 'USD',
+    },
+  },
+  '196': {
+    // JTRSY deRWA (deJTRSY) — Centrifuge's freely-transferable DeFi wrapper of the Janus Henderson
+    // Anemoy Treasury Fund; on-chain name "JTRSY deRWA", so the name rule that tags Monad's row
+    // (listed under the long fund name) misses it here. Same product on 1 / 8453 (0xa623…) and
+    // 196 / 143 (0x8de0…), read 2026-10-22.
+    '0x8de0f3295b9e42b29e7617bada7c603277420451': {
+      type: 'fund',
+      subType: 'treasury',
+      issuer: 'anemoy',
+      underlying: 'US T-Bill',
+      denomination: 'USD',
     },
   },
 }
