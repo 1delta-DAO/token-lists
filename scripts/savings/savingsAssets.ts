@@ -261,6 +261,8 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Syrup USDC::syrupUSDC': { underlying: 'USDC', base: 'USD' },
   'Syrup USDT::syrupUSDT': { underlying: 'USDT', base: 'USD' },
   'Syrup USDG::syrupUSDG': { underlying: 'USDG', base: 'USD' },
+  // Arbitrum's CCIP mirror names itself the bare ticker (`syrupUSDG::SYRUPUSDG`), aliased too.
+  'syrupUSDG::SYRUPUSDG': { underlying: 'USDG', base: 'USD' },
   // --- Huma PayFi Strategy Token — USDC in, PayFi receivables yield accrues to the share.
   // Solana's original already reads `savings: {base: USD}` (solanaClassify, from its tags); this
   // gives its CCIP mirrors on 1 / 5042, one group, the same money. ---

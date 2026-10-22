@@ -460,6 +460,12 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Syrup USDC::syrupUSDC': 'SYRUPUSDC',
   'Syrup USDT::syrupUSDT': 'SYRUPUSDT',
   'Syrup USDG::syrupUSDG': 'SYRUPUSDG',
+  // Arbitrum syrupUSDG (0xe1b0…c762) — Maple's CCIP BurnMintERC20 mirror (getCCIPAdmin
+  // 0xdd2d…, pool 0x5355…b75f in the Arbitrum TokenAdminRegistry; same admin as the
+  // Robinhood mirror). Its on-chain name is the bare ticker, so it stored `syrupUSDG::SYRUPUSDG`
+  // and lost the savings / risk / notes overlays and margin-fetcher's intrinsic yield (0 % on
+  // its Morpho collateral). Same asset → the mainnet group.
+  'syrupUSDG::SYRUPUSDG': 'SYRUPUSDG',
   // Tether Gold XAUt0 on BNB (0x21ca…a3bf) — the one XAUt0 deployment the OFT registry does
   // not carry, so the mesh unification (oft/mesh-groups.json) cannot reach it. Same coin as
   // every other XAUt0: CoinGecko files it under `tether-gold-tokens` exactly as it does
