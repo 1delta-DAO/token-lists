@@ -1136,7 +1136,10 @@
           "ytAddress": "0xeb9445e79047807e8a6fb394c2b66c42ca621463"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "midas", "name": "Midas", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0x862756f2968f8e08e93da226c6b452acafc9c89b": {
@@ -1661,7 +1664,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "default"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "midas", "name": "Midas", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xd2e8488b8aa076db8227a459d47288b0bbcf9779": {
@@ -2022,7 +2028,10 @@
           "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "midas", "name": "Midas", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xedac81b27790e0728f54dea3b7718e5437e85353": {
@@ -3439,7 +3448,10 @@
       "logoURI": "https://asset-metadata-service-production.s3.amazonaws.com/asset_icons/80afbe74a8ca584d816ad4e602c38d67d8388dfcf547879cb0f271ccb711bad2.png",
       "assetGroup": "Midas Hyperithm::mHYPER",
       "currencyId": "Midas Hyperithm::mHYPER",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
     },
     "0xebfc8c2fe73c431ef2a371aea9132110aab50dca": {
       "chainId": "9745",

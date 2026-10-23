@@ -552,6 +552,14 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   '8453:0xb8befe5a6941ca4022a52042075ff269c3c67467': 'Base USDC Mix Yield Token::mixUSDC',
   // Arbitrum standard-gateway bridge token of L1 alUSD — see the alUSD note in GROUP_ALIAS.
   '42161:0x95d2c35934f4ea0076e6f5e8d6edd8080666f84e': 'Arbitrum Bridged Alchemix USD::alUSD',
+  // Inverse jrDOLA v1 — "superseded v1 addresses (do not use)" per Inverse's jrDOLA docs;
+  // relaunched as v2 `0x6f80…bc7` (mill 390), which takes `Junior DOLA::JRDOLA` below. Same `name::symbol` as v2, so only an address override separates
+  // them. Its share price reads 0.0024 sDOLA (183k shares over 438 sDOLA, 2026-10-23).
+  '1:0x633821b8e003344e5223509277f2084ea809a452': 'Junior DOLA v1 (superseded)::JRDOLA',
+  // …and the live v2 takes the plain group. It was filed under `Junior DOLA::JRDOLA::1::0` by
+  // the same-chain dedup while v1 held the plain key, and our own list carries that forward
+  // run to run, so only an address override moves it back.
+  '1:0x6f80a22a57c7f0257094ea8d426af3f747defbc7': 'Junior DOLA::JRDOLA',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {

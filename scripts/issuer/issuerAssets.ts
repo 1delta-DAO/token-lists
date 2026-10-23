@@ -230,6 +230,9 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Staked YUSD::sYUSD': { id: 'aegis', name: 'Aegis', kind: 'protocol' },
   // Inverse — sDOLA (0xb45a…) `asset()` = DOLA 0x8653…, already `inverse`.
   'sDOLA::SDOLA': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
+  // Inverse jrDOLA v2 (`asset()` = sDOLA) and sINV (`asset()` = INV 0x41d5…) — Inverse's own vaults.
+  'Junior DOLA::JRDOLA': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
+  'Staked INV::SINV': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
   // Inverse sinvUSD (0x3ff3…427d) — the Monolith savings vault over invUSD.
   'Staked invUSD Stablecoin::sinvUSD': { id: 'inverse', name: 'Inverse Finance', kind: 'protocol' },
   // Yearn's own instruments: yBOLD / ysyBOLD (BOLD in Liquity's stability pools — Liquity is the

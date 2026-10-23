@@ -1427,6 +1427,68 @@
         }
       }
     },
+    "0xd90f6bfed23ffde40106fc4498dd2e9edb95e4e7": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Midas Hyperithm",
+      "address": "0xd90f6bfed23ffde40106fc4498dd2e9edb95e4e7",
+      "symbol": "mHYPER",
+      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/mHYPER/logo.svg",
+      "assetGroup": "Midas Hyperithm::mHYPER",
+      "currencyId": "Midas Hyperithm::mHYPER",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "midas", "denomination": "USD" },
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30390,
+          "routes": [
+            {
+              "contract": "0x08bc5ef2e2afe697614bf3a9eaa71dcbb577f2df",
+              "kind": "adapter",
+              "sharedDecimals": 9,
+              "oapp": "midas",
+              "approvalRequired": false,
+              "peers": { "1": "0x148c86390a4ae6f7a02df5903bc0a89e8b4581a0" }
+            }
+          ]
+        },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
+    },
+    "0x6cf55183ea297ba200cf88419bba156eba2ed206": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Midas Rockaway Market Neutral",
+      "address": "0x6cf55183ea297ba200cf88419bba156eba2ed206",
+      "symbol": "MROX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172744/thumb/download_%286%29.png?1775201597",
+      "assetGroup": "Midas Rockaway Market Neutral::MROX",
+      "currencyId": "Midas Rockaway Market Neutral::MROX",
+      "props": {
+        "rwa": { "type": "fund", "issuer": "midas", "denomination": "USD" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
+      }
+    },
+    "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "SP500 xStock",
+      "address": "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48",
+      "symbol": "SPYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/66695/thumb/Ticker_SPX__Company_Name_SP500__size_200x200_2x.png?1750266819",
+      "assetGroup": "SP500 xStock::SPYX",
+      "currencyId": "SP500 xStock::SPYX",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "backed",
+          "underlying": "SPY"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
       "chainId": "143",
       "decimals": 8,
@@ -2562,32 +2624,6 @@
       "assetGroup": "earnMON::earnMON",
       "currencyId": "earnMON::earnMON"
     },
-    "0xd90f6bfed23ffde40106fc4498dd2e9edb95e4e7": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "Midas Hyperithm",
-      "address": "0xd90f6bfed23ffde40106fc4498dd2e9edb95e4e7",
-      "symbol": "mHYPER",
-      "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/mHYPER/logo.svg",
-      "assetGroup": "Midas Hyperithm::mHYPER",
-      "currencyId": "Midas Hyperithm::mHYPER",
-      "props": {
-        "oft": {
-          "eid": 30390,
-          "routes": [
-            {
-              "contract": "0x08bc5ef2e2afe697614bf3a9eaa71dcbb577f2df",
-              "kind": "adapter",
-              "sharedDecimals": 9,
-              "oapp": "midas",
-              "approvalRequired": false,
-              "peers": { "1": "0x148c86390a4ae6f7a02df5903bc0a89e8b4581a0" }
-            }
-          ]
-        },
-        "risk": { "score": 4, "source": "default" }
-      }
-    },
     "0x484be0540ad49f351eaa04eeb35df0f937d4e73f": {
       "chainId": "143",
       "decimals": 18,
@@ -3012,7 +3048,8 @@
       "assetGroup": "Midas Hyperithm BTC::mHyperBTC",
       "currencyId": "Midas Hyperithm BTC::MHYPERBTC",
       "props": {
-        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
+        "issuer": { "id": "midas", "name": "Midas", "kind": "institution" }
       }
     },
     "0x150360c0efd098a6426060ee0cc4a0444c4b4b68": {
@@ -4966,19 +5003,6 @@
       "assetGroup": "Blueberry USDC::blbUSDC",
       "currencyId": "Blueberry USDC::blbUSDC"
     },
-    "0x6cf55183ea297ba200cf88419bba156eba2ed206": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "Midas Rockaway Market Neutral",
-      "address": "0x6cf55183ea297ba200cf88419bba156eba2ed206",
-      "symbol": "MROX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102172744/thumb/download_%286%29.png?1775201597",
-      "assetGroup": "Midas Rockaway Market Neutral::MROX",
-      "currencyId": "Midas Rockaway Market Neutral::MROX",
-      "props": {
-        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" }
-      }
-    },
     "0xa9da3c77ec7cdc4dfaa1fe142af583543d1c540f": {
       "chainId": "143",
       "decimals": 18,
@@ -5398,8 +5422,8 @@
       "assetGroup": "apyUSD::APYUSD",
       "currencyId": "apyUSD::apyUSD",
       "props": {
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "apxUSD", "base": "USD" },
+        "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
       }
     },
@@ -5449,19 +5473,6 @@
       "props": {
         "savings": { "underlying": "iUSD", "base": "USD" },
         "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
-      }
-    },
-    "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48": {
-      "chainId": "143",
-      "decimals": 18,
-      "name": "SP500 xStock",
-      "address": "0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48",
-      "symbol": "SPYX",
-      "logoURI": "https://assets.coingecko.com/coins/images/66695/thumb/Ticker_SPX__Company_Name_SP500__size_200x200_2x.png?1750266819",
-      "assetGroup": "SP500 xStock::SPYX",
-      "currencyId": "SP500 xStock::SPYX",
-      "props": {
-        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
     "0x0000000000000000000000000000000000000000": {

@@ -337,6 +337,13 @@ async function readTokenLists(): Promise<{
                     // wins over the 1delta list's stored group, which is last run's output.
                     const meshGroup = lookupMeshGroup(chainId, lcAddress)
                     if (meshGroup) assetGroup = meshGroup
+                    // A per-deployment override (ADDRESS_GROUP_OVERRIDE) is also applied HERE, before
+                    // the group-keyed overlays, so the deployment carries the savings / issuer /
+                    // stablecoin labels of its FINAL group — not of the group it was filed under (a
+                    // superseded deployment sharing `name::symbol` with the live one would otherwise
+                    // inherit the live one's labels, and vice versa). It runs again at the end, after
+                    // the dedup and aliasing, where it is the final word.
+                    assetGroup = overrideAssetGroupByAddress(chainId, lcAddress, assetGroup)
 
                     const permit = PERMIT_MAP[chainId]?.[lcAddress]
 

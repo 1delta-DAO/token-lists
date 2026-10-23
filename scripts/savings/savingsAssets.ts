@@ -53,6 +53,12 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Compounding OpenDollar::CUSDO': { underlying: 'USDO', base: 'USD' },
   // --- Inverse Finance sDOLA ---
   'sDOLA::SDOLA': { underlying: 'DOLA', base: 'USD' },
+  // Inverse jrDOLA (v2) — the junior, first-loss tranche: a 4626 over sDOLA (itself the DOLA
+  // savings wrapper), so the underlying is sDOLA, not DOLA. Passive from the holder's side (DBR
+  // revenue accrues into the share price); the first-loss slash is a credit risk, the Strata
+  // junior call. v1 (`Junior DOLA v1 (superseded)::JRDOLA`) is deliberately absent. sINV
+  // (staked INV) is absent too: INV is not a stablecoin, the spETH call.
+  'Junior DOLA::JRDOLA': { underlying: 'sDOLA', base: 'USD' },
   // --- Ethena sUSDe (7d cooldown; canonical savings wrapper) ---
   SUSDE: { underlying: 'USDe', base: 'USD' },
   // --- Reservoir — both minted from rUSD, both NON-rebasing (price appreciates in rUSD), both
