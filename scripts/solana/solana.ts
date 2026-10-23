@@ -146,6 +146,50 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   '8fr7WGTVFszfyNWRMXj6fRjZZAnDwmXwEpCrtzmUkdih': 'Hastra wYLDS::wYLDS',
   '3b8X44fLF9ooXaUm3hhSgjpmVs6rZZ3pPoGnGahc3Uu7': 'Hastra PRIME::PRIME',
   GNE6oDS6jHrfaV3GQVVCCp37fDnT7PiPuewMKBj2bqNm: 'Hastra AUTO::AUTO',
+  // Bridged / multichain deployments of assets we already carry on EVM, which
+  // CoinGecko's platform map does not join (the coin lists no `solana` platform,
+  // or no EVM address we publish), so each fell through to `::solana`. Every one
+  // is Jupiter-verified and checked on 2026-10-23: same name and ticker, and
+  // Jupiter's price within ~1 % of the EVM group's (DefiLlama / CoinGecko) —
+  // e.g. Aster's vanity `ASTER…` mint at $0.7075 against `aster-2` at $0.7094.
+  // Same-ticker tokens WITHOUT that price match are left chain-scoped (Solayer
+  // vs UniLayer `LAYER`, Solana vs Sonic Name Service `SNS`, the Backpack
+  // stocks vs Dinari / Robinhood ones — different issuers, different assets).
+  ASTERYpc2EhivYWSbtuWPuCMdXtZGmHwtH93NqYVw45Z: 'Aster::ASTER',
+  '6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN': 'Official Trump::TRUMP',
+  mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So: 'Marinade staked SOL (mSOL)::mSOL',
+  GbbesPbaYh5uiAZSYNXTc7w9jty1rpg3P9L4JeN4LkKc: 'TRON::TRX',
+  '5GgRAEmv8ZxF2PR5hY72Qs5x1bnQ6UK2RbTPoqJ3wSwW': 'PAXG',
+  taoC6xyv2v8tDLcev4uaGUgV4vdQsWJrGft2kcBRrBY: 'Bittensor::TAO',
+  EicWvteVi2fWepEzS3FYWsnuPoP6caZfjnKqNvydLjCH: 'Lighter::LIT',
+  '4SoQ8UkWfeDH47T56PA53CZCeW4KytYCiU65CwBWoJUt': 'MNT',
+  a11bdAAuV8iB2fu7X6AxAvDTo1QZ8FXB3kk5eecdasp: 'Allbridge::ABR',
+  // the bare group is Binance-Peg DOGE; `Dogecoin::DOGE` on 56 is a meme
+  DoGEV7LASBkQbibMc5k5vKnTZoMg423GpJ5QtJEGfm7R: 'DOGE',
+  PEPEqnuuCDbBC89p1u9vpnP1KQ2oj1xTcQBsjt9X55m: 'PEPE',
+  CrAr4RRJMBVwRsZtT62pEhfA9H5utymC2mVx8e7FreP2: 'MON',
+  '9gP2kCy3wA1ctvYWQk75guqXuHfrEomqydHLtcTCqiLa': 'BNB',
+  soKqZS9pASwBNS46G388nhK7XVtPaTyReffXEd3zora: 'Zora::ZORA',
+  Morpho2VPeTr2E1Jx6monxCzF7mqwUnjz74RdwLXYyP: 'MORPHO',
+  // the deeper of the two UNI mints; Portal UNI (`8FU95…`) stays chain-scoped
+  uniHfuPhEQSrtpzXpJZDCSq53yaejKKpNhFUiKoHKHV: 'UNI',
+  avaxGHCq3T7hoxd73oY2KY9hJSTaeMibXvHy5KNzh5D: 'AVAX',
+  WLDTE73PPdfFFjhpBz8Yuhvx5N45gvgEgyMXqwa3rFn: 'WLD',
+  qntUzPUsJ51abNP7VYNxkmsQ4RnvEZAhavUxsCxpxH4: 'QNT',
+  ondohH8Vssxiqcy5u6Efi4AYN17KZrzQtv2a91dnrgW: 'Ondo Finance::ONDO',
+  VVV4UdRywr7SLafPHzqXwRCw7myXkmgCtitXUvj8g8c: 'Venice Token::VVV',
+  cbLTC4T5NpzSUtQ7ekgEMZGaUPVJY1ko6BUikqa4gGf: 'Coinbase Wrapped LTC::CBLTC',
+  cbADAmv9issuPfhFwyQG3xac4DGPd1LDSt1oz7vwJsg: 'Coinbase Wrapped ADA::CBADA',
+  ARBzQTYDCW2KnVEjs1Mc81LekB1ibVFZKbSVmorkoT9d: 'ARB',
+  // the original SHX (`0xee75…`), not the `::1::0` second listing
+  EFchnNkBvh4gSY5zqDgqRfuPR7mStBLvKBxPq5JUJcmP: 'Stronghold::SHX',
+  '3UCMiSnkcnkPE1pgQ5ggPCBv6dXgVUy16TmMUe1WpG9x': 'ALEPH',
+  '26VfKb7jjtdEdvfovoBijScoZmJbWWasFZkgfUD5w7cy': 'Mog Coin::MOG',
+  '3rQK45d1ojXR7vtvCmeNjKKVycnVWqaVcP3zk1G39RJR': 'S',
+  XPLTrL1ZH3tZJBdFWbbtrNjK9qoqZWfuhQJnXibbdfT: 'XPL',
+  megaA5QDK1qLXtjpvg9oCFMvxT9d5BCMrVTBddnM5kV: 'MegaETH::MEGA',
+  shib5gSoVKPjwkXrxRk7SbQFzb2R9rQB3TgQWYX4RwW: 'SHIB',
+  EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o: 'DAI',
 }
 
 /**
