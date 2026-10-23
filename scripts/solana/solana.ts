@@ -177,6 +177,9 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   WLDTE73PPdfFFjhpBz8Yuhvx5N45gvgEgyMXqwa3rFn: 'WLD',
   qntUzPUsJ51abNP7VYNxkmsQ4RnvEZAhavUxsCxpxH4: 'QNT',
   ondohH8Vssxiqcy5u6Efi4AYN17KZrzQtv2a91dnrgW: 'Ondo Finance::ONDO',
+  // Ondo's OUSG: CoinGecko's `ousg` coin names this mint beside 1 / 137 (0x1b19… / 0xba11…),
+  // which carry this group. Not Jupiter-verified, so it joins through SOLANA_EXTRA_MINTS.
+  i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc: 'Ondo Short-Term US Government Treasuries::OUSG',
   VVV4UdRywr7SLafPHzqXwRCw7myXkmgCtitXUvj8g8c: 'Venice Token::VVV',
   cbLTC4T5NpzSUtQ7ekgEMZGaUPVJY1ko6BUikqa4gGf: 'Coinbase Wrapped LTC::CBLTC',
   cbADAmv9issuPfhFwyQG3xac4DGPd1LDSt1oz7vwJsg: 'Coinbase Wrapped ADA::CBADA',
@@ -190,6 +193,8 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   megaA5QDK1qLXtjpvg9oCFMvxT9d5BCMrVTBddnM5kV: 'MegaETH::MEGA',
   shib5gSoVKPjwkXrxRk7SbQFzb2R9rQB3TgQWYX4RwW: 'SHIB',
   EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o: 'DAI',
+  // the one Solana xStock whose EVM twin CoinGecko does not join (same Backed product)
+  Xsy66wss7g59sgVeeCGvC1fDujEZcHgFMQxXPWgaDhF: 'Webster Financial xStock::WBSX',
 }
 
 /**
@@ -285,6 +290,8 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
     'Upshift "Gamma Research USDC Vault" share (upGammaUSD); mint published by app.upshift.finance, authority = its august_vault VaultState',
   CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs:
     'Upshift "Y10k GMTrade MetaVault" share (y10kGMV); mint published by app.upshift.finance, authority = its august_vault VaultState',
+  i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc:
+    'Ondo OUSG — CoinGecko `ousg` platforms list this mint beside Ethereum / Polygon; Jupiter answers it unverified ("Ondo Short-Term US Gov Bond Fund")',
 }
 
 /**
@@ -444,9 +451,19 @@ async function main() {
   let extrasAdded = 0
   for (const mint of Object.keys(SOLANA_EXTRA_MINTS)) {
     if (keptIds.has(mint)) continue
-    const hit = (await getJson<JupToken[]>(JUPITER_SEARCH + mint).catch(() => [] as JupToken[])).find(
-      (t) => t.id === mint,
-    )
+    // Retried with backoff: the search rate-limits a burst of ~30 lookups, and a swallowed 429
+    // used to drop every listed mint past the fourth from the list (2026-10-23, 30 of 34).
+    let answer: JupToken[] = []
+    for (const wait of [0, 1500, 4000, 10000]) {
+      if (wait) await new Promise((r) => setTimeout(r, wait))
+      try {
+        answer = await getJson<JupToken[]>(JUPITER_SEARCH + mint)
+        break
+      } catch {
+        /* retry */
+      }
+    }
+    const hit = answer.find((t) => t.id === mint)
     if (!hit) {
       extrasMissing.push(mint)
       continue
@@ -595,7 +612,10 @@ async function main() {
     list[t.id] = {
       chainId: 'solana',
       decimals: t.decimals,
-      name: t.name,
+      // Jupiter publishes some verified mints nameless (nine Ondo GM tokens: ECHon, FLHYon …).
+      // A mint joined to a global `Name::SYMBOL` group takes that name for display; the
+      // `currencyId` key above keeps Jupiter's own spelling.
+      name: t.name || (global?.includes('::') ? global.split('::')[0] : t.name),
       address: t.id,
       // Jupiter calls the wSOL mint "SOL". With the native row below also
       // "SOL", the selector would show two identical rows for two different

@@ -117,6 +117,26 @@ test('ishares-etf rows get a ticker only when a reading of the symbol is a known
   assert.equal(isharesEtfTicker('iShares Core S&P 500 ETF', 'RIVV'), undefined)
 })
 
+test("ishares-etf: the tokenizer is the issuer — Ondo's truncated <ETF>ON rows are Ondo's", () => {
+  const r = (name: string, symbol: string) => classifyRwaLst({ name, symbol })?.rwa
+  // 1 / 56: names cut before "(Ondo Tokenized" survives
+  assert.deepEqual(r('iShares 20  Year Treasury Bond ETF  Ond', 'TLTON'), {
+    type: 'fund',
+    subType: 'etf',
+    issuer: 'ondo',
+    underlying: 'TLT',
+  })
+  assert.deepEqual(r('iShares Core MSCI Emerging Markets ETF ', 'IEMGON'), {
+    type: 'fund',
+    subType: 'etf',
+    issuer: 'ondo',
+    underlying: 'IEMG',
+  })
+  assert.equal(r('iShares High Yield Corporate Bond BuyWrite Strategy ETF (Ond', 'HYGWON')?.issuer, 'ondo')
+  // no Ondo suffix on the ticker: still the fund's own line
+  assert.equal(r('iShares 0-3 Month Treasury Bond ETF', 'SGOV')?.issuer, 'blackrock')
+})
+
 test('backed rule: Backed / Wrapped Backed names only, and `Corp` is not debt', () => {
   const r = (name: string, symbol: string) => classifyRwaLst({ name, symbol })?.rwa
   // false positives seen in the lists: a bare "Backed" (4663) and prose (143)

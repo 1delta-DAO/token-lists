@@ -536,6 +536,256 @@ export const GROUP_ALIAS: Record<string, string> = {
   // (ADDRESS_GROUP_OVERRIDE). And Base `alUSDb` ("Alchemic USD Base") is a separate asset.
   'Alchemix USD::alUSD': 'Alchemix USD::ALUSD',
   'Alchemix ETH::alETH': 'Alchemix ETH::ALETH',
+  // Elixir deUSD / sdeUSD — Ethereum, Plasma and Berachain list the Elixir-named group, while
+  // Reya, Arbitrum, Avalanche (and Linea) list the bare on-chain `deUSD` / `Staked deUSD`, which
+  // knownAssets' exact-name `DEUSD` rule turned into a second group. Same product: the DEX lists
+  // (Camelot, Trader Joe, Balancer) serve them with Elixir's logo, risk-data flags every one of
+  // them COMPROMISED with the Ethereum rows, and no other deUSD exists. CoinGecko has delisted
+  // the coin and the LayerZero peers were cleared at the wind-down, so no feed can join them.
+  // Canonical = the chain-1 form, which carries the issuer and stablecoin overlays.
+  DEUSD: 'Elixir deUSD::DEUSD',
+  'deUSD::deUSD': 'Elixir deUSD::DEUSD',
+  'Staked deUSD::sdeUSD': 'Elixir Staked deUSD::SDEUSD',
+  // Overnight USD+ family — one product per ticker, deployed per chain; the Linea / Base rows
+  // carry the bare `name()` and split off from the Overnight-named group.
+  'USDT+::USDT+': 'Overnight.fi USDT+::USDT+',
+  'DAI+::DAI+': 'Overnight.fi DAI+::DAI+',
+  // CROSS-CHAIN SPLITS (scouted 2026-10-23). One asset filed under two `name::symbol` keys
+  // because the source lists disagree on the NAME's punctuation or the ticker's casing, or one
+  // list carries the bare ticker. Each pair is backed by evidence, never by the ticker alone:
+  // `addr:` = the SAME contract address carries both groups on different chains; `cg:` =
+  // CoinGecko's platform map puts both deployments under one coin. Kept only when the merged
+  // group would still hold ONE address per chain, and never for a PulseChain (369) row — a
+  // state-fork copy of an Ethereum address is not that asset. Canonical = a bare group, else
+  // the chain-1 form (the convention above), else the most chains.
+  '0xBitcoin::0XBTC': '0XBTC', // 137,8453 -> 1,10,42161 (cg:oxbitcoin)
+  'OneArt::1ART': '1ART', // 1,250 -> 137,56 (addr:0xd3c32584)
+  'aBTC::aBTC': 'ABTC', // 21000000,34443 -> 1116,200901,4200,59144 (addr:0x7a087e75)
+  'Acria.AI::ACRIA': 'Acria AI::ACRIA', // 56 -> 1 (addr:0x44f5909e)
+  'Agua Global Carry Vault::aguaUSDCgc': 'Agua Global Carry Vault::AGUAUSDCGC', // 143 -> 1 (cg:agua-global-carry-vault)
+  'ALEX::ALEX': 'ALEX', // 42161 -> 1,34443 (addr:0xdfd06600)
+  'Alethea AI::ALI': 'ALI', // 25 -> 1,130,137,42161,8453 (cg:alethea-artificial-liquid-intelligence-token)
+  'Dexalot Token::ALOT': 'ALOT', // 43114 -> 42161,56,8453 (cg:dexalot)
+  'Alvey Chain::wALV': 'Alvey Chain::WALV', // 56 -> 1,4663 (addr:0x256d1fce)
+  'Ankr Staked BNB::ankrBNB': 'Ankr Staked BNB::ANKRBNB', // 56 -> 204 (cg:ankr-staked-bnb)
+  'Anzen Staked USDz::sUSDz': 'Anzen Staked USDz::SUSDZ', // 42161 -> 1,169,81457,8453 (cg:anzen-staked-usdz)
+  'Ape ETH::ApeETH': 'Ape ETH::apeETH', // 42161 -> 33139 (addr:0xcf800f49)
+  'Arcana arcUSD::ARCUSD': 'Arcana arcUSD::arcUSD', // 8453 -> 10,56 (addr:0xaec9e50e)
+  'Argentine Peso::wARS': 'Argentine Peso::WARS', // 137 -> 1,100,5042,56,8453,999 (addr:0x0dc4f928)
+  'Arianee::ARIA20': 'ARIA20', // 137 -> 1,8453 (cg:arianee)
+  'ARYZE eEUR::eEUR': 'ARYZE eEUR::EEUR', // 137 -> 1 (addr:0x735fa792)
+  'ARYZE eGBP::eGBP': 'ARYZE eGBP::EGBP', // 137,56 -> 1 (addr:0xd711d7d8)
+  'ARYZE eUSD::eUSD': 'ARYZE eUSD::EUSD', // 137,56 -> 1,59144 (addr:0xa4335da3)
+  'Aurora::Aurora': 'Aurora::AURORA', // 1313161554 -> 1,25 (cg:aurora-near)
+  'AxCNH::AxCNH': 'AxCNH::AXCNH', // 1030 -> 1 (cg:axcnh)
+  'Backed ERNX Bond::BERNX': 'Backed ERNX € Bond::bERNX', // 100 -> 137,56 (addr:0x3f95aa88)
+  'Backed GameStop Corp::bGME': 'Backed GameStop Corp::BGME', // 137 -> 1,100,42161,43114,8453 (addr:0x7212088a)
+  'Badger::BADGER': 'BADGER', // 250 -> 1,100,130,137,42161 (cg:badger-dao)
+  'Bankless DAO::BANK': 'BANK', // 137,42161 -> 1,10 (cg:bankless-dao)
+  'Beluga.fi::BELUGA': 'Beluga fi::BELUGA', // 56 -> 250 (cg:beluga-fi)
+  'Franklin Templeton BENJI::BENJI': 'BENJI', // 1 -> 137,42161,43114,8453 (cg:franklin-templeton-benji)
+  'Backed ERNA Bond::BERNA': 'BERNA', // 100 -> 1,137,42161,43114,56,8453 (addr:0x0f76d32c)
+  'Backed HIGH   High Yield Corp Bond::BHIGH': 'BHIGH', // 43114 -> 1,100,137,42161,56,8453 (addr:0x20c64dee)
+  'Backed IB01 Treasury Bond 0 1yr::BIB01': 'BIB01', // 42161 -> 1,100,137,43114,56,8453 (addr:0xca30c93b)
+  'Backed IBTA Treasury Bond 1 3yr::BIBTA': 'BIBTA', // 42161 -> 1,100,137,43114,56,8453 (addr:0x52d134c6)
+  'Beefy::BIFI': 'BIFI', // 1,43114 -> 1285,250 (addr:0xd6070ae9)
+  'BlazeX::BlazeX': 'BlazeX::BLAZEX', // 56 -> 1 (addr:0xdd1b6b25)
+  'Blind Boxes::BLES': 'BLES', // 137 -> 1,56 (cg:blind-boxes)
+  'BNS.Finance::BNSD': 'bns.finance::BNSD', // 56 -> 1 (cg:bnsd-finance)
+  'bobcoin::BOBC': 'Bobcoin::BOBC', // 137 -> 1,43114,56 (addr:0x590eb292)
+  'Forj::BONDLY': 'BONDLY', // 137 -> 1,56 (cg:bondly)
+  'Brazilian real::wBRL': 'Brazilian real::WBRL', // 137 -> 1,100,5042,56,8453,999 (addr:0xd76f5faf)
+  'BRC-20 DEX::BD20': 'BRC 20 DEX::BD20', // 56 -> 1 (addr:0x312d4388)
+  'BTC Proxy::BTCpx': 'BTC Proxy::BTCPX', // 137 -> 1 (addr:0x9c32185b)
+  'Buying.com::BUY': 'Buying com::BUY', // 56 -> 1 (cg:buying)
+  'Cere Network::CERE': 'CERE Network::CERE', // 137 -> 1,8453 (addr:0x2da719db)
+  'CyberFi::CFI': 'CFI', // 137,250 -> 1,56 (addr:0x6a545f9c)
+  'Chilean Peso::wCLP': 'Chilean Peso::WCLP', // 137 -> 1,100,5042,56,8453,999 (addr:0x61d450a0)
+  'Choise.ai::CHO': 'Choise ai::CHO', // 56 -> 1 (cg:choise)
+  'Clover::CLV': 'CLV', // 1 -> 130,56 (cg:clover-finance)
+  'Colombian Peso::wCOP': 'Colombian Peso::WCOP', // 137 -> 1,100,5042,56,8453,999 (addr:0x8a1d45e1)
+  'CoW Protocol Token::COW': 'COW', // 8453 -> 1,100,130,137,42161,56 (cg:cow-protocol)
+  'Croginal Cats::Croginal': 'Croginal Cats::CROGINAL', // 25 -> 8453 (cg:croginal-cats)
+  'Cross-Chain Bridge::BRIDGE': 'Cross Chain Bridge::BRIDGE', // 137,56 -> 1,250,43114 (addr:0x92868a52)
+  'crvUSD::CRVUSD': 'CRVUSD', // 252 -> 1,10,100,137,146,167000… (cg:crvusd)
+  'CryptoArt.ai::CART': 'CryptoArt Ai::CART', // 56 -> 1 (addr:0x5c8c8d56)
+  'CryptoCart V2::CCv2': 'CryptoCart V2::CCV2', // 56 -> 1 (addr:0x612e1726)
+  'Davos.xyz USD::DUSD': 'Davos xyz USD::DUSD', // 10,137,56,59144 -> 1,1101,34443,42161,5000,81457… (addr:0x8ec18776)
+  'DedaCoin::Deda': 'DedaCoin::DEDA', // 56 -> 1 (addr:0x15f9eb4b)
+  'Defi money::MONEY': 'Defi.money::MONEY', // 42161 -> 10 (addr:0x69420f9e)
+  'Bridged USDC (deBridge)::deUSDC': 'DEUSDC', // 137 -> 42161,43114,56 (addr:0x1ddcaa4e)
+  'Memento::DEXTF': 'DEXTF', // 8453 -> 1,324,42161,43114 (cg:dextf)
+  'dHEDGE DAO::DHT': 'DHT', // 137 -> 1,10,42161,8453 (cg:dhedge-dao)
+  'DOLZ.io::DOLZ': 'DOLZ io::DOLZ', // 137 -> 1,8453 (cg:dolz-io)
+  '1DSLA::DSLA': 'DSLA', // 1666600000 -> 1,250,42161,43114,56,59144 (cg:stacktical)
+  'dTrinity Staked dUSD::SDUSD': 'dTRINITY Staked dUSD::SDUSD', // 252 -> 1 (cg:dtrinity-staked-dusd)
+  'Dubbz::Dubbz': 'Dubbz::DUBBZ', // 137 -> 8453 (addr:0x38029c62)
+  'Dusk::DUSK': 'DUSK', // 56 -> 1,42161 (cg:dusk-network)
+  'Dyl::Dyl': 'Dyl::DYL', // 137 -> 1,8453 (addr:0x4a506181)
+  'EternalAI::EAI': 'EAI', // 1,8453 -> 33139,42161 (addr:0x4b6bf1d3)
+  'EURC::EURC': 'EURC', // 10,25,480,5042 -> 1,130,137,42161,43114,8453 (cg:euro-coin)
+  'EUROe Stablecoin::EUROe': 'EUROe Stablecoin::EUROE', // 10,137 -> 1,42161,43114 (addr:0x820802fa)
+  'eUSD::eUSD': 'eUSD::EUSD', // 137 -> 1,8453 (addr:0x14913815)
+  'Function ƒBTC::FBTC': 'FBTC', // 56 -> 1,1329,146,42161,5000,60808… (addr:0xc96de260)
+  'Fluid USDC::fUSDC': 'Fluid USDC::FUSDC', // 42161 -> 1 (cg:fluid-usdc)
+  'Flying Tulip USD::ftUSD': 'Flying Tulip USD::FTUSD', // 146 -> 1 (addr:0xf7d85ec4)
+  'FOOM::FOOM': 'Foom::FOOM', // 8453 -> 1 (cg:foom)
+  'handle.fi::FOREX': 'FOREX', // 137 -> 1,42161 (addr:0xdb298285)
+  'ShapeShift FOX::FOX': 'FOX', // 100 -> 1,10,130,137,1666600000,42161… (cg:shapeshift-fox-token)
+  'Gauntlet USD Alpha::gtUSDa': 'Gauntlet USD Alpha::GTUSDA', // 10 -> 1,42161,8453 (addr:0x00000000)
+  'GHO::GHO': 'GHO', // 57073 -> 1,100,143,196,42161,43114… (addr:0xfc421ad3)
+  'Goat Network::GOATED': 'GOAT Network::GOATED', // 2345 -> 56 (cg:goat-network)
+  'GOG::GOG': 'GOG', // 13371 -> 1,42161 (cg:guild-of-guardians)
+  'HANePlatform::HANeP': 'HANePlatform::HANEP', // 10,42161,8453 -> 1 (cg:haneplatform)
+  'HEGIC::HEGIC': 'HEGIC', // 42161 -> 1,137,250 (cg:hegic)
+  'Hot Cross::HOTCROSS': 'HOTCROSS', // 1,43114 -> 56 (cg:hot-cross)
+  'hwUSD::hwUSD': 'hwUSD::HWUSD', // 999 -> 1,8453 (addr:0xa2f8da4a)
+  'HYB deRWA::deHYB': 'HYB deRWA::DEHYB', // 10 -> 1,196 (addr:0xc5a9f6ed)
+  'HyperCycle::HyPC': 'HyperCycle::HYPC', // 56 -> 1 (cg:hypercycle)
+  'Impossible Decentralized Incubator::IDIA': 'IDIA', // 56 -> 1285,42161,43114 (cg:idia)
+  'iDypius::iDYP': 'iDypius::IDYP', // 56 -> 1,43114 (addr:0xbd100d06)
+  'iFARM::iFARM': 'iFARM::IFARM', // 42161 -> 1,8453 (cg:ifarm)
+  'Inception Restaked slisBNB::inslisBNB': 'Inception Restaked slisBNB::INSLISBNB', // 56 -> 1 (cg:inception-restaked-slisbnb)
+  'INSPECT::INSP': 'Inspect::INSP', // 56 -> 1 (cg:inspect)
+  'IronBank::IB': 'Iron Bank::IB', // 10 -> 250 (addr:0x00a35fd8)
+  'Izumi Finance::IZI': 'IZI', // 1 -> 137,169,324,42161,534352,56… (cg:izumi-finance)
+  'iZUMi Token::iZi': 'IZI', // 5000 -> 137,169,324,42161,534352,56… (addr:0x60d01ec2)
+  'Kaizen.Finance::KZEN': 'Kaizen Finance::KZEN', // 137,56 -> 1 (addr:0x45500031)
+  'Kalmar::KALM': 'KALM', // 56 -> 250,43114 (cg:kalmar)
+  'KGEN::KGEN': 'KGeN::KGEN', // 56 -> 8453 (addr:0xf3d5b4c3)
+  'KiiChain::KII': 'Kiichain::KII', // 5000,56 -> 1,137,8453 (addr:0xeec6574e)
+  'Kyte.One::KTE': 'Kyte One::KTE', // 56 -> 43114 (cg:kyte-one)
+  'LightSpeed::Speed': 'Lightspeed::SPEED', // 10 -> 1,42161,8453 (addr:0xb01cf1be)
+  'Lightspeed::Speed': 'Lightspeed::SPEED', // 137,56 -> 1,42161,8453 (addr:0xb01cf1be)
+  'Liquity BOLD::Bold': 'Liquity BOLD::BOLD', // 10 -> 1,42161,43114,534352,8453 (addr:0x087c440f)
+  'Lucky Block::LBlock': 'Lucky Block::LBLOCK', // 56 -> 1 (cg:lucky-block)
+  "Merlin's Seal BTC::M-BTC": 'M-BTC', // 2222 -> 1,1135,1329,167000,324,34443… (addr:0x59889b70)
+  'MaziMatic::Mazi': 'MaziMatic::MAZI', // 56 -> 1 (addr:0x5b8650cd)
+  'Melega::MARCO': 'MELEGA::MARCO', // 56 -> 137,4663,5042 (cg:melega)
+  'Metronome Synth USD::MSUSD': 'Metronome Synth USD::msUSD', // 8453 -> 1,10,43111,9745 (cg:metronome-synth-usd)
+  'Mexican Peso::wMXN': 'Mexican Peso::WMXN', // 137 -> 1,100,5042,56,8453,999 (addr:0x337e7456)
+  'Mezo::MEZO': 'MEZO::MEZO', // 56,8453 -> 1 (addr:0x8e4cbbcc)
+  'Midas Fasanara Global Open::mGLO': 'Midas Fasanara Global Open::MGLO', // 10 -> 1,4663,8453 (cg:midas-fasanara-global-open)
+  'MiL k::MLK': 'MiL.k::MLK', // 56 -> 42161 (addr:0x374c5fb7)
+  'MAI::MIMATIC': 'MIMATIC', // 1101,8217 -> 10,100,1088,1284,1285,1313161554… (addr:0x3f56e0c3)
+  'Molandak::MOLANDAK': 'MOLANDAK::MOLANDAK', // 42161 -> 143,8453 (addr:0xa170eaa9)
+  'Monerium EUR emoney::EURe': 'Monerium EUR emoney::EURE', // 137,8453 -> 1,100,42161,534352,59144 (cg:monerium-eur-money-2)
+  'Minted Token::MTD': 'MTD', // 25 -> 1 (cg:minted)
+  'MX::MX': 'MX', // 1 -> 2818,56 (cg:mx-token)
+  'Non-Playable Coin::NPC': 'Non Playable Coin::NPC', // 4663,56 -> 1,8453 (cg:non-playable-coin)
+  'NvirWorld::Nvir': 'NvirWorld::NVIR', // 56 -> 1 (addr:0x9d71ce49)
+  'O3 Swap Token::O3': 'O3', // 42161,42220 -> 1,10,137,250,43114,56 (addr:0xee980166)
+  'Origin Token::OGN': 'OGN', // 146 -> 1,130,137,25,42161,8453 (cg:origin-protocol)
+  'OGzClub::OGz': 'OGzClub::OGZ', // 56 -> 1 (addr:0xb7bda6a8)
+  'OpenUSDT::oUSDT': 'OpenUSDT::OUSDT', // 10,1088,146,5000,59144 -> 130,1868,252,34443,8453 (addr:0x1217bfe6)
+  'openUSDT::oUSDT': 'OpenUSDT::OUSDT', // 60808 -> 130,1868,252,34443,8453 (addr:0x1217bfe6)
+  'Orion::ORN': 'ORN', // 56 -> 1,130,137,42161 (cg:orion-protocol)
+  'Overnight.fi USDT+::USDT+': 'Overnight.fi USDT::USDT+', // 56 -> 42161 (cg:usdtplus)
+  'Paint Swap::BRUSH': 'PaintSwap::BRUSH', // 250 -> 146 (cg:paint-swap)
+  'Peruvian Sol::wPEN': 'Peruvian Sol::WPEN', // 137 -> 1,100,5042,56,8453,999 (addr:0x4f34c8b3)
+  'Penpie Token::PNP': 'PNP', // 42161,56 -> 1,10 (cg:penpie)
+  'Portal To Bitcoin::PTB': 'Portal to Bitcoin::PTB', // 56 -> 1 (cg:portal-to-bitcoin)
+  ' QIAN second generation dollar::QSD': 'QIAN second generation dollar::QSD', // 42161 -> 56 (addr:0x07aaa29e)
+  'QuickSwap::QUICK': 'QUICK', // 8453 -> 1,1101,130,137,169,2000 (cg:quickswap)
+  'RARI::RARI': 'RARI', // 1380012617,8453 -> 1,130,137,42161 (cg:rarible)
+  'RealToken S 13895 Saratoga St Detroit MI::REALTOKEN-S-13895-SARATOGA-ST-DETROIT-MI':
+    'RealToken S 13895 Saratoga st Detroit MI::REALTOKEN-S-13895-SARATOGA-ST-DETROIT-MI', // 100 -> 1 (addr:0x6f442da5)
+  'RealToken S 14078 Carlisle St Detroit MI::REALTOKEN-S-14078-CARLISLE-ST-DETROIT-MI':
+    'RealToken S 14078 Carlisle st Detroit MI::REALTOKEN-S-14078-CARLISLE-ST-DETROIT-MI', // 100 -> 1 (addr:0x315699f1)
+  'RealToken S 14319 Rosemary St Detroit MI::REALTOKEN-S-14319-ROSEMARY-ST-DETROIT-MI':
+    'RealToken S 14319 Rosemary st Detroit MI::REALTOKEN-S-14319-ROSEMARY-ST-DETROIT-MI', // 100 -> 1 (addr:0x41599149)
+  'RealToken S 15796 Hartwell St Detroit MI::REALTOKEN-S-15796-HARTWELL-ST-DETROIT-MI':
+    'RealToken S 15796 Hartwell st Detroit MI::REALTOKEN-S-15796-HARTWELL-ST-DETROIT-MI', // 100 -> 1 (addr:0xb3d3c1bb)
+  'RealToken S 17813 Bradford St Detroit MI::REALTOKEN-S-17813-BRADFORD-ST-DETROIT-MI':
+    'RealToken S 17813 Bradford st Detroit MI::REALTOKEN-S-17813-BRADFORD-ST-DETROIT-MI', // 100 -> 1 (addr:0x499a6c19)
+  'RealToken S 18273 Monte-Vista St Detroit MI::REALTOKEN-S-18273-MONTEVISTA-ST-DETROIT-MI':
+    'RealToken S 18273 Monte Vista St Detroit MI::REALTOKEN-S-18273-MONTEVISTA-ST-DETROIT-MI', // 100 -> 1 (addr:0x9856c5ca)
+  'RealToken S 2703-2705 W Grand St Detroit MI ::REALTOKEN-S-2703-2705-W-GRAND-ST-DETROIT-MI':
+    'RealToken S 2703-2705 W Grand St Detroit MI::REALTOKEN-S-2703-2705-W-GRAND-ST-DETROIT-MI', // 1 -> 100 (addr:0x994c6981)
+  'RealToken S 4380 Beaconsfield St Detroit MI::REALTOKEN-S-4380-BEACONSFIELD-ST-DETROIT-MI':
+    'RealToken S 4380 Beaconsfield st Detroit MI::REALTOKEN-S-4380-BEACONSFIELD-ST-DETROIT-MI', // 100 -> 1 (addr:0x96700ffa)
+  'Redstone::RED': 'RedStone::RED', // 8453 -> 1 (cg:redstone-oracles)
+  'Rejuve.AI::RJV': 'Rejuve AI::RJV', // 56 -> 1 (cg:rejuve-ai)
+  'Rezerve Money::RZR': 'Rezerve.money::RZR', // 42161,8453 -> 1,146 (addr:0xb4444468)
+  'Rogue MAV::rMAV': 'Rogue MAV::RMAV', // 56 -> 1,324,8453 (addr:0x8f0f5647)
+  'SeedifyFund::SFUND': 'Seedify fund::SFUND', // 42161 -> 1 (addr:0x560363bd)
+  'saffron.finance::SFI': 'SFI', // 42161,4663 -> 1,137 (cg:saffron-finance)
+  'Savings GYD::sGYD': 'SGYD', // 100 -> 1,10,137,42161,43114 (addr:0xea50f402)
+  'Symbiosis::SIS': 'SIS', // 4663 -> 1,324,42161,534352,56,59144 (cg:symbiosis-finance)
+  'Skibidi Dop Dop::Skibidi': 'Skibidi Dop Dop::SKIBIDI', // 56 -> 1,8453 (cg:skibidi-dop-dop)
+  'Slimex::SLX': 'SLIMEX::SLX', // 56 -> 8217 (cg:slimex)
+  'SMARDEX::SDEX': 'SmarDex::SDEX', // 137,56 -> 1,42161,8453 (cg:smardex)
+  'Heco-Peg SNX Token::SNX': 'SNX', // 128 -> 1,10,130,137,1666600000,25… (cg:havven)
+  'Solv Protocol BTC::SOLVBTC': 'SOLVBTC', // 30 -> 1,1329,137,143,146,167000… (addr:0x541fd749)
+  'SOMBRA::SMBR': 'Sombra::SMBR', // 56 -> 1 (addr:0x16b3e050)
+  'SpacePi Token::SpacePi': 'SpacePi Token::SPACEPI', // 56 -> 1 (addr:0x69b14e8d)
+  'Spectra [OLD]::APW': 'Spectra (OLD)::APW', // 137 -> 1 (cg:apwine)
+  'Spiko Amundi Overnight Swap Fund (CHF)::chfSAFO': 'Spiko Amundi Overnight Swap Fund (CHF)::CHFSAFO', // 137 -> 1,42161,42793,8453 (cg:spiko-amundi-overnight-swap-fund-chf)
+  'Spiko Amundi Overnight Swap Fund (EUR)::eurSAFO': 'Spiko Amundi Overnight Swap Fund (EUR)::EURSAFO', // 137 -> 1,42161,42793,8453 (cg:spiko-amundi-overnight-swap-fund-eur)
+  'Spiko Amundi Overnight Swap Fund (GBP)::gbpSAFO': 'Spiko Amundi Overnight Swap Fund (GBP)::GBPSAFO', // 137 -> 1,42161,42793,8453 (cg:spiko-amundi-overnight-swap-fund-gbp)
+  'Spiko Digital Assets Cash & Carry Fund - Euro Share Class::eurSPKCC':
+    'Spiko Digital Assets Cash & Carry Fund - Euro Share Class::EURSPKCC', // 137 -> 1,42161,8453 (cg:spiko-digital-assets-cash-carry-fund-euro-share-class)
+  'Spiko EU T-Bills Money Market Fund::EUTBL': 'Spiko EU T Bills Money Market Fund::EUTBL', // 137 -> 1,42161,42793,8453 (addr:0xa0769f7a)
+  'Spiko US T-Bills Money Market Fund::USTBL': 'Spiko US T Bills Money Market Fund::USTBL', // 137 -> 1,42161,42793,8453 (addr:0xe4880249)
+  'sPOL::sPOL': 'sPOL::SPOL', // 137 -> 1 (cg:spol)
+  'Stable.com USD3::USD3': 'Stable com USD3::USD3', // 137,56 -> 1,42161,43114 (addr:0x046029f6)
+  'Stake Token::STAKE': 'STAKE', // 100 -> 1,137,42161 (cg:xdai-stake)
+  'SUBHUB::SUBHUB': 'SubHub::SUBHUB', // 56 -> 8453 (addr:0x9efdae4d)
+  'Sumerian BTC::suBTC': 'SUBTC', // 200901,2345,810180 -> 1,1116,143,223,42161,43111… (addr:0xe85411c0)
+  'Sumerian ETH::suETH': 'SUETH', // 143,2345,43111 -> 82 (addr:0x1c22531a)
+  'Sumerian suETH::SUETH': 'SUETH', // 42161,8453 -> 82 (addr:0x1c22531a)
+  'SuperVerse::SUPER': 'SUPER', // 1868,43114,8453 -> 1,130,137,42161,56 (cg:superfarm)
+  'sUSDS::sUSDS': 'sUSDS::SUSDS', // 10 -> 1,42161,8453 (cg:susds)
+  'Wrapped sUSDX::sUSDX': 'SUSDX', // 8453 -> 1,42161,56 (addr:0x7788a353)
+  'SushiToken::SUSHI': 'SUSHI', // 747474 -> 1,10,100,1088,122,128… (cg:sushi)
+  'Sumerian USD::suUSD': 'SUUSD', // 82 -> 143,223,42161,43111,8453 (addr:0x8bf591ea)
+  'Token Teknoloji A    EURO::EUROT': 'Token Teknoloji A.Ş. EURO::EUROT', // 43114 -> 137 (addr:0x14eb40fb)
+  'Token Teknoloji A    USD::USDOT': 'Token Teknoloji A.Ş. USD::USDOT', // 43114 -> 137 (addr:0x2f5de518)
+  'TRAXX::TRAXX': 'Traxx::TRAXX', // 137 -> 1 (addr:0xd43be54c)
+  'Tellor::TRB': 'TRB', // 1,10,130,137,42161,8453 -> 100,169,5000 (cg:tellor)
+  'Treehouse ETH::tETH': 'Treehouse ETH::TETH', // 42161,8453 -> 1 (cg:treehouse-eth)
+  'TrumpMAGA::TruMaga': 'TrumpMAGA::TRUMAGA', // 56 -> 1 (addr:0x328ea6e5)
+  'uBTC::uBTC': 'UBTC', // 2345 -> 1116,1329,1868,1923,204,223… (addr:0x78e26e8b)
+  'Universal BTC::UNIBTC': 'UNIBTC', // 30,8453 -> 1,10,130,146,167000,196… (addr:0x93919784)
+  'US Debt::USDEBT': 'USDEBT::USDEBT', // 8453 -> 1 (cg:usdebt)
+  'Verified USD::USDV': 'USDV', // 1,137 -> 10,250,42161,43114,56,999 (addr:0x32366544)
+  'Wrapped USDX::USDX': 'USDX', // 8453 -> 1,42161,56 (addr:0xf3527ef8)
+  'unshETHing Token::USH': 'USH', // 1 -> 42161,56 (cg:unsheth)
+  'UST (Wormhole)::UST': 'UST', // 10,43114 -> 137,250,56 (cg:terrausd-wormhole)
+  'Wormhole-UST::UST': 'UST', // 1 -> 137,250,56 (cg:terrausd-wormhole)
+  'BLOCKv Token::VEE': 'VEE', // 8453 -> 1,10,137 (cg:blockv)
+  'Welle::Welle': 'Welle::WELLE', // 56 -> 1,1284 (cg:riverex-welle)
+  'WLD::WLD': 'WLD', // 480 -> 1,10,42161 (cg:worldcoin-wld)
+  'Wombat Exchange::WOM': 'WOM', // 1 -> 42161,56 (cg:wombat-exchange)
+  'WOWSwap::WOW': 'WOWswap::WOW', // 128 -> 1,1088,137,43114,56 (cg:wowswap)
+  'Wrapped Banano::wBAN': 'Wrapped Banano::WBAN', // 137,56 -> 1,250,42161 (addr:0xe20b9e24)
+  'Wrapped bMSTR::wbMSTR': 'Wrapped bMSTR::WBMSTR', // 137 -> 1,100,43114,8453 (addr:0x1a4f71b0)
+  'Wrapped bNVDA::wbNVDA': 'Wrapped bNVDA::WBNVDA', // 137 -> 1,100,43114,8453 (addr:0x7e8101a1)
+  'WrappedNCG::WNCG': 'Wrapped NCG::WNCG', // 56 -> 1,42161 (cg:wrapped-ncg)
+  'WrappedM by M0::WM': 'WrappedM by M 0::WM', // 98866 -> 1 (addr:0x437cc333)
+  'WrappedM by M0::wM': 'WrappedM by M 0::WM', // 143 -> 1 (addr:0x437cc333)
+  'WrappedM by M^0::WM': 'WrappedM by M 0::WM', // 42161 -> 1 (addr:0x437cc333)
+  'XODEX::XODEX': 'Xodex::XODEX', // 56 -> 1 (addr:0xb81408a1)
+  'Yield Yak::YAK': 'YAK', // 5000 -> 42161,43114 (addr:0x7f4db37d)
+  'Yel.Finance::YEL': 'Yel Finance::YEL', // 10,137,56 -> 1,146,250,42161,43114,80094… (addr:0x949185d3)
+  'Heco-Peg YFI Token::YFI': 'YFI', // 128 -> 1,10,100,130,137,42161… (cg:yearn-finance)
+  'Yield Farming Index::YFX': 'YieldFarming Index::YFX', // 8453 -> 10,42161 (addr:0x8901cb2e)
+  'YieldFi vyUSD::vyUSD': 'YieldFi vyUSD::VYUSD', // 747474,9745 -> 1,10,146,42161,8453 (addr:0xf4f447e6)
+  'Zaro Coin::ZARO': 'ZARO Coin::ZARO', // 8453 -> 1,56 (cg:zaro-coin)
+  'ZetaChain::ZETA': 'Zetachain::Zeta', // 56 -> 1,130,42161 (cg:zetachain)
+  // second round — exposed once the merges above settled
+  'yearn.finance::YFI': 'YFI', // 1666600000,25,56,747474 -> 1,10,100,128,130,137… (cg:yearn-finance)
+  'DSLA Protocol::DSLA': 'DSLA', // 137 -> 1,1666600000,250,42161,43114,56… (cg:stacktical)
+  // xStocks whose NAME the lists punctuate differently (`&` dropped to spaces, a hyphen, a
+  // missing "xStock"). Same contract address on every chain; canonical = the chain-1 spelling,
+  // which is also the group the Solana mint already joined.
+  'Coca-Cola xStock::KOX': 'Coca Cola xStock::KOX', // 5000 -> 1,42161,56 (addr:0xdcc1a269)
+  'Johnson & Johnson xStock::JNJX': 'Johnson   Johnson xStock::JNJX', // 5000 -> 1,56 (addr:0xdb0482cf)
+  'Johnson&Johnson xStock::JNJX': 'Johnson   Johnson xStock::JNJX', // 42161 -> 1,56 (addr:0xdb0482cf)
+  'Procter&Gamble xStock::PGX': 'Procter   Gamble xStock::PGX', // 42161 -> 1,56 (addr:0xa90424d5)
+  'Procter & Gamble xStock::PGX': 'Procter   Gamble xStock::PGX', // 5000 -> 1,56 (addr:0xa90424d5)
+  'DFDV xStock::DFDVX': 'DeFi Development Corp ::DFDVX', // 42161 -> 1,56 (cg:dfdv-xstock)
+  'Wrapped International Business Machines::WIBMX': 'Wrapped International Business Machines xStock::WIBMX', // 42161 -> 196 (cg:wrapped-international-business-machines-xstock)
 }
 
 /**
@@ -566,6 +816,19 @@ export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, 
   return ADDRESS_GROUP_OVERRIDE[`${chainId}:${lcAddress}`] ?? gr
 }
 
+/**
+ * Backed xStocks — ONE token per stock at ONE address on every EVM chain, but Optimism (and a
+ * few Ink / Mantle rows) store the on-chain ticker `AAPLx` while the other chains store the
+ * CoinGecko form `AAPLX`, which split ~740 stocks into two groups each. Canonical = the
+ * upper-case ticker (seven chains of eight). A rule rather than 740 GROUP_ALIAS lines; verified
+ * 2026-10-23 to put no second address into any chain's group. The `Wrapped … xStock` wrappers
+ * split the same way (`wAAPLx` on Ethereum, `WAAPLX` on X Layer / Arbitrum / Mantle) and fold
+ * too. Chain-scoped `::<chain>::<n>` / `::solana` groups never match.
+ */
+const XSTOCK_GROUP = /^(.+ xStock)::([^:]+)$/
+
 export function aliasAssetGroup(gr: string) {
-  return GROUP_ALIAS[gr] ?? gr
+  const aliased = GROUP_ALIAS[gr] ?? gr
+  const xStock = XSTOCK_GROUP.exec(aliased)
+  return xStock ? `${xStock[1]}::${xStock[2].toUpperCase()}` : aliased
 }

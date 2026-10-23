@@ -138,6 +138,10 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   'Tangent USD::USG': { base: 'USD' },
   //  - Apyx alqUSD (1: 0x15c9…9671) — Apyx's T-bill-backed dollar under aptUSD; not in the feed.
   'alqUSD::ALQUSD': { base: 'USD' },
+  // Ondo's rebasing USDY wrappers (rUSDY on Ethereum, mUSD on Mantle): $1 per token, the yield
+  // paid as balance — the dollar USDY itself already carries. Neither is in the feed.
+  'Ondo U.S. Dollar Yield (Rebasing)::rUSDY': { base: 'USD' },
+  'Mantle USD::mUSD': { base: 'USD' },
 }
 
 /**

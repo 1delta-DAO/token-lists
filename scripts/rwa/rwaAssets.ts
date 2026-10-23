@@ -249,6 +249,11 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
   // corrections of it — JAAA is AAA-rated CLOs (corporate credit, not treasuries) and
   // mGLOBAL was not classified at all.
   '1': {
+    // Ondo's ITOTON / HYGON on Ethereum: names truncated to "iShares Core S P Total US Stock
+    // Market " and "iBoxx   High Yield Corporate Bond ETF  " — no "ETF" / "iShares" / "Ondo" left
+    // for a rule. The same products on 56 and Solana carry full names and these rows.
+    '0x0692481c369e2bdc728a69ae31b848343a4567be': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'ITOT' },
+    '0xed3618bb8778f8ebbe2f241da532227591771d04': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'HYG' },
     // JTRSY deRWA (deJTRSY) — Centrifuge's freely-transferable DeFi wrapper of the Janus Henderson
     // Anemoy Treasury Fund; on-chain name "JTRSY deRWA", so the name rule that tags Monad's row
     // (listed under the long fund name) misses it here. Same product on 1 / 8453 (0xa623…) and
@@ -459,6 +464,13 @@ const RWA_MANUAL_ROWS: RwaRegistry = {
   // FROZEN + a permanent delegate (an allowlisted token — not set as `transferRestricted`,
   // which needs a probed transfer).
   solana: {
+    // Ondo GM "Smartbird (Ondo Tokenized)": Jupiter carries no `rwa` tag for it, so the tag-gated
+    // name rule never fires. Ondo's mint + freeze authority (see issuerAssets.ts). No underlying:
+    // Ondo publishes no ticker for it beyond BIRDon.
+    vzTpf9YNDwYaQpTCKjQzXcPBUfheW74TuZMEyPhondo: { type: 'equity', subType: 'stock', issuer: 'ondo' },
+    // Ondo OUSG on Solana (joined to the 1 / 137 group through SOLANA_MAPPEDS): Jupiter does not
+    // verify or tag it, so no rule reaches it; same fund row the EVM deployments carry.
+    i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc: { type: 'fund', subType: 'treasury', issuer: 'ondo' },
     '2HehXG149TXuVptQhbiWAWDjbbuCsXSAtLTB5wc2aajK': {
       type: 'equity',
       subType: 'stock',

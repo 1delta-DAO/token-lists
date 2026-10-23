@@ -21,10 +21,10 @@
       "decimals": 9,
       "name": "Prisma Staked SOL",
       "address": "11111ZSvet4hKEYUAETZWELHgkeYjyNZovzcypyAWs",
-      "symbol": "SOLANA",
+      "symbol": "prSOL",
       "logoURI": "https://arweave.net/pVCjyru98yDeEJlkh4pJ-GN3ji5kDqHWj7xDq5jPL4o",
-      "assetGroup": "Prisma Staked SOL::SOLANA::solana",
-      "currencyId": "Prisma Staked SOL::SOLANA",
+      "assetGroup": "Prisma Staked SOL::prSOL::solana",
+      "currencyId": "Prisma Staked SOL::prSOL",
       "props": {
         "solana": { "tokenProgram": "spl-token" },
         "lst": { "type": "staking", "asset": "SOL" }
@@ -233,11 +233,7 @@
           "issuer": "ondo",
           "underlying": "AGG"
         },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "13qtwy5fZi9Przz14pzo9xqFSr8QHmLyUpUCvP1xondo": {
@@ -761,7 +757,10 @@
           "orderbookAddress": "G5vFPRfkY2WN6DGPbuj5Hqq9bnuGqL3xdEfEp5DQMzCi",
           "platform": "dawn"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "dawn", "name": "DAWN", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "23e4CNuJxvBQ7RjNLc8Bh3yN3pQq6jeiTbyzJGXYPgme": {
@@ -879,12 +878,12 @@
     "26s3UGB9hund1qspApy1zYgCritxAooGg7o63BMn89Yq": {
       "chainId": "solana",
       "decimals": 8,
-      "name": "Apu Apustaja (Wormhole)",
+      "name": "Apu Apustaja",
       "address": "26s3UGB9hund1qspApy1zYgCritxAooGg7o63BMn89Yq",
       "symbol": "APU",
       "logoURI": "https://res.cloudinary.com/do9mjpesy/image/upload/v1753709191/APU_logo_olfyoz.png",
       "assetGroup": "Apu Apustaja::APU",
-      "currencyId": "Apu Apustaja (Wormhole)::APU",
+      "currencyId": "Apu Apustaja::APU",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "275FUEyp5o7TWo1dCDYJyprb4o2WBcxEQsvmt816pump": {
@@ -977,7 +976,10 @@
           "orderbookAddress": "G5vFPRfkY2WN6DGPbuj5Hqq9bnuGqL3xdEfEp5DQMzCi",
           "platform": "dawn"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "dawn", "name": "DAWN", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "2ABbnf3EzGfiMa3PE2bseAWwRD4jAE4KgE8YjSTxpump": {
@@ -1142,6 +1144,17 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/Qmcc23zV69RcuU1UMiYBheUv6wfCg8FeojrDHHH1BBwpJb.webp",
       "assetGroup": "Strategic Bitcoin Reserve::SBR::solana",
       "currencyId": "Strategic Bitcoin Reserve::SBR",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "2HPNEWcxDDnLhdSmfsNPf6TC1byJXPNj6mczqY5ymeta": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "DRAWUP",
+      "address": "2HPNEWcxDDnLhdSmfsNPf6TC1byJXPNj6mczqY5ymeta",
+      "symbol": "DRAWUP",
+      "logoURI": "https://imagedelivery.net/HYEnlujCFMCgj6yA728xIw/36b3ed40-a1e4-4258-9659-17d4ecc47800/public",
+      "assetGroup": "DRAWUP::DRAWUP::solana",
+      "currencyId": "DRAWUP::DRAWUP",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "2HehXG149TXuVptQhbiWAWDjbbuCsXSAtLTB5wc2aajK": {
@@ -2311,17 +2324,6 @@
         "issuer": { "id": "hylo", "name": "Hylo", "kind": "protocol" }
       }
     },
-    "2zGQGkLnQgWLvfSiWTXnnxdMA7fiP4ah6hyJPQQe3Eoe": {
-      "chainId": "solana",
-      "decimals": 6,
-      "name": "CHEWY",
-      "address": "2zGQGkLnQgWLvfSiWTXnnxdMA7fiP4ah6hyJPQQe3Eoe",
-      "symbol": "CHWY",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/QmWbwat5whZbdUmkw6pr5QX7zQBM1AQBWbx6JJw5GWY3Hi.webp",
-      "assetGroup": "CHEWY::CHWY::solana",
-      "currencyId": "CHEWY::CHWY",
-      "props": { "solana": { "tokenProgram": "spl-token" } }
-    },
     "2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv": {
       "chainId": "solana",
       "decimals": 6,
@@ -2464,6 +2466,17 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/bafkreicxyukqs6b2l7sa6pa5pksxgbhddhs273cg2fdhtpc24iuzzepjta.webp",
       "assetGroup": "World Cup Coin::WORLDCUP::solana",
       "currencyId": "World Cup Coin::WORLDCUP",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
+    "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Doge Pepe",
+      "address": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+      "symbol": "DOPE",
+      "logoURI": "https://axiomtrading-v2.axiom-cdn.io/E1Ay5MFuK4ADYgQDp3QmR1Q45UW3HQyfwQHeVotNmDMv.webp",
+      "assetGroup": "Doge Pepe::DOPE::solana",
+      "currencyId": "Doge Pepe::DOPE",
       "props": { "solana": { "tokenProgram": "token-2022" } }
     },
     "33q5Kax2piZ6mwyuxbEn8cbWD9XzTZ9Bkykfj4emuNBd": {
@@ -3990,7 +4003,15 @@
           "underlyingAsset": "GxHksENo754dKj6kv5d2z7ey9KwE7YSRYgRCtoFYd2yq",
           "platform": "solstice"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "solstice",
+            "name": "Solstice",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "4DBgRWs63QzBwj71Qxiiz49DUZJi2QgUha7cbadepump": {
@@ -4149,6 +4170,17 @@
       "currencyId": "Jurassic::RAWR",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "4KxtNWc5XTL3cuyc8PJMchqB6RYggvEFeMub727GBAGS": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Salvor",
+      "address": "4KxtNWc5XTL3cuyc8PJMchqB6RYggvEFeMub727GBAGS",
+      "symbol": "SALVOR",
+      "logoURI": "https://github.com/dwasyluk/Salvor/blob/main/assets/brand/generated/icons/salvor-logo-white-256.png?raw=true",
+      "assetGroup": "Salvor::SALVOR::solana",
+      "currencyId": "Salvor::SALVOR",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
     "4LLbsb5ReP3yEtYzmXewyGjcir5uXtKFURtaEUVC2AHs": {
       "chainId": "solana",
       "decimals": 6,
@@ -4270,7 +4302,15 @@
           "orderbookAddress": "492VaeF19LJjKLrqKzCJmdJre6xMydwUYgPjFj8ohwtB",
           "platform": "solstice"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "solstice",
+            "name": "Solstice",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "4QsNTBKwHgyYUUHq9tDzk1CCVu7y5hK7z3GE9R36pump": {
@@ -5198,7 +5238,7 @@
       "currencyId": "PayFi Strategy Token USDC::PST",
       "props": {
         "solana": { "tokenProgram": "spl-token" },
-        "savings": { "base": "USD" },
+        "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "huma", "name": "Huma", "kind": "protocol" }
       }
     },
@@ -5539,6 +5579,17 @@
       "logoURI": "https://i.ibb.co/kh4h5xd/11.png",
       "assetGroup": "SHIBA INU::SHIB::solana",
       "currencyId": "SHIBA INU::SHIB",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "5MQhtwFmgwZugLUaA7JRzGptrdCURormQLERHo7Av3JT": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Saylor Index",
+      "address": "5MQhtwFmgwZugLUaA7JRzGptrdCURormQLERHo7Av3JT",
+      "symbol": "SAYLOR3",
+      "logoURI": "https://assets.diversifi.trade/basket_images/diversifi/saylor3.png",
+      "assetGroup": "Saylor Index::SAYLOR3::solana",
+      "currencyId": "Saylor Index::SAYLOR3",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "5PwsE1yXAvANamqbYwM6zoWrYkNw8RZ74TZSsxnGu4vq": {
@@ -7424,6 +7475,17 @@
       "currencyId": "Chintai::CHEX",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "GEOM",
+      "address": "6dX5M8DY6VTFtVRX5yzWn9RE4MkJTyoAVbAodk6cpump",
+      "symbol": "GEOM",
+      "logoURI": "https://pump.mypinata.cloud/ipfs/bafkreiazcb3ndyhlobqrsymlixfwk53rf2qcitw55rbqwaak5lyn6fli64",
+      "assetGroup": "GEOM::GEOM::solana",
+      "currencyId": "GEOM::GEOM",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
     "6eftxVbSAunVEoxUWdGhPdxg5UdsJ8Wkwy5w5YFuxouw": {
       "chainId": "solana",
       "decimals": 8,
@@ -7849,6 +7911,17 @@
       "currencyId": "Baby Troll::BABYTROLL",
       "props": { "solana": { "tokenProgram": "token-2022" } }
     },
+    "6s2umN1sqM8mS8ERRmt9cqcFwAoWu5ofma7DN3KfFiue": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Trump Index",
+      "address": "6s2umN1sqM8mS8ERRmt9cqcFwAoWu5ofma7DN3KfFiue",
+      "symbol": "TRUMP3",
+      "logoURI": "https://assets.diversifi.trade/basket_images/diversifi/trump3.png",
+      "assetGroup": "Trump Index::TRUMP3::solana",
+      "currencyId": "Trump Index::TRUMP3",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
     "6tVZVjcppH2BZ9Xj5yFU1Zt34m2rYcyDqqpSeMDZpump": {
       "chainId": "solana",
       "decimals": 6,
@@ -7995,7 +8068,7 @@
       "name": "Female Draco Malfoy",
       "address": "6zzzG49KX5nksnqfogs31dwoMYSHaJXkropKbv1QZVga",
       "symbol": "Malfoid",
-      "logoURI": "https://metadata.j7tracker.io/images/c905fb31c2374deb",
+      "logoURI": "https://i.postimg.cc/6q4077kF/Malfoid-profile-picture-Instagram-Tik-Tok-1080.png",
       "assetGroup": "Female Draco Malfoy::Malfoid::solana",
       "currencyId": "Female Draco Malfoy::Malfoid",
       "props": { "solana": { "tokenProgram": "token-2022" } }
@@ -8113,7 +8186,7 @@
       "name": "USDGO",
       "address": "72puLt71H93Z9CzHuBRTwFpL4TG3WZUhnoCC7p8gxigu",
       "symbol": "USDGO",
-      "logoURI": "https://static.anchorage-production.com/stablecoins/USDGO/icon.png",
+      "logoURI": "https://cdn.instadapp.io/icons/jupiter/tokens/usdgo.png",
       "assetGroup": "USDGO::USDGO",
       "currencyId": "USDGO::USDGO",
       "props": {
@@ -8823,6 +8896,17 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/QmckMgqr2P8BtzbjxrNB3yFz4BZ9CGq2HgJnSz46Y23Tr7.webp",
       "assetGroup": "SolXenCat::xencat::solana",
       "currencyId": "SolXenCat::xencat",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "7V1evjzUMFi4QDK7kAntcfdr9MyYC6S5bvsUCtxX1dSJ": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "SAMA Index",
+      "address": "7V1evjzUMFi4QDK7kAntcfdr9MyYC6S5bvsUCtxX1dSJ",
+      "symbol": "SAMA4",
+      "logoURI": "https://assets.diversifi.trade/basket_images/diversifi/sama4.png",
+      "assetGroup": "SAMA Index::SAMA4::solana",
+      "currencyId": "SAMA Index::SAMA4",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "7V6Sk63y8Rr1MvcN5mYNp61wgFhy4EeQg5gUASk9pump": {
@@ -10997,7 +11081,7 @@
       "name": "Loadout",
       "address": "8sWe4GzK1YqG3vyzKHf8ZyB1WB5asofw2o6TqgFePtPo",
       "symbol": "LOAD",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/bafkreibqdp2juxw3s56xyapbmyutwxvh5qtdwjyvbg3ozeyzwqxyadcqm4.webp",
+      "logoURI": "https://d19mfdzkkbqg6b.cloudfront.net/projects/08560c93-e0b2-4e3d-a8f5-c82e9a1749ef/1790261710795-token-image.png",
       "assetGroup": "Loadout::LOAD::solana",
       "currencyId": "Loadout::LOAD",
       "props": { "solana": { "tokenProgram": "spl-token" } }
@@ -11034,7 +11118,10 @@
           "orderbookAddress": "DD8vh2zxJ8HAcWu2GqHdwTTsX3bbGqhjtec5aAgqRepB",
           "platform": "dawn"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "dawn", "name": "DAWN", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "8upjSpvjcdpuzhfR1zriwg5NXkwDruejqNE9WNbPRtyA": {
@@ -11322,6 +11409,17 @@
       "assetGroup": "Madlads::MLSTRAT::solana",
       "currencyId": "Madlads::MLSTRAT",
       "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Paid",
+      "address": "98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump",
+      "symbol": "PAID",
+      "logoURI": "https://desperate-moccasin-minnow.myfilebase.com/ipfs/QmfUMmXdXkJ4oyV2NGbgiKkh7qhnhmUZ1toN2kQKD4UDxM",
+      "assetGroup": "Paid::PAID::solana",
+      "currencyId": "Paid::PAID",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
     },
     "98mb39tPFKQJ4Bif8iVg9mYb9wsfPZgpgN1sxoVTpump": {
       "chainId": "solana",
@@ -11956,7 +12054,15 @@
           "orderbookAddress": "492VaeF19LJjKLrqKzCJmdJre6xMydwUYgPjFj8ohwtB",
           "platform": "solstice"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "solstice",
+            "name": "Solstice",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "9aqmJjCnnMQv42TXLk921ceUkN35nea2QP969n1caqjj": {
@@ -12713,6 +12819,17 @@
         "lst": { "type": "staking", "asset": "SOL" }
       }
     },
+    "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Saindra",
+      "address": "A2yA6AFtfKkfVkfsnGpvsKoUV5kQPpMYboZsBPvmkA9T",
+      "symbol": "SAINDRA",
+      "logoURI": "https://axiomtrading-v2.axiom-cdn.io/7jdgbHuQHWkEwsHquVdhaL61faY1eftLUKfXXxGnayNB.webp",
+      "assetGroup": "Saindra::SAINDRA::solana",
+      "currencyId": "Saindra::SAINDRA",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
     "A3eME5CetyZPBoWbRUwY3tSe25S6tb18ba9ZPbWk9eFJ": {
       "chainId": "solana",
       "decimals": 6,
@@ -13019,6 +13136,30 @@
         ]
       }
     },
+    "ABNB56TteaTZG1S3DY2W8VMncQmHMvNCGaZgAba49CLP": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Airbnb - Backpack Securities",
+      "address": "ABNB56TteaTZG1S3DY2W8VMncQmHMvNCGaZgAba49CLP",
+      "symbol": "ABNB",
+      "logoURI": "https://backpack.exchange/api/stock-logo/ABNB",
+      "assetGroup": "Airbnb - Backpack Securities::ABNB::solana",
+      "currencyId": "Airbnb - Backpack Securities::ABNB",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backpack",
+          "underlying": "ABNB"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
+        }
+      }
+    },
     "ACeWC77UeW2DBZMe7YBsuXoxLvk4dHMnPzneApau1Au6": {
       "chainId": "solana",
       "decimals": 8,
@@ -13251,6 +13392,30 @@
       "assetGroup": "Commons by Virtuals::CMNS::solana",
       "currencyId": "Commons by Virtuals::CMNS",
       "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "AMZNw7cwU9L9c7ewZXxTws2PwQYxBGm2Rxg3FLDBJz9B": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Amazon - Backpack Securities",
+      "address": "AMZNw7cwU9L9c7ewZXxTws2PwQYxBGm2Rxg3FLDBJz9B",
+      "symbol": "AMZN",
+      "logoURI": "https://backpack.exchange/api/stock-logo/AMZN",
+      "assetGroup": "Amazon - Backpack Securities::AMZN::solana",
+      "currencyId": "Amazon - Backpack Securities::AMZN",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backpack",
+          "underlying": "AMZN"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
+        }
+      }
     },
     "AMgMqadZ7Qpe9PCQwehAG3Xbg5cf8JxCxH7sGCSupump": {
       "chainId": "solana",
@@ -13646,6 +13811,11 @@
           "subType": "stock",
           "issuer": "backpack",
           "underlying": "AVGO"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
         }
       }
     },
@@ -14835,6 +15005,17 @@
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
+    "B86LTrZDrH8G9zqMvXzFfwH8txDy8Sy7TZabjabTkids": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "The Black Sheep",
+      "address": "B86LTrZDrH8G9zqMvXzFfwH8txDy8Sy7TZabjabTkids",
+      "symbol": "YOKAI",
+      "logoURI": "https://gateway.pinata.cloud/ipfs/QmPdyPyK2kWsykSJbfwneLY4WVtWBzRsKDdUtS9bk1DYWL",
+      "assetGroup": "The Black Sheep::YOKAI::solana",
+      "currencyId": "The Black Sheep::YOKAI",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
     "B89Hd5Juz7JP2dxCZXFJWk4tMTcbw7feDhuWGb3kq5qE": {
       "chainId": "solana",
       "decimals": 9,
@@ -15908,7 +16089,10 @@
           "underlyingAsset": "dawn7ZUF7h7anFuEsDdAU1Y3HYwikwqNMAENZsQJdNL",
           "platform": "dawn"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "dawn", "name": "DAWN", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "BVdL3WUxtxUD4vXRWwqChJLbGxvfzZjBGPp63Wtondo": {
@@ -16512,7 +16696,7 @@
     "BmXVAFyfpW7VuVYeWDtbFtLx7sek2mZt3BEsGgAondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "iShares MSCI Chile ETF (Ondo Tokenized)",
       "address": "BmXVAFyfpW7VuVYeWDtbFtLx7sek2mZt3BEsGgAondo",
       "symbol": "ECHon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/echon_160x160.png",
@@ -17554,6 +17738,30 @@
       "currencyId": "Soldex::SOLX",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "CHWYHz2zfKajomqPV9it26n7vu7AgZZfqGHXCWtGWuJg": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Chewy - Backpack Securities",
+      "address": "CHWYHz2zfKajomqPV9it26n7vu7AgZZfqGHXCWtGWuJg",
+      "symbol": "CHWY",
+      "logoURI": "https://backpack.exchange/api/stock-logo/CHWY",
+      "assetGroup": "Chewy - Backpack Securities::CHWY::solana",
+      "currencyId": "Chewy - Backpack Securities::CHWY",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backpack",
+          "underlying": "CHWY"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
+        }
+      }
+    },
     "CHa1NzoGsJ8wAEQUBjwtyUcv7rQBDW2yk3c8LvqaA8Lb": {
       "chainId": "solana",
       "decimals": 9,
@@ -17749,6 +17957,25 @@
           "subType": "etf",
           "issuer": "ondo",
           "underlying": "ITOT"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "CPcYDPoNoD42Yqvv2kKfB93RqL73vxnXEoRRgqqondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo AI Leaders Portfolio",
+      "address": "CPcYDPoNoD42Yqvv2kKfB93RqL73vxnXEoRRgqqondo",
+      "symbol": "BRAINon",
+      "assetGroup": "Ondo AI Leaders Portfolio::BRAINon::solana",
+      "currencyId": "Ondo AI Leaders Portfolio::BRAINon",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "BRAIN"
         },
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
@@ -18087,7 +18314,7 @@
     "CYAwMGyuNSDu7NpuccNwcxMNS5Bu9akxU2Jooyiondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "Franklin Focused Growth ETF (Ondo Tokenized)",
       "address": "CYAwMGyuNSDu7NpuccNwcxMNS5Bu9akxU2Jooyiondo",
       "symbol": "FFOGon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/ffogon_160x160.png",
@@ -18131,7 +18358,7 @@
     "CYqLHM92EhmF83iNgfN4A1j2ckjsHigRvXu7xHCondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "Franklin Responsibly Sourced Gold ETF (Ondo Tokenized)",
       "address": "CYqLHM92EhmF83iNgfN4A1j2ckjsHigRvXu7xHCondo",
       "symbol": "FGDLon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/fgdlon_160x160.png",
@@ -18151,7 +18378,7 @@
     "CZ3FxxSto7tsjkSkqMek1C5p3RCFFmkwKqW57nbondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "Franklin High Yield Corporate ETF (Ondo Tokenized)",
       "address": "CZ3FxxSto7tsjkSkqMek1C5p3RCFFmkwKqW57nbondo",
       "symbol": "FLHYon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/flhyon_160x160.png",
@@ -18254,7 +18481,10 @@
           "underlyingAsset": "GvEMgNT6GKiYTvg7TskDio6RKzQdCuhwmH55tVCLaJTe",
           "platform": "dawn"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "dawn", "name": "DAWN", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "CashcatZMRn4Jv8sPQZUSsbTLi2PcPe1ssqbHcnaJqSS": {
@@ -18661,6 +18891,17 @@
       "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/QmPgzimWXh4xZeTMkLHSJ97kgCtT2NCS9BbGr1dmhSJdi5.webp",
       "assetGroup": "Tema::TEMA::solana",
       "currencyId": "Tema::TEMA",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Y10k GMTrade MetaVault",
+      "address": "CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs",
+      "symbol": "y10kGMV",
+      "logoURI": "https://imagedelivery.net/JKqfgGWnlUbSJb3LhpWg6w/04e323ee-0c2d-4a2c-c072-177dbcaabf00/public",
+      "assetGroup": "Y10k GMTrade MetaVault::y10kGMV::solana",
+      "currencyId": "Y10k GMTrade MetaVault::y10kGMV",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "CniPCE4b3s8gSUPhUiyMjXnytrEqUrMfSsnbBjLCpump": {
@@ -19369,7 +19610,15 @@
           "orderbookAddress": "Ehm2gqCRymibPyRf9CTz2C6F4h4mJ6HF5Nv3uB7tvqgJ",
           "platform": "solstice"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "solstice",
+            "name": "Solstice",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "D8KT4Jd8qiKKTfkM8ejSKCpWGR1o3GFvnQGp5ERondo": {
@@ -19689,6 +19938,17 @@
         }
       }
     },
+    "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Super Inu",
+      "address": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+      "symbol": "SI",
+      "logoURI": "https://axiomtrading.sfo3.cdn.digitaloceanspaces.com/7ovByu4CKE2ogdbYTRx8o9z1XarkNMA3hXyxThWamoon.webp",
+      "assetGroup": "Super Inu::SI::solana",
+      "currencyId": "Super Inu::SI",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
     "DEf93bSt8dx58gDFCcz4CwbjYZzjwaRBYAciJYLfdCA9": {
       "chainId": "solana",
       "decimals": 6,
@@ -19956,6 +20216,17 @@
       "assetGroup": "The Black Calf::BABYANSEM::solana",
       "currencyId": "The Black Calf::BABYANSEM",
       "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
+    "DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Gamma Research USDC Vault",
+      "address": "DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x",
+      "symbol": "upGammaUSD",
+      "logoURI": "https://imagedelivery.net/JKqfgGWnlUbSJb3LhpWg6w/a4149528-4dc0-43f7-1895-c0aa0b293d00/public",
+      "assetGroup": "Gamma Research USDC Vault::upGammaUSD::solana",
+      "currencyId": "Gamma Research USDC Vault::upGammaUSD",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "DM3Y4R7n1HGhP9AkNT6Ex4w1qQTpgq1TyujrMDX11FMT": {
       "chainId": "solana",
@@ -23514,6 +23785,29 @@
       "currencyId": "Fragmetric::FRAG",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Fragmetric Restaked SOL",
+      "address": "FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo",
+      "symbol": "fragSOL",
+      "logoURI": "https://fragmetric-assets.s3.ap-northeast-2.amazonaws.com/fragsol.png",
+      "assetGroup": "Fragmetric Restaked SOL::fragSOL::solana",
+      "currencyId": "Fragmetric Restaked SOL::fragSOL",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "lst": {
+          "type": "restaking",
+          "asset": "SOL",
+          "provider": "fragmetric"
+        },
+        "issuer": {
+          "id": "fragmetric",
+          "name": "Fragmetric",
+          "kind": "protocol"
+        }
+      }
+    },
     "FRmH6iRkMr33DLG6zVLR7EM4LojBFAuq6NtFzG6ondo": {
       "chainId": "solana",
       "decimals": 9,
@@ -24883,28 +25177,6 @@
       "currencyId": "TrenchBuddy::TRENCH",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
-    "DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x": {
-      "chainId": "solana",
-      "decimals": 6,
-      "name": "Gamma Research USDC Vault",
-      "address": "DM1tChyt4i988nhqrUs4iog96jXeRaGCas6MgR9iMe3x",
-      "symbol": "upGammaUSD",
-      "logoURI": "https://imagedelivery.net/JKqfgGWnlUbSJb3LhpWg6w/a4149528-4dc0-43f7-1895-c0aa0b293d00/public",
-      "assetGroup": "Gamma Research USDC Vault::upGammaUSD::solana",
-      "currencyId": "Gamma Research USDC Vault::upGammaUSD",
-      "props": { "solana": { "tokenProgram": "spl-token" } }
-    },
-    "CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs": {
-      "chainId": "solana",
-      "decimals": 6,
-      "name": "Y10k GMTrade MetaVault",
-      "address": "CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs",
-      "symbol": "y10kGMV",
-      "logoURI": "https://imagedelivery.net/JKqfgGWnlUbSJb3LhpWg6w/04e323ee-0c2d-4a2c-c072-177dbcaabf00/public",
-      "assetGroup": "Y10k GMTrade MetaVault::y10kGMV::solana",
-      "currencyId": "Y10k GMTrade MetaVault::y10kGMV",
-      "props": { "solana": { "tokenProgram": "spl-token" } }
-    },
     "GArhnnDj3GYhmQeApKVXaRv4TQFwhPcs3SNF6FXsTeXq": {
       "chainId": "solana",
       "decimals": 6,
@@ -25608,6 +25880,17 @@
       "currencyId": "wrapped dog::wDOG",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "GYYCX5q47qDU7ctwCjZv7KKgW2L3788f4vtdR3Kjmeta": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "The Inner Table",
+      "address": "GYYCX5q47qDU7ctwCjZv7KKgW2L3788f4vtdR3Kjmeta",
+      "symbol": "POKER",
+      "logoURI": "https://imagedelivery.net/HYEnlujCFMCgj6yA728xIw/2ea7f24b-3211-46e6-f65a-f1de3a647400/public",
+      "assetGroup": "The Inner Table::POKER::solana",
+      "currencyId": "The Inner Table::POKER",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
     "GZ8v4NdSG7CTRZqHMgNsTPRULeVi8CpdWd9wZY8ondo": {
       "chainId": "solana",
       "decimals": 9,
@@ -26176,6 +26459,17 @@
       "currencyId": "Grass::GRASS",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "GtV6g1ey2NERrcbvL5bdzrxRJQDfxpMaLU9oLtRipump": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "CROW",
+      "address": "GtV6g1ey2NERrcbvL5bdzrxRJQDfxpMaLU9oLtRipump",
+      "symbol": "CROW",
+      "logoURI": "https://amber-occupational-whale-236.mypinata.cloud/ipfs/bafybeic3zdcwrqr2pxa6427iidbaiyy2l4vayfvshdgq6f6k6xdlpt6md4",
+      "assetGroup": "CROW::CROW::solana",
+      "currencyId": "CROW::CROW",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
     "Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump": {
       "chainId": "solana",
       "decimals": 6,
@@ -26210,9 +26504,9 @@
       "assetGroup": "sUSD.infra::sUSD.infra::solana",
       "currencyId": "sUSD.infra::sUSD.infra",
       "props": {
+        "solana": { "tokenProgram": "token-2022" },
         "savings": { "underlying": "USD.infra", "base": "USD" },
-        "issuer": { "id": "dawn", "name": "DAWN", "kind": "protocol" },
-        "solana": { "tokenProgram": "token-2022" }
+        "issuer": { "id": "dawn", "name": "DAWN", "kind": "protocol" }
       }
     },
     "GvJ8HtPYqaNDTn21NVjzvGwAGtASPCWctSMhQJ9uQzZb": {
@@ -26236,7 +26530,15 @@
           "orderbookAddress": "Ehm2gqCRymibPyRf9CTz2C6F4h4mJ6HF5Nv3uB7tvqgJ",
           "platform": "solstice"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "solstice",
+            "name": "Solstice",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "GvV7sFu6FHJsSVXfpG7xqFnWar3c7YkcC74rqe7Bpump": {
@@ -26329,8 +26631,8 @@
       "assetGroup": "Solstice stSLX::stSLX::solana",
       "currencyId": "Solstice stSLX::stSLX",
       "props": {
-        "issuer": { "id": "solstice", "name": "Solstice", "kind": "protocol" },
-        "solana": { "tokenProgram": "token-2022" }
+        "solana": { "tokenProgram": "token-2022" },
+        "issuer": { "id": "solstice", "name": "Solstice", "kind": "protocol" }
       }
     },
     "GxdTh6udNstGmLLk9ztBb6bkrms7oLbrJp5yzUaVpump": {
@@ -27592,7 +27894,7 @@
       "name": "Veil",
       "address": "HgTGdc29D5bDMrDvsCLnorxz899VyDj7ZN7FPa6vpump",
       "symbol": "VEIL",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/ipfs/bafkreighorfvr5l7sujpr4gtwegkzcklgoxwnici2yz6ynpfrgwinkyzmq.webp",
+      "logoURI": "https://i.ibb.co/Q3SbvD5n/Veil-Logo-Lilac-1024.png",
       "assetGroup": "Veil::VEIL::solana",
       "currencyId": "Veil::VEIL",
       "props": { "solana": { "tokenProgram": "token-2022" } }
@@ -27675,7 +27977,10 @@
           "orderbookAddress": "DD8vh2zxJ8HAcWu2GqHdwTTsX3bbGqhjtec5aAgqRepB",
           "platform": "dawn"
         },
-        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" }
+        "issuer": { "id": "exponent", "name": "Exponent", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "dawn", "name": "DAWN", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "HiMSSzzwkZkrXJ4PGVJRdtfLaANeAztjjcgk5Dxe7Lwx": {
@@ -29033,11 +29338,7 @@
           "issuer": "ondo",
           "underlying": "TLT"
         },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "KcCVQxG9LhFYP5o9DWFKTFgFShPPQkDEemVbiFyondo": {
@@ -29378,6 +29679,25 @@
       "currencyId": "Loyal::LOYAL",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "LZ6kyzBEniNHQ57cj8KAbkwtXxYbhQDKBQJo5npondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo 8 Targeted Income TR Portfolio",
+      "address": "LZ6kyzBEniNHQ57cj8KAbkwtXxYbhQDKBQJo5npondo",
+      "symbol": "YLD8on",
+      "assetGroup": "Ondo 8 Targeted Income TR Portfolio::YLD8on::solana",
+      "currencyId": "Ondo 8 Targeted Income TR Portfolio::YLD8on",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "YLD8"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
     "LZddqAqKqJW9oMZSjTxCUmbmzBRQtv9gMkD9hZ3ondo": {
       "chainId": "solana",
       "decimals": 9,
@@ -29650,6 +29970,30 @@
       "currencyId": "META::META",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "METAaH6MMZZgy2CTEJq3QdNi7AFVTV3NxHFBfFgLEDd": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Meta Platforms - Backpack Securities",
+      "address": "METAaH6MMZZgy2CTEJq3QdNi7AFVTV3NxHFBfFgLEDd",
+      "symbol": "META",
+      "logoURI": "https://backpack.exchange/api/stock-logo/META",
+      "assetGroup": "Meta Platforms - Backpack Securities::META::solana",
+      "currencyId": "Meta Platforms - Backpack Securities::META",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backpack",
+          "underlying": "META"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
+        }
+      }
+    },
     "METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m": {
       "chainId": "solana",
       "decimals": 6,
@@ -29736,6 +30080,25 @@
           "name": "Backpack",
           "kind": "institution"
         }
+      }
+    },
+    "MH63ApKFAH68mTP8M5ofkioN6AomPCV8Ar35dtRondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo Diversified Growth Powered by BlackRock",
+      "address": "MH63ApKFAH68mTP8M5ofkioN6AomPCV8Ar35dtRondo",
+      "symbol": "BLKDIGon",
+      "assetGroup": "Ondo Diversified Growth Powered by BlackRock::BLKDIGon::solana",
+      "currencyId": "Ondo Diversified Growth Powered by BlackRock::BLKDIGon",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "BLKDIG"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "MLLWWq9TLHK3oQznWqwPyqD7kH4LXTHSKXK4yLz7LjD": {
@@ -31177,6 +31540,17 @@
         }
       }
     },
+    "RUNNQtDphey3pVpixR4zvkNESQZp3CZw7fnRKThNERS": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Runners",
+      "address": "RUNNQtDphey3pVpixR4zvkNESQZp3CZw7fnRKThNERS",
+      "symbol": "RUNNERS",
+      "logoURI": "https://runners-v1.mypinata.cloud/ipfs/bafybeigkplmv2los5nnprydquk52deo4jj7qips26ezll7gop6zfhu4euy",
+      "assetGroup": "Runners::RUNNERS::solana",
+      "currencyId": "Runners::RUNNERS",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
     "Ra1so1sTkvX3PorAM9ewqrsUMz9sPSbfFZ5oZUjN4oc": {
       "chainId": "solana",
       "decimals": 9,
@@ -31928,6 +32302,30 @@
       "currencyId": "Tensor::TNSR",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "TSLAqBbv4CNCnzWFeB7LmydAyEiNMJtve7DYKLpdK4S": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Tesla - Backpack Securities",
+      "address": "TSLAqBbv4CNCnzWFeB7LmydAyEiNMJtve7DYKLpdK4S",
+      "symbol": "TSLA",
+      "logoURI": "https://backpack.exchange/api/stock-logo/TSLA",
+      "assetGroup": "Tesla - Backpack Securities::TSLA::solana",
+      "currencyId": "Tesla - Backpack Securities::TSLA",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backpack",
+          "underlying": "TSLA"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
+        }
+      }
+    },
     "TSM2Hiuf7Z9REcwZFQvsBEekBYCYziWBABfFnj6V6gQ": {
       "chainId": "solana",
       "decimals": 6,
@@ -32243,6 +32641,30 @@
           "subType": "etf",
           "issuer": "backpack",
           "underlying": "USO"
+        },
+        "issuer": {
+          "id": "backpack",
+          "name": "Backpack",
+          "kind": "institution"
+        }
+      }
+    },
+    "UVXY4ojmAMTaPwUmrRmcuxWHjMHCbz3BxX2RBMzjYKx": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "ProShares Ultra VIX Short-Term Futures ETF - Backpack Securities",
+      "address": "UVXY4ojmAMTaPwUmrRmcuxWHjMHCbz3BxX2RBMzjYKx",
+      "symbol": "UVXY",
+      "logoURI": "https://backpack.exchange/api/stock-logo/UVXY",
+      "assetGroup": "ProShares Ultra VIX Short-Term Futures ETF - Backpack Securities::UVXY::solana",
+      "currencyId": "ProShares Ultra VIX Short-Term Futures ETF - Backpack Securities::UVXY",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "backpack",
+          "underlying": "UVXY"
         },
         "issuer": {
           "id": "backpack",
@@ -32956,6 +33378,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "MAT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "Xs1CqRVt2mGVfMSHf7M6cDhkjpw8HDF14XbQNzDnGg4": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Duolingo xStock",
+      "address": "Xs1CqRVt2mGVfMSHf7M6cDhkjpw8HDF14XbQNzDnGg4",
+      "symbol": "DUOLx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/DUOLx.png",
+      "assetGroup": "Duolingo xStock::DUOLX",
+      "currencyId": "Duolingo xStock::DUOLx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "DUOL"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -33996,6 +34438,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "SNOW"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "Xs3Ua6kidjrV2EApMQMhNVnMfaumDXY7ZGWxwKfVtyP": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Zalando xStock",
+      "address": "Xs3Ua6kidjrV2EApMQMhNVnMfaumDXY7ZGWxwKfVtyP",
+      "symbol": "ZAL.DEx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/ZAL.DEx.png",
+      "assetGroup": "Zalando xStock::ZAL.DEx::solana",
+      "currencyId": "Zalando xStock::ZAL.DEx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ZAL.DE"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -35160,6 +35622,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "Xs5ywCCaayf3TFdxFxuJCr25XMoqY6vdfJKkSHE4D6r": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "BlackRock xStock",
+      "address": "Xs5ywCCaayf3TFdxFxuJCr25XMoqY6vdfJKkSHE4D6r",
+      "symbol": "BLKx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/BLKx.png",
+      "assetGroup": "BlackRock xStock::BLKX",
+      "currencyId": "BlackRock xStock::BLKx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "BLK"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "Xs61MkDiQRGDTskN6farB7Ehnj3KayM3PnuRjaWFHWi": {
       "chainId": "solana",
       "decimals": 8,
@@ -35816,6 +36298,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "AI"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "Xs7R3jaM82u5LX176h2HpW1UpFay5TmktZLkghi7LvW": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "ACS Actividades de Construccion y Servicios xStock",
+      "address": "Xs7R3jaM82u5LX176h2HpW1UpFay5TmktZLkghi7LvW",
+      "symbol": "ACS.ESx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/ACS.ESx.png",
+      "assetGroup": "ACS Actividades de Construccion y Servicios xStock::ACS.ESx::solana",
+      "currencyId": "ACS Actividades de Construccion y Servicios xStock::ACS.ESx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ACS.ES"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -36756,6 +37258,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "HRB"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "Xs936JPaWKEXmpu54DZ149GETV7PmsnTqnMWxgcPNAj": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Vistra xStock",
+      "address": "Xs936JPaWKEXmpu54DZ149GETV7PmsnTqnMWxgcPNAj",
+      "symbol": "VSTx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/VSTx.png",
+      "assetGroup": "Vistra xStock::VSTX",
+      "currencyId": "Vistra xStock::VSTx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "VST"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -37880,6 +38402,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsBDbxRzdmvAxVQjPwxw3BmfFK1LomaWrWFtfhNFs5o": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Symrise xStock",
+      "address": "XsBDbxRzdmvAxVQjPwxw3BmfFK1LomaWrWFtfhNFs5o",
+      "symbol": "SY1x",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/SY1x.png",
+      "assetGroup": "Symrise xStock::SY1x::solana",
+      "currencyId": "Symrise xStock::SY1x",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "SY1"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsBE7iAzaJEBpSwG5JZ7zQTWNgTaerweBy7nJCachaJ": {
       "chainId": "solana",
       "decimals": 8,
@@ -38176,6 +38718,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "JMKE"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsBgbNRDujfznQq8P4NLKEkRTbPxUVt4v1xwkDzMMtQ": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Tempus AI xStock",
+      "address": "XsBgbNRDujfznQq8P4NLKEkRTbPxUVt4v1xwkDzMMtQ",
+      "symbol": "TEMx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/TEMx.png",
+      "assetGroup": "Tempus AI xStock::TEMX",
+      "currencyId": "Tempus AI xStock::TEMx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "TEM"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -39096,6 +39658,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "SON"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsDYSbgLh3T7oh59UmRX1F5WjDgJD3nmzACaG5LR1MB": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "eBay xStock",
+      "address": "XsDYSbgLh3T7oh59UmRX1F5WjDgJD3nmzACaG5LR1MB",
+      "symbol": "EBAYx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/EBAYx.png",
+      "assetGroup": "eBay xStock::EBAYX",
+      "currencyId": "eBay xStock::EBAYx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "EBAY"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -40740,6 +41322,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsHB8frhDWW3RJKWqdNVEbeoeb4GTb2NdNKxDy7mecm": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Henkel xStock",
+      "address": "XsHB8frhDWW3RJKWqdNVEbeoeb4GTb2NdNKxDy7mecm",
+      "symbol": "HEN3x",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/HEN3x.png",
+      "assetGroup": "Henkel xStock::HEN3x::solana",
+      "currencyId": "Henkel xStock::HEN3x",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "HEN3"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsHDarKydU1cD6MWMGUgN1cSbWPNUoZHM3GE6YaC7A7": {
       "chainId": "solana",
       "decimals": 8,
@@ -40756,6 +41358,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "RCL"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsHLQwsoerK6E5QHXgbpbCBtEXKhe9sYkY4FEnxYPgd": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Continental xStock",
+      "address": "XsHLQwsoerK6E5QHXgbpbCBtEXKhe9sYkY4FEnxYPgd",
+      "symbol": "CON.DEx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/CON.DEx.png",
+      "assetGroup": "Continental xStock::CON.DEx::solana",
+      "currencyId": "Continental xStock::CON.DEx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "CON.DE"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -40936,6 +41558,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "RPRX"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsHs3iYBnRi6odd4oLBnNfym6YmXQktgMMhdUh5NbW7": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Hannover Rueck xStock",
+      "address": "XsHs3iYBnRi6odd4oLBnNfym6YmXQktgMMhdUh5NbW7",
+      "symbol": "HNR1x",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/HNR1x.png",
+      "assetGroup": "Hannover Rueck xStock::HNR1x::solana",
+      "currencyId": "Hannover Rueck xStock::HNR1x",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "HNR1"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -41896,6 +42538,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "UAL"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsKsPamfryA5LSE9u8LHdwUwTY13W7sF42xz6soQR7w": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Hochtief xStock",
+      "address": "XsKsPamfryA5LSE9u8LHdwUwTY13W7sF42xz6soQR7w",
+      "symbol": "HOTx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/HOTx.png",
+      "assetGroup": "Hochtief xStock::HOTx::solana",
+      "currencyId": "Hochtief xStock::HOTx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "HOT"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -45180,6 +45842,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsRiRZg9NGkL3WEZZmqnxvxEoyeHG8LhgzMQF2HRE6F": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Bullish xStock",
+      "address": "XsRiRZg9NGkL3WEZZmqnxvxEoyeHG8LhgzMQF2HRE6F",
+      "symbol": "BLSHx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/BLSHx.png",
+      "assetGroup": "Bullish xStock::BLSHX",
+      "currencyId": "Bullish xStock::BLSHx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "BLSH"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsRifLZvp2XvCpPFQNK6XGTjHSL7sTZmmGyEs4NLAV2": {
       "chainId": "solana",
       "decimals": 8,
@@ -46240,6 +46922,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsTuW2zaiPbzgrnQ7b4Z99zeULMM7gPxppE61CtpyDj": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "S&P Global xStock",
+      "address": "XsTuW2zaiPbzgrnQ7b4Z99zeULMM7gPxppE61CtpyDj",
+      "symbol": "SPGIx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/SPGIx.png",
+      "assetGroup": "S&P Global xStock::SPGIX",
+      "currencyId": "S&P Global xStock::SPGIx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "SPGI"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsTz4WtoVEXfFTt9BeXWjgSHJVTQkguiaA8cGqMqauo": {
       "chainId": "solana",
       "decimals": 9,
@@ -46747,6 +47449,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsVB6LVx2CNYn45pGLz1QFmGtp57QmkNGUrRCzK2MMV": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Commerzbank xStock",
+      "address": "XsVB6LVx2CNYn45pGLz1QFmGtp57QmkNGUrRCzK2MMV",
+      "symbol": "CBK.DEx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/CBK.DEx.png",
+      "assetGroup": "Commerzbank xStock::CBK.DEx::solana",
+      "currencyId": "Commerzbank xStock::CBK.DEx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "CBK.DE"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsVBR2tUvSevnDpwctEEGbnLD1XuXFEkCHDzqAL5dBE": {
       "chainId": "solana",
       "decimals": 8,
@@ -47147,6 +47869,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsVujV4pTUpKppz44vC9GCafMxDManKz43E7bsXHmQB": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "GEA xStock",
+      "address": "XsVujV4pTUpKppz44vC9GCafMxDManKz43E7bsXHmQB",
+      "symbol": "G1Ax",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/G1Ax.png",
+      "assetGroup": "GEA xStock::G1Ax::solana",
+      "currencyId": "GEA xStock::G1Ax",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "G1A"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsW3j1wpNatuFdvkJVcSNsTzaDTDcSK4ytoAefKVWji": {
       "chainId": "solana",
       "decimals": 8,
@@ -47503,6 +48245,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "SUI"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsWbP9zRLF5i3N7oMvh9unjTGJ2BHkFAvef1ZbPca23": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Brenntag xStock",
+      "address": "XsWbP9zRLF5i3N7oMvh9unjTGJ2BHkFAvef1ZbPca23",
+      "symbol": "BNR.DEx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/BNR.DEx.png",
+      "assetGroup": "Brenntag xStock::BNR.DEx::solana",
+      "currencyId": "Brenntag xStock::BNR.DEx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "BNR.DE"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -50607,6 +51369,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XscWTDicuJBVAEdH2EFsdMuWHdXRtWc5bhGydcpMQDr": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Scout24 xStock",
+      "address": "XscWTDicuJBVAEdH2EFsdMuWHdXRtWc5bhGydcpMQDr",
+      "symbol": "G24x",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/G24x.png",
+      "assetGroup": "Scout24 xStock::G24x::solana",
+      "currencyId": "Scout24 xStock::G24x",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "G24"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XscYuBxzm8MrpZdAnfo5D5UTQdgQJirs45mB12bpLh6": {
       "chainId": "solana",
       "decimals": 8,
@@ -51567,6 +52349,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsesxTsqWLzkSW4vPsRwyQQnKjB7Y1ZCP1F2KS5FbPL": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Fresenius Medical Care xStock",
+      "address": "XsesxTsqWLzkSW4vPsRwyQQnKjB7Y1ZCP1F2KS5FbPL",
+      "symbol": "FMEx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/FMEx.png",
+      "assetGroup": "Fresenius Medical Care xStock::FMEx::solana",
+      "currencyId": "Fresenius Medical Care xStock::FMEx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "FME"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XseurSPz9hnmd6k1eQT52a8QC53QcoCoD4qVbPmWzCC": {
       "chainId": "solana",
       "decimals": 8,
@@ -52043,6 +52845,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "SHW"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsfhCNp1soH7UaKwWCTiBiAa51n73XGY1pNLJDVrFNc": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Beiersdorf xStock",
+      "address": "XsfhCNp1soH7UaKwWCTiBiAa51n73XGY1pNLJDVrFNc",
+      "symbol": "BEIx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/BEIx.png",
+      "assetGroup": "Beiersdorf xStock::BEIx::solana",
+      "currencyId": "Beiersdorf xStock::BEIx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "BEI"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -53927,6 +54749,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XsjXR5jf4d4GNpJXwLvEBTMwK3ZYro2qZGgvUCzyJrx": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Target xStock",
+      "address": "XsjXR5jf4d4GNpJXwLvEBTMwK3ZYro2qZGgvUCzyJrx",
+      "symbol": "TGTx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/TGTx.png",
+      "assetGroup": "Target xStock::TGTX",
+      "currencyId": "Target xStock::TGTx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "TGT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "XsjZ8V6qPBNbhXeFawPssBPUW8f7Sv39uxEnzxCboTq": {
       "chainId": "solana",
       "decimals": 8,
@@ -54983,6 +55825,26 @@
           "subType": "stock",
           "issuer": "backed",
           "underlying": "WRB"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "XsnH7ygRhCXD5fHcXNarwXpVYyrSfypg5w67neevWf7": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Qiagen xStock",
+      "address": "XsnH7ygRhCXD5fHcXNarwXpVYyrSfypg5w67neevWf7",
+      "symbol": "QIA.DEx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/QIA.DEx.png",
+      "assetGroup": "Qiagen xStock::QIA.DEx::solana",
+      "currencyId": "Qiagen xStock::QIA.DEx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "QIA.DE"
         },
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
@@ -57987,6 +58849,26 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "XssfYT48PeXG2EmNdEaVtQcveNhxYnM42KTqdjmiBS9": {
+      "chainId": "solana",
+      "decimals": 8,
+      "name": "Figma xStock",
+      "address": "XssfYT48PeXG2EmNdEaVtQcveNhxYnM42KTqdjmiBS9",
+      "symbol": "FIGx",
+      "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/FIGx.png",
+      "assetGroup": "Figma xStock::FIGX",
+      "currencyId": "Figma xStock::FIGx",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "FIG"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "Xsspestq9YiZofYG2pvuHgYM1aKdRNocveBodzrGjbg": {
       "chainId": "solana",
       "decimals": 8,
@@ -60934,7 +61816,7 @@
       "address": "Xsy66wss7g59sgVeeCGvC1fDujEZcHgFMQxXPWgaDhF",
       "symbol": "WBSx",
       "logoURI": "https://xstocks-metadata.backed.fi/logos/tokens/WBSx.png",
-      "assetGroup": "Webster Financial xStock::WBSx::solana",
+      "assetGroup": "Webster Financial xStock::WBSX",
       "currencyId": "Webster Financial xStock::WBSx",
       "props": {
         "solana": { "tokenProgram": "token-2022" },
@@ -62021,7 +62903,7 @@
     "YuFZvc8JCN3a6BUAqwnbY4AnhuVEXD4V7QnBTmwondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "Applied Optoelectronics (Ondo Tokenized)",
       "address": "YuFZvc8JCN3a6BUAqwnbY4AnhuVEXD4V7QnBTmwondo",
       "symbol": "AAOIon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/aaoion_160x160.png",
@@ -62168,11 +63050,7 @@
           "issuer": "ondo",
           "underlying": "HYGW"
         },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "ZNkQTVtc4WRMQfVCC23PmwYX41577tPcvs2AiXAondo": {
@@ -62339,7 +63217,7 @@
     "ZjYCwYeG85TbV5oXkCkvWQTNPh2PgTQ8X4nxpbyondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "TE Connectivity (Ondo Tokenized)",
       "address": "ZjYCwYeG85TbV5oXkCkvWQTNPh2PgTQ8X4nxpbyondo",
       "symbol": "TELon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/telon_160x160.png",
@@ -63049,6 +63927,25 @@
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
+    "bBrSYBsz4GncqiyGzVL4aVrhbmWY3pFHdkxshTpondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo High Income Powered by BlackRock",
+      "address": "bBrSYBsz4GncqiyGzVL4aVrhbmWY3pFHdkxshTpondo",
+      "symbol": "BLKHIon",
+      "assetGroup": "Ondo High Income Powered by BlackRock::BLKHIon::solana",
+      "currencyId": "Ondo High Income Powered by BlackRock::BLKHIon",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "BLKHI"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
     "bD6TafGhPo8NaeKEyge1DrZGAPB5wxK3x4fCpqjondo": {
       "chainId": "solana",
       "decimals": 9,
@@ -63651,11 +64548,7 @@
           "issuer": "ondo",
           "underlying": "IEMG"
         },
-        "issuer": {
-          "id": "blackrock",
-          "name": "Blackrock",
-          "kind": "institution"
-        }
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "cfPLN9WXD2BTkbZhRZMVXPmVSiRo44hJWRtnaC8ondo": {
@@ -63997,7 +64890,8 @@
       "currencyId": "USD.infra::USD.infra",
       "props": {
         "solana": { "tokenProgram": "token-2022" },
-        "stablecoin": { "base": "USD" }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "dawn", "name": "DAWN", "kind": "protocol" }
       }
     },
     "dbcMcw2pC8EDt5eiYMiMBwe35mCWK4hRpec98bKAjML": {
@@ -64812,7 +65706,7 @@
     "fcfpT8y5fpEBJjqmjKLpscZYzVjxR95ErJsb31jondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "iShares Floating Rate Loan Active ETF (Ondo Tokenized)",
       "address": "fcfpT8y5fpEBJjqmjKLpscZYzVjxR95ErJsb31jondo",
       "symbol": "BRLNon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/brlnon_160x160.png",
@@ -65792,6 +66686,21 @@
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
+    "i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Ondo Short-Term US Gov Bond Fund",
+      "address": "i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc",
+      "symbol": "OUSG",
+      "logoURI": "https://5juhzkqm6mvqnpvjr52kix442ngrtwxcrbr6f7fbecqv2hpx2ekq.arweave.net/6mh8qgzzKwa-qY90pF-c000Z2uKIY-L8oSChXR330RU",
+      "assetGroup": "Ondo Short-Term US Government Treasuries::OUSG",
+      "currencyId": "Ondo Short-Term US Gov Bond Fund::OUSG",
+      "props": {
+        "solana": { "tokenProgram": "spl-token" },
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "ondo" },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
     "iFcwEB2LfeYLWKgZ2vogEzC5dP7s7xbhVX81XFwondo": {
       "chainId": "solana",
       "decimals": 9,
@@ -66159,7 +67068,7 @@
     "ivnSAcjCqEtWYTKFbqYe8YoqRZqCBfT4BGP5G1nondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "Direxion Daily Semi Bear 3X ETF (Ondo Tokenized)",
       "address": "ivnSAcjCqEtWYTKFbqYe8YoqRZqCBfT4BGP5G1nondo",
       "symbol": "SOXSon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/soxson_160x160.png",
@@ -67913,6 +68822,25 @@
       "currencyId": "Octokn::OTK",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "ofe6mC87qNGYgSr9Ps7wMVVSbUFvpcJDDxskPrqondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo 5 Targeted Income TR Portfolio",
+      "address": "ofe6mC87qNGYgSr9Ps7wMVVSbUFvpcJDDxskPrqondo",
+      "symbol": "YLD5on",
+      "assetGroup": "Ondo 5 Targeted Income TR Portfolio::YLD5on::solana",
+      "currencyId": "Ondo 5 Targeted Income TR Portfolio::YLD5on",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "YLD5"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
     "omfgRBnxHsNJh6YeGbGAmWenNkenzsXyBXm3WDhmeta": {
       "chainId": "solana",
       "decimals": 6,
@@ -68012,7 +68940,7 @@
       "name": "ORE",
       "address": "oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp",
       "symbol": "ORE",
-      "logoURI": "https://ore.supply/assets/icon.png",
+      "logoURI": "https://ore.com/assets/icon.png",
       "assetGroup": "ORE::ORE::solana",
       "currencyId": "ORE::ORE",
       "props": { "solana": { "tokenProgram": "spl-token" } }
@@ -68232,6 +69160,25 @@
         "lst": { "type": "staking", "asset": "SOL" }
       }
     },
+    "pvC4ogQRN4QtVwEVEB4gW1WADLCFkcTNuxvYVixondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo Magnificent 7 and Crypto Portfolio",
+      "address": "pvC4ogQRN4QtVwEVEB4gW1WADLCFkcTNuxvYVixondo",
+      "symbol": "MAG7Xon",
+      "assetGroup": "Ondo Magnificent 7 and Crypto Portfolio::MAG7Xon::solana",
+      "currencyId": "Ondo Magnificent 7 and Crypto Portfolio::MAG7Xon",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "MAG7X"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
     "q16ZLSbANUhpcq15pRUXRxNFfEqgpde9mSBwRcyondo": {
       "chainId": "solana",
       "decimals": 9,
@@ -68336,6 +69283,25 @@
             }
           ]
         }
+      }
+    },
+    "qr13tSwtPWKTgYQqf6XM8YoT5LrbFgacpVUupfEondo": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Ondo High Growth Powered by BlackRock",
+      "address": "qr13tSwtPWKTgYQqf6XM8YoT5LrbFgacpVUupfEondo",
+      "symbol": "BLKGRWon",
+      "assetGroup": "Ondo High Growth Powered by BlackRock::BLKGRWon::solana",
+      "currencyId": "Ondo High Growth Powered by BlackRock::BLKGRWon",
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "BLKGRW"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
     "quantoL84tL1HvygKcz3TJtWRU6dFPW8imMzCa4qxGW": {
@@ -69196,6 +70162,17 @@
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
+    "t9bnCGiZVUYsRKvx4d5dPcoDCSyuBM9C33ZNGNULARP": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Larpcheck",
+      "address": "t9bnCGiZVUYsRKvx4d5dPcoDCSyuBM9C33ZNGNULARP",
+      "symbol": "LARPCHECK",
+      "logoURI": "https://gateway.pinata.cloud/ipfs/bafkreie6vxbts23b7irciuie7jw4qappwvnsod6535i4l6ag3afgv45sxu",
+      "assetGroup": "Larpcheck::LARPCHECK::solana",
+      "currencyId": "Larpcheck::LARPCHECK",
+      "props": { "solana": { "tokenProgram": "token-2022" } }
+    },
     "tSATdGGSLYBVCrm3pXiib8NmzKcB1iUdjRRseNGssxu": {
       "chainId": "solana",
       "decimals": 2,
@@ -69749,7 +70726,7 @@
     "vZVGEJfSM1hS4XdFVAZL2Fr1cbPzJty9vWyax68ondo": {
       "chainId": "solana",
       "decimals": 9,
-      "name": "",
+      "name": "Strive Preferred (Ondo Tokenized)",
       "address": "vZVGEJfSM1hS4XdFVAZL2Fr1cbPzJty9vWyax68ondo",
       "symbol": "SATAon",
       "logoURI": "https://cdn.ondo.finance/tokens/logos/sataon_160x160.png",
@@ -69805,7 +70782,11 @@
       "symbol": "BIRDon",
       "assetGroup": "Smartbird (Ondo Tokenized)::BIRDon::solana",
       "currencyId": "Smartbird (Ondo Tokenized)::BIRDon",
-      "props": { "solana": { "tokenProgram": "token-2022" } }
+      "props": {
+        "solana": { "tokenProgram": "token-2022" },
+        "rwa": { "type": "equity", "subType": "stock", "issuer": "ondo" },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "wCr7YFeYDWyYSebsoMY75g8c9pguGeVB3rT6kYjondo": {
       "chainId": "solana",
@@ -69878,6 +70859,17 @@
       "logoURI": "https://arweave.net/jRpN9SLH1m5uNVSGGwJ9P2YAL6cDAfcx43rlxoQh3lc",
       "assetGroup": "WHISP::WHISP::solana",
       "currencyId": "WHISP::WHISP",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
+    "woonTsvfVDLMB5xXvtR446AwCgsRzBDDtya6USaNWUG": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "Woon",
+      "address": "woonTsvfVDLMB5xXvtR446AwCgsRzBDDtya6USaNWUG",
+      "symbol": "WOON",
+      "logoURI": "https://coin-images.coingecko.com/coins/images/102172861/large/69dc85b46c8f1d9af49d49d4_woon_eyes_white.png",
+      "assetGroup": "Woon::WOON::solana",
+      "currencyId": "Woon::WOON",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "wtwpt5yJbButAhjpYhtg4uvUgCQN4LVgvLq2AxEondo": {
@@ -70104,6 +71096,17 @@
       "currencyId": "DOGE MASCOT::SHIBU",
       "props": { "solana": { "tokenProgram": "spl-token" } }
     },
+    "yHRM4iRiWEDbknHazSUAfaqaL1E3KTKx28owt3nF5hN": {
+      "chainId": "solana",
+      "decimals": 9,
+      "name": "Palermo Football Club",
+      "address": "yHRM4iRiWEDbknHazSUAfaqaL1E3KTKx28owt3nF5hN",
+      "symbol": "PMO",
+      "logoURI": "https://assets.chiliz.com/currency/ed950729-71d5-4cb2-ab38-35dfe41c5492/currency_logo/f254bc38-a980-448e-9f7d-ae024a925a48.png",
+      "assetGroup": "Palermo Football Club::PMO::solana",
+      "currencyId": "Palermo Football Club::PMO",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
+    },
     "yLUD35WTiPLEY6DUqEj5W2JVXF2DfKB5arPkKJXpump": {
       "chainId": "solana",
       "decimals": 6,
@@ -70184,6 +71187,17 @@
         "solana": { "tokenProgram": "spl-token" },
         "lst": { "type": "staking", "asset": "SOL" }
       }
+    },
+    "ysPp2Bt2j2UQu2tZwtSJz7JxyrmQ8GJcNJE5NyDoS5a": {
+      "chainId": "solana",
+      "decimals": 6,
+      "name": "MUSK Index",
+      "address": "ysPp2Bt2j2UQu2tZwtSJz7JxyrmQ8GJcNJE5NyDoS5a",
+      "symbol": "MUSK4",
+      "logoURI": "https://assets.diversifi.trade/basket_images/diversifi/musk4.svg",
+      "assetGroup": "MUSK Index::MUSK4::solana",
+      "currencyId": "MUSK Index::MUSK4",
+      "props": { "solana": { "tokenProgram": "spl-token" } }
     },
     "yso11zxLbHA3wBJ9HAtVu6wnesqz9A2qxnhxanasZ4N": {
       "chainId": "solana",
@@ -70278,40 +71292,17 @@
         "solana": { "tokenProgram": "spl-token" },
         "lst": { "type": "staking", "asset": "SOL" }
       }
-    },
-    "FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo": {
-      "chainId": "solana",
-      "decimals": 9,
-      "name": "Fragmetric Restaked SOL",
-      "address": "FRAGSEthVFL7fdqM8hxfxkfCZzUvmg21cqPJVvC1qdbo",
-      "symbol": "fragSOL",
-      "logoURI": "https://fragmetric-assets.s3.ap-northeast-2.amazonaws.com/fragsol.png",
-      "assetGroup": "Fragmetric Restaked SOL::fragSOL::solana",
-      "currencyId": "Fragmetric Restaked SOL::fragSOL",
-      "props": {
-        "solana": { "tokenProgram": "token-2022" },
-        "lst": {
-          "type": "restaking",
-          "asset": "SOL",
-          "provider": "fragmetric"
-        },
-        "issuer": {
-          "id": "fragmetric",
-          "name": "Fragmetric",
-          "kind": "protocol"
-        }
-      }
     }
   },
   "mainTokens": [
-    "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
     "BNso1VUJnh4zcfpZa6986Ea66P6TCp59hvtNJ8b1X85",
+    "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
     "So11111111111111111111111111111111111111112",
     "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v",
     "9BEcn9aPEmhSPbPQeFGjidRiEKki46fVQDyPpSQXPA2D",
     "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-    "Dso1bDeDjCQxTrWHqUUi63oBvV7Mdm6WaobLbQ7gnPQ",
     "cPQPBN7WubB3zyQDpzTK2ormx1BMdAym9xkrYUJsctm",
+    "Dso1bDeDjCQxTrWHqUUi63oBvV7Mdm6WaobLbQ7gnPQ",
     "mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So",
     "sctmB7GPi5L2Q5G9tUSzXvhZ4YiDMEGcRov9KfArQpx",
     "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
@@ -70333,6 +71324,6 @@
     "pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn",
     "3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh",
     "2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH",
-    "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"
+    "DEF1NXSZ8Th9n28hYBayrFtx9bj1EwwTiy3mhHEB9oyA"
   ]
 }

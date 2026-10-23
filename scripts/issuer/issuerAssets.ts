@@ -539,6 +539,35 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Fidelity Digital Dollar::FIDD': { id: 'fidelity', name: 'Fidelity', kind: 'institution' },
   'Ondo U.S. Dollar Token::USDON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
   'Ondo U.S. Dollar Token::USDon': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  // Ondo's rebasing wrappers of USDY ($1 per token, yield paid as balance): each contract's
+  // `usdy()` returns its chain's USDY — Ethereum rUSDY 0xaf37… → 0x96f6… (USDY), Mantle mUSD
+  // 0xab57… → 0x5be2… (USDY), read 2026-10-23. Ondo's credit, held through Ondo's own wrapper.
+  'Ondo U.S. Dollar Yield (Rebasing)::rUSDY': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Mantle USD::mUSD': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  // Ondo Global Markets' portfolio baskets and private-market note: Ondo-named products on
+  // 1 / 56, no `(Ondo Tokenized)` suffix for the rwa name rule to see. Icons: Ondo's own CDN
+  // (cdn.ondo.finance/tokens/logos/) serves one image per family, so the shared marks are Ondo's.
+  'Ondo Magnificent 7 and Crypto Portfolio::MAG7XON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo AI Leaders Portfolio::BRAINON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo 5 Targeted Income TR Portfolio::YLD5ON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo 8 Targeted Income TR Portfolio::YLD8ON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo High Income Powered by BlackRock::BLKHION': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo Diversified Growth Powered by BlackRock::BLKDIGON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo High Growth Powered by BlackRock::BLKGRWON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'OpenAI (Ondo Private Market Note)::OPAIPON': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  // Solana BIRDon: Jupiter-verified but untagged (no `rwa`/`ondo` tag), so the tag-gated rule
+  // never fires and the mint stays `::solana`-scoped. Same mint authority (9foMHsSD…) and freeze
+  // authority (51QVCuHf…) as every Ondo GM mint (AAPLon, ECHon), read 2026-10-23.
+  'Smartbird (Ondo Tokenized)::BIRDon::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  // The same portfolio baskets on Solana: Jupiter-verified mints (`…ondo` vanity, Ondo's mint
+  // authority 9foMHsSD…) with no cross-chain join, so each keeps its `::solana` group.
+  'Ondo 5 Targeted Income TR Portfolio::YLD5on::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo 8 Targeted Income TR Portfolio::YLD8on::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo AI Leaders Portfolio::BRAINon::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo Diversified Growth Powered by BlackRock::BLKDIGon::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo High Growth Powered by BlackRock::BLKGRWon::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo High Income Powered by BlackRock::BLKHIon::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
+  'Ondo Magnificent 7 and Crypto Portfolio::MAG7Xon::solana': { id: 'ondo', name: 'Ondo', kind: 'institution' },
   'Hex Trust USD::USDX': { id: 'hex-trust', name: 'Hex Trust', kind: 'institution' }, // NOT Stables Labs USDX
   'Hex Trust USD::USDX::1::0': { id: 'hex-trust', name: 'Hex Trust', kind: 'institution' },
   'StablR Euro::EURR': { id: 'stablr', name: 'StablR', kind: 'institution' },

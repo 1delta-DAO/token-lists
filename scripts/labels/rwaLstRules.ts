@@ -467,9 +467,13 @@ const RWA_RULES: Rule[] = [
     confidence: 'auto',
     test: (n) => has('ishares')(n) && has('etf', 'treasury bond')(n),
     // The ticker only where one reading of the symbol is a known ETF (isharesEtfTicker).
+    // The issuer is the TOKENIZER (the Dinari / Robinhood rule): a row whose symbol is Ondo's
+    // `<ETF>ON` and whose name lost "(Ondo Tokenized" to truncation ("iShares 20  Year Treasury
+    // Bond ETF  Ond", "iShares Core MSCI Emerging Markets ETF ") is Ondo's, not BlackRock's.
     build: (n, s) => {
       const underlying = isharesEtfTicker(n, s)
-      return { rwa: { ...rwa('fund', 'etf', 'blackrock'), ...(underlying ? { underlying } : {}) } }
+      const ondo = !!underlying && (s ?? '').trim().toUpperCase() === `${underlying}ON`
+      return { rwa: { ...rwa('fund', 'etf', ondo ? 'ondo' : 'blackrock'), ...(underlying ? { underlying } : {}) } }
     },
   },
   {

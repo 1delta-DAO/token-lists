@@ -3320,12 +3320,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'ondo',
       underlying: 'RTX',
     },
-    '0x67eb4e3f674484ca980de8eb953aa435de2f23cb': {
-      type: 'fund',
-      subType: 'etf',
-      issuer: 'blackrock',
-      underlying: 'HYGW',
-    },
+    '0x67eb4e3f674484ca980de8eb953aa435de2f23cb': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'HYGW' },
     '0x6830f7bbfd274e393a32846918da9de210879ae4': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'USHY' },
     '0x68622855dcf14ced1b0cc2a69cc34843708e2e0f': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'ITA' },
     '0x68749665ff8d2d112fa859aa293f07a622782f38': {
@@ -4810,12 +4805,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'WRFHD',
     },
-    '0x992651bfeb9a0dcc4457610e284ba66d86489d4d': {
-      type: 'fund',
-      subType: 'etf',
-      issuer: 'blackrock',
-      underlying: 'TLT',
-    },
+    '0x992651bfeb9a0dcc4457610e284ba66d86489d4d': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'TLT' },
     '0x995584539633f7d28757b6329a42439bd8aecede': {
       type: 'equity',
       subType: 'stock',
@@ -5509,6 +5499,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'TMO',
     },
+    '0xaf37c1167910ebc994e266949387d2c7c326b879': { type: 'fund', subType: 'treasury', issuer: 'ondo' },
     '0xaf48e4c2b06bbb1605ab1d4277d21c7a3def15e6': {
       type: 'equity',
       subType: 'stock',
@@ -6430,12 +6421,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'dinari',
       underlying: 'INTC',
     },
-    '0xcdd60d15125bf3362b6838d2506b0fa33bc1a515': {
-      type: 'fund',
-      subType: 'etf',
-      issuer: 'blackrock',
-      underlying: 'IEMG',
-    },
+    '0xcdd60d15125bf3362b6838d2506b0fa33bc1a515': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'IEMG' },
     '0xcde01af7fbe0d7b8526252320d7dbd183566297d': {
       type: 'equity',
       subType: 'stock',
@@ -8338,12 +8324,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'CF',
     },
-    '0xff7cf16aa2ffc463b996db2f7b7cf0130336899d': {
-      type: 'fund',
-      subType: 'etf',
-      issuer: 'blackrock',
-      underlying: 'AGG',
-    },
+    '0xff7cf16aa2ffc463b996db2f7b7cf0130336899d': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'AGG' },
     '0xffae0b911cb2cb7b49fd75011d99d137c040a9ef': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'VOO' },
   },
   '10': {
@@ -16321,12 +16302,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'RL',
     },
-    '0x85b53a9344884ae428e0e15f05a1819d280d4be7': {
-      type: 'fund',
-      subType: 'etf',
-      issuer: 'blackrock',
-      underlying: 'HYGW',
-    },
+    '0x85b53a9344884ae428e0e15f05a1819d280d4be7': { type: 'fund', subType: 'etf', issuer: 'ondo', underlying: 'HYGW' },
     '0x860e267ee6db9d38256a46eabd56bf1f133ca4ae': {
       type: 'equity',
       subType: 'stock',

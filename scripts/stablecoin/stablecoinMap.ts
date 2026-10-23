@@ -50,6 +50,10 @@ export const STABLECOIN_MANUAL: StablecoinGroupMap = {
   'CASH::CASH::solana': { base: 'USD' }, // Phantom CASH (CASHx9KJ…), issued through Bridge (Stripe)
   // Hastra wYLDS — Figure's YLDS wrapped 1:1 against USDC (vault-mint), on 1 / 4217 / Solana
   'Hastra wYLDS::wYLDS': { base: 'USD' },
+  // Ondo USDY on Solana (A1KLoBrK…, group `USDY`): its dollar came only from Jupiter's `stable`
+  // tag, which Jupiter dropped by 2026-10-23 (tags now `yb`/`yield`), so the mint lost its money
+  // and fell out of every dollar desk. The EVM deployments carry it through the symbol snapshot.
+  USDY: { base: 'USD' },
 }
 
 export const STABLECOIN_MAP: StablecoinGroupMap = { ...loadSnapshot(), ...STABLECOIN_MANUAL }
