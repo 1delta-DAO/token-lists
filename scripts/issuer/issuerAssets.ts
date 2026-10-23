@@ -1048,6 +1048,18 @@ export const ISSUER_BY_ADDRESS: Record<string, IssuerProps> = {
     name: 'Verified USD Foundation',
     kind: 'institution',
   },
+  // 1 (0x0e57…, docs.usdv.money) and 137: filed under `Verified USD::USDV` until that group
+  // folded into `USDV`, whose bare key cannot carry a desk (Delpho's USDV shares it)
+  '1:0x0e573ce2736dd9637a0b21058352e1667925c7a8': {
+    id: 'verified-usd',
+    name: 'Verified USD Foundation',
+    kind: 'institution',
+  },
+  '137:0x323665443cef804a3b5206103304bd4872ea4253': {
+    id: 'verified-usd',
+    name: 'Verified USD Foundation',
+    kind: 'institution',
+  },
   '42161:0x323665443cef804a3b5206103304bd4872ea4253': {
     id: 'verified-usd',
     name: 'Verified USD Foundation',

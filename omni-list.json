@@ -370934,23 +370934,6 @@
         "decimals": 6,
         "name": "eUSD",
         "address": "0x14913815bcfde78baead2111f463d038ac9c2949",
-        "symbol": "eUSD",
-        "chainId": "137",
-        "logoURI": "https://tokens.debridge.finance/Logo/137/0x14913815bcfde78baead2111f463d038ac9c2949/small/token-logo.png",
-        "props": {
-          "risk": {
-            "score": 1,
-            "category": "STABLECOIN",
-            "source": "stablecoin"
-          },
-          "stablecoin": { "base": "USD" },
-          "issuer": { "id": "telcoin", "name": "Telcoin", "kind": "protocol" }
-        }
-      },
-      {
-        "decimals": 6,
-        "name": "eUSD",
-        "address": "0x14913815bcfde78baead2111f463d038ac9c2949",
         "symbol": "EUSD",
         "chainId": "8453",
         "logoURI": "https://assets.coingecko.com/coins/images/71602/thumb/eUSD.png?1768507474",
@@ -408960,6 +408943,7 @@
             "category": "COMPROMISED",
             "source": "whitelist"
           },
+          "stablecoin": { "base": "USD" },
           "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
         }
       },
@@ -408993,6 +408977,7 @@
             "category": "COMPROMISED",
             "source": "whitelist"
           },
+          "stablecoin": { "base": "USD" },
           "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
         }
       },
@@ -409009,6 +408994,7 @@
             "category": "COMPROMISED",
             "source": "whitelist"
           },
+          "stablecoin": { "base": "USD" },
           "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
         }
       },
@@ -409020,6 +409006,7 @@
         "chainId": "59144",
         "props": {
           "risk": { "score": 4, "source": "default" },
+          "stablecoin": { "base": "USD" },
           "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
         }
       },
@@ -425446,7 +425433,8 @@
             "id": "merlin",
             "name": "Merlin Chain",
             "kind": "protocol"
-          }
+          },
+          "denomination": "BTC"
         }
       },
       {
@@ -568897,6 +568885,23 @@
             "kind": "protocol"
           }
         }
+      },
+      {
+        "decimals": 6,
+        "name": "USDT+",
+        "address": "0x1e1f509963a6d33e169d9497b11c7dbfe73b7f13",
+        "symbol": "USDT+",
+        "chainId": "59144",
+        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/24962.png",
+        "props": {
+          "risk": { "score": 4, "source": "default" },
+          "stablecoin": { "base": "USD" },
+          "issuer": {
+            "id": "overnight",
+            "name": "Overnight",
+            "kind": "protocol"
+          }
+        }
       }
     ],
     "name": "Overnight.fi USDT+",
@@ -669281,6 +669286,31 @@
     "name": "Bitcoin.ℏ",
     "symbol": "BTC.ℏ[0x]",
     "logoURI": "https://tokens.debridge.finance/Logo/137/0x79103b27fc21c81f7c6cb5caff78901b45a972d5/small/token-logo.png"
+  },
+  "eUSD::eUSD": {
+    "id": "eUSD::eUSD",
+    "currencies": [
+      {
+        "decimals": 6,
+        "name": "eUSD",
+        "address": "0x14913815bcfde78baead2111f463d038ac9c2949",
+        "symbol": "eUSD",
+        "chainId": "137",
+        "logoURI": "https://tokens.debridge.finance/Logo/137/0x14913815bcfde78baead2111f463d038ac9c2949/small/token-logo.png",
+        "props": {
+          "risk": {
+            "score": 1,
+            "category": "STABLECOIN",
+            "source": "stablecoin"
+          },
+          "stablecoin": { "base": "USD" },
+          "issuer": { "id": "telcoin", "name": "Telcoin", "kind": "protocol" }
+        }
+      }
+    ],
+    "name": "eUSD",
+    "symbol": "eUSD",
+    "logoURI": "https://tokens.debridge.finance/Logo/137/0x14913815bcfde78baead2111f463d038ac9c2949/small/token-logo.png"
   },
   "AI Powered Finance::AIPF": {
     "id": "AI Powered Finance::AIPF",
@@ -851181,31 +851211,6 @@
     "name": "NotWifGary",
     "symbol": "NWG",
     "logoURI": "https://notwifgary.xyz/logo512.png"
-  },
-  "Overnight.fi USDT+::USDT+": {
-    "id": "Overnight.fi USDT+::USDT+",
-    "currencies": [
-      {
-        "decimals": 6,
-        "name": "USDT+",
-        "address": "0x1e1f509963a6d33e169d9497b11c7dbfe73b7f13",
-        "symbol": "USDT+",
-        "chainId": "59144",
-        "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/24962.png",
-        "props": {
-          "risk": { "score": 4, "source": "default" },
-          "stablecoin": { "base": "USD" },
-          "issuer": {
-            "id": "overnight",
-            "name": "Overnight",
-            "kind": "protocol"
-          }
-        }
-      }
-    ],
-    "name": "USDT+",
-    "symbol": "USDT+",
-    "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/24962.png"
   },
   "Mendi Finance::MENDI": {
     "id": "Mendi Finance::MENDI",

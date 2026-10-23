@@ -625,7 +625,6 @@ export const GROUP_ALIAS: Record<string, string> = {
   'EternalAI::EAI': 'EAI', // 1,8453 -> 33139,42161 (addr:0x4b6bf1d3)
   'EURC::EURC': 'EURC', // 10,25,480,5042 -> 1,130,137,42161,43114,8453 (cg:euro-coin)
   'EUROe Stablecoin::EUROe': 'EUROe Stablecoin::EUROE', // 10,137 -> 1,42161,43114 (addr:0x820802fa)
-  'eUSD::eUSD': 'eUSD::EUSD', // 137 -> 1,8453 (addr:0x14913815)
   'Function ƒBTC::FBTC': 'FBTC', // 56 -> 1,1329,146,42161,5000,60808… (addr:0xc96de260)
   'Fluid USDC::fUSDC': 'Fluid USDC::FUSDC', // 42161 -> 1 (cg:fluid-usdc)
   'Flying Tulip USD::ftUSD': 'Flying Tulip USD::FTUSD', // 146 -> 1 (addr:0xf7d85ec4)
@@ -810,6 +809,10 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   // the same-chain dedup while v1 held the plain key, and our own list carries that forward
   // run to run, so only an address override moves it back.
   '1:0x6f80a22a57c7f0257094ea8d426af3f747defbc7': 'Junior DOLA::JRDOLA',
+  // Telcoin eUSD on Polygon — briefly folded into `eUSD::EUSD` (2026-10-23), a group whose
+  // chain-1 member is Lybra's eUSD, so it lost its Telcoin desk. Back to its own key; the
+  // seeded lists would otherwise carry the wrong group forward.
+  '137:0x14913815bcfde78baead2111f463d038ac9c2949': 'eUSD::eUSD',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {
