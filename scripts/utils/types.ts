@@ -611,6 +611,23 @@ export interface TokenProps {
     source?: string
   }
   /**
+   * The issuer no longer runs this deployment: kept in the list so holders can
+   * find (and exit) it, never something to route new money into. Per ADDRESS —
+   * a superseded v1 usually shares its `name::symbol` with the live v2, so only
+   * the address tells them apart (see `retired/retired.ts`).
+   */
+  retired?: {
+    /**
+     * `superseded` — replaced by a redeploy of the same asset (Liquity BOLD v1, Inverse jrDOLA v1).
+     * `discontinued` — wound down with no replacement (Angle USDA, Mountain wUSDM, Level lvlUSD).
+     */
+    reason: 'superseded' | 'discontinued'
+    /** assetGroup of the live replacement, when there is one */
+    successor?: string
+    /** `curated`: retired/retired.ts. `risk`: risk-data's `DISCONTINUED` category. */
+    source: 'curated' | 'risk'
+  }
+  /**
    * Stablecoin classification (from risk-data's DeFiLlama stablecoin-quality feed).
    * Presence of this prop is the stablecoin flag; `base` is the fiat peg when known.
    */

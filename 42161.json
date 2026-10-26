@@ -33688,6 +33688,7 @@
           "category": "DISCONTINUED",
           "source": "issuer_inherit"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -39407,7 +39408,8 @@
           "score": 5,
           "category": "DISCONTINUED",
           "source": "issuer_inherit"
-        }
+        },
+        "retired": { "reason": "discontinued", "source": "risk" }
       }
     },
     "0x2b65f9d2e4b84a2df6ff0525741b75d1276a9c2f": {
@@ -39770,6 +39772,7 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
@@ -41612,11 +41615,16 @@
       "address": "0x087c440f251ff6cfe62b86dde1be558b95b4bb9b",
       "symbol": "BOLD",
       "logoURI": "https://assets.coingecko.com/coins/images/53755/thumb/BOLD_logo.png?1737183873",
-      "assetGroup": "Liquity BOLD::BOLD",
+      "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::BOLD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
+        "retired": {
+          "reason": "superseded",
+          "successor": "Liquity BOLD::BOLD",
+          "source": "curated"
+        }
       }
     },
     "0xb965029343d55189c25a7f3e0c9394dc0f5d41b1": {
@@ -47922,6 +47930,7 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
@@ -50064,6 +50073,7 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -50702,7 +50712,7 @@
       "address": "0x03569cc076654f82679c4ba2124d64774781b01d",
       "symbol": "BOLD",
       "logoURI": "https://assets.coingecko.com/coins/images/53755/standard/BOLD_logo.png?1737183873",
-      "assetGroup": "BOLD Stablecoin::BOLD",
+      "assetGroup": "Liquity BOLD::BOLD",
       "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
         "stablecoin": { "base": "USD" },

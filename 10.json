@@ -14259,7 +14259,8 @@
           "score": 5,
           "category": "DISCONTINUED",
           "source": "issuer_inherit"
-        }
+        },
+        "retired": { "reason": "discontinued", "source": "risk" }
       }
     },
     "0x7e7d4467112689329f7e06571ed0e8cbad4910ee": {
@@ -16359,6 +16360,7 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
@@ -16803,11 +16805,16 @@
       "address": "0x087c440f251ff6cfe62b86dde1be558b95b4bb9b",
       "symbol": "Bold",
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x087c440f251ff6cfe62b86dde1be558b95b4bb9b/small/token-logo.png",
-      "assetGroup": "Liquity BOLD::BOLD",
+      "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::Bold",
       "props": {
         "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
+        "retired": {
+          "reason": "superseded",
+          "successor": "Liquity BOLD::BOLD",
+          "source": "curated"
+        }
       }
     },
     "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8": {
@@ -19843,6 +19850,7 @@
           "category": "DISCONTINUED",
           "source": "issuer_inherit"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -19872,6 +19880,7 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
@@ -20480,7 +20489,7 @@
       "address": "0x03569cc076654f82679c4ba2124d64774781b01d",
       "symbol": "BOLD",
       "logoURI": "https://assets.coingecko.com/coins/images/53755/standard/BOLD_logo.png?1737183873",
-      "assetGroup": "BOLD Stablecoin::BOLD",
+      "assetGroup": "Liquity BOLD::BOLD",
       "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
         "stablecoin": { "base": "USD" },

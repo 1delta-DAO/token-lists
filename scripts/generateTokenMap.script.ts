@@ -21,6 +21,7 @@ import { aliasAssetGroup, mapAssetGroup, overrideAssetGroupByAddress } from './u
 import { OmniCurrencyList, TokenProps } from './utils/types'
 import { PERMIT_MAP } from './utils/data/permitMap'
 import { lookupRisk } from './risk/riskMap'
+import { lookupRetired } from './retired/retired'
 import { lookupOft } from './oft/oftMap'
 import { lookupMeshGroup } from './oft/meshMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
@@ -359,7 +360,14 @@ async function readTokenLists(): Promise<{
                     // registry matches, so a seeded copy only ever kept a label a rule had since
                     // dropped (4663 `BACKED`, 143 `vUSD` — the two seed-only rows, 2026-10-14).
                     if (is1delta && tokenProps) {
-                      const { stablecoin: _s, issuer: _i, issuerExposures: _e, rwa: _r, ...rest } = tokenProps
+                      const {
+                        stablecoin: _s,
+                        issuer: _i,
+                        issuerExposures: _e,
+                        rwa: _r,
+                        retired: _rt,
+                        ...rest
+                      } = tokenProps
                       tokenProps = rest
                     }
 
@@ -378,6 +386,12 @@ async function readTokenLists(): Promise<{
                     // it's merged here by address rather than carried on a source list.
                     const risk = lookupRisk(chainId, lcAddress)
                     if (risk) tokenProps = { ...tokenProps, risk }
+
+                    // Retirement (retired/retired.ts): a curated superseded v1, else the row's
+                    // risk-data `DISCONTINUED` category. Per address, and re-derived every run
+                    // (dropped from the seed below), so un-retiring a token takes effect.
+                    const retired = lookupRetired(chainId, lcAddress, tokenProps.risk)
+                    if (retired) tokenProps = { ...tokenProps, retired }
 
                     // LayerZero OFT overlay (LayerZero's registry cross-checked on-chain, see
                     // oft/oft.ts). Address-keyed and unconditional: an OFT contract is a fact

@@ -666,11 +666,16 @@
       "address": "0x087c440f251ff6cfe62b86dde1be558b95b4bb9b",
       "symbol": "BOLD",
       "logoURI": "https://assets.coingecko.com/coins/images/53755/thumb/BOLD_logo.png?1737183873",
-      "assetGroup": "Liquity BOLD::BOLD",
+      "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::BOLD",
       "props": {
         "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
+        "retired": {
+          "reason": "superseded",
+          "successor": "Liquity BOLD::BOLD",
+          "source": "curated"
+        }
       }
     },
     "0xe231db5f348d709239ef1741ea30961b3b635a61": {
@@ -1320,6 +1325,20 @@
       "props": {
         "isNative": true,
         "wrapped": "0x5300000000000000000000000000000000000004"
+      }
+    },
+    "0x03569cc076654f82679c4ba2124d64774781b01d": {
+      "chainId": "534352",
+      "decimals": 18,
+      "name": "BOLD Stablecoin",
+      "address": "0x03569cc076654f82679c4ba2124d64774781b01d",
+      "symbol": "BOLD",
+      "logoURI": "https://assets.coingecko.com/coins/images/53755/standard/BOLD_logo.png?1737183873",
+      "assetGroup": "Liquity BOLD::BOLD",
+      "currencyId": "BOLD Stablecoin::BOLD",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     }
   },

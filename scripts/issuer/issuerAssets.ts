@@ -356,6 +356,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Savings Usdd::sUSDD': { id: 'usdd', name: 'USDD', kind: 'protocol' },
   'Savings USDD::SUSDD': { id: 'usdd', name: 'USDD', kind: 'protocol' },
   'Liquity BOLD::BOLD::1::0': { id: 'liquity', name: 'Liquity', kind: 'protocol' }, // collision-suffixed canonical BOLD 0x6440…
+  'Liquity BOLD v1 (superseded)::BOLD': { id: 'liquity', name: 'Liquity', kind: 'protocol' }, // retired Jan-2025 BOLD 0xb01d… + 0x087c… mirrors
   'Legacy BOLD::Bold': { id: 'liquity', name: 'Liquity', kind: 'protocol' },
   'Bold Stablecoin::Bold': { id: 'liquity', name: 'Liquity', kind: 'protocol' },
   'sBold::sBOLD': { id: 'k3-capital', name: 'K3 Capital', kind: 'protocol' }, // K3 Capital's Stability Pool vault over BOLD

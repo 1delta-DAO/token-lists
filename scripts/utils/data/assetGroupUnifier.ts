@@ -656,7 +656,11 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Kyte.One::KTE': 'Kyte One::KTE', // 56 -> 43114 (cg:kyte-one)
   'LightSpeed::Speed': 'Lightspeed::SPEED', // 10 -> 1,42161,8453 (addr:0xb01cf1be)
   'Lightspeed::Speed': 'Lightspeed::SPEED', // 137,56 -> 1,42161,8453 (addr:0xb01cf1be)
-  'Liquity BOLD::Bold': 'Liquity BOLD::BOLD', // 10 -> 1,42161,43114,534352,8453 (addr:0x087c440f)
+  // Liquity BOLD — two generations share `name::symbol`. 0x087c… is the CCIP mirror of the
+  // RETIRED Jan-2025 BOLD (see ADDRESS_GROUP_OVERRIDE); the live redeploy's mirrors at
+  // 0x0356…b01d (OP/Base/Arb/Avax/Scroll) and Sonic 0xf05a… answer "BOLD Stablecoin".
+  'Liquity BOLD::Bold': 'Liquity BOLD v1 (superseded)::BOLD', // 10 (addr:0x087c440f)
+  'BOLD Stablecoin::BOLD': 'Liquity BOLD::BOLD', // 10,146,42161,43114,534352,8453 -> 1 (ccip:0xf05a2074 pool)
   'Lucky Block::LBlock': 'Lucky Block::LBLOCK', // 56 -> 1 (cg:lucky-block)
   "Merlin's Seal BTC::M-BTC": 'M-BTC', // 2222 -> 1,1135,1329,167000,324,34443… (addr:0x59889b70)
   'MaziMatic::Mazi': 'MaziMatic::MAZI', // 56 -> 1 (addr:0x5b8650cd)
@@ -813,6 +817,20 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   // chain-1 member is Lybra's eUSD, so it lost its Telcoin desk. Back to its own key; the
   // seeded lists would otherwise carry the wrong group forward.
   '137:0x14913815bcfde78baead2111f463d038ac9c2949': 'eUSD::eUSD',
+  // Liquity BOLD v1 — the Jan-2025 deployment, retired after the May-2025 redeploy (Liquity's
+  // `contracts/addresses/1.json`). Ethereum 0xb01d…ab98 plus its CCIP BurnMint mirrors at
+  // 0x087c…bb9b, wired to it by the Ethereum LockRelease pool 0x6F58…f193 (getRemoteToken,
+  // 2026-10-26). ~201k supply against ~38.4M for the live BOLD. It held the plain group and
+  // pushed the live token to `Liquity BOLD::BOLD::1::0` (the jrDOLA shape).
+  '1:0xb01dd87b29d187f3e3a4bf6cdaebfb97f3d9ab98': 'Liquity BOLD v1 (superseded)::BOLD',
+  '10:0x087c440f251ff6cfe62b86dde1be558b95b4bb9b': 'Liquity BOLD v1 (superseded)::BOLD',
+  '8453:0x087c440f251ff6cfe62b86dde1be558b95b4bb9b': 'Liquity BOLD v1 (superseded)::BOLD',
+  '42161:0x087c440f251ff6cfe62b86dde1be558b95b4bb9b': 'Liquity BOLD v1 (superseded)::BOLD',
+  '43114:0x087c440f251ff6cfe62b86dde1be558b95b4bb9b': 'Liquity BOLD v1 (superseded)::BOLD',
+  '534352:0x087c440f251ff6cfe62b86dde1be558b95b4bb9b': 'Liquity BOLD v1 (superseded)::BOLD',
+  // …and the live BOLD takes the plain group. Its CCIP pool 0xf05a…1C9 maps to 0x0356…b01d on
+  // OP/Base/Arb/Avax/Scroll and to 0xf05a…b1c9 on Sonic (GROUP_ALIAS `BOLD Stablecoin::BOLD`).
+  '1:0x6440f144b7e50d6a8439336510312d2f54beb01d': 'Liquity BOLD::BOLD',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {

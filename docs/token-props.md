@@ -132,6 +132,22 @@ A lagging annotation from the risk-data repo (`data/asset-risks.json`, via `scri
 | `category` | `BLUE_CHIP`, `NATIVE`, `STABLECOIN`, `YIELD_STABLE`, `LST`, `LRT`, `ESTABLISHED_DEFI`, `BRIDGED`, `PRINCIPAL_TOKEN`, `YIELD_TOKEN`, `TOKENIZED_EQUITY`, `UNKNOWN_ISSUER`, `DISCONTINUED`, `COMPROMISED`, `OTHER` |
 | `source`   | How it was scored: `whitelist`, `stablecoin`, `default`, or inherited from the underlying: `pendle_inherit`, `issuer_inherit`, `vault_inherit`, `savings_inherit`. |
 
+### `retired`, keyed by address
+
+The issuer no longer runs this deployment. The row stays in the list so holders can find it and exit, but nothing should route new money into it.
+
+```jsonc
+"retired": { "reason": "superseded", "successor": "Liquity BOLD::BOLD", "source": "curated" }
+```
+
+| field       | meaning                                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------------------- |
+| `reason`    | `superseded`: replaced by a redeploy of the same asset (Liquity BOLD v1, Inverse jrDOLA v1). `discontinued`: wound down with no replacement (Angle USDA / stUSD / stEUR, Mountain wUSDM, Level lvlUSD). |
+| `successor` | `assetGroup` of the live replacement, when there is one.                                                      |
+| `source`    | `curated` (`scripts/retired/retired.ts`) or `risk` (the row's `risk.category` is `DISCONTINUED`).             |
+
+It's keyed per address because a superseded v1 usually has the same `name::symbol` as the live v2. Those v1s also get a `… v1 (superseded)::…` group through `ADDRESS_GROUP_OVERRIDE`, so the live token keeps the plain group. To retire a token by hand, add a line to `RETIRED_BY_ADDRESS`.
+
 ## Yield tokenisation (PT / YT / SY)
 
 All three are keyed by address and come from the protocol's own API (`scripts/pendle/`, `scripts/spectra/`, `scripts/exponent/`).
