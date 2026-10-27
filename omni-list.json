@@ -270773,8 +270773,8 @@
     "symbol": "ANKRBNB",
     "logoURI": "https://assets.coingecko.com/coins/images/28451/thumb/ankrBNB.png?1696527446"
   },
-  "ether.fi BTC::eBTC": {
-    "id": "ether.fi BTC::eBTC",
+  "Ether fi Staked BTC::EBTC": {
+    "id": "Ether fi Staked BTC::EBTC",
     "currencies": [
       {
         "decimals": 8,
@@ -270811,6 +270811,33 @@
         "props": {
           "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
           "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
+          "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
+        }
+      },
+      {
+        "decimals": 8,
+        "name": "Ether fi Staked BTC",
+        "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
+        "symbol": "EBTC",
+        "chainId": "1",
+        "logoURI": "https://assets.coingecko.com/coins/images/50411/thumb/eBTC.png?1727664788",
+        "props": {
+          "permit": { "type": 1, "version": "1" },
+          "risk": { "score": 2, "category": "LST", "source": "whitelist" },
+          "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
+          "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
+        }
+      },
+      {
+        "decimals": 8,
+        "name": "Ether fi Staked BTC",
+        "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
+        "symbol": "EBTC",
+        "chainId": "80094",
+        "logoURI": "https://assets.coingecko.com/coins/images/50411/thumb/eBTC.png?1727664788",
+        "props": {
+          "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
+          "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
           "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
         }
       }
@@ -375908,19 +375935,6 @@
           "denomination": "BTC",
           "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" }
         }
-      },
-      {
-        "decimals": 10,
-        "name": "eBTC",
-        "address": "0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9",
-        "symbol": "EBTC",
-        "chainId": "143",
-        "logoURI": "https://assets.coingecko.com/coins/images/102172176/thumb/eBTC.png?1772034448",
-        "props": {
-          "denomination": "BTC",
-          "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
-          "issuer": { "id": "badger", "name": "Badger", "kind": "protocol" }
-        }
       }
     ],
     "name": "eBTC",
@@ -408008,41 +408022,6 @@
     "name": "Mythos",
     "symbol": "MYTH",
     "logoURI": "https://assets.coingecko.com/coins/images/28045/thumb/Mythos_Logos_200x200.png?1696527059"
-  },
-  "Ether fi Staked BTC::EBTC": {
-    "id": "Ether fi Staked BTC::EBTC",
-    "currencies": [
-      {
-        "decimals": 8,
-        "name": "Ether fi Staked BTC",
-        "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
-        "symbol": "EBTC",
-        "chainId": "1",
-        "logoURI": "https://assets.coingecko.com/coins/images/50411/thumb/eBTC.png?1727664788",
-        "props": {
-          "permit": { "type": 1, "version": "1" },
-          "risk": { "score": 2, "category": "LST", "source": "whitelist" },
-          "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
-          "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
-        }
-      },
-      {
-        "decimals": 8,
-        "name": "Ether fi Staked BTC",
-        "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
-        "symbol": "EBTC",
-        "chainId": "80094",
-        "logoURI": "https://assets.coingecko.com/coins/images/50411/thumb/eBTC.png?1727664788",
-        "props": {
-          "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
-          "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
-          "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
-        }
-      }
-    ],
-    "name": "Ether fi Staked BTC",
-    "symbol": "EBTC",
-    "logoURI": "https://assets.coingecko.com/coins/images/50411/thumb/eBTC.png?1727664788"
   },
   "OnTact::ONTACT": {
     "id": "OnTact::ONTACT",
@@ -672115,6 +672094,31 @@
     "name": "Wrapped Neverland WMON",
     "symbol": "wnWMON",
     "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xdb39a9d4a1f1b4e93a5684d602207628ad60613c.png"
+  },
+  "Echo eBTC::EBTC": {
+    "id": "Echo eBTC::EBTC",
+    "currencies": [
+      {
+        "decimals": 10,
+        "name": "eBTC",
+        "address": "0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9",
+        "symbol": "EBTC",
+        "chainId": "143",
+        "logoURI": "https://assets.coingecko.com/coins/images/102172176/thumb/eBTC.png?1772034448",
+        "props": {
+          "denomination": "BTC",
+          "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
+          "issuer": {
+            "id": "echo",
+            "name": "Echo Protocol",
+            "kind": "protocol"
+          }
+        }
+      }
+    ],
+    "name": "eBTC",
+    "symbol": "EBTC",
+    "logoURI": "https://assets.coingecko.com/coins/images/102172176/thumb/eBTC.png?1772034448"
   },
   "Yuzu Money Vault::YZM": {
     "id": "Yuzu Money Vault::YZM",

@@ -7518,6 +7518,39 @@
           "to": "Wrapped OETH::WOETH"
         }
       ]
+    },
+    {
+      "id": "2026-10-27-ebtc",
+      "date": "2026-10-27",
+      "base": "34ff994",
+      "summary": "eBTC split. ether.fi eBTC (one vault at 0x657e…c642 on every chain) was listed as `ether.fi BTC::eBTC` on Arbitrum, Scroll and Corn but `Ether fi Staked BTC::EBTC` on Ethereum and Berachain; folded into the chain-1 form. Row move only: Echo Protocol's eBTC on Monad (0xd691…, CoinGecko ebtc-2) leaves `eBTC::EBTC`, which stays Badger's Ethereum eBTC. History filed under `eBTC::EBTC` for 143:0xd691… belongs to `Echo eBTC::EBTC`.",
+      "groupFolds": { "ether.fi BTC::eBTC": "Ether fi Staked BTC::EBTC" },
+      "rows": [
+        {
+          "chainId": "143",
+          "address": "0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9",
+          "from": "eBTC::EBTC",
+          "to": "Echo eBTC::EBTC"
+        },
+        {
+          "chainId": "21000000",
+          "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
+          "from": "ether.fi BTC::eBTC",
+          "to": "Ether fi Staked BTC::EBTC"
+        },
+        {
+          "chainId": "42161",
+          "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
+          "from": "ether.fi BTC::eBTC",
+          "to": "Ether fi Staked BTC::EBTC"
+        },
+        {
+          "chainId": "534352",
+          "address": "0x657e8c867d8b37dcc18fa4caead9c45eb088c642",
+          "from": "ether.fi BTC::eBTC",
+          "to": "Ether fi Staked BTC::EBTC"
+        }
+      ]
     }
   ]
 }

@@ -124,6 +124,12 @@ export const GROUP_ALIAS: Record<string, string> = {
   // same casing for liquidUSD (margin-fetcher's `llamaGap.ts` keys both rates on these).
   'Ether.Fi Liquid ETH::liquidETH': 'Ether.Fi Liquid ETH::LIQUIDETH',
   'Ether.Fi Liquid USD::liquidUSD': 'Ether.Fi Liquid USD::LIQUIDUSD',
+  // ether.fi eBTC (Veda BoringVault) — ONE vault at ONE address 0x657e…c642 on Ethereum,
+  // Berachain, Arbitrum, Scroll and Corn. Ethereum / Berachain list the CoinGecko form
+  // (`ether-fi-staked-btc`), the others the on-chain `ether.fi BTC::eBTC`. Canonical = the
+  // chain-1 form, which carries the issuer and LST overlays. NOT Badger's eBTC (`eBTC::EBTC`,
+  // 1: 0x661c…) nor Echo's eBTC on Monad (ADDRESS_GROUP_OVERRIDE).
+  'ether.fi BTC::eBTC': 'Ether fi Staked BTC::EBTC',
   // Liminal (HyperEVM) — xHYPE's HyperEVM row is stored `xHYPE::XHYPE`; its LayerZero OFT copies on
   // Ethereum 0xac96…1e03 and Arbitrum 0xcffe…18e4 (peers of the HyperEVM adapter 0x0c01…0bd5)
   // arrive as `xHYPE::xHYPE`. xLEND takes its siblings' casing, the key `llamaGap.ts` uses.
@@ -865,6 +871,10 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   // It sat in the bare `JUSD` group, which claims "the" JUSD while four unrelated tokens use the
   // ticker (Jigsaw USD, Jarvis jUSD, jAsset jUSD, the JUSD Credit Vault on Accountable).
   '1:0xc86168d2424d28942ee0866f043c1206bc9e4900': 'Aegis JUSD::JUSD',
+  // Echo Protocol eBTC on Monad (CoinGecko `ebtc-2`, 10 decimals). Its `name::symbol` is
+  // `eBTC::EBTC`, the group whose chain-1 member is Badger's eBTC 0x661c…, so it inherited
+  // Badger as issuer. A different asset from both Badger's and ether.fi's eBTC.
+  '143:0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9': 'Echo eBTC::EBTC',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {

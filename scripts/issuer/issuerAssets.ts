@@ -687,6 +687,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'M-BTC': { id: 'merlin', name: 'Merlin Chain', kind: 'protocol' }, // "Merlin BTC"
   'Bitcoin::BTC.b': { id: 'ava-labs', name: 'Ava Labs', kind: 'institution' }, // Avalanche Bridge BTC.b
   'eBTC::EBTC': { id: 'badger', name: 'Badger', kind: 'protocol' }, // 1: 0x661c… is Badger eBTC — NOT ether.fi eBTC (0x657e…)
+  'Echo eBTC::EBTC': { id: 'echo', name: 'Echo Protocol', kind: 'protocol' }, // 143: 0xd691… (CoinGecko ebtc-2)
   'Universal BTC::UNIBTC': { id: 'bedrock', name: 'Bedrock', kind: 'protocol' },
   'Universal ETH::uniETH::42161::0': { id: 'bedrock', name: 'Bedrock', kind: 'protocol' },
   'SOLVBTC.ENA': { id: 'solv', name: 'Solv', kind: 'protocol' },

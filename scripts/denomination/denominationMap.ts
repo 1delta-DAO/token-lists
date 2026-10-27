@@ -46,6 +46,7 @@ const BTC_GROUPS = [
   'M-BTC',
   'Bitcoin::BTC.b',
   'eBTC::EBTC',
+  'Echo eBTC::EBTC',
   // OKX's 1:1 custodial BTC on X Layer (196 0xb7c0…6b4f); desk okx in issuer.json.
   'OKX Wrapped BTC::xBTC',
   // Circle's 1:1 custodial BTC on Ethereum (0x72df…075e) and Arc (0x171a…baa0); desk circle.
