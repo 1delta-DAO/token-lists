@@ -1066,7 +1066,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "default"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "liminal", "name": "Liminal", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x4c9384312333f8de90e8173da572f4dcfca43fd2": {
@@ -1136,7 +1139,10 @@
           "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "liminal", "name": "Liminal", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x4eb660811bcb71174b04a1f102f784efe794a66b": {
@@ -1542,7 +1548,10 @@
           "category": "PRINCIPAL_TOKEN",
           "source": "default"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "liminal", "name": "Liminal", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x6367e7f14fb037d7e6531c3b3b732c6e63ced5c1": {
@@ -3342,7 +3351,10 @@
           "ytAddress": "0x4d51e885d3f5c9b7429d61bb8dc83c758652e1fb"
         },
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "liminal", "name": "Liminal", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd2f7d32f0309821fc8504bcdb0153f671423cf1f": {
@@ -3855,7 +3867,10 @@
           "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "liminal", "name": "Liminal", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xecb466614c26892684fee593b70c83c2c5bd3b44": {
@@ -23246,7 +23261,27 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70829/thumb/xhype.png?1764063101",
       "assetGroup": "xHYPE::XHYPE",
       "currencyId": "xHYPE::XHYPE",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "oft": {
+          "eid": 30367,
+          "routes": [
+            {
+              "contract": "0x0c0104e35a101de9af2e0cb307a15e1175580bd5",
+              "kind": "adapter",
+              "sharedDecimals": 6,
+              "oapp": "liminal",
+              "approvalRequired": true,
+              "peers": {
+                "1": "0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03",
+                "42161": "0xcffe430e9492966727ddc60eb183fe93e5a218e4"
+              }
+            }
+          ]
+        },
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "liminal", "name": "Liminal", "kind": "protocol" }
+      }
     },
     "0x5555c2542836e7a6c8d3e133d5aa9773b65d5555": {
       "chainId": "999",
@@ -23325,7 +23360,11 @@
       "symbol": "XBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/71562/thumb/xBTC_logo_PNG_format.png?1768320366",
       "assetGroup": "xBTC::XBTC",
-      "currencyId": "xBTC::XBTC"
+      "currencyId": "xBTC::XBTC",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "liminal", "name": "Liminal", "kind": "protocol" }
+      }
     },
     "0x61ef9543f8919bb06e374b3bb58a17725e34f9d9": {
       "chainId": "999",
@@ -24415,6 +24454,19 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179393/thumb/uwu.jpg?1791701923",
       "assetGroup": "Uwu Mode::UWU",
       "currencyId": "Uwu Mode::UWU"
+    },
+    "0x95f6d66c09a22e6f2bb693306b3ed69663066cbb": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "xLEND",
+      "address": "0x95f6d66c09a22e6f2bb693306b3ed69663066cbb",
+      "symbol": "xLEND",
+      "assetGroup": "xLEND::XLEND",
+      "currencyId": "xLEND::xLEND",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "liminal", "name": "Liminal", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "999",

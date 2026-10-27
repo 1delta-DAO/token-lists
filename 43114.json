@@ -9401,7 +9401,6 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "oft": {
           "eid": 30106,
           "routes": [
@@ -9415,6 +9414,7 @@
             }
           ]
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "nereus",
@@ -10235,13 +10235,13 @@
       "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::BOLD",
       "props": {
-        "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
         "retired": {
           "reason": "superseded",
           "successor": "Liquity BOLD::BOLD",
           "source": "curated"
-        }
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0xbd3d46b98b2f6ada480d6bd53d11cf4553c18f41": {
@@ -13540,8 +13540,8 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -15759,7 +15759,7 @@
               "kind": "native",
               "sharedDecimals": 6,
               "approvalRequired": false,
-              "peers": { "100": "0x1f34490f8e8e776ffc547b39b864364035eaf44f" }
+              "peers": {}
             }
           ]
         },

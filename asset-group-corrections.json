@@ -7462,6 +7462,62 @@
           "to": "Liquity BOLD::BOLD"
         }
       ]
+    },
+    {
+      "id": "2026-10-27-earn-gap-sweep",
+      "date": "2026-10-27",
+      "base": "130e03c",
+      "summary": "Earn gap sweep (lending-sdks docs/earn/GAP_SWEEP_TOKEN_LISTS.md). Folds: Origin wOETH's bridged copies (Base, Plume) into the Ethereum group; the Arbitrum gateway copy of Bedrock uniETH out of its dedup suffix into its own group; Base SYRUP into Maple's `Syrup Token::SYRUP` (LayerZero peer link). Row moves only (the old groups keep their other rows): the 'Liquid Staked ETH Index' Set basket on 1 + its Arbitrum bridge leaves `LSETH`, which stays Liquid Collective's; Aegis JUSD on 1 leaves the bare `JUSD`. History filed under `LSETH` for 1:0x628e… / 42161:0x8ffd… and under `JUSD` for 1:0xc861… belongs to the new groups.",
+      "groupFolds": {
+        "Wrapped OETH::wOETH": "Wrapped OETH::WOETH",
+        "Bridged wOETH::wOETH": "Wrapped OETH::WOETH",
+        "Universal ETH::uniETH::42161::0": "Arbitrum Bridged Universal ETH::uniETH",
+        "Maple Finance::SYRUP": "Syrup Token::SYRUP"
+      },
+      "rows": [
+        {
+          "chainId": "1",
+          "address": "0x628ebc64a38269e031afbdd3c5ba857483b5d048",
+          "from": "LSETH",
+          "to": "Liquid Staked ETH Index::LSETH"
+        },
+        {
+          "chainId": "1",
+          "address": "0xc86168d2424d28942ee0866f043c1206bc9e4900",
+          "from": "JUSD",
+          "to": "Aegis JUSD::JUSD"
+        },
+        {
+          "chainId": "42161",
+          "address": "0x8ffd9f31980f26fbf4ac693678db700f1d8c51f6",
+          "from": "LSETH",
+          "to": "Liquid Staked ETH Index::LSETH"
+        },
+        {
+          "chainId": "42161",
+          "address": "0xcdf9bc1f8362555984ee497a1ed3654f21662e7e",
+          "from": "Universal ETH::uniETH::42161::0",
+          "to": "Arbitrum Bridged Universal ETH::uniETH"
+        },
+        {
+          "chainId": "8453",
+          "address": "0x688aee022aa544f150678b8e5720b6b96a9e9a2f",
+          "from": "Maple Finance::SYRUP",
+          "to": "Syrup Token::SYRUP"
+        },
+        {
+          "chainId": "8453",
+          "address": "0xd8724322f44e5c58d7a815f542036fb17dbbf839",
+          "from": "Wrapped OETH::wOETH",
+          "to": "Wrapped OETH::WOETH"
+        },
+        {
+          "chainId": "98866",
+          "address": "0xd8724322f44e5c58d7a815f542036fb17dbbf839",
+          "from": "Bridged wOETH::wOETH",
+          "to": "Wrapped OETH::WOETH"
+        }
+      ]
     }
   ]
 }

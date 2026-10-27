@@ -255,12 +255,13 @@ const LST_RULES: Rule[] = [
     lst: stake('ETH', 'stakestone', 'restaking'),
     test: has('stakestone berachain'),
   },
-  // Liquid Collective lsETH (symbol is unambiguous; name varies "Liquid Staked ETH[ Index]")
+  // Liquid Collective lsETH. NOT "Liquid Staked ETH Index" (0x628e… on 1, its bridge 0x8ffd… on
+  // 42161): a Set-protocol basket of five LSTs that shares the ticker.
   {
     id: 'liquid-collective',
     confidence: 'auto',
     lst: stake('ETH', 'liquid-collective'),
-    test: (_n, s) => norm(s) === 'LSETH',
+    test: (n, s) => norm(s) === 'LSETH' && !has('index')(n),
   },
   // Treehouse tETH (restaking) — NOT "Test ETH"
   { id: 'treehouse-eth', confidence: 'auto', lst: stake('ETH', 'treehouse', 'restaking'), test: has('treehouse eth') },

@@ -971,7 +971,8 @@ export const knownAssets: KnownAsset[] = [
   { symbol: 'LPT', names: ['Livepeer'], requireExactName: true },
   { symbol: 'LQTY', names: ['Liquity'], requireExactName: true },
   { symbol: 'LRC', names: ['LoopringCoin V2'], requireExactName: true },
-  { symbol: 'LSETH', names: ['Liquid Staked ETH Index'], requireExactName: true },
+  // Liquid Collective. NOT "Liquid Staked ETH Index" — a different token (ADDRESS_GROUP_OVERRIDE).
+  { symbol: 'LSETH', names: ['Liquid Staked ETH'], requireExactName: true },
   { symbol: 'LTX', names: ['Lattice'], requireExactName: true },
   { symbol: 'LYXE', names: ['LUKSO'], requireExactName: true },
   { symbol: 'MARS', names: ['Mars'], requireExactName: true },

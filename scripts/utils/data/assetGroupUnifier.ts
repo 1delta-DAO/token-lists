@@ -117,6 +117,18 @@ export const GROUP_ALIAS: Record<string, string> = {
   'yoEUR::yoEUR': 'Yield Optimizer EUR::yoEUR',
   'yoUSD Edge::yoUSD Edge': 'Yield Optimizer USD Edge::YOUSDEDGE',
   'yoloETH::yoloETH': 'Yield Optimizer yoloETH::YOLOETH',
+  // ether.fi Liquid vaults (Veda BoringVaults) — ONE vault per asset at one address on Ethereum,
+  // Optimism, Base and Arbitrum. The Ethereum liquidETH row came in upper-cased
+  // (`Ether.Fi Liquid ETH::LIQUIDETH`) and every deployment `onchain-fetch` adds arrives under
+  // the on-chain `liquidETH` / `liquidUSD`. Canonical = the chain-1 form for liquidETH, and the
+  // same casing for liquidUSD (margin-fetcher's `llamaGap.ts` keys both rates on these).
+  'Ether.Fi Liquid ETH::liquidETH': 'Ether.Fi Liquid ETH::LIQUIDETH',
+  'Ether.Fi Liquid USD::liquidUSD': 'Ether.Fi Liquid USD::LIQUIDUSD',
+  // Liminal (HyperEVM) — xHYPE's HyperEVM row is stored `xHYPE::XHYPE`; its LayerZero OFT copies on
+  // Ethereum 0xac96…1e03 and Arbitrum 0xcffe…18e4 (peers of the HyperEVM adapter 0x0c01…0bd5)
+  // arrive as `xHYPE::xHYPE`. xLEND takes its siblings' casing, the key `llamaGap.ts` uses.
+  'xHYPE::xHYPE': 'xHYPE::XHYPE',
+  'xLEND::xLEND': 'xLEND::XLEND',
   // BitFi bfBTC — ONE asset at two vanity addresses across eight chains (`0xCdFb…fb15`
   // on 1/1116/200901, `0x623F…d9DF` on 56/8453/43111/1672/239/2345). The external lists
   // uppercase the ticker (`BFBTC`) on 1/56/8453/1116/200901 while the on-chain `symbol()`
@@ -167,6 +179,13 @@ export const GROUP_ALIAS: Record<string, string> = {
   'Lombard Staked Bitcoin::LBTC': 'LBTC',
   // Liquid Collective lsETH
   'Liquid Staked ETH::LSETH': 'LSETH',
+  // Origin wOETH — one asset: the Ethereum vault 0xdcee…2192 plus its bridged copies at
+  // 0xd872…f839 on Arbitrum, Base and Plume. The lists spell those three ways (`WOETH` on 1 and
+  // 42161, `wOETH` on 8453, `Bridged wOETH` on 98866), so the Base / Plume deployments never
+  // reached the wOETH yield key. Canonical = the chain-1 form, which margin-fetcher's wOETH rate
+  // is keyed on.
+  'Wrapped OETH::wOETH': 'Wrapped OETH::WOETH',
+  'Bridged wOETH::wOETH': 'Wrapped OETH::WOETH',
   // NOTE: Manta mETH is a DIFFERENT asset from Mantle mETH — intentionally NOT unified.
   // StakeWise osETH — no bare group exists; unify every variant to a clean OSETH
   'StakeWise Staked ETH::OSETH': 'OSETH',
@@ -831,6 +850,21 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   // …and the live BOLD takes the plain group. Its CCIP pool 0xf05a…1C9 maps to 0x0356…b01d on
   // OP/Base/Arb/Avax/Scroll and to 0xf05a…b1c9 on Sonic (GROUP_ALIAS `BOLD Stablecoin::BOLD`).
   '1:0x6440f144b7e50d6a8439336510312d2f54beb01d': 'Liquity BOLD::BOLD',
+  // "Liquid Staked ETH Index" — a Set-protocol basket (getComponents = cbETH, ankrETH, wstETH,
+  // sfrxETH, rETH; 17.7 supply), NOT Liquid Collective's LsETH 0x8c1b…6549 (244.8k supply). Both
+  // answer `name() = "Liquid Staked ETH"` / `symbol() = "LSETH"`, so a group alias would move both;
+  // the Arbitrum copy is the gateway bridge of the basket (`l1Address()` = 0x628e…). CoinGecko's
+  // `liquid-staked-ethereum` lists 0x8c1b… (Ethereum) and 0xb297…30b6 (Base) only.
+  '1:0x628ebc64a38269e031afbdd3c5ba857483b5d048': 'Liquid Staked ETH Index::LSETH',
+  '42161:0x8ffd9f31980f26fbf4ac693678db700f1d8c51f6': 'Liquid Staked ETH Index::LSETH',
+  // Arbitrum standard-gateway bridge token of Bedrock's Ethereum uniETH (`l1Address()` =
+  // 0xf137…51f4, 0.0185 supply). Bedrock's own Arbitrum uniETH is 0x3d15…c3a0 (CoinGecko), which
+  // keeps `Universal ETH::uniETH`; this one sat in a dedup suffix (`…::42161::0`).
+  '42161:0xcdf9bc1f8362555984ee497a1ed3654f21662e7e': 'Arbitrum Bridged Universal ETH::uniETH',
+  // Aegis JUSD (minter `AegisMintingJUSD` 0xbb0f…b520; `Staked JUSD` 0x4aa8… is a 4626 over it).
+  // It sat in the bare `JUSD` group, which claims "the" JUSD while four unrelated tokens use the
+  // ticker (Jigsaw USD, Jarvis jUSD, jAsset jUSD, the JUSD Credit Vault on Accountable).
+  '1:0xc86168d2424d28942ee0866f043c1206bc9e4900': 'Aegis JUSD::JUSD',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {

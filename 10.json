@@ -14143,6 +14143,19 @@
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
+    "0xf0bb20865277abd641a307ece5ee04e79073416c": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Ether.Fi Liquid ETH",
+      "address": "0xf0bb20865277abd641a307ece5ee04e79073416c",
+      "symbol": "liquidETH",
+      "assetGroup": "Ether.Fi Liquid ETH::LIQUIDETH",
+      "currencyId": "Ether.Fi Liquid ETH::liquidETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
+      }
+    },
     "0xe0bb0d3de8c10976511e5030ca403dbf4c25165b": {
       "chainId": "10",
       "decimals": 8,
@@ -16808,13 +16821,13 @@
       "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::Bold",
       "props": {
-        "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
         "retired": {
           "reason": "superseded",
           "successor": "Liquity BOLD::BOLD",
           "source": "curated"
-        }
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0xca5d8f8a8d49439357d3cf46ca2e720702f132b8": {
@@ -16886,8 +16899,8 @@
             }
           ]
         },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -18718,8 +18731,8 @@
       "assetGroup": "StaFi::rETH",
       "currencyId": "StaFi Staked ETH::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -19043,8 +19056,8 @@
             }
           ]
         },
-        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -19880,8 +19893,8 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -21061,7 +21074,7 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x000000001dc8bd45d7e7829fb1c969cbe4d0d1ec/small/token-logo.png",
       "assetGroup": "Gauntlet USD Alpha::GTUSDA",
       "currencyId": "Gauntlet USD Alpha::gtUSDa",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0x9e2679eabff131b8b1b48ff7566140794e0eedc4": {
       "chainId": "10",
@@ -22104,6 +22117,19 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+      }
+    },
+    "0x08c6f91e2b681faf5e17227f2a44c307b3c1364c": {
+      "chainId": "10",
+      "decimals": 6,
+      "name": "Ether.Fi Liquid USD",
+      "address": "0x08c6f91e2b681faf5e17227f2a44c307b3c1364c",
+      "symbol": "liquidUSD",
+      "assetGroup": "Ether.Fi Liquid USD::LIQUIDUSD",
+      "currencyId": "Ether.Fi Liquid USD::liquidUSD",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
     "0x0000000000000000000000000000000000000000": {

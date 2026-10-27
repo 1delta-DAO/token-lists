@@ -421,4 +421,43 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // lending vault is the steakUSDC shape; admitted because it lends one dollar to one
   // borrower on fixed terms rather than allocating across markets.
   'sUSD.infra::sUSD.infra::solana': { underlying: 'USD.infra', base: 'USD' },
+
+  // --- 2026-10-27 earn gap sweep (lending-sdks registryLlamaGap / registryGapSweep /
+  // registryMellow / aera, docs/earn/GAP_SWEEP_TOKEN_LISTS.md §4). Admitted on the mixUSDC rule
+  // above, not the older steakUSDC exclusion: the holder takes no allocation decision of its
+  // own and every exit pays the underlying at the vault's NAV. Most of these are operator-run
+  // books whose share price is a MARK (Veda / Mellow / Makina accountants, Tokemak autopools,
+  // Liminal's delta-neutral pipes) — margin-fetcher says so per row and registers the ones that
+  // have dipped `volatile`; this overlay classifies only the wrapper and its money. Every key is
+  // listed in both its pre-alias form (what a fresh `onchain` row carries) and the canonical
+  // form (what the published list feeds back), since `lookupSavings` has no alias fallback.
+  'Ether.Fi Liquid USD::LIQUIDUSD': { underlying: 'USDC', base: 'USD' }, // Veda BoringVault, 1 + 10
+  'Ether.Fi Liquid USD::liquidUSD': { underlying: 'USDC', base: 'USD' },
+  'Plasma USD Vault::PlasmaUSD': { underlying: 'USDT0', base: 'USD' }, // Veda BoringVault, 9745 + 1
+  'Lido EarnUSD::EARNUSD': { underlying: 'USDC', base: 'USD' }, // Mellow core vault; NOT a stablecoin
+  'Gauntlet USD Alpha::GTUSDA': { underlying: 'USDC', base: 'USD' }, // Aera vault, 1/10/42161/8453
+  'Fluid Lite USD Vault::fLiteUSD': { underlying: 'USDC', base: 'USD' },
+  'Tokemak autoUSD::autoUSD': { underlying: 'USDC', base: 'USD' },
+  'Tokemak baseUSD::baseUSD': { underlying: 'USDC', base: 'USD' },
+  // One open-term credit line to JUSD Finance on Accountable — the SIERRA / sUSDfr credit
+  // caveat. NOT Aegis JUSD, Jigsaw USD or any other JUSD ticker.
+  'JUSD Credit Vault::JUSD': { underlying: 'USDC', base: 'USD' },
+  'Yuzu Syrup::yzSyrup': { underlying: 'USDC', base: 'USD' }, // the yzPrime shape
+  'Steakhouse USD Machine::usdSHFmk': { underlying: 'USDC', base: 'USD' }, // Makina
+  'Dialectic Carry Machine::DCM': { underlying: 'USDC', base: 'USD' }, // Makina; allowlisted mint
+  'Concrete Decentralized Finance USDT::ctDefiUSDT': { underlying: 'USDT', base: 'USD' },
+  'Concrete RWA USD1::ctRWA_USD1': { underlying: 'USD1', base: 'USD' },
+  'ZIG USD1::ctZigUSD1': { underlying: 'USD1', base: 'USD' },
+  'Colb USD1::ctColbUSD1': { underlying: 'USD1', base: 'USD' },
+  // Liminal (HyperEVM): USDC in, a delta-neutral book on the named asset — the money is the
+  // DOLLAR, not HYPE / BTC (the funding-and-basis income is what accrues).
+  'xHYPE::XHYPE': { underlying: 'USDC', base: 'USD' },
+  'xHYPE::xHYPE': { underlying: 'USDC', base: 'USD' },
+  'xBTC::XBTC': { underlying: 'USDC', base: 'USD' },
+  'xLEND::XLEND': { underlying: 'USDC', base: 'USD' },
+  'xLEND::xLEND': { underlying: 'USDC', base: 'USD' },
+  // ETH-money strategy vaults — `base: 'ETH'` on the mixWETH rule.
+  'Lido Earn ETH::EARNETH': { underlying: 'WETH', base: 'ETH' }, // Mellow; exits pay wstETH
+  'Instadapp ETH v2::IETHV2': { underlying: 'stETH', base: 'ETH' }, // Fluid Lite: leveraged stETH
+  'Tokemak autoETH::autoETH': { underlying: 'WETH', base: 'ETH' },
 }

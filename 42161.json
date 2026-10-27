@@ -28095,29 +28095,6 @@
         "issuer": { "id": "reserve", "name": "Reserve", "kind": "protocol" }
       }
     },
-    "0x8ffd9f31980f26fbf4ac693678db700f1d8c51f6": {
-      "chainId": "42161",
-      "decimals": 18,
-      "name": "Liquid Staked ETH Index",
-      "address": "0x8ffd9f31980f26fbf4ac693678db700f1d8c51f6",
-      "symbol": "LSETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/28856/large/LSETH_logo.png?1675166249",
-      "assetGroup": "LSETH",
-      "currencyId": "Liquid Staked ETH Index::LSETH",
-      "props": {
-        "lst": {
-          "type": "staking",
-          "asset": "ETH",
-          "provider": "liquid-collective"
-        },
-        "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
-        "issuer": {
-          "id": "liquid-collective",
-          "name": "Liquid Collective",
-          "kind": "protocol"
-        }
-      }
-    },
     "0xd4939d69b31fbe981ed6904a3af43ee1dc777aab": {
       "chainId": "42161",
       "decimals": 18,
@@ -28274,6 +28251,47 @@
           "source": "whitelist"
         },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
+      }
+    },
+    "0xf0bb20865277abd641a307ece5ee04e79073416c": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Ether.Fi Liquid ETH",
+      "address": "0xf0bb20865277abd641a307ece5ee04e79073416c",
+      "symbol": "liquidETH",
+      "assetGroup": "Ether.Fi Liquid ETH::LIQUIDETH",
+      "currencyId": "Ether.Fi Liquid ETH::liquidETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
+      }
+    },
+    "0xcdf9bc1f8362555984ee497a1ed3654f21662e7e": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Universal ETH",
+      "address": "0xcdf9bc1f8362555984ee497a1ed3654f21662e7e",
+      "symbol": "uniETH",
+      "assetGroup": "Arbitrum Bridged Universal ETH::uniETH",
+      "currencyId": "Universal ETH::uniETH",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
+      }
+    },
+    "0x8ffd9f31980f26fbf4ac693678db700f1d8c51f6": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Liquid Staked ETH Index",
+      "address": "0x8ffd9f31980f26fbf4ac693678db700f1d8c51f6",
+      "symbol": "LSETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/28856/large/LSETH_logo.png?1675166249",
+      "assetGroup": "Liquid Staked ETH Index::LSETH",
+      "currencyId": "Liquid Staked ETH Index::LSETH",
+      "props": {
+        "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
+        "permit": { "type": 1, "version": "1" }
       }
     },
     "0xe556aba6fe6036275ec1f87eda296be72c811bce": {
@@ -34200,8 +34218,8 @@
             }
           ]
         },
-        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -34243,8 +34261,8 @@
             }
           ]
         },
-        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -34538,8 +34556,8 @@
       "assetGroup": "Universal ETH::uniETH",
       "currencyId": "Universal ETH::uniETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -34729,8 +34747,8 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -41061,8 +41079,8 @@
       "assetGroup": "Wrapped OETH::WOETH",
       "currencyId": "Wrapped OETH::WOETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "origin" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "origin" },
         "issuer": { "id": "origin", "name": "Origin", "kind": "protocol" }
       }
     },
@@ -41618,13 +41636,13 @@
       "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::BOLD",
       "props": {
-        "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
         "retired": {
           "reason": "superseded",
           "successor": "Liquity BOLD::BOLD",
           "source": "curated"
-        }
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0xb965029343d55189c25a7f3e0c9394dc0f5d41b1": {
@@ -43320,8 +43338,8 @@
             }
           ]
         },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -44518,8 +44536,8 @@
       "assetGroup": "StaFi::rETH",
       "currencyId": "StaFi::rETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -47930,8 +47948,8 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -48818,8 +48836,8 @@
       "assetGroup": "Super Symbiotic LRT::weETHs",
       "currencyId": "Super Symbiotic LRT::weETHs",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -49958,20 +49976,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/35087/thumb/womrhole_logo_full_color_rgb_2000px_72ppi_fb766ac85a.png?1708688954",
       "assetGroup": "W",
       "currencyId": "Wormhole Token::W"
-    },
-    "0xcdf9bc1f8362555984ee497a1ed3654f21662e7e": {
-      "chainId": "42161",
-      "decimals": 18,
-      "name": "Universal ETH",
-      "address": "0xcdf9bc1f8362555984ee497a1ed3654f21662e7e",
-      "symbol": "uniETH",
-      "assetGroup": "Universal ETH::uniETH::42161::0",
-      "currencyId": "Universal ETH::uniETH",
-      "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
-        "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
-      }
     },
     "0xd99f14023f6bde3142d339b6c069b2b711da7e37": {
       "chainId": "42161",
@@ -52088,8 +52092,8 @@
             }
           ]
         },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
         "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
         "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },
@@ -52863,7 +52867,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102171863/thumb/gtUSDa.png?1770138785",
       "assetGroup": "Gauntlet USD Alpha::GTUSDA",
       "currencyId": "Gauntlet USD Alpha::GTUSDA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0x6aebddf980dc724babdc7ced031c8c37934bba72": {
       "chainId": "42161",
@@ -68037,6 +68041,35 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178456/thumb/NLYRA-logo-200x200.png?1789570403",
       "assetGroup": "Neron Lyra::NLYRA",
       "currencyId": "Neron Lyra::NLYRA"
+    },
+    "0xcffe430e9492966727ddc60eb183fe93e5a218e4": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "xHYPE",
+      "address": "0xcffe430e9492966727ddc60eb183fe93e5a218e4",
+      "symbol": "xHYPE",
+      "assetGroup": "xHYPE::XHYPE",
+      "currencyId": "xHYPE::xHYPE",
+      "props": {
+        "oft": {
+          "eid": 30110,
+          "routes": [
+            {
+              "contract": "0xcffe430e9492966727ddc60eb183fe93e5a218e4",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "liminal",
+              "approvalRequired": false,
+              "peers": {
+                "1": "0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03",
+                "999": "0x0c0104e35a101de9af2e0cb307a15e1175580bd5"
+              }
+            }
+          ]
+        },
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "liminal", "name": "Liminal", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42161",

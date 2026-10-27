@@ -12074,6 +12074,19 @@
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
+    "0xf0bb20865277abd641a307ece5ee04e79073416c": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Ether.Fi Liquid ETH",
+      "address": "0xf0bb20865277abd641a307ece5ee04e79073416c",
+      "symbol": "liquidETH",
+      "assetGroup": "Ether.Fi Liquid ETH::LIQUIDETH",
+      "currencyId": "Ether.Fi Liquid ETH::liquidETH",
+      "props": {
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
+      }
+    },
     "0x3f47a86c61242971bde46afa2af17cca4e55dde9": {
       "chainId": "8453",
       "decimals": 18,
@@ -26211,13 +26224,13 @@
       "assetGroup": "Liquity BOLD v1 (superseded)::BOLD",
       "currencyId": "Liquity BOLD::BOLD",
       "props": {
-        "stablecoin": { "base": "USD" },
-        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" },
         "retired": {
           "reason": "superseded",
           "successor": "Liquity BOLD::BOLD",
           "source": "curated"
-        }
+        },
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
     "0x803b629c339941e2b77d2dc499dac9e1fd9eac66": {
@@ -28889,8 +28902,8 @@
           "category": "DISCONTINUED",
           "source": "issuer_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "EURA", "base": "EUR" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -29538,8 +29551,8 @@
             }
           ]
         },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "yieldnest" },
         "issuer": { "id": "yieldnest", "name": "YieldNest", "kind": "protocol" }
       }
     },
@@ -29603,7 +29616,7 @@
       "address": "0x688aee022aa544f150678b8e5720b6b96a9e9a2f",
       "symbol": "SYRUP",
       "logoURI": "https://assets.coingecko.com/coins/images/51232/thumb/IMG_7420.png?1730831572",
-      "assetGroup": "Maple Finance::SYRUP",
+      "assetGroup": "Syrup Token::SYRUP",
       "currencyId": "Maple Finance::SYRUP",
       "props": {
         "oft": {
@@ -29615,7 +29628,7 @@
               "sharedDecimals": 6,
               "oapp": "maple-finance",
               "approvalRequired": false,
-              "peers": {}
+              "peers": { "1": "0x688aee022aa544f150678b8e5720b6b96a9e9a2f" }
             }
           ]
         }
@@ -31160,8 +31173,8 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -37991,11 +38004,11 @@
       "address": "0xd8724322f44e5c58d7a815f542036fb17dbbf839",
       "symbol": "wOETH",
       "logoURI": "https://static.debank.com/image/base_token/logo_url/0xd8724322f44e5c58d7a815f542036fb17dbbf839/103d1e01a36381e2850aebfb28d685e1.png",
-      "assetGroup": "Wrapped OETH::wOETH",
+      "assetGroup": "Wrapped OETH::WOETH",
       "currencyId": "Wrapped OETH::wOETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "origin" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "origin" },
         "issuer": { "id": "origin", "name": "Origin", "kind": "protocol" }
       }
     },
@@ -39351,7 +39364,10 @@
               "sharedDecimals": 6,
               "oapp": "silencio",
               "approvalRequired": false,
-              "peers": { "1": "0x7fa16ced60019ade15edd0cdb03d689d557b6d1e" }
+              "peers": {
+                "1": "0x7fa16ced60019ade15edd0cdb03d689d557b6d1e",
+                "solana": "Af2D8Pq8eiSKR7WQqdoK1cL9vzpXHz2vA6qqYujHVU4A"
+              }
             }
           ]
         }
@@ -45524,7 +45540,6 @@
               "peers": {
                 "1": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
                 "56": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
-                "100": "0x1f34490f8e8e776ffc547b39b864364035eaf44f",
                 "137": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
                 "5042": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
                 "42161": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
@@ -47255,7 +47270,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102171863/thumb/gtUSDa.png?1770138785",
       "assetGroup": "Gauntlet USD Alpha::GTUSDA",
       "currencyId": "Gauntlet USD Alpha::GTUSDA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0xd06f7f6affefb87af1bd243854e646725a044f2e": {
       "chainId": "8453",
@@ -58215,6 +58230,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102178869/thumb/axisrobotics.png?1790578974",
       "assetGroup": "Axis Robotics::AXIS",
       "currencyId": "Axis Robotics::AXIS"
+    },
+    "0x9c6864105aec23388c89600046213a44c384c831": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Tokemak baseUSD",
+      "address": "0x9c6864105aec23388c89600046213a44c384c831",
+      "symbol": "baseUSD",
+      "assetGroup": "Tokemak baseUSD::baseUSD",
+      "currencyId": "Tokemak baseUSD::baseUSD",
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",

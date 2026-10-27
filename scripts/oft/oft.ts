@@ -118,7 +118,20 @@ type LzMetadata = { [chainKey: string]: LzChain }
  * `0xf6aa…1059` is a standard OFT (`send`/`quoteSend`, `token()` = pUSD,
  * mint/burn through the vault, so no approval). Peered Ethereum <-> Plume
  * only — checked against every LayerZero V2 endpoint on 2026-10-09.
+ *
+ * sUSDai on Arc (5042): the registry HAS the row (ProxyOFT 0xffb2…7f24, the same address as the
+ * other four chains, and Arbitrum's hub lists 5042 among its peers), but none of Arc's registry
+ * rows carries `endpointVersion`, which `candidatesFor` requires to be 2. That gap is
+ * registry-wide (1,700+ unversioned rows on ~100 chains, 2026-10-27), and relaxing the check
+ * for all of them would admit V1 OFTs that have no `peers()`; this pins the one route the earn
+ * surface needs.
+ *
+ * Liminal xHYPE: not in the registry at all. A native OFT at 0xac96…1e03 on Ethereum and
+ * 0xcffe…18e4 on Arbitrum (`token()` = itself, no approval) and a lock-box adapter 0x0c01…0bd5 on
+ * HyperEVM (`token()` = xHYPE, approval required) — each one's `peers` names the other two
+ * (2026-10-27). The adapter held 32,931 xHYPE = Arbitrum's 32,828 + Ethereum's 103 supply.
  */
+const LIMINAL_XHYPE = '0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03'
 const EXTRA_ROUTES: { [chainId: string]: { token: string; route: OftRoute }[] } = {
   '1': [
     {
@@ -128,6 +141,40 @@ const EXTRA_ROUTES: { [chainId: string]: { token: string; route: OftRoute }[] } 
         kind: 'adapter',
         sharedDecimals: 6,
         oapp: 'nest',
+      },
+    },
+    { token: LIMINAL_XHYPE, route: { contract: LIMINAL_XHYPE, kind: 'native', sharedDecimals: 6, oapp: 'liminal' } },
+  ],
+  '42161': [
+    {
+      token: '0xcffe430e9492966727ddc60eb183fe93e5a218e4',
+      route: {
+        contract: '0xcffe430e9492966727ddc60eb183fe93e5a218e4',
+        kind: 'native',
+        sharedDecimals: 6,
+        oapp: 'liminal',
+      },
+    },
+  ],
+  '999': [
+    {
+      token: LIMINAL_XHYPE,
+      route: {
+        contract: '0x0c0104e35a101de9af2e0cb307a15e1175580bd5',
+        kind: 'adapter',
+        sharedDecimals: 6,
+        oapp: 'liminal',
+      },
+    },
+  ],
+  '5042': [
+    {
+      token: '0x0b2b2b2076d95dda7817e785989fe353fe955ef9',
+      route: {
+        contract: '0xffb20098fd7b8e84762eea4609f299d101427f24',
+        kind: 'adapter',
+        sharedDecimals: 6,
+        oapp: 'usdai',
       },
     },
   ],
@@ -233,9 +280,11 @@ function candidatesFor(chain: LzChain, listed: Set<string>, chainId: string): Ca
     }
   }
   for (const extra of EXTRA_ROUTES[chainId] ?? []) {
-    const key = `${extra.token}:${extra.route.contract}`
-    if (!listed.has(extra.token) || seen.has(key)) continue
-    seen.add(key)
+    // Dedupe against routes actually EMITTED, not `seen`: `consider` marks a registry row seen
+    // before rejecting it (Arc's unversioned rows), and that rejected row is what an extra
+    // route exists to replace.
+    if (!listed.has(extra.token)) continue
+    if (out.some((c) => c.token === extra.token && c.route.contract === extra.route.contract)) continue
     out.push({ token: extra.token, route: { ...extra.route } })
   }
   return out

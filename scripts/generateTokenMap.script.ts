@@ -359,6 +359,9 @@ async function readTokenLists(): Promise<{
                     // RWA_LIST (rwa/rwa.json) re-derives it for every row a rule or the manual
                     // registry matches, so a seeded copy only ever kept a label a rule had since
                     // dropped (4663 `BACKED`, 143 `vUSD` — the two seed-only rows, 2026-10-14).
+                    // `lst` likewise: LST_LIST (lst/lst.json, address-keyed, ahead of the seed) and the
+                    // group overlay below re-derive it, and a seeded copy kept Liquid Collective's label
+                    // on the "Liquid Staked ETH Index" basket after its rule was fixed (2026-10-27).
                     if (is1delta && tokenProps) {
                       const {
                         stablecoin: _s,
@@ -366,6 +369,7 @@ async function readTokenLists(): Promise<{
                         issuerExposures: _e,
                         rwa: _r,
                         retired: _rt,
+                        lst: _l,
                         ...rest
                       } = tokenProps
                       tokenProps = rest

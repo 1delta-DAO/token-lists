@@ -5502,7 +5502,15 @@
           "syAddress": "0x854a23bcf88d508d5519b519b5d29cd2ea77a603",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "concrete",
+            "name": "Concrete",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0x23da8bcedd4c66083c2ad655dd3555f4541200dd": {
@@ -28619,7 +28627,15 @@
           "syAddress": "0x854a23bcf88d508d5519b519b5d29cd2ea77a603",
           "expired": true
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          {
+            "id": "concrete",
+            "name": "Concrete",
+            "kind": "protocol",
+            "hops": 1
+          }
+        ]
       }
     },
     "0xb6c0b59aff5c128ab0631a7ce762a2abcf926d84": {
@@ -72319,29 +72335,6 @@
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
-    "0x628ebc64a38269e031afbdd3c5ba857483b5d048": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Liquid Staked ETH Index",
-      "address": "0x628ebc64a38269e031afbdd3c5ba857483b5d048",
-      "symbol": "LSETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/28856/large/LSETH_logo.png?1675166249",
-      "assetGroup": "LSETH",
-      "currencyId": "Liquid Staked ETH Index::LSETH",
-      "props": {
-        "lst": {
-          "type": "staking",
-          "asset": "ETH",
-          "provider": "liquid-collective"
-        },
-        "risk": { "score": 4, "source": "default" },
-        "issuer": {
-          "id": "liquid-collective",
-          "name": "Liquid Collective",
-          "kind": "protocol"
-        }
-      }
-    },
     "0xe72b141df173b999ae7c1adcbf60cc9833ce56a8": {
       "chainId": "1",
       "decimals": 18,
@@ -72625,6 +72618,17 @@
         "issuer": { "id": "binance", "name": "Binance", "kind": "cex" }
       }
     },
+    "0x628ebc64a38269e031afbdd3c5ba857483b5d048": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Liquid Staked ETH Index",
+      "address": "0x628ebc64a38269e031afbdd3c5ba857483b5d048",
+      "symbol": "LSETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/28856/large/LSETH_logo.png?1675166249",
+      "assetGroup": "Liquid Staked ETH Index::LSETH",
+      "currencyId": "Liquid Staked ETH Index::LSETH",
+      "props": { "risk": { "score": 4, "source": "default" } }
+    },
     "0x3af4b295a730408568fa8d7af70cb6c282ffb698": {
       "chainId": "1",
       "decimals": 18,
@@ -72869,7 +72873,6 @@
       "assetGroup": "ether.fi USD::eUSD",
       "currencyId": "ether.fi USD::eUSD",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "risk": {
           "score": 2,
           "category": "YIELD_STABLE",
@@ -86190,6 +86193,7 @@
               "peers": {
                 "137": "0x2292e82e7a53b1d055a64e4bdec4e9f91318d377",
                 "196": "0x3d032b9558044879621c043afd9ccab3f79fd09b",
+                "988": "0x2eb79387fa1a6ef6dc8e25401c8fdc291cc542c7",
                 "42161": "0xfab5891ed867a1195303251912013b92c4fc3a1d",
                 "57073": "0x2201c64071ebb4da0eac122d8877c7af24bf8d7e",
                 "solana": "AuVW19qwit2bxZqcspGZLsbq2ZiqosvryTNXE8UZSeGh"
@@ -86319,7 +86323,7 @@
               "sharedDecimals": 6,
               "oapp": "maple-finance",
               "approvalRequired": true,
-              "peers": {}
+              "peers": { "8453": "0x688aee022aa544f150678b8e5720b6b96a9e9a2f" }
             }
           ]
         }
@@ -103891,8 +103895,8 @@
       "assetGroup": "StaFi::rETH",
       "currencyId": "StaFi Staked ETH::RETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "stafi" },
         "issuer": { "id": "stafi", "name": "StaFi", "kind": "protocol" }
       }
     },
@@ -105776,8 +105780,8 @@
       "assetGroup": "Universal ETH::uniETH",
       "currencyId": "Universal ETH::uniETH",
       "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
         "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -106680,7 +106684,11 @@
       "symbol": "IETHV2",
       "logoURI": "https://assets.coingecko.com/coins/images/29704/thumb/iETH.png?1696528636",
       "assetGroup": "Instadapp ETH v2::IETHV2",
-      "currencyId": "Instadapp ETH v2::IETHV2"
+      "currencyId": "Instadapp ETH v2::IETHV2",
+      "props": {
+        "savings": { "underlying": "stETH", "base": "ETH" },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
+      }
     },
     "0xde67d97b8770dc98c746a3fc0093c538666eb493": {
       "chainId": "1",
@@ -111358,8 +111366,8 @@
             }
           ]
         },
-        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "ETH", "provider": "dinero" },
         "issuer": { "id": "dinero", "name": "Dinero", "kind": "protocol" }
       }
     },
@@ -115382,8 +115390,8 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "EURA", "base": "EUR" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -115493,8 +115501,8 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -125152,6 +125160,7 @@
               "peers": {
                 "10": "0x9a9d5a29206dde4f70825032df32333de5f63921",
                 "56": "0x9a9d5a29206dde4f70825032df32333de5f63921",
+                "4663": "0x3cbfdada8abcb43a42eaed1b88e72b06eb2523da",
                 "8453": "0x9a9d5a29206dde4f70825032df32333de5f63921",
                 "solana": "GvsMcHm97NtYx1upvMBDsGYJFPn3PgjgFJ8PSpeAYyzV"
               }
@@ -126633,8 +126642,8 @@
       "assetGroup": "ether fi Staked ETH::EETH",
       "currencyId": "ether fi Staked ETH::EETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -128565,15 +128574,13 @@
                 "1116": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "1329": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "1868": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
-                "1923": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "2345": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "2818": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "8453": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "43111": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "80094": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
                 "98866": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
-                "167000": "0xaa0d222436152050501e91dc07a45b1112f8b60f",
-                "21000000": "0xaa0d222436152050501e91dc07a45b1112f8b60f"
+                "167000": "0xaa0d222436152050501e91dc07a45b1112f8b60f"
               }
             }
           ]
@@ -129983,7 +129990,6 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "oft": {
           "eid": 30101,
           "routes": [
@@ -130000,6 +130006,7 @@
             }
           ]
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "level", "name": "Level", "kind": "protocol" }
       }
@@ -134954,7 +134961,6 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "lvlUSD", "base": "USD" },
         "oft": {
           "eid": 30101,
@@ -134972,6 +134978,7 @@
             }
           ]
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "level", "name": "Level", "kind": "protocol" }
       }
@@ -140155,7 +140162,8 @@
       "symbol": "autoETH",
       "logoURI": "https://cdn.morpho.org/assets/logos/autoeth.svg",
       "assetGroup": "Tokemak autoETH::autoETH",
-      "currencyId": "Tokemak autoETH::autoETH"
+      "currencyId": "Tokemak autoETH::autoETH",
+      "props": { "savings": { "underlying": "WETH", "base": "ETH" } }
     },
     "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39": {
       "chainId": "1",
@@ -178934,7 +178942,6 @@
               "approvalRequired": false,
               "peers": {
                 "56": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
-                "100": "0x1f34490f8e8e776ffc547b39b864364035eaf44f",
                 "137": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
                 "5042": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
                 "8453": "0x27f6c8289550fce67f6b50bed1f519966afe5287",
@@ -180782,7 +180789,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102171863/thumb/gtUSDa.png?1770138785",
       "assetGroup": "Gauntlet USD Alpha::GTUSDA",
       "currencyId": "Gauntlet USD Alpha::GTUSDA",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0x31bc2baa782e5180e9efa32261d2bb33ce8918bc": {
       "chainId": "1",
@@ -180906,8 +180913,11 @@
       "address": "0xc86168d2424d28942ee0866f043c1206bc9e4900",
       "symbol": "JUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xc86168d2424d28942ee0866f043c1206bc9e4900.png",
-      "assetGroup": "JUSD",
-      "currencyId": "JUSD::JUSD"
+      "assetGroup": "Aegis JUSD::JUSD",
+      "currencyId": "JUSD::JUSD",
+      "props": {
+        "issuer": { "id": "aegis", "name": "Aegis", "kind": "protocol" }
+      }
     },
     "0x4aa8949bb47da4b4f27345404ba1e5e7ea90bdb3": {
       "chainId": "1",
@@ -183220,7 +183230,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102172834/thumb/earnUSD.png?1776151948",
       "assetGroup": "Lido EarnUSD::EARNUSD",
       "currencyId": "Lido EarnUSD::EARNUSD",
-      "props": { "stablecoin": { "base": "USD" } }
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
     },
     "0xbbfc8683c8fe8cf73777fede7ab9574935fea0a4": {
       "chainId": "1",
@@ -183230,7 +183240,8 @@
       "symbol": "EARNETH",
       "logoURI": "https://assets.coingecko.com/coins/images/102172835/thumb/earnETH.png?1776152041",
       "assetGroup": "Lido Earn ETH::EARNETH",
-      "currencyId": "Lido Earn ETH::EARNETH"
+      "currencyId": "Lido Earn ETH::EARNETH",
+      "props": { "savings": { "underlying": "WETH", "base": "ETH" } }
     },
     "0xca83dde9c22254f58e771be5e157773212acbac3": {
       "chainId": "1",
@@ -190484,6 +190495,190 @@
       "assetGroup": "Flex WETH yVault::yvFlexWETH",
       "currencyId": "Flex WETH yVault::yvFlexWETH",
       "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+    },
+    "0x08c6f91e2b681faf5e17227f2a44c307b3c1364c": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Ether.Fi Liquid USD",
+      "address": "0x08c6f91e2b681faf5e17227f2a44c307b3c1364c",
+      "symbol": "liquidUSD",
+      "assetGroup": "Ether.Fi Liquid USD::LIQUIDUSD",
+      "currencyId": "Ether.Fi Liquid USD::liquidUSD",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
+      }
+    },
+    "0x273da948aca9261043fbdb2a857bc255ecc29012": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Fluid Lite USD Vault",
+      "address": "0x273da948aca9261043fbdb2a857bc255ecc29012",
+      "symbol": "fLiteUSD",
+      "assetGroup": "Fluid Lite USD Vault::fLiteUSD",
+      "currencyId": "Fluid Lite USD Vault::fLiteUSD",
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
+    },
+    "0xa7569a44f348d3d70d8ad5889e50f78e33d80d35": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Tokemak autoUSD",
+      "address": "0xa7569a44f348d3d70d8ad5889e50f78e33d80d35",
+      "symbol": "autoUSD",
+      "assetGroup": "Tokemak autoUSD::autoUSD",
+      "currencyId": "Tokemak autoUSD::autoUSD",
+      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
+    },
+    "0x2b5895b716311a1eac8f93fb88c56af9ec8c1a69": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "JUSD Credit Vault",
+      "address": "0x2b5895b716311a1eac8f93fb88c56af9ec8c1a69",
+      "symbol": "JUSD",
+      "assetGroup": "JUSD Credit Vault::JUSD",
+      "currencyId": "JUSD Credit Vault::JUSD",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": {
+          "id": "jusd-finance",
+          "name": "JUSD Finance",
+          "kind": "protocol"
+        }
+      }
+    },
+    "0xc9854f2af89d4d26837004d1e154bd3c3c1009b1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Yuzu Syrup",
+      "address": "0xc9854f2af89d4d26837004d1e154bd3c3c1009b1",
+      "symbol": "yzSyrup",
+      "assetGroup": "Yuzu Syrup::yzSyrup",
+      "currencyId": "Yuzu Syrup::yzSyrup",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
+      }
+    },
+    "0xac499adf00a54044b988a59b19016655c3494b06": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Steakhouse USD Machine",
+      "address": "0xac499adf00a54044b988a59b19016655c3494b06",
+      "symbol": "usdSHFmk",
+      "assetGroup": "Steakhouse USD Machine::usdSHFmk",
+      "currencyId": "Steakhouse USD Machine::usdSHFmk",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": {
+          "id": "steakhouse",
+          "name": "Steakhouse Financial",
+          "kind": "protocol"
+        }
+      }
+    },
+    "0xbef11279fa6db9fa284cbe7f0fa9799e06b2dcd7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Dialectic Carry Machine",
+      "address": "0xbef11279fa6db9fa284cbe7f0fa9799e06b2dcd7",
+      "symbol": "DCM",
+      "assetGroup": "Dialectic Carry Machine::DCM",
+      "currencyId": "Dialectic Carry Machine::DCM",
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "dialectic", "name": "Dialectic", "kind": "protocol" }
+      }
+    },
+    "0x0e609b710da5e0aa476224b6c0e5445ccc21251e": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Concrete Decentralized Finance USDT",
+      "address": "0x0e609b710da5e0aa476224b6c0e5445ccc21251e",
+      "symbol": "ctDefiUSDT",
+      "assetGroup": "Concrete Decentralized Finance USDT::ctDefiUSDT",
+      "currencyId": "Concrete Decentralized Finance USDT::ctDefiUSDT",
+      "props": {
+        "savings": { "underlying": "USDT", "base": "USD" },
+        "issuer": { "id": "concrete", "name": "Concrete", "kind": "protocol" }
+      }
+    },
+    "0x86a95dc16d05c62a6c22fa1697ca933ecca380b7": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Concrete RWA USD1",
+      "address": "0x86a95dc16d05c62a6c22fa1697ca933ecca380b7",
+      "symbol": "ctRWA_USD1",
+      "assetGroup": "Concrete RWA USD1::ctRWA_USD1",
+      "currencyId": "Concrete RWA USD1::ctRWA_USD1",
+      "props": {
+        "savings": { "underlying": "USD1", "base": "USD" },
+        "issuer": { "id": "concrete", "name": "Concrete", "kind": "protocol" }
+      }
+    },
+    "0x843033cfd7bc2b7573c67070991e87f97822759f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "ZIG USD1",
+      "address": "0x843033cfd7bc2b7573c67070991e87f97822759f",
+      "symbol": "ctZigUSD1",
+      "assetGroup": "ZIG USD1::ctZigUSD1",
+      "currencyId": "ZIG USD1::ctZigUSD1",
+      "props": {
+        "savings": { "underlying": "USD1", "base": "USD" },
+        "issuer": { "id": "concrete", "name": "Concrete", "kind": "protocol" }
+      }
+    },
+    "0x7e7573e8ce6eeb7af207a4569733c49f87dcd9b6": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Colb USD1",
+      "address": "0x7e7573e8ce6eeb7af207a4569733c49f87dcd9b6",
+      "symbol": "ctColbUSD1",
+      "assetGroup": "Colb USD1::ctColbUSD1",
+      "currencyId": "Colb USD1::ctColbUSD1",
+      "props": {
+        "savings": { "underlying": "USD1", "base": "USD" },
+        "issuer": { "id": "concrete", "name": "Concrete", "kind": "protocol" }
+      }
+    },
+    "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "Plasma USD Vault",
+      "address": "0xd1074e0ae85610ddba0147e29ebe0d8e5873a000",
+      "symbol": "PlasmaUSD",
+      "assetGroup": "Plasma USD Vault::PlasmaUSD",
+      "currencyId": "Plasma USD Vault::PlasmaUSD",
+      "props": { "savings": { "underlying": "USDT0", "base": "USD" } }
+    },
+    "0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "xHYPE",
+      "address": "0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03",
+      "symbol": "xHYPE",
+      "assetGroup": "xHYPE::XHYPE",
+      "currencyId": "xHYPE::xHYPE",
+      "props": {
+        "oft": {
+          "eid": 30101,
+          "routes": [
+            {
+              "contract": "0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "liminal",
+              "approvalRequired": false,
+              "peers": {
+                "999": "0x0c0104e35a101de9af2e0cb307a15e1175580bd5",
+                "42161": "0xcffe430e9492966727ddc60eb183fe93e5a218e4"
+              }
+            }
+          ]
+        },
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "issuer": { "id": "liminal", "name": "Liminal", "kind": "protocol" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

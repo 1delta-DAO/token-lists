@@ -987,6 +987,42 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Green USD Stablecoin::GREEN': { id: 'ripe', name: 'Ripe', kind: 'protocol' },
   'Savings Green USD::sGREEN': { id: 'ripe', name: 'Ripe', kind: 'protocol' },
   'Fragmetric Restaked SOL::fragSOL::solana': { id: 'fragmetric', name: 'Fragmetric', kind: 'protocol' },
+  // --- 2026-10-27 earn gap sweep. A share whose operator runs and MARKS its own book takes that
+  // operator as its desk (the vkHYPE-on-Veda and Morini-on-Accountable rule), never the vault
+  // infrastructure. The pure on-chain allocators in the same sweep (Gauntlet USD Alpha, Lido
+  // Earn, Tokemak autopools, Fluid Lite) and PlasmaUSD (Veda infrastructure, strategist not
+  // identified) get none — "the curator is not the desk", see unattributed-ok.json. Canonical
+  // groups only: `lookupIssuer` falls back through GROUP_ALIAS.
+  'Ether.Fi Liquid USD::LIQUIDUSD': { id: 'etherfi', name: 'Ether.fi', kind: 'protocol' },
+  'Ether.Fi Liquid ETH::LIQUIDETH': { id: 'etherfi', name: 'Ether.fi', kind: 'protocol' },
+  'JUSD Credit Vault::JUSD': { id: 'jusd-finance', name: 'JUSD Finance', kind: 'protocol' },
+  'Yuzu Syrup::yzSyrup': { id: 'yuzu', name: 'Yuzu', kind: 'protocol' },
+  'Steakhouse USD Machine::usdSHFmk': { id: 'steakhouse', name: 'Steakhouse Financial', kind: 'protocol' },
+  'Dialectic Carry Machine::DCM': { id: 'dialectic', name: 'Dialectic', kind: 'protocol' },
+  'Concrete Decentralized Finance USDT::ctDefiUSDT': { id: 'concrete', name: 'Concrete', kind: 'protocol' },
+  'Concrete RWA USD1::ctRWA_USD1': { id: 'concrete', name: 'Concrete', kind: 'protocol' },
+  'ZIG USD1::ctZigUSD1': { id: 'concrete', name: 'Concrete', kind: 'protocol' },
+  'Colb USD1::ctColbUSD1': { id: 'concrete', name: 'Concrete', kind: 'protocol' },
+  'xHYPE::XHYPE': { id: 'liminal', name: 'Liminal', kind: 'protocol' },
+  'xBTC::XBTC': { id: 'liminal', name: 'Liminal', kind: 'protocol' },
+  'xLEND::XLEND': { id: 'liminal', name: 'Liminal', kind: 'protocol' },
+  'Aegis JUSD::JUSD': { id: 'aegis', name: 'Aegis', kind: 'protocol' },
+  // Solana single-validator / operator LSTs that carried `lst` but no desk (names from the mints).
+  'DeFi Development Corp Staked SOL::dfdvSOL::solana': {
+    id: 'defi-development',
+    name: 'DeFi Development Corp',
+    kind: 'institution',
+  },
+  'The Vault::vSOL::solana': { id: 'the-vault', name: 'The Vault', kind: 'protocol' },
+  'JPOOL Solana Token::JSOL::solana': { id: 'jpool', name: 'JPool', kind: 'protocol' },
+  'Phase Delegation Staked SOL::pdSOL::solana': { id: 'phase', name: 'Phase', kind: 'protocol' },
+  'JagPool Staked SOL::jagSOL::solana': { id: 'jagpool', name: 'JagPool', kind: 'protocol' },
+  'DoubleZero Staked SOL::dzSOL::solana': { id: 'doublezero', name: 'DoubleZero', kind: 'protocol' },
+  'STKE SOL::STKESOL::solana': { id: 'stke', name: 'STKE', kind: 'protocol' },
+  'Raiku Staked SOL::rkuSOL::solana': { id: 'raiku', name: 'Raiku', kind: 'protocol' },
+  'Bonk SOL::bonkSOL::solana': { id: 'bonk', name: 'Bonk', kind: 'protocol' },
+  'Backpack Staked SOL::bpSOL::solana': { id: 'backpack', name: 'Backpack', kind: 'institution' },
+  'Stronghold LST::strongSOL::solana': { id: 'stronghold', name: 'Stronghold', kind: 'protocol' },
 }
 
 /**

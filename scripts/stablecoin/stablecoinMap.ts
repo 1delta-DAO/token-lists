@@ -129,8 +129,15 @@ const trace = (...cols: (string | undefined)[]) => {
  *   lira carry / FX-arbitrage / basis books, restated in steps that have gone
  *   down (5 step-downs since 2025-09). DefiLlama listed it as peggedUSD (id
  *   331) until 2026-10-15.
+ * - Lido EarnUSD (Mellow core vault) and Gauntlet USD Alpha (Aera vault): strategy-vault
+ *   shares priced at the operator's reported NAV (earnUSD, gtUSDa), which DefiLlama's feed
+ *   carries as `EARNUSD` / `GTUSDA` stablecoins. They are savings rows (savingsAssets.ts).
  */
-export const STABLECOIN_DENY_GROUPS = new Set<string>(['USP Yield Optimized Stablecoin::USP'])
+export const STABLECOIN_DENY_GROUPS = new Set<string>([
+  'USP Yield Optimized Stablecoin::USP',
+  'Lido EarnUSD::EARNUSD',
+  'Gauntlet USD Alpha::GTUSDA',
+])
 export const STABLECOIN_DENY_ADDRESSES = new Set<string>(['1:0x098697ba3fee4ea76294c5d6a466a4e3b3e95fe6'])
 
 const isDenied = (assetGroup?: string, chainId?: string, address?: string) =>

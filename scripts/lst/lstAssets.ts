@@ -29,6 +29,12 @@ export const LST_MANUAL: LstRegistry = {
     '0x77734e70b6e88b4d82fe632a168edf6e700912b6': { type: 'staking', asset: 'BNB', provider: 'aster' },
   },
 
+  // Arbitrum standard-gateway bridge of Bedrock's Ethereum uniETH (0xcdf9…7e7e, `l1Address()` =
+  // 0xf137…51f4). Its own group (`Arbitrum Bridged Universal ETH::uniETH`, see
+  // ADDRESS_GROUP_OVERRIDE) reaches no group-keyed LST label, and seeded `lst` labels are no
+  // longer carried forward, so it is classified here.
+  '42161': { '0xcdf9bc1f8362555984ee497a1ed3654f21662e7e': { type: 'staking', asset: 'ETH', provider: 'bedrock' } },
+
   // Firelight stXRP (Flare 14) — FXRP (XRP's 1:1 FAsset) restaked to back
   // Firelight's cover markets. `restaking` = LRT: the capital secures OTHER
   // protocols, like weETH/ezETH/rsETH. `asset` is the base staked asset (XRP),
