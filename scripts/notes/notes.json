@@ -49,7 +49,7 @@
   "XPL": { "what": "Plasma native coin" },
   "PLUME": { "what": "Plume native coin", "alsoGroups": ["Plume::PLUME"] },
   "PATHUSD": { "what": "Tempo native coin · dollar-priced" },
-  "EURC": { "what": "Circle euro stablecoin", "alsoGroups": ["EURC::EURC"] },
+  "EURC": { "what": "Circle euro stablecoin" },
   "EUR CoinVertible::EURCV": { "what": "Société Générale euro stablecoin" },
   "Tether Gold::XAUt": { "what": "Tether gold" },
   "PAXG": { "what": "Paxos gold" },
@@ -304,8 +304,7 @@
       "https://docs.treehouse.finance/protocol/tasset/architecture/redemption-process"
     ],
     "updated": "2026-10-06",
-    "confidence": "high",
-    "alsoGroups": ["Treehouse ETH::tETH"]
+    "confidence": "high"
   },
   "Janus Henderson Anemoy AAA CLO Fund Token::JAAA": {
     "what": "Tokenized Janus Henderson AAA CLO fund (Centrifuge/Anemoy)",
@@ -858,8 +857,7 @@
     "links": ["https://pharos.watch/stablecoin/msusd-metronome/", "https://www.bitget.com/news/detail/12560605573400"],
     "updated": "2026-10-06",
     "confidence": "medium",
-    "verify": "Depegged ~11 % on 31 Jul 2026 after a collateral shortfall; check the peg.",
-    "alsoGroups": ["Metronome Synth USD::MSUSD"]
+    "verify": "Depegged ~11 % on 31 Jul 2026 after a collateral shortfall; check the peg."
   },
   "earnAUSD::earnAUSD": {
     "what": "Upshift vault on Agora AUSD (Monad) · lending and LP allocation",
@@ -985,7 +983,7 @@
     "links": ["https://developers.skyeco.com/protocol/tokens/susds/"],
     "updated": "2026-10-12",
     "confidence": "high",
-    "alsoGroups": ["sUSDS::sUSDS", "Savings USDS::sUSDS", "Savings USDS from Ethereum::sUSDS"]
+    "alsoGroups": ["Savings USDS::sUSDS", "Savings USDS from Ethereum::sUSDS"]
   },
   "SDAI": {
     "what": "Sky savings DAI (legacy DSR) · RWA T-bills + crypto-collateral loan fees",
@@ -1173,7 +1171,7 @@
     "updated": "2026-10-12",
     "confidence": "medium",
     "verify": "USDz supply has shrunk to under $10m on-chain (DefiLlama); docs show no wind-down, but check liquidity and whether the project is still active.",
-    "alsoGroups": ["Anzen Staked USDz::sUSDz", "Staked USDz::sUSDz"]
+    "alsoGroups": ["Staked USDz::sUSDz"]
   },
   "Astherus Staked USDF::asUSDF": {
     "what": "Aster staked USDF · delta-neutral spot-long/perp-short funding on Binance",
@@ -1597,7 +1595,7 @@
     "confidence": "medium",
     "verify": "Share price around 0.998 per USDC on-chain on 2026-10-12, a ~13% max drawdown in the past year, and TVL down >95% from its peak (tradingstrategy.ai flags it as likely abandoned). YieldFi moved new integrations to V3 vaults and marks yToken/vyToken as legacy. Check before showing as a live savings product."
   },
-  "YieldFi vyUSD::vyUSD": {
+  "YieldFi vyUSD::VYUSD": {
     "what": "YieldFi vyUSD · vault over yUSD's delta-neutral strategy, USDC/USDT0 asset on L2s",
     "body": "vyUSD is YieldFi's 'vault' version of yUSD: an ERC-4626 token that originally wrapped yUSD (depositYToken) and on L2s reports USDC (USDT0 on Plasma) as its asset at 0xf4f4... It runs the same market-neutral book as yUSD (LP, leverage looping, basis and funding spreads, fees), with gains reflected in NAV. It is a different token from yUSD, with its own exchange rate.",
     "backing": "yUSD / stablecoins in YieldFi's delta-neutral strategies",
@@ -1610,7 +1608,6 @@
     ],
     "updated": "2026-10-12",
     "confidence": "medium",
-    "alsoGroups": ["YieldFi vyUSD::VYUSD"],
     "verify": "Legacy (V2) contract per YieldFi docs. Ethereum vyUSD (0x2e3c...) converts 1 share to about 0.92 USDC on-chain, below 1, which suggests losses. Check NAV before presenting it as a growing savings token."
   },
   "YieldFi yToken::YUSD": {
@@ -2389,12 +2386,11 @@
     "body": "uniETH is Bedrock's ETH liquid staking token. ETH deposited into Bedrock's staking contract is staked on Ethereum validators, and uniETH's exchange ratio against ETH rises with staking rewards (about 2.4 % APR in October 2026, ~9k uniETH). The Arbitrum and Linea copies are bridged.",
     "backing": "ETH staked on Ethereum validators through Bedrock",
     "yieldSource": "Ethereum staking rewards",
-    "redemption": "mint by depositing ETH; exit through Bedrock's staking contract (asynchronous) or a DEX sale",
+    "redemption": "mint by depositing ETH. Exit through Bedrock's staking contract: an instant swap out of unstaked deposits (a near-empty buffer, effectively closed) or a validator exit in whole 32-ETH lots, claimed once Bedrock's Redeem contract is funded; or a DEX sale. A 10 % manager fee on rewards is netted in the ratio",
     "issuer": "Bedrock",
     "links": ["https://etherscan.io/address/0xf1376bcef0f78459c0ed0ba5ddce976f1ddf51f4"],
-    "updated": "2026-10-17",
-    "confidence": "medium",
-    "verify": "Redemption timing and fees were not checked."
+    "updated": "2026-10-27",
+    "confidence": "medium"
   },
   "SUSDA": {
     "what": "Avalon savings USDa · USDa deposited at Avalon's protocol-set target rate (~4 %)",
@@ -2481,30 +2477,30 @@
     "body": "DUSD is the token of Makina's USD 'Machine', a strategy vault operated by Dialectic since October 2025 (before that it lent on Morpho). Deposits in a dollar accounting token mint DUSD at the machine's share price, Dialectic's portfolio managers deploy the capital across DeFi yield strategies, and returns accrue to the share price (about 7.0 % APR on ~$1.9M in October 2026). It also exists on Ink.",
     "backing": "USD deployed by Dialectic across DeFi strategies",
     "yieldSource": "returns of the operator-managed DeFi strategies",
-    "redemption": "through the Makina machine's redemption flow; also traded on Curve",
+    "redemption": "queued for at least 48 hours, then paid at the lower of the share price at request and at processing; no cancel. Also traded on Curve",
     "issuer": "Makina (operator Dialectic)",
     "links": [
       "https://makinafi.substack.com/p/operator-deep-dive-dialectic",
       "https://makinafi.substack.com/p/makina-protocol-launch-the-machines"
     ],
-    "updated": "2026-10-17",
+    "updated": "2026-10-27",
     "confidence": "low",
-    "verify": "Strategy holdings, deposit permissions and exit terms were not checked."
+    "verify": "Strategy holdings were not checked."
   },
   "Dialectic ETH::DETH": {
     "what": "Makina DETH · ETH strategy vault run by Dialectic across DeFi",
     "body": "DETH is the token of Makina's ETH 'Machine', a strategy vault operated by Dialectic since October 2025 (before that it lent on Morpho). Deposits in ETH mint DETH at the machine's share price, Dialectic's portfolio managers deploy the capital across DeFi yield strategies, and returns accrue to the share price (about 4.1 % APR on ~2,500 ETH in October 2026). It also exists on Ink.",
     "backing": "ETH deployed by Dialectic across DeFi strategies",
     "yieldSource": "returns of the operator-managed DeFi strategies",
-    "redemption": "through the Makina machine's redemption flow; also traded on Curve",
+    "redemption": "queued for at least 48 hours, then paid in WETH at the lower of the share price at request and at processing; no cancel. Deposits are capped by the machine's share limit. Also traded on Curve",
     "issuer": "Makina (operator Dialectic)",
     "links": [
       "https://makinafi.substack.com/p/operator-deep-dive-dialectic",
       "https://makinafi.substack.com/p/makina-protocol-launch-the-machines"
     ],
-    "updated": "2026-10-17",
+    "updated": "2026-10-27",
     "confidence": "low",
-    "verify": "Strategy holdings, deposit permissions and exit terms were not checked."
+    "verify": "Strategy holdings were not checked."
   },
   "Dialectic BTC::DBIT": {
     "what": "Makina DBIT · BTC strategy vault run by Dialectic across DeFi",
@@ -2541,23 +2537,24 @@
     "body": "earnETH is Lido Earn's ETH vault. Mellow curates it as a meta-vault over two sub-vaults, GGV and stRATEGY (strETH), which deploy ETH and wstETH across Aave, Morpho, Pendle, Gearbox, Maple and other protocols. It accepts ETH, WETH, wstETH, GG or strETH, with deposits settling within about 24 hours, and charges a 1 % platform fee plus 10 % of performance. About $206M and 3.1 % APR in October 2026.",
     "backing": "ETH and wstETH in the GGV and stRATEGY sub-vaults",
     "yieldSource": "ETH staking plus DeFi lending and looping yield, net of fees",
-    "redemption": "two steps: request, then claim, typically about 3 days",
+    "redemption": "paid in wstETH, not ETH: a small daily allowance redeems at once; anything larger is a request priced at the next daily oracle report and claimable after about a day and a half",
     "issuer": "Lido (curator Mellow)",
     "links": ["https://docs.lido.fi/earn", "https://blog.lido.fi/lido-earn-expands-with-earneth-and-earnusd/"],
-    "updated": "2026-10-17",
-    "confidence": "medium"
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Lido's docs give a 10 % performance fee; the vault's own fee read 15 % on 2026-10-27."
   },
   "Lido EarnUSD::EARNUSD": {
     "what": "Lido earnUSD · Mellow-curated stablecoin vault across lending and structured strategies",
-    "body": "earnUSD is Lido Earn's stablecoin vault. It accepts USDC and USDT and allocates them across curated lending, liquidity and structured stablecoin strategies, with the share price rising as they earn (about 5.5 % APR on ~$32M in October 2026).",
+    "body": "earnUSD is Lido Earn's stablecoin vault on Mellow's core-vault infrastructure. USDC is allocated across curated lending, liquidity and structured stablecoin strategies. The share price is not accrued on-chain: a Mellow oracle key reports it about once a day, and the vault mints and redeems at that report, with a performance fee already netted out.",
     "backing": "USDC and USDT deployed across curated DeFi strategies",
     "yieldSource": "stablecoin lending and structured-strategy yield, net of fees",
-    "redemption": "two steps: request, then claim after the vault processes it",
+    "redemption": "a small daily allowance redeems at once at the last report; anything larger is a request priced at the next report and claimable after about two and a half days",
     "issuer": "Lido (curator Mellow)",
     "links": ["https://docs.lido.fi/earn", "https://blog.lido.fi/lido-earn-expands-with-earneth-and-earnusd/"],
-    "updated": "2026-10-17",
+    "updated": "2026-10-27",
     "confidence": "low",
-    "verify": "Underlying strategy list and exit timing were not checked."
+    "verify": "The underlying strategy list was not checked."
   },
   "Mellow stRATEGY::strETH": {
     "what": "Mellow stRATEGY (strETH) · Lido's ETH strategy vault, a sub-vault of earnETH",
@@ -2587,33 +2584,34 @@
     "verify": "Withdrawal epoch terms come from older documentation and were not re-checked."
   },
   "Swell Ethereum::SWETH": {
-    "what": "Swell swETH · liquid-staked ETH, non-rebasing rising rate",
-    "body": "swETH is Swell's ETH liquid staking token: ETH is staked with Swell's node operators and swETH's rate against ETH rises with staking rewards (about 2.4 % APR in October 2026). The Arbitrum copy is bridged and shares this group.",
+    "what": "Swell swETH · liquid-staked ETH, paused since 2026-10-23 after a rate inflation",
+    "body": "swETH is Swell's ETH liquid staking token: ETH is staked with Swell's node operators and swETH's rate against ETH rises with staking rewards. On 2026-10-22 its exchange rate jumped from 1.1331 to 1.2030 (+6.3 %) in one block, and on 2026-10-23 Swell paused deposits, bot methods and withdrawals on swETH and rswETH. The current rate is not staking yield, and Swell has said it will restore the NAV. The Arbitrum copy is bridged and shares this group.",
     "backing": "ETH staked on Ethereum validators through Swell",
     "yieldSource": "Ethereum staking rewards",
-    "redemption": "Swell withdrawal queue (request, then claim after validator exits) or a DEX sale",
+    "redemption": "paused since 2026-10-23. When open: Swell's swEXIT withdrawal queue (request, then claim after validator exits) or a DEX sale",
     "issuer": "Swell",
     "links": [
       "https://docs.swellnetwork.io",
       "https://etherscan.io/address/0xf951e335afb289353dc249e82926178eac7ded78"
     ],
-    "updated": "2026-10-17",
-    "confidence": "medium"
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Exchange rate inflated on 2026-10-22 and all methods paused; re-check once Swell reprices and unpauses."
   },
   "Restaked Swell ETH::RSWETH": {
-    "what": "Swell rswETH · ETH staked and restaked on EigenLayer, rising rate",
-    "body": "rswETH is Swell's liquid restaking token: deposited ETH is staked and restaked through EigenLayer, and rswETH's rate against ETH rises with staking and restaking rewards. The rate is updated in lumps (about 2.6 % APR over 90 days in October 2026, 5.1 % over 30), so short windows mislead. Bridged copies on several chains share this group.",
+    "what": "Swell rswETH · EigenLayer-restaked ETH, paused since 2026-10-23 after a rate inflation",
+    "body": "rswETH is Swell's liquid restaking token: deposited ETH is staked and restaked through EigenLayer, and rswETH's rate against ETH rises with staking and restaking rewards, updated in lumps (about 2.6 % APR over 90 days before October 2026). On 2026-10-22 the rate jumped from 1.0823 to 1.1377 (+5.1 %) in one block, and on 2026-10-23 Swell paused deposits, bot methods and withdrawals on rswETH and swETH. The current rate is not yield, and Swell has said it will restore the NAV. Bridged copies on several chains share this group.",
     "backing": "ETH staked and restaked on EigenLayer through Swell",
     "yieldSource": "Ethereum staking plus EigenLayer restaking rewards",
-    "redemption": "Swell withdrawal queue or a DEX sale",
+    "redemption": "paused since 2026-10-23. When open: Swell's rswEXIT withdrawal queue (request, then claim) or a DEX sale",
     "issuer": "Swell",
     "links": [
       "https://docs.swellnetwork.io",
       "https://etherscan.io/address/0xfae103dc9cf190ed75350761e95403b7b8afa6c0"
     ],
-    "updated": "2026-10-17",
+    "updated": "2026-10-27",
     "confidence": "medium",
-    "verify": "Restaked ETH can be slashed by EigenLayer services."
+    "verify": "Exchange rate inflated on 2026-10-22 and all methods paused; re-check once Swell reprices and unpauses. Restaked ETH can be slashed by EigenLayer services."
   },
   "Hyperwave HLP::hwHLP": {
     "what": "Hyperwave liquid HLP · Hyperliquid's market-making vault as a token",
@@ -2707,12 +2705,11 @@
     "body": "xHYPE is one of Liminal's delta-neutral 'xTokens' on Hyperliquid: it holds HYPE (partly as liquid staking tokens) and shorts an equal amount of HYPE perps, so it earns perp funding plus staking yield with little HYPE price exposure. About 8.9 % APR on $8.5M in October 2026; Liminal takes 10 % of funding gains. Negative funding lowers the value.",
     "backing": "spot HYPE/LSTs hedged with HYPE perp shorts on Hyperliquid",
     "yieldSource": "HYPE perp funding plus staking yield, minus a 10 % performance fee",
-    "redemption": "through Liminal (instant buffer or queued, as for limUSD)",
+    "redemption": "instant at 0.3 % up to the redemption buffer, or a free request Liminal pays out automatically within about three days",
     "issuer": "Liminal",
     "links": ["https://docs.liminal.money/tokenized/limusd.md"],
-    "updated": "2026-10-17",
-    "confidence": "low",
-    "verify": "xHYPE contract and exit terms were not checked."
+    "updated": "2026-10-27",
+    "confidence": "medium"
   },
   "limUSD::LIMUSD": {
     "what": "Liminal limUSD · allocator over delta-neutral Hyperliquid funding and lending xTokens",
@@ -3069,7 +3066,7 @@
     "updated": "2026-10-20",
     "confidence": "high"
   },
-  "Junior DOLA::JRDOLA::1::0": {
+  "Junior DOLA::JRDOLA": {
     "what": "Inverse junior DOLA · first-loss sDOLA vault backstopping FiRM bad debt",
     "body": "jrDOLA is an ERC-4626 vault that holds DOLA as sDOLA and earns the sDOLA rate plus a governance-set DBR insurance premium, auctioned into DOLA and compounded on 7-day cycles. In return it takes FiRM bad debt first: when liquidations fall short, governance or the guardian multisig slashes vault assets pro rata, with no cap, so a total loss is possible. PSM depeg risk is not covered in the current phase.",
     "backing": "sDOLA, exposed first to FiRM bad debt",
@@ -3083,7 +3080,7 @@
     "updated": "2026-10-20",
     "confidence": "high"
   },
-  "Junior DOLA::JRDOLA": {
+  "Junior DOLA v1 (superseded)::JRDOLA": {
     "what": "Inverse junior DOLA · first-loss sDOLA vault backstopping FiRM bad debt",
     "body": "jrDOLA is an ERC-4626 vault that holds DOLA as sDOLA and earns the sDOLA rate plus a governance-set DBR insurance premium, auctioned into DOLA and compounded on 7-day cycles. In return it takes FiRM bad debt first: when liquidations fall short, governance or the guardian multisig slashes vault assets pro rata, with no cap, so a total loss is possible. PSM depeg risk is not covered in the current phase.",
     "backing": "sDOLA, exposed first to FiRM bad debt",
@@ -3142,5 +3139,447 @@
     "updated": "2026-10-21",
     "confidence": "high",
     "verify": "The eva vault and its bridge config are owned by a 2-of-3 Safe with no timelock on the bridge (eva's docs say 3-of-5)"
+  },
+  "Ether.Fi Liquid USD::LIQUIDUSD": {
+    "what": "ether.fi Liquid USD · Veda vault of USDC/USDT run across lending, Curve and basis",
+    "body": "liquidUSD is ether.fi's Liquid USD vault, a Veda BoringVault. USDC or USDT deposited into it is run by ether.fi across lending, Curve and basis positions on several chains, and the share's dollar value is set by the vault's accountant. That value is an operator mark, not a computed balance. The same vault spans Ethereum and Optimism (78.5M shares on Optimism against 26.0M on Ethereum in October 2026); shares move between them through Veda's LayerZero teller and carry one rate.",
+    "backing": "USDC and USDT deployed by ether.fi across lending, Curve and basis positions",
+    "yieldSource": "returns of ether.fi's managed strategies, after fees",
+    "redemption": "request to Veda's on-chain queue, paid in USDC or USDT by ether.fi's solver; typically within a day, ether.fi allows itself up to three",
+    "issuer": "ether.fi",
+    "links": ["https://etherscan.io/address/0x08c6f91e2b681faf5e17227f2a44c307b3c1364c"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Instadapp ETH v2::IETHV2": {
+    "what": "Fluid Lite iETHv2 · leveraged stETH vault run by Instadapp",
+    "body": "iETHv2 is Fluid Lite's ETH vault (Instadapp ETH v2). stETH deposited into it is run as a leveraged stETH position, earning Lido's staking yield plus the spread over the ETH it borrows, after a 20 % fee on that yield. The share's stETH value rises with what the position earns.",
+    "backing": "a leveraged stETH position (stETH collateral against borrowed ETH)",
+    "yieldSource": "Lido staking yield plus the stETH-over-ETH-borrow spread, less a 20 % fee",
+    "redemption": "instant, paid in stETH less a 0.05 % fee, up to what the vault holds idle",
+    "issuer": "Instadapp (Fluid)",
+    "links": ["https://etherscan.io/address/0xa0d3707c569ff8c87fa923d3823ec5d81c98be78"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Fluid Lite USD Vault::fLiteUSD": {
+    "what": "Fluid Lite USD · USDC vault run by Instadapp in leveraged stablecoin positions",
+    "body": "fLiteUSD is Fluid Lite's USD vault. USDC deposited into it is run by Instadapp in leveraged stablecoin positions, and the share price rises with what they earn after fees.",
+    "backing": "USDC deployed in leveraged stablecoin positions",
+    "yieldSource": "stablecoin lending and looping spread, after fees",
+    "redemption": "instant, paid in USDC less a 0.05 % fee",
+    "issuer": "Instadapp (Fluid)",
+    "links": ["https://etherscan.io/address/0x273da948aca9261043fbdb2a857bc255ecc29012"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Tokemak autoETH::autoETH": {
+    "what": "Tokemak autoETH · autopool rebalancing WETH across LST/LRT pools and lending",
+    "body": "autoETH is a Tokemak autopool. WETH deposited into it is rebalanced by Tokemak across LST and LRT liquidity pools and lending markets, and the share price moves with what those positions are worth in ETH. It is a mark, not a ratchet: the share price has dipped between samples. TOKE rewards go only to shares staked in the autopool's rewarder.",
+    "backing": "WETH in LST/LRT liquidity pools and lending markets",
+    "yieldSource": "pool fees, LST/LRT yield and lending interest; TOKE rewards for staked shares only",
+    "redemption": "instant, but it unwinds positions in the same transaction and the plain redeem has no minimum-output guard, so a large exit can pay less than the quoted value",
+    "issuer": "Tokemak",
+    "links": ["https://etherscan.io/address/0x0a2b94f6871c1d7a32fe58e1ab5e6dea2f114e56"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Tokemak autoUSD::autoUSD": {
+    "what": "Tokemak autoUSD · autopool rebalancing USDC across stablecoin markets and vaults",
+    "body": "autoUSD is a Tokemak autopool. USDC deposited into it is rebalanced by Tokemak across stablecoin lending markets and savings vaults, and the share price rises with what they earn. TOKE rewards go only to shares staked in the autopool's rewarder.",
+    "backing": "USDC in stablecoin lending markets and savings vaults",
+    "yieldSource": "stablecoin lending and vault yield; TOKE rewards for staked shares only",
+    "redemption": "instant, but it unwinds positions in the same transaction and the plain redeem has no minimum-output guard",
+    "issuer": "Tokemak",
+    "links": ["https://etherscan.io/address/0xa7569a44f348d3d70d8ad5889e50f78e33d80d35"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Tokemak baseUSD::baseUSD": {
+    "what": "Tokemak baseUSD · autopool rebalancing USDC across Base stablecoin markets",
+    "body": "baseUSD is Tokemak's USDC autopool on Base. Deposits are rebalanced by Tokemak across Base stablecoin lending markets and vaults, and the share price rises with what they earn. TOKE rewards go only to shares staked in the autopool's rewarder.",
+    "backing": "USDC in Base stablecoin lending markets and vaults",
+    "yieldSource": "stablecoin lending and vault yield; TOKE rewards for staked shares only",
+    "redemption": "instant, but it unwinds positions in the same transaction and the plain redeem has no minimum-output guard",
+    "issuer": "Tokemak",
+    "links": ["https://basescan.org/address/0x9c6864105aec23388c89600046213a44c384c831"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "JUSD Credit Vault::JUSD": {
+    "what": "JUSD Finance credit vault on Accountable · USDC lent to one borrower",
+    "body": "This is JUSD Finance's credit vault on Accountable, not any of the stablecoins that also trade as JUSD. USDC deposited into it is lent on an open-term credit line to JUSD Finance at a set rate, and the share price rises with the interest after Accountable's 3 % performance fee. It is a loan to one borrower, verified through Accountable's reporting rather than by collateral on-chain.",
+    "backing": "an open-term USDC credit line to JUSD Finance",
+    "yieldSource": "the borrower's interest, less Accountable's 3 % performance fee",
+    "redemption": "a redemption request, paid at once while the vault holds enough idle USDC, otherwise when the borrower repays into it",
+    "issuer": "JUSD Finance (via Accountable)",
+    "links": ["https://etherscan.io/address/0x2b5895b716311a1eac8f93fb88c56af9ec8c1a69"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Yuzu Syrup::yzSyrup": {
+    "what": "Yuzu yzSyrup · Yuzu-managed USDC pool, share price set by the manager",
+    "body": "yzSyrup is a Yuzu-managed USDC pool. Deposits go to Yuzu's treasury, and the share price grows linearly at a daily rate the pool manager sets between pool reports, so a share is worth what Yuzu reports, not something the contract can verify. Deposits are open up to a supply cap.",
+    "backing": "USDC held and deployed by Yuzu's treasury",
+    "yieldSource": "returns Yuzu reports, applied as a manager-set daily rate",
+    "redemption": "a redeem order: shares are escrowed, Yuzu fills it within 24 hours and the USDC is released; an order not filled by its due time can be cancelled for the shares back. The instant buffer is kept at zero",
+    "issuer": "Yuzu",
+    "links": ["https://etherscan.io/address/0xc9854f2af89d4d26837004d1e154bd3c3c1009b1"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Steakhouse USD Machine::usdSHFmk": {
+    "what": "Makina usdSHFmk · Steakhouse's USD strategy book on Makina",
+    "body": "usdSHFmk is Steakhouse Financial's USD strategy book run on Makina. USDC deposited into it is deployed by Steakhouse across DeFi lending and yield positions, and the share price follows the assets under management its operators post, so it can fall.",
+    "backing": "USDC deployed by Steakhouse across DeFi lending and yield positions",
+    "yieldSource": "returns of the operator-managed strategies",
+    "redemption": "queued and paid by Makina's operators at the lower of the share price at request and at processing; no cancel. The machine's finalization delay read 0 s on 2026-10-27, where Makina's docs state 48 h",
+    "issuer": "Makina (operator Steakhouse Financial)",
+    "links": ["https://etherscan.io/address/0xac499adf00a54044b988a59b19016655c3494b06"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Strategy holdings were not checked."
+  },
+  "Dialectic Carry Machine::DCM": {
+    "what": "Makina DCM · Dialectic's allowlisted USDC carry strategy",
+    "body": "DCM is Dialectic's carry strategy run on Makina: USDC deployed into yield-carry positions, with the share price following the assets under management Dialectic's operators post. Both deposits and redemptions are restricted to Dialectic's allowlist. Not the Ducky City DCM token on Base.",
+    "backing": "USDC in yield-carry positions run by Dialectic",
+    "yieldSource": "carry returns of the operator-managed book",
+    "redemption": "allowlisted only; queued and paid at the lower of the share price at request and at processing",
+    "issuer": "Makina (operator Dialectic)",
+    "links": ["https://etherscan.io/address/0xbef11279fa6db9fa284cbe7f0fa9799e06b2dcd7"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Strategy holdings were not checked."
+  },
+  "Concrete Decentralized Finance USDT::ctDefiUSDT": {
+    "what": "Concrete ctDefiUSDT · USDT vault allocated across DeFi lending strategies",
+    "body": "ctDefiUSDT is Concrete's DeFi USDT vault. USDT is allocated by Concrete across DeFi lending strategies, and the strategies' reported value accrues into the share price. Deposits are open.",
+    "backing": "USDT in DeFi lending strategies",
+    "yieldSource": "lending interest of the allocated strategies, as reported",
+    "redemption": "epoch queue: a redemption is booked into the current epoch, paid at that epoch's share price once Concrete processes it, then claimed; cancellable while the epoch is open",
+    "issuer": "Concrete",
+    "links": ["https://etherscan.io/address/0x0e609b710da5e0aa476224b6c0e5445ccc21251e"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Concrete RWA USD1::ctRWA_USD1": {
+    "what": "Concrete ctRWA_USD1 · allowlisted USD1 vault in tokenized RWA strategies",
+    "body": "ctRWA_USD1 is Concrete's RWA vault over USD1. USD1 is allocated to tokenized real-world-asset strategies, and their reported value accrues into the share price. Deposits are restricted to Concrete's allowlist.",
+    "backing": "USD1 in tokenized real-world-asset strategies",
+    "yieldSource": "RWA strategy returns, as reported",
+    "redemption": "epoch queue: booked into the current epoch, paid at that epoch's share price once processed, then claimed; cancellable while the epoch is open",
+    "issuer": "Concrete",
+    "links": ["https://etherscan.io/address/0x86a95dc16d05c62a6c22fa1697ca933ecca380b7"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "The RWA positions behind the vault were not checked."
+  },
+  "ZIG USD1::ctZigUSD1": {
+    "what": "Concrete ctZigUSD1 · allowlisted single-mandate USD1 vault (ZIG)",
+    "body": "ctZigUSD1 is a single-mandate Concrete vault over USD1 for ZIG. Its reported strategy value accrues into the share price. Deposits are restricted to Concrete's allowlist.",
+    "backing": "USD1 deployed under a single mandate",
+    "yieldSource": "the mandate's strategy returns, as reported",
+    "redemption": "immediate from available liquidity today; Concrete can switch on an epoch queue (book, process, claim)",
+    "issuer": "Concrete",
+    "links": ["https://etherscan.io/address/0x843033cfd7bc2b7573c67070991e87f97822759f"],
+    "updated": "2026-10-27",
+    "confidence": "low",
+    "verify": "The mandate and its strategy were not checked."
+  },
+  "Colb USD1::ctColbUSD1": {
+    "what": "Concrete ctColbUSD1 · allowlisted single-mandate USD1 vault (Colb)",
+    "body": "ctColbUSD1 is a single-mandate Concrete vault over USD1 for Colb. Its reported strategy value accrues into the share price. Deposits are restricted to Concrete's allowlist.",
+    "backing": "USD1 deployed under a single mandate",
+    "yieldSource": "the mandate's strategy returns, as reported",
+    "redemption": "epoch queue: booked into the current epoch, paid at that epoch's share price once processed, then claimed; cancellable while the epoch is open",
+    "issuer": "Concrete",
+    "links": ["https://etherscan.io/address/0x7e7573e8ce6eeb7af207a4569733c49f87dcd9b6"],
+    "updated": "2026-10-27",
+    "confidence": "low",
+    "verify": "The mandate and its strategy were not checked."
+  },
+  "xBTC::XBTC": {
+    "what": "Liminal xBTC · delta-neutral BTC (spot long + perp short), a dollar product",
+    "body": "xBTC is one of Liminal's delta-neutral xTokens on HyperEVM. Despite the name it is a dollar product: USDC is put into BTC held spot against an equal short BTC perpetual on Hyperliquid, so the book earns funding and basis while its BTC exposure nets to zero. The share price (NAV over supply) rises with that after Liminal's fees. Negative funding lowers it.",
+    "backing": "spot BTC hedged with BTC perp shorts on Hyperliquid",
+    "yieldSource": "BTC perp funding and basis, after Liminal's fees",
+    "redemption": "instant at 0.3 % up to the redemption buffer, or a free request Liminal pays out automatically within about three days",
+    "issuer": "Liminal",
+    "links": ["https://hyperevmscan.io/address/0x97df58ce4489896f4ec7d16b59b64ad0a56243a8"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "xLEND::XLEND": {
+    "what": "Liminal xLEND · USDC lent across Hyperliquid and HyperEVM money markets",
+    "body": "xLEND is Liminal's lending xToken on HyperEVM: USDC lent across Hyperliquid and HyperEVM money markets by Liminal, with the share price (NAV over supply) rising with the interest after Liminal's fees. The NAV is pushed on-chain by Liminal and the assets sit with its strategist, so solvency is attested, not computed.",
+    "backing": "USDC lent on Hyperliquid and HyperEVM money markets",
+    "yieldSource": "lending interest, after Liminal's fees",
+    "redemption": "instant and free up to the redemption buffer, or a free request Liminal pays out automatically within about three days",
+    "issuer": "Liminal",
+    "links": ["https://hyperevmscan.io/address/0x95f6d66c09a22e6f2bb693306b3ed69663066cbb"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Ether.Fi Liquid ETH::LIQUIDETH": {
+    "what": "ether.fi Liquid ETH · Veda vault of ETH run across lending, LRT and basis",
+    "body": "liquidETH is ether.fi's Liquid ETH vault, a Veda BoringVault. ETH, WETH, stETH, eETH or weETH deposited into it is run by ether.fi across lending, LRT and basis strategies, and the share's ETH value is set by the vault's accountant after a 0.5 % platform fee. That value is an operator mark, not a computed balance. The same vault spans Ethereum and Optimism, with shares moved between them through Veda's LayerZero teller; the Arbitrum and Base copies are a frozen legacy deployment.",
+    "backing": "ETH and LSTs/LRTs deployed by ether.fi across lending, LRT and basis positions",
+    "yieldSource": "staking, restaking and strategy returns, after a 0.5 % platform fee",
+    "redemption": "request to Veda's on-chain queue, paid in weETH (not WETH) by ether.fi's solver; typically within a day, ether.fi allows itself up to three",
+    "issuer": "ether.fi",
+    "links": ["https://etherscan.io/address/0xf0bb20865277abd641a307ece5ee04e79073416c"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Wrapped OETH::WOETH": {
+    "what": "Origin wOETH · non-rebasing wrapper of OETH, Origin's ETH yield token",
+    "body": "wOETH is the non-rebasing ERC-4626 wrapper of OETH, Origin's ETH token backed by LSTs, staked ETH and AMO liquidity positions. OETH pays its yield as a balance rebase; wOETH captures it as a rising share price. The Arbitrum, Base and Plume copies are bridged and share this group.",
+    "backing": "OETH (ETH, LSTs, staked ETH and Origin AMO positions)",
+    "yieldSource": "ETH staking yield plus AMO fees and rewards",
+    "redemption": "instant, free unwrap to OETH; to leave in WETH, Origin's vault queue pays 1:1 about ten minutes later once it holds enough WETH, claimable only by the requesting account",
+    "issuer": "Origin",
+    "links": ["https://etherscan.io/address/0xdcee70654261af21c44c093c300ed3bb97b78192"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Gauntlet USD Alpha::GTUSDA": {
+    "what": "Gauntlet USD Alpha · Aera vault of USDC across lending and looping strategies",
+    "body": "gtUSDa is Gauntlet's USD Alpha vault on Aera V3. USDC is allocated by Gauntlet across lending markets, looping and other on-chain stablecoin strategies. The unit price is not accrued on-chain: Gauntlet's accountant restates it. It runs on Ethereum, Optimism, Arbitrum and Base. It is a savings vault, not a stablecoin.",
+    "backing": "USDC in on-chain lending and looping strategies",
+    "yieldSource": "stablecoin lending and looping returns, as restated by Gauntlet",
+    "redemption": "deposits and withdrawals are both requests, filled by an Aera solver within hours and paid out directly with no claim; an unfilled request can be refunded after its deadline",
+    "issuer": "Gauntlet (on Aera)",
+    "links": ["https://etherscan.io/address/0x3bd9248048df95db4fbd748c6cd99c1baa40bad0"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "LSETH": {
+    "what": "Liquid Collective LsETH · institutional liquid-staked ETH, allowlisted mint and redeem",
+    "body": "LsETH is Liquid Collective's institutional ETH liquid staking token, issued through River. ETH is staked with Liquid Collective's node operators and LsETH's value in ETH rises with staking rewards. Both minting and redemption go through Liquid Collective's allowlist, so an unpermissioned wallet can only hold or trade it. Not the 'Liquid Staked ETH Index' basket, which has its own group.",
+    "backing": "ETH staked on Ethereum validators through Liquid Collective",
+    "yieldSource": "Ethereum staking rewards, net of protocol fees",
+    "redemption": "allowlisted holders only, through River's redemption flow; everyone else exits by a sale",
+    "issuer": "Liquid Collective",
+    "links": ["https://etherscan.io/address/0x8c1bed5b9a0928467c9b1341da1d7bd5e10b6549"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Kyros Restaked SOL::kySOL::solana": {
+    "what": "Kyros kySOL · Jito Restaking vault receipt over JitoSOL",
+    "body": "kySOL is Kyros's liquid restaking token: the receipt of a Jito Restaking vault over JitoSOL, so it earns JitoSOL's staking yield plus the restaking rewards the vault's node operators earn, as a rising JitoSOL value per kySOL. Deposits are permissionless and free. No slasher was registered on the vault on 2026-10-27 (88,315 kySOL over 88,790 JitoSOL).",
+    "backing": "JitoSOL held in a Jito Restaking vault",
+    "yieldSource": "JitoSOL staking yield plus restaking rewards, less Kyros's 25 % cut of those rewards",
+    "redemption": "queued: the vault burns the kySOL after one to two restaking epochs (about 1.5–3 days) and pays JitoSOL less 0.2 %",
+    "issuer": "Kyros",
+    "links": ["https://solscan.io/token/kySo1nETpsZE2NWe5vj2C64mPSciH1SppmHb4XieQ7B"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "OnRe Tokenized Reinsurance::ONyc": {
+    "what": "OnRe ONyc · share of a Bermuda reinsurance fund, dollar NAV set by OnRe",
+    "body": "ONyc is a share of OnRe's Bermuda reinsurance fund. The fund writes reinsurance contracts and holds stablecoin collateral against them; the premiums plus the collateral's yield accrue as a rising dollar NAV per ONyc. This is reinsurance risk, not a dollar deposit: a covered catastrophe is paid out of the fund and writes the NAV down, and the NAV is OnRe's own published figure over an off-chain book. OnRe keeps a freeze authority over the token.",
+    "backing": "reinsurance contracts and the stablecoin collateral held against them",
+    "yieldSource": "reinsurance premiums plus the yield on the collateral",
+    "redemption": "sell into OnRe's USDG pool (instant; a 30 bps fee plus a haircut that grows with order size and the day's selling, capped by what the pool holds), or a redemption request OnRe's operator fulfils at its later NAV less 25 bps, paid straight to the wallet; OnRe publishes no time for it",
+    "issuer": "OnRe",
+    "links": ["https://solscan.io/token/5Y8NV33Vv7WbnLfq3zBcKSdYPrk7g2KoiQoe7M2tcxp5"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Marinade staked SOL (mSOL)::mSOL": {
+    "what": "Marinade mSOL · liquid-staked SOL on Marinade's own staking program",
+    "body": "mSOL is Marinade's liquid staking token, issued by its own program rather than an SPL stake pool. SOL deposited into Marinade is delegated across many validators and mSOL's SOL value rises with staking rewards (about 5.0 % APR on 2.26M SOL in October 2026). Marinade's reward fee read 0 on 2026-10-27.",
+    "backing": "SOL staked across validators through Marinade's program",
+    "yieldSource": "SOL staking rewards",
+    "redemption": "liquid unstake from Marinade's pool (instant, 3–150 bps sliding with pool depth, ~6k SOL deep); a delayed-unstake ticket claimable after the epoch turns (0.2 %); or a stake account split out of Marinade's stake (0.2 %); or a DEX sale",
+    "issuer": "Marinade",
+    "links": ["https://solscan.io/token/mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So"],
+    "updated": "2026-10-27",
+    "confidence": "high"
+  },
+  "Jupiter Staked SOL::JupSOL::solana": {
+    "what": "Jupiter JupSOL · liquid-staked SOL",
+    "body": "JupSOL is Jupiter's liquid staking token, a pool on Sanctum's multi-validator stake pool program. SOL deposited into it is delegated by the pool manager, and JupSOL's SOL value rises with staking rewards (about 5.0 % APR on 5.24M SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the Jupiter pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 10 bps while the reserve covers it; otherwise withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "Jupiter",
+    "links": ["https://solscan.io/token/jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "Drift Staked SOL::dSOL::solana": {
+    "what": "Drift dSOL · liquid-staked SOL on Drift's validator",
+    "body": "dSOL is Drift's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to Drift's validator, and dSOL's SOL value rises with staking rewards (about 4.8 % APR on 2.79M SOL on 2026-10-27). The pool takes 2.5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to Drift's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "no instant SOL withdrawal (the pool has it switched off); withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days), or sell on a DEX / Sanctum",
+    "issuer": "Drift",
+    "links": ["https://solscan.io/token/Dso1bDeDjCQxTrWHqUUi63oBvV7Mdm6WaobLbQ7gnPQ"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "DeFi Development Corp Staked SOL::dfdvSOL::solana": {
+    "what": "DeFi Development Corp dfdvSOL · liquid-staked SOL on DeFi Development Corp's validator",
+    "body": "dfdvSOL is DeFi Development Corp's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to DeFi Development Corp's validator, and dfdvSOL's SOL value rises with staking rewards (about 4.8 % APR on 2.13M SOL on 2026-10-27). The pool takes 2.5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to DeFi Development Corp's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 10 bps while the reserve covers it; otherwise withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "DeFi Development Corp",
+    "links": ["https://solscan.io/token/sctmB7GPi5L2Q5G9tUSzXvhZ4YiDMEGcRov9KfArQpx"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "BybitSOL::bbSOL::solana": {
+    "what": "Bybit bbSOL · liquid-staked SOL on Bybit's validator",
+    "body": "bbSOL is Bybit's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to Bybit's validator, and bbSOL's SOL value rises with staking rewards (about 4.8 % APR on 1.48M SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to Bybit's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL withdrawal is enabled but the pool reserve is near empty, so in practice withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days), or sell on a DEX / Sanctum",
+    "issuer": "Bybit",
+    "links": ["https://solscan.io/token/Bybit2vBJGhPF52GBdNaQfUJ6ZpThSgHBobjWZpLPb4B"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Helius Staked SOL::hSOL::solana": {
+    "what": "Helius hSOL · liquid-staked SOL on Helius's validator",
+    "body": "hSOL is Helius's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to Helius's validator, and hSOL's SOL value rises with staking rewards (about 4.9 % APR on 965k SOL on 2026-10-27). The pool takes 2.5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to Helius's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL withdrawal is enabled but the pool reserve is near empty, so in practice withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days), or sell on a DEX / Sanctum",
+    "issuer": "Helius",
+    "links": ["https://solscan.io/token/he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Raiku Staked SOL::rkuSOL::solana": {
+    "what": "Raiku rkuSOL · liquid-staked SOL on Raiku's validator",
+    "body": "rkuSOL is Raiku's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to Raiku's validator, and rkuSOL's SOL value rises with staking rewards (about 4.7 % APR on 181k SOL on 2026-10-27). The pool takes 2.5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to Raiku's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 10 bps while the reserve covers it; otherwise withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "Raiku",
+    "links": ["https://solscan.io/token/rkubjTrZYioRSeXwDnhwGQzvW3qkcin72JSxUt3WMVp"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Bonk SOL::bonkSOL::solana": {
+    "what": "BONK bonkSOL · liquid-staked SOL on BONK's validator",
+    "body": "bonkSOL is BONK's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to BONK's validator, and bonkSOL's SOL value rises with staking rewards (about 4.5 % APR on 74k SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to BONK's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "no instant SOL withdrawal (the pool has it switched off); withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days), or sell on a DEX / Sanctum",
+    "issuer": "BONK",
+    "links": ["https://solscan.io/token/BonK1YhkXEGLZzwtcvRTip3gAL9nCeQD7ppZBLXhtTs"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Backpack Staked SOL::bpSOL::solana": {
+    "what": "Backpack bpSOL · liquid-staked SOL on Backpack's validator",
+    "body": "bpSOL is Backpack's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to Backpack's validator, and bpSOL's SOL value rises with staking rewards (about 4.9 % APR on 63k SOL on 2026-10-27). The pool takes 2.5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to Backpack's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL withdrawal is enabled but the pool reserve is near empty, so in practice withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days), or sell on a DEX / Sanctum",
+    "issuer": "Backpack",
+    "links": ["https://solscan.io/token/BPSoLzmLQn47EP5aa7jmFngRL8KC3TWAeAwXwZD8ip3P"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Stronghold LST::strongSOL::solana": {
+    "what": "Stronghold strongSOL · liquid-staked SOL on Stronghold's validator",
+    "body": "strongSOL is Stronghold's liquid staking token, a pool on Sanctum's single-validator stake pool program. SOL deposited into it is staked to Stronghold's validator, and strongSOL's SOL value rises with staking rewards (about 4.3 % APR on 42k SOL on 2026-10-27). The pool takes 2.5 % of rewards as its epoch fee.",
+    "backing": "SOL staked to Stronghold's validator",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "no instant SOL withdrawal (the pool has it switched off); withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days), or sell on a DEX / Sanctum",
+    "issuer": "Stronghold",
+    "links": ["https://solscan.io/token/strng7mqqc1MBJJV6vMzYbEqnwVGvKKGKedeCvtktWA"],
+    "updated": "2026-10-27",
+    "confidence": "medium"
+  },
+  "Phantom Staked SOL::PSOL::solana": {
+    "what": "Phantom pSOL · liquid-staked SOL",
+    "body": "pSOL is Phantom's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and pSOL's SOL value rises with staking rewards (about 5.2 % APR on 1.61M SOL on 2026-10-27). The pool takes no epoch fee.",
+    "backing": "SOL delegated by the Phantom pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 10 bps while the reserve covers it; otherwise withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "Phantom",
+    "links": ["https://solscan.io/token/pSo1f9nQXWgXibFtKf7NWYxb5enAM4qfP6UJSiXRQfL"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "The Vault::vSOL::solana": {
+    "what": "The Vault vSOL · liquid-staked SOL",
+    "body": "vSOL is The Vault's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and vSOL's SOL value rises with staking rewards (about 4.5 % APR on 1.31M SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the The Vault pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 15 bps while the reserve covers it; otherwise withdraw a stake account (15 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "The Vault",
+    "links": ["https://solscan.io/token/vSoLxydx6akxyMD9XEcPvGYNGq6Nn66oqVb3UkGkei7"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "JPOOL Solana Token::JSOL::solana": {
+    "what": "JPool JSOL · liquid-staked SOL",
+    "body": "JSOL is JPool's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and JSOL's SOL value rises with staking rewards (about 4.6 % APR on 1.25M SOL on 2026-10-27). The pool takes 7 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the JPool pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 50 bps while the reserve covers it; otherwise withdraw a stake account (50 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "JPool",
+    "links": ["https://solscan.io/token/7Q2afV64in6N6SeZsAAB81TJzwDoD6zpqmHkzi9Dcavn"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "Phase Delegation Staked SOL::pdSOL::solana": {
+    "what": "Phase pdSOL · liquid-staked SOL",
+    "body": "pdSOL is Phase's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and pdSOL's SOL value rises with staking rewards (about 4.4 % APR on 1.10M SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the Phase pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 5 bps while the reserve covers it; otherwise withdraw a stake account (5 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "Phase",
+    "links": ["https://solscan.io/token/aeroXvCT6tjGVNyTvZy86tFDwE4sYsKCh7FbNDcrcxF"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "JagPool Staked SOL::jagSOL::solana": {
+    "what": "JagPool jagSOL · liquid-staked SOL",
+    "body": "jagSOL is JagPool's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and jagSOL's SOL value rises with staking rewards (about 4.2 % APR on 770k SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the JagPool pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 10 bps while the reserve covers it; otherwise withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "JagPool",
+    "links": ["https://solscan.io/token/jag58eRBC1c88LaAsRPspTMvoKJPbnzw9p9fREzHqyV"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "DoubleZero Staked SOL::dzSOL::solana": {
+    "what": "DoubleZero dzSOL · liquid-staked SOL",
+    "body": "dzSOL is DoubleZero's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and dzSOL's SOL value rises with staking rewards (about 4.1 % APR on 698k SOL on 2026-10-27). The pool takes 6 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the DoubleZero pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 5 bps while the reserve covers it; otherwise withdraw a stake account (5 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "DoubleZero",
+    "links": ["https://solscan.io/token/Gekfj7SL2fVpTDxJZmeC46cTYxinjB6gkAnb6EGT6mnn"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
+  },
+  "STKE SOL::STKESOL::solana": {
+    "what": "STKE stkeSOL · liquid-staked SOL",
+    "body": "stkeSOL is STKE's liquid staking token, a pool on the SPL stake pool program. SOL deposited into it is delegated by the pool manager, and stkeSOL's SOL value rises with staking rewards (about 4.4 % APR on 541k SOL on 2026-10-27). The pool takes 5 % of rewards as its epoch fee.",
+    "backing": "SOL delegated by the STKE pool",
+    "yieldSource": "SOL staking rewards (inflation, fees and MEV tips), net of the pool's epoch fee",
+    "redemption": "instant SOL from the pool reserve at 10 bps while the reserve covers it; otherwise withdraw a stake account (10 bps) that unlocks after the epoch turns (~2 days); or sell on a DEX / Sanctum",
+    "issuer": "STKE",
+    "links": ["https://solscan.io/token/stke7uu3fXHsGqKVVjKnkmj65LRPVrqr4bLG2SJg7rh"],
+    "updated": "2026-10-27",
+    "confidence": "medium",
+    "verify": "Which validators the pool delegates to was not checked."
   }
 }
