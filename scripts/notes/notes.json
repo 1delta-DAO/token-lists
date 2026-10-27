@@ -3581,5 +3581,22 @@
     "updated": "2026-10-27",
     "confidence": "medium",
     "verify": "Which validators the pool delegates to was not checked."
+  },
+  "BitFi Bitcoin::BFBTC": {
+    "what": "BitFi yield-bearing BTC · Ceffu custody, delta-neutral basis trades on Binance",
+    "body": "bfBTC is BitFi's yield-bearing BTC token, minted against BTC (native BTC, BTCB on BSC, hemiBTC on Hemi, BTC on Bitlayer) at a bfBTC–BTC ratio that BitFi's manager wallet posts each epoch. The BTC is held by Ceffu and mirrored 1:1 to Binance through MirrorX, where BitFi and partner quant teams run delta-neutral trades; their profit raises the ratio, and a loss would lower it. The yield is off-chain and BitFi's docs publish no proof of reserve, so the ratio is BitFi's word; RedStone carries it as a fundamental price feed. One token on Ethereum, BSC, Base, Bitlayer, Hemi, Core and Goat (on Ethereum, Base, Core and Goat it mints and redeems only through native BTC); the AILayer BFBTC is a plain 1:1 wrapper that earns nothing.",
+    "backing": "BTC in Ceffu MPC custody, mirrored to Binance via MirrorX",
+    "yieldSource": "perp funding rates and spot–futures basis from delta-neutral trades on Binance",
+    "redemption": "Request, then BitFi's multisig approves after a cooldown and you claim BTC on the same EVM chain or receive native BTC; fixed fee 0.000006 bfBTC (EVM) or 0.000012 (Bitcoin), minimum 0.0001 bfBTC",
+    "issuer": "BitFi",
+    "links": [
+      "https://bitfi-2.gitbook.io/bitfi/developer/bfbtc-overview",
+      "https://bitfi-2.gitbook.io/bitfi/bitfis-cedefi/markdown/bitfi-strategies",
+      "https://bitfi-2.gitbook.io/bitfi/developer/using-contract/unstake-bfbtc",
+      "https://bitfi-2.gitbook.io/bitfi/developer/using-contract/bfbtc-fees",
+      "https://bitfi-2.gitbook.io/bitfi/developer/audit-report"
+    ],
+    "updated": "2026-10-27",
+    "confidence": "high"
   }
 }

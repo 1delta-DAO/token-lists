@@ -460,4 +460,11 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   'Lido Earn ETH::EARNETH': { underlying: 'WETH', base: 'ETH' }, // Mellow; exits pay wstETH
   'Instadapp ETH v2::IETHV2': { underlying: 'stETH', base: 'ETH' }, // Fluid Lite: leveraged stETH
   'Tokemak autoETH::autoETH': { underlying: 'WETH', base: 'ETH' },
+  // Yearn V3 multi-strategy vaults that are Flex collateral (Ethereum; 2026-10-27). Admitted on the
+  // mixUSDC rule: the holder takes no allocation decision of its own and the exit pays the
+  // underlying at NAV. yvUSD is the USDC vault mixUSDC's liquidity leg sits in; yvWETH-2 takes
+  // `base: 'ETH'` on the mixWETH rule so a yvWETH-2/WETH Flex trove reads as an ETH carry.
+  'USD yVault::yvUSD': { underlying: 'USDC', base: 'USD' },
+  'crvUSD-2 yVault::yvcrvUSD-2': { underlying: 'crvUSD', base: 'USD' },
+  'WETH-2 yVault::yvWETH-2': { underlying: 'WETH', base: 'ETH' },
 }

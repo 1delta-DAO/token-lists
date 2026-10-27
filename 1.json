@@ -94567,7 +94567,8 @@
       "currencyId": "Alchemix ETH::ALETH",
       "props": {
         "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" },
+        "denomination": "ETH"
       }
     },
     "0x30672ae2680c319ec1028b69670a4a786baa0f35": {
@@ -190450,7 +190451,10 @@
       "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0x696d02db93291651ed510704c9b286841d506987/logo-128.png",
       "assetGroup": "USD yVault::yvUSD",
       "currencyId": "USD yVault::yvUSD",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "savings": { "underlying": "USDC", "base": "USD" }
+      }
     },
     "0xbf319ddc2edc1eb6fdf9910e39b37be221c8805f": {
       "chainId": "1",
@@ -190461,7 +190465,10 @@
       "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0xbf319ddc2edc1eb6fdf9910e39b37be221c8805f/logo-128.png",
       "assetGroup": "crvUSD-2 yVault::yvcrvUSD-2",
       "currencyId": "crvUSD-2 yVault::yvcrvUSD-2",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "savings": { "underlying": "crvUSD", "base": "USD" }
+      }
     },
     "0xac37729b76db6438ce62042ae1270ee574ca7571": {
       "chainId": "1",
@@ -190472,7 +190479,10 @@
       "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0xac37729b76db6438ce62042ae1270ee574ca7571/logo-128.png",
       "assetGroup": "WETH-2 yVault::yvWETH-2",
       "currencyId": "WETH-2 yVault::yvWETH-2",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": {
+        "risk": { "score": 2, "source": "vault_inherit" },
+        "savings": { "underlying": "WETH", "base": "ETH" }
+      }
     },
     "0x863687e4e9751b57f38b4b0eba04744c72d0f7b8": {
       "chainId": "1",

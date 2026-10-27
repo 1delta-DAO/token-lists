@@ -19,7 +19,16 @@ import { WRAPPED_NATIVE_INFO } from '@1delta/wnative'
  */
 
 /** assetGroup → denomination, for canonical base ETH tokens. */
-const ETH_GROUPS = ['ETH', 'WETH'] as const
+const ETH_GROUPS = [
+  'ETH',
+  'WETH',
+  // Alchemix alETH (1 / 10 / 42161, one group) — the ETH alAsset, the alUSD of ether: minted
+  // against mixWETH and redeemed 1:1 for WETH through the Transmuter. The debt of every
+  // mixWETH/alETH CDP; without a money it matched neither the ETH nor the stable loop filter.
+  // Not a staking derivative (no `lst`), so the "is ETH" reading holds the way it does for the
+  // 1:1 BTC wrappers below — at the alAsset's market discount, which the price states.
+  'Alchemix ETH::ALETH',
+] as const
 
 /** assetGroup → denomination, for canonical base BTC tokens (wrapped/bridged
  *  BTC that is ~1:1 BTC and NOT a staking/yield derivative). */
