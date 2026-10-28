@@ -1334,7 +1334,7 @@
       "currencyId": "rswETH::rswETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
-        "risk": { "score": 3, "category": "LRT", "source": "whitelist" },
+        "risk": { "score": 5, "category": "LRT", "source": "whitelist" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -1965,8 +1965,8 @@
             }
           ]
         },
-        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -2697,7 +2697,6 @@
       "assetGroup": "PUMPBTC",
       "currencyId": "pumpBTC.bera::pumpBTC.bera",
       "props": {
-        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
         "oft": {
           "eid": 30362,
           "routes": [
@@ -2712,6 +2711,7 @@
           ]
         },
         "risk": { "score": 4, "source": "default" },
+        "lst": { "type": "staking", "asset": "BTC", "provider": "pumpbtc" },
         "issuer": { "id": "pumpbtc", "name": "Pumpbtc", "kind": "protocol" }
       }
     },
@@ -2945,8 +2945,8 @@
       "assetGroup": "Ether fi Staked BTC::EBTC",
       "currencyId": "Ether fi Staked BTC::EBTC",
       "props": {
-        "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
         "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
+        "lst": { "type": "restaking", "asset": "BTC", "provider": "etherfi" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },

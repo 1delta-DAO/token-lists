@@ -1001,7 +1001,6 @@
       "currencyId": "ether fi Bridged weETH::WEETH",
       "props": {
         "risk": { "score": 2, "source": "whitelist" },
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "oft": {
           "eid": 30183,
           "routes": [
@@ -1021,6 +1020,7 @@
             }
           ]
         },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -1791,7 +1791,7 @@
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
-          "source": "issuer_inherit"
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
@@ -1962,8 +1962,8 @@
       "currencyId": "Alchemix ETH::alETH",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" },
-        "denomination": "ETH"
+        "denomination": "ETH",
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
     "0xb171ef5cd8d320d52f257924a0e0d41e6f5c40d9": {
@@ -2659,7 +2659,11 @@
       "assetGroup": "Elixir deUSD::DEUSD",
       "currencyId": "deUSD::deUSD",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
       }
@@ -2694,6 +2698,7 @@
       "assetGroup": "evaETH::EVAETH",
       "currencyId": "evaETH::EVAETH",
       "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -2716,6 +2721,7 @@
       "currencyId": "evaUSDT::EVAUSDT",
       "props": {
         "savings": { "underlying": "USDT", "base": "USD" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -2738,6 +2744,7 @@
       "currencyId": "evaUSDC::EVAUSDC",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
         "issuerExposures": [
           {

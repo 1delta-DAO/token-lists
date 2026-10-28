@@ -8,29 +8,29 @@ Every token row in the lists carries two identity strings:
   "name": "Bridged USDC",
   "symbol": "USDC.e",
   "currencyId": "Bridged USDC::USDC.e", // this deployment's own label
-  "assetGroup": "USDC"                  // the asset it IS, on every chain
+  "assetGroup": "USDC", // the asset it IS, on every chain
 }
 ```
 
-| field        | what it is                                                                                    | stable across chains? |
-| ------------ | --------------------------------------------------------------------------------------------- | --------------------- |
+| field        | what it is                                                                                 | stable across chains? |
+| ------------ | ------------------------------------------------------------------------------------------ | --------------------- |
 | `currencyId` | `` `${name}::${symbol}` `` exactly as the source list spells it. A label, not an identity. | no                    |
-| `assetGroup` | The asset this deployment is. All deployments that are the same asset share one group.       | yes, by design        |
+| `assetGroup` | The asset this deployment is. All deployments that are the same asset share one group.     | yes, by design        |
 
 **Use `assetGroup` to join anything that's about the asset**: prices, yield history, notes, logos, and the "same asset on another chain" lookup. Consumers key on it, so a group string that changes breaks their joins (see [Renaming a group](#renaming-a-group)).
 
 ## What a group looks like
 
-| shape                               | meaning                                                                                                 | example                                                    |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| `SYMBOL`                            | A known core asset matched by `knownAssets` (or an explicit alias). The cleanest form.                 | `USDC`, `ETH`, `WSTETH`, `RSETH`                           |
-| `Name::SYMBOL`                      | No core-asset match, so the group is the `currencyId`. Still shared across chains when the spelling agrees. | `Cap USD::CUSD`, `Yield Optimizer USD::YOUSD`              |
-| `Name::SYMBOL::<chainId>::<n>`      | Same-chain collision suffix: another, unrelated token already holds `Name::SYMBOL` on that chain.     | `PT syrupUSDC (USDC) Arbitrum::PT-syrupUSDC-29JAN2026::42161::0` |
-| `Name::SYMBOL::solana[::<n>]`       | A Solana mint with no evidence it's an asset listed on an EVM chain. Scoped to Solana.                | `hyUSD::hyUSD::solana`                                     |
-| `Name::SYMBOL::fuel`                | A Fuel asset that isn't in `FUEL_MAPPEDS`. Scoped to Fuel.                                             |                                                            |
-| `Name::SYMBOL::suspicious::<hash>`  | Quarantine for an address that copies another token's name/symbol (from `portalTokens.script.ts`). Never inherits labels or logos. | `USD Coin::USDC::suspicious::564fa4e3`                     |
+| shape                              | meaning                                                                                                                            | example                                                          |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| `SYMBOL`                           | A known core asset matched by `knownAssets` (or an explicit alias). The cleanest form.                                             | `USDC`, `ETH`, `WSTETH`, `RSETH`                                 |
+| `Name::SYMBOL`                     | No core-asset match, so the group is the `currencyId`. Still shared across chains when the spelling agrees.                        | `Cap USD::CUSD`, `Yield Optimizer USD::YOUSD`                    |
+| `Name::SYMBOL::<chainId>::<n>`     | Same-chain collision suffix: another, unrelated token already holds `Name::SYMBOL` on that chain.                                  | `PT syrupUSDC (USDC) Arbitrum::PT-syrupUSDC-29JAN2026::42161::0` |
+| `Name::SYMBOL::solana[::<n>]`      | A Solana mint with no evidence it's an asset listed on an EVM chain. Scoped to Solana.                                             | `hyUSD::hyUSD::solana`                                           |
+| `Name::SYMBOL::fuel`               | A Fuel asset that isn't in `FUEL_MAPPEDS`. Scoped to Fuel.                                                                         |                                                                  |
+| `Name::SYMBOL::suspicious::<hash>` | Quarantine for an address that copies another token's name/symbol (from `portalTokens.script.ts`). Never inherits labels or logos. | `USD Coin::USDC::suspicious::564fa4e3`                           |
 
-A bare `SYMBOL` group is a strong claim ("this is *the* USDC"). An unqualified `Name::SYMBOL` is a weaker one ("these rows spell themselves the same way"). Chain-scoped groups are a deliberate dead end: they can never join an unrelated asset that happens to share a ticker.
+A bare `SYMBOL` group is a strong claim ("this is _the_ USDC"). An unqualified `Name::SYMBOL` is a weaker one ("these rows spell themselves the same way"). Chain-scoped groups are a deliberate dead end: they can never join an unrelated asset that happens to share a ticker.
 
 ### Natives and wrapped natives
 
@@ -96,7 +96,7 @@ The xStocks get a rule rather than ~740 alias lines: any `... xStock::<ticker>` 
 - Merge only **the same asset**. Evidence is the same contract address on several chains, CoinGecko's platform map putting the deployments under one coin, or an on-chain bridge/peer link. A shared ticker is never evidence: StaFi rETH ≠ Rocket Pool RETH, and Manta mETH ≠ Mantle mETH.
 - The merged group must still hold **one address per chain**.
 - Never alias a PulseChain (369) row on the strength of an Ethereum address. A state-fork copy isn't that asset.
-- If two *different* assets share one `name::symbol`, a group alias would move both. Use `ADDRESS_GROUP_OVERRIDE` (`"<chainId>:<lowercaseAddress>": "<group>"`) instead.
+- If two _different_ assets share one `name::symbol`, a group alias would move both. Use `ADDRESS_GROUP_OVERRIDE` (`"<chainId>:<lowercaseAddress>": "<group>"`) instead.
 
 ### Solana (`scripts/solana/solana.ts`)
 
@@ -112,8 +112,8 @@ With no evidence, the mint gets `currencyId::solana`, numbered on a case-insensi
 
 Several props are stored **per group** and apply to every deployment of the group on every chain (see [token-props.md](./token-props.md)):
 
-| keyed by `assetGroup`                                                     | keyed by `chainId:address`                                 |
-| ------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| keyed by `assetGroup`                                                                                      | keyed by `chainId:address`                                                            |
+| ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | `stablecoin`, `savings`, `lst` (group fallback), `issuer`, `issuerExposures`, `denomination`, notes, logos | `risk`, `oft`, `permit`, `rwa`, `pendle`, `spectra`, `exponent`, `receipt`, `wnative` |
 
 So a split group is not cosmetic. A bridged deployment that ends up in the wrong group silently loses its stablecoin/issuer/savings labels, its notes and logo, and downstream its intrinsic yield. Yield joins in margin-fetcher are case-sensitive, so the losing side reads 0 %. Many `GROUP_ALIAS` comments record exactly this: Cap `stcUSD`, Treehouse `tETH`, Theo `sthUSD`.
@@ -122,14 +122,14 @@ The group-keyed overlays are **impostor-guarded**: a ticker copy (`name === symb
 
 ## Generated files keyed by group
 
-| file                             | content                                                                                   |
-| -------------------------------- | ----------------------------------------------------------------------------------------- |
-| `omni-list.json`                 | `{ [assetGroup]: { id, name, symbol, logoURI, currencies: [row, …] } }`. Every deployment of every group across all chains. |
-| `logos.json`                     | `{ [assetGroup]: logoURI }`. One logo per group (`npm run logos:groups`).                 |
-| `logos-by-symbol.json`           | `{ [SYMBOL]: logoURI }`. One winner per ticker; suspicious/mimic groups can't win.        |
-| `asset-notes.json`               | `{ [assetGroup]: note }`. What the token is ([`scripts/notes/README.md`](../scripts/notes/README.md)). |
-| `native-currencies.json`         | Per chain: the gas coin, its `assetGroup`, its `shape` and wrapper.                       |
-| `asset-group-corrections.json`   | The rename log for consumers (below).                                                     |
+| file                           | content                                                                                                                     |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| `omni-list.json`               | `{ [assetGroup]: { id, name, symbol, logoURI, currencies: [row, …] } }`. Every deployment of every group across all chains. |
+| `logos.json`                   | `{ [assetGroup]: logoURI }`. One logo per group (`npm run logos:groups`).                                                   |
+| `logos-by-symbol.json`         | `{ [SYMBOL]: logoURI }`. One winner per ticker; suspicious/mimic groups can't win.                                          |
+| `asset-notes.json`             | `{ [assetGroup]: note }`. What the token is ([`scripts/notes/README.md`](../scripts/notes/README.md)).                      |
+| `native-currencies.json`       | Per chain: the gas coin, its `assetGroup`, its `shape` and wrapper.                                                         |
+| `asset-group-corrections.json` | The rename log for consumers (below).                                                                                       |
 
 ## Renaming a group
 

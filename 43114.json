@@ -7917,11 +7917,7 @@
       "assetGroup": "Balanced Dollar::bnUSD",
       "currencyId": "Balanced Dollar::bnUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "balanced", "name": "Balanced", "kind": "protocol" }
       }
@@ -10129,7 +10125,11 @@
       "assetGroup": "Moremoney USD::MONEY",
       "currencyId": "Moremoney USD::MONEY",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "moremoney", "name": "Moremoney", "kind": "protocol" }
       }
@@ -15079,7 +15079,7 @@
       "currencyId": "Stable Coin::SBC",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -16245,6 +16245,7 @@
       "assetGroup": "evaETH::EVAETH",
       "currencyId": "evaETH::EVAETH",
       "props": {
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -16267,6 +16268,7 @@
       "currencyId": "evaUSDT::EVAUSDT",
       "props": {
         "savings": { "underlying": "USDT", "base": "USD" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -16289,6 +16291,7 @@
       "currencyId": "evaUSDC::EVAUSDC",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "eva", "name": "eva", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -16623,6 +16626,16 @@
         "stablecoin": { "base": "KRW" },
         "issuer": { "id": "bdacs", "name": "BDACS", "kind": "institution" }
       }
+    },
+    "0x482deb2f7b9608a80ea91e71f06380e9891501c6": {
+      "chainId": "43114",
+      "decimals": 18,
+      "name": "UXLINK",
+      "address": "0x482deb2f7b9608a80ea91e71f06380e9891501c6",
+      "symbol": "UXLINK",
+      "logoURI": "https://coin-images.coingecko.com/coins/images/39229/large/uxlink.jpg?1721201390",
+      "assetGroup": "UXLINK::UXLINK",
+      "currencyId": "UXLINK::UXLINK"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "43114",

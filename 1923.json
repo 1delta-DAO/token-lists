@@ -13,7 +13,7 @@
       "currencyId": "Bridged RSWETH (Layerzero)::RSWETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "swell" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 5, "category": "LRT", "source": "whitelist" },
         "issuer": { "id": "swell", "name": "Swell", "kind": "protocol" }
       }
     },
@@ -173,7 +173,6 @@
       "assetGroup": "WEETH",
       "currencyId": "Bridged WEETH (Layerzero)::WEETH",
       "props": {
-        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "risk": { "score": 2, "source": "whitelist" },
         "oft": {
           "eid": 30335,
@@ -186,6 +185,7 @@
             }
           ]
         },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },

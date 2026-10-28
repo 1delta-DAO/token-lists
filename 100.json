@@ -1171,8 +1171,8 @@
           "category": "DISCONTINUED",
           "source": "whitelist"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "EURA", "base": "EUR" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -7563,8 +7563,8 @@
           "category": "DISCONTINUED",
           "source": "savings_inherit"
         },
-        "retired": { "reason": "discontinued", "source": "risk" },
         "savings": { "underlying": "USDA", "base": "USD" },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "issuer": { "id": "angle", "name": "Angle", "kind": "protocol" }
       }
     },
@@ -8122,7 +8122,14 @@
       "logoURI": "https://assets.coingecko.com/coins/images/39004/thumb/gbp.png?1719840784",
       "assetGroup": "Monerium GBP emoney::GBPE::100::0",
       "currencyId": "Monerium GBP emoney::GBPE",
-      "props": { "stablecoin": { "base": "GBP" } }
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "GBP" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "100",

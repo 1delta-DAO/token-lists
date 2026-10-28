@@ -14153,6 +14153,7 @@
       "currencyId": "Ether.Fi Liquid ETH::liquidETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
     },
@@ -15304,8 +15305,8 @@
       "currencyId": "Alchemix ETH::alETH",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" },
-        "denomination": "ETH"
+        "denomination": "ETH",
+        "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
     "0x528cdc92eab044e1e39fe43b9514bfdab4412b98": {
@@ -16294,7 +16295,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -17970,11 +17971,7 @@
       "assetGroup": "Synth sEUR::sEUR",
       "currencyId": "Synth sEUR::sEUR",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "synthetix", "name": "Synthetix", "kind": "protocol" }
       }
@@ -21075,7 +21072,10 @@
       "logoURI": "https://tokens.debridge.finance/Logo/10/0x000000001dc8bd45d7e7829fb1c969cbe4d0d1ec/small/token-logo.png",
       "assetGroup": "Gauntlet USD Alpha::GTUSDA",
       "currencyId": "Gauntlet USD Alpha::gtUSDa",
-      "props": { "savings": { "underlying": "USDC", "base": "USD" } }
+      "props": {
+        "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": { "score": 4, "source": "default" }
+      }
     },
     "0x9e2679eabff131b8b1b48ff7566140794e0eedc4": {
       "chainId": "10",
@@ -21968,7 +21968,7 @@
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
-          "source": "issuer_inherit"
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
@@ -22103,6 +22103,7 @@
       "currencyId": "Optimism WETH Mix Yield Token::mixWETH",
       "props": {
         "savings": { "underlying": "WETH", "base": "ETH" },
+        "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
@@ -22117,6 +22118,11 @@
       "currencyId": "Optimism USDC Mix Yield Token::mixUSDC",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "alchemix", "name": "Alchemix", "kind": "protocol" }
       }
     },
@@ -22130,8 +22136,23 @@
       "currencyId": "Ether.Fi Liquid USD::liquidUSD",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
+        "risk": {
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
+        },
         "issuer": { "id": "etherfi", "name": "Ether.fi", "kind": "protocol" }
       }
+    },
+    "0x482deb2f7b9608a80ea91e71f06380e9891501c6": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "UXLINK",
+      "address": "0x482deb2f7b9608a80ea91e71f06380e9891501c6",
+      "symbol": "UXLINK",
+      "logoURI": "https://coin-images.coingecko.com/coins/images/39229/large/uxlink.jpg?1721201390",
+      "assetGroup": "UXLINK::UXLINK",
+      "currencyId": "UXLINK::UXLINK"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "10",

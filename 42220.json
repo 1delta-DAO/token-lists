@@ -266,7 +266,11 @@
       "assetGroup": "PUSO::PUSO",
       "currencyId": "PUSO::PUSO",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "PHP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -330,7 +334,7 @@
       "assetGroup": "CEUR",
       "currencyId": "Celo Euro::CEUR",
       "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec": {
@@ -1181,7 +1185,9 @@
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xccf663b1ff11028f0b19058d0f7b674004a40746.png",
       "assetGroup": "Celo British Pound::cGBP",
       "currencyId": "Celo British Pound::cGBP",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
+      }
     },
     "0x4c35853a3b4e647fd266f4de678dcc8fec410bf6": {
       "chainId": "42220",
@@ -1240,6 +1246,7 @@
       "name": "Wrapped BTC (Celo native bridge)",
       "address": "0x8ac2901dd8a1f17a1a4768a6ba4c3751e3995b2d",
       "symbol": "WBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/69901/thumb/Wrapped_Bitcoin_logo_2.png?1759986464",
       "assetGroup": "Wrapped BTC (Celo native bridge)::WBTC",
       "currencyId": "Wrapped BTC (Celo native bridge)::WBTC",
       "props": { "risk": { "score": 4, "source": "default" } }
@@ -1279,6 +1286,271 @@
       "symbol": "TECELO",
       "assetGroup": "TESTCelo::TECELO",
       "currencyId": "TESTCelo::TECELO"
+    },
+    "0x482deb2f7b9608a80ea91e71f06380e9891501c6": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "UXLINK",
+      "address": "0x482deb2f7b9608a80ea91e71f06380e9891501c6",
+      "symbol": "UXLINK",
+      "logoURI": "https://coin-images.coingecko.com/coins/images/39229/large/uxlink.jpg?1721201390",
+      "assetGroup": "UXLINK::UXLINK",
+      "currencyId": "UXLINK::UXLINK"
+    },
+    "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Argentine Peso",
+      "address": "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d",
+      "symbol": "WARS",
+      "logoURI": "https://assets.coingecko.com/coins/images/70846/thumb/world_logos_wars_logo_3.png?1764176749",
+      "assetGroup": "Argentine Peso::WARS",
+      "currencyId": "Argentine Peso::WARS",
+      "props": {
+        "stablecoin": { "base": "ARS" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0xacffae8e57ec6e394eb1b41939a8cf7892dbdc51": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Autonolas",
+      "address": "0xacffae8e57ec6e394eb1b41939a8cf7892dbdc51",
+      "symbol": "OLAS",
+      "logoURI": "https://assets.coingecko.com/coins/images/31099/thumb/OLAS-token.png?1696529930",
+      "assetGroup": "Autonolas::OLAS",
+      "currencyId": "Autonolas::OLAS"
+    },
+    "0x57f5e098cad7a3d1eed53991d4d66c45c9af7812": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Wrapped USDM",
+      "address": "0x57f5e098cad7a3d1eed53991d4d66c45c9af7812",
+      "symbol": "WUSDM",
+      "logoURI": "https://assets.coingecko.com/coins/images/33785/thumb/wUSDM_PNG_240px.png?1702981552",
+      "assetGroup": "WUSDM",
+      "currencyId": "Wrapped USDM::WUSDM"
+    },
+    "0x2e6c05f1f7d1f4eb9a088bf12257f1647682b754": {
+      "chainId": "42220",
+      "decimals": 6,
+      "name": "Regen",
+      "address": "0x2e6c05f1f7d1f4eb9a088bf12257f1647682b754",
+      "symbol": "REGEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/16733/thumb/REGEN.png?1696516306",
+      "assetGroup": "Regen::REGEN",
+      "currencyId": "Regen::REGEN"
+    },
+    "0x718aa4f7f026fd16086c842a68ce9ef55203b54f": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "SWEAT",
+      "address": "0x718aa4f7f026fd16086c842a68ce9ef55203b54f",
+      "symbol": "SWEAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/25057/thumb/Sweat_-_logo-nov-2025.png?1762411781",
+      "assetGroup": "SWEAT::SWEAT",
+      "currencyId": "SWEAT::SWEAT"
+    },
+    "0xc5ebea9984c485ec5d58ca5a2d376620d93af871": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "VNX Swiss Franc",
+      "address": "0xc5ebea9984c485ec5d58ca5a2d376620d93af871",
+      "symbol": "VCHF",
+      "logoURI": "https://assets.coingecko.com/coins/images/29547/thumb/VNXCHF_%282%29.png?1696528488",
+      "assetGroup": "VNX Swiss Franc::VCHF",
+      "currencyId": "VNX Swiss Franc::VCHF",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "CHF" },
+        "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
+      }
+    },
+    "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Brazilian real",
+      "address": "0xd76f5faf6888e24d9f04bf92a0c8b921fe4390e0",
+      "symbol": "WBRL",
+      "logoURI": "https://assets.coingecko.com/coins/images/70862/thumb/wbrl.png?1764272108",
+      "assetGroup": "Brazilian real::WBRL",
+      "currencyId": "Brazilian real::WBRL",
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0xcd88f99adf75a9110c0bcd22695a32a20ec54ecb": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "SelfClaw",
+      "address": "0xcd88f99adf75a9110c0bcd22695a32a20ec54ecb",
+      "symbol": "SELFCLAW",
+      "logoURI": "https://assets.coingecko.com/coins/images/102171938/thumb/ibyP2vqs_400x400.jpg?1771563528",
+      "assetGroup": "SelfClaw::SELFCLAW",
+      "currencyId": "SelfClaw::SELFCLAW"
+    },
+    "0x8a1d45e102e886510e891d2ec656a708991e2d76": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Colombian Peso",
+      "address": "0x8a1d45e102e886510e891d2ec656a708991e2d76",
+      "symbol": "WCOP",
+      "logoURI": "https://assets.coingecko.com/coins/images/70887/thumb/wcop_logo_1.png?1764394538",
+      "assetGroup": "Colombian Peso::WCOP",
+      "currencyId": "Colombian Peso::WCOP",
+      "props": {
+        "stablecoin": { "base": "COP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x59d9356e565ab3a36dd77763fc0d87feaf85508c": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Mountain Protocol USD",
+      "address": "0x59d9356e565ab3a36dd77763fc0d87feaf85508c",
+      "symbol": "USDM",
+      "logoURI": "https://assets.coingecko.com/coins/images/31719/thumb/usdm.png?1696530540",
+      "assetGroup": "USDM",
+      "currencyId": "Mountain Protocol USD::USDM",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "mountain",
+          "name": "Mountain Protocol",
+          "kind": "institution"
+        }
+      }
+    },
+    "0xd2ab3c9a02dbbab236bfec45d1d755df4267f771": {
+      "chainId": "42220",
+      "decimals": 6,
+      "name": "USAT",
+      "address": "0xd2ab3c9a02dbbab236bfec45d1d755df4267f771",
+      "symbol": "USAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/71792/thumb/usat_logo_200x200.png?1769440161",
+      "assetGroup": "USAT::USAT",
+      "currencyId": "USAT::USAT",
+      "props": {
+        "stablecoin": { "base": "USD" },
+        "issuer": {
+          "id": "tether",
+          "name": "Tether",
+          "kind": "institution",
+          "parent": "anchorage"
+        }
+      }
+    },
+    "0xb7ba43fbd4f2e85fce929f7d4dfe3905ae846a46": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "PerkOS",
+      "address": "0xb7ba43fbd4f2e85fce929f7d4dfe3905ae846a46",
+      "symbol": "PERKOS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102172129/thumb/perkos-logo.jpg?1771736669",
+      "assetGroup": "PerkOS::PERKOS",
+      "currencyId": "PerkOS::PERKOS"
+    },
+    "0xb036c6b0a00d9cdc1445c275e1115c110c82ac3f": {
+      "chainId": "42220",
+      "decimals": 6,
+      "name": "Zeno Paradox",
+      "address": "0xb036c6b0a00d9cdc1445c275e1115c110c82ac3f",
+      "symbol": "ZENO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179693/thumb/photo_2026-10-18_13.53.29.jpeg?1792644725",
+      "assetGroup": "Zeno Paradox::ZENO",
+      "currencyId": "Zeno Paradox::ZENO"
+    },
+    "0x7ae4265ecfc1f31bc0e112dfcfe3d78e01f4bb7f": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "VNX British Pound",
+      "address": "0x7ae4265ecfc1f31bc0e112dfcfe3d78e01f4bb7f",
+      "symbol": "VGBP",
+      "logoURI": "https://assets.coingecko.com/coins/images/55301/thumb/VGBP_2.png?1747482092",
+      "assetGroup": "VNX British Pound::VGBP",
+      "currencyId": "VNX British Pound::VGBP",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "GBP" },
+        "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
+      }
+    },
+    "0x45df533836ce9da9cdbff7b2fbd987141326a921": {
+      "chainId": "42220",
+      "decimals": 6,
+      "name": "Zeno Divergent [OLD]",
+      "address": "0x45df533836ce9da9cdbff7b2fbd987141326a921",
+      "symbol": "ZENO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102178780/thumb/photo_2026-09-23_17.10.34.jpeg?1790311517",
+      "assetGroup": "Zeno Divergent [OLD]::ZENO",
+      "currencyId": "Zeno Divergent [OLD]::ZENO"
+    },
+    "0x18bc5bcc660cf2b9ce3cd51a404afe1a0cbd3c22": {
+      "chainId": "42220",
+      "decimals": 2,
+      "name": "IDRX",
+      "address": "0x18bc5bcc660cf2b9ce3cd51a404afe1a0cbd3c22",
+      "symbol": "IDRX",
+      "logoURI": "https://assets.coingecko.com/coins/images/34883/thumb/IDRX_BLUE_COIN_200x200.png?1734983273",
+      "assetGroup": "IDRX::IDRX",
+      "currencyId": "IDRX::IDRX"
+    },
+    "0x337e7456b420bd3481e7fa61fa9850343d610d34": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Mexican Peso",
+      "address": "0x337e7456b420bd3481e7fa61fa9850343d610d34",
+      "symbol": "WMXN",
+      "logoURI": "https://assets.coingecko.com/coins/images/70880/thumb/wmxn_logo_1.png?1764392404",
+      "assetGroup": "Mexican Peso::WMXN",
+      "currencyId": "Mexican Peso::WMXN",
+      "props": {
+        "stablecoin": { "base": "MXN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Peruvian Sol",
+      "address": "0x4f34c8b3b5fb6d98da888f0fea543d4d9c9f2ebe",
+      "symbol": "WPEN",
+      "logoURI": "https://assets.coingecko.com/coins/images/70975/thumb/wpen_logo_1.png?1764954695",
+      "assetGroup": "Peruvian Sol::WPEN",
+      "currencyId": "Peruvian Sol::WPEN",
+      "props": {
+        "stablecoin": { "base": "PEN" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0x61d450a098b6a7f69fc4b98ce68198fe59768651": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Chilean Peso",
+      "address": "0x61d450a098b6a7f69fc4b98ce68198fe59768651",
+      "symbol": "WCLP",
+      "logoURI": "https://assets.coingecko.com/coins/images/70976/thumb/wclp_logo_1.png?1764954870",
+      "assetGroup": "Chilean Peso::WCLP",
+      "currencyId": "Chilean Peso::WCLP",
+      "props": {
+        "stablecoin": { "base": "CLP" },
+        "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
+      }
+    },
+    "0xf6829d7393dae24509eb1e52ee8e572e2e271a4f": {
+      "chainId": "42220",
+      "decimals": 6,
+      "name": "Compliant Naira",
+      "address": "0xf6829d7393dae24509eb1e52ee8e572e2e271a4f",
+      "symbol": "CNGN",
+      "logoURI": "https://assets.coingecko.com/coins/images/69200/thumb/cNGN_Logo_Icon_Purple.png?1757836603",
+      "assetGroup": "Compliant Naira::CNGN",
+      "currencyId": "Compliant Naira::CNGN"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42220",

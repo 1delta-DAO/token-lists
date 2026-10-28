@@ -4,16 +4,16 @@
 
 ## Files
 
-| file                           | content                                                             |
-| ------------------------------ | ------------------------------------------------------------------- |
-| `<chainId>.json`               | Per-chain list: `{ chainId, version, list: { address → row }, mainTokens }` |
-| `solana.json`, `fuel.json`     | The same shape for non-EVM chains.                                  |
-| `omni-list.json`               | Every deployment of every asset, keyed by `assetGroup`.             |
-| `main-tokens.json`             | `chainId → mainTokens` for all chains in one file.                  |
-| `native-currencies.json`       | Each chain's gas coin, its wrapper and its shape.                   |
-| `logos.json` / `logos-by-symbol.json` | One logo per asset group / per ticker.                       |
-| `asset-notes.json`             | What each asset is, keyed by group.                                 |
-| `asset-group-corrections.json` | Log of group renames for downstream stores.                         |
+| file                                  | content                                                                     |
+| ------------------------------------- | --------------------------------------------------------------------------- |
+| `<chainId>.json`                      | Per-chain list: `{ chainId, version, list: { address → row }, mainTokens }` |
+| `solana.json`, `fuel.json`            | The same shape for non-EVM chains.                                          |
+| `omni-list.json`                      | Every deployment of every asset, keyed by `assetGroup`.                     |
+| `main-tokens.json`                    | `chainId → mainTokens` for all chains in one file.                          |
+| `native-currencies.json`              | Each chain's gas coin, its wrapper and its shape.                           |
+| `logos.json` / `logos-by-symbol.json` | One logo per asset group / per ticker.                                      |
+| `asset-notes.json`                    | What each asset is, keyed by group.                                         |
+| `asset-group-corrections.json`        | Log of group renames for downstream stores.                                 |
 
 ## Docs
 
