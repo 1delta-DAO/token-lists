@@ -18,7 +18,7 @@ The canonical TypeScript definition is `TokenProps` in [`scripts/utils/types.ts`
 | field        | type   | meaning                                                                                       |
 | ------------ | ------ | --------------------------------------------------------------------------------------------- |
 | `chainId`    | string | Chain id as a string (`"42161"`, `"solana"`, `"fuel"`).                                       |
-| `address`    | string | Lower-cased address. `0x000…000` is the chain's native coin. On Solana, the mint (base58).   |
+| `address`    | string | Lower-cased address. `0x000…000` is the chain's native coin. On Solana, the mint (base58).    |
 | `name`       | string | Display name from the winning source list.                                                    |
 | `symbol`     | string | Display ticker from the winning source list.                                                  |
 | `decimals`   | number | Token decimals. Rows without verified decimals are dropped, never defaulted.                  |
@@ -30,7 +30,7 @@ The canonical TypeScript definition is `TokenProps` in [`scripts/utils/types.ts`
 ## How to read `props`
 
 - **A prop being present is the flag.** There's no `isStablecoin: false`. A missing `stablecoin` means "not classified as one".
-- **Absent ≠ negative** for probed facts. `rwa.transferRestricted` missing means *not probed*, not "transfers freely". `oft.routes[].peers` missing a chain means *that chain couldn't be read*.
+- **Absent ≠ negative** for probed facts. `rwa.transferRestricted` missing means _not probed_, not "transfers freely". `oft.routes[].peers` missing a chain means _that chain couldn't be read_.
 - **Group-keyed vs address-keyed.** Some props are resolved per `assetGroup` and repeat on every deployment of the group. Others are facts about one contract. The tables below give the key for each.
 - **No stale booleans for time.** `spectra` and `exponent` carry `maturity` instead of an `expired` flag, so compare against the clock yourself. (`pendle.expired` exists for legacy reasons and is only as fresh as the last run.)
 
@@ -42,8 +42,8 @@ The canonical TypeScript definition is `TokenProps` in [`scripts/utils/types.ts`
 "stablecoin": { "base": "USD" }
 ```
 
-| field  | meaning                                                                 |
-| ------ | ----------------------------------------------------------------------- |
+| field  | meaning                                                                            |
+| ------ | ---------------------------------------------------------------------------------- |
 | `base` | Fiat peg, upper-case (`USD`, `EUR`, `GBP`, …). Omitted for floating/variable pegs. |
 
 Source: risk-data's DeFiLlama stablecoin feed (`scripts/stablecoin/`). Test tokens and impostors are excluded.
@@ -52,10 +52,10 @@ Source: risk-data's DeFiLlama stablecoin feed (`scripts/stablecoin/`). Test toke
 
 A yield-bearing wrapper over a stablecoin (sDAI, sUSDe, sfrxUSD, …).
 
-| field        | meaning                                                         |
-| ------------ | --------------------------------------------------------------- |
-| `underlying` | The stablecoin it earns on, by symbol (`DAI`, `USDe`, `rUSD`).  |
-| `base`       | The underlying's fiat peg (`USD`, …).                           |
+| field        | meaning                                                        |
+| ------------ | -------------------------------------------------------------- |
+| `underlying` | The stablecoin it earns on, by symbol (`DAI`, `USDe`, `rUSD`). |
+| `base`       | The underlying's fiat peg (`USD`, …).                          |
 
 Source: risk-data's yield-bearing-stablecoin feed. The underlying is resolved on-chain via ERC-4626 `asset()` (`scripts/savings/`).
 
@@ -63,11 +63,11 @@ Source: risk-data's yield-bearing-stablecoin feed. The underlying is resolved on
 
 A liquid staking or restaking token.
 
-| field      | values                                         |
-| ---------- | ---------------------------------------------- |
-| `type`     | `staking` (LST) · `restaking` (LRT)            |
+| field      | values                                                    |
+| ---------- | --------------------------------------------------------- |
+| `type`     | `staking` (LST) · `restaking` (LRT)                       |
 | `asset`    | Staked base: `ETH`, `BTC`, `SOL`, `BNB`, `POL`, `AVAX`, … |
-| `provider` | `lido`, `rocketpool`, `renzo`, `kelp`, …       |
+| `provider` | `lido`, `rocketpool`, `renzo`, `kelp`, …                  |
 
 Source: `scripts/lst/lst.json` (per address), with `lst-groups.json` filling bridged deployments by group.
 
@@ -81,15 +81,15 @@ It's set **only on base tokens**. It's skipped whenever the row has `lst`, `pend
 
 A tokenised real-world asset.
 
-| field                | meaning                                                                                                   |
-| -------------------- | --------------------------------------------------------------------------------------------------------- |
-| `type`               | `equity` · `fund` · `credit` · `commodity` · `other`                                                      |
+| field                | meaning                                                                                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`               | `equity` · `fund` · `credit` · `commodity` · `other`                                                                                                      |
 | `subType`            | Finer class: `stock`, `etf`, `treasury`, `money-market`, `private-credit`, `corporate-debt`, `gold`, `silver`, `pre-ipo`, `reinsurance`, `basis-trade`, … |
-| `issuer`             | Issuing platform slug: `backed`, `ondo`, `dinari`, `robinhood`, `securitize`, `midas`, `nest`, …          |
-| `underlying`         | The off-chain instrument: `AAPL`, `US T-Bill`, `XAU`, …                                                   |
-| `denomination`       | Currency the NAV is struck in (`USD`). This is a floating NAV, **not** a peg. Set only where verified on-chain. |
-| `transferRestricted` | `true` means the token itself reverts transfers to non-allowlisted holders, so it can't be used outside the allowlist at all. Set only when probed. |
-| `transferGate`       | `{ kind: 'allowlist' \| 'registry' \| 'role', probedAt, evidence? }`. What enforces the restriction, and when it was probed. |
+| `issuer`             | Issuing platform slug: `backed`, `ondo`, `dinari`, `robinhood`, `securitize`, `midas`, `nest`, …                                                          |
+| `underlying`         | The off-chain instrument: `AAPL`, `US T-Bill`, `XAU`, …                                                                                                   |
+| `denomination`       | Currency the NAV is struck in (`USD`). This is a floating NAV, **not** a peg. Set only where verified on-chain.                                           |
+| `transferRestricted` | `true` means the token itself reverts transfers to non-allowlisted holders, so it can't be used outside the allowlist at all. Set only when probed.       |
+| `transferGate`       | `{ kind: 'allowlist' \| 'registry' \| 'role', probedAt, evidence? }`. What enforces the restriction, and when it was probed.                              |
 
 Source: `scripts/rwa/` (`rwa.json` plus rule-based detection).
 
@@ -97,12 +97,12 @@ Source: `scripts/rwa/` (`rwa.json` plus rule-based detection).
 
 **Whose promise you hold**: the entity whose solvency and redemption the asset depends on. It's not the money it's worth (`stablecoin.base`), not the venue that hosts it, and not the bridge it came over. USDC.e is still `circle`.
 
-| field    | meaning                                                                                       |
-| -------- | --------------------------------------------------------------------------------------------- |
-| `id`     | Stable slug, use it for filtering/grouping: `circle`, `tether`, `sky`, `ethena`, `lido`, `pendle`, … |
-| `name`   | Display name.                                                                                 |
+| field    | meaning                                                                                                               |
+| -------- | --------------------------------------------------------------------------------------------------------------------- |
+| `id`     | Stable slug, use it for filtering/grouping: `circle`, `tether`, `sky`, `ethena`, `lido`, `pendle`, …                  |
+| `name`   | Display name.                                                                                                         |
 | `kind`   | `protocol` (DAO/contracts) · `institution` (off-chain legal entity with a redemption desk) · `cex` (exchange wrapper) |
-| `parent` | Parent issuer when this is a product line (`spark` → `sky`). Fold by `parent` to get the family. |
+| `parent` | Parent issuer when this is a product line (`spark` → `sky`). Fold by `parent` to get the family.                      |
 
 Absent on assets nobody owes: ETH, BNB and the other gas coins. A wrapper with no curated group falls back to the protocol that minted it, so a Pendle PT gets `pendle`. Source and coverage rules: [`scripts/issuer/README.md`](../scripts/issuer/README.md).
 
@@ -114,11 +114,11 @@ A **list** of the desks a wrapper ultimately exposes you to, beyond its own `iss
 "issuerExposures": [{ "id": "lido", "name": "Lido", "kind": "protocol", "hops": 1 }]
 ```
 
-| field                        | meaning                                                                  |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| `id`, `name`, `kind`, `parent` | As in `issuer`.                                                        |
-| `hops`                       | How far the walk went: 1 is the direct underlying, 2 is through the SY. More hops is a weaker claim. |
-| `weight`                     | Share 0..1. Absent when legs aren't weighted, which is every case today. |
+| field                          | meaning                                                                                              |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| `id`, `name`, `kind`, `parent` | As in `issuer`.                                                                                      |
+| `hops`                         | How far the walk went: 1 is the direct underlying, 2 is through the SY. More hops is a weaker claim. |
+| `weight`                       | Share 0..1. Absent when legs aren't weighted, which is every case today.                             |
 
 It's derived by walking `pendle.underlyingAsset`, `spectra.underlyingAsset`, `exponent.underlyingAsset` and `receipt.underlying` to the first group that has an issuer. **It's absent, not `[]`,** when the walk finds nothing, or when the only desk it finds is the token's own issuer.
 
@@ -126,11 +126,11 @@ It's derived by walking `pendle.underlyingAsset`, `spectra.underlyingAsset`, `ex
 
 A lagging annotation from the risk-data repo (`data/asset-risks.json`, via `scripts/risk/`).
 
-| field      | meaning                                                                                       |
-| ---------- | --------------------------------------------------------------------------------------------- |
-| `score`    | 1 (safest) … 5 (riskiest)                                                                     |
+| field      | meaning                                                                                                                                                                                                          |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `score`    | 1 (safest) … 5 (riskiest)                                                                                                                                                                                        |
 | `category` | `BLUE_CHIP`, `NATIVE`, `STABLECOIN`, `YIELD_STABLE`, `LST`, `LRT`, `ESTABLISHED_DEFI`, `BRIDGED`, `PRINCIPAL_TOKEN`, `YIELD_TOKEN`, `TOKENIZED_EQUITY`, `UNKNOWN_ISSUER`, `DISCONTINUED`, `COMPROMISED`, `OTHER` |
-| `source`   | How it was scored: `whitelist`, `stablecoin`, `default`, or inherited from the underlying: `pendle_inherit`, `issuer_inherit`, `vault_inherit`, `savings_inherit`. |
+| `source`   | How it was scored: `whitelist`, `stablecoin`, `default`, or inherited from the underlying: `pendle_inherit`, `issuer_inherit`, `vault_inherit`, `savings_inherit`.                                               |
 
 ### `retired`, keyed by address
 
@@ -140,11 +140,11 @@ The issuer no longer runs this deployment. The row stays in the list so holders 
 "retired": { "reason": "superseded", "successor": "Liquity BOLD::BOLD", "source": "curated" }
 ```
 
-| field       | meaning                                                                                                       |
-| ----------- | ------------------------------------------------------------------------------------------------------------- |
+| field       | meaning                                                                                                                                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `reason`    | `superseded`: replaced by a redeploy of the same asset (Liquity BOLD v1, Inverse jrDOLA v1). `discontinued`: wound down with no replacement (Angle USDA / stUSD / stEUR, Mountain wUSDM, Level lvlUSD). |
-| `successor` | `assetGroup` of the live replacement, when there is one.                                                      |
-| `source`    | `curated` (`scripts/retired/retired.ts`) or `risk` (the row's `risk.category` is `DISCONTINUED`).             |
+| `successor` | `assetGroup` of the live replacement, when there is one.                                                                                                                                                |
+| `source`    | `curated` (`scripts/retired/retired.ts`) or `risk` (the row's `risk.category` is `DISCONTINUED`).                                                                                                       |
 
 It's keyed per address because a superseded v1 usually has the same `name::symbol` as the live v2. Those v1s also get a `… v1 (superseded)::…` group through `ADDRESS_GROUP_OVERRIDE`, so the live token keeps the plain group. To retire a token by hand, add a line to `RETIRED_BY_ADDRESS`.
 
@@ -154,49 +154,49 @@ All three are keyed by address and come from the protocol's own API (`scripts/pe
 
 ### `pendle`
 
-| field                                    | meaning                                                                |
-| ---------------------------------------- | ---------------------------------------------------------------------- |
-| `tokenType`                              | `PT` · `YT` · `SY`                                                     |
-| `marketAddress`                          | The Pendle market (PT/YT).                                             |
-| `ptAddress` / `ytAddress` / `syAddress`  | The sibling legs. A PT carries `ytAddress`, a YT carries `ptAddress`.  |
-| `underlyingAsset`                        | Address of the asset the SY wraps.                                     |
-| `expiry`                                 | Maturity, unix seconds.                                                |
-| `expired`                                | Snapshot at generation time. Prefer comparing `expiry` to now.         |
-| `bridgedFrom`                            | Origin chain code (`ETH`, `ARB`, `PLASMA`) for a PT **bridged** here. There's no market on this chain, so it can be traded but not minted or redeemed. |
-| `origin`                                 | `{ chainId, address }` of the origin PT, resolved from the LayerZero peer link. Join yield and maturity through it. |
+| field                                   | meaning                                                                                                                                                |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `tokenType`                             | `PT` · `YT` · `SY`                                                                                                                                     |
+| `marketAddress`                         | The Pendle market (PT/YT).                                                                                                                             |
+| `ptAddress` / `ytAddress` / `syAddress` | The sibling legs. A PT carries `ytAddress`, a YT carries `ptAddress`.                                                                                  |
+| `underlyingAsset`                       | Address of the asset the SY wraps.                                                                                                                     |
+| `expiry`                                | Maturity, unix seconds.                                                                                                                                |
+| `expired`                               | Snapshot at generation time. Prefer comparing `expiry` to now.                                                                                         |
+| `bridgedFrom`                           | Origin chain code (`ETH`, `ARB`, `PLASMA`) for a PT **bridged** here. There's no market on this chain, so it can be traded but not minted or redeemed. |
+| `origin`                                | `{ chainId, address }` of the origin PT, resolved from the LayerZero peer link. Join yield and maturity through it.                                    |
 
 ### `spectra`
 
-| field                         | meaning                                                          |
-| ----------------------------- | ---------------------------------------------------------------- |
-| `tokenType`                   | `PT` · `YT` · `IBT` (the interest-bearing wrapper, Spectra's SY) |
-| `poolAddress`                 | The Curve StableSwap-NG pool the PT trades on.                   |
-| `ptAddress` / `ytAddress`     | Sibling legs.                                                    |
-| `ibtAddress`                  | IBT the PT is minted from.                                       |
-| `baseIbtAddress`              | Vault behind a `Spectra4626Wrapper` IBT.                         |
-| `underlyingAsset`             | What the PT redeems for.                                         |
-| `maturity`                    | Unix seconds. There's no `expired` flag.                         |
+| field                     | meaning                                                          |
+| ------------------------- | ---------------------------------------------------------------- |
+| `tokenType`               | `PT` · `YT` · `IBT` (the interest-bearing wrapper, Spectra's SY) |
+| `poolAddress`             | The Curve StableSwap-NG pool the PT trades on.                   |
+| `ptAddress` / `ytAddress` | Sibling legs.                                                    |
+| `ibtAddress`              | IBT the PT is minted from.                                       |
+| `baseIbtAddress`          | Vault behind a `Spectra4626Wrapper` IBT.                         |
+| `underlyingAsset`         | What the PT redeems for.                                         |
+| `maturity`                | Unix seconds. There's no `expired` flag.                         |
 
 ### `exponent` (Solana only)
 
-| field                                    | meaning                                                                     |
-| ---------------------------------------- | --------------------------------------------------------------------------- |
-| `tokenType`                              | `PT` · `YT` · `SY`                                                          |
-| `vaultAddress`                           | The vault that owns the PT/YT/SY mints (mint/redeem happen here). Absent on SY. |
-| `ptAddress` / `ytAddress` / `syAddress`  | Sibling legs.                                                               |
-| `underlyingAsset`                        | Mint of the yield-bearing asset the SY wraps.                               |
-| `maturity`                               | Unix seconds. Absent on SY.                                                 |
-| `marketAddress` / `orderbookAddress`     | Trading venues, where they exist (none, either, or both).                   |
-| `platform`                               | Exponent's slug for the underlying: `fragmetric`, `hylo`, `kamino`, `sanctum`, … |
+| field                                   | meaning                                                                          |
+| --------------------------------------- | -------------------------------------------------------------------------------- |
+| `tokenType`                             | `PT` · `YT` · `SY`                                                               |
+| `vaultAddress`                          | The vault that owns the PT/YT/SY mints (mint/redeem happen here). Absent on SY.  |
+| `ptAddress` / `ytAddress` / `syAddress` | Sibling legs.                                                                    |
+| `underlyingAsset`                       | Mint of the yield-bearing asset the SY wraps.                                    |
+| `maturity`                              | Unix seconds. Absent on SY.                                                      |
+| `marketAddress` / `orderbookAddress`    | Trading venues, where they exist (none, either, or both).                        |
+| `platform`                              | Exponent's slug for the underlying: `fragmetric`, `hylo`, `kamino`, `sanctum`, … |
 
 ### `receipt`, keyed by address, hand-set
 
 A token that wraps another listed token 1:1 and is priced through it.
 
-| field        | meaning                                                                                                        |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| field        | meaning                                                                                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `protocol`   | `dolomite-isolation`: a Dolomite isolation-mode receipt (not transferable, never user-held). `spectra-4626-wrapper`: Spectra's `sw-` wrapper (transferable). |
-| `underlying` | Lower-cased address of the wrapped token on the same chain.                                                    |
+| `underlying` | Lower-cased address of the wrapped token on the same chain.                                                                                                  |
 
 ## Transport and execution
 
@@ -222,38 +222,38 @@ A token can have several routes on one chain, each belonging to a different mesh
 
 ### `permit`, keyed by address
 
-| field     | meaning                                                                |
-| --------- | ---------------------------------------------------------------------- |
-| `type`    | `1` = EIP-2612 `permit`, `0` = a non-standard permit                   |
-| `version` | EIP-712 domain `version` string (`"1"`, `"2"`)                         |
+| field     | meaning                                              |
+| --------- | ---------------------------------------------------- |
+| `type`    | `1` = EIP-2612 `permit`, `0` = a non-standard permit |
+| `version` | EIP-712 domain `version` string (`"1"`, `"2"`)       |
 
 Source: `scripts/permit/`.
 
 ## Native coins and wrappers
 
-| prop       | on                         | meaning                                                                                           |
-| ---------- | -------------------------- | ------------------------------------------------------------------------------------------------- |
-| `isNative` | the zero-address row       | `true`: this row is the gas coin.                                                                 |
-| `wrapped`  | the zero-address row       | Address of the chain's wrapped native (WETH, WBNB, …).                                            |
-| `erc20`    | the zero-address row       | ERC-20 view of the **same balance** as the native coin (e.g. Polygon `0x…1010`). Don't add both balances. |
-| `wnative`  | the wrapped-native row     | `true`: this is the chain's canonical wrapper.                                                    |
+| prop       | on                     | meaning                                                                                                   |
+| ---------- | ---------------------- | --------------------------------------------------------------------------------------------------------- |
+| `isNative` | the zero-address row   | `true`: this row is the gas coin.                                                                         |
+| `wrapped`  | the zero-address row   | Address of the chain's wrapped native (WETH, WBNB, …).                                                    |
+| `erc20`    | the zero-address row   | ERC-20 view of the **same balance** as the native coin (e.g. Polygon `0x…1010`). Don't add both balances. |
+| `wnative`  | the wrapped-native row | `true`: this is the chain's canonical wrapper.                                                            |
 
 The native coin and its wrapper share one `assetGroup`. For a per-chain summary without loading the lists, read `native-currencies.json`. Its `shape` field is documented in [`scripts/oft/README.md`](../scripts/oft/README.md#the-gas-coin-shape-native-currenciesjson).
 
 ## Safety flags
 
-| prop         | meaning                                                                                              |
-| ------------ | ---------------------------------------------------------------------------------------------------- |
+| prop         | meaning                                                                                                |
+| ------------ | ------------------------------------------------------------------------------------------------------ |
 | `suspicious` | The token looks like it impersonates a legit one. Its group is quarantined as `…::suspicious::<hash>`. |
-| `mimic`      | It copies another token's name/symbol on the same chain.                                             |
+| `mimic`      | It copies another token's name/symbol on the same chain.                                               |
 
 Both come from `scripts/portalTokens.script.ts`. Flagged rows never win a group logo and never inherit group overlays.
 
 ## Chain-specific
 
-| prop                   | meaning                                                                                        |
-| ---------------------- | ---------------------------------------------------------------------------------------------- |
-| `solana.tokenProgram`  | `spl-token` · `token-2022`. Token-2022 supports transfer fees and hooks, so a quote can under-deliver. |
+| prop                  | meaning                                                                                                |
+| --------------------- | ------------------------------------------------------------------------------------------------------ |
+| `solana.tokenProgram` | `spl-token` · `token-2022`. Token-2022 supports transfer fees and hooks, so a quote can under-deliver. |
 
 ## Declared but not yet emitted
 

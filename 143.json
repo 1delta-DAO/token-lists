@@ -416,7 +416,8 @@
           "expiry": 1792627200,
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ptAddress": "0xd236e83c563f888f540ca997c3ddf00e82d68c45",
-          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
+          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -440,7 +441,8 @@
           "expiry": 1792627200,
           "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
           "ytAddress": "0xee0b5281dd0b0eacde23cc9029c8b442cafde67c",
-          "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
+          "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -849,6 +851,11 @@
           "ptAddress": "0x39148079bca3abf3f3b40f6f1c1b1ae1f2927d13",
           "ytAddress": "0xd0d72f0a23031dd3c7994fe340aa8551736c4efd"
         },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -871,7 +878,8 @@
           "expiry": 1792627200,
           "underlyingAsset": "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2",
           "ytAddress": "0x758119e49319b91332eebd6fcbecd9e0387de16b",
-          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
+          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -1098,7 +1106,8 @@
           "expiry": 1792627200,
           "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
           "ptAddress": "0x8382329da318db59c4e33706faac0a883740daea",
-          "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc"
+          "syAddress": "0x5fdbc1502e1a3742110730272c61a208758317bc",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -1530,7 +1539,7 @@
       "currencyId": "Wrapped eETH::weETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "etherfi" },
-        "risk": { "score": 2, "source": "issuer_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "oft": {
           "eid": 30390,
           "routes": [
@@ -1927,7 +1936,7 @@
             }
           ]
         },
-        "risk": { "score": 2, "source": "issuer_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" }
       }
     },
@@ -2456,11 +2465,7 @@
             }
           ]
         },
-        "risk": {
-          "score": 3,
-          "category": "YIELD_STABLE",
-          "source": "issuer_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
@@ -2975,7 +2980,11 @@
       "assetGroup": "Mento British Pound::GBPm",
       "currencyId": "Mento British Pound::GBPm",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -3513,7 +3522,7 @@
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -3705,7 +3714,7 @@
       "currencyId": "Mento Euro::EURm",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
