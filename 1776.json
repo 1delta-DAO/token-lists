@@ -17,15 +17,50 @@
         "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
+    "0x88f7f2b685f9692caf8c478f5badf09ee9b1cc13": {
+      "chainId": "1776",
+      "decimals": 6,
+      "name": "USDT",
+      "address": "0x88f7f2b685f9692caf8c478f5badf09ee9b1cc13",
+      "symbol": "USDT",
+      "logoURI": "https://tokens.debridge.finance/Logo/100000029/0x88f7f2b685f9692caf8c478f5badf09ee9b1cc13/small/token-logo.png",
+      "assetGroup": "USDT",
+      "currencyId": "USDT::USDT"
+    },
+    "0x2a25fbd67b3ae485e461fe55d9dbef302b7d3989": {
+      "chainId": "1776",
+      "decimals": 6,
+      "name": "USDC",
+      "address": "0x2a25fbd67b3ae485e461fe55d9dbef302b7d3989",
+      "symbol": "USDC",
+      "logoURI": "https://tokens.debridge.finance/Logo/100000029/0x2a25fbd67b3ae485e461fe55d9dbef302b7d3989/small/token-logo.svg",
+      "assetGroup": "USDC::USDC",
+      "currencyId": "USDC::USDC",
+      "props": { "denomination": "USDC" }
+    },
+    "0x0000000088827d2d103ee2d9a6b781773ae03ffb": {
+      "chainId": "1776",
+      "decimals": 18,
+      "name": "Wrapped INJ",
+      "address": "0x0000000088827d2d103ee2d9a6b781773ae03ffb",
+      "symbol": "wINJ",
+      "logoURI": "https://tokens.debridge.finance/Logo/100000029/0x0000000088827d2d103ee2d9a6b781773ae03ffb/small/token-logo.png",
+      "assetGroup": "Wrapped INJ::wINJ",
+      "currencyId": "Wrapped INJ::wINJ",
+      "props": {
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "wnative": true
+      }
+    },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1776",
-      "address": "0x0000000000000000000000000000000000000000",
-      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/inj.webp",
-      "currencyId": "Injective::INJ",
-      "name": "Injective",
-      "symbol": "INJ",
       "decimals": 18,
-      "assetGroup": "INJ",
+      "name": "Injective",
+      "address": "0x0000000000000000000000000000000000000000",
+      "symbol": "INJ",
+      "logoURI": "https://raw.githubusercontent.com/1delta-DAO/asset-icons/main/native/inj.webp",
+      "assetGroup": "Wrapped INJ::wINJ",
+      "currencyId": "Injective::INJ",
       "props": {
         "isNative": true,
         "wrapped": "0x0000000088827d2d103ee2d9a6b781773ae03ffb"
@@ -34,6 +69,7 @@
   },
   "mainTokens": [
     "0x0000000000000000000000000000000000000000",
-    "0xa00c59ff5a080d2b954d0c75e46e22a0c371235a"
+    "0xa00c59ff5a080d2b954d0c75e46e22a0c371235a",
+    "0x0000000088827d2d103ee2d9a6b781773ae03ffb"
   ]
 }

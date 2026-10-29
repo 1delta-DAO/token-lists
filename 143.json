@@ -2,6 +2,20 @@
   "chainId": "143",
   "version": "0",
   "list": {
+    "0x00bdd5d56353174f7831d721599107d0f2577bb9": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "apyUSD Monad",
+      "address": "0x00bdd5d56353174f7831d721599107d0f2577bb9",
+      "symbol": "SY-apyUSD",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/57c6e942-f35a-4be7-91f6-aaaa2da1c0cd.svg",
+      "assetGroup": "apyUSD Monad::SY-apyUSD",
+      "currencyId": "apyUSD Monad::SY-apyUSD",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x00e2a1a388fb871b0cbcc73e55b9b7dde8dc1518": {
       "chainId": "143",
       "decimals": 6,
@@ -338,6 +352,29 @@
           "syAddress": "0xeb9bfd1c1acfef4f9b4c4630dc1f373631073ef0"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x515006ec8f83ae9262ddf0eccb1128415a0bb3cb": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "YT apyUSD (apxUSD) Monad",
+      "address": "0x515006ec8f83ae9262ddf0eccb1128415a0bb3cb",
+      "symbol": "YT-apyUSD-24DEC2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1545f140-ab8e-4a6d-ac1d-ba6d348d3ec2.svg",
+      "assetGroup": "YT apyUSD (apxUSD) Monad::YT-apyUSD-24DEC2026",
+      "currencyId": "YT apyUSD (apxUSD) Monad::YT-apyUSD-24DEC2026",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1798070400,
+          "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+          "ptAddress": "0xd828d6738e2455c0f1744f4aab1d681b8a18929e",
+          "syAddress": "0x00bdd5d56353174f7831d721599107d0f2577bb9"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5aff25c86c7cb739e554be8904b32047738b7440": {
@@ -889,6 +926,29 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0xd828d6738e2455c0f1744f4aab1d681b8a18929e": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "PT apyUSD (apxUSD) Monad",
+      "address": "0xd828d6738e2455c0f1744f4aab1d681b8a18929e",
+      "symbol": "PT-apyUSD-24DEC2026",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/00fd8af5-c5de-4d03-8112-b231c7fc4cc1.svg",
+      "assetGroup": "PT apyUSD (apxUSD) Monad::PT-apyUSD-24DEC2026",
+      "currencyId": "PT apyUSD (apxUSD) Monad::PT-apyUSD-24DEC2026",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1798070400,
+          "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+          "ytAddress": "0x515006ec8f83ae9262ddf0eccb1128415a0bb3cb",
+          "syAddress": "0x00bdd5d56353174f7831d721599107d0f2577bb9"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
         ]
       }
     },

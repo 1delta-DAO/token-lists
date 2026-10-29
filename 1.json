@@ -1086,7 +1086,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39",
           "ytAddress": "0x1964590af52cd77c2f30970bdbcb4d6e3dbdc615",
-          "syAddress": "0x13945b761b2ed3219a497a46d15a8923f418d2ab"
+          "syAddress": "0x13945b761b2ed3219a497a46d15a8923f418d2ab",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -3679,7 +3680,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x7743e50f534a7f9f1791dde7dcd89f7783eefc39",
           "ptAddress": "0x079c3469143804af5d0d645a878c371dbe8d038e",
-          "syAddress": "0x13945b761b2ed3219a497a46d15a8923f418d2ab"
+          "syAddress": "0x13945b761b2ed3219a497a46d15a8923f418d2ab",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -11381,7 +11383,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x9b44efca3e2a707b63dc00ce79d646e5e5d24ba5",
           "ytAddress": "0x89c7d1cdb6b2a5c09f25de59fd4bee47921bbf4d",
-          "syAddress": "0x0e012d6a77a7f6c91de7cb74c2732553876d1d61"
+          "syAddress": "0x0e012d6a77a7f6c91de7cb74c2732553876d1d61",
+          "expired": true
         },
         "risk": {
           "score": 3,
@@ -12398,7 +12401,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x697c54a84d83f37380d034e2bfc6f7ce8d89f4ee",
           "ptAddress": "0xdc5c65c0ca7948fb3013f5ab9435bba02a2ac4e8",
-          "syAddress": "0xb4433d1bf3084e4e8ee1cf24ae2c580e6c45ebee"
+          "syAddress": "0xb4433d1bf3084e4e8ee1cf24ae2c580e6c45ebee",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -18260,7 +18264,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x29bcfed246ce37319d94eba107db90c453d4c43d",
           "ptAddress": "0xcc8ca5c2a0862a37ee3946b80e12ebb2bfb524f0",
-          "syAddress": "0x3870cf5e2eab623a74d2af1007295963b1c5a12f"
+          "syAddress": "0x3870cf5e2eab623a74d2af1007295963b1c5a12f",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -21364,7 +21369,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x9b44efca3e2a707b63dc00ce79d646e5e5d24ba5",
           "ptAddress": "0x45c00ec1a2797b507d3e955b208fb275795da669",
-          "syAddress": "0x0e012d6a77a7f6c91de7cb74c2732553876d1d61"
+          "syAddress": "0x0e012d6a77a7f6c91de7cb74c2732553876d1d61",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -32036,7 +32042,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x29bcfed246ce37319d94eba107db90c453d4c43d",
           "ytAddress": "0x729c3798d061eb9fbd88f1348aa73a244ec166e9",
-          "syAddress": "0x3870cf5e2eab623a74d2af1007295963b1c5a12f"
+          "syAddress": "0x3870cf5e2eab623a74d2af1007295963b1c5a12f",
+          "expired": true
         },
         "risk": {
           "score": 3,
@@ -34474,7 +34481,8 @@
           "expiry": 1793232000,
           "underlyingAsset": "0x697c54a84d83f37380d034e2bfc6f7ce8d89f4ee",
           "ytAddress": "0x4c9f973bea8f5a06240200deb2dd69e4bc380b46",
-          "syAddress": "0xb4433d1bf3084e4e8ee1cf24ae2c580e6c45ebee"
+          "syAddress": "0xb4433d1bf3084e4e8ee1cf24ae2c580e6c45ebee",
+          "expired": true
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -190727,7 +190735,8 @@
       "currencyId": "crvUSD-2 yVault::yvcrvUSD-2",
       "props": {
         "risk": { "score": 2, "source": "vault_inherit" },
-        "savings": { "underlying": "crvUSD", "base": "USD" }
+        "savings": { "underlying": "crvUSD", "base": "USD" },
+        "issuer": { "id": "curve", "name": "Curve", "kind": "protocol" }
       }
     },
     "0xac37729b76db6438ce62042ae1270ee574ca7571": {
@@ -191185,6 +191194,60 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102175632/thumb/imresizer-resize-Gen_Token_x512.jpg?1791350001",
       "assetGroup": "GenLayer::GEN",
       "currencyId": "GenLayer::GEN"
+    },
+    "0x49a6f6aeab68ea001beaa4815186eb22fbdccf2a": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "CAD Coin",
+      "address": "0x49a6f6aeab68ea001beaa4815186eb22fbdccf2a",
+      "symbol": "CADC",
+      "logoURI": "https://assets.coingecko.com/coins/images/14149/thumb/CADC_FINAL_PNG.png?1768979043",
+      "assetGroup": "CAD Coin::CADC::1::0",
+      "currencyId": "CAD Coin::CADC",
+      "props": {
+        "stablecoin": { "base": "CAD" },
+        "issuer": { "id": "paytrie", "name": "PayTrie", "kind": "institution" }
+      }
+    },
+    "0x6d34013052c8fe696805dde682ae8086be5655cc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Super Inu",
+      "address": "0x6d34013052c8fe696805dde682ae8086be5655cc",
+      "symbol": "SI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179869/thumb/logo.png?1793260809",
+      "assetGroup": "Super Inu::SI",
+      "currencyId": "Super Inu::SI"
+    },
+    "0x76a63d835622dafa832ddd8e3d34a9ead01de133": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Janus Henderson NASDAQ-100 Index Fund",
+      "address": "0x76a63d835622dafa832ddd8e3d34a9ead01de133",
+      "symbol": "JQQQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179866/thumb/JQQQ-200.png?1793259664",
+      "assetGroup": "Janus Henderson NASDAQ-100 Index Fund::JQQQ",
+      "currencyId": "Janus Henderson NASDAQ-100 Index Fund::JQQQ"
+    },
+    "0x9bf2b2f57a2968a0e81546ed50cbbbb7c9d6e05e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "swanUSD",
+      "address": "0x9bf2b2f57a2968a0e81546ed50cbbbb7c9d6e05e",
+      "symbol": "SWANUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179867/thumb/swanUSD-128.png?1793260456",
+      "assetGroup": "swanUSD::SWANUSD",
+      "currencyId": "swanUSD::SWANUSD"
+    },
+    "0xccc53048502f788eba33b6488fee40041cc5ada9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SELF Token",
+      "address": "0xccc53048502f788eba33b6488fee40041cc5ada9",
+      "symbol": "SELF",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179855/thumb/SELF-Black-On-White.jpg?1793258097",
+      "assetGroup": "SELF Token::SELF",
+      "currencyId": "SELF Token::SELF"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

@@ -50,6 +50,15 @@ interface TokenListFile {
 
 const listPath = (chainId: string) => path.join(repoRoot, `${chainId}.json`)
 
+/**
+ * Whole-chain budget for one `multicallRetryUniversal` run. The library's
+ * default (15s) is too tight for slow chains like Pharos (1672): the endpoint
+ * ladder wants ~4s per hop and up to 5 retries / 6 skips, so it never gets to
+ * its fallback RPCs before `MulticallDeadlineError` fires. Raising the ceiling
+ * lets the failover actually happen before we give up on the chain.
+ */
+const MULTICALL_BUDGET_MS = 60_000
+
 async function verifyChain(chainId: string): Promise<void> {
   const p = listPath(chainId)
   if (!fs.existsSync(p)) {
@@ -61,14 +70,26 @@ async function verifyChain(chainId: string): Promise<void> {
   if (addrs.length === 0) return
 
   console.log(`\nChain ${chainId}: verifying decimals for ${addrs.length} tokens...`)
-  const results = (await multicallRetryUniversal({
-    chain: chainId,
-    calls: addrs.map((address) => ({ address, name: 'decimals', args: [] })),
-    abi: ERC20ABI,
-    batchSize: 40,
-    allowFailure: true,
-    logErrors: false,
-  })) as any[]
+  let results: unknown[]
+  try {
+    results = (await multicallRetryUniversal({
+      chain: chainId,
+      calls: addrs.map((address) => ({ address, name: 'decimals', args: [] })),
+      abi: ERC20ABI,
+      batchSize: 40,
+      allowFailure: true,
+      logErrors: false,
+      maxTotalMs: MULTICALL_BUDGET_MS,
+    })) as unknown[]
+  } catch (e) {
+    // Deadline / transport failure: the chain answered nothing usable in time.
+    // This pass is corrective, not load-bearing — leave every entry exactly as
+    // it is and move on instead of failing the whole pipeline.
+    console.warn(
+      `Chain ${chainId}: decimals pass skipped (left untouched): ${e instanceof Error ? e.message : String(e)}`,
+    )
+    return
+  }
 
   const fixed: string[] = []
   const unreadable: string[] = []

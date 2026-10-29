@@ -519,24 +519,14 @@ const COINGECKO_LISTS = [
   wait: 1000,
 }))
 
-const DEBRIDGE_CID: any = {
+const DEBRIDGE_CID: Record<number, number | string> = {
   7565164: 'solana',
-  100000001: 245022934,
-  100000004: 1088,
-  100000006: 4158,
-  100000008: 32769,
-  100000009: 747,
-  100000010: 388,
-  100000013: 1514,
-  100000014: 146,
-  100000015: 48900,
-  100000017: 2741,
-  100000020: 80094,
-  100000021: 60808,
-  100000022: 999,
-  100000023: 5000,
-  100000024: 98866,
-  100000025: 50104,
+  100000013: 1514, // Story
+  100000019: 25, // Cronos
+  100000022: 999, // Hyperliquid
+  100000029: 1776, // Injective
+  100000030: 143, // Monad
+  100000031: 4326, // MegaETH
 }
 
 const DEBRIDGE_LSITS = [
@@ -544,28 +534,19 @@ const DEBRIDGE_LSITS = [
   10,
   56,
   137,
-  250,
+  4663, // Robinhood
+  5042, // Arc
   8453,
   42161,
   43114,
   59144,
   7565164, // solana
-  100000001,
-  100000004,
-  100000006,
-  100000008,
-  100000009,
-  100000010,
-  100000013,
-  100000014,
-  100000015,
-  100000017,
-  100000020,
-  100000021,
-  100000022,
-  100000023,
-  100000024,
-  100000025,
+  100000013, // Story
+  100000019, // Cronos
+  100000022, // Hyperliquid
+  100000029, // Injective
+  100000030, // Monad
+  100000031, // MegaETH
 ].map((a) => ({
   url: `https://dln.debridge.finance/v1.0/token-list?chainId=${a}`,
   access: 'tokens',
@@ -573,7 +554,7 @@ const DEBRIDGE_LSITS = [
   tag: 'debridge',
   // same as for open ocean
   wait: 1000,
-  mutateEntry: (x) => [{ ...x, chainId: DEBRIDGE_CID[a] ?? a, tags: [] }],
+  mutateEntry: (x: Record<string, unknown>) => [{ ...x, chainId: DEBRIDGE_CID[a] ?? a, tags: [] }],
 }))
 
 const listDirs = [
