@@ -1,4 +1,5 @@
 import { IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
+import { exponentTrancheGroups } from '../solana/exponentTranching'
 import { RWA_MANUAL } from '../rwa/rwaAssets'
 
 /**
@@ -926,13 +927,16 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Hastra PRIME::PRIME': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
   'Hastra AUTO::AUTO': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
   'Hastra wYLDS::wYLDS': { id: 'hastra', name: 'Hastra', kind: 'protocol' },
-  // Exponent's senior tranching LPs (Solana): Exponent's own instrument over
+  // Exponent's tranching LPs (Solana), both sides of every market in the
+  // roster (solana/exponentTranching.ts): Exponent's own instrument over
   // another desk's asset — the PT / YT rule, but these carry no `exponent`
   // family prop for the wrapper walk to read.
-  'Exponent Senior eHYUSD::srEHYUSD::solana': { id: 'exponent', name: 'Exponent', kind: 'protocol' },
-  'Exponent Senior AUTO::srAUTO::solana': { id: 'exponent', name: 'Exponent', kind: 'protocol' },
-  'Exponent Senior ONyc::srONyc::solana': { id: 'exponent', name: 'Exponent', kind: 'protocol' },
-  'Exponent Senior nOPAL::srnOPAL::solana': { id: 'exponent', name: 'Exponent', kind: 'protocol' },
+  ...Object.fromEntries(
+    [...exponentTrancheGroups().keys()].map((group) => [
+      group,
+      { id: 'exponent', name: 'Exponent', kind: 'protocol' } as const,
+    ]),
+  ),
   // Wormhole Portal DAI (EjmyN6qE…) — a bridged copy over a live bridge is
   // still the desk's dollar, cf. `USDC::USDC(Wormhole)` above.
   'DAI (Portal)::DAI::solana': { id: 'sky', name: 'Sky', kind: 'protocol' },

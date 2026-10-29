@@ -9,6 +9,7 @@ import { classifySolanaToken } from './solanaClassify'
 import { lookupOft } from '../oft/oftMap'
 import { lookupNestIdentity, nestGroupOf } from '../rwa/nestIdentity'
 import { applyLogoOverrides } from '../logos/logoOverrides'
+import { readExponentTranches, refreshExponentTranches, type ExponentTranche } from './exponentTranching'
 
 /**
  * Generates `solana.json`, the chain list for `Chain.SOLANA = 'solana'`.
@@ -238,24 +239,13 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   SAVEDpx3nFNdzG3ymJfShYnrBuYy7LtQEABZQ3qtTFt:
     'Save main market reserve "Save Staked SOL (saveSOL)"; icon on save-assets',
   sctmpFDKXZPEfTCEgDHqwxepmorCpYA5Q2CrYUytGDU: 'Save main market reserve "Save Staked SOL"; icon on save-assets',
-  // Exponent's senior tranche of Hastra AUTO — not in Exponent's /tokens yet
-  // (no PT vault), but its mint authority is a PDA of Exponent's tranching
-  // program (XPTrnch…), the same owner as srONyc's.
-  F17tzaQaFf1x3tC5gQFVvXAF2hcgq1qX6Mc9595zo3FD:
-    'Loopscale "srAUTO / USDC" loop collateral (srAUTO, Exponent Senior AUTO); mint authority owned by Exponent tranching',
   // The rest of Loopscale's pairs (`/markets/lending_vaults/info` assetTerms ∪
   // `/markets/loop/info`, 2026-10-05) whose mint the list did not carry: the
   // converter then names the leg `F17t…o3FD`. The 35 0-decimal, supply-1
   // collateral mints (NFTs, 32 of them on the `dawn…` principal) are out of
-  // scope. Exponent's senior tranches: mint authority a
-  // PDA of Exponent's tranching program (XPTrnch…), metadata on
-  // `api.exponent.finance/tranching-token/<mint>`.
-  '9J8VvigcjFTkN3jhZH2ieTi2hdGVBVpEXbcA1JDo7QpA':
-    'Loopscale "srONyc / USDC" + "srONyc / USDG" loop collateral; Exponent /tokens + /sy-tokens (wsrONyc underlying)',
-  FvQP1fjox2GPSwkEhENuZisz8UeRURLWf7GYF9n2mURD:
-    'Loopscale "srEHYUSD / USDC" loop collateral; Exponent /tokens + /sy-tokens (wsrEHYUSD underlying)',
-  '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5':
-    'Loopscale "srnOPAL / USDC" loop collateral; Exponent tranching-token metadata — NOT Strata\'s EVM srNOPAL',
+  // scope. Exponent's tranching LPs (srEHYUSD / jrEHYUSD …) are NOT listed
+  // here: every side of every market comes from Exponent's roster
+  // (exponentTranching.ts), checked against Jupiter's `mintAuthority`.
   E1ovyHMqfSQxEofRP2T1pP5iZ2obug92WBvar1KKQKn8:
     'Loopscale "PT-sUSDai-25FEB27 / USDG" loop collateral; api.exponent.finance/pt-token metadata (vault absent from /vaults)',
   // Loopscale's own vault shares: the `lpMint` of its curated vaults.
@@ -305,16 +295,13 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
 
 /**
  * Name / symbol for an extra mint whose Jupiter answer is unusable, beating it.
- * Jupiter answers the Exponent senior tranches and sUSD.tel BLANK (they would
+ * Jupiter answers sUSD.tel (and every Exponent tranche — exponentTranching.ts) BLANK (they would
  * publish with `symbol: ""`), and the PT with its bare on-chain `PT-sUSDai`,
  * which every later maturity would share. Taken from the issuer's metadata,
  * never invented; the PT gets Exponent's `<ticker>-<DDMONYY>` symbol, the
  * spelling `exponentApi.ts` gives every other PT.
  */
 const SOLANA_IDENTITY: { [mint: string]: { name: string; symbol: string } } = {
-  '9J8VvigcjFTkN3jhZH2ieTi2hdGVBVpEXbcA1JDo7QpA': { name: 'Exponent Senior ONyc', symbol: 'srONyc' },
-  FvQP1fjox2GPSwkEhENuZisz8UeRURLWf7GYF9n2mURD: { name: 'Exponent Senior eHYUSD', symbol: 'srEHYUSD' },
-  '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5': { name: 'Exponent Senior nOPAL', symbol: 'srnOPAL' },
   G4L8PeENzfepB3jBpDKJ5McnHbXA7nh8gQQsZJQptVM7: { name: 'sUSD.tel', symbol: 'sUSD.tel' },
   E1ovyHMqfSQxEofRP2T1pP5iZ2obug92WBvar1KKQKn8: { name: 'Exponent PT-sUSDai-25FEB27', symbol: 'PT-sUSDai-25FEB27' },
   // Jupiter-VERIFIED but nameless (`name: ""`): the names Hastra publishes on
@@ -334,11 +321,6 @@ const SOLANA_IDENTITY: { [mint: string]: { name: string; symbol: string } } = {
 const SOLANA_LOGOS: { [mint: string]: string } = {
   BKHcMUx4XXy3JA4tk9BXM8f6huFLESFtvq9tj9PDiVzf: 'https://assets.plume.org/images/logos/nest/nCLOA/nCLOA-token.svg',
   '14BM5Nvq2kuJPn4vFNqiPM3XSBzVaqEjZrDT7ZYLS2nB': 'https://assets.plume.org/images/logos/nest/nLCRD/nLCRD-token.svg',
-  // Exponent senior tranches: the `image` of api.exponent.finance/tranching-token/<mint>.
-  F17tzaQaFf1x3tC5gQFVvXAF2hcgq1qX6Mc9595zo3FD: 'https://cdn.exponent.finance/senior-tokens/srAUTO.svg',
-  '9J8VvigcjFTkN3jhZH2ieTi2hdGVBVpEXbcA1JDo7QpA': 'https://cdn.exponent.finance/senior-tokens/srONyc.svg',
-  FvQP1fjox2GPSwkEhENuZisz8UeRURLWf7GYF9n2mURD: 'https://cdn.exponent.finance/senior-tokens/srEHYUSD.svg',
-  '4tnzVYkaXKwMt7p86wpDzeTyzHSZhj2BvdGwBem7peH5': 'https://cdn.exponent.finance/senior-tokens/srnOPAL.svg',
   // The `image` of metadata.securitize.io/hinc.json.
   EuTtCw35R3BJnTmXCREctjCU9XTkZXsQjqnoNg7NwdnZ: 'https://metadata.securitize.io/hinc_logo.png',
   // The `logoUrl` of each vault in app.upshift.finance/api/proxy/vaults.
@@ -358,6 +340,8 @@ interface JupToken {
   liquidity?: number
   tokenProgram?: string
   isVerified?: boolean
+  /** The mint authority — an Exponent tranche LP's is its market. */
+  mintAuthority?: string
   /** Jupiter's curation tags: `verified`, `lst`, `stable`, `yb`, `rwa`, `xstocks`, `ondo`, … */
   tags?: string[]
 }
@@ -458,7 +442,18 @@ async function main() {
   const keptIds = new Set(kept.map((t) => t.id))
   const extrasMissing: string[] = []
   let extrasAdded = 0
-  for (const mint of Object.keys(SOLANA_EXTRA_MINTS)) {
+  // Exponent's tranching roster, live — the last snapshot when it does not
+  // answer, so a roster outage never drops the tranches already listed
+  const tranches: ExponentTranche[] = await refreshExponentTranches().catch((e: Error) => {
+    console.warn(`[solana] Exponent tranching roster unavailable (${e.message}) — using the snapshot`)
+    return readExponentTranches()
+  })
+  const trancheByMint = new Map(tranches.map((t) => [t.mint, t]))
+  for (const t of tranches) {
+    SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
+    if (t.image) SOLANA_LOGOS[t.mint] ??= t.image
+  }
+  for (const mint of [...Object.keys(SOLANA_EXTRA_MINTS), ...trancheByMint.keys()]) {
     if (keptIds.has(mint)) continue
     // Retried with backoff: the search rate-limits a burst of ~30 lookups, and a swallowed 429
     // used to drop every listed mint past the fourth from the list (2026-10-23, 30 of 34).
@@ -473,7 +468,9 @@ async function main() {
       }
     }
     const hit = answer.find((t) => t.id === mint)
-    if (!hit) {
+    // a tranche LP is minted by its market: anything else is not the roster's mint
+    const tranche = trancheByMint.get(mint)
+    if (!hit || (tranche && hit.mintAuthority !== tranche.market)) {
       extrasMissing.push(mint)
       continue
     }

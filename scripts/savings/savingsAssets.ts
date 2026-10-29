@@ -1,4 +1,5 @@
 import { SavingsGroupMap } from '../utils/types'
+import { exponentTrancheGroups } from '../solana/exponentTranching'
 
 /**
  * Curated, authoritative savings-token allowlist, keyed by `assetGroup`.
@@ -348,15 +349,16 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // `savingsFromTags` cannot read a money off "eUSX", so it shipped as `savings: {}`.
   'eUSX::eUSX::solana': { underlying: 'USX', base: 'USD' },
 
-  // --- Exponent senior tranches (Solana) — the senior LP of an Exponent
-  // tranching market: a protected share of the base asset's yield, paid as a
-  // rising LP price in the market's dollar quote (hyUSD / USD); the junior
-  // takes the first loss. Loopscale loops them against USDC / USDG, which
-  // without `base` read as a price bet. `underlying` is the base asset. ---
-  'Exponent Senior eHYUSD::srEHYUSD::solana': { underlying: 'eHYUSD', base: 'USD' },
-  'Exponent Senior AUTO::srAUTO::solana': { underlying: 'AUTO', base: 'USD' },
-  'Exponent Senior ONyc::srONyc::solana': { underlying: 'ONyc', base: 'USD' },
-  'Exponent Senior nOPAL::srnOPAL::solana': { underlying: 'nOPAL', base: 'USD' },
+  // --- Exponent tranching LPs (Solana) — BOTH sides of EVERY market in
+  // Exponent's roster (solana/exponentTranching.ts → its snapshot), no line
+  // per group: a market's base asset's yield is split between a protected
+  // senior and a first-loss junior, each paid as a rising LP price in the
+  // market's dollar quote (hyUSD / USD). Loopscale loops the seniors against
+  // USDC / USDG, which without `base` read as a price bet. `underlying` is the
+  // base asset. ---
+  ...Object.fromEntries(
+    [...exponentTrancheGroups()].map(([group, t]) => [group, { underlying: t.baseSymbol, base: 'USD' }]),
+  ),
 
   // --- 2026-10-16 earn integrations (lending-sdks registryEthStablesA / EthSavingsB /
   // EthStructuredC / L2sD / Jarvis). Each is a margin-fetcher savings row; the keys are the
