@@ -135,6 +135,13 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // to join it to, so it fell through to the `::solana` scope reserved for
   // name-squatting copies; the issuer and savings rows key this group.
   '5Y8NV33Vv7WbnLfq3zBcKSdYPrk7g2KoiQoe7M2tcxp5': 'OnRe Tokenized Reinsurance::ONyc',
+  // Solv's BTC+ on Solana: same freeze authority (`4cPFyaxc…`) as Solv's
+  // Jupiter-verified SolvBTC mint, a 1-of-2 mint multisig holding an account of
+  // Solv's program `soLv1S6G…` (as SolvBTC's does), Metaplex metadata in
+  // github.com/solv-finance/solv-btc-metadata-solana. The Ethereum vault
+  // (`0xcea2daf9…`, the LST row and the BTC+ yield key) carries this group;
+  // CoinGecko lists no Solana platform for it.
+  soLvpPEDkN8D1Wgjezrb1oj4WjGtj17vynGm6t3jah6: 'SOLVBTCPLUS',
   // Hastra (Figure / Provenance): the Solana mints of the products Ethereum
   // (and Tempo) list as `Hastra wYLDS` / `Hastra PRIME` / `Hastra AUTO` —
   // the mint addresses are the ones Hastra's own PoR feed publishes per chain
@@ -290,6 +297,8 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
     'Upshift "Gamma Research USDC Vault" share (upGammaUSD); mint published by app.upshift.finance, authority = its august_vault VaultState',
   CnhPtD2gHHrUvfuA6HrDdLQBKjGgVL8HZMJNCZdXuWEs:
     'Upshift "Y10k GMTrade MetaVault" share (y10kGMV); mint published by app.upshift.finance, authority = its august_vault VaultState',
+  soLvpPEDkN8D1Wgjezrb1oj4WjGtj17vynGm6t3jah6:
+    'Solv BTC+ (8-dec SPL Token, 0.215 supply on 2026-10-29, no DEX pool); freeze authority + soLv1S6G… mint-multisig member shared with Solv SolvBTC, metadata in solv-finance/solv-btc-metadata-solana',
   i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc:
     'Ondo OUSG — CoinGecko `ousg` platforms list this mint beside Ethereum / Polygon; Jupiter answers it unverified ("Ondo Short-Term US Gov Bond Fund")',
 }
