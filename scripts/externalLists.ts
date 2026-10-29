@@ -750,11 +750,19 @@ export const LST_LIST: ArbitraryTokenList = {
   access: 'direct',
 }
 
+// Chainlink CCIP copies of assets we list (ccip/ccip.ts) — named "Bridged … (CCIP)", grouped
+// with the home asset by ccip-groups.json. Ahead of the 1delta lists so the name is its own.
+export const CCIP_LIST: ArbitraryTokenList = {
+  url: 'file://' + path.resolve(__dirname, 'ccip/ccip.json'),
+  access: 'direct',
+}
+
 export const ALL_LISTS: ArbitraryTokenList[] = [
   PENDLE_LIST,
   SPECTRA_LIST,
   RWA_LIST,
   LST_LIST,
+  CCIP_LIST,
   ...ONE_DELTA_LISTS,
   ...ONE_DELTA_LISTS_OTHER,
   ...ONE_DELTA_LISTS_LENDING,

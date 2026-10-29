@@ -19,7 +19,7 @@
 
 - [Asset groups](docs/asset-groups.md): how deployments are joined into one asset across chains, and how to fix a split.
 - [Token row and `props` reference](docs/token-props.md): every field on a row and what it means.
-- Subsystems: [issuer](scripts/issuer/README.md) · [OFT mesh](scripts/oft/README.md) · [asset notes](scripts/notes/README.md) · [on-chain fetch](scripts/onchain-fetch/README.md)
+- Subsystems: [issuer](scripts/issuer/README.md) · [OFT mesh](scripts/oft/README.md) · [CCIP copies](scripts/ccip/ccip.ts) · [asset notes](scripts/notes/README.md) · [on-chain fetch](scripts/onchain-fetch/README.md)
 
 ## Regenerating
 

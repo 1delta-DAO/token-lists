@@ -46,9 +46,10 @@ async function getJson<T>(url: string): Promise<T> {
 
 /** The live roster; a market whose LP metadata does not answer is skipped and reported, never named by guess. */
 export async function refreshExponentTranches(): Promise<ExponentTranche[]> {
-  const markets = await getJson<
-    { address: string; mintLpSenior?: string; mintLpJunior?: string; mintBase?: string; baseTokenSymbol?: string }[]
-  >(ROSTER)
+  const markets =
+    await getJson<
+      { address: string; mintLpSenior?: string; mintLpJunior?: string; mintBase?: string; baseTokenSymbol?: string }[]
+    >(ROSTER)
   const out: ExponentTranche[] = []
   for (const m of Array.isArray(markets) ? markets : []) {
     if (!m.address || !m.mintBase || !m.baseTokenSymbol) continue
@@ -76,8 +77,7 @@ export async function refreshExponentTranches(): Promise<ExponentTranche[]> {
       })
     }
   }
-  if (out.length)
-    fs.writeFileSync(EXPONENT_TRANCHING_SNAPSHOT, JSON.stringify(out, null, 2) + '\n')
+  if (out.length) fs.writeFileSync(EXPONENT_TRANCHING_SNAPSHOT, JSON.stringify(out, null, 2) + '\n')
   return out
 }
 
@@ -95,8 +95,7 @@ export function readExponentTranches(): ExponentTranche[] {
  * the scoped form solana.ts gives an unmatched mint — the key margin-fetcher's
  * `exponentTrancheFetcher` derives from the same metadata.
  */
-export const exponentTrancheGroup = (t: Pick<ExponentTranche, 'name' | 'symbol'>) =>
-  `${t.name}::${t.symbol}::solana`
+export const exponentTrancheGroup = (t: Pick<ExponentTranche, 'name' | 'symbol'>) => `${t.name}::${t.symbol}::solana`
 
 /** group → tranche, from the snapshot. */
 export function exponentTrancheGroups(): Map<string, ExponentTranche> {

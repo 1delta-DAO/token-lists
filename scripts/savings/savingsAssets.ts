@@ -1,5 +1,7 @@
 import { SavingsGroupMap } from '../utils/types'
 import { exponentTrancheGroups } from '../solana/exponentTranching'
+import { REFLECT_TRANCHE_TOKENS, reflectTrancheGroup } from '../solana/reflectTranches'
+import { PERENA_SHARE_TOKENS, perenaShareGroup } from '../solana/perenaShares'
 
 /**
  * Curated, authoritative savings-token allowlist, keyed by `assetGroup`.
@@ -358,6 +360,21 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // base asset. ---
   ...Object.fromEntries(
     [...exponentTrancheGroups()].map(([group, t]) => [group, { underlying: t.baseSymbol, base: 'USD' }]),
+  ),
+
+  // --- Reflect tranches (Solana, solana/reflectTranches.ts): a senior wrapper
+  // and a first-loss junior pool over one yield-bearing dollar per market,
+  // plus SUSDG (Reflect's tokenised Steakhouse USDG Kamino vault share). ---
+  ...Object.fromEntries(
+    REFLECT_TRANCHE_TOKENS.map((t) => [reflectTrancheGroup(t), { underlying: t.baseSymbol, base: 'USD' }]),
+  ),
+
+  // --- Perena (Solana, solana/perenaShares.ts): USD* and its junior / senior
+  // tranches, and Forest Road's sUSD-FR — USDC in, the vault's NAV accrues to
+  // the share, every exit pays USDC. Operator-run credit and quant venues
+  // behind a consensus NAV, the sUSDfr caveat below; the risk is in risk-data. ---
+  ...Object.fromEntries(
+    PERENA_SHARE_TOKENS.map((t) => [perenaShareGroup(t), { underlying: 'USDC', base: 'USD' }]),
   ),
 
   // --- 2026-10-16 earn integrations (lending-sdks registryEthStablesA / EthSavingsB /

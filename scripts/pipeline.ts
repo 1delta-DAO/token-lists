@@ -20,7 +20,7 @@ import { spawn } from 'child_process'
 type Step = { script: string; env?: Record<string, string> }
 
 const PHASES: Step[][] = [
-  ['fetch:lists', 'pendle', 'spectra', 'rwa', 'lst', 'risk', 'stablecoin', 'savings', 'oft'].map((script) => ({
+  ['fetch:lists', 'pendle', 'spectra', 'rwa', 'lst', 'risk', 'stablecoin', 'savings', 'oft', 'ccip'].map((script) => ({
     script,
   })),
   [{ script: 'issuer' }],

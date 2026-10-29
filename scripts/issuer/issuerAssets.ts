@@ -1,5 +1,7 @@
 import { IssuerExposureGroupMap, IssuerGroupMap, IssuerProps } from '../utils/types'
 import { exponentTrancheGroups } from '../solana/exponentTranching'
+import { REFLECT_TRANCHE_TOKENS, reflectTrancheGroup } from '../solana/reflectTranches'
+import { KESTREL_TOKENS, PERENA_SHARE_TOKENS, perenaShareGroup } from '../solana/perenaShares'
 import { RWA_MANUAL } from '../rwa/rwaAssets'
 
 /**
@@ -935,6 +937,27 @@ export const ISSUER_CURATED: IssuerGroupMap = {
     [...exponentTrancheGroups().keys()].map((group) => [
       group,
       { id: 'exponent', name: 'Exponent', kind: 'protocol' } as const,
+    ]),
+  ),
+  // Reflect's tranches and its SUSDG wrapper (Solana, solana/reflectTranches.ts):
+  // Reflect's instruments over another desk's asset.
+  ...Object.fromEntries(
+    REFLECT_TRANCHE_TOKENS.map((t) => [
+      reflectTrancheGroup(t),
+      { id: 'reflect', name: 'Reflect', kind: 'protocol' } as const,
+    ]),
+  ),
+  // Perena's vault shares (Solana, solana/perenaShares.ts) — sUSD-FR is Forest
+  // Road's vault, but it is issued by Perena's program and curated there
+  ...Object.fromEntries(
+    KESTREL_TOKENS.map((t) => [perenaShareGroup(t), { id: 'perena', name: 'Perena', kind: 'protocol' } as const]),
+  ),
+  ...Object.fromEntries(
+    PERENA_SHARE_TOKENS.map((t) => [
+      perenaShareGroup(t),
+      t.symbol === 'SUSD-FR'
+        ? ({ id: 'forest-road', name: 'Forest Road', kind: 'protocol' } as const)
+        : ({ id: 'perena', name: 'Perena', kind: 'protocol' } as const),
     ]),
   ),
   // Wormhole Portal DAI (EjmyN6qE…) — a bridged copy over a live bridge is

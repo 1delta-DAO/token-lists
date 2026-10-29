@@ -24,6 +24,7 @@ import { lookupRisk } from './risk/riskMap'
 import { lookupRetired } from './retired/retired'
 import { lookupOft } from './oft/oftMap'
 import { lookupMeshGroup } from './oft/meshMap'
+import { lookupCcipGroup } from './ccip/ccipGroupMap'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
 import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
@@ -338,6 +339,10 @@ async function readTokenLists(): Promise<{
                     // wins over the 1delta list's stored group, which is last run's output.
                     const meshGroup = lookupMeshGroup(chainId, lcAddress)
                     if (meshGroup) assetGroup = meshGroup
+                    // Chainlink CCIP copy (ccip/ccip.ts): the home asset's group, set here for the
+                    // same reason as the mesh group — it must carry that asset's overlays.
+                    const ccipGroup = lookupCcipGroup(chainId, lcAddress)
+                    if (ccipGroup) assetGroup = ccipGroup
                     // A per-deployment override (ADDRESS_GROUP_OVERRIDE) is also applied HERE, before
                     // the group-keyed overlays, so the deployment carries the savings / issuer /
                     // stablecoin labels of its FINAL group — not of the group it was filed under (a
@@ -493,6 +498,7 @@ async function readTokenLists(): Promise<{
                     if (
                       !is1delta &&
                       !meshGroup && // the peer links already proved it is this asset
+                      !ccipGroup && // a CCIP copy shares the canonical copy's group by design
                       NATIVE_ERC20[chainId] !== lcAddress && // the gas coin's own ERC-20 view: the SAME balance as the zero address in this group (Stable USDT0, Arc USDC)
                       !tags.includes('bridged') && // asset is bridged
                       !GROUP_HARD_SETTER[chainId]?.[assetGroup]?.includes(lcAddress) && // not force-included

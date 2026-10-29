@@ -10,6 +10,8 @@ import { lookupOft } from '../oft/oftMap'
 import { lookupNestIdentity, nestGroupOf } from '../rwa/nestIdentity'
 import { applyLogoOverrides } from '../logos/logoOverrides'
 import { readExponentTranches, refreshExponentTranches, type ExponentTranche } from './exponentTranching'
+import { REFLECT_TRANCHE_TOKENS } from './reflectTranches'
+import { KESTREL_TOKENS, PERENA_SHARE_TOKENS } from './perenaShares'
 
 /**
  * Generates `solana.json`, the chain list for `Chain.SOLANA = 'solana'`.
@@ -453,7 +455,14 @@ async function main() {
     SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
     if (t.image) SOLANA_LOGOS[t.mint] ??= t.image
   }
-  for (const mint of [...Object.keys(SOLANA_EXTRA_MINTS), ...trancheByMint.keys()]) {
+  // Reflect's tranches (reflectTranches.ts): pinned, unverified, and SUSDG
+  // answers nameless — the roster's identity beats Jupiter's
+  for (const t of REFLECT_TRANCHE_TOKENS) SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
+  const reflectMints = REFLECT_TRANCHE_TOKENS.map((t) => t.mint)
+  // Perena's vault shares (perenaShares.ts): USD*-P and sUSD-FR are unverified
+  for (const t of [...PERENA_SHARE_TOKENS, ...KESTREL_TOKENS]) SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
+  const perenaMints = [...PERENA_SHARE_TOKENS, ...KESTREL_TOKENS].map((t) => t.mint)
+  for (const mint of [...Object.keys(SOLANA_EXTRA_MINTS), ...trancheByMint.keys(), ...reflectMints, ...perenaMints]) {
     if (keptIds.has(mint)) continue
     // Retried with backoff: the search rate-limits a burst of ~30 lookups, and a swallowed 429
     // used to drop every listed mint past the fourth from the list (2026-10-23, 30 of 34).
