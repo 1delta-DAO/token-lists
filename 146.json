@@ -1973,6 +1973,24 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
         "risk": { "score": 2, "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xb635e62ab22e0869e0d3770c017e781e3fa38263",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "143",
+            "988",
+            "4326",
+            "8453",
+            "42793",
+            "43114",
+            "80094",
+            "747474"
+          ]
+        },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -2099,6 +2117,13 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "risk": { "score": 4, "category": "OTHER", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0x2b4d8fad49a3276853560a9cafaa59392a99cdbd",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -2119,47 +2144,81 @@
     "0x11d525fb3f8cdfa58be0d0fab9339964aeb89deb": {
       "chainId": "146",
       "decimals": 18,
-      "name": "Bridged mstETH (CCIP)",
+      "name": "mstETH",
       "address": "0x11d525fb3f8cdfa58be0d0fab9339964aeb89deb",
       "symbol": "mstETH",
       "logoURI": "https://assets.coingecko.com/coins/images/37182/thumb/mstETH.png?1713514149",
       "assetGroup": "Eigenpie mstETH::MSTETH",
-      "currencyId": "Bridged mstETH (CCIP)::mstETH"
+      "currencyId": "mstETH::mstETH",
+      "props": {
+        "ccip": {
+          "pool": "0x7361b97025e2207178edb9ba59c61bda69e032fa",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x29190a076072bd71454e032f821eaab3ba07e0d3": {
       "chainId": "146",
       "decimals": 8,
-      "name": "Bridged Magpie Stake BTC (CCIP)",
+      "name": "Magpie Stake BTC",
       "address": "0x29190a076072bd71454e032f821eaab3ba07e0d3",
       "symbol": "mBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/50314/thumb/mbtc_%281%29.png?1727079604",
       "assetGroup": "Babypie Wrapped BTC::MBTC",
-      "currencyId": "Bridged Magpie Stake BTC (CCIP)::mBTC"
+      "currencyId": "Magpie Stake BTC::mBTC",
+      "props": {
+        "ccip": {
+          "pool": "0xa6f5410bcb028c62db6f60361c004d9740cfa82b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "56", "42161"]
+        }
+      }
     },
     "0x29a0dc4f509873673b7682b60598d393a1e591b7": {
       "chainId": "146",
       "decimals": 6,
-      "name": "Bridged Wrapped xUSD (CCIP)",
+      "name": "Wrapped xUSD",
       "address": "0x29a0dc4f509873673b7682b60598d393a1e591b7",
       "symbol": "wxUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb86fb1047a955c0186c77ff6263819b37b32440d.png",
       "assetGroup": "Wrapped xUSD::wUSD+",
-      "currencyId": "Bridged Wrapped xUSD (CCIP)::wxUSD"
+      "currencyId": "Wrapped xUSD::wxUSD",
+      "props": {
+        "ccip": {
+          "pool": "0x04c5046a1f4e3fff094c26dfcaa75ef293932f18",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "42161",
+          "destinations": ["1", "10", "56", "8453", "34443", "42161"]
+        }
+      }
     },
     "0x9f6714c302ffe3c3bafaf2ccb44201ff64f6371c": {
       "chainId": "146",
       "decimals": 18,
-      "name": "Bridged FinChain Dollar (CCIP)",
+      "name": "FinChain Dollar",
       "address": "0x9f6714c302ffe3c3bafaf2ccb44201ff64f6371c",
       "symbol": "FUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/FUSD/logo.svg",
       "assetGroup": "FinChain Dollar::FUSD",
-      "currencyId": "Bridged FinChain Dollar (CCIP)::FUSD",
+      "currencyId": "FinChain Dollar::FUSD",
       "props": {
         "risk": {
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xff5d2c5b907ed4c88cee5b0cf1d280e4df3176fd",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.3",
+          "home": "143",
+          "destinations": ["1", "143", "43114"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
@@ -2172,12 +2231,21 @@
     "0xc28f1d82874ccfebfe6afdab3c685d5e709067e5": {
       "chainId": "146",
       "decimals": 18,
-      "name": "Bridged BMX (CCIP)",
+      "name": "BMX",
       "address": "0xc28f1d82874ccfebfe6afdab3c685d5e709067e5",
       "symbol": "BMX",
       "logoURI": "https://assets.coingecko.com/coins/images/31699/thumb/bmx_white.png?1696530517",
       "assetGroup": "BMX",
-      "currencyId": "Bridged BMX (CCIP)::BMX"
+      "currencyId": "BMX::BMX",
+      "props": {
+        "ccip": {
+          "pool": "0x0366ac315670cde909317f6fbf954e2de28ce5c1",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "8453",
+          "destinations": ["1", "8453", "34443", "57073", "747474"]
+        }
+      }
     },
     "0x64cd73f835b8df04e29ae08e778bf21fcca069e1": {
       "chainId": "146",
@@ -2902,6 +2970,13 @@
       "props": {
         "denomination": "BTC",
         "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0x62fd93fc58d94ee253542ecd5c23467f65dcdb73",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -3251,7 +3326,16 @@
       "symbol": "VRTX",
       "logoURI": "https://assets.coingecko.com/coins/images/27927/thumb/vrtx.png?1696526947",
       "assetGroup": "VRTX",
-      "currencyId": "Vertex::VRTX"
+      "currencyId": "Vertex::VRTX",
+      "props": {
+        "ccip": {
+          "pool": "0x293325b3aace7322beb03400e302612a2fc5a4e8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "42161",
+          "destinations": ["8453", "42161", "43114"]
+        }
+      }
     },
     "0x44e23b1f3f4511b3a7e81077fd9f2858df1b7579": {
       "chainId": "146",
@@ -3327,7 +3411,16 @@
       "symbol": "SILO",
       "logoURI": "https://assets.coingecko.com/coins/images/55596/thumb/silo.png?1746815000",
       "assetGroup": "SILO",
-      "currencyId": "Silo Finance::SILO"
+      "currencyId": "Silo Finance::SILO",
+      "props": {
+        "ccip": {
+          "pool": "0x527a8902db7548353eaf08b6522686509e32b1fe",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "42161", "43114"]
+        }
+      }
     },
     "0x02f92800f57bcd74066f5709f1daa1a4302df875": {
       "chainId": "146",
@@ -4572,7 +4665,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54815/thumb/ousdt.jpg?1741848258",
       "assetGroup": "OpenUSDT::OUSDT",
       "currencyId": "OpenUSDT::oUSDT",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "ccip": {
+          "pool": "0x6a21a19ad44542d83f7f7ff45aa31a62a36200de",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "10", "8453", "60808"]
+        }
+      }
     },
     "0x9a1bf5365edbb99c2c61ca6d9ffad0b705acfc6f": {
       "chainId": "146",
@@ -4604,7 +4706,16 @@
       "symbol": "xSILO",
       "logoURI": "https://coin-images.coingecko.com/coins/images/66788/large/xSILO.png?1750575606",
       "assetGroup": "xSILO::xSILO",
-      "currencyId": "xSILO::xSILO"
+      "currencyId": "xSILO::xSILO",
+      "props": {
+        "ccip": {
+          "pool": "0x4f91b984b03b09fdd60f9ed02279020ef930b2b0",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "146",
+          "destinations": ["1", "42161", "43114"]
+        }
+      }
     },
     "0x123468b48eadbc13c65cd9c66a9913cde4e94321": {
       "chainId": "146",
@@ -4775,11 +4886,7 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -5114,6 +5221,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0x7cbac118b3f299f8be1c3dba66368d96b37d7743",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "CHF" },
         "issuer": {
           "id": "frankencoin",
@@ -5198,7 +5312,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x554652e7f10fb8aa3e12226213c6826f98b09cf0",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x4871c910877c4e89f72ec355ff709b2543c00375": {
       "chainId": "146",
@@ -5232,6 +5355,13 @@
       "assetGroup": "Liquity BOLD::BOLD",
       "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
+        "ccip": {
+          "pool": "0xcfc5092583c1b2122f221f524c198abdecbf3d1b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "10", "8453", "42161", "43114"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }

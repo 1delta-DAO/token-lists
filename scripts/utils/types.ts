@@ -694,6 +694,24 @@ export interface TokenProps {
     eid: number
     routes: OftRoute[]
   }
+  /**
+   * Chainlink CCIP overlay — this deployment is registered in Chainlink's CCIP Directory
+   * (see `ccip/ccip.ts`). Address-keyed like `oft`: a token pool is a fact about one
+   * deployment. A CCIP copy shares its home asset's `assetGroup`; this prop is what tells
+   * it apart from another deployment of the same asset on the same chain.
+   */
+  ccip?: {
+    /** the TokenPool on THIS chain (lower-case) */
+    pool: string
+    /** `lockRelease`: the pool holds the token (the family's home). `burnMint`: a mirror. `usdc`: CCTP. */
+    poolType: 'burnMint' | 'lockRelease' | 'usdc'
+    /** pool contract version, as the Directory reports it */
+    poolVersion?: string
+    /** chainId of the family's home (its lock/release pool, else Ethereum), when known */
+    home?: string
+    /** chains this pool has a lane to, restricted to chains this repo lists */
+    destinations: string[]
+  }
 }
 
 /**

@@ -189,32 +189,59 @@
     "0x010c6f656e06f12bb3b115fcbc9ca282654795d2": {
       "chainId": "534352",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0x010c6f656e06f12bb3b115fcbc9ca282654795d2",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x7f399748490c25e32d3b8aae4f0322c6466082b6",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x6f7408dac37a36cd35b5c3bc2829f60c30e83315": {
       "chainId": "534352",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0x6f7408dac37a36cd35b5c3bc2829f60c30e83315",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0xf1b85dec561bfe9fc61bd758e533b85a7108634e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xceedbfc700d17a277ab1ca9e19a2caf0c42ced41": {
       "chainId": "534352",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0xceedbfc700d17a277ab1ca9e19a2caf0c42ced41",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0x1d201c7277f971cbb6cf32636e79187c83c58490",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x40375c92d9faf44d2f9db9bd9ba41a3317a2404f": {
       "chainId": "534352",
@@ -1128,7 +1155,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xff170ad8f1d86efac90ca7a2e1204ba64ac5e0f9",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x23ee2343b892b1bb63503a4fabc840e0e2c6810f": {
       "chainId": "534352",
@@ -1353,6 +1389,13 @@
       "assetGroup": "Liquity BOLD::BOLD",
       "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
+        "ccip": {
+          "pool": "0x10a9de252eb9e11841fa58b18fd09ab43d4b7d92",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }

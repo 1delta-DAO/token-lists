@@ -1,4 +1,5 @@
 import { RiskProps, TokenProps } from '../utils/types'
+import { CCIP_LEGACY_RETIRED } from '../ccip/ccipLegacy'
 
 export type RetiredProps = NonNullable<TokenProps['retired']>
 
@@ -28,6 +29,9 @@ export const RETIRED_BY_ADDRESS: Record<string, RetiredProps> = {
     successor: 'Junior DOLA::JRDOLA',
     source: 'curated',
   },
+  // Deployments a Chainlink CCIP copy of the same asset replaced on the same chain
+  // (ccip/ccipLegacy.ts, which also renames them).
+  ...CCIP_LEGACY_RETIRED,
 }
 
 /**

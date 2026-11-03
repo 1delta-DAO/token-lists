@@ -51,32 +51,59 @@
     "0x2b702dc45b540aeda62f60ce4e5bfaed37b1d27a": {
       "chainId": "42220",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0x2b702dc45b540aeda62f60ce4e5bfaed37b1d27a",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0x33ac23e54a7bfb159e781c8973b832b3be2bf211",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xd301a90cb3c7a9253305af30d92dd2c1fd1e704e": {
       "chainId": "42220",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0xd301a90cb3c7a9253305af30d92dd2c1fd1e704e",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x6d567695ba1e375e2f994181aa997328c0bdae72",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xf5607d767cca3789cae872a33e3cfb76cfbaaaa2": {
       "chainId": "42220",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0xf5607d767cca3789cae872a33e3cfb76cfbaaaa2",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0x346368422407acaf48025ff18891b1d7540539bf",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x471ece3750da237f93b8e339c536989b8978a438": {
       "chainId": "42220",
@@ -364,7 +391,7 @@
       "assetGroup": "CEUR",
       "currencyId": "Celo Euro::CEUR",
       "props": {
-        "risk": { "score": 3, "category": "STABLECOIN", "source": "stablecoin" }
+        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
       }
     },
     "0x00be915b9dcf56a3cbe739d9b9c202ca692409ec": {
@@ -1100,7 +1127,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x554652e7f10fb8aa3e12226213c6826f98b09cf0",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x617f3112bf5397d0467d315cc709ef968d9ba546": {
       "chainId": "42220",
@@ -1215,9 +1251,7 @@
       "logoURI": "https://storage.googleapis.com/zapper-fi-assets/tokens/celo/0xccf663b1ff11028f0b19058d0f7b674004a40746.png",
       "assetGroup": "Celo British Pound::cGBP",
       "currencyId": "Celo British Pound::cGBP",
-      "props": {
-        "risk": { "score": 2, "category": "STABLECOIN", "source": "stablecoin" }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x4c35853a3b4e647fd266f4de678dcc8fec410bf6": {
       "chainId": "42220",
@@ -1337,6 +1371,11 @@
       "assetGroup": "Argentine Peso::WARS",
       "currencyId": "Argentine Peso::WARS",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "ARS" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -1359,7 +1398,15 @@
       "symbol": "WUSDM",
       "logoURI": "https://assets.coingecko.com/coins/images/33785/thumb/wUSDM_PNG_240px.png?1702981552",
       "assetGroup": "WUSDM",
-      "currencyId": "Wrapped USDM::WUSDM"
+      "currencyId": "Wrapped USDM::WUSDM",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "issuer_inherit"
+        },
+        "retired": { "reason": "discontinued", "source": "risk" }
+      }
     },
     "0x2e6c05f1f7d1f4eb9a088bf12257f1647682b754": {
       "chainId": "42220",
@@ -1410,6 +1457,11 @@
       "assetGroup": "Brazilian real::WBRL",
       "currencyId": "Brazilian real::WBRL",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "REAL" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -1434,6 +1486,11 @@
       "assetGroup": "Colombian Peso::WCOP",
       "currencyId": "Colombian Peso::WCOP",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "COP" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -1448,6 +1505,11 @@
       "assetGroup": "USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -1505,7 +1567,11 @@
       "assetGroup": "VNX British Pound::VGBP",
       "currencyId": "VNX British Pound::VGBP",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "vnx", "name": "VNX", "kind": "institution" }
       }
@@ -1540,6 +1606,11 @@
       "assetGroup": "Mexican Peso::WMXN",
       "currencyId": "Mexican Peso::WMXN",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "MXN" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -1554,6 +1625,11 @@
       "assetGroup": "Peruvian Sol::WPEN",
       "currencyId": "Peruvian Sol::WPEN",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "PEN" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }
@@ -1568,6 +1644,11 @@
       "assetGroup": "Chilean Peso::WCLP",
       "currencyId": "Chilean Peso::WCLP",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "CLP" },
         "issuer": { "id": "ripio", "name": "Ripio", "kind": "institution" }
       }

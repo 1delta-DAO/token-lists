@@ -1,3 +1,5 @@
+import { CCIP_LEGACY } from '../../ccip/ccipLegacy'
+
 /** wrapped assets to overarching group */
 export const GROUP_TO_GROUP_MAPPER: Record<string, string> = {
   // wnatives
@@ -135,6 +137,10 @@ export const GROUP_ALIAS: Record<string, string> = {
   // arrive as `xHYPE::xHYPE`. xLEND takes its siblings' casing, the key `llamaGap.ts` uses.
   'xHYPE::xHYPE': 'xHYPE::XHYPE',
   'xLEND::xLEND': 'xLEND::XLEND',
+  // Bittensor TAO over Chainlink CCIP (Base and 0G, 0xf308…3d67) — the lists name Base's row
+  // "Bittensor (CCIP-Bridged)", and as the CCIP family's home row that name became its group.
+  // CCIP is the asset's own bridge, not a "bridged" variant (ccip/ccip.ts).
+  'Bittensor (CCIP-Bridged)::TAO': 'Bittensor::TAO',
   // BitFi bfBTC — ONE asset at two vanity addresses across eight chains (`0xCdFb…fb15`
   // on 1/1116/200901, `0x623F…d9DF` on 56/8453/43111/1672/239/2345). The external lists
   // uppercase the ticker (`BFBTC`) on 1/56/8453/1116/200901 while the on-chain `symbol()`
@@ -875,10 +881,23 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   // `eBTC::EBTC`, the group whose chain-1 member is Badger's eBTC 0x661c…, so it inherited
   // Badger as issuer. A different asset from both Badger's and ether.fi's eBTC.
   '143:0xd691b0afed67f96cec28ab6308cbe5b2c103b7e9': 'Echo eBTC::EBTC',
+  // Different tokens filed in a CCIP asset's group by ticker, beside its CCIP deployment on the
+  // same chain (`npm run ccip` candidates, checked against CoinGecko 2026-11-03):
+  // - Base "SHIBA ON BASE" (CoinGecko `shiba-on-base`, 1e15 supply) — not Shiba Inu's SHIB.
+  '8453:0xfca95aeb5bf44ae355806a5ad14659c940dc6bf7': 'SHIBA ON BASE::SHIB',
+  // - "Wrapped sDAI" — 0 supply, unknown to CoinGecko; Maker's sDAI is 0x83f2…beea.
+  '1:0x86a42b7a448c1568d21b00c90eab53b8417eeadc': 'Wrapped sDAI::sDAI',
+  // - Prosper's v1 token (CoinGecko `prosper`, "Prosper [OLD]") — not Pharos' PROS (CCIP 0xb197…).
+  '1:0x8642a849d0dcb7a15a974794668adcfbe4794b56': 'Prosper (OLD)::PROS',
+  // - "DogeBonk" on Ethereum (CoinGecko `dogebonk-eth`, 420.69M fixed supply) — a separate coin
+  //   from DogeBonk.com's BSC DOBO 0xae2d…, whose CCIP mirror on Ethereum is 0x3683…adac.
+  '1:0x73c6a7491d0db90bdb0060308cde0f49dfd1d0b0': 'DogeBonk ETH::DOBO',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {
-  return ADDRESS_GROUP_OVERRIDE[`${chainId}:${lcAddress}`] ?? gr
+  // A deployment a CCIP copy replaced keeps its successor's group whatever its renamed
+  // `(legacy …)` name would otherwise categorize to (ccip/ccipLegacy.ts).
+  return ADDRESS_GROUP_OVERRIDE[`${chainId}:${lcAddress}`] ?? CCIP_LEGACY[`${chainId}:${lcAddress}`]?.successor ?? gr
 }
 
 /**

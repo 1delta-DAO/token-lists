@@ -24,7 +24,8 @@ import { lookupRisk } from './risk/riskMap'
 import { lookupRetired } from './retired/retired'
 import { lookupOft } from './oft/oftMap'
 import { lookupMeshGroup } from './oft/meshMap'
-import { lookupCcipGroup } from './ccip/ccipGroupMap'
+import { lookupCcip, lookupCcipCopyName, lookupCcipGroup } from './ccip/ccipGroupMap'
+import { ccipLegacyName } from './ccip/ccipLegacy'
 import { lookupStablecoin } from './stablecoin/stablecoinMap'
 import { makeImpostorCheck } from './labels/labelUtils'
 import { lookupSavings } from './savings/savingsMap'
@@ -79,6 +80,22 @@ function withNestIdentity<T extends { address?: string; id?: string; chainId?: u
 }
 
 /** The row with Tether's one USDT0 label applied (oft/usdt0Identity.ts), or unchanged. */
+/**
+ * CCIP names (ccip/): a CCIP copy carries the token's own name from ccip.json, whatever list
+ * the row came through; a deployment a CCIP copy replaced (ccipLegacy.ts) gets a `(legacy …)` suffix.
+ */
+function withCcipName<T extends { address?: string; id?: string; chainId?: unknown; name?: string }>(t: T): T {
+  const key = (t.address ?? t.id)?.toLowerCase()
+  if (!key || !t.name) return t
+  const chain = AutoGenHelpers.safeparseChainId(t.chainId as any)
+  // A list's "(CCIP-Bridged)" / "(CCIP)" decoration on a CCIP deployment goes too: CCIP is the
+  // asset's own bridge, not a bridged variant of it.
+  const own =
+    lookupCcip(chain, key) || lookupCcipGroup(chain, key) ? t.name.replace(/ \(CCIP(-Bridged)?\)$/, '') : t.name
+  const name = ccipLegacyName(chain, key, lookupCcipCopyName(chain, key) ?? own)
+  return name === t.name ? t : { ...t, name }
+}
+
 function withUsdt0Identity<T extends { address?: string; id?: string; chainId?: unknown }>(t: T): T {
   const key = t.address ?? t.id
   if (!key || !isUsdt0Deployment(AutoGenHelpers.safeparseChainId(t.chainId as any), key)) return t
@@ -263,7 +280,7 @@ async function readTokenLists(): Promise<{
           // whatever the source list says (rwa/nestIdentity.ts). Applied before anything
           // reads the row so the currencyId and every label below agree with it.
           // USDT0 likewise: one ASCII label on every deployment (oft/usdt0Identity.ts).
-          const tokenInList = withUsdt0Identity(withNestIdentity(tokenInListRaw))
+          const tokenInList = withCcipName(withUsdt0Identity(withNestIdentity(tokenInListRaw)))
           const isPolkadotXc = tokenInList.symbol && tokenInList.symbol.toLowerCase().startsWith('xc')
           const enumKey = AutoGenHelpers.symbolToKey(tokenInList.symbol)
           const symbolParsed = AutoGenHelpers.normalizeSymbol(tokenInList.symbol)
@@ -375,6 +392,7 @@ async function readTokenLists(): Promise<{
                         rwa: _r,
                         retired: _rt,
                         lst: _l,
+                        ccip: _c,
                         ...rest
                       } = tokenProps
                       tokenProps = rest
@@ -409,10 +427,18 @@ async function readTokenLists(): Promise<{
                     const oft = lookupOft(chainId, lcAddress)
                     if (oft) tokenProps = { ...tokenProps, oft }
 
+                    // Chainlink CCIP overlay (ccip/ccip.ts, from Chainlink's CCIP Directory): the
+                    // pool and lanes of this deployment. Address-keyed for the same reason as `oft`
+                    // — and it is what tells a CCIP copy from the other copy in its group.
+                    const ccip = lookupCcip(chainId, lcAddress)
+                    if (ccip) tokenProps = { ...tokenProps, ccip }
+
                     // CoinGecko impostor guard: a lazy ticker-copy (name===symbol) whose address is
                     // NOT CoinGecko's canonical for that symbol/chain must never inherit an asset
                     // label — not even via a shared assetGroup overlay (e.g. a fake "wstEth"/"USDD").
-                    const impostor = isImpostor(chainId, lcAddress, tokenInList.name, tokenInList.symbol)
+                    // A CCIP copy is exempt: its group comes from Chainlink's Directory, not from a
+                    // ticker, and its own name may be the bare ticker (Kelp's CCIP rsETH is "rsETH").
+                    const impostor = !ccipGroup && isImpostor(chainId, lcAddress, tokenInList.name, tokenInList.symbol)
 
                     // Stablecoin overlay (from risk-data). Keyed by assetGroup since the fiat
                     // base is chain-independent — covers every deployment of the group. Falls

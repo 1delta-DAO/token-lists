@@ -20,23 +20,40 @@
     "0x709229d9587886a1edfee6b5ce636e1d70d1ce39": {
       "chainId": "223",
       "decimals": 18,
-      "name": "Bridged ChainLink Token (CCIP)",
+      "name": "ChainLink Token",
       "address": "0x709229d9587886a1edfee6b5ce636e1d70d1ce39",
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
       "assetGroup": "LINK",
-      "currencyId": "Bridged ChainLink Token (CCIP)::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x87ffb5fb3f15f4274807cec4f3c042f252046b49",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x93919784c523f39cacaa98ee0a9d96c3f32b593e": {
       "chainId": "223",
       "decimals": 8,
-      "name": "Bridged uniBTC (CCIP)",
+      "name": "uniBTC",
       "address": "0x93919784c523f39cacaa98ee0a9d96c3f32b593e",
       "symbol": "uniBTC",
       "logoURI": "https://raw.githubusercontent.com/Bedrock-Technology/bedrock-static/39b68b34ecef136a7f57720ac6ac8773606539da/logo/unibtc.svg",
       "assetGroup": "UNIBTC",
-      "currencyId": "Bridged uniBTC (CCIP)::uniBTC",
+      "currencyId": "uniBTC::uniBTC",
       "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x4b75fe6e4a53a510abc39c7328b0b06e74a3f624",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }

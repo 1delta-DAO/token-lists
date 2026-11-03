@@ -14132,15 +14132,20 @@
     "0xc3eacf0612346366db554c991d7858716db09f58": {
       "chainId": "57073",
       "decimals": 18,
-      "name": "Kelp DAO Restaked ETH",
+      "name": "Kelp DAO Restaked ETH (legacy LayerZero)",
       "address": "0xc3eacf0612346366db554c991d7858716db09f58",
       "symbol": "RSETH",
       "logoURI": "https://assets.coingecko.com/coins/images/33800/thumb/Icon___Dark.png?1702991855",
       "assetGroup": "RSETH",
-      "currencyId": "Kelp DAO Restaked ETH::RSETH",
+      "currencyId": "Kelp DAO Restaked ETH (legacy LayerZero)::RSETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
         "risk": { "score": 4, "source": "default" },
+        "retired": {
+          "reason": "superseded",
+          "successor": "RSETH",
+          "source": "curated"
+        },
         "oft": {
           "eid": 30339,
           "routes": [
@@ -14168,6 +14173,25 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "ccip": {
+          "pool": "0xdb9e8df31ce12817ddd1c4d2c3acef038580f586",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "137",
+            "324",
+            "1329",
+            "1868",
+            "8453",
+            "42161",
+            "43114",
+            "59144",
+            "60808"
+          ]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -14197,6 +14221,13 @@
       "currencyId": "brBTC::brBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
+        "ccip": {
+          "pool": "0xa08eb272f3d0be2ee6d6586fe7a8a129387118d4",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -14215,26 +14246,69 @@
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
+    "0xe561152e8d3f618b386ef4dd6e3fb980eb2f9e61": {
+      "chainId": "57073",
+      "decimals": 18,
+      "name": "Wrapped liquid staked Ether 2.0",
+      "address": "0xe561152e8d3f618b386ef4dd6e3fb980eb2f9e61",
+      "symbol": "wstETH",
+      "logoURI": "https://assets.coingecko.com/coins/images/18834/large/wstETH.png?1633565443",
+      "assetGroup": "WSTETH",
+      "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
+      "props": {
+        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x2dc99af320bc317c567f24ee95811dcbd5983dfd",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
+        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
+      }
+    },
     "0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335": {
       "chainId": "57073",
       "decimals": 8,
-      "name": "Bridged Yield BTC.B (CCIP)",
+      "name": "Yield BTC.B",
       "address": "0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335",
       "symbol": "YBTC.B",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335.png",
       "assetGroup": "Yield BTC.B::YBTC.B",
-      "currencyId": "Bridged Yield BTC.B (CCIP)::YBTC.B"
+      "currencyId": "Yield BTC.B::YBTC.B",
+      "props": {
+        "ccip": {
+          "pool": "0x5416050533bc83533fc7e7bc50a651dc7c762d07",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "43114",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x3c23e6fb09064e9a64829fa8fee27ad19a27bfa9": {
       "chainId": "57073",
       "decimals": 6,
-      "name": "Bridged Syrup USDC (CCIP)",
+      "name": "Syrup USDC",
       "address": "0x3c23e6fb09064e9a64829fa8fee27ad19a27bfa9",
       "symbol": "syrupUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/54658/thumb/syrup_logo-_200x200.jpg?1740895597",
       "assetGroup": "SYRUPUSDC",
-      "currencyId": "Bridged Syrup USDC (CCIP)::syrupUSDC",
+      "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xa3361ff0d9ca1cba31335a3280eece47f1a08f43",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -14243,41 +14317,47 @@
     "0x3c29af7a7b7ec62a481d27ed297b90c1974a0230": {
       "chainId": "57073",
       "decimals": 18,
-      "name": "Bridged rsETH (CCIP)",
+      "name": "rsETH",
       "address": "0x3c29af7a7b7ec62a481d27ed297b90c1974a0230",
       "symbol": "rsETH",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/berachain/0x4186BFC76E2E237523CBC30FD220FE055156b41F/logo.png",
       "assetGroup": "RSETH",
-      "currencyId": "Bridged rsETH (CCIP)::rsETH",
+      "currencyId": "rsETH::rsETH",
       "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x0fc90feec60939765ac40839515537fe2306f2f8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "kelp" },
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
-      }
-    },
-    "0xe561152e8d3f618b386ef4dd6e3fb980eb2f9e61": {
-      "chainId": "57073",
-      "decimals": 18,
-      "name": "Bridged Wrapped liquid staked Ether 2.0 (CCIP)",
-      "address": "0xe561152e8d3f618b386ef4dd6e3fb980eb2f9e61",
-      "symbol": "wstETH",
-      "logoURI": "https://assets.coingecko.com/coins/images/18834/large/wstETH.png?1633565443",
-      "assetGroup": "WSTETH",
-      "currencyId": "Bridged Wrapped liquid staked Ether 2.0 (CCIP)::wstETH",
-      "props": {
-        "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0xebe9ed66efe0948d0c1b72b0157fc17733667018": {
       "chainId": "57073",
       "decimals": 6,
-      "name": "Bridged syrupUSDG (CCIP)",
+      "name": "syrupUSDG",
       "address": "0xebe9ed66efe0948d0c1b72b0157fc17733667018",
       "symbol": "syrupUSDG",
       "logoURI": "https://assets.coingecko.com/coins/images/102174289/thumb/syrupUSDG.png?1783055974",
       "assetGroup": "SYRUPUSDG",
-      "currencyId": "Bridged syrupUSDG (CCIP)::syrupUSDG",
+      "currencyId": "syrupUSDG::syrupUSDG",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x376d6f0e7718b6f5642d92f13ca516c8b4f5a91f",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDG", "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -14487,6 +14567,13 @@
         },
         "denomination": "BTC",
         "risk": { "score": 2, "category": "BLUE_CHIP", "source": "whitelist" },
+        "ccip": {
+          "pool": "0x672ca387b28cf1d516b3a35bd367ec921f757292",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "4217"]
+        },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -14558,6 +14645,25 @@
       "props": {
         "denomination": "BTC",
         "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xf49f81b3d2f2a79b706621fa2d5934136352140c",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "137",
+            "324",
+            "1329",
+            "1868",
+            "8453",
+            "42161",
+            "43114",
+            "59144",
+            "60808"
+          ]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -14726,7 +14832,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x582ad348891b451c76b6ed3dfa57e5fe2c199ce2",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x2d270e6886d130d724215a266106e6832161eaed": {
       "chainId": "57073",
@@ -14789,6 +14904,23 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0xde6539018b095353a40753dc54c91c68c9487d4e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "100",
+            "143",
+            "196",
+            "5000",
+            "8453",
+            "9745",
+            "42161",
+            "43114"
+          ]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
       }
@@ -14803,6 +14935,13 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "ccip": {
+          "pool": "0xbf977109ae4fd840d23b19454df1c7414168e9f9",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
@@ -14843,6 +14982,24 @@
                 "solana": "FkSjTv1fgeHBDAWN1cvHwhv68wXHk9PEUD3eDC5VkT5U"
               }
             }
+          ]
+        },
+        "ccip": {
+          "pool": "0xdde19a4c562069cb4136ccb0debcfbbd67aaf23f",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "143",
+            "1329",
+            "4217",
+            "8453",
+            "9745",
+            "42161",
+            "43114",
+            "747474"
           ]
         },
         "stablecoin": { "base": "USD" },
@@ -14939,6 +15096,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x543164a51401a468b6fee3f7db27a30871448ff5",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -15720,8 +15884,17 @@
       "address": "0x5e8a26a9ed06b56bc1d90ceee2c6ae892b4b835c",
       "symbol": "BMX",
       "logoURI": "https://assets.coingecko.com/coins/images/31699/thumb/256x256_frame.png?1777046529",
-      "assetGroup": "Boardwalk::BMX",
-      "currencyId": "Boardwalk::BMX"
+      "assetGroup": "BMX",
+      "currencyId": "Boardwalk::BMX",
+      "props": {
+        "ccip": {
+          "pool": "0xa0e91503d77edca6057cf2a576d2ff9d2ab7be19",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "8453",
+          "destinations": ["1", "146", "8453", "42161"]
+        }
+      }
     },
     "0x142cdc44890978b506e745bb3bd11607b7f7faef": {
       "chainId": "57073",

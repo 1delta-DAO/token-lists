@@ -112,26 +112,42 @@
     "0x30974f73a4ac9e606ed80da928e454977ac486d2": {
       "chainId": "480",
       "decimals": 6,
-      "name": "Bridged OpenXAUT (CCIP)",
+      "name": "OpenXAUT",
       "address": "0x30974f73a4ac9e606ed80da928e454977ac486d2",
       "symbol": "oXAUT",
       "logoURI": "https://assets.coingecko.com/coins/images/10481/thumb/Tether_Gold.png?1696510471",
       "assetGroup": "Tether Gold::XAUt",
-      "currencyId": "Bridged OpenXAUT (CCIP)::oXAUT",
+      "currencyId": "OpenXAUT::oXAUT",
       "props": {
         "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0xf8ae5209de22dbd06dace938934b0d75b5e80299",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "tether", "name": "Tether", "kind": "institution" }
       }
     },
     "0x915b648e994d5f31059b38223b9fbe98ae185473": {
       "chainId": "480",
       "decimals": 18,
-      "name": "Bridged ChainLink Token (CCIP)",
+      "name": "ChainLink Token",
       "address": "0x915b648e994d5f31059b38223b9fbe98ae185473",
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
       "assetGroup": "LINK",
-      "currencyId": "Bridged ChainLink Token (CCIP)::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x69d7121d9e444ecffbc92fa9b9cf3b42264778cd",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
       "chainId": "480",
@@ -221,7 +237,14 @@
       "assetGroup": "WLD",
       "currencyId": "WLD::WLD",
       "props": {
-        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" }
+        "risk": { "score": 3, "category": "BRIDGED", "source": "whitelist" },
+        "ccip": {
+          "pool": "0xc751e86208f0f8af2d5cd0e29716ca7ad98b5ef5",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
       }
     },
     "0x7077c71b4af70737a08287e279b717dcf64fdc57": {

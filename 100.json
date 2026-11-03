@@ -376,32 +376,59 @@
     "0x50e23d57309c61eab3d3d1efe5dc02a36f945027": {
       "chainId": "100",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0x50e23d57309c61eab3d3d1efe5dc02a36f945027",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x9342547460e0be4c9559cae9cff5e0772371f9da",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xae2e513ac868d27bf8d697d165bb2e91c1aea0f0": {
       "chainId": "100",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0xae2e513ac868d27bf8d697d165bb2e91c1aea0f0",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0x25679a2879f6abb919c2dda665ce929d9a5214a8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xbb1ea2697b13cc06e03d875d2d39c06ac6dd5a93": {
       "chainId": "100",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0xbb1ea2697b13cc06e03d875d2d39c06ac6dd5a93",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0xeaa2885dcdd6689a95642dc6d72f24f81eb170f5",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x71850b7e9ee3f13ab46d67167341e4bdc905eef9": {
       "chainId": "100",
@@ -777,7 +804,16 @@
       "symbol": "REG",
       "logoURI": "https://assets.coingecko.com/coins/images/37785/thumb/REG_Logo_200x200.png?1737625372",
       "assetGroup": "RealToken Ecosystem Governance::REG",
-      "currencyId": "RealToken Ecosystem Governance::REG"
+      "currencyId": "RealToken Ecosystem Governance::REG",
+      "props": {
+        "ccip": {
+          "pool": "0x8058d5d465c8ca6ba76de043a7637f8df74a0989",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "137"]
+        }
+      }
     },
     "0xfecb3f7c54e2caae9dc6ac9060a822d47e053760": {
       "chainId": "100",
@@ -7886,11 +7922,7 @@
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -7909,6 +7941,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x7cbac118b3f299f8be1c3dba66368d96b37d7743",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "10", "8453"]
         },
         "stablecoin": { "base": "CHF" },
         "issuer": {
@@ -7942,6 +7981,23 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xde6539018b095353a40753dc54c91c68c9487d4e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "143",
+            "196",
+            "5000",
+            "8453",
+            "9745",
+            "42161",
+            "43114",
+            "57073"
+          ]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }

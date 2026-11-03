@@ -4001,6 +4001,13 @@
           "category": "BLUE_CHIP",
           "source": "issuer_inherit"
         },
+        "ccip": {
+          "pool": "0xc85e4da21307ce795d785c83e7e3a195402f661c",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "10"]
+        },
         "issuer": { "id": "kraken", "name": "Kraken", "kind": "cex" }
       }
     },
@@ -4091,9 +4098,18 @@
       "address": "0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5",
       "symbol": "BETS",
       "logoURI": "https://assets.coingecko.com/coins/images/26618/thumb/icon_200.png?1696525691",
-      "assetGroup": "BetSwirl v2::BETS",
+      "assetGroup": "BetSwirl::BETS",
       "currencyId": "BetSwirl v2::BETS",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "ccip": {
+          "pool": "0x463d98c150a664452f68b914c353c4fb99b227ac",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "10", "56", "137", "8453", "42161", "43114"]
+        }
+      }
     },
     "0x830898200f0e8be8dc1c9a836f4ab29ecedf76eb": {
       "chainId": "130",
@@ -4288,8 +4304,17 @@
       "address": "0xef66491eab4bbb582c57b14778afd8dfb70d8a1a",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
-      "assetGroup": "ChainLink Token::LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x9b02309e2196f687235a6af83b5d1c394a577ba2",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x2d1b035ca47e04a119dff0fac828f4a57a67e4de": {
       "chainId": "130",
@@ -4431,6 +4456,13 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "ccip": {
+          "pool": "0x30782053a09599ee44c054075a36c4ca1b224be5",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }

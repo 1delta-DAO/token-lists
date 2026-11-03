@@ -170,7 +170,7 @@
           "ptAddress": "0x810f9d4a751cafd5193617022b35fa0b0c166b4c",
           "ytAddress": "0x2b55b35d9be63d016ee902d87af29d2c4f397dc1"
         },
-        "risk": { "score": 4, "source": "pendle_inherit" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -2019,7 +2019,7 @@
           "expired": true
         },
         "risk": {
-          "score": 4,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -18631,6 +18631,13 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "ccip": {
+          "pool": "0xb5829e1f8078860969950852546b947f37855ef1",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -18676,6 +18683,13 @@
       "currencyId": "brBTC::brBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
+        "ccip": {
+          "pool": "0x330bf3c554ab94533069af11313143ed3884cf15",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -18721,6 +18735,13 @@
       "props": {
         "lst": { "type": "staking", "asset": "HYPE", "provider": "kinetiq" },
         "risk": { "score": 3, "category": "LST", "source": "whitelist" },
+        "ccip": {
+          "pool": "0xca02b4fd9a4e5dad986ea2ecb5d7bb43fa9bc605",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "999",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "kinetiq", "name": "Kinetiq", "kind": "protocol" }
       }
     },
@@ -18791,33 +18812,58 @@
     "0x31185950db028ecfc70df6a35a4b552462a35773": {
       "chainId": "999",
       "decimals": 18,
-      "name": "Bridged Vision (CCIP)",
+      "name": "Vision",
       "address": "0x31185950db028ecfc70df6a35a4b552462a35773",
       "symbol": "VSN",
       "logoURI": "https://assets.coingecko.com/coins/images/67399/thumb/Logo-Vision-Symbol-BG-Green.png?1752676915",
       "assetGroup": "Vision::VSN",
-      "currencyId": "Bridged Vision (CCIP)::VSN"
+      "currencyId": "Vision::VSN",
+      "props": {
+        "ccip": {
+          "pool": "0x1bb58ba8b6fc5a779edb2d6421c330d464183c08",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x5386be9fb29fca237ed0862718376fcb6c902b1e": {
       "chainId": "999",
       "decimals": 6,
-      "name": "Bridged Nillion (CCIP)",
+      "name": "Nillion",
       "address": "0x5386be9fb29fca237ed0862718376fcb6c902b1e",
       "symbol": "NIL",
       "logoURI": "https://assets.coingecko.com/coins/images/39082/thumb/nillion.jpg?1723033507",
       "assetGroup": "Nillion::NIL",
-      "currencyId": "Bridged Nillion (CCIP)::NIL"
+      "currencyId": "Nillion::NIL",
+      "props": {
+        "ccip": {
+          "pool": "0xd47081cf399651a7a680149642540e34125490c2",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x84533b1512a3a23f0c9668d88fdf86feffdbb11a": {
       "chainId": "999",
       "decimals": 18,
-      "name": "Bridged BOLD Stablecoin (CCIP)",
+      "name": "BOLD Stablecoin",
       "address": "0x84533b1512a3a23f0c9668d88fdf86feffdbb11a",
       "symbol": "BOLD",
       "logoURI": "https://assets.coingecko.com/coins/images/56069/thumb/BOLD_logo.png?1748265087",
       "assetGroup": "Liquity BOLD::BOLD",
-      "currencyId": "Bridged BOLD Stablecoin (CCIP)::BOLD",
+      "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
+        "ccip": {
+          "pool": "0x48fd11f0f21bac2d8486e6682fe1e2cb98f9aab1",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
@@ -19143,6 +19189,13 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "ccip": {
+          "pool": "0xfc361d7443b3e19f3720462d07480a03d60bb620",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -19155,7 +19208,7 @@
       "logoURI": "https://www.hyperbeat.org/assets/images/vaults/hbhype.svg",
       "assetGroup": "Hyperbeat Ultra Hype::hbHYPE",
       "currencyId": "Hyperbeat Ultra Hype::hbHYPE",
-      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x7dcffcb06b40344eeced2d1cbf096b299fe4b405": {
       "chainId": "999",
@@ -20201,7 +20254,7 @@
       "logoURI": "https://app.hyperbeat.org/assets/images/vaults/hbBTC.svg",
       "assetGroup": "Hyperbeat Ultra uBTC::hbBTC",
       "currencyId": "Hyperbeat Ultra uBTC::hbBTC",
-      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0x618275f8efe54c2afa87bfb9f210a52f0ff89364": {
       "chainId": "999",
@@ -20995,11 +21048,7 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -22777,7 +22826,15 @@
       "logoURI": "https://token-list.mantle.xyz/data/Mantle/logo.svg",
       "assetGroup": "MNT",
       "currencyId": "Mantle::MNT",
-      "props": { "denomination": "MNT" }
+      "props": {
+        "denomination": "MNT",
+        "ccip": {
+          "pool": "0xf2bc410fad9fc3140c4cded7c6e5bd56ac292c93",
+          "poolType": "burnMint",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x1ac2ee68b8d038c982c1e1f73f596927dd70de59": {
       "chainId": "999",
@@ -23039,6 +23096,13 @@
       "assetGroup": "UNIBTC",
       "currencyId": "uniBTC::uniBTC",
       "props": {
+        "ccip": {
+          "pool": "0xda57087632409a30876e978450de23a2f55ada91",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
@@ -23316,7 +23380,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/70252/thumb/kntq.png?1761279547",
       "assetGroup": "Kinetiq::KNTQ",
       "currencyId": "Kinetiq::KNTQ",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "ccip": {
+          "pool": "0x9665b94a8d5c9f1d96918b921a52580d52a5a393",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "999",
+          "destinations": ["1", "56", "8453"]
+        }
+      }
     },
     "0xac962fa04bf91b7fd0dc0c5c32414e0ce3c51e03": {
       "chainId": "999",
@@ -23709,6 +23782,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0xd32ab76a165f1a716986ba8c58344e3df4397f5e",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "9745",
+          "destinations": ["9745"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
@@ -23953,8 +24033,17 @@
       "address": "0x77146784315ba81904d654466968e3a7c196d1f3",
       "symbol": "TREE",
       "logoURI": "https://assets.coingecko.com/coins/images/67664/thumb/TREE_logo.png?1753601041",
-      "assetGroup": "Treehouse::TREE",
-      "currencyId": "Treehouse::TREE"
+      "assetGroup": "Treehouse Token::TREE",
+      "currencyId": "Treehouse::TREE",
+      "props": {
+        "ccip": {
+          "pool": "0x229ae3ec539865444404c666f504be68ceb81e02",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x0dc4f92879b7670e5f4e4e6e3c801d229129d90d": {
       "chainId": "999",
@@ -24117,7 +24206,16 @@
       "symbol": "FLOCK",
       "logoURI": "https://assets.coingecko.com/coins/images/53178/thumb/FLock_Token_Logo.png?1735561398",
       "assetGroup": "FLOCK::FLOCK",
-      "currencyId": "FLOCK::FLOCK"
+      "currencyId": "FLOCK::FLOCK",
+      "props": {
+        "ccip": {
+          "pool": "0x05e42e03996379cd0b6290cc2767a1bdd78b737a",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "8453",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0xb75d5ee14708e7efbea939311090061d72265608": {
       "chainId": "999",

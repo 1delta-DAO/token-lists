@@ -460,7 +460,8 @@ async function main() {
   for (const t of REFLECT_TRANCHE_TOKENS) SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
   const reflectMints = REFLECT_TRANCHE_TOKENS.map((t) => t.mint)
   // Perena's vault shares (perenaShares.ts): USD*-P and sUSD-FR are unverified
-  for (const t of [...PERENA_SHARE_TOKENS, ...KESTREL_TOKENS]) SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
+  for (const t of [...PERENA_SHARE_TOKENS, ...KESTREL_TOKENS])
+    SOLANA_IDENTITY[t.mint] ??= { name: t.name, symbol: t.symbol }
   const perenaMints = [...PERENA_SHARE_TOKENS, ...KESTREL_TOKENS].map((t) => t.mint)
   for (const mint of [...Object.keys(SOLANA_EXTRA_MINTS), ...trancheByMint.keys(), ...reflectMints, ...perenaMints]) {
     if (keptIds.has(mint)) continue

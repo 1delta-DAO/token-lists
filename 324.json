@@ -133,38 +133,72 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "ccip": {
+          "pool": "0x97810368de6f7213cf54f2918a267cea25449f81",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "57073", "60808"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x1f88af31101d9eafbe5b9dd627beb4b3010b8c54": {
       "chainId": "324",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0x1f88af31101d9eafbe5b9dd627beb4b3010b8c54",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0x8f3829fcb1cd380746f1643bfaf6ac8ca9960426",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x743c48c6057b4c2480f2458f2d1ce967df96b724": {
       "chainId": "324",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0x743c48c6057b4c2480f2458f2d1ce967df96b724",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0xef98939f005da3aa186ebb842842569213863d17",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xef76346aba1f8c671ba6f51ccb47e93b4bf72aa0": {
       "chainId": "324",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0xef76346aba1f8c671ba6f51ccb47e93b4bf72aa0",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x37cb2b7a45f8d17936ebabb4ed95de61f5371022",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x5a7d6b2f92c77fad6ccabd7ee0624e64907eaf3e": {
       "chainId": "324",
@@ -1255,6 +1289,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0x70139902bc147754221fd59dff8f8a16b34876f8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "10", "137", "8453", "42161", "43114"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -1353,6 +1394,13 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "ccip": {
+          "pool": "0xcd627aa160a6fa45eb793d19ef54f5062f20f33f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "57073", "60808"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -1962,7 +2010,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xff170ad8f1d86efac90ca7a2e1204ba64ac5e0f9",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x7b350e8b405090496b02d28f7cdb6fbb3f8c6418": {
       "chainId": "324",

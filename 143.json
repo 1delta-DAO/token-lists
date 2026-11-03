@@ -12,8 +12,18 @@
       "assetGroup": "apyUSD Monad::SY-apyUSD",
       "currencyId": "apyUSD Monad::SY-apyUSD",
       "props": {
-        "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x4124fabf9c3ae6a9844430ab6629036d0e4af47d",
+          "expiry": 1798070400,
+          "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+          "ptAddress": "0xd828d6738e2455c0f1744f4aab1d681b8a18929e",
+          "ytAddress": "0x515006ec8f83ae9262ddf0eccb1128415a0bb3cb"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x00e2a1a388fb871b0cbcc73e55b9b7dde8dc1518": {
@@ -366,6 +376,7 @@
       "props": {
         "pendle": {
           "tokenType": "YT",
+          "marketAddress": "0x4124fabf9c3ae6a9844430ab6629036d0e4af47d",
           "expiry": 1798070400,
           "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
           "ptAddress": "0xd828d6738e2455c0f1744f4aab1d681b8a18929e",
@@ -941,6 +952,7 @@
       "props": {
         "pendle": {
           "tokenType": "PT",
+          "marketAddress": "0x4124fabf9c3ae6a9844430ab6629036d0e4af47d",
           "expiry": 1798070400,
           "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
           "ytAddress": "0x515006ec8f83ae9262ddf0eccb1128415a0bb3cb",
@@ -1570,6 +1582,23 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
         "risk": { "score": 2, "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xdba5238af3644c64d3a2f2bed4577dd487beed44",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "146",
+            "988",
+            "8453",
+            "42793",
+            "43114",
+            "80094",
+            "747474"
+          ]
+        },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -1585,6 +1614,13 @@
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
         "risk": { "score": 2, "category": "LST", "source": "whitelist" },
+        "ccip": {
+          "pool": "0x2f2e55517aac64c4066f6eb333b4cb072ed00e8a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
@@ -1645,6 +1681,13 @@
       "currencyId": "Rocket Pool ETH::rETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "ccip": {
+          "pool": "0x6f71adcf535de0766c36a9004dce8f1119f4d6b7",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": {
           "id": "rocketpool",
           "name": "Rocket Pool",
@@ -1690,6 +1733,13 @@
       "currencyId": "xSolvBTC::xSolvBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
+        "ccip": {
+          "pool": "0x8a76fe7fa6da27f85a626c5c53730b38d13603d7",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -1733,6 +1783,13 @@
       "props": {
         "lst": { "type": "staking", "asset": "MON", "provider": "apriori" },
         "risk": { "score": 2, "source": "vault_inherit" },
+        "ccip": {
+          "pool": "0x3aaff16d7f8c9163af6e0f14ec46cba5bdc8c6c3",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "143",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "apriori", "name": "Apriori", "kind": "protocol" }
       }
     },
@@ -1799,22 +1856,40 @@
     "0x12666fab1cd372ccac4e2f80713bbd2e4620bc5a": {
       "chainId": "143",
       "decimals": 18,
-      "name": "Bridged Lorenzo Governance Token (CCIP)",
+      "name": "Lorenzo Governance Token",
       "address": "0x12666fab1cd372ccac4e2f80713bbd2e4620bc5a",
       "symbol": "BANK",
       "logoURI": "https://assets.coingecko.com/coins/images/55250/thumb/lorenzo.jpg?1744963693",
       "assetGroup": "Lorenzo Protocol::BANK",
-      "currencyId": "Bridged Lorenzo Governance Token (CCIP)::BANK"
+      "currencyId": "Lorenzo Governance Token::BANK",
+      "props": {
+        "ccip": {
+          "pool": "0x2befcb20d4435177d45a8ee4899919ae159786f3",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "56"]
+        }
+      }
     },
     "0xb267cc10fa4c54db1fd5a6e9cafbb98c16cc9b97": {
       "chainId": "143",
       "decimals": 18,
-      "name": "Bridged Wrapped 0G (CCIP)",
+      "name": "Wrapped 0G",
       "address": "0xb267cc10fa4c54db1fd5a6e9cafbb98c16cc9b97",
       "symbol": "W0G",
       "logoURI": "https://assets.coingecko.com/coins/images/69681/thumb/0g.png?1759289984",
       "assetGroup": "Wrapped 0G::W0G",
-      "currencyId": "Bridged Wrapped 0G (CCIP)::W0G"
+      "currencyId": "Wrapped 0G::W0G",
+      "props": {
+        "ccip": {
+          "pool": "0x4c8a1e94c84f9043e26b3bbff76f670a91e645a1",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56", "8453", "42161"]
+        }
+      }
     },
     "0x8d3f9f9eb2f5e8b48efbb4074440d1e2a34bc365": {
       "chainId": "143",
@@ -2103,7 +2178,14 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "denomination": "BTC",
-        "risk": { "score": 2, "source": "issuer_inherit" }
+        "risk": { "score": 2, "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0x1d4c47b1968291d07ed90352dee2618d1d8a0009",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": ["1", "988", "43114", "747474"]
+        }
       }
     },
     "0xff7f8f301f7a706e3cfd3d2275f5dc0b9ee8009b": {
@@ -2162,6 +2244,13 @@
           "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x5258d5beb800df857d8a4e808ee0c8c7bf567e0e",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.0",
+          "home": "1",
+          "destinations": ["1"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
@@ -2556,8 +2645,17 @@
       "address": "0xd33f18d8d48cbbb2f8b47063de97f94de0d49b99",
       "symbol": "NXPC",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/NXPC/logo.svg",
-      "assetGroup": "NXPC::NXPC",
-      "currencyId": "NXPC::NXPC"
+      "assetGroup": "Nexpace::NXPC",
+      "currencyId": "NXPC::NXPC",
+      "props": {
+        "ccip": {
+          "pool": "0xc1e3a199873846aafcfe71d31e3d82c8b97588d9",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["56", "43114"]
+        }
+      }
     },
     "0x2f2f2f74ab5db61ae8bd3c13ccd4dc8c9e8a2f2f": {
       "chainId": "143",
@@ -2600,6 +2698,13 @@
       "currencyId": "Solv BTC::SolvBTC",
       "props": {
         "denomination": "BTC",
+        "ccip": {
+          "pool": "0x4bc35816c1d0b911940894ccd5121ec64ffd69eb",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -2736,6 +2841,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x012247950ee154dc26d4514b84b3b60336c55ea5",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "9745",
+          "destinations": ["9745"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
@@ -2997,6 +3109,13 @@
       "props": {
         "denomination": "BTC",
         "risk": { "score": 2, "category": "BRIDGED", "source": "whitelist" },
+        "ccip": {
+          "pool": "0x68a86767885c2ac58a7107479b4e7d691c695147",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "8453",
+          "destinations": ["8453"]
+        },
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
@@ -3060,11 +3179,7 @@
       "assetGroup": "Mento British Pound::GBPm",
       "currencyId": "Mento British Pound::GBPm",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -3374,6 +3489,13 @@
       "currencyId": "Lorenzo Wrapped Bitcoin::enzoBTC",
       "props": {
         "denomination": "BTC",
+        "ccip": {
+          "pool": "0x0f17096226b603b6750b1975bcde3ff0c267de7e",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.0",
+          "home": "56",
+          "destinations": ["56"]
+        },
         "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
@@ -3504,6 +3626,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0xc5caac64dd93b6e2b369d52610fdae069e568d3e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["1", "56", "4326", "9745", "42161", "43114", "80094"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -3520,6 +3649,13 @@
       "props": {
         "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "savings": { "underlying": "USDC", "base": "USD" },
+        "ccip": {
+          "pool": "0x8c45302131606d9d7f82d6a1b5f577c42d27a945",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "143",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },
@@ -3582,6 +3718,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0xb496894fd559d7c923477246e384e7463c69060e",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.3",
+          "home": "143",
+          "destinations": ["1", "146", "43114"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "finchain",
@@ -3605,6 +3748,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x4ea35565147a7a6bfdaf7e605bdcda4bd039a540",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -3794,7 +3944,7 @@
       "currencyId": "Mento Euro::EURm",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -3816,6 +3966,23 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xa5ae05b71c3f170e12e7620fdf7679721aec1ec8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "100",
+            "196",
+            "5000",
+            "8453",
+            "9745",
+            "42161",
+            "43114",
+            "57073"
+          ]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "aave", "name": "Aave", "kind": "protocol" }
@@ -3865,6 +4032,13 @@
       "assetGroup": "avUSD::avUSD",
       "currencyId": "avUSD::avUSD",
       "props": {
+        "ccip": {
+          "pool": "0x4235afa8073d6cd8abddd23a080c1ed29978eb76",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["1", "43114"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -3976,8 +4150,17 @@
       "address": "0x76f257b1dda5cc71bee4ef637fbdde4c801310a9",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
-      "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "Chainlink::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x313280510a3de58e1582ed7841ebc01def041fa6",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x0bb150dfa86ea5d7742f07fefcd8e8eda81d64ef": {
       "chainId": "143",
@@ -3993,6 +4176,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x8ab40e2dabcd24dcff0a06a68eb59990405270f0",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "56"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
@@ -4024,6 +4214,13 @@
           "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
+        },
+        "ccip": {
+          "pool": "0x2768f0d350ac6876e5d056317ccf394ecd5d7c5e",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "56"]
         },
         "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
       }
@@ -4165,6 +4362,23 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x2ba4e08af6889c4803747a292f69a0ee9bf3dd0c",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "8453",
+            "9745",
+            "42161",
+            "43114",
+            "57073",
+            "80094",
+            "747474"
+          ]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
@@ -5449,6 +5663,13 @@
           "source": "stablecoin"
         },
         "savings": { "underlying": "trUSD", "base": "USD" },
+        "ccip": {
+          "pool": "0x52e34c46ce7ce0cbdb8864d7a02fb0a9ae9b3012",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1", "1672", "42161"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
@@ -5463,6 +5684,13 @@
       "assetGroup": "Tori trUSD::TRUSD",
       "currencyId": "trUSD::trUSD",
       "props": {
+        "ccip": {
+          "pool": "0x6f6818c72a7ffc72b2ed90fd7e8df1d17c18b195",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1", "1672", "42161"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
@@ -5494,9 +5722,16 @@
       "address": "0x3d78455e22d5dd49709ec135a59cb1c5a87ac3c6",
       "symbol": "apxUSD",
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/apxUSD/logo.png",
-      "assetGroup": "apxUSD::apxUSD",
+      "assetGroup": "apxUSD::APXUSD",
       "currencyId": "apxUSD::apxUSD",
       "props": {
+        "ccip": {
+          "pool": "0x363332b186a4afce7a754a49f34d1543aec5e786",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
       }
@@ -5512,6 +5747,13 @@
       "currencyId": "apyUSD::apyUSD",
       "props": {
         "savings": { "underlying": "apxUSD", "base": "USD" },
+        "ccip": {
+          "pool": "0xd404a80641ba5490db15e0863d46fdd61f0b4cf7",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
       }

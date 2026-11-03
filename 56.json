@@ -441,7 +441,7 @@
           "ytAddress": "0xc8ea9a8672ea5a61487cd596cc6dac7e288f7655"
         },
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "pendle_inherit"
         },
@@ -1016,6 +1016,7 @@
       "props": {
         "pendle": {
           "tokenType": "YT",
+          "marketAddress": "0x3974b474f33e00fe177b54206726a8d33fc87a57",
           "expiry": 1807747200,
           "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
           "ptAddress": "0x7dfbebc2bcbc3e754d64c12f0fbb64f59d9e96e0",
@@ -2093,7 +2094,7 @@
           "syAddress": "0x1a375dea39acad9a0625b92338e72112cab7f886"
         },
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -2285,6 +2286,7 @@
       "props": {
         "pendle": {
           "tokenType": "PT",
+          "marketAddress": "0x3974b474f33e00fe177b54206726a8d33fc87a57",
           "expiry": 1807747200,
           "underlyingAsset": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
           "ytAddress": "0x434d5f584c51c729b7dba69f3033ad37c41318f0",
@@ -31643,6 +31645,23 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
         "risk": { "score": 2, "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xa383a3001974a3a3bf94bde6651400844efe37d1",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "143",
+            "146",
+            "988",
+            "4326",
+            "8453",
+            "42793",
+            "43114",
+            "747474"
+          ]
+        },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -31821,6 +31840,25 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
+        "ccip": {
+          "pool": "0xf0314c4b42cd6fca8772bde359e0a7d3b5e70f88",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "137",
+            "999",
+            "1329",
+            "8453",
+            "42161",
+            "43114",
+            "57073",
+            "59144",
+            "60808",
+            "80094"
+          ]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -31851,6 +31889,13 @@
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
         "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x5390e2e17c896244b7544e8566e9d77599700de5",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -31887,23 +31932,39 @@
     "0x01aac2b594f7bdbec740f0f1aa22910ebb4b74ab": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Unio Coin (CCIP)",
+      "name": "Unio Coin",
       "address": "0x01aac2b594f7bdbec740f0f1aa22910ebb4b74ab",
       "symbol": "UNIO",
       "logoURI": "https://assets.coingecko.com/coins/images/50191/thumb/uniocoin-200x200.png?1726206790",
       "assetGroup": "Unio Coin::UNIO",
-      "currencyId": "Bridged Unio Coin (CCIP)::UNIO"
+      "currencyId": "Unio Coin::UNIO",
+      "props": {
+        "ccip": {
+          "pool": "0x5ed97e6938d4074cdfc83a310de2525f0a4e6c73",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x0f6f337b09cb5131cf0ce9df3beb295b8e728f3b": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged SolvBTC Bera Vault (CCIP)",
+      "name": "SolvBTC Bera Vault",
       "address": "0x0f6f337b09cb5131cf0ce9df3beb295b8e728f3b",
       "symbol": "SolvBTC.BERA",
       "logoURI": "https://assets.coingecko.com/coins/images/69747/thumb/SolvBTC.BERA.png?1759482666",
       "assetGroup": "Solv Protocol SolvBTC.BERA::SOLVBTC.BERA",
-      "currencyId": "Bridged SolvBTC Bera Vault (CCIP)::SolvBTC.BERA",
+      "currencyId": "SolvBTC Bera Vault::SolvBTC.BERA",
       "props": {
+        "ccip": {
+          "pool": "0x0cd252108ef0ce50f95f75045a97c72a0a8d3118",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
@@ -31911,14 +31972,36 @@
     "0x14063733875204b35d20d5fc52c7b5569ad00335": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Staked avUSD (CCIP)",
+      "name": "Staked avUSD",
       "address": "0x14063733875204b35d20d5fc52c7b5569ad00335",
       "symbol": "savUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x06d47F3fb376649c3A9Dafe069B3D6E35572219E/logo.png",
       "assetGroup": "Staked avUSD::savUSD",
-      "currencyId": "Bridged Staked avUSD (CCIP)::savUSD",
+      "currencyId": "Staked avUSD::savUSD",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x8e4ec56b2e74bd48557f327ea35f6f08b7e8a4bd",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": [
+            "1",
+            "143",
+            "1329",
+            "4326",
+            "9745",
+            "42161",
+            "43114",
+            "59144",
+            "80094",
+            "747474"
+          ]
+        },
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "avUSD", "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
@@ -31927,171 +32010,324 @@
     "0x19452d507b2738adb8942cd2b0d52bb519f1790a": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Staked avBTC (CCIP)",
+      "name": "Staked avBTC",
       "address": "0x19452d507b2738adb8942cd2b0d52bb519f1790a",
       "symbol": "savBTC",
       "assetGroup": "Staked avBTC::savBTC",
-      "currencyId": "Bridged Staked avBTC (CCIP)::savBTC"
+      "currencyId": "Staked avBTC::savBTC",
+      "props": {
+        "ccip": {
+          "pool": "0x79a42a8dc09f3501dc265e65139912ae20c5bceb",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["1", "43114", "59144"]
+        }
+      }
     },
     "0x280ab1903a06b5badec1d204f450ee8d068405d8": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged SwissCheese Token (CCIP)",
+      "name": "SwissCheese Token",
       "address": "0x280ab1903a06b5badec1d204f450ee8d068405d8",
       "symbol": "SWCH",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x3ce1327867077b551ae9a6987bf10c9fd08edce1/small/token-logo.png",
       "assetGroup": "SwissCheese::SWCH",
-      "currencyId": "Bridged SwissCheese Token (CCIP)::SWCH"
+      "currencyId": "SwissCheese Token::SWCH",
+      "props": {
+        "ccip": {
+          "pool": "0xbb4bd217af1161f973792250b59404363866b687",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "137",
+          "destinations": ["137"]
+        }
+      }
     },
     "0x2c2d4d99f95643c8ec2ebd1d73a6fd0273068b1e": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Wrapped 0G (CCIP)",
+      "name": "Wrapped 0G",
       "address": "0x2c2d4d99f95643c8ec2ebd1d73a6fd0273068b1e",
       "symbol": "W0G",
       "logoURI": "https://assets.coingecko.com/coins/images/69681/thumb/0g.png?1759289984",
       "assetGroup": "Wrapped 0G::W0G",
-      "currencyId": "Bridged Wrapped 0G (CCIP)::W0G"
+      "currencyId": "Wrapped 0G::W0G",
+      "props": {
+        "ccip": {
+          "pool": "0x467721ad1f05235b84b6c94e012b12c79d9ebfd7",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "143", "8453", "42161"]
+        }
+      }
     },
     "0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335": {
       "chainId": "56",
       "decimals": 8,
-      "name": "Bridged Yield BTC.B (CCIP)",
+      "name": "Yield BTC.B",
       "address": "0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335",
       "symbol": "YBTC.B",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x2cd3cdb3bd68eea0d3be81da707bc0c8743d7335.png",
       "assetGroup": "Yield BTC.B::YBTC.B",
-      "currencyId": "Bridged Yield BTC.B (CCIP)::YBTC.B"
+      "currencyId": "Yield BTC.B::YBTC.B",
+      "props": {
+        "ccip": {
+          "pool": "0x448eef4a0ef5171f9b9c973017c9621c914591ad",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "43114",
+          "destinations": ["43114", "200901"]
+        }
+      }
     },
     "0x2d74207d0053cfaba39bd74c9e8ac07ff88f5dc7": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Virtuals Protocol (CCIP)",
+      "name": "Virtuals Protocol",
       "address": "0x2d74207d0053cfaba39bd74c9e8ac07ff88f5dc7",
       "symbol": "VIRTUAL",
       "logoURI": "https://raw.githubusercontent.com/baseswapfi/default-token-list/refs/heads/main/images/VIRTUAL.webp",
       "assetGroup": "Virtual Protocol::VIRTUAL",
-      "currencyId": "Bridged Virtuals Protocol (CCIP)::VIRTUAL"
+      "currencyId": "Virtuals Protocol::VIRTUAL",
+      "props": {
+        "ccip": {
+          "pool": "0x0604885263a177bb71c50f3461c8681a8b0be9c5",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "8453",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0x2d7e22fb0fb7a7f0d1fef70ad8873a9ffde18007": {
       "chainId": "56",
       "decimals": 6,
-      "name": "Bridged Wrapped xUSD (CCIP)",
+      "name": "Wrapped xUSD",
       "address": "0x2d7e22fb0fb7a7f0d1fef70ad8873a9ffde18007",
       "symbol": "wxUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb86fb1047a955c0186c77ff6263819b37b32440d.png",
       "assetGroup": "Wrapped xUSD::wUSD+",
-      "currencyId": "Bridged Wrapped xUSD (CCIP)::wxUSD"
+      "currencyId": "Wrapped xUSD::wxUSD",
+      "props": {
+        "ccip": {
+          "pool": "0xa843652df6bda4d4b2894a28505963f595aedbe3",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "42161",
+          "destinations": ["1", "10", "146", "8453", "34443", "42161"]
+        }
+      }
     },
     "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220": {
       "chainId": "56",
       "decimals": 6,
-      "name": "Bridged Wisdomise (CCIP)",
+      "name": "Wisdomise",
       "address": "0x5f2f8818002dc64753daedf4a6cb2ccb757cd220",
       "symbol": "WSDM",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x5f2f8818002dc64753daedf4a6cb2ccb757cd220/small/token-logo.png",
       "assetGroup": "Wisdomise AI::WSDM",
-      "currencyId": "Bridged Wisdomise (CCIP)::WSDM"
+      "currencyId": "Wisdomise::WSDM",
+      "props": {
+        "ccip": {
+          "pool": "0x862428ca8c8108486e0c6e66a897aa0166841349",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "137",
+          "destinations": ["1", "137", "42161"]
+        }
+      }
     },
     "0x61e030a56d33e8260fdd81f03b162a79fe3449cd": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Fluid (CCIP)",
+      "name": "Fluid",
       "address": "0x61e030a56d33e8260fdd81f03b162a79fe3449cd",
       "symbol": "FLUID",
       "logoURI": "https://assets.coingecko.com/coins/images/14688/large/30hFM0-n_400x400.jpg?1617786420",
       "assetGroup": "INST",
-      "currencyId": "Bridged Fluid (CCIP)::FLUID"
+      "currencyId": "Fluid::FLUID",
+      "props": {
+        "ccip": {
+          "pool": "0x8945f36edaf4c997aa23ac3246560808cbbb2373",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "8453", "9745", "42161"]
+        }
+      }
     },
     "0x620a8b7bd26b21d0d053ee9a05a593f35bf37d8e": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Turbo (CCIP)",
+      "name": "Turbo",
       "address": "0x620a8b7bd26b21d0d053ee9a05a593f35bf37d8e",
       "symbol": "TURBO",
       "logoURI": "https://assets.coingecko.com/coins/images/30117/large/TurboMark-QL_200.png?1708079597",
       "assetGroup": "Turbo::TURBO",
-      "currencyId": "Bridged Turbo (CCIP)::TURBO"
+      "currencyId": "Turbo::TURBO",
+      "props": {
+        "ccip": {
+          "pool": "0xea771eb68ccfe489cda2713f4248cd512c880453",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x699ccf919c1dfdfa4c374292f42cadc9899bf753": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Vision (CCIP)",
+      "name": "Vision",
       "address": "0x699ccf919c1dfdfa4c374292f42cadc9899bf753",
       "symbol": "VSN",
       "logoURI": "https://assets.coingecko.com/coins/images/67399/thumb/Logo-Vision-Symbol-BG-Green.png?1752676915",
       "assetGroup": "Vision::VSN",
-      "currencyId": "Bridged Vision (CCIP)::VSN"
+      "currencyId": "Vision::VSN",
+      "props": {
+        "ccip": {
+          "pool": "0x649f03d6f7ac74f6c13733212aa5419c890d2db6",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0x79b1e1492aced84b17ade53812b06266611b0535": {
       "chainId": "56",
       "decimals": 9,
-      "name": "Bridged Yee Token (CCIP)",
+      "name": "Yee Token",
       "address": "0x79b1e1492aced84b17ade53812b06266611b0535",
       "symbol": "Yee",
       "logoURI": "https://assets.coingecko.com/coins/images/55226/thumb/Yee_Token.png?1744802626",
       "assetGroup": "Yee Token::YEE",
-      "currencyId": "Bridged Yee Token (CCIP)::Yee"
+      "currencyId": "Yee Token::Yee",
+      "props": {
+        "ccip": {
+          "pool": "0x82e1ec199d2e570bbb5d7c67ab99b9222f853ac2",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x84e9aae2081ad3135ec82496c31e5658a31b9756": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Sekuya (CCIP)",
+      "name": "Sekuya",
       "address": "0x84e9aae2081ad3135ec82496c31e5658a31b9756",
       "symbol": "SKYA",
       "logoURI": "https://assets.coingecko.com/coins/images/38096/thumb/SKYA_Logo_200x200.png?1731909478",
       "assetGroup": "Sekuya Multiverse::SKYA",
-      "currencyId": "Bridged Sekuya (CCIP)::SKYA"
+      "currencyId": "Sekuya::SKYA",
+      "props": {
+        "ccip": {
+          "pool": "0x48c4215ccb6fa0974f7e0383b965959d0e944311",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "1868", "8453"]
+        }
+      }
     },
     "0x8b04bf3358b88e3630aa64c1c76ff3b6c699c6a7": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged xPlanetIX (CCIP)",
+      "name": "xPlanetIX",
       "address": "0x8b04bf3358b88e3630aa64c1c76ff3b6c699c6a7",
       "symbol": "xIXT",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0xe06bd4f5aac8d0aa337d13ec88db6defc6eaeefe/small/token-logo.png",
       "assetGroup": "Planet IX::IXT",
-      "currencyId": "Bridged xPlanetIX (CCIP)::xIXT"
+      "currencyId": "xPlanetIX::xIXT",
+      "props": {
+        "ccip": {
+          "pool": "0x1e9c67b9cbe6ffffdc441be359d9f78b5167f30e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "137",
+          "destinations": ["1", "137", "8453", "42161"]
+        }
+      }
     },
     "0x96d2e314b749326e8c33bddf1db36030fb31da3e": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged Kinetiq Governance Token (CCIP)",
+      "name": "Kinetiq Governance Token",
       "address": "0x96d2e314b749326e8c33bddf1db36030fb31da3e",
       "symbol": "KNTQ",
       "logoURI": "https://assets.coingecko.com/coins/images/70252/thumb/kntq.png?1761279547",
       "assetGroup": "Kinetiq::KNTQ",
-      "currencyId": "Bridged Kinetiq Governance Token (CCIP)::KNTQ"
+      "currencyId": "Kinetiq Governance Token::KNTQ",
+      "props": {
+        "ccip": {
+          "pool": "0xd3ce362a82d6564cf3e74a74ea4cbc3a1c43aaa4",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "999",
+          "destinations": ["999"]
+        }
+      }
     },
     "0xec59de82fff1959e92b91dab975e4564fc3447cc": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0xec59de82fff1959e92b91dab975e4564fc3447cc",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0x7f1f90e6b6bad9fc14ca71224b072541b739beb3",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "43114"]
+        }
+      }
     },
     "0xf543915698bf89bd6d429adc79577d75da2fa1fd": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0xf543915698bf89bd6d429adc79577d75da2fa1fd",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x20dacf037b437854926caee12bfbebab123e6e69",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xf94a52468ff79862b8f288faf7900d34e74a1992": {
       "chainId": "56",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0xf94a52468ff79862b8f288faf7900d34e74a1992",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0x385fe033d211bea56a2e0bf0de39feb1ce24dfc9",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xccafb706225331aedfec75b5347d462b98ed2fd2": {
       "chainId": "56",
@@ -32195,6 +32431,13 @@
           "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
+        },
+        "ccip": {
+          "pool": "0xe2f5aeff1c065fac95e7f48ba854470d41b66b7c",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "143"]
         },
         "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
       }
@@ -38502,7 +38745,16 @@
       "symbol": "RDP",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x27c073e8427aa493a90b8dC8b73A89e670FD77bB.png",
       "assetGroup": "RDP",
-      "currencyId": "Radpie::RDP"
+      "currencyId": "Radpie::RDP",
+      "props": {
+        "ccip": {
+          "pool": "0x879d0803dc3fb6b435e6407f4b74101bb8f742c8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "56",
+          "destinations": ["42161"]
+        }
+      }
     },
     "0xe2ae1a99bbd2efab0a5c38f2146b7ace61abc5ce": {
       "chainId": "56",
@@ -38552,7 +38804,16 @@
       "symbol": "CKP",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x2B5D9ADea07B590b638FFc165792b2C610EdA649.png",
       "assetGroup": "Cakepie::CKP",
-      "currencyId": "Cakepie::CKP"
+      "currencyId": "Cakepie::CKP",
+      "props": {
+        "ccip": {
+          "pool": "0xa690c439dcd4a5507fceb4da0517a69e8244db90",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "56",
+          "destinations": ["42161"]
+        }
+      }
     },
     "0x581fa684d0ec11ccb46b1d92f1f24c8a3f95c0ca": {
       "chainId": "56",
@@ -38887,7 +39148,16 @@
       "symbol": "SDT",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x07715EE7219B07b8e01CC7d2787f4e5e75860383.png",
       "assetGroup": "SDT",
-      "currencyId": "Stake DAO::SDT"
+      "currencyId": "Stake DAO::SDT",
+      "props": {
+        "ccip": {
+          "pool": "0xb1133f3a7bc0392948f4bb43947b9bb662fb8e20",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0x944824290cc12f31ae18ef51216a223ba4063092": {
       "chainId": "56",
@@ -38906,8 +39176,17 @@
       "address": "0x7dc91cbd6cb5a3e6a95eed713aa6bf1d987146c8",
       "symbol": "mwBETH",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x7dC91cBD6CB5A3E6A95EED713Aa6bF1d987146c8.png",
-      "assetGroup": "Bridged mwBETH::mwBETH",
-      "currencyId": "Bridged mwBETH::mwBETH"
+      "assetGroup": "Eigenpie wBETH::MWBETH",
+      "currencyId": "Bridged mwBETH::mwBETH",
+      "props": {
+        "ccip": {
+          "pool": "0xf975eafe68839f326012f8aec8759455b5e0050a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x4aae823a6a0b376de6a78e74ecc5b079d38cbcf7": {
       "chainId": "56",
@@ -38921,6 +39200,26 @@
       "props": {
         "denomination": "BTC",
         "risk": { "score": 3, "category": "OTHER", "source": "whitelist" },
+        "ccip": {
+          "pool": "0x99d94f528cea3ee1791ab7b476a1facb4297ca17",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": [
+            "1",
+            "137",
+            "196",
+            "999",
+            "1329",
+            "8453",
+            "42161",
+            "43114",
+            "57073",
+            "59144",
+            "60808",
+            "80094"
+          ]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -39110,8 +39409,17 @@
       "address": "0x7c1cca5b25fa0bc9af9275fb53cba89dc172b878",
       "symbol": "mBTC",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x7c1cCA5b25Fa0bC9AF9275Fb53cBA89DC172b878.png",
-      "assetGroup": "Babypie BTC::mBTC",
-      "currencyId": "Babypie BTC::mBTC"
+      "assetGroup": "Babypie Wrapped BTC::MBTC",
+      "currencyId": "Babypie BTC::mBTC",
+      "props": {
+        "ccip": {
+          "pool": "0xd7550e0a1c055b444d8d1a9eb3dea02c0f09d7a1",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "146", "42161"]
+        }
+      }
     },
     "0xbaea9aba1454df334943951d51116ae342eab255": {
       "chainId": "56",
@@ -39134,6 +39442,13 @@
       "currencyId": "uniBTC::uniBTC",
       "props": {
         "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0xf0b508c7ff394b94bcb73c19007c7102c2d9aa19",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
@@ -40626,7 +40941,16 @@
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xf4c8e32eadec4bfe97e0f595add0f4450a863a11/small/token-logo.png",
       "assetGroup": "THE",
       "currencyId": "Thena::THE",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0xecff67559c0583027a5fbd85136e33bc4d66eea0",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["137", "204"]
+        }
+      }
     },
     "0xb04906e95ab5d797ada81508115611fee694c2b3": {
       "chainId": "56",
@@ -40696,7 +41020,16 @@
       "symbol": "CHEX",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0x9ce84f6a69986a83d92c324df10bc8e64771030f/small/token-logo.png",
       "assetGroup": "CHEX Token::CHEX",
-      "currencyId": "CHEX Token::CHEX"
+      "currencyId": "CHEX Token::CHEX",
+      "props": {
+        "ccip": {
+          "pool": "0x4ea2cb69c1a347cb2eee8fe0effa2762b4ad68bb",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x049d68029688eabf473097a2fc38ef61633a3c7a": {
       "chainId": "56",
@@ -41096,7 +41429,16 @@
       "symbol": "LAND",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xa73164db271931cf952cbaeff9e8f5817b42fa5c/small/token-logo.png",
       "assetGroup": "LAND",
-      "currencyId": "Landshare::LAND"
+      "currencyId": "Landshare::LAND",
+      "props": {
+        "ccip": {
+          "pool": "0x3404c137c2aa3cf69c7322c6f39a6cbd8c3b769d",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.0",
+          "home": "56",
+          "destinations": ["137", "42161"]
+        }
+      }
     },
     "0x62694d43ccb9b64e76e38385d15e325c7712a735": {
       "chainId": "56",
@@ -41125,8 +41467,17 @@
       "address": "0xabe8e5cabe24cb36df9540088fd7ce1175b9bc52",
       "symbol": "SOLV",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xabe8e5cabe24cb36df9540088fd7ce1175b9bc52/small/token-logo.png",
-      "assetGroup": "SOLV",
-      "currencyId": "Solv Protocol::SOLV"
+      "assetGroup": "Solv Protocol::SOLV",
+      "currencyId": "Solv Protocol::SOLV",
+      "props": {
+        "ccip": {
+          "pool": "0x5a0ed3cbbe5fe3b0f2a125b8754922705689d652",
+          "poolType": "lockRelease",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xa1ed0bd9a4776830c5b7ba004f26427b71152ca5": {
       "chainId": "56",
@@ -41290,7 +41641,16 @@
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xdbb5cf12408a3ac17d668037ce289f9ea75439d7/small/token-logo.png",
       "assetGroup": "WMTX",
       "currencyId": "World Mobile Token::WMTX",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x0c03636614fe25278786e363643ee5d4260c9efe",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453", "42161"]
+        }
+      }
     },
     "0xeac9873291ddaca754ea5642114151f3035c67a2": {
       "chainId": "56",
@@ -41350,7 +41710,16 @@
       "symbol": "WECO",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0x5d37abafd5498b0e7af753a2e83bd4f0335aa89f/small/token-logo.png",
       "assetGroup": "WECOIN::WECO",
-      "currencyId": "WECOIN::WECO"
+      "currencyId": "WECOIN::WECO",
+      "props": {
+        "ccip": {
+          "pool": "0x9766a4a5c1f7eacc5d9aac1086aec62137e81596",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.0",
+          "home": "56",
+          "destinations": ["1", "137", "42161"]
+        }
+      }
     },
     "0xf2c88757f8d03634671208935974b60a2a28bdb3": {
       "chainId": "56",
@@ -41526,7 +41895,16 @@
       "symbol": "WHY",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0x9ec02756a559700d8d9e79ece56809f7bcc5dc27/small/token-logo.png",
       "assetGroup": "WHY::WHY",
-      "currencyId": "WHY::WHY"
+      "currencyId": "WHY::WHY",
+      "props": {
+        "ccip": {
+          "pool": "0x5156b61beb12ecdbb6caa4a49f41db2203943702",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0xe9c803f48dffe50180bd5b01dc04da939e3445fc": {
       "chainId": "56",
@@ -42747,7 +43125,16 @@
       "symbol": "BETS",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0x94025780a1ab58868d9b2dbbb775f44b32e8e6e5/small/token-logo.png",
       "assetGroup": "BetSwirl::BETS",
-      "currencyId": "BetSwirl::BETS"
+      "currencyId": "BetSwirl::BETS",
+      "props": {
+        "ccip": {
+          "pool": "0x77bed59eaba481f3f5122a1c9953d477d97a900d",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "10", "130", "137", "8453", "42161", "43114"]
+        }
+      }
     },
     "0x9e20461bc2c4c980f62f1b279d71734207a6a356": {
       "chainId": "56",
@@ -47930,6 +48317,13 @@
       "assetGroup": "SOLVBTC.JUP",
       "currencyId": "SolvBTC Jupiter::SolvBTC.JUP",
       "props": {
+        "ccip": {
+          "pool": "0x48731cf7e84dc94c5f84577882c14be11a5b7456",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1868", "60808"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
@@ -48542,6 +48936,13 @@
           ]
         },
         "denomination": "BTC",
+        "ccip": {
+          "pool": "0x6385e01d5d63c2ba5581f29fd4c7dc015806d395",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.0",
+          "home": "56",
+          "destinations": ["143"]
+        },
         "issuer": { "id": "lorenzo", "name": "Lorenzo" }
       }
     },
@@ -49102,7 +49503,7 @@
       "currencyId": "StraitsX XUSD::XUSD",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -50065,7 +50466,16 @@
       "symbol": "DOBO",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xae2df9f730c54400934c06a17462c41c08a06ed8/small/token-logo.png",
       "assetGroup": "DogeBonk::DOBO",
-      "currencyId": "DogeBonk::DOBO"
+      "currencyId": "DogeBonk::DOBO",
+      "props": {
+        "ccip": {
+          "pool": "0x51364bc1a2fb9bc271612bf0936e857b5e000aab",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "8453", "42161"]
+        }
+      }
     },
     "0xfbf174090b3cc8ebb9f39b697035a54c5c45b4d6": {
       "chainId": "56",
@@ -50342,7 +50752,16 @@
       "symbol": "STABLE",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0x8bf75bc68fd337dfd8186d731df8b3c2cb14b9e6/small/token-logo.png",
       "assetGroup": "Stable::STABLE",
-      "currencyId": "Stable::STABLE"
+      "currencyId": "Stable::STABLE",
+      "props": {
+        "ccip": {
+          "pool": "0x7169054a07c8946e45728cde01fee68bab5beb82",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0x6f3aaf802f57d045efdd2ac9c06d8879305542af": {
       "chainId": "56",
@@ -51525,7 +51944,16 @@
       "symbol": "USDFI",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xc9f5955f6da20e44a068f3d58fb2404f56f9a6f2/small/token-logo.png",
       "assetGroup": "USDFI::USDFI",
-      "currencyId": "USDFI::USDFI"
+      "currencyId": "USDFI::USDFI",
+      "props": {
+        "ccip": {
+          "pool": "0xdb96110a1d4c447055c71227ce5908af859c1015",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0x0b3eaead748facdb9d943d3407011f16eb17d0cf": {
       "chainId": "56",
@@ -52545,7 +52973,16 @@
       "symbol": "METO",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xa78775bba7a542f291e5ef7f13c6204e704a90ba/small/token-logo.png",
       "assetGroup": "Metafluence::METO",
-      "currencyId": "Metafluence::METO"
+      "currencyId": "Metafluence::METO",
+      "props": {
+        "ccip": {
+          "pool": "0xc9edf4f727a1c21b65613f29059fe9928244110b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "56",
+          "destinations": ["137"]
+        }
+      }
     },
     "0xbb6cdedac5cab4a420211a4a8e8b5dca879b31de": {
       "chainId": "56",
@@ -68302,8 +68739,17 @@
       "address": "0xbb1b031c591235408755ff4e0739cb88c5cf2507",
       "symbol": "$PAAL",
       "logoURI": "https://tokens.debridge.finance/Logo/56/0xbb1b031c591235408755ff4e0739cb88c5cf2507/small/token-logo.png",
-      "assetGroup": "$PAAL",
-      "currencyId": "PAAL AI::$PAAL"
+      "assetGroup": "PAAL AI::PAAL",
+      "currencyId": "PAAL AI::$PAAL",
+      "props": {
+        "ccip": {
+          "pool": "0xe4de5151ed60aa2086172c4caec29f058d16e46e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0xc468acf451922712cf45af9801df89578b0418b4": {
       "chainId": "56",
@@ -68427,7 +68873,14 @@
             }
           ]
         },
-        "risk": { "score": 4, "source": "default" }
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x2e02df052e7c4a12e1b334dc3d182c39bb754dc3",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "8453", "80094"]
+        }
       }
     },
     "0x59264f02d301281f3393e1385c0aefd446eb0f00": {
@@ -68818,7 +69271,16 @@
       "symbol": "BANK",
       "logoURI": "https://assets.coingecko.com/coins/images/55250/thumb/lorenzo.jpg?1744963693",
       "assetGroup": "Lorenzo Protocol::BANK",
-      "currencyId": "Lorenzo Protocol::BANK"
+      "currencyId": "Lorenzo Protocol::BANK",
+      "props": {
+        "ccip": {
+          "pool": "0x0f9bf5199815e0244cb79b8c768b6979ec0290d3",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "143"]
+        }
+      }
     },
     "0x6587eff07d9ae00f05fae2a3a032b2c1a1dfce41": {
       "chainId": "56",
@@ -69275,6 +69737,13 @@
           "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xce3f7378ae409e1ce0dd6ffa70ab683326b73f04",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.0",
+          "home": "1",
+          "destinations": ["1"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
@@ -69801,6 +70270,13 @@
       "assetGroup": "Usual USD::USD0",
       "currencyId": "Usual USD::USD0",
       "props": {
+        "ccip": {
+          "pool": "0x8d20f295518b12e63f65ab7cf930ad88e8d17cba",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "usual", "name": "Usual" }
       }
@@ -69877,7 +70353,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51091/thumb/USUAL.jpg?1730035787",
       "assetGroup": "Usual::USUAL",
       "currencyId": "Usual::USUAL",
-      "props": { "issuer": { "id": "usual", "name": "Usual" } }
+      "props": {
+        "ccip": {
+          "pool": "0x30ea2d525ef7c234f8aa6e3a8909b88f71244cb0",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
+        "issuer": { "id": "usual", "name": "Usual" }
+      }
     },
     "0xab3dbcd9b096c3ff76275038bf58eac10d22c61f": {
       "chainId": "56",
@@ -69967,7 +70452,16 @@
       "symbol": "FHE",
       "logoURI": "https://assets.coingecko.com/coins/images/55161/thumb/mind.jpg?1744276359",
       "assetGroup": "Mind Network::FHE",
-      "currencyId": "Mind Network::FHE"
+      "currencyId": "Mind Network::FHE",
+      "props": {
+        "ccip": {
+          "pool": "0x8fa979bcf82859c994b82166390dfb03951ca86d",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x06fda0758c17416726f77cb11305eac94c074ec0": {
       "chainId": "56",
@@ -72577,10 +73071,19 @@
       "name": "pufETH",
       "address": "0x64274835d88f5c0215da8aadd9a5f2d2a2569381",
       "symbol": "xPufETH",
-      "assetGroup": "pufETH::xPufETH",
+      "assetGroup": "PUFETH",
       "currencyId": "pufETH::xPufETH",
       "props": {
-        "risk": { "score": 3, "category": "LRT", "source": "whitelist" }
+        "risk": { "score": 3, "category": "LRT", "source": "whitelist" },
+        "ccip": {
+          "pool": "0xd1e158549d79c1768170bd694dcba9c9f60ee2b8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
+        "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
+        "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
     "0xffeb8287de7dc756067e171e9919c730f0636680": {
@@ -75784,8 +76287,17 @@
       "address": "0xf2b51cc1850fed939658317a22d73d3482767591",
       "symbol": "NXPC",
       "logoURI": "https://tokens.pancakeswap.finance/images/0xf2b51CC1850fEd939658317a22d73d3482767591.png",
-      "assetGroup": "NXPC::NXPC",
-      "currencyId": "NXPC::NXPC"
+      "assetGroup": "Nexpace::NXPC",
+      "currencyId": "NXPC::NXPC",
+      "props": {
+        "ccip": {
+          "pool": "0x6f6645d608f56d04e5f36719865df4b2c9bc6794",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["143", "43114"]
+        }
+      }
     },
     "0x30c60b20c25b2810ca524810467a0c342294fc61": {
       "chainId": "56",
@@ -77105,7 +77617,16 @@
       "symbol": "SAHARA",
       "logoURI": "https://tokens.pancakeswap.finance/images/0xFDFfB411C4A70AA7C95D5C981a6Fb4Da867e1111.png",
       "assetGroup": "Sahara AI::SAHARA",
-      "currencyId": "Sahara AI::SAHARA"
+      "currencyId": "Sahara AI::SAHARA",
+      "props": {
+        "ccip": {
+          "pool": "0x194e4c58ded42b35ed984c8e8f85e854bd1e62b4",
+          "poolType": "lockRelease",
+          "poolVersion": "1.6.3",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xfe723495f73714426493384eb5e49aa5b827e1d5": {
       "chainId": "56",
@@ -78259,6 +78780,13 @@
           "source": "stablecoin"
         },
         "savings": { "underlying": "USD1+", "base": "USD" },
+        "ccip": {
+          "pool": "0xa58b73a340f3c0d9d65be8caab6c5efb9331f775",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "98866"]
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -78316,11 +78844,7 @@
       "assetGroup": "bnb USD::bnbUSD",
       "currencyId": "bnb USD::bnbUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "sigma-money",
@@ -78739,7 +79263,16 @@
       "symbol": "RIZE",
       "logoURI": "https://tokens.pancakeswap.finance/images/0xAEDAff046601BEb063b647845Dfb21841f32d6A4.png",
       "assetGroup": "RIZE::RIZE",
-      "currencyId": "RIZE::RIZE"
+      "currencyId": "RIZE::RIZE",
+      "props": {
+        "ccip": {
+          "pool": "0xf234609b2e2704b48745a819c89774fe21e4a722",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "8453"]
+        }
+      }
     },
     "0xad8c787992428cd158e451aab109f724b6bc36de": {
       "chainId": "56",
@@ -78871,9 +79404,16 @@
       "address": "0xb3b02e4a9fb2bd28cc2ff97b0ab3f6b3ec1ee9d2",
       "symbol": "USDf",
       "logoURI": "https://assets.coingecko.com/coins/images/54558/thumb/ff_200_X_200.png?1740741076",
-      "assetGroup": "Falcon USD::USDf",
+      "assetGroup": "Falcon Finance::USDF",
       "currencyId": "Falcon USD::USDf",
       "props": {
+        "ccip": {
+          "pool": "0x4b66431f9e5f5cd026ae48e617902207b43048d4",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "falcon",
@@ -79009,8 +79549,17 @@
       "address": "0x77146784315ba81904d654466968e3a7c196d1f3",
       "symbol": "TREE",
       "logoURI": "https://assets.coingecko.com/coins/images/67664/thumb/TREE_logo.png?1753601041",
-      "assetGroup": "Treehouse::TREE",
-      "currencyId": "Treehouse::TREE"
+      "assetGroup": "Treehouse Token::TREE",
+      "currencyId": "Treehouse::TREE",
+      "props": {
+        "ccip": {
+          "pool": "0x229ae3ec539865444404c666f504be68ceb81e02",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "43114"]
+        }
+      }
     },
     "0xb37194e8b99020ae0b8b6861d4217a9f016706a4": {
       "chainId": "56",
@@ -80619,8 +81168,17 @@
       "address": "0xfed13d0c40790220fbde712987079eda1ed75c51",
       "symbol": "BTR",
       "logoURI": "https://tokens.pancakeswap.finance/images/0xfed13D0c40790220fbdE712987079Eda1Ed75C51.png",
-      "assetGroup": "BTR token::BTR",
-      "currencyId": "BTR token::BTR"
+      "assetGroup": "Bitlayer::BTR",
+      "currencyId": "BTR token::BTR",
+      "props": {
+        "ccip": {
+          "pool": "0x86248be697645cfe0fdeb37fba0102604f355efa",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "200901",
+          "destinations": ["1", "200901"]
+        }
+      }
     },
     "0x64da67a12a46f1ddf337393e2da12ed0a507ad3d": {
       "chainId": "56",
@@ -80886,7 +81444,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/50767/thumb/wlfi.png?1756438915",
       "assetGroup": "World Liberty Financial::WLFI",
       "currencyId": "World Liberty Financial::WLFI",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0xa92261171d09aea90bbf86c75a7322519f014c78",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xbe1936a67f503e0eaf2434b0cf9f4e3d7100008a": {
       "chainId": "56",
@@ -81756,8 +82323,17 @@
       "address": "0xd23a186a78c0b3b805505e5f8ea4083295ef9f3a",
       "symbol": "BARD",
       "logoURI": "https://tokens.pancakeswap.finance/images/0xd23A186A78c0B3B805505E5f8ea4083295ef9f3a.png",
-      "assetGroup": "Lombard::BARD",
-      "currencyId": "Lombard::BARD"
+      "assetGroup": "Lombard Protocol::BARD",
+      "currencyId": "Lombard::BARD",
+      "props": {
+        "ccip": {
+          "pool": "0xaa1bd1c07cfeadb8cc025ffa8781a853dc88d555",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xd5df4d260d7a0145f655bcbf3b398076f21016c7": {
       "chainId": "56",
@@ -82300,8 +82876,17 @@
       "address": "0xb75ba7ef520a5bd0a5d01108060be269642c4601",
       "symbol": "TRADE",
       "logoURI": "https://assets.coingecko.com/coins/images/16416/thumb/Logo_colored_200.png?1696516012",
-      "assetGroup": "Polytrade::TRADE::56::0",
-      "currencyId": "Polytrade::TRADE"
+      "assetGroup": "Polytrade::TRADE",
+      "currencyId": "Polytrade::TRADE",
+      "props": {
+        "ccip": {
+          "pool": "0x7eb93143612cfb6dda216ebe481e510f3a3b645f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "8453"]
+        }
+      }
     },
     "0x7839fbfd09dae4d0f15bfb36b8f16f7898fbe684": {
       "chainId": "56",
@@ -82331,7 +82916,16 @@
       "symbol": "FF",
       "logoURI": "https://tokens.pancakeswap.finance/images/0xAC23B90A79504865D52B49B327328411a23d4dB2.png",
       "assetGroup": "Falcon Finance::FF",
-      "currencyId": "Falcon Finance::FF"
+      "currencyId": "Falcon Finance::FF",
+      "props": {
+        "ccip": {
+          "pool": "0x470ed414d305d2c784501cc68e086e3b59d6e51e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x4c9027e10c5271efca82379d3123917ae3f2374e": {
       "chainId": "56",
@@ -82391,7 +82985,16 @@
       "symbol": "EDEN",
       "logoURI": "https://assets.coingecko.com/coins/images/68283/thumb/eden.png?1755242478",
       "assetGroup": "OpenEden::EDEN",
-      "currencyId": "OpenEden::EDEN"
+      "currencyId": "OpenEden::EDEN",
+      "props": {
+        "ccip": {
+          "pool": "0x74d0dd4551e4bf18e13c630c1a537faf323bb43c",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x87241b1b7fd82cf4f4842f195909ca69aa6e4444": {
       "chainId": "56",
@@ -83303,7 +83906,16 @@
       "symbol": "TURTLE",
       "logoURI": "https://assets.coingecko.com/coins/images/69595/thumb/OUDzqTkE_400x400.png?1759166194",
       "assetGroup": "Turtle::TURTLE",
-      "currencyId": "Turtle::TURTLE"
+      "currencyId": "Turtle::TURTLE",
+      "props": {
+        "ccip": {
+          "pool": "0x4559605e3003fda8c059e14af4f16ba9a004335a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "59144"]
+        }
+      }
     },
     "0x2117e8b79e8e176a670c9fcf945d4348556bffad": {
       "chainId": "56",
@@ -83774,10 +84386,7 @@
               "sharedDecimals": 6,
               "oapp": "enso",
               "approvalRequired": false,
-              "peers": {
-                "1": "0xb945577ac2aa9a602ca116c78e3a6b9e5315dd56",
-                "8453": "0xfeb339236d25d3e415f280189bc7c2fbab6ae9ef"
-              }
+              "peers": {}
             }
           ]
         }
@@ -84539,7 +85148,16 @@
       "symbol": "ON",
       "logoURI": "https://assets.coingecko.com/coins/images/70231/thumb/orochi_network.png?1761129486",
       "assetGroup": "Orochi Network::ON",
-      "currencyId": "Orochi Network::ON"
+      "currencyId": "Orochi Network::ON",
+      "props": {
+        "ccip": {
+          "pool": "0x98d6d288afab1edc7a6d49502790fa517765e606",
+          "poolType": "lockRelease",
+          "poolVersion": "1.6.1",
+          "home": "56",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xdc816b6bd4786720e91eb17d4dabf0e1eef5ee91": {
       "chainId": "56",
@@ -85816,7 +86434,16 @@
       "symbol": "JCT",
       "logoURI": "https://assets.coingecko.com/coins/images/70608/thumb/janction.png?1762738430",
       "assetGroup": "Janction::JCT",
-      "currencyId": "Janction::JCT"
+      "currencyId": "Janction::JCT",
+      "props": {
+        "ccip": {
+          "pool": "0xda1b1b3d3c97974b272e28f70f25ab7c290e8357",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xcce5f304fd043d6a4e8ccb5376a4a4fb583b98d5": {
       "chainId": "56",
@@ -86044,9 +86671,18 @@
       "address": "0x52b5fb4b0f6572b8c44d0251cc224513ac5eb7e7",
       "symbol": "BOB",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x52B5fB4B0F6572B8C44d0251Cc224513ac5eB7E7.png",
-      "assetGroup": "BOB::BOB",
+      "assetGroup": "BOB (Build on Bitcoin)::BOB",
       "currencyId": "BOB::BOB",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x7e685254a1c696cf8a72a2f05d3edbf18ea624bb",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "60808"]
+        }
+      }
     },
     "0x44444e15232ff6dfed49b550d672707a283b3910": {
       "chainId": "56",
@@ -86614,9 +87250,18 @@
       "address": "0x9dc44ae5be187eca9e2a67e33f27a4c91cea1223",
       "symbol": "POWER",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x9dC44ae5BE187ECA9e2A67e33f27A4c91cEA1223.png",
-      "assetGroup": "Power::POWER",
+      "assetGroup": "Power Protocol::POWER",
       "currencyId": "Power::POWER",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x7eeead4571b12bc3e331e6ce2d954e1528ac2921",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x4bb3223140e1065bf52af2207129483b5d2c4444": {
       "chainId": "56",
@@ -87065,7 +87710,16 @@
       "symbol": "VOOI",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x876cEcb73c9ED1B1526F8e35C6a5a51a31BCF341.png",
       "assetGroup": "VOOI::VOOI",
-      "currencyId": "VOOI::VOOI"
+      "currencyId": "VOOI::VOOI",
+      "props": {
+        "ccip": {
+          "pool": "0x4d275a287b86e423e01ccee66f4e3313b5f47cf7",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "4663", "5000"]
+        }
+      }
     },
     "0x4829a1d1fb6ded1f81d26868ab8976648baf9893": {
       "chainId": "56",
@@ -87190,7 +87844,16 @@
       "symbol": "RAIN",
       "logoURI": "https://assets.coingecko.com/coins/images/34032/thumb/rain_coin_logo.png?1703676333",
       "assetGroup": "Rain Coin::RAIN",
-      "currencyId": "Rain Coin::RAIN"
+      "currencyId": "Rain Coin::RAIN",
+      "props": {
+        "ccip": {
+          "pool": "0xa71433a266db0b15cf127de74b3fa33cbe730526",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "8453"]
+        }
+      }
     },
     "0xff2e87cb9b3edbc8f560e269027bac47b573c6b2": {
       "chainId": "56",
@@ -87692,6 +88355,25 @@
                 "solana": "FkSjTv1fgeHBDAWN1cvHwhv68wXHk9PEUD3eDC5VkT5U"
               }
             }
+          ]
+        },
+        "ccip": {
+          "pool": "0x891b473fe15ccce37827dde41f70d6ed4d607dfe",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "143",
+            "1329",
+            "4217",
+            "8453",
+            "9745",
+            "42161",
+            "43114",
+            "57073",
+            "80094",
+            "747474"
           ]
         },
         "stablecoin": { "base": "USD" },
@@ -89085,6 +89767,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0xeaa7e1f805747ae29d5618b568d1b044a8b37a01",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
@@ -89214,7 +89903,16 @@
       "symbol": "ZYPTO",
       "logoURI": "https://assets.coingecko.com/coins/images/19089/thumb/image_2024-02-23_172710251.png?1708680432",
       "assetGroup": "Zypto Token::ZYPTO",
-      "currencyId": "Zypto Token::ZYPTO"
+      "currencyId": "Zypto Token::ZYPTO",
+      "props": {
+        "ccip": {
+          "pool": "0xe3ce34766e8800d906b81e627efa82e2accd6634",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453", "42161"]
+        }
+      }
     },
     "0x8e4cbbcc33db6c0a18561fde1f6ba35906d4848b": {
       "chainId": "56",
@@ -90064,7 +90762,16 @@
       "symbol": "ZEST",
       "logoURI": "https://assets.coingecko.com/coins/images/102173294/thumb/zest.jpg?1778837125",
       "assetGroup": "Zest Protocol::ZEST",
-      "currencyId": "Zest Protocol::ZEST"
+      "currencyId": "Zest Protocol::ZEST",
+      "props": {
+        "ccip": {
+          "pool": "0x82e689cec1f20fa5c909c91c1161003f23667918",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x6033d631eb755de86cbd66c0e40eaea52c132515": {
       "chainId": "56",
@@ -90388,9 +91095,16 @@
       "currencyId": "apxUSD::APXUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
@@ -90407,11 +91121,18 @@
       "currencyId": "apyUSD::APYUSD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "savings_inherit"
         },
         "savings": { "underlying": "apxUSD", "base": "USD" },
+        "ccip": {
+          "pool": "0x363332b186a4afce7a754a49f34d1543aec5e786",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "apyx", "name": "Apyx", "kind": "protocol" }
       }
@@ -90583,7 +91304,16 @@
       "symbol": "BKN",
       "logoURI": "https://assets.coingecko.com/coins/images/18474/thumb/brickken-coin.png?1696517960",
       "assetGroup": "Brickken::BKN::56::0",
-      "currencyId": "Brickken::BKN"
+      "currencyId": "Brickken::BKN",
+      "props": {
+        "ccip": {
+          "pool": "0x995d8725bfe4909999b86bb09cf7cb9fc199dd8a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x500a02a20b0b0a3f3efccfc0559543f5743bd1c4": {
       "chainId": "56",
@@ -90803,6 +91533,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x500d4882938020e939a5666c1b4200873da7efd3",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
@@ -91118,6 +91855,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0x904939a965edc2efbd44fd4db223f07680510c61",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1", "143"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
       }
@@ -91276,7 +92020,16 @@
       "symbol": "FLOCK",
       "logoURI": "https://assets.coingecko.com/coins/images/53178/thumb/FLock_Token_Logo.png?1735561398",
       "assetGroup": "FLOCK::FLOCK",
-      "currencyId": "FLOCK::FLOCK"
+      "currencyId": "FLOCK::FLOCK",
+      "props": {
+        "ccip": {
+          "pool": "0x05e42e03996379cd0b6290cc2767a1bdd78b737a",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "8453",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x8554d38b95e4f7ca11d391008627df30b2b07777": {
       "chainId": "56",
@@ -94603,6 +95356,826 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179864/thumb/RIOTs.png?1793259501",
       "assetGroup": "Riot Platforms (Stove Tokenized Stock)::RIOTS",
       "currencyId": "Riot Platforms (Stove Tokenized Stock)::RIOTS"
+    },
+    "0xc895d166fe59841dc71003f80d7ef2f00f40a4be": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Bending Spoons (bStocks Tokenized Stock)",
+      "address": "0xc895d166fe59841dc71003f80d7ef2f00f40a4be",
+      "symbol": "BSPB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179918/thumb/bsbp.png?1793352032",
+      "assetGroup": "Bending Spoons (bStocks Tokenized Stock)::BSPB",
+      "currencyId": "Bending Spoons (bStocks Tokenized Stock)::BSPB"
+    },
+    "0x515f386fc664980db2ab30c574ec210983232493": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "GraniteShares 2x Short SK Hynix Daily ETF (bStocks Tokenized",
+      "address": "0x515f386fc664980db2ab30c574ec210983232493",
+      "symbol": "SKDDB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179919/thumb/skddb.png?1793352512",
+      "assetGroup": "GraniteShares 2x Short SK Hynix Daily ETF (bStocks Tokenized::SKDDB",
+      "currencyId": "GraniteShares 2x Short SK Hynix Daily ETF (bStocks Tokenized::SKDDB"
+    },
+    "0x97e8cfe35467d7ad6ed672d519e466200fb394d0": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "GraniteShares 2x Long SK Hynix Daily ETF (bStocks Tokenized ",
+      "address": "0x97e8cfe35467d7ad6ed672d519e466200fb394d0",
+      "symbol": "SKUUB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179920/thumb/skuub.png?1793352765",
+      "assetGroup": "GraniteShares 2x Long SK Hynix Daily ETF (bStocks Tokenized ::SKUUB",
+      "currencyId": "GraniteShares 2x Long SK Hynix Daily ETF (bStocks Tokenized ::SKUUB"
+    },
+    "0xdd806e436dda5588bf54061c11590c77ddc87777": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Funds Are Safu",
+      "address": "0xdd806e436dda5588bf54061c11590c77ddc87777",
+      "symbol": "SAFU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179944/thumb/token-logo-200x200.png?1793466479",
+      "assetGroup": "Funds Are Safu::SAFU",
+      "currencyId": "Funds Are Safu::SAFU"
+    },
+    "0x5eadd95a428bc66698620c093eddd8a4b3165269": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "GE Vernova (bStocks Tokenized Stock)",
+      "address": "0x5eadd95a428bc66698620c093eddd8a4b3165269",
+      "symbol": "GEVB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179917/thumb/gevb.png?1793351818",
+      "assetGroup": "GE Vernova (bStocks Tokenized Stock)::GEVB",
+      "currencyId": "GE Vernova (bStocks Tokenized Stock)::GEVB"
+    },
+    "0xd7057e7c56b9c2d5f0a3e639d07610db31c949c8": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "LITY",
+      "address": "0xd7057e7c56b9c2d5f0a3e639d07610db31c949c8",
+      "symbol": "LITY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179979/thumb/lity.jpg?1793543688",
+      "assetGroup": "LITY::LITY",
+      "currencyId": "LITY::LITY"
+    },
+    "0x8e6442663a4f8c50b6132c68d42a30e7dfe4ae15": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "JAGENT",
+      "address": "0x8e6442663a4f8c50b6132c68d42a30e7dfe4ae15",
+      "symbol": "JAGENT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179983/thumb/jager.jpg?1793606697",
+      "assetGroup": "JAGENT::JAGENT",
+      "currencyId": "JAGENT::JAGENT"
+    },
+    "0x15ec59551096d5ae2df8cde08618035145828548": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Applovin (bStocks Tokenized Stock)",
+      "address": "0x15ec59551096d5ae2df8cde08618035145828548",
+      "symbol": "APPB",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179921/thumb/appb.png?1793352978",
+      "assetGroup": "Applovin (bStocks Tokenized Stock)::APPB",
+      "currencyId": "Applovin (bStocks Tokenized Stock)::APPB"
+    },
+    "0xcdea030148a0c454670a0465011a50357e530ad0": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "O'Reilly Automotive (Stove Tokenized Stock)",
+      "address": "0xcdea030148a0c454670a0465011a50357e530ad0",
+      "symbol": "ORLYS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179966/thumb/ORLYs.png?1793468645",
+      "assetGroup": "O'Reilly Automotive (Stove Tokenized Stock)::ORLYS",
+      "currencyId": "O'Reilly Automotive (Stove Tokenized Stock)::ORLYS"
+    },
+    "0x4cc6791a4e099ce6bc5d3469586c9f4156f71a87": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Microchip Technology (Stove Tokenized Stock)",
+      "address": "0x4cc6791a4e099ce6bc5d3469586c9f4156f71a87",
+      "symbol": "MCHPS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179957/thumb/MCHPs.png?1793468122",
+      "assetGroup": "Microchip Technology (Stove Tokenized Stock)::MCHPS",
+      "currencyId": "Microchip Technology (Stove Tokenized Stock)::MCHPS"
+    },
+    "0xb45a2afef9996e65210dda12c1f896c6011c7512": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "The Kraft Heinz (Stove Tokenized Stock)",
+      "address": "0xb45a2afef9996e65210dda12c1f896c6011c7512",
+      "symbol": "KHCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179959/thumb/KHCs.png?1793468253",
+      "assetGroup": "The Kraft Heinz (Stove Tokenized Stock)::KHCS",
+      "currencyId": "The Kraft Heinz (Stove Tokenized Stock)::KHCS"
+    },
+    "0xe79599a689affd24fed53e8af2d1ad7c921a749d": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Copart (Stove Tokenized Stock)",
+      "address": "0xe79599a689affd24fed53e8af2d1ad7c921a749d",
+      "symbol": "CPRTS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179958/thumb/CPRTs.png?1793468174",
+      "assetGroup": "Copart (Stove Tokenized Stock)::CPRTS",
+      "currencyId": "Copart (Stove Tokenized Stock)::CPRTS"
+    },
+    "0xff97b9284a14c82d3e581f98a30614da652745fe": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "NextEra Energy (Stove Tokenized Stock)",
+      "address": "0xff97b9284a14c82d3e581f98a30614da652745fe",
+      "symbol": "NEES",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179960/thumb/NEEs.png?1793468302",
+      "assetGroup": "NextEra Energy (Stove Tokenized Stock)::NEES",
+      "currencyId": "NextEra Energy (Stove Tokenized Stock)::NEES"
+    },
+    "0xb911d4fb72a97bf7afab20434ef72eaf9c878149": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Booking Holdings (Stove Tokenized Stock)",
+      "address": "0xb911d4fb72a97bf7afab20434ef72eaf9c878149",
+      "symbol": "BKNGS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179961/thumb/BKNGs.png?1793468360",
+      "assetGroup": "Booking Holdings (Stove Tokenized Stock)::BKNGS",
+      "currencyId": "Booking Holdings (Stove Tokenized Stock)::BKNGS"
+    },
+    "0x878616ffbbb0b1eb54bbb0a914333dc735763ed5": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "CSX Corp (Stove Tokenized Stock)",
+      "address": "0x878616ffbbb0b1eb54bbb0a914333dc735763ed5",
+      "symbol": "CSXS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179962/thumb/CSXs.png?1793468436",
+      "assetGroup": "CSX Corp (Stove Tokenized Stock)::CSXS",
+      "currencyId": "CSX Corp (Stove Tokenized Stock)::CSXS"
+    },
+    "0x55645d12642a0857682e94780fa56464e1a39f23": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Exxon Mobil (Stove Tokenized Stock)",
+      "address": "0x55645d12642a0857682e94780fa56464e1a39f23",
+      "symbol": "XOMS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179963/thumb/XOMs.png?1793468477",
+      "assetGroup": "Exxon Mobil (Stove Tokenized Stock)::XOMS",
+      "currencyId": "Exxon Mobil (Stove Tokenized Stock)::XOMS"
+    },
+    "0x2ae51f3d827078e558ac3f94f9364764b1be7cf5": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "HP Inc (Stove Tokenized Stock)",
+      "address": "0x2ae51f3d827078e558ac3f94f9364764b1be7cf5",
+      "symbol": "HPQS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179964/thumb/HPQs.png?1793468543",
+      "assetGroup": "HP Inc (Stove Tokenized Stock)::HPQS",
+      "currencyId": "HP Inc (Stove Tokenized Stock)::HPQS"
+    },
+    "0xb5f44eb9e3f97254fe9fe4bbb20a32d683fdc529": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZDEK ETF (Ondo Tokenized ETF)",
+      "address": "0xb5f44eb9e3f97254fe9fe4bbb20a32d683fdc529",
+      "symbol": "ZDEKON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179922/thumb/zdekon.png?1793355185",
+      "assetGroup": "Innovator ZDEK ETF (Ondo Tokenized ETF)::ZDEKON",
+      "currencyId": "Innovator ZDEK ETF (Ondo Tokenized ETF)::ZDEKON"
+    },
+    "0x820f09c2ebe7852e14a1310008bf7af4d29d4f09": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Twist Bioscience (Ondo Tokenized)",
+      "address": "0x820f09c2ebe7852e14a1310008bf7af4d29d4f09",
+      "symbol": "TWSTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179923/thumb/twston.png?1793357468",
+      "assetGroup": "Twist Bioscience (Ondo Tokenized)::TWSTON",
+      "currencyId": "Twist Bioscience (Ondo Tokenized)::TWSTON"
+    },
+    "0xac0919d699ee1725d30d5ced86cfd553c33dc36a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Insmed (Ondo Tokenized)",
+      "address": "0xac0919d699ee1725d30d5ced86cfd553c33dc36a",
+      "symbol": "INSMON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179924/thumb/insmon.png?1793357774",
+      "assetGroup": "Insmed (Ondo Tokenized)::INSMON",
+      "currencyId": "Insmed (Ondo Tokenized)::INSMON"
+    },
+    "0x56bb3f07ab727d9a68c77eb132bcbbf294177222": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Erasca (Ondo Tokenized)",
+      "address": "0x56bb3f07ab727d9a68c77eb132bcbbf294177222",
+      "symbol": "ERASON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179925/thumb/erason.png?1793358177",
+      "assetGroup": "Erasca (Ondo Tokenized)::ERASON",
+      "currencyId": "Erasca (Ondo Tokenized)::ERASON"
+    },
+    "0x0f3931104d9ce770fe33b1032bedf32d67273fe0": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "BioNTech SE (Ondo Tokenized)",
+      "address": "0x0f3931104d9ce770fe33b1032bedf32d67273fe0",
+      "symbol": "BNTXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179926/thumb/bion.png?1793358376",
+      "assetGroup": "BioNTech SE (Ondo Tokenized)::BNTXON",
+      "currencyId": "BioNTech SE (Ondo Tokenized)::BNTXON"
+    },
+    "0x452248f839755c7b777bbc0f6aa49d7f05eb8020": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Natera (Ondo Tokenized)",
+      "address": "0x452248f839755c7b777bbc0f6aa49d7f05eb8020",
+      "symbol": "NTRAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179929/thumb/ntraon.png?1793360373",
+      "assetGroup": "Natera (Ondo Tokenized)::NTRAON",
+      "currencyId": "Natera (Ondo Tokenized)::NTRAON"
+    },
+    "0x14315f0dd6765935ebd9642242aa4f52cb975fef": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "BioMarin Pharmaceutical (Ondo Tokenized)",
+      "address": "0x14315f0dd6765935ebd9642242aa4f52cb975fef",
+      "symbol": "BMRNON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179930/thumb/bmrnon.png?1793360578",
+      "assetGroup": "BioMarin Pharmaceutical (Ondo Tokenized)::BMRNON",
+      "currencyId": "BioMarin Pharmaceutical (Ondo Tokenized)::BMRNON"
+    },
+    "0xa3e7b4ee9ae8dfe8c9eb7e4e58fdb042f6d179f9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)",
+      "address": "0xa3e7b4ee9ae8dfe8c9eb7e4e58fdb042f6d179f9",
+      "symbol": "BITAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179932/thumb/bitaon.png?1793360991",
+      "assetGroup": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)::BITAON",
+      "currencyId": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)::BITAON"
+    },
+    "0x80d672ea969ea634345618312c8ccf4322f0675c": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Strive (Ondo Tokenized)",
+      "address": "0x80d672ea969ea634345618312c8ccf4322f0675c",
+      "symbol": "ASSTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179933/thumb/asston.png?1793361245",
+      "assetGroup": "Strive (Ondo Tokenized)::ASSTON",
+      "currencyId": "Strive (Ondo Tokenized)::ASSTON"
+    },
+    "0x6a28d66cd0db1730c1227465f03848e295a34b21": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Protagonist Therapeutics (Ondo Tokenized)",
+      "address": "0x6a28d66cd0db1730c1227465f03848e295a34b21",
+      "symbol": "PTGXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179928/thumb/ptgxon.png?1793360088",
+      "assetGroup": "Protagonist Therapeutics (Ondo Tokenized)::PTGXON",
+      "currencyId": "Protagonist Therapeutics (Ondo Tokenized)::PTGXON"
+    },
+    "0x3a5cc5222ea69bcb47cbeb5da2427568244a1f69": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Strive SATS Preferred (Ondo Tokenized)",
+      "address": "0x3a5cc5222ea69bcb47cbeb5da2427568244a1f69",
+      "symbol": "SATSON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179934/thumb/satson.png?1793361896",
+      "assetGroup": "Strive SATS Preferred (Ondo Tokenized)::SATSON",
+      "currencyId": "Strive SATS Preferred (Ondo Tokenized)::SATSON"
+    },
+    "0x3f41bcf043a07ca9dc734f24b0a77c01cbfa0e8d": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Caris Life Sciences (Ondo Tokenized)",
+      "address": "0x3f41bcf043a07ca9dc734f24b0a77c01cbfa0e8d",
+      "symbol": "CAION",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179935/thumb/caion.png?1793362175",
+      "assetGroup": "Caris Life Sciences (Ondo Tokenized)::CAION",
+      "currencyId": "Caris Life Sciences (Ondo Tokenized)::CAION"
+    },
+    "0x5585d6565b7757a882cb29f3d4a19d6bec2490c2": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Freeport-McMoRan (Stove Tokenized Stock)",
+      "address": "0x5585d6565b7757a882cb29f3d4a19d6bec2490c2",
+      "symbol": "FCXS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179965/thumb/FCXs.png?1793468593",
+      "assetGroup": "Freeport-McMoRan (Stove Tokenized Stock)::FCXS",
+      "currencyId": "Freeport-McMoRan (Stove Tokenized Stock)::FCXS"
+    },
+    "0xa3d8172f48dc8bb7336f57526336acd6f8139ec3": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Steel Dynamics (Stove Tokenized Stock)",
+      "address": "0xa3d8172f48dc8bb7336f57526336acd6f8139ec3",
+      "symbol": "STLDS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180007/thumb/STLDs.png?1793690983",
+      "assetGroup": "Steel Dynamics (Stove Tokenized Stock)::STLDS",
+      "currencyId": "Steel Dynamics (Stove Tokenized Stock)::STLDS"
+    },
+    "0xbf6df35429c43ac0c23b245f6efe70f4b08961a9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Eli Lilly and Co (Stove Tokenized Stock)",
+      "address": "0xbf6df35429c43ac0c23b245f6efe70f4b08961a9",
+      "symbol": "LLYS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180017/thumb/LLYs.png?1793691011",
+      "assetGroup": "Eli Lilly and Co (Stove Tokenized Stock)::LLYS",
+      "currencyId": "Eli Lilly and Co (Stove Tokenized Stock)::LLYS"
+    },
+    "0xffe303c1780875df7473c7904bcdff583089b220": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Best Buy (Stove Tokenized Stock)",
+      "address": "0xffe303c1780875df7473c7904bcdff583089b220",
+      "symbol": "BBYS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180018/thumb/BBYs.png?1793691014",
+      "assetGroup": "Best Buy (Stove Tokenized Stock)::BBYS",
+      "currencyId": "Best Buy (Stove Tokenized Stock)::BBYS"
+    },
+    "0x25d3e0b0e5157c502f8cefcbccdbe8e6b6d3408a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Blackstone (Stove Tokenized Stock)",
+      "address": "0x25d3e0b0e5157c502f8cefcbccdbe8e6b6d3408a",
+      "symbol": "BXS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180019/thumb/BXs.png?1793691016",
+      "assetGroup": "Blackstone (Stove Tokenized Stock)::BXS",
+      "currencyId": "Blackstone (Stove Tokenized Stock)::BXS"
+    },
+    "0xc6cafae900b6f788f971688d7c4b0c74b64d9e3e": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PPL Corp (Stove Tokenized Stock)",
+      "address": "0xc6cafae900b6f788f971688d7c4b0c74b64d9e3e",
+      "symbol": "PPLS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180022/thumb/PPLs.png?1793691027",
+      "assetGroup": "PPL Corp (Stove Tokenized Stock)::PPLS",
+      "currencyId": "PPL Corp (Stove Tokenized Stock)::PPLS"
+    },
+    "0xd82d25f8d47af1ab13ef707b10210132bf3c2240": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Abbott Laboratories (Stove Tokenized Stock)",
+      "address": "0xd82d25f8d47af1ab13ef707b10210132bf3c2240",
+      "symbol": "ABTS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180023/thumb/ABTs.png?1793691030",
+      "assetGroup": "Abbott Laboratories (Stove Tokenized Stock)::ABTS",
+      "currencyId": "Abbott Laboratories (Stove Tokenized Stock)::ABTS"
+    },
+    "0x1c2f7d34b8940f7d4abb0787be052b4146d90c8a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Wells Fargo & Co (Stove Tokenized Stock)",
+      "address": "0x1c2f7d34b8940f7d4abb0787be052b4146d90c8a",
+      "symbol": "WFCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180024/thumb/WFCs.png?1793691033",
+      "assetGroup": "Wells Fargo & Co (Stove Tokenized Stock)::WFCS",
+      "currencyId": "Wells Fargo & Co (Stove Tokenized Stock)::WFCS"
+    },
+    "0x2a5bc714e452ccdf5d52e3071d24c23e687a1ead": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "The Trade Desk (Stove Tokenized Stock)",
+      "address": "0x2a5bc714e452ccdf5d52e3071d24c23e687a1ead",
+      "symbol": "TTDS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180025/thumb/TTDs.png?1793691035",
+      "assetGroup": "The Trade Desk (Stove Tokenized Stock)::TTDS",
+      "currencyId": "The Trade Desk (Stove Tokenized Stock)::TTDS"
+    },
+    "0xf05e6b8cb6916b0466a2603bf4d985a20073a700": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Baker Hughes (Stove Tokenized Stock)",
+      "address": "0xf05e6b8cb6916b0466a2603bf4d985a20073a700",
+      "symbol": "BKRS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180030/thumb/BKRs.png?1793691047",
+      "assetGroup": "Baker Hughes (Stove Tokenized Stock)::BKRS",
+      "currencyId": "Baker Hughes (Stove Tokenized Stock)::BKRS"
+    },
+    "0x6b6b3e166ec666ea16525265c533360b769e56ea": {
+      "chainId": "56",
+      "decimals": 9,
+      "name": "one coin",
+      "address": "0x6b6b3e166ec666ea16525265c533360b769e56ea",
+      "symbol": "ONECOIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179975/thumb/32724B4E-EC80-4FA4-9BC0-4DAEF3CFD60A.jpeg?1793539703",
+      "assetGroup": "one coin::ONECOIN",
+      "currencyId": "one coin::ONECOIN"
+    },
+    "0x13686062f1d32f49a20c04e2f5fa6723ea515ed2": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Coupang (Stove Tokenized Stock)",
+      "address": "0x13686062f1d32f49a20c04e2f5fa6723ea515ed2",
+      "symbol": "CPNGS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179888/thumb/CPNGs.png?1793333831",
+      "assetGroup": "Coupang (Stove Tokenized Stock)::CPNGS",
+      "currencyId": "Coupang (Stove Tokenized Stock)::CPNGS"
+    },
+    "0x6d339da388de327143d850801be9e92c8554d3ae": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Keurig Dr Pepper (Stove Tokenized Stock)",
+      "address": "0x6d339da388de327143d850801be9e92c8554d3ae",
+      "symbol": "KDPS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179886/thumb/KDPs.png?1793333531",
+      "assetGroup": "Keurig Dr Pepper (Stove Tokenized Stock)::KDPS",
+      "currencyId": "Keurig Dr Pepper (Stove Tokenized Stock)::KDPS"
+    },
+    "0x1f696469b2200e7626f7ce1646400a95ea127820": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "AGNC Investment Corp (Stove Tokenized Stock)",
+      "address": "0x1f696469b2200e7626f7ce1646400a95ea127820",
+      "symbol": "AGNCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179887/thumb/AGNCs.png?1793333693",
+      "assetGroup": "AGNC Investment Corp (Stove Tokenized Stock)::AGNCS",
+      "currencyId": "AGNC Investment Corp (Stove Tokenized Stock)::AGNCS"
+    },
+    "0x25b29ff85462a9725e81587e6c5115522a05c036": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Applied Optoelectronics (Stove Tokenized Stock)",
+      "address": "0x25b29ff85462a9725e81587e6c5115522a05c036",
+      "symbol": "AAOIS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179889/thumb/AAOIs.png?1793333929",
+      "assetGroup": "Applied Optoelectronics (Stove Tokenized Stock)::AAOIS",
+      "currencyId": "Applied Optoelectronics (Stove Tokenized Stock)::AAOIS"
+    },
+    "0x3885cd3104f19961abc54b3dccb59cf539fc4748": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Bloom Energy (Stove Tokenized Stock)",
+      "address": "0x3885cd3104f19961abc54b3dccb59cf539fc4748",
+      "symbol": "BES",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179890/thumb/BEs.png?1793333990",
+      "assetGroup": "Bloom Energy (Stove Tokenized Stock)::BES",
+      "currencyId": "Bloom Energy (Stove Tokenized Stock)::BES"
+    },
+    "0xbb4f48cc5b086642128e7cbeab7efe725c87874d": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Huntington Bancshares (Stove Tokenized Stock)",
+      "address": "0xbb4f48cc5b086642128e7cbeab7efe725c87874d",
+      "symbol": "HBANS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179891/thumb/HBANs.png?1793334070",
+      "assetGroup": "Huntington Bancshares (Stove Tokenized Stock)::HBANS",
+      "currencyId": "Huntington Bancshares (Stove Tokenized Stock)::HBANS"
+    },
+    "0xa45d5781d24731b57ec3423b172c91d0f92cee93": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Applied Materials (Stove Tokenized Stock)",
+      "address": "0xa45d5781d24731b57ec3423b172c91d0f92cee93",
+      "symbol": "AMATS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179893/thumb/AMATs.png?1793334223",
+      "assetGroup": "Applied Materials (Stove Tokenized Stock)::AMATS",
+      "currencyId": "Applied Materials (Stove Tokenized Stock)::AMATS"
+    },
+    "0x325464121cbd7bec42f1e11ddbbe4e741852febb": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Devon Energy (Stove Tokenized Stock)",
+      "address": "0x325464121cbd7bec42f1e11ddbbe4e741852febb",
+      "symbol": "DVNS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179892/thumb/DVNs.png?1793334156",
+      "assetGroup": "Devon Energy (Stove Tokenized Stock)::DVNS",
+      "currencyId": "Devon Energy (Stove Tokenized Stock)::DVNS"
+    },
+    "0x03ac7361932de5d3ba5afe8d7af750c33cfbfd8c": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "The AES Corp (Stove Tokenized Stock)",
+      "address": "0x03ac7361932de5d3ba5afe8d7af750c33cfbfd8c",
+      "symbol": "AESS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179894/thumb/AESs.png?1793334309",
+      "assetGroup": "The AES Corp (Stove Tokenized Stock)::AESS",
+      "currencyId": "The AES Corp (Stove Tokenized Stock)::AESS"
+    },
+    "0xd8601e46fb3c3421c83311ac3b127d035e860b82": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Chipotle Mexican Grill (Stove Tokenized Stock)",
+      "address": "0xd8601e46fb3c3421c83311ac3b127d035e860b82",
+      "symbol": "CMGS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179895/thumb/CMGs.png?1793334398",
+      "assetGroup": "Chipotle Mexican Grill (Stove Tokenized Stock)::CMGS",
+      "currencyId": "Chipotle Mexican Grill (Stove Tokenized Stock)::CMGS"
+    },
+    "0x7b5d01d315485280e6c4fe620405fb9c2e226a33": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZJAN ETF (Ondo Tokenized ETF)",
+      "address": "0x7b5d01d315485280e6c4fe620405fb9c2e226a33",
+      "symbol": "ZJANON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179900/thumb/zjan.png?1793342446",
+      "assetGroup": "Innovator ZJAN ETF (Ondo Tokenized ETF)::ZJANON",
+      "currencyId": "Innovator ZJAN ETF (Ondo Tokenized ETF)::ZJANON"
+    },
+    "0x6e2be4514b705c9fad357e6e556c67c710190bb9": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZFEB ETF (Ondo Tokenized ETF)",
+      "address": "0x6e2be4514b705c9fad357e6e556c67c710190bb9",
+      "symbol": "ZFEBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179901/thumb/zfeb.png?1793342844",
+      "assetGroup": "Innovator ZFEB ETF (Ondo Tokenized ETF)::ZFEBON",
+      "currencyId": "Innovator ZFEB ETF (Ondo Tokenized ETF)::ZFEBON"
+    },
+    "0xc83075d19dfba5fb16dfcc7e1901127797b41804": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZMAR ETF (Ondo Tokenized ETF)",
+      "address": "0xc83075d19dfba5fb16dfcc7e1901127797b41804",
+      "symbol": "ZMARON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179902/thumb/zmaron.png?1793343140",
+      "assetGroup": "Innovator ZMAR ETF (Ondo Tokenized ETF)::ZMARON",
+      "currencyId": "Innovator ZMAR ETF (Ondo Tokenized ETF)::ZMARON"
+    },
+    "0x7c2494b59500aeb76eb942579a0f2c080da4bda0": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZAPR ETF (Ondo Tokenized ETF)",
+      "address": "0x7c2494b59500aeb76eb942579a0f2c080da4bda0",
+      "symbol": "ZAPRON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179903/thumb/zmonthon.png?1793343362",
+      "assetGroup": "Innovator ZAPR ETF (Ondo Tokenized ETF)::ZAPRON",
+      "currencyId": "Innovator ZAPR ETF (Ondo Tokenized ETF)::ZAPRON"
+    },
+    "0xb41d89c61aa53097184e2f47abcb23cc15ac266e": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZMAY ETF (Ondo Tokenized ETF)",
+      "address": "0xb41d89c61aa53097184e2f47abcb23cc15ac266e",
+      "symbol": "ZMAYON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179904/thumb/zmonthon.png?1793343479",
+      "assetGroup": "Innovator ZMAY ETF (Ondo Tokenized ETF)::ZMAYON",
+      "currencyId": "Innovator ZMAY ETF (Ondo Tokenized ETF)::ZMAYON"
+    },
+    "0xc5337e92bb8ec00722985f85287c928961bd82df": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZJUN ETF (Ondo Tokenized ETF)",
+      "address": "0xc5337e92bb8ec00722985f85287c928961bd82df",
+      "symbol": "ZJUNON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179905/thumb/zmonthon.png?1793343603",
+      "assetGroup": "Innovator ZJUN ETF (Ondo Tokenized ETF)::ZJUNON",
+      "currencyId": "Innovator ZJUN ETF (Ondo Tokenized ETF)::ZJUNON"
+    },
+    "0x16b384878990f94fe3a6a18e5e46a5eff1a50a08": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZJUL ETF (Ondo Tokenized ETF)",
+      "address": "0x16b384878990f94fe3a6a18e5e46a5eff1a50a08",
+      "symbol": "ZJULON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179906/thumb/zmonthon.png?1793343979",
+      "assetGroup": "Innovator ZJUL ETF (Ondo Tokenized ETF)::ZJULON",
+      "currencyId": "Innovator ZJUL ETF (Ondo Tokenized ETF)::ZJULON"
+    },
+    "0x11b664414291512f3b13c7127768ba16fbea35a5": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZAUG ETF (Ondo Tokenized ETF)",
+      "address": "0x11b664414291512f3b13c7127768ba16fbea35a5",
+      "symbol": "ZAUGON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179907/thumb/zmonthon.png?1793344129",
+      "assetGroup": "Innovator ZAUG ETF (Ondo Tokenized ETF)::ZAUGON",
+      "currencyId": "Innovator ZAUG ETF (Ondo Tokenized ETF)::ZAUGON"
+    },
+    "0x2c4846bb54b2d232d89f9ce763005f0861c72921": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZSEP ETF (Ondo Tokenized ETF)",
+      "address": "0x2c4846bb54b2d232d89f9ce763005f0861c72921",
+      "symbol": "ZSEPON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179908/thumb/zmonthon.png?1793344291",
+      "assetGroup": "Innovator ZSEP ETF (Ondo Tokenized ETF)::ZSEPON",
+      "currencyId": "Innovator ZSEP ETF (Ondo Tokenized ETF)::ZSEPON"
+    },
+    "0xb041e45025ef1d3d149f37b984191faf9af55dea": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZNOV ETF (Ondo Tokenized ETF)",
+      "address": "0xb041e45025ef1d3d149f37b984191faf9af55dea",
+      "symbol": "ZNOVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179910/thumb/zmonthon.png?1793344601",
+      "assetGroup": "Innovator ZNOV ETF (Ondo Tokenized ETF)::ZNOVON",
+      "currencyId": "Innovator ZNOV ETF (Ondo Tokenized ETF)::ZNOVON"
+    },
+    "0x4f1a7e696e2550fffd3c241ffafa3cfbe603078a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Innovator ZOCT ETF (Ondo Tokenized ETF)",
+      "address": "0x4f1a7e696e2550fffd3c241ffafa3cfbe603078a",
+      "symbol": "ZOCTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179909/thumb/zmonthon.png?1793344469",
+      "assetGroup": "Innovator ZOCT ETF (Ondo Tokenized ETF)::ZOCTON",
+      "currencyId": "Innovator ZOCT ETF (Ondo Tokenized ETF)::ZOCTON"
+    },
+    "0x73f909fc67dc672bfa3ac26824cda0e513022b7d": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "PG&E Corp (Stove Tokenized Stock)",
+      "address": "0x73f909fc67dc672bfa3ac26824cda0e513022b7d",
+      "symbol": "PCGS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180006/thumb/PCGs.png?1793690979",
+      "assetGroup": "PG&E Corp (Stove Tokenized Stock)::PCGS",
+      "currencyId": "PG&E Corp (Stove Tokenized Stock)::PCGS"
+    },
+    "0x16ce3f1e738d0e7a950714020b8ba809ddbde488": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Allstate (Stove Tokenized Stock)",
+      "address": "0x16ce3f1e738d0e7a950714020b8ba809ddbde488",
+      "symbol": "ALLS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180009/thumb/Stove_logo.png?1793690990",
+      "assetGroup": "Allstate (Stove Tokenized Stock)::ALLS",
+      "currencyId": "Allstate (Stove Tokenized Stock)::ALLS"
+    },
+    "0x5d39711726df7f375b7bb7e75a65eec3cd914511": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Columbia Banking System (Stove Tokenized Stock)",
+      "address": "0x5d39711726df7f375b7bb7e75a65eec3cd914511",
+      "symbol": "COLBS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180015/thumb/COLBs.png?1793691007",
+      "assetGroup": "Columbia Banking System (Stove Tokenized Stock)::COLBS",
+      "currencyId": "Columbia Banking System (Stove Tokenized Stock)::COLBS"
+    },
+    "0x2987753dfe845b788bab443ad6b3ffee911d24f4": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Regal Rexnord (Stove Tokenized Stock)",
+      "address": "0x2987753dfe845b788bab443ad6b3ffee911d24f4",
+      "symbol": "RRXS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180011/thumb/Stove_logo.png?1793690994",
+      "assetGroup": "Regal Rexnord (Stove Tokenized Stock)::RRXS",
+      "currencyId": "Regal Rexnord (Stove Tokenized Stock)::RRXS"
+    },
+    "0xbd44d361935c0762a71828d3afdf7f24063803ea": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Block (Stove Tokenized Stock)",
+      "address": "0xbd44d361935c0762a71828d3afdf7f24063803ea",
+      "symbol": "XYZS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180033/thumb/XYZs.png?1793691055",
+      "assetGroup": "Block (Stove Tokenized Stock)::XYZS",
+      "currencyId": "Block (Stove Tokenized Stock)::XYZS"
+    },
+    "0x06deab904082a65b8d90c77ac975e8b15007f61e": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "SLB Ltd (Stove Tokenized Stock)",
+      "address": "0x06deab904082a65b8d90c77ac975e8b15007f61e",
+      "symbol": "SLBS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180028/thumb/SLBs.png?1793691042",
+      "assetGroup": "SLB Ltd (Stove Tokenized Stock)::SLBS",
+      "currencyId": "SLB Ltd (Stove Tokenized Stock)::SLBS"
+    },
+    "0x9a381c8ab7956bbb8aaef00a682f91d7e7ffbfa7": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Dow Inc (Stove Tokenized Stock)",
+      "address": "0x9a381c8ab7956bbb8aaef00a682f91d7e7ffbfa7",
+      "symbol": "DOWS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180029/thumb/DOWs.png?1793691044",
+      "assetGroup": "Dow Inc (Stove Tokenized Stock)::DOWS",
+      "currencyId": "Dow Inc (Stove Tokenized Stock)::DOWS"
+    },
+    "0xe0271327c4f2666a8ae92974e872a23201813eb7": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Honeywell (Stove Tokenized Stock)",
+      "address": "0xe0271327c4f2666a8ae92974e872a23201813eb7",
+      "symbol": "HONS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180034/thumb/HONs.png?1793691058",
+      "assetGroup": "Honeywell (Stove Tokenized Stock)::HONS",
+      "currencyId": "Honeywell (Stove Tokenized Stock)::HONS"
+    },
+    "0x1d34ffcb4cfb25c88aa51e287c372b3d844b91c1": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "SS&C Technologies (Stove Tokenized Stock)",
+      "address": "0x1d34ffcb4cfb25c88aa51e287c372b3d844b91c1",
+      "symbol": "SSNCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180008/thumb/SSNCs.png?1793690987",
+      "assetGroup": "SS&C Technologies (Stove Tokenized Stock)::SSNCS",
+      "currencyId": "SS&C Technologies (Stove Tokenized Stock)::SSNCS"
+    },
+    "0x701c2505c61bd217563faf255ab21b50ea60c7a8": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "HF Sinclair (Stove Tokenized Stock)",
+      "address": "0x701c2505c61bd217563faf255ab21b50ea60c7a8",
+      "symbol": "DINOS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180010/thumb/Stove_logo.png?1793690992",
+      "assetGroup": "HF Sinclair (Stove Tokenized Stock)::DINOS",
+      "currencyId": "HF Sinclair (Stove Tokenized Stock)::DINOS"
+    },
+    "0x38d659b47a55ba13977f8a2ff11079df306369fb": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Xylem (Stove Tokenized Stock)",
+      "address": "0x38d659b47a55ba13977f8a2ff11079df306369fb",
+      "symbol": "XYLS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180012/thumb/Stove_logo.png?1793690999",
+      "assetGroup": "Xylem (Stove Tokenized Stock)::XYLS",
+      "currencyId": "Xylem (Stove Tokenized Stock)::XYLS"
+    },
+    "0x6c34b0b287ffb189ea9cd906822340d695a3e446": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Manulife Financial (Stove Tokenized Stock)",
+      "address": "0x6c34b0b287ffb189ea9cd906822340d695a3e446",
+      "symbol": "MFCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180013/thumb/MFCs.png?1793691001",
+      "assetGroup": "Manulife Financial (Stove Tokenized Stock)::MFCS",
+      "currencyId": "Manulife Financial (Stove Tokenized Stock)::MFCS"
+    },
+    "0x63a5851dff82974997f48f91bd326b9a307dfbea": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Raymond James Financial (Stove Tokenized Stock)",
+      "address": "0x63a5851dff82974997f48f91bd326b9a307dfbea",
+      "symbol": "RJFS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180014/thumb/RJFs.png?1793691004",
+      "assetGroup": "Raymond James Financial (Stove Tokenized Stock)::RJFS",
+      "currencyId": "Raymond James Financial (Stove Tokenized Stock)::RJFS"
+    },
+    "0x95a814646453dbb6e2a33cb7c2f15ceff891e9a5": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Diamondback Energy (Stove Tokenized Stock)",
+      "address": "0x95a814646453dbb6e2a33cb7c2f15ceff891e9a5",
+      "symbol": "FANGS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180016/thumb/FANGs.png?1793691009",
+      "assetGroup": "Diamondback Energy (Stove Tokenized Stock)::FANGS",
+      "currencyId": "Diamondback Energy (Stove Tokenized Stock)::FANGS"
+    },
+    "0xbe5642257f0c80e1f226d13cfcbc3b936c650b54": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Figure Technology Solutions (Stove Tokenized Stock)",
+      "address": "0xbe5642257f0c80e1f226d13cfcbc3b936c650b54",
+      "symbol": "FIGRS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180020/thumb/FIGRs.png?1793691020",
+      "assetGroup": "Figure Technology Solutions (Stove Tokenized Stock)::FIGRS",
+      "currencyId": "Figure Technology Solutions (Stove Tokenized Stock)::FIGRS"
+    },
+    "0x39a95f551146b2f669dd3f481bb746bdc7b3bc2a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Fidelity National Information Services (Stove Tokenized Stoc",
+      "address": "0x39a95f551146b2f669dd3f481bb746bdc7b3bc2a",
+      "symbol": "FISS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180021/thumb/FISs.png?1793691023",
+      "assetGroup": "Fidelity National Information Services (Stove Tokenized Stoc::FISS",
+      "currencyId": "Fidelity National Information Services (Stove Tokenized Stoc::FISS"
+    },
+    "0xee2208b58cfbba4fe6e81df2b0d55bd15571af47": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Kenvue (Stove Tokenized Stock)",
+      "address": "0xee2208b58cfbba4fe6e81df2b0d55bd15571af47",
+      "symbol": "KVUES",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180026/thumb/KVUEs.png?1793691037",
+      "assetGroup": "Kenvue (Stove Tokenized Stock)::KVUES",
+      "currencyId": "Kenvue (Stove Tokenized Stock)::KVUES"
+    },
+    "0xca7076a31d4819a99e55c84a0031e2e2d313e740": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "VICI Properties (Stove Tokenized Stock)",
+      "address": "0xca7076a31d4819a99e55c84a0031e2e2d313e740",
+      "symbol": "VICIS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180027/thumb/VICIs.png?1793691039",
+      "assetGroup": "VICI Properties (Stove Tokenized Stock)::VICIS",
+      "currencyId": "VICI Properties (Stove Tokenized Stock)::VICIS"
+    },
+    "0x28a2c6dcc5ba9f0fd64c99ae1aa9c008021e910b": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Exelon (Stove Tokenized Stock)",
+      "address": "0x28a2c6dcc5ba9f0fd64c99ae1aa9c008021e910b",
+      "symbol": "EXCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180032/thumb/EXCs.png?1793691053",
+      "assetGroup": "Exelon (Stove Tokenized Stock)::EXCS",
+      "currencyId": "Exelon (Stove Tokenized Stock)::EXCS"
+    },
+    "0x1f361f555920045675e6e21713b3e2b2af854bbf": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Allison Transmission (Stove Tokenized Stock)",
+      "address": "0x1f361f555920045675e6e21713b3e2b2af854bbf",
+      "symbol": "ALSNS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180031/thumb/ALSNs.png?1793691051",
+      "assetGroup": "Allison Transmission (Stove Tokenized Stock)::ALSNS",
+      "currencyId": "Allison Transmission (Stove Tokenized Stock)::ALSNS"
+    },
+    "0xdf452348452b8b0bcc12b79dcae0d2d3d977442c": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "General Mills (Stove Tokenized Stock)",
+      "address": "0xdf452348452b8b0bcc12b79dcae0d2d3d977442c",
+      "symbol": "GISS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180035/thumb/GISs.png?1793691060",
+      "assetGroup": "General Mills (Stove Tokenized Stock)::GISS",
+      "currencyId": "General Mills (Stove Tokenized Stock)::GISS"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "56",

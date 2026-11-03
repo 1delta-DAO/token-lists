@@ -1320,6 +1320,22 @@
             }
           ]
         },
+        "ccip": {
+          "pool": "0x80a896645b74ecf4b42c448bfb3b267417ec572b",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "143",
+            "146",
+            "988",
+            "8453",
+            "42793",
+            "43114",
+            "747474"
+          ]
+        },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
       }
     },
@@ -1447,6 +1463,13 @@
       "currencyId": "pufETH::pufETH",
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
+        "ccip": {
+          "pool": "0x8da0bae597ac15fb0924713b1e3c1f624474f3e4",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
@@ -1475,6 +1498,13 @@
             }
           ]
         },
+        "ccip": {
+          "pool": "0x3539f2e214d8bc7e611056383323ac6d1b01943c",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56", "60808"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -1489,6 +1519,13 @@
       "currencyId": "brBTC::brBTC",
       "props": {
         "lst": { "type": "restaking", "asset": "BTC", "provider": "bedrock" },
+        "ccip": {
+          "pool": "0xc82793e403a637ded107c3c9d0785776e46852a8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
     },
@@ -1526,13 +1563,20 @@
     "0x11a292b4a8985bfe4ea19aad24793b4e1d91ba60": {
       "chainId": "80094",
       "decimals": 18,
-      "name": "Bridged Staked Yuzu USD (CCIP)",
+      "name": "Staked Yuzu USD",
       "address": "0x11a292b4a8985bfe4ea19aad24793b4e1d91ba60",
       "symbol": "syzUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xc8a8df9b210243c55d31c73090f06787ad0a1bf6.png",
       "assetGroup": "Staked Yuzu USD::syzUSD",
-      "currencyId": "Bridged Staked Yuzu USD (CCIP)::syzUSD",
+      "currencyId": "Staked Yuzu USD::syzUSD",
       "props": {
+        "ccip": {
+          "pool": "0xe8a5517adedaebe99eb27633b95d412f81e5cff7",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "9745",
+          "destinations": ["9745"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
@@ -1540,13 +1584,20 @@
     "0xbca138ded469f5063589bfdfdd4bc68eb1c3f252": {
       "chainId": "80094",
       "decimals": 18,
-      "name": "Bridged avUSD (CCIP)",
+      "name": "avUSD",
       "address": "0xbca138ded469f5063589bfdfdd4bc68eb1c3f252",
       "symbol": "avUSD",
       "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x24dE8771bC5DdB3362Db529Fc3358F2df3A0E346/logo.png",
       "assetGroup": "avUSD::avUSD",
-      "currencyId": "Bridged avUSD (CCIP)::avUSD",
+      "currencyId": "avUSD::avUSD",
       "props": {
+        "ccip": {
+          "pool": "0xc4093e0f61ff1507c1a58f4dda4b5b56e5603817",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["1", "43114"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -1554,13 +1605,31 @@
     "0xd156a8e80a6593ddafa099f76754fdce0f808a55": {
       "chainId": "80094",
       "decimals": 18,
-      "name": "Bridged Re Protocol reUSD (CCIP)",
+      "name": "Re Protocol reUSD",
       "address": "0xd156a8e80a6593ddafa099f76754fdce0f808a55",
       "symbol": "reUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/66291/thumb/re_blue.png?1749110516",
       "assetGroup": "Re Protocol reUSD::REUSD",
-      "currencyId": "Bridged Re Protocol reUSD (CCIP)::reUSD",
+      "currencyId": "Re Protocol reUSD::reUSD",
       "props": {
+        "ccip": {
+          "pool": "0x6022c05282477f1aba5547602a3b5e72a673cdb9",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": [
+            "1",
+            "56",
+            "143",
+            "1329",
+            "4217",
+            "8453",
+            "9745",
+            "42161",
+            "43114",
+            "747474"
+          ]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
       }
@@ -1568,13 +1637,20 @@
     "0xf05a207442f14e446b0e32b12d2043bfc68cb1c9": {
       "chainId": "80094",
       "decimals": 18,
-      "name": "Bridged BOLD Stablecoin (CCIP)",
+      "name": "BOLD Stablecoin",
       "address": "0xf05a207442f14e446b0e32b12d2043bfc68cb1c9",
       "symbol": "BOLD",
       "logoURI": "https://assets.coingecko.com/coins/images/56069/thumb/BOLD_logo.png?1748265087",
       "assetGroup": "Liquity BOLD::BOLD",
-      "currencyId": "Bridged BOLD Stablecoin (CCIP)::BOLD",
+      "currencyId": "BOLD Stablecoin::BOLD",
       "props": {
+        "ccip": {
+          "pool": "0xcfc5092583c1b2122f221f524c198abdecbf3d1b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453", "42161"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
@@ -1802,7 +1878,7 @@
       "currencyId": "NECTAR::NECT",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -1861,6 +1937,13 @@
         },
         "denomination": "BTC",
         "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0x0a12ec21c43ab2b4f69693da1b0149e7652689c0",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56", "60808"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -2022,6 +2105,13 @@
           ]
         },
         "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x097ae334b90f98637899cfcaa7980b13aa497e5e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "bedrock" },
         "issuer": { "id": "bedrock", "name": "Bedrock", "kind": "protocol" }
       }
@@ -2611,7 +2701,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/54710/thumb/DOLO-small.png?1745398535",
       "assetGroup": "Dolomite::DOLO",
       "currencyId": "Dolomite::DOLO",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x9e7728077f753dfdf53c2236097e27c743890992",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0xb7e448e5677d212b8c8da7d6312e8afc49800466": {
       "chainId": "80094",
@@ -2656,7 +2755,16 @@
       "symbol": "BR",
       "logoURI": "https://assets.coingecko.com/coins/images/54908/thumb/BR_200px.png?1742453499",
       "assetGroup": "BR",
-      "currencyId": "Bedrock::BR"
+      "currencyId": "Bedrock::BR",
+      "props": {
+        "ccip": {
+          "pool": "0xebaf5275843e4ea7c9867307bb801d2a829e2a58",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "56", "8453"]
+        }
+      }
     },
     "0x6b26f778bfae56cfb4bf9b62c678d9d40e725227": {
       "chainId": "80094",
@@ -3332,7 +3440,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xde6969b8e1dc5a72e29232335b79b618163cba86",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x2206182a4264bce0663681448b24fc6781fc8e40": {
       "chainId": "80094",
@@ -3416,6 +3533,13 @@
       "assetGroup": "Solv Protocol SolvBTC.BERA::SOLVBTC.BERA",
       "currencyId": "Solv Protocol SolvBTC.BERA::SOLVBTC.BERA",
       "props": {
+        "ccip": {
+          "pool": "0xf8ae5209de22dbd06dace938934b0d75b5e80299",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
@@ -3714,6 +3838,13 @@
           "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0x59e2a16b388999d0d258e52623ac97f8841c37d2",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["1", "56", "143", "1329", "4326", "42161", "43114"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }

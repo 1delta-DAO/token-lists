@@ -373,9 +373,7 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // tranches, and Forest Road's sUSD-FR — USDC in, the vault's NAV accrues to
   // the share, every exit pays USDC. Operator-run credit and quant venues
   // behind a consensus NAV, the sUSDfr caveat below; the risk is in risk-data. ---
-  ...Object.fromEntries(
-    PERENA_SHARE_TOKENS.map((t) => [perenaShareGroup(t), { underlying: 'USDC', base: 'USD' }]),
-  ),
+  ...Object.fromEntries(PERENA_SHARE_TOKENS.map((t) => [perenaShareGroup(t), { underlying: 'USDC', base: 'USD' }])),
 
   // --- 2026-10-16 earn integrations (lending-sdks registryEthStablesA / EthSavingsB /
   // EthStructuredC / L2sD / Jarvis). Each is a margin-fetcher savings row; the keys are the

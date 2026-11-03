@@ -61,6 +61,13 @@
             }
           ]
         },
+        "ccip": {
+          "pool": "0x36293c0fbf1872be5b6cbc65704fb22d41405388",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -296,7 +303,7 @@
       "currencyId": "Sovryn Dollar::DLLR",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -328,11 +335,7 @@
       "assetGroup": "XUSD BabelFish::XUSD",
       "currencyId": "XUSD BabelFish::XUSD",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "babelfish", "name": "BabelFish", "kind": "protocol" }
       }
@@ -499,6 +502,13 @@
           ]
         },
         "denomination": "BTC",
+        "ccip": {
+          "pool": "0xc4374775489cb9c56003bf2c9b12495fc64f0771",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -575,8 +585,17 @@
       "address": "0x938d84942f5d924070a6bb82f8e56a5e2b3098a4",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
-      "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "Chainlink::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xb9e7e53ad3f4bbc352a55c33db7bcf25e0da3f03",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x7f71f02ae0945364f658860d67dbc10c86ca3a3c": {
       "chainId": "30",

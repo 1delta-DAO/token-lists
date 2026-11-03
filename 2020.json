@@ -2,37 +2,24 @@
   "chainId": "2020",
   "version": "0",
   "list": {
-    "0x1a89ecd466a23e98f07111b0510a2d6c1cd5e400": {
-      "chainId": "2020",
-      "decimals": 18,
-      "name": "Bridged Banana (CCIP)",
-      "address": "0x1a89ecd466a23e98f07111b0510a2d6c1cd5e400",
-      "symbol": "BANANA",
-      "logoURI": "https://assets.coingecko.com/coins/images/17521/large/banana-token-cg.png?1646285527",
-      "assetGroup": "BANANA",
-      "currencyId": "Bridged Banana (CCIP)::BANANA"
-    },
-    "0x1c306872bc82525d72bf3562e8f0aa3f8f26e857": {
-      "chainId": "2020",
-      "decimals": 18,
-      "name": "Bridged Yield Guild Games Token (CCIP)",
-      "address": "0x1c306872bc82525d72bf3562e8f0aa3f8f26e857",
-      "symbol": "YGG",
-      "logoURI": "https://assets.coingecko.com/coins/images/17358/thumb/le1nzlO6_400x400.jpg?1632465691",
-      "assetGroup": "Yield Guild Games::YGG",
-      "currencyId": "Bridged Yield Guild Games Token (CCIP)::YGG"
-    },
     "0x29c46e6f2a67872ad6b1dc04e1591934a96af62e": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged Rocket Pool ETH (CCIP)",
+      "name": "Rocket Pool ETH",
       "address": "0x29c46e6f2a67872ad6b1dc04e1591934a96af62e",
       "symbol": "RETH",
       "logoURI": "https://assets.coingecko.com/coins/images/20764/large/reth.png?1637652366",
       "assetGroup": "RETH",
-      "currencyId": "Bridged Rocket Pool ETH (CCIP)::RETH",
+      "currencyId": "Rocket Pool ETH::RETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "rocketpool" },
+        "ccip": {
+          "pool": "0xcd4ee1110707d79704d6881a4fef158e5fdb334b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": {
           "id": "rocketpool",
           "name": "Rocket Pool",
@@ -40,76 +27,175 @@
         }
       }
     },
+    "0x1a89ecd466a23e98f07111b0510a2d6c1cd5e400": {
+      "chainId": "2020",
+      "decimals": 18,
+      "name": "Banana",
+      "address": "0x1a89ecd466a23e98f07111b0510a2d6c1cd5e400",
+      "symbol": "BANANA",
+      "logoURI": "https://assets.coingecko.com/coins/images/17521/large/banana-token-cg.png?1646285527",
+      "assetGroup": "BANANA",
+      "currencyId": "Banana::BANANA",
+      "props": {
+        "ccip": {
+          "pool": "0x93af6da985fd08dfa839cb2ed189d31e11c0a58f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
+    },
+    "0x1c306872bc82525d72bf3562e8f0aa3f8f26e857": {
+      "chainId": "2020",
+      "decimals": 18,
+      "name": "Yield Guild Games Token",
+      "address": "0x1c306872bc82525d72bf3562e8f0aa3f8f26e857",
+      "symbol": "YGG",
+      "logoURI": "https://assets.coingecko.com/coins/images/17358/thumb/le1nzlO6_400x400.jpg?1632465691",
+      "assetGroup": "Yield Guild Games::YGG",
+      "currencyId": "Yield Guild Games Token::YGG",
+      "props": {
+        "ccip": {
+          "pool": "0x2b200ca34f70d39464a0881bc45fc5fb858b3d5f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
+    },
     "0x3902228d6a3d2dc44731fd9d45fee6a61c722d0b": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged ChainLink Token (CCIP)",
+      "name": "ChainLink Token",
       "address": "0x3902228d6a3d2dc44731fd9d45fee6a61c722d0b",
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
       "assetGroup": "LINK",
-      "currencyId": "Bridged ChainLink Token (CCIP)::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x6bbb2d614f4336784b835e392c62ed7a5345db6e",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x394cef8bdd737ee24dbc9f43d0d5d2ab83136054": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged Power (CCIP)",
+      "name": "Power",
       "address": "0x394cef8bdd737ee24dbc9f43d0d5d2ab83136054",
       "symbol": "POWER",
       "logoURI": "https://assets.coingecko.com/coins/images/70944/thumb/power.png?1764744522",
       "assetGroup": "Power Protocol::POWER",
-      "currencyId": "Bridged Power (CCIP)::POWER"
+      "currencyId": "Power::POWER",
+      "props": {
+        "ccip": {
+          "pool": "0x9b0b4aff23ac0e144bcb947ad99bde308dea5641",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x656fe582b4c6dc95c598ea54dc820eb36152e2f7": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged Forkast (CCIP)",
+      "name": "Forkast",
       "address": "0x656fe582b4c6dc95c598ea54dc820eb36152e2f7",
       "symbol": "CGX",
       "logoURI": "https://assets.coingecko.com/coins/images/53714/thumb/cgx.png?1737548747",
       "assetGroup": "Forkast::CGX",
-      "currencyId": "Bridged Forkast (CCIP)::CGX"
+      "currencyId": "Forkast::CGX",
+      "props": {
+        "ccip": {
+          "pool": "0x394d5854216d0d44c3828f49e201917451eb477b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x7eae20d11ef8c779433eb24503def900b9d28ad7": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged PIXEL (CCIP)",
+      "name": "PIXEL",
       "address": "0x7eae20d11ef8c779433eb24503def900b9d28ad7",
       "symbol": "PIXEL",
       "logoURI": "https://assets.coingecko.com/coins/images/35100/thumb/pixel-icon.png?1708339519",
       "assetGroup": "Pixels::PIXEL",
-      "currencyId": "Bridged PIXEL (CCIP)::PIXEL"
+      "currencyId": "PIXEL::PIXEL",
+      "props": {
+        "ccip": {
+          "pool": "0xd7ce1e7262ce471cc3db3bcd8c3edeee6d114115",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x9f28c9c2da4a833cbfaaacbf7eb62267334d7149": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged Zentry (CCIP)",
+      "name": "Zentry",
       "address": "0x9f28c9c2da4a833cbfaaacbf7eb62267334d7149",
       "symbol": "ZENT",
       "logoURI": "https://assets.coingecko.com/coins/images/36979/thumb/Zentry-rebrand-Primary_200px.png?1713743277",
       "assetGroup": "Zentry::ZENT",
-      "currencyId": "Bridged Zentry (CCIP)::ZENT"
+      "currencyId": "Zentry::ZENT",
+      "props": {
+        "ccip": {
+          "pool": "0x52fed5115d8b7397c09eb4ce2f0a99739891d6b8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xb4562fdefd5ed58f7705ce9386d54ee9b53831d1": {
       "chainId": "2020",
       "decimals": 18,
-      "name": "Bridged Puffverse Token (CCIP)",
+      "name": "Puffverse Token",
       "address": "0xb4562fdefd5ed58f7705ce9386d54ee9b53831d1",
       "symbol": "PFVS",
       "logoURI": "https://assets.coingecko.com/coins/images/56067/thumb/logo.png?1748355229",
       "assetGroup": "Puffverse::PFVS",
-      "currencyId": "Bridged Puffverse Token (CCIP)::PFVS"
+      "currencyId": "Puffverse Token::PFVS",
+      "props": {
+        "ccip": {
+          "pool": "0x50dbf7140a444db0acfb6d1bcc12408c6485fe27",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xca3eb64f3dfd7861c76070e3d1492ee5ee20cdc3": {
       "chainId": "2020",
       "decimals": 8,
-      "name": "Bridged Wrapped Bitcoin (CCIP)",
+      "name": "Wrapped Bitcoin",
       "address": "0xca3eb64f3dfd7861c76070e3d1492ee5ee20cdc3",
       "symbol": "WBTC",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png",
       "assetGroup": "WBTC",
-      "currencyId": "Bridged Wrapped Bitcoin (CCIP)::WBTC",
+      "currencyId": "Wrapped Bitcoin::WBTC",
       "props": {
+        "ccip": {
+          "pool": "0x57c6e9e48476b4d08ceac0ba885d34f7de71f323",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "bitgo", "name": "BitGo", "kind": "institution" },
         "denomination": "BTC"
       }
@@ -140,7 +226,14 @@
       "props": {
         "wnative": true,
         "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
-        "denomination": "RON"
+        "denomination": "RON",
+        "ccip": {
+          "pool": "0xc477bdabf2d08b49893abf7e35a4260efed1f89e",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "2020",
+          "destinations": ["1"]
+        }
       }
     },
     "0x0b7007c13325c48911f73a2dad5fa5dcbf808adc": {
@@ -172,7 +265,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/13029/thumb/axie_infinity_logo.png?1604471082",
       "assetGroup": "AXS",
       "currencyId": "Axie Infinity Shard::AXS",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x554652e7f10fb8aa3e12226213c6826f98b09cf0",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "2020",

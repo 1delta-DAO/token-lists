@@ -92,53 +92,96 @@
     "0x23535421f6e13f2084684bb052f58d1b33e0db8e": {
       "chainId": "48900",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0x23535421f6e13f2084684bb052f58d1b33e0db8e",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x9ecde69df43add57aa60949e6db5ac7b6dc11831",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x3d83b2253a523a211cf5679fea1d10a58b408177": {
       "chainId": "48900",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0x3d83b2253a523a211cf5679fea1d10a58b408177",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0xf8678ac9b6b0d6ff9243f88060f595d4771a5e04",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x5d6d033b4fbd2190d99d930719fabacb64d2439a": {
       "chainId": "48900",
       "decimals": 18,
-      "name": "Bridged ChainLink Token (CCIP)",
+      "name": "ChainLink Token",
       "address": "0x5d6d033b4fbd2190d99d930719fabacb64d2439a",
       "symbol": "LINK",
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x514910771AF9Ca656af840dff83E8264EcF986CA/logo.png",
       "assetGroup": "LINK",
-      "currencyId": "Bridged ChainLink Token (CCIP)::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x2904219fc4e97a34462a4119da4a6838d7b093b3",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x7fdfbe1fb9783745991cfb0a3d396ace6ee0c909": {
       "chainId": "48900",
       "decimals": 8,
-      "name": "Bridged Liquid Staked BTC (CCIP)",
+      "name": "Liquid Staked BTC",
       "address": "0x7fdfbe1fb9783745991cfb0a3d396ace6ee0c909",
       "symbol": "mBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/50314/thumb/mbtc_%281%29.png?1727079604",
       "assetGroup": "Babypie Wrapped BTC::MBTC",
-      "currencyId": "Bridged Liquid Staked BTC (CCIP)::mBTC"
+      "currencyId": "Liquid Staked BTC::mBTC",
+      "props": {
+        "ccip": {
+          "pool": "0xd86e1fedb7120369ff5175b74f4413cb74fcacdb",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0x9346a5043c590133fe900aec643d9622edddba57": {
       "chainId": "48900",
       "decimals": 18,
-      "name": "Bridged xPufETH (CCIP)",
+      "name": "xPufETH",
       "address": "0x9346a5043c590133fe900aec643d9622edddba57",
       "symbol": "xPufETH",
       "logoURI": "https://assets.coingecko.com/coins/images/35176/thumb/pufETH-200-200-resolution.png?1707753174",
       "assetGroup": "PUFETH",
-      "currencyId": "Bridged xPufETH (CCIP)::xPufETH",
+      "currencyId": "xPufETH::xPufETH",
       "props": {
+        "ccip": {
+          "pool": "0xd1e158549d79c1768170bd694dcba9c9f60ee2b8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
         "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
@@ -146,12 +189,21 @@
     "0xa9bbe4c88f4988ec8328e44b0889404824abeb62": {
       "chainId": "48900",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0xa9bbe4c88f4988ec8328e44b0889404824abeb62",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0x7f5bb6146b490b6c1e1c8d8fd60fde93636274b1",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x58024021fe3ef613fa76e2f36a3da97eb1454c36": {
       "chainId": "48900",

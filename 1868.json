@@ -63,6 +63,13 @@
       "props": {
         "lst": { "type": "restaking", "asset": "ETH", "provider": "puffer" },
         "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xf9dd335bf363b2e4ecfe3c94a86ebd7dd3dcf0e7",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
@@ -78,28 +85,53 @@
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "risk": { "score": 4, "category": "OTHER", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xef53137af78afc63b312f0af64fe3c24804d2441",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "57073", "60808"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
     "0x71b690adae1eba2e1a5d8a7b51a037b39a4cf007": {
       "chainId": "1868",
       "decimals": 18,
-      "name": "Bridged Sekuya Multiverse (CCIP)",
+      "name": "Sekuya Multiverse",
       "address": "0x71b690adae1eba2e1a5d8a7b51a037b39a4cf007",
       "symbol": "SKYA",
       "logoURI": "https://assets.coingecko.com/coins/images/38096/thumb/SKYA_Logo_200x200.png?1731909478",
       "assetGroup": "Sekuya Multiverse::SKYA",
-      "currencyId": "Bridged Sekuya Multiverse (CCIP)::SKYA"
+      "currencyId": "Sekuya Multiverse::SKYA",
+      "props": {
+        "ccip": {
+          "pool": "0x285f961842da90acfef2f2ab622854a0bff12f9a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56", "8453"]
+        }
+      }
     },
     "0xf252cf43175cf739022e3a9533b2267dcfe1a830": {
       "chainId": "1868",
       "decimals": 18,
-      "name": "Bridged Degen Arena (CCIP)",
+      "name": "Degen Arena",
       "address": "0xf252cf43175cf739022e3a9533b2267dcfe1a830",
       "symbol": "DEGEN",
       "logoURI": "https://assets.coingecko.com/coins/images/66594/thumb/Degen_Arena.jpg?1749883788",
       "assetGroup": "Degen Arena::DEGEN",
-      "currencyId": "Bridged Degen Arena (CCIP)::DEGEN"
+      "currencyId": "Degen Arena::DEGEN",
+      "props": {
+        "ccip": {
+          "pool": "0x09624a5520f0a452c5d3d8aefcd6b6e47fb5281f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xba9986d2381edf1da03b0b9c1f8b00dc4aacc369": {
       "chainId": "1868",
@@ -190,7 +222,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/53778/thumb/astar.jpg?1737341226",
       "assetGroup": "Soneium Bridged ASTR::ASTR",
       "currencyId": "Soneium Bridged ASTR::ASTR",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x2200b5f4fa30a55359ef0fae04890113bd73bd16",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "592",
+          "destinations": ["1", "592"]
+        }
+      }
     },
     "0xa8feaae65c44b458a16ea4e709036a2ee85d073a": {
       "chainId": "1868",
@@ -281,6 +322,13 @@
       "currencyId": "SolvBTC Jupiter::SolvBTC.JUP",
       "props": {
         "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x62fd93fc58d94ee253542ecd5c23467f65dcdb73",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["56", "60808"]
+        },
         "lst": { "type": "staking", "asset": "BTC", "provider": "solv" },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
@@ -307,6 +355,13 @@
       "props": {
         "denomination": "BTC",
         "risk": { "score": 3, "category": "OTHER", "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0x6c2310d68f21c024ff66cc52e65220112f35dc32",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "137", "57073", "60808"]
+        },
         "issuer": { "id": "solv", "name": "Solv", "kind": "protocol" }
       }
     },
@@ -502,7 +557,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xdec8a6f06fdda5aae262631f37b79f182a23464b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "592"]
+        }
+      }
     },
     "0x3f99231dd03a9f0e7e3421c92b7b90fbe012985a": {
       "chainId": "1868",

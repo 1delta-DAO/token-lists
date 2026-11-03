@@ -2217,8 +2217,17 @@
       "address": "0x76a443768a5e3b8d1aed0105fc250877841deb40",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
-      "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "Chainlink::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x172c2043b66d0a498fb7d6f56d04f52bea4cac68",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xca18a528ea897040f715edc92e6e4572780c5ca1": {
       "chainId": "5042",
@@ -2247,8 +2256,17 @@
       "address": "0x8c4252c87081c88c6ad57d6dd97e1cafebf842b7",
       "symbol": "VIRTUAL",
       "logoURI": "https://assets.coingecko.com/coins/images/34057/thumb/LOGOMARK.png?1708356054",
-      "assetGroup": "Virtuals Protocol::VIRTUAL",
-      "currencyId": "Virtuals Protocol::VIRTUAL"
+      "assetGroup": "Virtual Protocol::VIRTUAL",
+      "currencyId": "Virtuals Protocol::VIRTUAL",
+      "props": {
+        "ccip": {
+          "pool": "0x68a481d55e0f1084bcbceacd0b8259cfa34351a7",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "8453",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0x08adbf431569a1aacac2606d2adcd18f4ebf2a71": {
       "chainId": "5042",
@@ -2737,6 +2755,13 @@
           "source": "stablecoin"
         },
         "savings": { "underlying": "USDC", "base": "USD" },
+        "ccip": {
+          "pool": "0x6be14e674f741faa78da2fecf00870c8b753a0bb",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }

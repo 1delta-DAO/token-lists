@@ -61,7 +61,14 @@
       "props": {
         "wnative": true,
         "denomination": "PROS",
-        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" }
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
+        "ccip": {
+          "pool": "0xcb79097744d5266bfca287a43612d9613be46300",
+          "poolType": "lockRelease",
+          "poolVersion": "1.5.1",
+          "home": "1672",
+          "destinations": ["1", "8453"]
+        }
       }
     },
     "0xc879c018db60520f4355c26ed1a6d572cdac1815": {
@@ -178,7 +185,16 @@
       "symbol": "LINK",
       "logoURI": "https://s2.coinmarketcap.com/static/img/coins/64x64/1975.png",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x521b3cec635aa54f217179e97df74280d5d8e770",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x53cd420166dab0255a6315ec1bdd4ac84a2a292d": {
       "chainId": "1672",
@@ -524,7 +540,16 @@
       "address": "0x16a7228ac1e772c5029d7069f3a6eca66f894218",
       "symbol": "USDpm",
       "assetGroup": "USDpm::USDpm",
-      "currencyId": "USDpm::USDpm"
+      "currencyId": "USDpm::USDpm",
+      "props": {
+        "ccip": {
+          "pool": "0x9b7fb2b81745221e9f678f04870ea86f55e4269c",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1672",
+          "destinations": ["42161"]
+        }
+      }
     },
     "0x477c3c46c93d4589a1d5a212b8e654f3dd5117da": {
       "chainId": "1672",
@@ -908,8 +933,17 @@
       "address": "0x531f1e4a3ca96b9f42467659d8088b07fe8d2839",
       "symbol": "PGOLD",
       "logoURI": "https://storage.googleapis.com/socialscan-public-asset/explorer/pharos/PGOLD.png",
-      "assetGroup": "Pleasing Gold::PGOLD::1672::0",
-      "currencyId": "Pleasing Gold::PGOLD"
+      "assetGroup": "Pleasing Gold::PGOLD",
+      "currencyId": "Pleasing Gold::PGOLD",
+      "props": {
+        "ccip": {
+          "pool": "0x944ed1b0a0f9de55a21f0372652ba1bf05194aa4",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "42161",
+          "destinations": ["1", "42161"]
+        }
+      }
     },
     "0xc7b7c63e4d20411064ca26a249080e3c0720b734": {
       "chainId": "1672",
@@ -1513,6 +1547,13 @@
       "assetGroup": "Staked Yuzu USD::syzUSD",
       "currencyId": "Staked Yuzu USD::syzUSD",
       "props": {
+        "ccip": {
+          "pool": "0x00a495d9abc6587e06a6a5b1401eb7c20a66d1ec",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "9745",
+          "destinations": ["9745"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
@@ -3402,6 +3443,13 @@
       "currencyId": "Staked trUSD::strUSD",
       "props": {
         "savings": { "underlying": "trUSD", "base": "USD" },
+        "ccip": {
+          "pool": "0x7305a63323d3171c6311d8f3218c3a7d164f3f0f",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1", "143", "42161"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
@@ -3443,6 +3491,13 @@
       "assetGroup": "Tori trUSD::TRUSD",
       "currencyId": "trUSD::trUSD",
       "props": {
+        "ccip": {
+          "pool": "0xab7d93271b693ec5196ccd16639b4c8087d0d2f7",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1", "143", "42161"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
@@ -3645,6 +3700,105 @@
       "symbol": "Prosper Pre E2E 536911",
       "assetGroup": "Prosper Pre E2E 536911::Prosper Pre E2E 536911",
       "currencyId": "Prosper Pre E2E 536911::Prosper Pre E2E 536911"
+    },
+    "0x2caee30613e7acc904e2f64059129e3c74b8615e": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Leidos",
+      "address": "0x2caee30613e7acc904e2f64059129e3c74b8615e",
+      "symbol": "LDOSs",
+      "assetGroup": "Leidos::LDOSs",
+      "currencyId": "Leidos::LDOSs"
+    },
+    "0x179082210d8794c326a1f7565190863d959fdec6": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Uniswap V2",
+      "address": "0x179082210d8794c326a1f7565190863d959fdec6",
+      "symbol": "UNI-V2",
+      "assetGroup": "Uniswap V2::UNI-V2::1672::69",
+      "currencyId": "Uniswap V2::UNI-V2"
+    },
+    "0x3c49a9d9bb74cb89886970463ee98e8c64034d93": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Best Buy",
+      "address": "0x3c49a9d9bb74cb89886970463ee98e8c64034d93",
+      "symbol": "BBYs",
+      "assetGroup": "Best Buy::BBYs",
+      "currencyId": "Best Buy::BBYs"
+    },
+    "0x4234038aada9591d9d95655ae104dd79762f3948": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Verizon",
+      "address": "0x4234038aada9591d9d95655ae104dd79762f3948",
+      "symbol": "VZs",
+      "assetGroup": "Verizon::VZs",
+      "currencyId": "Verizon::VZs"
+    },
+    "0x377cc983d08b2f0131082a0e8e9f91c6ddf51f16": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Medtronic",
+      "address": "0x377cc983d08b2f0131082a0e8e9f91c6ddf51f16",
+      "symbol": "MDTs",
+      "assetGroup": "Medtronic::MDTs",
+      "currencyId": "Medtronic::MDTs"
+    },
+    "0x49fec24623a0f57150b6fa1aafe9c2df4c20480b": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "DLP_49fec246",
+      "address": "0x49fec24623a0f57150b6fa1aafe9c2df4c20480b",
+      "symbol": "DLP",
+      "assetGroup": "DLP_49fec246::DLP",
+      "currencyId": "DLP_49fec246::DLP"
+    },
+    "0x71ac1cd2715bfbef9aea23a99365614e5c91e910": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Emerson Electric",
+      "address": "0x71ac1cd2715bfbef9aea23a99365614e5c91e910",
+      "symbol": "EMRs",
+      "assetGroup": "Emerson Electric::EMRs",
+      "currencyId": "Emerson Electric::EMRs"
+    },
+    "0x160b53e0b28c172aeb04ed5ee3a424d471e1ac63": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "maodu1027-34 Shares",
+      "address": "0x160b53e0b28c172aeb04ed5ee3a424d471e1ac63",
+      "symbol": "maodu34",
+      "assetGroup": "maodu1027-34 Shares::maodu34",
+      "currencyId": "maodu1027-34 Shares::maodu34"
+    },
+    "0x15c6df8ffae0fac23e682022731fe308d4106c6e": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Nasdaq",
+      "address": "0x15c6df8ffae0fac23e682022731fe308d4106c6e",
+      "symbol": "NDAQs",
+      "assetGroup": "Nasdaq::NDAQs",
+      "currencyId": "Nasdaq::NDAQs"
+    },
+    "0x055bb215b00e8c02b43abd628f3863bcfffc4920": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Atlassian",
+      "address": "0x055bb215b00e8c02b43abd628f3863bcfffc4920",
+      "symbol": "TEAMs",
+      "assetGroup": "Atlassian::TEAMs",
+      "currencyId": "Atlassian::TEAMs"
+    },
+    "0x197204ba16459a148118bdf2fee093d933f2c830": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Procter & Gamble",
+      "address": "0x197204ba16459a148118bdf2fee093d933f2c830",
+      "symbol": "PGs",
+      "assetGroup": "Procter & Gamble::PGs",
+      "currencyId": "Procter & Gamble::PGs"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1672",

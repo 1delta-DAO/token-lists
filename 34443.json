@@ -264,42 +264,78 @@
     "0x1ba642b2f27e45d730ff20714b17309644274167": {
       "chainId": "34443",
       "decimals": 18,
-      "name": "Bridged SHIBA INU (CCIP)",
+      "name": "SHIBA INU",
       "address": "0x1ba642b2f27e45d730ff20714b17309644274167",
       "symbol": "SHIB",
       "logoURI": "https://assets.coingecko.com/coins/images/11939/thumb/shiba.png?1622619446",
       "assetGroup": "SHIB",
-      "currencyId": "Bridged SHIBA INU (CCIP)::SHIB"
+      "currencyId": "SHIBA INU::SHIB",
+      "props": {
+        "ccip": {
+          "pool": "0x13c4d04ed1cba19391bd8e9f8f13b261340f474d",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x2f0b60f0e269dc01132bdccdd48bb8cf33021f0a": {
       "chainId": "34443",
       "decimals": 18,
-      "name": "Bridged BONE SHIBASWAP (CCIP)",
+      "name": "BONE SHIBASWAP",
       "address": "0x2f0b60f0e269dc01132bdccdd48bb8cf33021f0a",
       "symbol": "BONE",
       "logoURI": "https://assets.coingecko.com/coins/images/16916/large/bone_icon.png?1625625505",
       "assetGroup": "BONE",
-      "currencyId": "Bridged BONE SHIBASWAP (CCIP)::BONE"
+      "currencyId": "BONE SHIBASWAP::BONE",
+      "props": {
+        "ccip": {
+          "pool": "0x2b96db391d0f35f821e53de72508237492247e16",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xa3d0d0c81dbe4511724f875f7f2fa794a14bee64": {
       "chainId": "34443",
       "decimals": 18,
-      "name": "Bridged DOGE KILLER (CCIP)",
+      "name": "DOGE KILLER",
       "address": "0xa3d0d0c81dbe4511724f875f7f2fa794a14bee64",
       "symbol": "LEASH",
       "logoURI": "https://assets.coingecko.com/coins/images/15802/large/Leash.png?1621931543",
       "assetGroup": "Doge Killer::LEASH",
-      "currencyId": "Bridged DOGE KILLER (CCIP)::LEASH"
+      "currencyId": "DOGE KILLER::LEASH",
+      "props": {
+        "ccip": {
+          "pool": "0x852467ab8b1bbb2d1c8d8802cd7820b906d4609a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xae770d24ec1580a13392e0b71067571351029203": {
       "chainId": "34443",
       "decimals": 6,
-      "name": "Bridged Wrapped xUSD (CCIP)",
+      "name": "Wrapped xUSD",
       "address": "0xae770d24ec1580a13392e0b71067571351029203",
       "symbol": "wxUSD",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb86fb1047a955c0186c77ff6263819b37b32440d.png",
       "assetGroup": "Wrapped xUSD::wUSD+",
-      "currencyId": "Bridged Wrapped xUSD (CCIP)::wxUSD"
+      "currencyId": "Wrapped xUSD::wxUSD",
+      "props": {
+        "ccip": {
+          "pool": "0x7211e50394fa9c29373cf95987fc381f35f8b8d8",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "42161",
+          "destinations": ["1", "10", "56", "146", "8453", "42161"]
+        }
+      }
     },
     "0xcdd475325d6f564d27247d1dddbb0dac6fa0a5cf": {
       "chainId": "34443",
@@ -627,7 +663,16 @@
       "symbol": "BMX",
       "logoURI": "https://assets.coingecko.com/coins/images/31699/thumb/bmx_white.png?1696530517",
       "assetGroup": "BMX",
-      "currencyId": "BMX::BMX"
+      "currencyId": "BMX::BMX",
+      "props": {
+        "ccip": {
+          "pool": "0x303d6a634eaeedd58f2cdbd2eaad7090d96df15f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "8453",
+          "destinations": ["1", "146", "8453"]
+        }
+      }
     },
     "0x77e7bcfee826b12cd498faa9831d7055b7478272": {
       "chainId": "34443",
@@ -878,8 +923,20 @@
       "address": "0x3f51c6c5927b88cdec4b61e2787f9bd0f5249138",
       "symbol": "msDAI",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x3f51c6c5927b88cdec4b61e2787f9bd0f5249138.png",
-      "assetGroup": "Mode Savings Dai::msDAI",
-      "currencyId": "Mode Savings Dai::msDAI"
+      "assetGroup": "SDAI",
+      "currencyId": "Mode Savings Dai::msDAI",
+      "props": {
+        "ccip": {
+          "pool": "0x0e3229079543f047a394833063702e71f733f6a5",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "1",
+          "destinations": ["1"]
+        },
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "DAI", "base": "USD" },
+        "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
+      }
     },
     "0xd0d1b59ca62ce194e882455fd36632d6277b192a": {
       "chainId": "34443",
@@ -1079,7 +1136,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xdec8a6f06fdda5aae262631f37b79f182a23464b",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453"]
+        }
+      }
     },
     "0x64445f0aecc51e94ad52d8ac56b7190e764e561a": {
       "chainId": "34443",

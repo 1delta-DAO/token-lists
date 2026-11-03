@@ -494,13 +494,20 @@
     "0x8f18f2c97d2f5ec0e1d5b91c1d2ce245a9151972": {
       "chainId": "98866",
       "decimals": 18,
-      "name": "Bridged sUSD1+ (CCIP)",
+      "name": "sUSD1+",
       "address": "0x8f18f2c97d2f5ec0e1d5b91c1d2ce245a9151972",
       "symbol": "sUSD1+",
       "logoURI": "https://tokens.pancakeswap.finance/images/0x4F2760B32720F013E900DC92F65480137391199b.png",
       "assetGroup": "sUSD1+::sUSD1+",
-      "currencyId": "Bridged sUSD1+ (CCIP)::sUSD1+",
+      "currencyId": "sUSD1+::sUSD1+",
       "props": {
+        "ccip": {
+          "pool": "0xff36edf970d1dc4504f608bb02d0ae0a8a80312a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "56",
+          "destinations": ["1", "56"]
+        },
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USD1+", "base": "USD" }
       }
@@ -859,6 +866,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0x770318d51052871def5eb5c452f4fd28b7960c4e",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.0",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "world-liberty",
@@ -1065,7 +1079,16 @@
       "symbol": "YBTC.B",
       "logoURI": "https://assets.coingecko.com/coins/images/67087/thumb/20250703-152236.png?1751702269",
       "assetGroup": "Yield BTC.B::YBTC.B",
-      "currencyId": "Yield BTC.B::YBTC.B"
+      "currencyId": "Yield BTC.B::YBTC.B",
+      "props": {
+        "ccip": {
+          "pool": "0xe96cc12aa0e2e545621bcbe1e035d91a7871fe8f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.0",
+          "home": "43114",
+          "destinations": ["200901"]
+        }
+      }
     },
     "0x139450c2dcef827c9a2a0bb1cb5506260940c9fd": {
       "chainId": "98866",
@@ -1111,8 +1134,17 @@
       "address": "0xb549b375da0c76f8b3877b9adfdd28378f087a64",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
-      "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "Chainlink::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x22c728125dba77774260b9c4968608513cd19112",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x9d08946ca5856f882a56c29042fbedc5142663b9": {
       "chainId": "98866",

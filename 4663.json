@@ -6453,47 +6453,80 @@
     "0x2dc99af320bc317c567f24ee95811dcbd5983dfd": {
       "chainId": "4663",
       "decimals": 18,
-      "name": "Bridged Wrapped liquid staked Ether 2.0 (CCIP)",
+      "name": "Wrapped liquid staked Ether 2.0",
       "address": "0x2dc99af320bc317c567f24ee95811dcbd5983dfd",
       "symbol": "wstETH",
       "logoURI": "https://assets.coingecko.com/coins/images/18834/large/wstETH.png?1633565443",
       "assetGroup": "WSTETH",
-      "currencyId": "Bridged Wrapped liquid staked Ether 2.0 (CCIP)::wstETH",
+      "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0x1c2f528e3beeff81bc03cc63e64db131d18be7fa",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
     "0x5c4b24a9c8b840399611f707baaf1b1343054de9": {
       "chainId": "4663",
       "decimals": 6,
-      "name": "Bridged Coinbase Wrapped ADA (CCIP)",
+      "name": "Coinbase Wrapped ADA",
       "address": "0x5c4b24a9c8b840399611f707baaf1b1343054de9",
       "symbol": "cbADA",
       "logoURI": "https://assets.coingecko.com/coins/images/66647/thumb/Coinbase_Wrapped_Ada_%28cbADA%29.png?1750129533",
       "assetGroup": "Coinbase Wrapped ADA::CBADA",
-      "currencyId": "Bridged Coinbase Wrapped ADA (CCIP)::cbADA"
+      "currencyId": "Coinbase Wrapped ADA::cbADA",
+      "props": {
+        "ccip": {
+          "pool": "0x7227d723d07800700da21fa9e1a0107c78e76d74",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "8453",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0x8d1c258c76c87559078bb3b2b77a1f9c41f58eeb": {
       "chainId": "4663",
       "decimals": 8,
-      "name": "Bridged SPX6900 (CCIP)",
+      "name": "SPX6900",
       "address": "0x8d1c258c76c87559078bb3b2b77a1f9c41f58eeb",
       "symbol": "SPX",
       "logoURI": "https://coin-images.coingecko.com/coins/images/31401/large/sticker_(1).jpg?1702371083",
       "assetGroup": "SPX6900::SPX",
-      "currencyId": "Bridged SPX6900 (CCIP)::SPX"
+      "currencyId": "SPX6900::SPX",
+      "props": {
+        "ccip": {
+          "pool": "0x071c19fec04dba83f2e4bee77d0e38fed84e2197",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xc6a4854eeb493224d5f9485e12dd3a81f22eee14": {
       "chainId": "4663",
       "decimals": 6,
-      "name": "Bridged Syrup USDC (CCIP)",
+      "name": "Syrup USDC",
       "address": "0xc6a4854eeb493224d5f9485e12dd3a81f22eee14",
       "symbol": "syrupUSDC",
       "logoURI": "https://assets.coingecko.com/coins/images/54658/thumb/syrup_logo-_200x200.jpg?1740895597",
       "assetGroup": "SYRUPUSDC",
-      "currencyId": "Bridged Syrup USDC (CCIP)::syrupUSDC",
+      "currencyId": "Syrup USDC::syrupUSDC",
       "props": {
+        "ccip": {
+          "pool": "0x50056397cf6ccf50d1748e95c32ec361951ee6f9",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "savings": { "underlying": "USDC", "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -6502,12 +6535,21 @@
     "0xd4ad79ed3372460f1e63feb8fc41c3b757198c6e": {
       "chainId": "4663",
       "decimals": 8,
-      "name": "Bridged Coinbase Wrapped LTC (CCIP)",
+      "name": "Coinbase Wrapped LTC",
       "address": "0xd4ad79ed3372460f1e63feb8fc41c3b757198c6e",
       "symbol": "cbLTC",
       "logoURI": "https://assets.coingecko.com/coins/images/66646/thumb/Coinbase_Wrapped_Litecoin_%28cbLTC%29.png?1750129508",
       "assetGroup": "Coinbase Wrapped LTC::CBLTC",
-      "currencyId": "Bridged Coinbase Wrapped LTC (CCIP)::cbLTC"
+      "currencyId": "Coinbase Wrapped LTC::cbLTC",
+      "props": {
+        "ccip": {
+          "pool": "0xf9ceb359fcbd03125cb7ab839cd2d7cda94e2a62",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "8453",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0x7168563b0e70124f0c7c0cf2f13a8d1861baf4a5": {
       "chainId": "4663",
@@ -6785,6 +6827,13 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
+        "ccip": {
+          "pool": "0x01fa676ecc8662e6923fdf06ba5278a96ccd725c",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
       }
@@ -6894,8 +6943,17 @@
       "address": "0xc6911796042b15d7fa4f6cde69e245ddcd3d9c31",
       "symbol": "VIRTUAL",
       "logoURI": "https://assets.coingecko.com/coins/images/34057/thumb/LOGOMARK.png?1708356054",
-      "assetGroup": "Virtuals Protocol::VIRTUAL",
-      "currencyId": "Virtuals Protocol::VIRTUAL"
+      "assetGroup": "Virtual Protocol::VIRTUAL",
+      "currencyId": "Virtuals Protocol::VIRTUAL",
+      "props": {
+        "ccip": {
+          "pool": "0x78680385fcb8187ac1b28e0d6b1e0acf5e0d0992",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "8453",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0xe555853720737512e3f8ccf64159a087b4da51db": {
       "chainId": "4663",
@@ -8309,7 +8367,16 @@
       "symbol": "NPC",
       "logoURI": "https://assets.coingecko.com/coins/images/31193/thumb/NPC_200x200.png?1696530021",
       "assetGroup": "Non Playable Coin::NPC",
-      "currencyId": "Non-Playable Coin::NPC"
+      "currencyId": "Non-Playable Coin::NPC",
+      "props": {
+        "ccip": {
+          "pool": "0x665aa13b440212dda704f76624f5cd246efc0361",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xbfc3a980b78b007ef0cde9625e52dbb66c51a1a7": {
       "chainId": "4663",
@@ -8856,7 +8923,16 @@
       "symbol": "BWLK",
       "logoURI": "https://assets.coingecko.com/coins/images/102174687/thumb/boardwalk_avatar_white_on_blue.png?1784621838",
       "assetGroup": "Boardwalk::BWLK",
-      "currencyId": "Boardwalk::BWLK"
+      "currencyId": "Boardwalk::BWLK",
+      "props": {
+        "ccip": {
+          "pool": "0xcfae9be1c5693ab26560c84b30489f3946363b41",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453", "42161"]
+        }
+      }
     },
     "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79": {
       "chainId": "4663",
@@ -10047,7 +10123,16 @@
       "symbol": "FLOCK",
       "logoURI": "https://assets.coingecko.com/coins/images/53178/thumb/FLock_Token_Logo.png?1735561398",
       "assetGroup": "FLOCK::FLOCK",
-      "currencyId": "FLOCK::FLOCK"
+      "currencyId": "FLOCK::FLOCK",
+      "props": {
+        "ccip": {
+          "pool": "0x05e42e03996379cd0b6290cc2767a1bdd78b737a",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "8453",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0x2702a57ba3d6568320f5d7c57f360dfa5763f8a9": {
       "chainId": "4663",
@@ -10437,7 +10522,16 @@
       "symbol": "RIPE",
       "logoURI": "https://assets.coingecko.com/coins/images/67990/thumb/Biggest.png?1755228970",
       "assetGroup": "Ripe DAO Governance Token::RIPE",
-      "currencyId": "Ripe DAO Governance Token::RIPE"
+      "currencyId": "Ripe DAO Governance Token::RIPE",
+      "props": {
+        "ccip": {
+          "pool": "0xe51af1311832818a6d366081fc535ca56357a6ee",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "4663",
+          "destinations": ["8453"]
+        }
+      }
     },
     "0x0bb40d7fbae7f0c69bc5910c601987dce697d85f": {
       "chainId": "4663",
@@ -10456,8 +10550,17 @@
       "address": "0x492641f648a4986844848e0befe66d14817bce34",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
-      "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "Chainlink::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x3201a20d2a33820c0dac8bc93c4819755c2a8c7f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xbb067737314e04b350c1d35e4784bcbc98405855": {
       "chainId": "4663",
@@ -11256,6 +11359,13 @@
           "score": 2,
           "category": "BRIDGED",
           "source": "issuer_inherit"
+        },
+        "ccip": {
+          "pool": "0x402430ca607c52a99aa82ab4c726001d4203c9e7",
+          "poolType": "burnMint",
+          "poolVersion": "1.6.1",
+          "home": "8453",
+          "destinations": ["8453"]
         },
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
@@ -14203,7 +14313,16 @@
       "symbol": "VOOI",
       "logoURI": "https://assets.coingecko.com/coins/images/70365/thumb/VOOI_Token_Logo.png?1764177739",
       "assetGroup": "VOOI::VOOI",
-      "currencyId": "VOOI::VOOI"
+      "currencyId": "VOOI::VOOI",
+      "props": {
+        "ccip": {
+          "pool": "0xc95209823cfc5b30dd24cfe45cd4b732dbc226cd",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "56"]
+        }
+      }
     },
     "0x8bce7712ca1efc613ce73f9471ad2388dac09413": {
       "chainId": "4663",
@@ -18493,6 +18612,13 @@
       "currencyId": "Green USD Stablecoin::GREEN",
       "props": {
         "risk": { "score": 5, "category": "STABLECOIN", "source": "whitelist" },
+        "ccip": {
+          "pool": "0x4b19f165bb1ce3f19bbe828d150706b9deeeec95",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "4663",
+          "destinations": ["8453"]
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "ripe", "name": "Ripe", "kind": "protocol" }
       }
@@ -19174,7 +19300,7 @@
       "address": "0x32003cc8357938bcf615c1222a349c58f2b30698",
       "symbol": "W0G",
       "logoURI": "https://coin-images.coingecko.com/coins/images/69681/large/0g.png?1759289984",
-      "assetGroup": "Wrapped 0G::W0G::4663::0",
+      "assetGroup": "Wrapped 0G::W0G",
       "currencyId": "Wrapped 0G::W0G"
     },
     "0xb11384a6ac2b3708e3d25a834c8a88687accbcd1": {
@@ -19621,6 +19747,196 @@
       "symbol": "Mimi",
       "assetGroup": "Mimi::Mimi",
       "currencyId": "Mimi::Mimi"
+    },
+    "0x2669e8355e238006609805fa192deffe6176416b": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Robin Hood Hat Strategy",
+      "address": "0x2669e8355e238006609805fa192deffe6176416b",
+      "symbol": "RHSTRAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179896/thumb/rhstrat-token.png?1793334661",
+      "assetGroup": "Robin Hood Hat Strategy::RHSTRAT",
+      "currencyId": "Robin Hood Hat Strategy::RHSTRAT"
+    },
+    "0xf9ee3fbcf3fc11b5681e9a44666d2e1e4f8c5834": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Stonk Street",
+      "address": "0xf9ee3fbcf3fc11b5681e9a44666d2e1e4f8c5834",
+      "symbol": "STREET",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179967/thumb/nkxjha3olgspwlmvun34wjzbka3u.?1793517917",
+      "assetGroup": "Stonk Street::STREET",
+      "currencyId": "Stonk Street::STREET"
+    },
+    "0xacc8de336f5d2366fa7334383d8fab73499f582a": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Forever",
+      "address": "0xacc8de336f5d2366fa7334383d8fab73499f582a",
+      "symbol": "FOREVER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179913/thumb/forever.jpg?1793346107",
+      "assetGroup": "Forever::FOREVER",
+      "currencyId": "Forever::FOREVER"
+    },
+    "0xc76b6020a3d7f4bb5cee85d44f8b0da6a6ee7616": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "The Mutual Fun",
+      "address": "0xc76b6020a3d7f4bb5cee85d44f8b0da6a6ee7616",
+      "symbol": "TMF",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179882/thumb/image-1793037767817.png?1793329688",
+      "assetGroup": "The Mutual Fun::TMF",
+      "currencyId": "The Mutual Fun::TMF"
+    },
+    "0x127cdc74e44e3c60422b7e792ebe480c0f873ed5": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Boomer",
+      "address": "0x127cdc74e44e3c60422b7e792ebe480c0f873ed5",
+      "symbol": "BOOMER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179968/thumb/boomer.jpg?1793518025",
+      "assetGroup": "Boomer::BOOMER::4663::1",
+      "currencyId": "Boomer::BOOMER"
+    },
+    "0x6354a37799e96ed6ccaecffbe1c100fa7f30cec8": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Tokyo Futuro",
+      "address": "0x6354a37799e96ed6ccaecffbe1c100fa7f30cec8",
+      "symbol": "ZENI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179973/thumb/token-logo.png?1793539313",
+      "assetGroup": "Tokyo Futuro::ZENI",
+      "currencyId": "Tokyo Futuro::ZENI"
+    },
+    "0x2932b2f5761cadca5cb3e09d940092ca723d9ee2": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Hoodfellas",
+      "address": "0x2932b2f5761cadca5cb3e09d940092ca723d9ee2",
+      "symbol": "HOOD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179941/thumb/170338.jpg?1793465917",
+      "assetGroup": "Hoodfellas::HOOD",
+      "currencyId": "Hoodfellas::HOOD"
+    },
+    "0x45e685b324ef6726099a738d3a5a98f2ccbe29bb": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "convik by Virtuals",
+      "address": "0x45e685b324ef6726099a738d3a5a98f2ccbe29bb",
+      "symbol": "CONVIK",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179976/thumb/pfp_convik.jpg?1793539933",
+      "assetGroup": "convik by Virtuals::CONVIK",
+      "currencyId": "convik by Virtuals::CONVIK"
+    },
+    "0xe83c85e1ead16fcfe85401e2b337fb4fb5b5cc96": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Autonomopad",
+      "address": "0xe83c85e1ead16fcfe85401e2b337fb4fb5b5cc96",
+      "symbol": "AUTONOMO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179985/thumb/7s2jrgacape4ywkadt5ntppcbs4b.?1793627266",
+      "assetGroup": "Autonomopad::AUTONOMO",
+      "currencyId": "Autonomopad::AUTONOMO"
+    },
+    "0xeee3217f7741fa3898fb0174f0ffd06936fc7985": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "EVRITHNG",
+      "address": "0xeee3217f7741fa3898fb0174f0ffd06936fc7985",
+      "symbol": "EVRI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179897/thumb/IMG_2959.jpeg?1793334835",
+      "assetGroup": "EVRITHNG::EVRI",
+      "currencyId": "EVRITHNG::EVRI"
+    },
+    "0xe4119a9bfcc86915368502b598bbed4745f7051d": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Wofl",
+      "address": "0xe4119a9bfcc86915368502b598bbed4745f7051d",
+      "symbol": "WOFL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179911/thumb/gyz9ne6k4e2y3m4uhzd3qakgks05.?1793345477",
+      "assetGroup": "Wofl::WOFL",
+      "currencyId": "Wofl::WOFL"
+    },
+    "0xe08739259de3b3864417dcdea9f4aaeddb8eddb9": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Ape.fun",
+      "address": "0xe08739259de3b3864417dcdea9f4aaeddb8eddb9",
+      "symbol": "APE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179945/thumb/download.png?1793467003",
+      "assetGroup": "Ape.fun::APE",
+      "currencyId": "Ape.fun::APE"
+    },
+    "0x78e80660e9a832f60dbfad1462ee7d9aa3c9bc34": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "TaoWifHood",
+      "address": "0x78e80660e9a832f60dbfad1462ee7d9aa3c9bc34",
+      "symbol": "TWIF",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179940/thumb/coingecko_pfp.png?1793465279",
+      "assetGroup": "TaoWifHood::TWIF",
+      "currencyId": "TaoWifHood::TWIF"
+    },
+    "0x75d874378ae31b33ab9e7a40b4dca96134221111": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "LOBIN",
+      "address": "0x75d874378ae31b33ab9e7a40b4dca96134221111",
+      "symbol": "LOBIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179881/thumb/lobin-pfp-legend-lime-1024.png?1793329539",
+      "assetGroup": "LOBIN::LOBIN",
+      "currencyId": "LOBIN::LOBIN"
+    },
+    "0x47b537f7c2c2183967fe5ba883291b8ada490db6": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "OffRouter",
+      "address": "0x47b537f7c2c2183967fe5ba883291b8ada490db6",
+      "symbol": "OFFROUTER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180038/thumb/logo.png?1793692675",
+      "assetGroup": "OffRouter::OFFROUTER",
+      "currencyId": "OffRouter::OFFROUTER"
+    },
+    "0x4dc9da81fa378181e113d7c67f77adc5cd857602": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "NASDANQ",
+      "address": "0x4dc9da81fa378181e113d7c67f77adc5cd857602",
+      "symbol": "NASDANQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175256/thumb/icon.jpg?1793626029",
+      "assetGroup": "NASDANQ::NASDANQ::4663::0",
+      "currencyId": "NASDANQ::NASDANQ"
+    },
+    "0xc80333bf7f4078e14ce5b6e223af607adca44418": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "BrainChain",
+      "address": "0xc80333bf7f4078e14ce5b6e223af607adca44418",
+      "symbol": "BRAIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179984/thumb/brainc_400x400.jpg?1793627051",
+      "assetGroup": "BrainChain::BRAIN",
+      "currencyId": "BrainChain::BRAIN"
+    },
+    "0xad05253a381feade280ca50bf875dc8113e8a746": {
+      "chainId": "4663",
+      "decimals": 8,
+      "name": "Propbase",
+      "address": "0xad05253a381feade280ca50bf875dc8113e8a746",
+      "symbol": "PROPS",
+      "logoURI": "https://assets.coingecko.com/coins/images/32932/thumb/PROP_BASE_%286%29.png?1699870054",
+      "assetGroup": "Propbase::PROPS",
+      "currencyId": "Propbase::PROPS"
+    },
+    "0xf42b4e1a3fd374b1f849bf898edc64ab17df06ea": {
+      "chainId": "4663",
+      "decimals": 9,
+      "name": "one coin",
+      "address": "0xf42b4e1a3fd374b1f849bf898edc64ab17df06ea",
+      "symbol": "ONECOIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179975/thumb/32724B4E-EC80-4FA4-9BC0-4DAEF3CFD60A.jpeg?1793539703",
+      "assetGroup": "one coin::ONECOIN",
+      "currencyId": "one coin::ONECOIN"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4663",

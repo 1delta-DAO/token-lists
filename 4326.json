@@ -14,6 +14,13 @@
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
         "risk": { "score": 2, "source": "whitelist" },
+        "ccip": {
+          "pool": "0x15c03488b29e27d62baf10e30b0c474bf60e0264",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
@@ -32,34 +39,53 @@
         "issuer": { "id": "kelp", "name": "Kelp", "kind": "protocol" }
       }
     },
-    "0x68fe7f83ba331e32d9fa3def98a5538176635339": {
-      "chainId": "4326",
-      "decimals": 18,
-      "name": "Bridged Staked avUSD (CCIP)",
-      "address": "0x68fe7f83ba331e32d9fa3def98a5538176635339",
-      "symbol": "savUSD",
-      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x06d47F3fb376649c3A9Dafe069B3D6E35572219E/logo.png",
-      "assetGroup": "Staked avUSD::savUSD",
-      "currencyId": "Bridged Staked avUSD (CCIP)::savUSD",
-      "props": {
-        "risk": { "score": 4, "source": "default" },
-        "stablecoin": { "base": "USD" },
-        "savings": { "underlying": "avUSD", "base": "USD" },
-        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
-      }
-    },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
       "chainId": "4326",
       "decimals": 8,
-      "name": "Bridged Lombard Staked Bitcoin (CCIP)",
+      "name": "Lombard Staked Bitcoin",
       "address": "0xecac9c5f704e954931349da37f60e39f515c11c1",
       "symbol": "LBTC",
       "logoURI": "https://assets.coingecko.com/coins/images/39969/thumb/LBTC_Logo.png?1724959872",
       "assetGroup": "LBTC",
-      "currencyId": "Bridged Lombard Staked Bitcoin (CCIP)::LBTC",
+      "currencyId": "Lombard Staked Bitcoin::LBTC",
       "props": {
         "lst": { "type": "staking", "asset": "BTC", "provider": "lombard" },
+        "risk": { "score": 2, "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xabb9629eae3fa0992d98b95217d49f7ddc4c4517",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": ["1", "56", "146", "8453", "43114", "747474"]
+        },
         "issuer": { "id": "lombard", "name": "Lombard", "kind": "protocol" }
+      }
+    },
+    "0x68fe7f83ba331e32d9fa3def98a5538176635339": {
+      "chainId": "4326",
+      "decimals": 18,
+      "name": "Staked avUSD",
+      "address": "0x68fe7f83ba331e32d9fa3def98a5538176635339",
+      "symbol": "savUSD",
+      "logoURI": "https://raw.githubusercontent.com/traderjoe-xyz/joe-tokenlists/main/logos/0x06d47F3fb376649c3A9Dafe069B3D6E35572219E/logo.png",
+      "assetGroup": "Staked avUSD::savUSD",
+      "currencyId": "Staked avUSD::savUSD",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "ccip": {
+          "pool": "0xe2df6143948257a91945555523efc60ff15aaf1f",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "43114",
+          "destinations": ["1", "56", "143", "43114", "80094", "747474"]
+        },
+        "stablecoin": { "base": "USD" },
+        "savings": { "underlying": "avUSD", "base": "USD" },
+        "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
     "0x4809010926aec940b550d34a46a52739f996d75d": {
@@ -343,6 +369,13 @@
       "props": {
         "denomination": "BTC",
         "risk": { "score": 2, "source": "issuer_inherit" },
+        "ccip": {
+          "pool": "0xaf771d0fc6bd49ededaa2e09fd431b0d98fdaeec",
+          "poolType": "burnMint",
+          "poolVersion": "2.1.0",
+          "home": "1",
+          "destinations": ["1", "43114", "747474"]
+        },
         "issuer": {
           "id": "ava-labs",
           "name": "Ava Labs",
@@ -357,8 +390,17 @@
       "address": "0xee85aefb15b9489563a6a29891ebe0750aa1a7ae",
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/Chainlink_Logo_500.png?1760023405",
-      "assetGroup": "Chainlink::LINK",
-      "currencyId": "Chainlink::LINK"
+      "assetGroup": "LINK",
+      "currencyId": "Chainlink::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0xd21d5a4e3fa0ebacc3dabb5258d9c1f4d24dc894",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0xcccc62962d17b8914c62d74ffb843d73b2a3cccc": {
       "chainId": "4326",
