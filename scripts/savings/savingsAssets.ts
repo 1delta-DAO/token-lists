@@ -340,6 +340,10 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // and instant against wYLDS — fork-proven on Ethereum 2026-10-06, so the
   // earlier "whitelist-gated" flag no longer holds. ---
   'Hastra PRIME::PRIME': { underlying: 'wYLDS', base: 'USD' },
+  // --- Mezzanine tranches over a levered Hastra PRIME/AUTO loop: 4626 over MZUSD, minted 1:1
+  // against wYLDS, exit queued by epoch. A dollar claim, so the same money as PRIME. ---
+  'Mezzanine Senior Hastra::msHastra': { underlying: 'wYLDS', base: 'USD' },
+  'Mezzanine Junior Hastra::mjHastra': { underlying: 'wYLDS', base: 'USD' },
   // --- Yuzu yzPrime (Monad 0xc9ea…7DA, 4626 over USDC, linear manager-set daily accrual —
   // 179 ppm/day = 6.5 % APR on 2026-10-20; mint/redeem role-gated) and the Yuzu Money Vault YZM
   // (USDC-denominated, holds syzUSD). Both are Euler / Morpho / Curvance collateral on Monad;
