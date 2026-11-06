@@ -932,6 +932,9 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Mezzanine Senior Hastra::msHastra': { id: 'mezzanine', name: 'Mezzanine', kind: 'protocol' },
   'Mezzanine Junior Hastra::mjHastra': { id: 'mezzanine', name: 'Mezzanine', kind: 'protocol' },
   'Mezzanine MZUSD::MZUSD': { id: 'mezzanine', name: 'Mezzanine', kind: 'protocol' },
+  'Mezzanine Senior PRIME::msPRIME': { id: 'mezzanine', name: 'Mezzanine', kind: 'protocol' },
+  'Mezzanine Junior PRIME::mjPRIME': { id: 'mezzanine', name: 'Mezzanine', kind: 'protocol' },
+  'Mezzanine PRIME MZUSD::MZUSD': { id: 'mezzanine', name: 'Mezzanine', kind: 'protocol' },
   // Exponent's tranching LPs (Solana), both sides of every market in the
   // roster (solana/exponentTranching.ts): Exponent's own instrument over
   // another desk's asset — the PT / YT rule, but these carry no `exponent`

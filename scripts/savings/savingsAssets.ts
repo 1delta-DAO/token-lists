@@ -344,6 +344,9 @@ export const SAVINGS_CURATED: SavingsGroupMap = {
   // against wYLDS, exit queued by epoch. A dollar claim, so the same money as PRIME. ---
   'Mezzanine Senior Hastra::msHastra': { underlying: 'wYLDS', base: 'USD' },
   'Mezzanine Junior Hastra::mjHastra': { underlying: 'wYLDS', base: 'USD' },
+  // The same protocol's PRIME vault: USDC directly, and its own token named MZUSD.
+  'Mezzanine Senior PRIME::msPRIME': { underlying: 'USDC', base: 'USD' },
+  'Mezzanine Junior PRIME::mjPRIME': { underlying: 'USDC', base: 'USD' },
   // --- Yuzu yzPrime (Monad 0xc9ea…7DA, 4626 over USDC, linear manager-set daily accrual —
   // 179 ppm/day = 6.5 % APR on 2026-10-20; mint/redeem role-gated) and the Yuzu Money Vault YZM
   // (USDC-denominated, holds syzUSD). Both are Euler / Morpho / Curvance collateral on Monad;
