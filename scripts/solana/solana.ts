@@ -205,6 +205,17 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   EjmyN6qEC1Tf1JxiG1ae7UTJhUxSwk1TCWNWqxWV4J6o: 'DAI',
   // the one Solana xStock whose EVM twin CoinGecko does not join (same Backed product)
   Xsy66wss7g59sgVeeCGvC1fDujEZcHgFMQxXPWgaDhF: 'Webster Financial xStock::WBSX',
+  // Bridged / issuer deployments a Solana lending reserve holds, joined to their
+  // EVM group (none is Jupiter-verified, so all five also sit in SOLANA_EXTRA_MINTS):
+  // Wormhole's wstETH (mint authority = the Portal token-bridge signer BCD75RNB…),
+  // Midas's Solana mF-ONE (Token-2022 metadata on midas-apps/midas-assets), and
+  // Superstate's USTB / USCC (metadata on api.superstate.com) and Securitize's sACRED,
+  // which keep their EVM group although the funds were renamed since.
+  ZScHuTtqZukUrtZS43teTKGs2VqkKL8k4QCouR2n6Uo: 'WSTETH',
+  ESS9fuAbDiyDXy6y1ZAt9VSaiGPSqG8NwaWVX7dePdR7: 'Midas Fasanara ONE::mF-ONE',
+  CCz3SGVziFeLYk2xfEstkiqJfYkjaSWb2GCABYsVcjo2: 'Superstate Short Duration US Government Securities Fund::USTB',
+  BTRR3sj1Bn2ZjuemgbeQ6SCtf84iXS81CS7UDTSxUCaK: 'Superstate USCC::USCC',
+  '59CwZq5b6drmDizgGfxECG7f16hxDpG1nXrxPoQx4y8g': 'sACRED::sACRED',
 }
 
 /**
@@ -293,7 +304,41 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
     'Solv BTC+ (8-dec SPL Token, 0.215 supply on 2026-10-29, no DEX pool); freeze authority + soLv1S6G… mint-multisig member shared with Solv SolvBTC, metadata in solv-finance/solv-btc-metadata-solana',
   i7u4r16TcsJTgq1kAG8opmVZyVnAKBwLKu6ZPMwzxNc:
     'Ondo OUSG — CoinGecko `ousg` platforms list this mint beside Ethereum / Polygon; Jupiter answers it unverified ("Ondo Short-Term US Gov Bond Fund")',
+  // Issuer / bridged reserves (2026-11-10, yield-tracer's unlisted-mint census); groups in SOLANA_MAPPEDS.
+  ZScHuTtqZukUrtZS43teTKGs2VqkKL8k4QCouR2n6Uo: 'Kamino + Project 0 + Save reserve (Wormhole wstETH); mint authority = the Portal token-bridge signer',
+  ESS9fuAbDiyDXy6y1ZAt9VSaiGPSqG8NwaWVX7dePdR7: 'Kamino reserve (Midas mF-ONE); Token-2022 metadata on midas-apps/midas-assets solana/solmfone-metadata',
+  CCz3SGVziFeLYk2xfEstkiqJfYkjaSWb2GCABYsVcjo2: 'Kamino reserve (Superstate USTB); Token-2022 metadata on api.superstate.com',
+  BTRR3sj1Bn2ZjuemgbeQ6SCtf84iXS81CS7UDTSxUCaK: 'Kamino reserve (Superstate USCC); Token-2022 metadata on api.superstate.com',
+  '59CwZq5b6drmDizgGfxECG7f16hxDpG1nXrxPoQx4y8g': 'Kamino reserve (Securitize sACRED); icon on metadata.securitize.io',
+  // SPL single-pool stake tokens (program SVSPxpvH…): each mint is the program's
+  // `mint` PDA of a live pool account, checked 2026-11-10 — not merely the
+  // "SPL Single Pool" name, which six other reserve mints carry without a pool.
+  BDsEuxFWznAP5cUCannnfjyjDtTwqN57CkGfDbjx2nNZ: 'Jupiter Lend + Project 0 reserve (nsDAWN); single-pool mint of vote 8zuMRTXThoPTTPLLvaiKiJshLLCqGMt9BdRjjCL19xBc',
+  '3YEDiJ4r4xRGNhq6nudRnkwrdKHG7PAtDim24CjTMtBH': 'Project 0 reserve (stvoteRnv); single-pool mint of vote voteRnv6PBzmiGP8NicWtQiqEJTwKKq2SxtqtdLUJjd',
+  AQpQoJ3tJKGH9Yn8GSzoUsVcHPJjj3xYfQFp9XVr74F6: 'Project 0 reserve (stnfGcSJk); single-pool mint of vote nfGcSJkP35SkPa5475iBChmq1UNcj7JE1uQHrrasymm',
+  FUyAyVbYrMfiaN1QEQYFZTuBNzW5EJf3jWzjjymGqKLv: 'Project 0 reserve (stmrgn4t2); single-pool mint of vote mrgn4t2JabSgvGnrCaHXMvz8ocr4F52scsxJnkQMQsQ',
+  CRpAn8E5k9G5VSRuzGfSyfL3Dhtq3phHZbfRwMQnCe2Z: 'Project 0 reserve (st7K8DVxt); single-pool mint of vote 7K8DVxtNJGnMtUY1CQJT5jcs8sFGSZTDiG7kowvFpECh',
+  '6Mt7tBWLUJfDxqCFTsjoRXF9wD55g4Lhs5nAyYp244pX': 'Project 0 reserve (stmrgn2vs); single-pool mint of vote mrgn2vsZ5EJ8YEfAMNPXmRux7th9cNfBasQ1JJvVwPn',
+  Akib1NYJzzh9HkiDH41S2LUefUmR1bKsk65xgqUcW5C5: 'Project 0 reserve (st3xjfK9C); single-pool mint of vote 3xjfK9C9YNcta8MvK1US4sQ3bc6DEjoJoR3qLExGf9xE',
+  '5vmwd6JHDCmX9W2XT1n2QpvYGA2kk4Xf7qWSayDU6caT': 'Project 0 reserve (stHvsD9L5); single-pool mint of vote HvsD9L5t62MGv3QBD2K7xjkipGYr9UZN7BtsW8NuSPpg',
+  '96rXgCFy1Er49169XoKHkeLiKC2k4bTy1641q1TVrMm2': 'Project 0 reserve (stSBLZib4); single-pool mint of vote SBLZib4npE7svxFA7AsD3ytdQAfYNb39c8zsU82AA2E',
+  '2k79y8CApbU9jAvWhLS2j6uRbaVjpLJTUzstBTho9vGq': 'Jupiter Lend + Project 0 reserve (nsHELIUS); single-pool mint of vote he1iusunGwqrNtafDtLdhsUQDFvo13z9sUa36PauBtk',
+  TjA2rtxoUFzyPVAw35VQGEQnNXiwcmNjKSk29nmkq1P: 'Jupiter Lend + Project 0 reserve (stgaToR24); single-pool mint of vote gaToR246dheK1DGAMEqxMdBJZwU4qFyt7DzhSwAHFWF',
+  F1XPjtpsEy23Q7po4JkWjp1jkDZcvFYSrqD8TR1YL3EF: 'Project 0 reserve (st3ZUQekq); single-pool mint of vote 3ZUQekqiZoybB57y49eqtvSaoonqDwuNbeqEGwN88JkQ',
+  PhxXAYTkFZS23ZWvFcz6H6Uq4VnVBMa6hniiAyudjaW: 'Jupiter Lend + Project 0 reserve (nsKILN); single-pool mint of vote DdCNGDpP7qMgoAy6paFzhhak2EeyCZcgjH7ak5u5v28m',
+  C1KwBJZNwUaodUcP5kXqD52NCuZzThNAG2cw3vt5H6iE: 'Jupiter Lend + Project 0 reserve (nsSHIFT); single-pool mint of vote shft7Fry1js37Hm9wq4dfwcZSp2DyKszeWMvEpjYCQ1',
+  BNisp3omkr6Rg5nHESWafjUbeCpGPy6MYq1iRJRgSAsh: 'Project 0 reserve (stabc1zP7); single-pool mint of vote abc1zP7ihWsgQW8z5YmfQNqMckJE5Dfx8fwUNMNVNkY',
+  E7fosu1BW5ELQwDpipNK9TVSq9eRroPz9AhnnrfhNNYQ: 'Project 0 reserve (stCcaHc2L); single-pool mint of vote CcaHc2L43ZWjwCHART3oZoJvHLAe9hzT2DJNUpBzoTN1',
+  DKPvRV4dxUejjGpr2XwFmzZbbbTD7vx9Jmt1kk43n4d5: 'Project 0 reserve (st3N7s9zX); single-pool mint of vote 3N7s9zXMZ4QqvHQR15t5GNHyqc89KduzMP7423eWiD5g',
+  '2pMCRTPxF355vC56r6mL8vfnqa24up5CfZmcX1HkFj7i': 'Jupiter Lend + Project 0 reserve (stFKsC411); single-pool mint of vote FKsC411dik9ktS6xPADxs4Fk2SCENvAiuccQHLAPndvk',
 }
+
+/** The SPL single-pool stake tokens of SOLANA_EXTRA_MINTS, classified `lst` (staked SOL). */
+const SPL_SINGLE_POOL_MINTS = new Set(
+  Object.entries(SOLANA_EXTRA_MINTS)
+    .filter(([, why]) => why.includes('single-pool mint of vote'))
+    .map(([mint]) => mint),
+)
 
 /**
  * Name / symbol for an extra mint whose Jupiter answer is unusable, beating it.
@@ -618,6 +663,8 @@ async function main() {
     else if (t.tokenProgram === SPL_TOKEN) props.solana = { tokenProgram: 'spl-token' }
     if (t.id === WSOL) props = { ...props, wnative: true, denomination: 'SOL' }
     if (exponentByMint.has(t.id)) props.exponent = exponentByMint.get(t.id)!.props.exponent
+    // a single-pool stake token is SOL staked with one validator; Jupiter tags none of them `lst`
+    if (SPL_SINGLE_POOL_MINTS.has(t.id)) props.lst = { type: 'staking', asset: 'SOL' }
 
     props = classifySolanaToken(t, assetGroup, props)
     // LayerZero OFT stores of this mint (`npm run oft`), the into-Solana half
