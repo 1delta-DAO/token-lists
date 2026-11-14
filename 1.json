@@ -32,6 +32,26 @@
         ]
       }
     },
+    "0x0009f07dd409ba166dee4b5493448e31ae174783": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT sUSDe (USDe) Ethereum",
+      "address": "0x0009f07dd409ba166dee4b5493448e31ae174783",
+      "symbol": "YT-sUSDe-7JAN2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e6879e1f-fa5f-450f-80b1-615de6d46080.svg",
+      "assetGroup": "YT sUSDe (USDe) Ethereum::YT-sUSDe-7JAN2027",
+      "currencyId": "YT sUSDe (USDe) Ethereum::YT-sUSDe-7JAN2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1799280000,
+          "underlyingAsset": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+          "ptAddress": "0x09d08ac4af75f39bafcb260bfd07ea78fc7dc094",
+          "syAddress": "0xf9991db7fb56f30f7a8e58f6c8197892b32250a9"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x003984ecc30bafe364efa8c0112cdd94b8216406": {
       "chainId": "1",
       "decimals": 18,
@@ -964,7 +984,7 @@
           "ptAddress": "0x1f79bc2bf1facf86410a8f18ccca7e0ee01abc7e",
           "ytAddress": "0x5884d1c70da995631c4c388b32e1e37ab483941b"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 4, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "re", "name": "Re", "kind": "protocol", "hops": 1 }
@@ -1068,6 +1088,30 @@
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [{ "id": "yala", "name": "Yala", "hops": 1 }]
+      }
+    },
+    "0x078394b1aceb6a070d1fa1e1c85a92256f7a6c74": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Ethereum",
+      "address": "0x078394b1aceb6a070d1fa1e1c85a92256f7a6c74",
+      "symbol": "YT-USDe-31AUG2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/55af77a3-0c6e-42d4-ad34-d2e6c1d31c64.svg",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-31AUG2027",
+      "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-31AUG2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x1abe622fb6876b98f3aa1cf2ed86a32af954b3f9",
+          "expiry": 1819670400,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x9327c9743d06efce3f784049f1aeed3d63a05be6",
+          "syAddress": "0xc994861c0041d88addf99fd136fe94fdd9b634bf"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x079c3469143804af5d0d645a878c371dbe8d038e": {
@@ -1407,6 +1451,26 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x09d08ac4af75f39bafcb260bfd07ea78fc7dc094": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT sUSDe (USDe) Ethereum",
+      "address": "0x09d08ac4af75f39bafcb260bfd07ea78fc7dc094",
+      "symbol": "PT-sUSDe-7JAN2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6f77480b-c00e-444d-8065-1f3858b4399d.svg",
+      "assetGroup": "PT sUSDe (USDe) Ethereum::PT-sUSDe-7JAN2027",
+      "currencyId": "PT sUSDe (USDe) Ethereum::PT-sUSDe-7JAN2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1799280000,
+          "underlyingAsset": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+          "ytAddress": "0x0009f07dd409ba166dee4b5493448e31ae174783",
+          "syAddress": "0xf9991db7fb56f30f7a8e58f6c8197892b32250a9"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x0a0e172511114456ec63a85ff32e45c5e0e27d63": {
       "chainId": "1",
       "decimals": 18,
@@ -1627,7 +1691,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -2143,6 +2207,30 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kelp", "name": "Kelp", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0x0f0815baeaa76a147b957fe061d76b49e93c065c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Ethereum",
+      "address": "0x0f0815baeaa76a147b957fe061d76b49e93c065c",
+      "symbol": "YT-USDe-31MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/9937b196-1940-4d98-9644-c774265a51b5.svg",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-31MAY2027",
+      "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-31MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x00b0d4645233b74fd84f39ea3df52bd0202a1448",
+          "expiry": 1811721600,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x2757eea99c54dcb9e319ae00f08fe841e4574450",
+          "syAddress": "0xa57854210b569aabf55f8f99ad16705053e563b8"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
         ]
       }
     },
@@ -3317,6 +3405,27 @@
         ]
       }
     },
+    "0x1593d2b64365bed60caf54ecb7448171214e33c1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "USDe Ethereum",
+      "address": "0x1593d2b64365bed60caf54ecb7448171214e33c1",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/494c9f93-3620-4c2d-9cd1-f332e9d7edd9.svg",
+      "assetGroup": "USDe Ethereum::SY-USDe",
+      "currencyId": "USDe Ethereum::SY-USDe",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x3f714e7623c33cd9bf1f30c6f1326a4ea933d45b",
+          "expiry": 1827532800,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x247934a535e4a37b95c13feb7efef778e39dc7e5",
+          "ytAddress": "0x4fe7edd2aab0b82dae6885d2a2612b84aa77b0dd"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x15ddc249a326698c5a001ab6a92b76f7acc091e0": {
       "chainId": "1",
       "decimals": 8,
@@ -4096,7 +4205,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xa808bc9775cb41c52c7842f8b50427fe7a770326",
           "ptAddress": "0x931881a5bc9e230876264030c0c26676f207e79c",
-          "syAddress": "0xbeefe990f4099e11c6ab745555621cdfa161f18d"
+          "syAddress": "0xbeefe990f4099e11c6ab745555621cdfa161f18d",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -4237,6 +4347,11 @@
           "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
           "ytAddress": "0xb9e35cbf6c40a5840569d88d3f3834829e27ec9f",
           "syAddress": "0xf3135b0ba174b502ac22a6a9cfe996542a7e353f"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -4812,7 +4927,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -5778,6 +5893,30 @@
         ]
       }
     },
+    "0x247934a535e4a37b95c13feb7efef778e39dc7e5": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Ethereum",
+      "address": "0x247934a535e4a37b95c13feb7efef778e39dc7e5",
+      "symbol": "PT-USDe-30NOV2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f4871114-f555-4801-8e67-7996543fe373.svg",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-30NOV2027::1::0",
+      "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-30NOV2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x3f714e7623c33cd9bf1f30c6f1326a4ea933d45b",
+          "expiry": 1827532800,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ytAddress": "0x4fe7edd2aab0b82dae6885d2a2612b84aa77b0dd",
+          "syAddress": "0x1593d2b64365bed60caf54ecb7448171214e33c1"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
     "0x248241244356d18f63d0c16082996839ecb0c7bf": {
       "chainId": "1",
       "decimals": 18,
@@ -6209,6 +6348,30 @@
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [{ "id": "usual", "name": "Usual", "hops": 1 }]
+      }
+    },
+    "0x2757eea99c54dcb9e319ae00f08fe841e4574450": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Ethereum",
+      "address": "0x2757eea99c54dcb9e319ae00f08fe841e4574450",
+      "symbol": "PT-USDe-31MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/131c6ad2-e8a1-4ef6-b72a-a47c5875ab30.svg",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-31MAY2027",
+      "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-31MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x00b0d4645233b74fd84f39ea3df52bd0202a1448",
+          "expiry": 1811721600,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ytAddress": "0x0f0815baeaa76a147b957fe061d76b49e93c065c",
+          "syAddress": "0xa57854210b569aabf55f8f99ad16705053e563b8"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x276dc1714bdb1beb869babc6e84c0b102e75bf32": {
@@ -6890,7 +7053,7 @@
           "syAddress": "0x47dfd0c8eee949748c1d5cb6b695a4aba5fe7379"
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -8126,6 +8289,27 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x31853542da976400fb66278be7a09636aad332fc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "USDe Ethereum",
+      "address": "0x31853542da976400fb66278be7a09636aad332fc",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/86736914-edff-4231-9985-2db482f975a1.svg",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::0",
+      "currencyId": "USDe Ethereum::SY-USDe",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xf1f53912c156a8c06927746cb20ba11ecec526ce",
+          "expiry": 1803772800,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x65bc0a0cf38ecdfc95e553de01af01a56da225ce",
+          "ytAddress": "0xe90faaf3f95cdef13b2bd67ed49ce4a1a83c49f4"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x3199c7c3c972a8da5f9fad2a838383f827b735f1": {
       "chainId": "1",
       "decimals": 18,
@@ -8993,7 +9177,7 @@
           "ptAddress": "0x0b48a647e55a84d7fe25dacf8ca0ea79bdf4cae5",
           "ytAddress": "0x2e0ca05f9a524f7469a424d3aebf1b273c05a9d5"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 4, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -11181,7 +11365,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xbd373c9d3d8976a4fecc504a93c768bbe8c3227c",
           "ytAddress": "0x7cf9ea7bc05c6b3f8517b71f8d87feecb006def4",
-          "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411"
+          "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411",
+          "expired": true
         },
         "risk": {
           "score": 4,
@@ -11682,7 +11867,7 @@
           "ptAddress": "0xaacae34960cac6f32826f81e15f855f8e8c7f39e",
           "ytAddress": "0x3992e4c12e22d7535d6144f3af66e712963e9345"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 3, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -11878,7 +12063,7 @@
           "ptAddress": "0x2ae4f59e500b6ddeb88c480edf277eda54a00205",
           "ytAddress": "0xfd9aa51f530369ff5024bc3f6d6f3a00a789f94a"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 4, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "re", "name": "Re", "kind": "protocol", "hops": 1 }
@@ -12169,7 +12354,7 @@
       "address": "0x49f53e69ce7e2a4b00de951fc9395855ee0957be",
       "symbol": "PT-USDe-31MAY2027",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-31MAY2027",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-31MAY2027::1::0",
       "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-31MAY2027",
       "props": {
         "pendle": {
@@ -12178,6 +12363,11 @@
           "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
           "ytAddress": "0xe9fc41f0accc4872d2952eb0fa087202c2de2a6a",
           "syAddress": "0x711fbd23db52f49993d5c460946bd3cba2424ff3"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -13029,6 +13219,30 @@
       "props": {
         "pendle": { "tokenType": "SY" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x4fe7edd2aab0b82dae6885d2a2612b84aa77b0dd": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Ethereum",
+      "address": "0x4fe7edd2aab0b82dae6885d2a2612b84aa77b0dd",
+      "symbol": "YT-USDe-30NOV2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e2112b79-366c-4bf9-91f2-331d7f4496b6.svg",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-30NOV2027",
+      "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-30NOV2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x3f714e7623c33cd9bf1f30c6f1326a4ea933d45b",
+          "expiry": 1827532800,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x247934a535e4a37b95c13feb7efef778e39dc7e5",
+          "syAddress": "0x1593d2b64365bed60caf54ecb7448171214e33c1"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x500f4ac4b1cfae7de51799ecf5bd09649a8b05d3": {
@@ -14071,7 +14285,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xab2ab53e1e2e2c5d7202918ec8c873712bcc4a2d",
           "ptAddress": "0xd70be760f0bc3009db4563fe0b9eee54883adb50",
-          "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c"
+          "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c",
+          "expired": true
         },
         "risk": {
           "score": 5,
@@ -14886,7 +15101,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -14945,6 +15160,27 @@
         "issuerExposures": [
           { "id": "midas", "name": "Midas", "kind": "institution", "hops": 1 }
         ]
+      }
+    },
+    "0x5b543e433164ce8dc9447f3f21091580dea3dcc0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT trUSD (trUSD) Ethereum",
+      "address": "0x5b543e433164ce8dc9447f3f21091580dea3dcc0",
+      "symbol": "YT-trUSD-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/466383ed-3383-481f-bfc7-cc0f5f6fd4c0.svg",
+      "assetGroup": "YT trUSD (trUSD) Ethereum::YT-trUSD-25FEB2027",
+      "currencyId": "YT trUSD (trUSD) Ethereum::YT-trUSD-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x5bcaed9fc1f605a7049058691cadd0935fa3164a",
+          "expiry": 1803513600,
+          "underlyingAsset": "0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+          "ptAddress": "0x93d246c13d880702ea1fe6c47bd022a1027fc7fb",
+          "syAddress": "0xa09482f2f6cb5f2177b05144bc276d06b8b818eb"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0x5b8ab5cbe12365cf0939501c80a99f481253a6e4": {
@@ -16516,6 +16752,30 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x65bc0a0cf38ecdfc95e553de01af01a56da225ce": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Ethereum",
+      "address": "0x65bc0a0cf38ecdfc95e553de01af01a56da225ce",
+      "symbol": "PT-USDe-28FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f5850ca3-4057-417b-ba3c-6a1ea2706700.svg",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-28FEB2027",
+      "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-28FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xf1f53912c156a8c06927746cb20ba11ecec526ce",
+          "expiry": 1803772800,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ytAddress": "0xe90faaf3f95cdef13b2bd67ed49ce4a1a83c49f4",
+          "syAddress": "0x31853542da976400fb66278be7a09636aad332fc"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
     "0x662c9b3d7f59e9cee96810a9e83ba7729710b1b2": {
       "chainId": "1",
       "decimals": 18,
@@ -16626,7 +16886,7 @@
       "address": "0x6689ebb7b8b0da99befdf6974310d733f6166e40",
       "symbol": "SY-USDe",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "USDe Ethereum::SY-USDe",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::1",
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
@@ -16999,7 +17259,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -17140,9 +17400,9 @@
           "expired": true
         },
         "risk": {
-          "score": 5,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
-          "source": "pendle_inherit"
+          "source": "default"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -18106,7 +18366,7 @@
       "address": "0x711fbd23db52f49993d5c460946bd3cba2424ff3",
       "symbol": "SY-USDe",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "USDe Ethereum::SY-USDe::1::0",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::2",
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
@@ -20007,7 +20267,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xbd373c9d3d8976a4fecc504a93c768bbe8c3227c",
           "ptAddress": "0x44db865cc6d5768703fb5bf73dfb7a5a0f95c1fc",
-          "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411"
+          "syAddress": "0xa99a50d95003e7687d7962f29aad6cdd3655d411",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -20110,11 +20371,7 @@
           "ptAddress": "0x6b44fc15953fb65be99b1d32e25cfaa9362c8173",
           "ytAddress": "0x82cc3da7d315c47557147f44984c3e805c34789c"
         },
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lybra", "name": "Lybra", "kind": "protocol", "hops": 1 }
@@ -20372,7 +20629,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0x98a878b1cd98131b271883b390f68d2c90674665",
           "ptAddress": "0xaf687b5ecb525ccea96115088999b4ed80c388b6",
-          "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc"
+          "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -20636,11 +20894,7 @@
           "syAddress": "0x7e16e4253ce4a1c96422a9567b23b4b5ebc207f1",
           "expired": true
         },
-        "risk": {
-          "score": 5,
-          "category": "YIELD_TOKEN",
-          "source": "pendle_inherit"
-        },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "lybra", "name": "Lybra", "kind": "protocol", "hops": 1 }
@@ -20907,7 +21161,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0x38eeb52f0771140d10c4e9a9a72349a329fe8a6a",
           "ptAddress": "0xb5be35d8ff83d431899b95851cb17a2b4bcef150",
-          "syAddress": "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6"
+          "syAddress": "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -22300,7 +22555,7 @@
           "ptAddress": "0x69bc3a5eec3ef582003f74fcc95c8289ddd42e49",
           "ytAddress": "0x75f24ffb14652de7ce223fa63f656906ced77e61"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 4, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           {
@@ -22987,7 +23242,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xa808bc9775cb41c52c7842f8b50427fe7a770326",
           "ytAddress": "0x1beecff8cbf629d13bff2d8140d7b6b42f1e8061",
-          "syAddress": "0xbeefe990f4099e11c6ab745555621cdfa161f18d"
+          "syAddress": "0xbeefe990f4099e11c6ab745555621cdfa161f18d",
+          "expired": true
         },
         "risk": {
           "score": 4,
@@ -23002,6 +23258,30 @@
             "kind": "protocol",
             "hops": 1
           }
+        ]
+      }
+    },
+    "0x9327c9743d06efce3f784049f1aeed3d63a05be6": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Ethereum",
+      "address": "0x9327c9743d06efce3f784049f1aeed3d63a05be6",
+      "symbol": "PT-USDe-31AUG2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/7af4f07c-a684-46ba-9f72-97af6fae7227.svg",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-31AUG2027",
+      "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-31AUG2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x1abe622fb6876b98f3aa1cf2ed86a32af954b3f9",
+          "expiry": 1819670400,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ytAddress": "0x078394b1aceb6a070d1fa1e1c85a92256f7a6c74",
+          "syAddress": "0xc994861c0041d88addf99fd136fe94fdd9b634bf"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
         ]
       }
     },
@@ -23131,6 +23411,27 @@
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [{ "id": "avalon", "name": "Avalon", "hops": 1 }]
+      }
+    },
+    "0x93d246c13d880702ea1fe6c47bd022a1027fc7fb": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT trUSD (trUSD) Ethereum",
+      "address": "0x93d246c13d880702ea1fe6c47bd022a1027fc7fb",
+      "symbol": "PT-trUSD-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/67fd2c86-dccd-4c8a-a648-6672eef2327d.svg",
+      "assetGroup": "PT trUSD (trUSD) Ethereum::PT-trUSD-25FEB2027",
+      "currencyId": "PT trUSD (trUSD) Ethereum::PT-trUSD-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x5bcaed9fc1f605a7049058691cadd0935fa3164a",
+          "expiry": 1803513600,
+          "underlyingAsset": "0xd0580192e98ea6ceb9c7b6191ed2e27560911697",
+          "ytAddress": "0x5b543e433164ce8dc9447f3f21091580dea3dcc0",
+          "syAddress": "0xa09482f2f6cb5f2177b05144bc276d06b8b818eb"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0x93d5ced9fb7e784400590b3b978c015d4a7d9f46": {
@@ -26034,6 +26335,27 @@
         ]
       }
     },
+    "0xa57854210b569aabf55f8f99ad16705053e563b8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "USDe Ethereum",
+      "address": "0xa57854210b569aabf55f8f99ad16705053e563b8",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/b867472d-c4a2-44c4-b03e-279e6146a20c.svg",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::3",
+      "currencyId": "USDe Ethereum::SY-USDe",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x00b0d4645233b74fd84f39ea3df52bd0202a1448",
+          "expiry": 1811721600,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x2757eea99c54dcb9e319ae00f08fe841e4574450",
+          "ytAddress": "0x0f0815baeaa76a147b957fe061d76b49e93c065c"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xa57feedbd31f4ebd7761d5c3aeed7deccb8f95ee": {
       "chainId": "1",
       "decimals": 18,
@@ -26977,7 +27299,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -27800,7 +28122,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0x98a878b1cd98131b271883b390f68d2c90674665",
           "ytAddress": "0x7fbc01c63b0ac372ec75907f3a1d8adc8cf28e1f",
-          "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc"
+          "syAddress": "0x4f116ee5bcd227d1a1c4f57918d694a4abe7b3fc",
+          "expired": true
         },
         "risk": {
           "score": 3,
@@ -28229,6 +28552,27 @@
             "hops": 1
           }
         ]
+      }
+    },
+    "0xb223397eba3d502b944d1a07a7ff8a6054ab2282": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "YT superUSDC (USDC) Ethereum",
+      "address": "0xb223397eba3d502b944d1a07a7ff8a6054ab2282",
+      "symbol": "YT-superUSDC-27MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/9d765660-fd12-4be3-bea3-47db9b175e60.svg",
+      "assetGroup": "YT superUSDC (USDC) Ethereum::YT-superUSDC-27MAY2027",
+      "currencyId": "YT superUSDC (USDC) Ethereum::YT-superUSDC-27MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x3d070daecb2a22534ba02be70be860094b1a0019",
+          "expiry": 1811376000,
+          "underlyingAsset": "0xf6ebea08a0dfd44825f67fa9963911c81be2a947",
+          "ptAddress": "0xeba135f422f85a4bb49e5c934d2731909864c371",
+          "syAddress": "0x4d654f255d54637112844bd8802b716170904fee"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0xb253eff1104802b97ac7e3ac9fdd73aece295a2c": {
@@ -28715,7 +29059,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0x38eeb52f0771140d10c4e9a9a72349a329fe8a6a",
           "ytAddress": "0x85cc1b74fc95abb6b9b6060c56334ba3e4b88ed4",
-          "syAddress": "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6"
+          "syAddress": "0x04f8dca7bccd8997ac57ca6fef7c705e17d6bcb6",
+          "expired": true
         },
         "risk": {
           "score": 3,
@@ -29299,7 +29644,7 @@
       "address": "0xb9e35cbf6c40a5840569d88d3f3834829e27ec9f",
       "symbol": "YT-USDe-30NOV2027",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-30NOV2027",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-30NOV2027::1::0",
       "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-30NOV2027",
       "props": {
         "pendle": {
@@ -29309,6 +29654,7 @@
           "ptAddress": "0x1cae1e0a328485e100be74866c829948f170d143",
           "syAddress": "0xf3135b0ba174b502ac22a6a9cfe996542a7e353f"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -30218,6 +30564,7 @@
           "ptAddress": "0xcb3760b19538db4e5506debf8f73c963824e997d",
           "syAddress": "0xca7a1774d50c2bf3ebdeb205bf72390743752231"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -31672,6 +32019,27 @@
         ]
       }
     },
+    "0xc994861c0041d88addf99fd136fe94fdd9b634bf": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "USDe Ethereum",
+      "address": "0xc994861c0041d88addf99fd136fe94fdd9b634bf",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6c7e57b1-906a-4c04-8e84-3b4cd2260972.svg",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::4",
+      "currencyId": "USDe Ethereum::SY-USDe",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x1abe622fb6876b98f3aa1cf2ed86a32af954b3f9",
+          "expiry": 1819670400,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x9327c9743d06efce3f784049f1aeed3d63a05be6",
+          "ytAddress": "0x078394b1aceb6a070d1fa1e1c85a92256f7a6c74"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xc9950c55126c125173e9319077253d633221283a": {
       "chainId": "1",
       "decimals": 20,
@@ -31773,7 +32141,7 @@
       "address": "0xca7a1774d50c2bf3ebdeb205bf72390743752231",
       "symbol": "SY-USDe",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/0639d355-23fb-4485-bb2b-a6d7ff9ab387.svg",
-      "assetGroup": "USDe Ethereum::SY-USDe::1::1",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::5",
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
@@ -31876,7 +32244,7 @@
       "address": "0xcb3760b19538db4e5506debf8f73c963824e997d",
       "symbol": "PT-USDe-28FEB2027",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/89cafad7-485a-474c-b415-e9529e1d445b.svg",
-      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-28FEB2027",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-28FEB2027::1::0",
       "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-28FEB2027",
       "props": {
         "pendle": {
@@ -31885,6 +32253,11 @@
           "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
           "ytAddress": "0xc01639ecbe3317d0863ca1afe094e49eca9834e8",
           "syAddress": "0xca7a1774d50c2bf3ebdeb205bf72390743752231"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -33078,7 +33451,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -33562,7 +33935,7 @@
       "address": "0xd65925e1fc72b16b8a5e8c8336c2c82ba9dd6bb6",
       "symbol": "PT-USDe-31AUG2027",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-31AUG2027",
+      "assetGroup": "PT USDe (USDe) Ethereum::PT-USDe-31AUG2027::1::0",
       "currencyId": "PT USDe (USDe) Ethereum::PT-USDe-31AUG2027",
       "props": {
         "pendle": {
@@ -33571,6 +33944,11 @@
           "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
           "ytAddress": "0xfa062db10de7b7106b4d0af85566d9d2160c5411",
           "syAddress": "0x6689ebb7b8b0da99befdf6974310d733f6166e40"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -33694,7 +34072,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xab2ab53e1e2e2c5d7202918ec8c873712bcc4a2d",
           "ytAddress": "0x56467eef9be9bcd025c24d4437525e02acbe310b",
-          "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c"
+          "syAddress": "0x464a2b93b6633707470bcd2c81d34519f38e1e9c",
+          "expired": true
         },
         "risk": {
           "score": 5,
@@ -33763,6 +34142,27 @@
         "issuerExposures": [
           { "id": "sky", "name": "Sky", "kind": "protocol", "hops": 1 }
         ]
+      }
+    },
+    "0xd7ace3eb6307a5f5a98b1e3a032fb2f9d7df675d": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT strUSD (trUSD) Ethereum",
+      "address": "0xd7ace3eb6307a5f5a98b1e3a032fb2f9d7df675d",
+      "symbol": "YT-strUSD-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/10034f74-cff9-411a-82cf-6779a543ab20.svg",
+      "assetGroup": "YT strUSD (trUSD) Ethereum::YT-strUSD-25FEB2027",
+      "currencyId": "YT strUSD (trUSD) Ethereum::YT-strUSD-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x4c01cb34f021751fe50d469b272612f982476ec8",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x280839980a7ed0d7717f64125fe241012e5f5815",
+          "ptAddress": "0xe987aa6f6e5444cdaa126f987b08f4de47594112",
+          "syAddress": "0x7e8a16e87fa6b0f2e657db47f3dbfe2e981ef211"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0xd7b2a47ac9236d9685b573a2428f72ec45e97c45": {
@@ -34713,7 +35113,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -35193,6 +35593,30 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "3jane", "name": "3Jane", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0xdf96c9e167077cadab40ef01f35f4e1827b311d8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "STRCx Ethereum",
+      "address": "0xdf96c9e167077cadab40ef01f35f4e1827b311d8",
+      "symbol": "SY-STRCx",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/aa64caa5-54ac-4d32-af13-b484a082d0fe.svg",
+      "assetGroup": "STRCx Ethereum::SY-STRCx::1::1",
+      "currencyId": "STRCx Ethereum::SY-STRCx",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0x690ce8913005210281b674191b3be87148ea12f4",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x1aad217b8f78dba5e6693460e8470f8b1a3977f3",
+          "ptAddress": "0xed1671d417c4e6484a121913300d157aa3b6041e",
+          "ytAddress": "0xe9f0c5c8d66652c5e83f395d09cd5187d9a82f86"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "backed", "name": "Backed", "kind": "institution", "hops": 1 }
         ]
       }
     },
@@ -36444,6 +36868,30 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0xe90faaf3f95cdef13b2bd67ed49ce4a1a83c49f4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Ethereum",
+      "address": "0xe90faaf3f95cdef13b2bd67ed49ce4a1a83c49f4",
+      "symbol": "YT-USDe-28FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/15483fdf-0f5b-425f-a0e9-b91c9658ac33.svg",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-28FEB2027::1::0",
+      "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-28FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xf1f53912c156a8c06927746cb20ba11ecec526ce",
+          "expiry": 1803772800,
+          "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
+          "ptAddress": "0x65bc0a0cf38ecdfc95e553de01af01a56da225ce",
+          "syAddress": "0x31853542da976400fb66278be7a09636aad332fc"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
     "0xe92a73e619a5bc344b394d5d2d030002b7edd0ac": {
       "chainId": "1",
       "decimals": 18,
@@ -36510,6 +36958,27 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0xe987aa6f6e5444cdaa126f987b08f4de47594112": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT strUSD (trUSD) Ethereum",
+      "address": "0xe987aa6f6e5444cdaa126f987b08f4de47594112",
+      "symbol": "PT-strUSD-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/ad04e6d4-e061-49fb-90fd-405fb2e7fbcf.svg",
+      "assetGroup": "PT strUSD (trUSD) Ethereum::PT-strUSD-25FEB2027",
+      "currencyId": "PT strUSD (trUSD) Ethereum::PT-strUSD-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x4c01cb34f021751fe50d469b272612f982476ec8",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x280839980a7ed0d7717f64125fe241012e5f5815",
+          "ytAddress": "0xd7ace3eb6307a5f5a98b1e3a032fb2f9d7df675d",
+          "syAddress": "0x7e8a16e87fa6b0f2e657db47f3dbfe2e981ef211"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xe98acd91c3021967120bcc0d46af49d55833650b": {
       "chainId": "1",
       "decimals": 8,
@@ -36566,6 +37035,27 @@
         ]
       }
     },
+    "0xe9f0c5c8d66652c5e83f395d09cd5187d9a82f86": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT STRCx (STRCx) Ethereum",
+      "address": "0xe9f0c5c8d66652c5e83f395d09cd5187d9a82f86",
+      "symbol": "YT-STRCx-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/df7066db-0ddc-475e-b8d6-4f5ddaddbe46.svg",
+      "assetGroup": "YT STRCx (STRCx) Ethereum::YT-STRCx-25FEB2027",
+      "currencyId": "YT STRCx (STRCx) Ethereum::YT-STRCx-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0x690ce8913005210281b674191b3be87148ea12f4",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x1aad217b8f78dba5e6693460e8470f8b1a3977f3",
+          "ptAddress": "0xed1671d417c4e6484a121913300d157aa3b6041e",
+          "syAddress": "0xdf96c9e167077cadab40ef01f35f4e1827b311d8"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xe9fc41f0accc4872d2952eb0fa087202c2de2a6a": {
       "chainId": "1",
       "decimals": 18,
@@ -36573,7 +37063,7 @@
       "address": "0xe9fc41f0accc4872d2952eb0fa087202c2de2a6a",
       "symbol": "YT-USDe-31MAY2027",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-31MAY2027",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-31MAY2027::1::0",
       "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-31MAY2027",
       "props": {
         "pendle": {
@@ -36583,6 +37073,7 @@
           "ptAddress": "0x49f53e69ce7e2a4b00de951fc9395855ee0957be",
           "syAddress": "0x711fbd23db52f49993d5c460946bd3cba2424ff3"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -36872,6 +37363,27 @@
         "issuerExposures": [
           { "id": "etherfi", "name": "Ether.fi", "kind": "protocol", "hops": 1 }
         ]
+      }
+    },
+    "0xeba135f422f85a4bb49e5c934d2731909864c371": {
+      "chainId": "1",
+      "decimals": 6,
+      "name": "PT superUSDC (USDC) Ethereum",
+      "address": "0xeba135f422f85a4bb49e5c934d2731909864c371",
+      "symbol": "PT-superUSDC-27MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/24156245-f118-4da6-bc8a-a2002ca2c129.svg",
+      "assetGroup": "PT superUSDC (USDC) Ethereum::PT-superUSDC-27MAY2027",
+      "currencyId": "PT superUSDC (USDC) Ethereum::PT-superUSDC-27MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x3d070daecb2a22534ba02be70be860094b1a0019",
+          "expiry": 1811376000,
+          "underlyingAsset": "0xf6ebea08a0dfd44825f67fa9963911c81be2a947",
+          "ytAddress": "0xb223397eba3d502b944d1a07a7ff8a6054ab2282",
+          "syAddress": "0x4d654f255d54637112844bd8802b716170904fee"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0xebd2ffae57ce0f2b4b2b486aa7b8dc30fb434706": {
@@ -37227,6 +37739,27 @@
           "ptAddress": "0x2c0fa52e70298fbb5909a92f354585da016254b7",
           "syAddress": "0x31081a986f55d071bd89e5f66ef5187e77383197",
           "expired": true
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xed1671d417c4e6484a121913300d157aa3b6041e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT STRCx (STRCx) Ethereum",
+      "address": "0xed1671d417c4e6484a121913300d157aa3b6041e",
+      "symbol": "PT-STRCx-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e05e1afd-3dbd-492e-9be0-9415ff6cdf72.svg",
+      "assetGroup": "PT STRCx (STRCx) Ethereum::PT-STRCx-25FEB2027",
+      "currencyId": "PT STRCx (STRCx) Ethereum::PT-STRCx-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0x690ce8913005210281b674191b3be87148ea12f4",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x1aad217b8f78dba5e6693460e8470f8b1a3977f3",
+          "ytAddress": "0xe9f0c5c8d66652c5e83f395d09cd5187d9a82f86",
+          "syAddress": "0xdf96c9e167077cadab40ef01f35f4e1827b311d8"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -38221,7 +38754,7 @@
       "address": "0xf3135b0ba174b502ac22a6a9cfe996542a7e353f",
       "symbol": "SY-USDe",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "USDe Ethereum::SY-USDe::1::2",
+      "assetGroup": "USDe Ethereum::SY-USDe::1::6",
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
@@ -39386,6 +39919,20 @@
         ]
       }
     },
+    "0xf9991db7fb56f30f7a8e58f6c8197892b32250a9": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "sUSDe Ethereum",
+      "address": "0xf9991db7fb56f30f7a8e58f6c8197892b32250a9",
+      "symbol": "SY-sUSDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/601b63d5-13c2-4b95-aba6-c2b1e74f37ad.svg",
+      "assetGroup": "sUSDe Ethereum::SY-sUSDe",
+      "currencyId": "sUSDe Ethereum::SY-sUSDe",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xf99985822fb361117fcf3768d34a6353e6022f5f": {
       "chainId": "1",
       "decimals": 18,
@@ -39423,7 +39970,7 @@
       "address": "0xfa062db10de7b7106b4d0af85566d9d2160c5411",
       "symbol": "YT-USDe-31AUG2027",
       "logoURI": "https://storage.googleapis.com/pendle-assets-staging/images/assets/unknown.svg",
-      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-31AUG2027",
+      "assetGroup": "YT USDe (USDe) Ethereum::YT-USDe-31AUG2027::1::0",
       "currencyId": "YT USDe (USDe) Ethereum::YT-USDe-31AUG2027",
       "props": {
         "pendle": {
@@ -39433,6 +39980,7 @@
           "ptAddress": "0xd65925e1fc72b16b8a5e8c8336c2c82ba9dd6bb6",
           "syAddress": "0x6689ebb7b8b0da99befdf6974310d733f6166e40"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -72057,6 +72605,462 @@
         "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
       }
     },
+    "0x06b6f0126aba22d67c7cb42bffd39b9f9e1d62a4": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZDEK ETF (Ondo Tokenized ETF)",
+      "address": "0x06b6f0126aba22d67c7cb42bffd39b9f9e1d62a4",
+      "symbol": "ZDEKON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179922/thumb/zdekon.png?1793355185",
+      "assetGroup": "Innovator ZDEK ETF (Ondo Tokenized ETF)::ZDEKON",
+      "currencyId": "Innovator ZDEK ETF (Ondo Tokenized ETF)::ZDEKON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZDEK"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x9ba8789ab8a3ad1502814c375f0b18a03fc3634e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Twist Bioscience (Ondo Tokenized)",
+      "address": "0x9ba8789ab8a3ad1502814c375f0b18a03fc3634e",
+      "symbol": "TWSTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179923/thumb/twston.png?1793357468",
+      "assetGroup": "Twist Bioscience (Ondo Tokenized)::TWSTON",
+      "currencyId": "Twist Bioscience (Ondo Tokenized)::TWSTON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "TWST"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x0431067992f312b40d30c476fc11f8afdd1e0e90": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Insmed (Ondo Tokenized)",
+      "address": "0x0431067992f312b40d30c476fc11f8afdd1e0e90",
+      "symbol": "INSMON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179924/thumb/insmon.png?1793357774",
+      "assetGroup": "Insmed (Ondo Tokenized)::INSMON",
+      "currencyId": "Insmed (Ondo Tokenized)::INSMON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "INSM"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x71f298468bf7faecfedeaed49c93cbf4cc7782ec": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Erasca (Ondo Tokenized)",
+      "address": "0x71f298468bf7faecfedeaed49c93cbf4cc7782ec",
+      "symbol": "ERASON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179925/thumb/erason.png?1793358177",
+      "assetGroup": "Erasca (Ondo Tokenized)::ERASON",
+      "currencyId": "Erasca (Ondo Tokenized)::ERASON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "ERAS"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x75cffcbc690efa2fee595cc9e9c5054a8cc83c77": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "BioNTech SE (Ondo Tokenized)",
+      "address": "0x75cffcbc690efa2fee595cc9e9c5054a8cc83c77",
+      "symbol": "BNTXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179926/thumb/bion.png?1793358376",
+      "assetGroup": "BioNTech SE (Ondo Tokenized)::BNTXON",
+      "currencyId": "BioNTech SE (Ondo Tokenized)::BNTXON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "BNTX"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x855a016c194d4289dc8d090681f437bd688c2650": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Protagonist Therapeutics (Ondo Tokenized)",
+      "address": "0x855a016c194d4289dc8d090681f437bd688c2650",
+      "symbol": "PTGXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179928/thumb/ptgxon.png?1793360088",
+      "assetGroup": "Protagonist Therapeutics (Ondo Tokenized)::PTGXON",
+      "currencyId": "Protagonist Therapeutics (Ondo Tokenized)::PTGXON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "PTGX"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x3f5331ec2b6dfd249be361f4626eae442d1e5432": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Natera (Ondo Tokenized)",
+      "address": "0x3f5331ec2b6dfd249be361f4626eae442d1e5432",
+      "symbol": "NTRAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179929/thumb/ntraon.png?1793360373",
+      "assetGroup": "Natera (Ondo Tokenized)::NTRAON",
+      "currencyId": "Natera (Ondo Tokenized)::NTRAON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "NTRA"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xd49e6fa628dd598d0ef764fc2b7c5ec88f6de614": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "BioMarin Pharmaceutical (Ondo Tokenized)",
+      "address": "0xd49e6fa628dd598d0ef764fc2b7c5ec88f6de614",
+      "symbol": "BMRNON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179930/thumb/bmrnon.png?1793360578",
+      "assetGroup": "BioMarin Pharmaceutical (Ondo Tokenized)::BMRNON",
+      "currencyId": "BioMarin Pharmaceutical (Ondo Tokenized)::BMRNON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "BMRN"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x15da3be87ef031c369b837d28abfcc164d1d7284": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Roivant Sciences (Ondo Tokenized)",
+      "address": "0x15da3be87ef031c369b837d28abfcc164d1d7284",
+      "symbol": "ROIVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179931/thumb/roivon.png?1793360746",
+      "assetGroup": "Roivant Sciences (Ondo Tokenized)::ROIVON",
+      "currencyId": "Roivant Sciences (Ondo Tokenized)::ROIVON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "ROIV"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xdfa7446be5c9ed640de9e4d66717e5674ac3d360": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)",
+      "address": "0xdfa7446be5c9ed640de9e4d66717e5674ac3d360",
+      "symbol": "BITAON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179932/thumb/bitaon.png?1793360991",
+      "assetGroup": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)::BITAON",
+      "currencyId": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)::BITAON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "BITA"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x6e8cbac353079ec3a31ae950961e6ade258cf597": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Strive (Ondo Tokenized)",
+      "address": "0x6e8cbac353079ec3a31ae950961e6ade258cf597",
+      "symbol": "ASSTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179933/thumb/asston.png?1793361245",
+      "assetGroup": "Strive (Ondo Tokenized)::ASSTON",
+      "currencyId": "Strive (Ondo Tokenized)::ASSTON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "ASST"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xaa27dd2f583116946c45000448caebe529c8d737": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Strive SATS Preferred (Ondo Tokenized)",
+      "address": "0xaa27dd2f583116946c45000448caebe529c8d737",
+      "symbol": "SATSON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179934/thumb/satson.png?1793361896",
+      "assetGroup": "Strive SATS Preferred (Ondo Tokenized)::SATSON",
+      "currencyId": "Strive SATS Preferred (Ondo Tokenized)::SATSON",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "SATS"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x4a0a962e5b3df711afab01fffe34c4f31e452697": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Caris Life Sciences (Ondo Tokenized)",
+      "address": "0x4a0a962e5b3df711afab01fffe34c4f31e452697",
+      "symbol": "CAION",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179935/thumb/caion.png?1793362175",
+      "assetGroup": "Caris Life Sciences (Ondo Tokenized)::CAION",
+      "currencyId": "Caris Life Sciences (Ondo Tokenized)::CAION",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "ondo",
+          "underlying": "CAI"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xd6ab7b5edb140f2103db5876d8d95675cd5cb498": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZJAN ETF (Ondo Tokenized ETF)",
+      "address": "0xd6ab7b5edb140f2103db5876d8d95675cd5cb498",
+      "symbol": "ZJANON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179900/thumb/zjan.png?1793342446",
+      "assetGroup": "Innovator ZJAN ETF (Ondo Tokenized ETF)::ZJANON",
+      "currencyId": "Innovator ZJAN ETF (Ondo Tokenized ETF)::ZJANON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZJAN"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x79b01000711af924e87d2957c15d45b7bc6d1d29": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZFEB ETF (Ondo Tokenized ETF)",
+      "address": "0x79b01000711af924e87d2957c15d45b7bc6d1d29",
+      "symbol": "ZFEBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179901/thumb/zfeb.png?1793342844",
+      "assetGroup": "Innovator ZFEB ETF (Ondo Tokenized ETF)::ZFEBON",
+      "currencyId": "Innovator ZFEB ETF (Ondo Tokenized ETF)::ZFEBON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZFEB"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x43f35d6e2b15b218346e940a74328fa9184e96bf": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZMAR ETF (Ondo Tokenized ETF)",
+      "address": "0x43f35d6e2b15b218346e940a74328fa9184e96bf",
+      "symbol": "ZMARON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179902/thumb/zmaron.png?1793343140",
+      "assetGroup": "Innovator ZMAR ETF (Ondo Tokenized ETF)::ZMARON",
+      "currencyId": "Innovator ZMAR ETF (Ondo Tokenized ETF)::ZMARON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZMAR"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xbe43b372f38283189d25deb817cbc403dbf07a3e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZAPR ETF (Ondo Tokenized ETF)",
+      "address": "0xbe43b372f38283189d25deb817cbc403dbf07a3e",
+      "symbol": "ZAPRON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179903/thumb/zmonthon.png?1793343362",
+      "assetGroup": "Innovator ZAPR ETF (Ondo Tokenized ETF)::ZAPRON",
+      "currencyId": "Innovator ZAPR ETF (Ondo Tokenized ETF)::ZAPRON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZAPR"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x2bad73c08c6c7173818a40f88af8c0f03ef93dab": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZMAY ETF (Ondo Tokenized ETF)",
+      "address": "0x2bad73c08c6c7173818a40f88af8c0f03ef93dab",
+      "symbol": "ZMAYON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179904/thumb/zmonthon.png?1793343479",
+      "assetGroup": "Innovator ZMAY ETF (Ondo Tokenized ETF)::ZMAYON",
+      "currencyId": "Innovator ZMAY ETF (Ondo Tokenized ETF)::ZMAYON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZMAY"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xd6ec2d5d63fea8b7e40ce38776463c315973b075": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZJUN ETF (Ondo Tokenized ETF)",
+      "address": "0xd6ec2d5d63fea8b7e40ce38776463c315973b075",
+      "symbol": "ZJUNON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179905/thumb/zmonthon.png?1793343603",
+      "assetGroup": "Innovator ZJUN ETF (Ondo Tokenized ETF)::ZJUNON",
+      "currencyId": "Innovator ZJUN ETF (Ondo Tokenized ETF)::ZJUNON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZJUN"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x352d94c7f290adbf3848b3672ed3e709197804ae": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZJUL ETF (Ondo Tokenized ETF)",
+      "address": "0x352d94c7f290adbf3848b3672ed3e709197804ae",
+      "symbol": "ZJULON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179906/thumb/zmonthon.png?1793343979",
+      "assetGroup": "Innovator ZJUL ETF (Ondo Tokenized ETF)::ZJULON",
+      "currencyId": "Innovator ZJUL ETF (Ondo Tokenized ETF)::ZJULON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZJUL"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x6c5a43855a0bc58e43c5e9ddce09bc076a34ed1e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZSEP ETF (Ondo Tokenized ETF)",
+      "address": "0x6c5a43855a0bc58e43c5e9ddce09bc076a34ed1e",
+      "symbol": "ZSEPON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179908/thumb/zmonthon.png?1793344291",
+      "assetGroup": "Innovator ZSEP ETF (Ondo Tokenized ETF)::ZSEPON",
+      "currencyId": "Innovator ZSEP ETF (Ondo Tokenized ETF)::ZSEPON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZSEP"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x22545ef4c4199b939b14ccb3fde2012015fd17fc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZNOV ETF (Ondo Tokenized ETF)",
+      "address": "0x22545ef4c4199b939b14ccb3fde2012015fd17fc",
+      "symbol": "ZNOVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179910/thumb/zmonthon.png?1793344601",
+      "assetGroup": "Innovator ZNOV ETF (Ondo Tokenized ETF)::ZNOVON",
+      "currencyId": "Innovator ZNOV ETF (Ondo Tokenized ETF)::ZNOVON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZNOV"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0xb1c221417855f7d7cccfffc859d2c23318d434b8": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Innovator ZOCT ETF (Ondo Tokenized ETF)",
+      "address": "0xb1c221417855f7d7cccfffc859d2c23318d434b8",
+      "symbol": "ZOCTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179909/thumb/zmonthon.png?1793344469",
+      "assetGroup": "Innovator ZOCT ETF (Ondo Tokenized ETF)::ZOCTON",
+      "currencyId": "Innovator ZOCT ETF (Ondo Tokenized ETF)::ZOCTON",
+      "props": {
+        "rwa": {
+          "type": "fund",
+          "subType": "etf",
+          "issuer": "ondo",
+          "underlying": "ZOCT"
+        },
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
+    },
+    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Anthropic xStock",
+      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
+      "symbol": "ANTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
+      "assetGroup": "Anthropic xStock::ANTX",
+      "currencyId": "Anthropic xStock::ANTX",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ANT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "0xe95a203b1a91a908f9b9ce46459d101078c2c3cb": {
       "chainId": "1",
       "decimals": 18,
@@ -73469,11 +74473,7 @@
       "assetGroup": "FinChain Dollar::FUSD",
       "currencyId": "FinChain Dollar::FUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0x377577487e8fc7f4ccd651b0225a586ba78335d2",
           "poolType": "lockRelease",
@@ -73594,7 +74594,7 @@
       "assetGroup": "Yuzu Prime::YZPRIME",
       "currencyId": "Yuzu Prime::yzPrime",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 4, "category": "OTHER", "source": "issuer_inherit" },
         "ccip": {
           "pool": "0x0f44e67be6d04288dc57aae4397fd18d2ac7218a",
           "poolType": "burnMint",
@@ -73637,11 +74637,18 @@
       "props": {
         "savings": { "underlying": "wYLDS", "base": "USD" },
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "YIELD_STABLE",
           "source": "whitelist"
         },
-        "issuer": { "id": "mezzanine", "name": "Mezzanine", "kind": "protocol" }
+        "issuer": {
+          "id": "mezzanine",
+          "name": "Mezzanine",
+          "kind": "protocol"
+        },
+        "issuerExposures": [
+          { "id": "hastra", "name": "Hastra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x6f5d94dc0c8bbf052abf024259d087da45ad96a1": {
@@ -73655,8 +74662,15 @@
       "currencyId": "Junior Hastra::mjHastra",
       "props": {
         "savings": { "underlying": "wYLDS", "base": "USD" },
-        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
-        "issuer": { "id": "mezzanine", "name": "Mezzanine", "kind": "protocol" }
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
+        "issuer": {
+          "id": "mezzanine",
+          "name": "Mezzanine",
+          "kind": "protocol"
+        },
+        "issuerExposures": [
+          { "id": "hastra", "name": "Hastra", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x1bba049d3869e8d467f38e52aca8e99d64e310a6": {
@@ -73683,7 +74697,7 @@
       "currencyId": "Senior PRIME::msPRIME",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "mezzanine", "name": "Mezzanine", "kind": "protocol" }
       }
     },
@@ -73698,7 +74712,7 @@
       "currencyId": "Junior PRIME::mjPRIME",
       "props": {
         "savings": { "underlying": "USDC", "base": "USD" },
-        "risk": { "score": 5, "category": "OTHER", "source": "whitelist" },
+        "risk": { "score": 4, "category": "OTHER", "source": "whitelist" },
         "issuer": { "id": "mezzanine", "name": "Mezzanine", "kind": "protocol" }
       }
     },
@@ -74849,6 +75863,7 @@
                 "4663": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "33139": "0xe4103e80c967f58591a1d7ca443ed7e392fed862",
                 "42161": "0x7f9fbf9bdd3f4105c478b996b648fe6e828a1e98",
+                "43114": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "solana": "Gy6X83nN8ENZhfzZ6yjRoYwDSk4QMg3x5dNv8b2RhvdG"
               }
             }
@@ -80468,6 +81483,7 @@
             "480",
             "592",
             "988",
+            "999",
             "1088",
             "1116",
             "1329",
@@ -80481,6 +81497,7 @@
             "4663",
             "5000",
             "5042",
+            "8217",
             "8453",
             "9745",
             "33139",
@@ -85870,14 +86887,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/25201/large/logo200.png?1653635992",
       "assetGroup": "Volt Inu::VOLT",
       "currencyId": "Volt Inu::VOLT",
-      "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": {}
-      }
+      "props": { "risk": { "score": 4, "source": "default" }, "stablecoin": {} }
     },
     "0x1bbf25e71ec48b84d773809b4ba55b6f4be946fb": {
       "chainId": "1",
@@ -88282,11 +89292,7 @@
       "assetGroup": "Z.com USD::ZUSD",
       "currencyId": "Z.com USD::ZUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "gmo-trust",
@@ -88862,7 +89868,7 @@
       "currencyId": "STASIS EURO::EURS",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -89521,11 +90527,7 @@
       "assetGroup": "Reserve::RSV",
       "currencyId": "Reserve::RSV",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "reserve", "name": "Reserve", "kind": "protocol" }
       }
@@ -89916,7 +90918,15 @@
       "symbol": "XCHF",
       "logoURI": "https://assets.coingecko.com/coins/images/8465/thumb/WhuiuJBc_400x400.jpg?1696508650",
       "assetGroup": "CryptoFranc::XCHF",
-      "currencyId": "CryptoFranc::XCHF"
+      "currencyId": "CryptoFranc::XCHF",
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "CHF" }
+      }
     },
     "0xabe580e7ee158da464b51ee1a83ac0289622e6be": {
       "chainId": "1",
@@ -93210,11 +94220,7 @@
       "assetGroup": "peg eUSD::PEUSD",
       "currencyId": "peg eUSD::PEUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "lybra", "name": "Lybra", "kind": "protocol" }
       }
@@ -98333,7 +99339,15 @@
       "symbol": "XIDR",
       "logoURI": "https://assets.coingecko.com/coins/images/21126/thumb/XIDR_Logo_256_X_256.png?1696520505",
       "assetGroup": "XIDR::XIDR",
-      "currencyId": "XIDR::XIDR"
+      "currencyId": "XIDR::XIDR",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "IDR" }
+      }
     },
     "0xc18b4c1e0b4d4d0f1e9627f25399f5073079ac3d": {
       "chainId": "1",
@@ -100137,11 +101151,7 @@
       "assetGroup": "flexUSD::FLEXUSD",
       "currencyId": "flexUSD::FLEXUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "coinflex", "name": "CoinFLEX", "kind": "cex" }
       }
@@ -101135,7 +102145,11 @@
       "assetGroup": "Iron Bank EUR::IBEUR",
       "currencyId": "Iron Bank EUR::IBEUR",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "iron-bank", "name": "Iron Bank", "kind": "protocol" }
       }
@@ -104274,7 +105288,7 @@
       "currencyId": "EUROe Stablecoin::EUROE",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -104578,11 +105592,7 @@
       "currencyId": "Liquity BOLD::BOLD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "retired": {
           "reason": "superseded",
           "successor": "Liquity BOLD::BOLD",
@@ -104890,7 +105900,7 @@
       "currencyId": "Novatti Australian Digital Dollar::AUDD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -105204,7 +106214,11 @@
       "currencyId": "Threshold USD::THUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
@@ -105230,11 +106244,7 @@
       "currencyId": "DeFi Franc::DCHF",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": {}
       }
     },
@@ -107169,11 +108179,7 @@
       "assetGroup": "RGUSD",
       "currencyId": "Revenue Generating USD::RGUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "reserve", "name": "Reserve", "kind": "protocol" }
       }
@@ -107414,11 +108420,7 @@
       "currencyId": "USC::USC",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "chi", "name": "Chi Protocol", "kind": "protocol" }
       }
@@ -108025,7 +109027,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/51473/thumb/steakUSDC.png?1731396462",
       "assetGroup": "Steakhouse USDC Morpho Vault::STEAKUSDC",
       "currencyId": "Steakhouse USDC Morpho Vault::STEAKUSDC",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x32b86b99441480a7e5bd3a26c124ec2373e3f015": {
       "chainId": "1",
@@ -109493,11 +110495,7 @@
       "assetGroup": "eUSD::EUSD",
       "currencyId": "eUSD::EUSD",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "lybra", "name": "Lybra", "kind": "protocol" }
       }
@@ -112041,11 +113039,7 @@
       "currencyId": "ULTRA::ULTRA",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "prisma", "name": "Prisma", "kind": "protocol" }
       }
@@ -113644,11 +114638,7 @@
       "currencyId": "XAI Stablecoin::XAI",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "silo", "name": "Silo", "kind": "protocol" }
       }
@@ -115876,9 +116866,9 @@
       "currencyId": "XSwap::XSWAP",
       "props": {
         "ccip": {
-          "pool": "0x916d7d960b119bb6c4abe381f7677eceed866d44",
+          "pool": "0x08bbd75ddee988090900e106ee248165a5416a65",
           "poolType": "burnMint",
-          "poolVersion": "1.5.0",
+          "poolVersion": "2.0.0",
           "home": "1",
           "destinations": ["8453"]
         }
@@ -117652,11 +118642,7 @@
       "assetGroup": "Zunami USD::ZUNUSD",
       "currencyId": "Zunami USD::ZUNUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0x45af366c76a8c8f18806a8c404fe3e3bba4f8aa3",
           "poolType": "lockRelease",
@@ -120210,7 +121196,7 @@
       "currencyId": "StraitsX XUSD::XUSD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -120939,9 +121925,9 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 6,
+          "category": "COMPROMISED",
+          "source": "issuer_inherit"
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
@@ -124981,7 +125967,7 @@
       "currencyId": "EURe Real Yield Morpho Vault::ERY",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0x2f65c4c067a9d65875ba60b078ac7c17d522fcca": {
@@ -127517,7 +128503,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/52281/thumb/hgETH.png?1732897068",
       "assetGroup": "High Growth ETH::HGETH",
       "currencyId": "High Growth ETH::HGETH",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x94d863173ee77439e4292284ff13fad54b3ba182": {
       "chainId": "1",
@@ -130194,10 +131180,11 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
         },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "ccip": {
           "pool": "0x4109f7e577596432458f8d4dc2e78637428d5614",
           "poolType": "burnMint",
@@ -132735,7 +133722,6 @@
                 "56": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "146": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "999": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
-                "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
@@ -138190,6 +139176,7 @@
           "home": "1",
           "destinations": [
             "143",
+            "196",
             "4217",
             "4663",
             "5042",
@@ -138415,11 +139402,7 @@
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZEUSD",
       "props": {
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0x99874400820c354ee07bc8b165c605632bdceae3",
           "poolType": "lockRelease",
@@ -141591,7 +142574,7 @@
       "assetGroup": "Re Protocol reUSDe::REUSDE",
       "currencyId": "Re Protocol reUSDe::REUSDE",
       "props": {
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "issuer": { "id": "re", "name": "Re", "kind": "protocol" }
       }
     },
@@ -142636,7 +143619,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -142667,11 +143650,7 @@
       "assetGroup": "Zunami ETH::ZUNETH",
       "currencyId": "Zunami ETH::ZUNETH",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0xe4832022873c69e14731fd9436eb7fb9538ae86f",
           "poolType": "lockRelease",
@@ -143159,11 +144138,7 @@
       "currencyId": "R Stablecoin::R",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "raft", "name": "Raft", "kind": "protocol" }
       }
@@ -144740,11 +145715,7 @@
       "assetGroup": "USDP Stablecoin::USDP",
       "currencyId": "USDP Stablecoin::USDP",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "unit-protocol",
@@ -145380,11 +146351,7 @@
       "assetGroup": "Fixed Income Asset Token::FIAT",
       "currencyId": "Fixed Income Asset Token::FIAT",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "fiat-dao", "name": "FIAT DAO", "kind": "protocol" }
       }
@@ -145820,12 +146787,7 @@
       "currencyId": "Wrapped sDAI::sDAI",
       "props": {
         "savings": { "underlying": "DAI", "base": "USD" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": { "id": "sky", "name": "Sky", "kind": "protocol" }
       }
     },
@@ -145949,11 +146911,7 @@
       "assetGroup": "BaoUSD::BaoUSD",
       "currencyId": "BaoUSD::BaoUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "bao", "name": "Bao Finance", "kind": "protocol" }
       }
@@ -148022,14 +148980,7 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9/logo.png",
       "assetGroup": "Float FLOAT::FLOAT",
       "currencyId": "Float FLOAT::FLOAT",
-      "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": {}
-      }
+      "props": { "risk": { "score": 4, "source": "default" }, "stablecoin": {} }
     },
     "0x4c25bdf026ea05f32713f00f73ca55857fbf6342": {
       "chainId": "1",
@@ -164179,14 +165130,7 @@
       "logoURI": "https://static.debank.com/image/eth_token/logo_url/0x53805a76e1f5ebbfe7115f16f9c87c2f7e633726/bbaebb8cd41af0c03761adb7d61225b6.png",
       "assetGroup": "Fractional ETH::fETH",
       "currencyId": "Fractional ETH::fETH",
-      "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": {}
-      }
+      "props": { "risk": { "score": 4, "source": "default" }, "stablecoin": {} }
     },
     "0x597ad1e0c13bfe8025993d9e79c69e1c0233522e": {
       "chainId": "1",
@@ -164791,11 +165735,7 @@
       "assetGroup": "Home::HOME",
       "currencyId": "Home::HOME",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "homecoin", "name": "HomeCoin", "kind": "protocol" }
       }
@@ -164860,11 +165800,7 @@
       "assetGroup": "Digital Standard Unit::DSU",
       "currencyId": "Digital Standard Unit::DSU",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "emptyset", "name": "Empty Set", "kind": "protocol" }
       }
@@ -180001,7 +180937,7 @@
           "poolType": "lockRelease",
           "poolVersion": "1.5.1",
           "home": "1",
-          "destinations": ["56", "5000", "9745", "57073"]
+          "destinations": ["56", "196", "5000", "9745", "57073"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -180972,11 +181908,7 @@
       "assetGroup": "litUSD::LITUSD",
       "currencyId": "litUSD::LITUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "lit-financial",
@@ -182882,7 +183814,9 @@
                 "56": "0x5b2193fdc451c1f847be09ca9d13a4bf60f8c86b",
                 "999": "0x642ffc3496aca19106bab7a42f1f221a329654fe",
                 "4663": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e",
-                "8453": "0x5b2193fdc451c1f847be09ca9d13a4bf60f8c86b"
+                "5042": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e",
+                "8453": "0x5b2193fdc451c1f847be09ca9d13a4bf60f8c86b",
+                "747474": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e"
               }
             }
           ]
@@ -183072,11 +184006,7 @@
       "assetGroup": "Gaming XP USD::XPUSD",
       "currencyId": "Gaming XP USD::XPUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "growth-protocol",
@@ -184228,9 +185158,9 @@
           "source": "stablecoin"
         },
         "ccip": {
-          "pool": "0xa0de671eb84de9dee1d311d996d25c41f63a0d86",
+          "pool": "0x80992fd38ba9ca5948771832956f9ffae1b30fcd",
           "poolType": "lockRelease",
-          "poolVersion": "1.6.1",
+          "poolVersion": "2.0.0",
           "home": "1",
           "destinations": ["56", "143"]
         },
@@ -184340,11 +185270,7 @@
       "assetGroup": "Palm USD::PUSD",
       "currencyId": "Palm USD::PUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "palm", "name": "Palm", "kind": "institution" }
       }
@@ -184397,9 +185323,9 @@
           "source": "whitelist"
         },
         "ccip": {
-          "pool": "0xf3fc7fde5081192177f38895e57a1489e4bd56f2",
+          "pool": "0xdaf52417b70e4fc202e7a5d1bfd54325cc5d5a7b",
           "poolType": "lockRelease",
-          "poolVersion": "1.6.1",
+          "poolVersion": "2.0.0",
           "home": "1",
           "destinations": ["56", "143"]
         },
@@ -185119,7 +186045,7 @@
       "logoURI": "https://cdn.morpho.org/assets/logos/upgammausdc.svg",
       "assetGroup": "Upshift Gamma USDC Vault::upGAMMAusdc",
       "currencyId": "Upshift Gamma USDC Vault::upGAMMAusdc",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x99e05cdbeac5d91150935c59ff8e9ba9945d6884": {
       "chainId": "1",
@@ -185390,7 +186316,7 @@
       "assetGroup": "xPufETH::xPufETH",
       "currencyId": "xPufETH::xPufETH",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "issuer": { "id": "puffer", "name": "Puffer", "kind": "protocol" }
       }
     },
@@ -185671,6 +186597,11 @@
       "currencyId": "Wrapped iTRY::WITRY",
       "props": {
         "savings": { "underlying": "iTRY", "base": "TRY" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "brix", "name": "Brix", "kind": "institution" }
       }
@@ -185683,7 +186614,15 @@
       "symbol": "ITRY",
       "logoURI": "https://assets.coingecko.com/coins/images/102172904/thumb/iTRY_DEX.png?1776512598",
       "assetGroup": "Brix iTRY::ITRY",
-      "currencyId": "Brix iTRY::ITRY"
+      "currencyId": "Brix iTRY::ITRY",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "TRY" }
+      }
     },
     "0x00bac91fd8f5b4a0dc03c8021139b76f6549ee7e": {
       "chainId": "1",
@@ -188659,7 +189598,11 @@
       "currencyId": "Hastra AUTO::AUTO",
       "props": {
         "savings": { "underlying": "wYLDS", "base": "USD" },
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": {
+          "score": 4,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
+        },
         "issuer": { "id": "hastra", "name": "Hastra", "kind": "protocol" }
       }
     },
@@ -188774,7 +189717,7 @@
           "poolType": "lockRelease",
           "poolVersion": "1.6.1",
           "home": "1",
-          "destinations": ["4663", "42161", "57073"]
+          "destinations": ["196", "4663", "42161", "57073"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "maple", "name": "Maple", "kind": "protocol" }
@@ -189556,7 +190499,7 @@
       "assetGroup": "Savings reUSD::sreUSD",
       "currencyId": "Savings reUSD::sreUSD",
       "props": {
-        "risk": { "score": 2, "source": "vault_inherit" },
+        "risk": { "score": 4, "source": "vault_inherit" },
         "issuer": { "id": "resupply", "name": "Resupply", "kind": "protocol" }
       }
     },
@@ -189706,7 +190649,7 @@
       "currencyId": "Wren Staked tGBP::wstGBP",
       "props": {
         "savings": { "underlying": "tGBP", "base": "GBP" },
-        "risk": { "score": 2, "source": "vault_inherit" }
+        "risk": { "score": 4, "source": "vault_inherit" }
       }
     },
     "0xf9d82660828d8f5d121b14a9dc9c677d91f60065": {
@@ -192956,7 +193899,7 @@
       "logoURI": "https://raw.githubusercontent.com/yearn/tokenAssets/main/tokens/1/0x863687e4e9751b57f38b4b0eba04744c72d0f7b8/logo-128.png",
       "assetGroup": "Flex USDC yVault::yvFlexUSDC",
       "currencyId": "Flex USDC yVault::yvFlexUSDC",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0xfac55fafd0b55bfb8dd41f735efcc195ada9891f": {
       "chainId": "1",
@@ -193541,136 +194484,6 @@
         "stablecoin": { "base": "USD" }
       }
     },
-    "0x06b6f0126aba22d67c7cb42bffd39b9f9e1d62a4": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZDEK ETF (Ondo Tokenized ETF)",
-      "address": "0x06b6f0126aba22d67c7cb42bffd39b9f9e1d62a4",
-      "symbol": "ZDEKON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179922/thumb/zdekon.png?1793355185",
-      "assetGroup": "Innovator ZDEK ETF (Ondo Tokenized ETF)::ZDEKON",
-      "currencyId": "Innovator ZDEK ETF (Ondo Tokenized ETF)::ZDEKON"
-    },
-    "0x9ba8789ab8a3ad1502814c375f0b18a03fc3634e": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Twist Bioscience (Ondo Tokenized)",
-      "address": "0x9ba8789ab8a3ad1502814c375f0b18a03fc3634e",
-      "symbol": "TWSTON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179923/thumb/twston.png?1793357468",
-      "assetGroup": "Twist Bioscience (Ondo Tokenized)::TWSTON",
-      "currencyId": "Twist Bioscience (Ondo Tokenized)::TWSTON"
-    },
-    "0x0431067992f312b40d30c476fc11f8afdd1e0e90": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Insmed (Ondo Tokenized)",
-      "address": "0x0431067992f312b40d30c476fc11f8afdd1e0e90",
-      "symbol": "INSMON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179924/thumb/insmon.png?1793357774",
-      "assetGroup": "Insmed (Ondo Tokenized)::INSMON",
-      "currencyId": "Insmed (Ondo Tokenized)::INSMON"
-    },
-    "0x71f298468bf7faecfedeaed49c93cbf4cc7782ec": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Erasca (Ondo Tokenized)",
-      "address": "0x71f298468bf7faecfedeaed49c93cbf4cc7782ec",
-      "symbol": "ERASON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179925/thumb/erason.png?1793358177",
-      "assetGroup": "Erasca (Ondo Tokenized)::ERASON",
-      "currencyId": "Erasca (Ondo Tokenized)::ERASON"
-    },
-    "0x75cffcbc690efa2fee595cc9e9c5054a8cc83c77": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "BioNTech SE (Ondo Tokenized)",
-      "address": "0x75cffcbc690efa2fee595cc9e9c5054a8cc83c77",
-      "symbol": "BNTXON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179926/thumb/bion.png?1793358376",
-      "assetGroup": "BioNTech SE (Ondo Tokenized)::BNTXON",
-      "currencyId": "BioNTech SE (Ondo Tokenized)::BNTXON"
-    },
-    "0x855a016c194d4289dc8d090681f437bd688c2650": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Protagonist Therapeutics (Ondo Tokenized)",
-      "address": "0x855a016c194d4289dc8d090681f437bd688c2650",
-      "symbol": "PTGXON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179928/thumb/ptgxon.png?1793360088",
-      "assetGroup": "Protagonist Therapeutics (Ondo Tokenized)::PTGXON",
-      "currencyId": "Protagonist Therapeutics (Ondo Tokenized)::PTGXON"
-    },
-    "0x3f5331ec2b6dfd249be361f4626eae442d1e5432": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Natera (Ondo Tokenized)",
-      "address": "0x3f5331ec2b6dfd249be361f4626eae442d1e5432",
-      "symbol": "NTRAON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179929/thumb/ntraon.png?1793360373",
-      "assetGroup": "Natera (Ondo Tokenized)::NTRAON",
-      "currencyId": "Natera (Ondo Tokenized)::NTRAON"
-    },
-    "0xd49e6fa628dd598d0ef764fc2b7c5ec88f6de614": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "BioMarin Pharmaceutical (Ondo Tokenized)",
-      "address": "0xd49e6fa628dd598d0ef764fc2b7c5ec88f6de614",
-      "symbol": "BMRNON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179930/thumb/bmrnon.png?1793360578",
-      "assetGroup": "BioMarin Pharmaceutical (Ondo Tokenized)::BMRNON",
-      "currencyId": "BioMarin Pharmaceutical (Ondo Tokenized)::BMRNON"
-    },
-    "0x15da3be87ef031c369b837d28abfcc164d1d7284": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Roivant Sciences (Ondo Tokenized)",
-      "address": "0x15da3be87ef031c369b837d28abfcc164d1d7284",
-      "symbol": "ROIVON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179931/thumb/roivon.png?1793360746",
-      "assetGroup": "Roivant Sciences (Ondo Tokenized)::ROIVON",
-      "currencyId": "Roivant Sciences (Ondo Tokenized)::ROIVON"
-    },
-    "0xdfa7446be5c9ed640de9e4d66717e5674ac3d360": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)",
-      "address": "0xdfa7446be5c9ed640de9e4d66717e5674ac3d360",
-      "symbol": "BITAON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179932/thumb/bitaon.png?1793360991",
-      "assetGroup": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)::BITAON",
-      "currencyId": "iShares Bitcoin Premium Income ETF (Ondo Tokenized)::BITAON"
-    },
-    "0x6e8cbac353079ec3a31ae950961e6ade258cf597": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Strive (Ondo Tokenized)",
-      "address": "0x6e8cbac353079ec3a31ae950961e6ade258cf597",
-      "symbol": "ASSTON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179933/thumb/asston.png?1793361245",
-      "assetGroup": "Strive (Ondo Tokenized)::ASSTON",
-      "currencyId": "Strive (Ondo Tokenized)::ASSTON"
-    },
-    "0xaa27dd2f583116946c45000448caebe529c8d737": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Strive SATS Preferred (Ondo Tokenized)",
-      "address": "0xaa27dd2f583116946c45000448caebe529c8d737",
-      "symbol": "SATSON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179934/thumb/satson.png?1793361896",
-      "assetGroup": "Strive SATS Preferred (Ondo Tokenized)::SATSON",
-      "currencyId": "Strive SATS Preferred (Ondo Tokenized)::SATSON"
-    },
-    "0x4a0a962e5b3df711afab01fffe34c4f31e452697": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Caris Life Sciences (Ondo Tokenized)",
-      "address": "0x4a0a962e5b3df711afab01fffe34c4f31e452697",
-      "symbol": "CAION",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179935/thumb/caion.png?1793362175",
-      "assetGroup": "Caris Life Sciences (Ondo Tokenized)::CAION",
-      "currencyId": "Caris Life Sciences (Ondo Tokenized)::CAION"
-    },
     "0xbf29043164660c60a2a72cd15ffe2304e87b6838": {
       "chainId": "1",
       "decimals": 18,
@@ -193805,106 +194618,6 @@
       "assetGroup": "FOCO::FOCO",
       "currencyId": "FOCO::FOCO"
     },
-    "0xd6ab7b5edb140f2103db5876d8d95675cd5cb498": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZJAN ETF (Ondo Tokenized ETF)",
-      "address": "0xd6ab7b5edb140f2103db5876d8d95675cd5cb498",
-      "symbol": "ZJANON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179900/thumb/zjan.png?1793342446",
-      "assetGroup": "Innovator ZJAN ETF (Ondo Tokenized ETF)::ZJANON",
-      "currencyId": "Innovator ZJAN ETF (Ondo Tokenized ETF)::ZJANON"
-    },
-    "0x79b01000711af924e87d2957c15d45b7bc6d1d29": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZFEB ETF (Ondo Tokenized ETF)",
-      "address": "0x79b01000711af924e87d2957c15d45b7bc6d1d29",
-      "symbol": "ZFEBON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179901/thumb/zfeb.png?1793342844",
-      "assetGroup": "Innovator ZFEB ETF (Ondo Tokenized ETF)::ZFEBON",
-      "currencyId": "Innovator ZFEB ETF (Ondo Tokenized ETF)::ZFEBON"
-    },
-    "0x43f35d6e2b15b218346e940a74328fa9184e96bf": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZMAR ETF (Ondo Tokenized ETF)",
-      "address": "0x43f35d6e2b15b218346e940a74328fa9184e96bf",
-      "symbol": "ZMARON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179902/thumb/zmaron.png?1793343140",
-      "assetGroup": "Innovator ZMAR ETF (Ondo Tokenized ETF)::ZMARON",
-      "currencyId": "Innovator ZMAR ETF (Ondo Tokenized ETF)::ZMARON"
-    },
-    "0xbe43b372f38283189d25deb817cbc403dbf07a3e": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZAPR ETF (Ondo Tokenized ETF)",
-      "address": "0xbe43b372f38283189d25deb817cbc403dbf07a3e",
-      "symbol": "ZAPRON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179903/thumb/zmonthon.png?1793343362",
-      "assetGroup": "Innovator ZAPR ETF (Ondo Tokenized ETF)::ZAPRON",
-      "currencyId": "Innovator ZAPR ETF (Ondo Tokenized ETF)::ZAPRON"
-    },
-    "0x2bad73c08c6c7173818a40f88af8c0f03ef93dab": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZMAY ETF (Ondo Tokenized ETF)",
-      "address": "0x2bad73c08c6c7173818a40f88af8c0f03ef93dab",
-      "symbol": "ZMAYON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179904/thumb/zmonthon.png?1793343479",
-      "assetGroup": "Innovator ZMAY ETF (Ondo Tokenized ETF)::ZMAYON",
-      "currencyId": "Innovator ZMAY ETF (Ondo Tokenized ETF)::ZMAYON"
-    },
-    "0xd6ec2d5d63fea8b7e40ce38776463c315973b075": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZJUN ETF (Ondo Tokenized ETF)",
-      "address": "0xd6ec2d5d63fea8b7e40ce38776463c315973b075",
-      "symbol": "ZJUNON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179905/thumb/zmonthon.png?1793343603",
-      "assetGroup": "Innovator ZJUN ETF (Ondo Tokenized ETF)::ZJUNON",
-      "currencyId": "Innovator ZJUN ETF (Ondo Tokenized ETF)::ZJUNON"
-    },
-    "0x352d94c7f290adbf3848b3672ed3e709197804ae": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZJUL ETF (Ondo Tokenized ETF)",
-      "address": "0x352d94c7f290adbf3848b3672ed3e709197804ae",
-      "symbol": "ZJULON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179906/thumb/zmonthon.png?1793343979",
-      "assetGroup": "Innovator ZJUL ETF (Ondo Tokenized ETF)::ZJULON",
-      "currencyId": "Innovator ZJUL ETF (Ondo Tokenized ETF)::ZJULON"
-    },
-    "0x6c5a43855a0bc58e43c5e9ddce09bc076a34ed1e": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZSEP ETF (Ondo Tokenized ETF)",
-      "address": "0x6c5a43855a0bc58e43c5e9ddce09bc076a34ed1e",
-      "symbol": "ZSEPON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179908/thumb/zmonthon.png?1793344291",
-      "assetGroup": "Innovator ZSEP ETF (Ondo Tokenized ETF)::ZSEPON",
-      "currencyId": "Innovator ZSEP ETF (Ondo Tokenized ETF)::ZSEPON"
-    },
-    "0x22545ef4c4199b939b14ccb3fde2012015fd17fc": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZNOV ETF (Ondo Tokenized ETF)",
-      "address": "0x22545ef4c4199b939b14ccb3fde2012015fd17fc",
-      "symbol": "ZNOVON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179910/thumb/zmonthon.png?1793344601",
-      "assetGroup": "Innovator ZNOV ETF (Ondo Tokenized ETF)::ZNOVON",
-      "currencyId": "Innovator ZNOV ETF (Ondo Tokenized ETF)::ZNOVON"
-    },
-    "0xb1c221417855f7d7cccfffc859d2c23318d434b8": {
-      "chainId": "1",
-      "decimals": 18,
-      "name": "Innovator ZOCT ETF (Ondo Tokenized ETF)",
-      "address": "0xb1c221417855f7d7cccfffc859d2c23318d434b8",
-      "symbol": "ZOCTON",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179909/thumb/zmonthon.png?1793344469",
-      "assetGroup": "Innovator ZOCT ETF (Ondo Tokenized ETF)::ZOCTON",
-      "currencyId": "Innovator ZOCT ETF (Ondo Tokenized ETF)::ZOCTON"
-    },
     "0xec747daf41a4ca4ebe72356592f8301924132907": {
       "chainId": "1",
       "decimals": 6,
@@ -194021,17 +194734,144 @@
       "symbol": "SLC",
       "logoURI": "https://assets.coingecko.com/coins/images/53710/thumb/Logo_Silencio_black_128x128_%281%29.png?1758264368",
       "assetGroup": "Silencio::SLC",
-      "currencyId": "Silencio::SLC"
+      "currencyId": "Silencio::SLC",
+      "props": {
+        "oft": {
+          "eid": 30101,
+          "routes": [
+            {
+              "contract": "0x7fa16ced60019ade15edd0cdb03d689d557b6d1e",
+              "kind": "native",
+              "sharedDecimals": 6,
+              "oapp": "silencio",
+              "approvalRequired": false,
+              "peers": {
+                "8453": "0x6bd83abc39391af1e24826e90237c4bd3468b5d2",
+                "solana": "Af2D8Pq8eiSKR7WQqdoK1cL9vzpXHz2vA6qqYujHVU4A"
+              }
+            }
+          ]
+        }
+      }
     },
-    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+    "0xf06ad17b0db75dbf71dbddfcde93e85c660f916c": {
       "chainId": "1",
       "decimals": 18,
-      "name": "Anthropic xStock",
-      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
-      "symbol": "ANTX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
-      "assetGroup": "Anthropic xStock::ANTX",
-      "currencyId": "Anthropic xStock::ANTX"
+      "name": "ASTRA",
+      "address": "0xf06ad17b0db75dbf71dbddfcde93e85c660f916c",
+      "symbol": "ASTRA",
+      "logoURI": "https://assets.coingecko.com/coins/images/33138/thumb/20241215_231624.jpg?1734318326",
+      "assetGroup": "ASTRA::ASTRA",
+      "currencyId": "ASTRA::ASTRA"
+    },
+    "0xab54a27a4b41957beb30d5eabd2cfad559081a87": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Gato The Cat",
+      "address": "0xab54a27a4b41957beb30d5eabd2cfad559081a87",
+      "symbol": "GATO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180268/thumb/logo_Gato.png?1794642272",
+      "assetGroup": "Gato The Cat::GATO",
+      "currencyId": "Gato The Cat::GATO"
+    },
+    "0x38342f9c040e8b9291886e3df9ce8e7c88cf1948": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Pyrank",
+      "address": "0x38342f9c040e8b9291886e3df9ce8e7c88cf1948",
+      "symbol": "PYRT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180245/thumb/PYRT.png?1794534554",
+      "assetGroup": "Pyrank::PYRT",
+      "currencyId": "Pyrank::PYRT"
+    },
+    "0x2914b239a5d5f2f14bc8dd4635a47370a7759b44": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "AudaCity",
+      "address": "0x2914b239a5d5f2f14bc8dd4635a47370a7759b44",
+      "symbol": "AUDACITY",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180247/thumb/logo-user.png?1794535246",
+      "assetGroup": "AudaCity::AUDACITY",
+      "currencyId": "AudaCity::AUDACITY"
+    },
+    "0xf40c07d7cd45f291b93ca674db66a15c8a98957e": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "InfiniFi Token",
+      "address": "0xf40c07d7cd45f291b93ca674db66a15c8a98957e",
+      "symbol": "INFI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180232/thumb/photo_2026-11-09_14-06-39.jpg?1794424791",
+      "assetGroup": "InfiniFi Token::INFI",
+      "currencyId": "InfiniFi Token::INFI"
+    },
+    "0xe4706809d3878fffb619fd492eb9e63d9b772581": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Wasted",
+      "address": "0xe4706809d3878fffb619fd492eb9e63d9b772581",
+      "symbol": "WASTED",
+      "assetGroup": "Wasted::WASTED",
+      "currencyId": "Wasted::WASTED"
+    },
+    "0x15e9752e8e41adb5f4831dbf46dd1ca2488423e1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ondo US 500 Capital Shielded Portfolio",
+      "address": "0x15e9752e8e41adb5f4831dbf46dd1ca2488423e1",
+      "symbol": "SPYSHIELDON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180227/thumb/spyshieldon_160x160.png?1794409238",
+      "assetGroup": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON",
+      "currencyId": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON"
+    },
+    "0x6f866bdee4b603bc907098ad596552a7af0f1de3": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Ondo Big 5 Core Allocation Portfolio",
+      "address": "0x6f866bdee4b603bc907098ad596552a7af0f1de3",
+      "symbol": "BIG5ON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180228/thumb/big5on_160x160.png?1794409556",
+      "assetGroup": "Ondo Big 5 Core Allocation Portfolio::BIG5ON",
+      "currencyId": "Ondo Big 5 Core Allocation Portfolio::BIG5ON"
+    },
+    "0x35ebe010cdd541284fcfd2f85992a392a488f989": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Seppuku",
+      "address": "0x35ebe010cdd541284fcfd2f85992a392a488f989",
+      "symbol": "SEPPUKU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180212/thumb/7391MuF0_400x400.jpg?1794324486",
+      "assetGroup": "Seppuku::SEPPUKU",
+      "currencyId": "Seppuku::SEPPUKU"
+    },
+    "0xc4700ae5a5e6cd6b70e7190a0458e568089e98e2": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "AudaCity",
+      "address": "0xc4700ae5a5e6cd6b70e7190a0458e568089e98e2",
+      "symbol": "DACITYCOIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180213/thumb/5.png?1794332841",
+      "assetGroup": "AudaCity::DACITYCOIN::1::0",
+      "currencyId": "AudaCity::DACITYCOIN"
+    },
+    "0xb3a6add33f777ac6ea0ec88bdf533573c8bbbc03": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "ni hao cat",
+      "address": "0xb3a6add33f777ac6ea0ec88bdf533573c8bbbc03",
+      "symbol": "MIHAO",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180218/thumb/logo.jpg?1794391774",
+      "assetGroup": "ni hao cat::MIHAO",
+      "currencyId": "ni hao cat::MIHAO"
+    },
+    "0xd86800d5b021f5d79350c2f742bbb1ecc010bf82": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Pumper",
+      "address": "0xd86800d5b021f5d79350c2f742bbb1ecc010bf82",
+      "symbol": "PUMPER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102176824/thumb/pumper_logo.jpg?1788859946",
+      "assetGroup": "Pumper::PUMPER",
+      "currencyId": "Pumper::PUMPER"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

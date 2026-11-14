@@ -13806,6 +13806,24 @@
         }
       }
     },
+    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+      "chainId": "10",
+      "decimals": 18,
+      "name": "Anthropic xStock",
+      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
+      "symbol": "ANTx",
+      "assetGroup": "Anthropic xStock::ANTX",
+      "currencyId": "Anthropic xStock::ANTx",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ANT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "0x346e03f8cce9fe01dcb3d0da3e9d00dc2c0e08f0": {
       "chainId": "10",
       "decimals": 18,
@@ -14294,7 +14312,7 @@
       "assetGroup": "Stader ETHx::ETHx",
       "currencyId": "ETHx::ETHx",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
         "ccip": {
           "pool": "0xb144fce921d564d77fd9f226965984654c1afa55",
           "poolType": "burnMint",
@@ -16432,7 +16450,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -18674,7 +18692,8 @@
       "symbol": "XCHF",
       "logoURI": "https://ethereum-optimism.github.io/data/XCHF/logo.png",
       "assetGroup": "CryptoFranc::XCHF",
-      "currencyId": "CryptoFranc::XCHF"
+      "currencyId": "CryptoFranc::XCHF",
+      "props": { "stablecoin": { "base": "CHF" } }
     },
     "0x3d51a9fb5dcc87f7b237b04975559b920a9a56ff": {
       "chainId": "10",
@@ -22449,15 +22468,6 @@
       "logoURI": "https://coin-images.coingecko.com/coins/images/39229/large/uxlink.jpg?1721201390",
       "assetGroup": "UXLINK::UXLINK",
       "currencyId": "UXLINK::UXLINK"
-    },
-    "0x909369940f22dc1c143ac78753a33f41597138b1": {
-      "chainId": "10",
-      "decimals": 18,
-      "name": "Anthropic xStock",
-      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
-      "symbol": "ANTx",
-      "assetGroup": "Anthropic xStock::ANTX",
-      "currencyId": "Anthropic xStock::ANTx"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "10",

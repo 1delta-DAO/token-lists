@@ -66,8 +66,18 @@ export const LST_GROUP_MANUAL: LstGroupMap = {
   'YieldNest Restaked ETH::YNETH': { type: 'restaking', asset: 'ETH', provider: 'yieldnest' },
   // Fragmetric fragSOL (Solana, FRAGSEth…, SOLANA_EXTRA_MINTS) — Jupiter tags it `unknown`, so
   // the `fragmetric-sol` name rule (gated on an `lst` / `yield` tag) never fires for it; its
-  // wrapper wfragSOL gets the same props through that rule.
+  // wrapper wfragSOL is pinned below now that the rule's tag is gone too.
   'Fragmetric Restaked SOL::fragSOL::solana': { type: 'restaking', asset: 'SOL', provider: 'fragmetric' },
+  // Solana LSTs whose `lst` tag Jupiter dropped (2026-11-14: tagged only `community` /
+  // `verified`), so solanaClassify's tag-gated rules stopped firing and they lost `props.lst`.
+  // Pinned by group with the props they carried before, so a Jupiter re-tag can't drop them.
+  'Wrapped Fragmetric Restaked SOL::wfragSOL::solana': { type: 'restaking', asset: 'SOL', provider: 'fragmetric' },
+  'Solayer SOL::sSOL::solana': { type: 'restaking', asset: 'SOL', provider: 'solayer' },
+  'Renzo Restaked SOL::ezSOL::solana': { type: 'restaking', asset: 'SOL', provider: 'renzo' },
+  'Kyros Restaked SOL::kySOL::solana': { type: 'restaking', asset: 'SOL', provider: 'kyros' },
+  'Axiom Staked SOL::axiSOL::solana': { type: 'staking', asset: 'SOL' },
+  'Bitget Staked SOL::BGSOL::solana': { type: 'staking', asset: 'SOL' },
+  'Synatra Staked SOL::ySOL::solana': { type: 'staking', asset: 'SOL' },
 }
 
 export const LST_GROUP_MAP: LstGroupMap = { ...loadSnapshot(), ...LST_GROUP_MANUAL }

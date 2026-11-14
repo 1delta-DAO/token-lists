@@ -1570,6 +1570,25 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Anthropic xStock",
+      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
+      "symbol": "ANTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
+      "assetGroup": "Anthropic xStock::ANTX",
+      "currencyId": "Anthropic xStock::ANTX",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ANT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "0xecac9c5f704e954931349da37f60e39f515c11c1": {
       "chainId": "143",
       "decimals": 8,
@@ -3179,7 +3198,11 @@
       "assetGroup": "Mento British Pound::GBPm",
       "currencyId": "Mento British Pound::GBPm",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "GBP" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -3579,6 +3602,7 @@
                 "4663": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "33139": "0xe4103e80c967f58591a1d7ca443ed7e392fed862",
                 "42161": "0x7f9fbf9bdd3f4105c478b996b648fe6e828a1e98",
+                "43114": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "solana": "Gy6X83nN8ENZhfzZ6yjRoYwDSk4QMg3x5dNv8b2RhvdG"
               }
             }
@@ -3713,11 +3737,7 @@
       "assetGroup": "FinChain Dollar::FUSD",
       "currencyId": "FinChain Dollar::FUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0xb496894fd559d7c923477246e384e7463c69060e",
           "poolType": "burnMint",
@@ -4178,9 +4198,9 @@
           "source": "stablecoin"
         },
         "ccip": {
-          "pool": "0x8ab40e2dabcd24dcff0a06a68eb59990405270f0",
+          "pool": "0xa28ffae89e61a29f3c93dd0c085f7233dc30031c",
           "poolType": "burnMint",
-          "poolVersion": "1.6.1",
+          "poolVersion": "2.0.0",
           "home": "1",
           "destinations": ["1", "56"]
         },
@@ -4216,9 +4236,9 @@
           "source": "whitelist"
         },
         "ccip": {
-          "pool": "0x2768f0d350ac6876e5d056317ccf394ecd5d7c5e",
+          "pool": "0x7e5eef063187afdad6954a90baec9451db4fd947",
           "poolType": "burnMint",
-          "poolVersion": "1.6.1",
+          "poolVersion": "2.0.0",
           "home": "1",
           "destinations": ["1", "56"]
         },
@@ -5645,7 +5665,7 @@
       "logoURI": "https://raw.githubusercontent.com/monad-crypto/token-list/refs/heads/main/mainnet/earnAUSDloop/logo.svg",
       "assetGroup": "earnAUSD Loop::earnAUSDloop",
       "currencyId": "earnAUSD Loop::earnAUSDloop",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x683fb58ee77172626d5b49087ddac71ef7825d20": {
       "chainId": "143",
@@ -5806,15 +5826,90 @@
         "issuer": { "id": "infinifi", "name": "InfiniFi", "kind": "protocol" }
       }
     },
-    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+    "0x23c4bddea5e7e284fb4027c6050bc5e6f7fae23f": {
       "chainId": "143",
       "decimals": 18,
-      "name": "Anthropic xStock",
-      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
-      "symbol": "ANTX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
-      "assetGroup": "Anthropic xStock::ANTX",
-      "currencyId": "Anthropic xStock::ANTX"
+      "name": "Wrapped VanEck Semiconductor ETF xStock",
+      "address": "0x23c4bddea5e7e284fb4027c6050bc5e6f7fae23f",
+      "symbol": "WSMHX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180237/thumb/vaneck.png?1794459149",
+      "assetGroup": "Wrapped VanEck Semiconductor ETF xStock::WSMHX",
+      "currencyId": "Wrapped VanEck Semiconductor ETF xStock::WSMHX"
+    },
+    "0xe2047ee3bddb5c99ae428ab83df63f8730698e30": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped Micron Technology xStock",
+      "address": "0xe2047ee3bddb5c99ae428ab83df63f8730698e30",
+      "symbol": "WMUX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180236/thumb/mux.png?1794459040",
+      "assetGroup": "Wrapped Micron Technology xStock::WMUX",
+      "currencyId": "Wrapped Micron Technology xStock::WMUX"
+    },
+    "0xa8ddb5cd96b5222afe198316e9a57caa642850d5": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped NVIDIA xStock",
+      "address": "0xa8ddb5cd96b5222afe198316e9a57caa642850d5",
+      "symbol": "WNVDAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/55770/thumb/Ticker_NVDA__Company_Name_NVIDIA_Corp__size_200x200_2x.png?1747330806",
+      "assetGroup": "Wrapped NVIDIA xStock::WNVDAX",
+      "currencyId": "Wrapped NVIDIA xStock::WNVDAX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "0xe7e553cd128f0011777323a0b44a7b96ea1cb540": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped SP500 xStock",
+      "address": "0xe7e553cd128f0011777323a0b44a7b96ea1cb540",
+      "symbol": "WSPYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179483/thumb/wspyx.png?1791952080",
+      "assetGroup": "Wrapped SP500 xStock::WSPYX",
+      "currencyId": "Wrapped SP500 xStock::WSPYX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "0xc3fdbe3a68ee5de461d30415a8165cf9aefe1171": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped Tesla xStock",
+      "address": "0xc3fdbe3a68ee5de461d30415a8165cf9aefe1171",
+      "symbol": "WTSLAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/55826/thumb/Ticker_TSLA__Company_Name_Tesla_Inc.__size_200x200_2x.png?1747384693",
+      "assetGroup": "Wrapped Tesla xStock::WTSLAX",
+      "currencyId": "Wrapped Tesla xStock::WTSLAX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "0x8e2eed8b8b5e13ea7bf38e50d7821d2c57309072": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped SpaceX xStock",
+      "address": "0x8e2eed8b8b5e13ea7bf38e50d7821d2c57309072",
+      "symbol": "WSPCXX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175318/thumb/wrapped_spacex.webp?1786090858",
+      "assetGroup": "Wrapped SpaceX xStock::WSPCXX",
+      "currencyId": "Wrapped SpaceX xStock::WSPCXX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
+    "0x6215a58ed045d71f2561aaabe54f4c885c522998": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Wrapped SK hynix xStock",
+      "address": "0x6215a58ed045d71f2561aaabe54f4c885c522998",
+      "symbol": "WSKHYX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102175319/thumb/wrapped_skhynix.webp?1786091091",
+      "assetGroup": "Wrapped SK hynix xStock::WSKHYX",
+      "currencyId": "Wrapped SK hynix xStock::WSKHYX",
+      "props": {
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",

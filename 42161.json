@@ -27708,6 +27708,25 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Anthropic xStock",
+      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
+      "symbol": "ANTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
+      "assetGroup": "Anthropic xStock::ANTX",
+      "currencyId": "Anthropic xStock::ANTX",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ANT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "0x1debd73e752beaf79865fd6446b0c970eae7732f": {
       "chainId": "42161",
       "decimals": 18,
@@ -27858,7 +27877,7 @@
       "currencyId": "Stader ETHx::ETHx",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "stader" },
-        "risk": { "score": 2, "category": "LST", "source": "issuer_inherit" },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0xc707f7e0f73c17a4ee7d3965c7b3c5e0ab42cbf5",
           "poolType": "burnMint",
@@ -33051,7 +33070,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -33380,11 +33399,7 @@
       "assetGroup": "Savvy USD::svUSD",
       "currencyId": "Savvy USD::svUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "savvy", "name": "Savvy", "kind": "protocol" }
       }
@@ -35527,6 +35542,7 @@
                 "999": "0xab11329560fa9c9c860bb21a9342215a1265bbb0",
                 "4663": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "33139": "0xe4103e80c967f58591a1d7ca443ed7e392fed862",
+                "43114": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "solana": "Gy6X83nN8ENZhfzZ6yjRoYwDSk4QMg3x5dNv8b2RhvdG"
               }
             }
@@ -35761,7 +35777,6 @@
                 "56": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "146": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "999": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
-                "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
@@ -35786,7 +35801,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -37485,11 +37500,7 @@
       "currencyId": "TREN Debt Token::XY",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "tren", "name": "Tren Finance", "kind": "protocol" }
       }
@@ -37786,7 +37797,8 @@
           "poolVersion": "1.5.0",
           "home": "42161",
           "destinations": ["1", "8453"]
-        }
+        },
+        "stablecoin": { "base": "USD" }
       }
     },
     "0x44966bf47a494b36dfb407afb334a9226cdf90bc": {
@@ -42218,11 +42230,7 @@
       "assetGroup": "peg eUSD::PEUSD",
       "currencyId": "peg eUSD::PEUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "lybra", "name": "Lybra", "kind": "protocol" }
       }
@@ -45146,11 +45154,7 @@
       "assetGroup": "DigitalDollar::DUSD",
       "currencyId": "DigitalDollar::DUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "fluid-ch",
@@ -50498,6 +50502,12 @@
       "assetGroup": "Mountain Protocol USD::USDM",
       "currencyId": "Mountain Protocol USD::USDM",
       "props": {
+        "risk": {
+          "score": 5,
+          "category": "DISCONTINUED",
+          "source": "whitelist"
+        },
+        "retired": { "reason": "discontinued", "source": "risk" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "mountain",
@@ -70221,16 +70231,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180114/thumb/KMIs.png?1793940561",
       "assetGroup": "Kinder Morgan (Stove Tokenized Stock)::KMIS",
       "currencyId": "Kinder Morgan (Stove Tokenized Stock)::KMIS"
-    },
-    "0x909369940f22dc1c143ac78753a33f41597138b1": {
-      "chainId": "42161",
-      "decimals": 18,
-      "name": "Anthropic xStock",
-      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
-      "symbol": "ANTX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
-      "assetGroup": "Anthropic xStock::ANTX",
-      "currencyId": "Anthropic xStock::ANTX"
     },
     "0x00764fa902a1c47a916a18b35396cdedc7f91194": {
       "chainId": "42161",

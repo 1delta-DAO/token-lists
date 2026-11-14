@@ -8,6 +8,7 @@
       "56:0xa40640458fbc27b6eefedea1e9c9e17d4cee7a21": "EUR"
     }
   },
+  "AFRI": { "names": { "afri": "USD" }, "addresses": { "solana:fk9mk6ehhpbzx2fejzy9usxt2jbs3dz8fu8a7wijrzy3": "USD" } },
   "AGEUR": {
     "names": { "ageur": "EUR", "ageurstablecoin": "EUR", "angleeuro": "EUR", "angleprotocol": "EUR", "eura": "EUR" }
   },
@@ -93,7 +94,7 @@
     }
   },
   "AVUSD": {
-    "names": { "avantusd": "USD", "avusd": "USD", "bridgedavusd": "USD" },
+    "names": { "avantusd": "USD", "avusd": "USD" },
     "addresses": { "43114:0x24de8771bc5ddb3362db529fc3358f2df3a0e346": "USD" }
   },
   "AXLDAI": { "names": { "axelarwrappeddai": "USD", "axlerwrappeddai": "USD" } },
@@ -136,7 +137,7 @@
     "addresses": { "1:0x7d8146cf21e8d7cbe46054e01588207b51198729": "USD" }
   },
   "BOLD": {
-    "names": { "boldstablecoin": "USD", "bridgedboldstablecoin": "USD", "legacybold": "USD", "liquitybold": "USD" },
+    "names": { "boldstablecoin": "USD", "legacybold": "USD", "liquitybold": "USD" },
     "addresses": {
       "1:0x6440f144b7e50d6a8439336510312d2f54beb01d": "USD",
       "1:0xb01dd87b29d187f3e3a4bf6cdaebfb97f3d9ab98": "USD"
@@ -207,6 +208,7 @@
     }
   },
   "BUSD.B": { "names": { "binanceusdbsc": "USD" } },
+  "BUSD0": { "names": { "bondusd0": "USD" } },
   "BYC": { "names": { "bytecash": "USD" } },
   "BYUSD": { "names": { "byusd": "USD" } },
   "CADC": {
@@ -274,8 +276,13 @@
     "addresses": { "1:0x6e109e9dd7fa1a58bc3eff667e8e41fc3cc07aef": "CNY" }
   },
   "COPM": {
-    "names": { "celocolombianpeso": "COP", "mentocolombianpeso": "COP" },
-    "addresses": { "42220:0x8a567e2ae79ca692bd748ab832081c45de4041ea": "COP" }
+    "names": { "celocolombianpeso": "COP", "copmbyminteo": "COP", "copminteo": "COP", "mentocolombianpeso": "COP" },
+    "addresses": {
+      "137:0x12050c705152931cfee3dd56c52fb09dea816c23": "COP",
+      "42220:0x8a567e2ae79ca692bd748ab832081c45de4041ea": "COP",
+      "42220:0xc92e8fc2947e32f2b574cca9f2f12097a71d5606": "COP",
+      "solana:copm5kwclxdtwygxjymo6ixmmzrxd1wabkujkcuak47c": "COP"
+    }
   },
   "CREAL": { "names": { "celoreal": "REAL" } },
   "CRVUSD": {
@@ -325,6 +332,7 @@
     "names": { "dackieusd": "USD" },
     "addresses": { "8453:0x613ce28076289de255f1a6487437f03e37e4a71d": "USD" }
   },
+  "DDSC": { "names": { "dirhambackedstablecoin": "AED" } },
   "DEURO": {
     "names": { "decentralizedeuro": "EUR" },
     "addresses": { "1:0xba3f535bbcccca2a154b573ca6c5a49baae0a3ea": "EUR" }
@@ -334,6 +342,10 @@
     "addresses": { "1:0x15700b564ca08d9439c58ca5053166e8317aa138": "USD" }
   },
   "DJED": { "names": { "djedstablecoin": "USD" } },
+  "DKUSD": {
+    "names": { "dakotausd": "USD" },
+    "addresses": { "8453:0xfa2acd0861bd3219d5764d349d3a970ae8321620": "USD" }
+  },
   "DLLR": {
     "names": { "sovryndollar": "USD" },
     "addresses": { "30:0xc1411567d2670e24d9c4daaa7cda95686e1250aa": "USD" }
@@ -541,6 +553,10 @@
     "names": { "floatfloat": "", "floatprotocolfloat": "" },
     "addresses": { "1:0xb05097849bca421a3f51b249ba6cca4af4b97cb9": "" }
   },
+  "FND": {
+    "names": { "frontierdollar": "USD" },
+    "addresses": { "8453:0x2e35045e37f7fc9f02eba7018981e14a3211dbf1": "USD" }
+  },
   "FPI": {
     "names": { "fraxpriceindex": "" },
     "addresses": {
@@ -574,7 +590,6 @@
   },
   "FUSD": {
     "names": {
-      "bridgedfinchaindollar": "USD",
       "falconfinanceusd": "USD",
       "fantomusd": "USD",
       "finchaindollar": "USD",
@@ -641,6 +656,10 @@
       "42220:0xccf663b1ff11028f0b19058d0f7b674004a40746": "GBP"
     }
   },
+  "GDUS": {
+    "names": { "globaldollars": "USD" },
+    "addresses": { "137:0x75dc96ca760a000eff7dc4eb4c701467e66d12c6": "USD" }
+  },
   "GGUSD": {
     "names": { "ggusd": "USD", "goodgameusdollar": "USD" },
     "addresses": {
@@ -672,8 +691,11 @@
   "GTUSDCP": { "names": { "gauntletusdcprime": "USD" } },
   "GTUSDTP": { "names": { "gauntletusdtprime": "USD" } },
   "GUSD": {
-    "names": { "gateusd": "USD", "geminidollar": "USD" },
-    "addresses": { "1:0x056fd409e1d7a124bd7017459dfea2f387b6d5cd": "USD" }
+    "names": { "gaiausd": "USD", "gateusd": "USD", "geminidollar": "USD" },
+    "addresses": {
+      "1:0x056fd409e1d7a124bd7017459dfea2f387b6d5cd": "USD",
+      "solana:32bnuibekwa8oawmmk4ktomfqbjkureakrd334vw3oau": "USD"
+    }
   },
   "GYD": {
     "names": { "gyrodollar": "USD", "gyroscopegyd": "USD" },
@@ -731,6 +753,7 @@
   },
   "ISC": { "names": { "internationalstablecurrency": "USD" } },
   "IST": { "names": { "interstabletoken": "USD" } },
+  "ITRY": { "names": { "brixitry": "TRY" }, "addresses": { "1:0xb492b4afd9658093694cf9452d5c272e8230f3b0": "TRY" } },
   "IUSD": {
     "names": { "infinifiusd": "USD", "initiaiusd": "USD", "iusd": "USD" },
     "addresses": {
@@ -785,6 +808,10 @@
     "names": { "kerneusd": "USD", "kolibriusd": "USD" },
     "addresses": { "8453:0x5c2efdf0d8d286959b42308966bc2b97f5680aa3": "USD" }
   },
+  "LAVAUSD": {
+    "names": { "lavausd": "USD" },
+    "addresses": { "solana:eniqn61nu5sq2h3qy5zpv9sjpyfrvrcngngudb3lr6yp": "USD" }
+  },
   "LCNY": {
     "names": { "alternitycny": "CNY", "lcnystablecoin": "CNY" },
     "addresses": { "1:0x7635b612792e4bfb7f2fa12a3e5d5a3f2e3c34bc": "CNY" }
@@ -809,6 +836,7 @@
   "MANTRAUSD": { "names": { "mantrausd": "USD" } },
   "MBASIS": { "names": { "midasmbasis": "USD" } },
   "MEAD": { "names": { "mead": "USD" }, "addresses": { "80094:0xedb5180661f56077292c92ab40b1ac57a279a396": "USD" } },
+  "MGUSD": { "names": { "moneygramusd": "USD" } },
   "MIM": {
     "names": { "magicinternetmoney": "USD" },
     "addresses": { "1:0x99d8a9c45b2eca8864373a26d1459e3dff1e17f3": "USD" }
@@ -840,6 +868,7 @@
     "names": { "archeprotocolmsd": "USD" },
     "addresses": { "1:0x7c9d9f4972072b6ff7dfa48f259688e7286abac9ebd192bbda30fea910139024": "USD" }
   },
+  "MSDAI": { "names": { "modesavingsdai": "USD" } },
   "MSUSD": {
     "names": { "mainstreetusd": "USD", "metronomesynthusd": "USD", "msusd": "USD" },
     "addresses": {
@@ -863,6 +892,13 @@
   },
   "MUSDC": { "names": { "monstrousdcvault": "USD" } },
   "MUST": { "names": { "mustangfinance": "USD" } },
+  "MXNE": {
+    "names": { "realmxn": "MXN" },
+    "addresses": {
+      "8453:0x269cae7dc59803e5c596c95756faeebb6030e0af": "MXN",
+      "solana:6zygzrt7x2wi9a9nemtuvuwllmf2a8vbsbykocydb9wa": "MXN"
+    }
+  },
   "MXNT": {
     "names": { "mexicanpesotether": "MXN" },
     "addresses": { "1:0xed03ed872159e199065401b6d0d487d78d9464aa": "MXN" }
@@ -980,6 +1016,10 @@
     "names": { "pxdcstablecoin": "USD" },
     "addresses": { "369:0xeb6b7932da20c6d7b3a899d5887d86dfb09a6408": "USD" }
   },
+  "PYREUSD": {
+    "names": { "pyredollar": "USD" },
+    "addresses": { "8453:0x05dec3e8d1b2dc6670d981a3c58a9ee41f243894": "USD" }
+  },
   "PYUSD": { "names": { "paypalusd": "USD" }, "addresses": { "1:0x6c3ea9036406852006290770bedfcaba0e23a0e8": "USD" } },
   "PYUSD0": { "names": { "layerzerobridgedpyusd0": "USD", "pyusd0": "USD" } },
   "QCAD": {
@@ -1003,6 +1043,7 @@
     }
   },
   "RAI": { "names": { "raireflexindex": "" }, "addresses": { "1:0x03ab458634910aad20ef5f1c8ee96f1d6ac54919": "" } },
+  "RCUSD": { "names": { "r25rcusd": "USD" } },
   "REUR": {
     "names": { "royaleuro": "EUR" },
     "addresses": {
@@ -1011,7 +1052,7 @@
     }
   },
   "REUSD": {
-    "names": { "bridgedreprotocolreusd": "USD", "reprotocolreusd": "USD", "resupplyusd": "USD" },
+    "names": { "reprotocolreusd": "USD", "resupplyusd": "USD" },
     "addresses": { "1:0x57ab1e0003f623289cd798b1824be09a793e4bec": "USD" }
   },
   "RGUSD": {
@@ -1076,7 +1117,7 @@
       "8453:0x70654aad8b7734dc319d0c3608ec7b32e03fa162": "USD"
     }
   },
-  "SAVUSD": { "names": { "avantstakedusd": "USD", "bridgedstakedavusd": "USD", "stakedavusd": "USD" } },
+  "SAVUSD": { "names": { "avantstakedusd": "USD", "stakedavusd": "USD" } },
   "SBC": {
     "names": { "stablecoin": "USD" },
     "addresses": {
@@ -1100,7 +1141,7 @@
     "names": { "ringsscusd": "USD" },
     "addresses": { "146:0xd3dce716f3ef535c5ff8d041c1a41c3bd89b97ae": "USD" }
   },
-  "SDAI": { "names": { "savingsdai": "USD", "wrappedsdai": "USD" } },
+  "SDAI": { "names": { "savingsdai": "USD" } },
   "SDOLA": { "names": { "sdola": "USD" } },
   "SDUSD": { "names": { "dtrinitystakeddusd": "USD" } },
   "SEKAU": { "names": { "allunitysek": "SEK" } },
@@ -1132,6 +1173,10 @@
   },
   "SPUSDC": { "names": { "sparksavingsusdc": "USD" } },
   "SPUSDT": { "names": { "sparksavingsusdt": "USD" } },
+  "SQUSD": {
+    "names": { "squadsusd": "USD" },
+    "addresses": { "solana:8d9xrawlnhyy3sksrpgkcwrr3ztp7jr5pkiqyjfsiv7t": "USD" }
+  },
   "SRMHYPER": { "names": { "strataseniormhyper": "USD" } },
   "SRMM1-USD": { "names": { "strataseniormm1usd": "USD" } },
   "SRNUSD": { "names": { "strataseniornusd": "USD" } },
@@ -1151,7 +1196,7 @@
   "STEAKPYUSD": { "names": { "steakhousepyusd": "USD" } },
   "STEAKUSDC": { "names": { "steakhouseusdc": "USD" } },
   "STEAKUSDT": { "names": { "steakhouseusdt": "USD" } },
-  "STRUSD": { "names": { "bridgedstakedtrusd": "USD", "stakedtrusd": "USD", "toristakedtrusd": "USD" } },
+  "STRUSD": { "names": { "stakedtrusd": "USD", "toristakedtrusd": "USD" } },
   "SUIUSDE": { "names": { "esuidollar": "USD" } },
   "SUSD": {
     "names": { "solayerusd": "USD", "susd": "USD", "synthsusd": "USD" },
@@ -1161,11 +1206,12 @@
       "solana:susdabgdnbhrnca6ncryo81u4s9gm8eck2uwmyziq4x": "USD"
     }
   },
-  "SUSD1+": { "names": { "bridgedsusd1": "USD", "stakedusd1": "USD", "susd1": "USD" } },
+  "SUSD1+": { "names": { "stakedusd1": "USD", "susd1": "USD" } },
   "SUSDC": { "names": { "sparkusdc": "USD", "sparkusdcvault": "USD" } },
   "SUSDD": { "names": { "savingsusdd": "USD" } },
   "SUSDE": { "names": { "ethenastakedusde": "USD", "stakedusde": "USD", "susde": "USD" } },
   "SUSDFR": { "names": { "stakedforestroadusdfr": "USD" } },
+  "SUSDRF": { "names": { "realfistakedusdrf": "USD" } },
   "SUSDS": { "names": { "savingsusds": "USD", "savingsusdsfromethereum": "USD", "susds": "USD" } },
   "SUSDX": { "names": { "stakedaxisusd": "USD", "stakedusdx": "USD", "wrappedsusdx": "USD" } },
   "SUSDZ": { "names": { "anzenstakedusdz": "USD" } },
@@ -1176,8 +1222,8 @@
     "names": { "savvyusd": "USD" },
     "addresses": { "42161:0xf202ab403cd7e90197ec0f010ee897e283037706": "USD" }
   },
-  "SYRUPUSDC": { "names": { "bridgedsyrupusdc": "USD", "syrupusdc": "USD" } },
-  "SYRUPUSDG": { "names": { "bridgedsyrupusdg": "USD", "syrupusdg": "USD" } },
+  "SYRUPUSDC": { "names": { "syrupusdc": "USD" } },
+  "SYRUPUSDG": { "names": { "syrupusdg": "USD" } },
   "SYRUPUSDT": { "names": { "syrupusdt": "USD" } },
   "SYUSD": {
     "names": { "stakedyusd": "USD", "synnaxstablecoin": "USD" },
@@ -1186,7 +1232,11 @@
       "1:0x059a6b0ba116c63191182a0956cf697d0d2213ec": "USD"
     }
   },
-  "SYZUSD": { "names": { "bridgedstakedyuzuusd": "USD", "stakedyuzuusd": "USD" } },
+  "SYZUSD": { "names": { "stakedyuzuusd": "USD" } },
+  "TAKO": {
+    "names": { "takenosusd": "USD" },
+    "addresses": { "solana:he1zd1o5wtuchz5qovmsdfhzjyqecvgyk75tug95rnhl": "USD" }
+  },
   "TGBP": {
     "names": { "tokenisedgbp": "GBP" },
     "addresses": {
@@ -1206,7 +1256,7 @@
   },
   "TOR": { "names": { "tor": "USD" }, "addresses": { "250:0x74e23df9110aa9ea0b6ff2faee01e740ca1c642e": "USD" } },
   "TRUSD": {
-    "names": { "bridgedtrusd": "USD", "toritrusd": "USD", "trusd": "USD" },
+    "names": { "toritrusd": "USD", "trusd": "USD" },
     "addresses": { "1:0xd0580192e98ea6ceb9c7b6191ed2e27560911697": "USD" }
   },
   "TRYB": {
@@ -1263,11 +1313,19 @@
     }
   },
   "USD+": {
-    "names": { "overnightfiusd": "USD", "overnightusd": "USD", "streamflowusd": "USD", "usd": "USD" },
+    "names": {
+      "dinariusd": "USD",
+      "overnightfiusd": "USD",
+      "overnightusd": "USD",
+      "streamflowusd": "USD",
+      "usd": "USD"
+    },
     "addresses": {
       "10:0x73cb180bf0521828d8849bc8cf2b920918e23032": "USD",
       "137:0x236eec6359fb44cce8f97e99387aa7f8cd5cde1f": "USD",
+      "1:0xc9e3df3d230980b45adc623c81c3df4a73a5350f": "USD",
       "324:0x8e86e46278518efc1c5ced245cba2c7e3ef11557": "USD",
+      "42161:0xc9e3df3d230980b45adc623c81c3df4a73a5350f": "USD",
       "42161:0xe80772eaf6e2e18b651f160bc9158b2a5cafca65": "USD",
       "43114:0xe80772eaf6e2e18b651f160bc9158b2a5cafca65": "USD",
       "56:0xe80772eaf6e2e18b651f160bc9158b2a5cafca65": "USD",
@@ -1275,6 +1333,8 @@
       "81457:0x4fee793d435c6d2c10c135983bb9d6d4fc7b9bbd": "USD",
       "81457:0x870a8f46b62b8bdeda4c02530c1750cddf2ed32e": "USD",
       "8453:0xb79dd08ea68a908a97220c76d19a6aa9cbde4376": "USD",
+      "8453:0xc9e3df3d230980b45adc623c81c3df4a73a5350f": "USD",
+      "98866:0xc9e3df3d230980b45adc623c81c3df4a73a5350f": "USD",
       "solana:usdsfjbx78ktzunorc7dwvvqz7xh3wdkpgne76gduia": "USD"
     }
   },
@@ -1286,7 +1346,7 @@
     }
   },
   "USD1": {
-    "names": { "bridgedworldlibertyfinancialusd": "USD", "usd1": "USD", "worldlibertyfinancialusd": "USD" },
+    "names": { "usd1": "USD", "worldlibertyfinancialusd": "USD" },
     "addresses": {
       "143:0x111111d2bf19e43c34263401e0cad979ed1cdb61": "USD",
       "1:0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d": "USD",
@@ -1295,6 +1355,7 @@
       "solana:usd1ttgy1n17neehlmeloaybftrbuserhqyiqzvemub": "USD"
     }
   },
+  "USD2": { "names": { "usdii": "USD" }, "addresses": { "8453:0xfe26e72431bd82c285655e897f25104e547c4c07": "USD" } },
   "USD3": { "names": { "3janeusd3": "USD", "usd3": "USD" } },
   "USDA": {
     "names": { "angleusda": "USD", "anzensusda": "USD", "apusda": "USD", "avalonusda": "USD", "usda": "USD" },
@@ -1353,6 +1414,7 @@
   "USDC.B": { "names": { "usdcoinbsc": "USD" } },
   "USDC.E": { "names": { "bridgedusdc": "USD", "stargatebridgedusdc": "USD", "usdce": "USD", "usdcoin": "USD" } },
   "USDCB": { "names": { "usdcb": "USD" }, "addresses": { "30:0xaa5dc2ea0e056fc962f48ab25547d66d3586ee8a": "USD" } },
+  "USDCBL": { "names": { "decibeldollar": "USD" } },
   "USDCET": { "names": { "bridgedusdc": "USD" } },
   "USDCV": {
     "names": { "usdcoinvertible": "USD" },
@@ -1391,7 +1453,6 @@
     "names": {
       "astherus": "USD",
       "astherususdf": "USD",
-      "bridgedfalconusd": "USD",
       "falconfinance": "USD",
       "falconusd": "USD",
       "flowbridgedpyusd": "USD"
@@ -1456,13 +1517,15 @@
   },
   "USDKG": { "names": { "usdkg": "USD" }, "addresses": { "1:0xe820c06321e60d36257c666643fa5436643445e3": "USD" } },
   "USDL": {
-    "names": { "liftdollar": "USD", "liquidloansusdl": "USD", "usdlemma": "USD" },
+    "names": { "liftdollar": "USD", "lineausd": "USD", "liquidloansusdl": "USD", "liskusd": "USD", "usdlemma": "USD" },
     "addresses": {
       "10:0x96f2539d3684dbde8b3242a51a73b66360a5b541": "USD",
       "1:0xbdc7c08592ee4aa51d06c27ee23d5087d65adbcd": "USD",
       "369:0x0deed1486bc52aa0d3e6f8849cec5add6598a162": "USD",
       "42161:0x7f850b0ab1988dd17b69ac564c1e2857949e4dee": "USD",
-      "42161:0xdb41ab644abca7f5ac579a5cf2f41e606c2d6abc": "USD"
+      "42161:0xdb41ab644abca7f5ac579a5cf2f41e606c2d6abc": "USD",
+      "59144:0x91c4596b9aba38cb46318f01a0c1943922f47ae5": "USD",
+      "8453:0x1eb9c1d6ca4f8e2a2cc4f8b7b5c05251f3bbc845": "USD"
     }
   },
   "USDM": {
@@ -1507,7 +1570,7 @@
   },
   "USDNR": { "names": { "neronausd": "USD" }, "addresses": { "1:0xd48e565561416de59da1050ed70b8d75e8ef28f9": "USD" } },
   "USDO": {
-    "names": { "bridgedopenedenopendollar": "USD", "opendollarusdo": "USD", "openedenopendollar": "USD" },
+    "names": { "opendollarusdo": "USD", "openedenopendollar": "USD" },
     "addresses": {
       "1:0x8238884ec9668ef77b90c6dff4d1a9f4f4823bfe": "USD",
       "56:0x302e52aff9815b9d1682473dbfb9c74f9b750aa8": "USD",
@@ -1581,11 +1644,13 @@
   },
   "USDS": {
     "names": {
+      "arqusds": "USD",
       "sablecoin": "USD",
       "skydollar": "USD",
       "speraxusd": "USD",
       "spiceusd": "USD",
       "thestandardusd": "USD",
+      "usds": "USD",
       "usdsstablecoin": "USD"
     },
     "addresses": {
@@ -1596,6 +1661,7 @@
       "1:0xdc035d45d973e3ec169d2276ddab16f1e407384f": "USD",
       "42161:0x2ea0be86990e8dac0d09e4316bb92086f304622d": "USD",
       "42161:0xd74f5255d557944cf7dd0e45ff521520002d5748": "USD",
+      "4217:0x20c000000000000000000000301ecc78ead01357": "USD",
       "43114:0xab05b04743e0aeaf9d2ca81e5d3b8385e4bf961e": "USD",
       "56:0x0c6ed1e73ba73b8441868538e210ebd5dd240fa0": "USD",
       "56:0xde7d1ce109236b12809c45b23d22f30dba0ef424": "USD",
@@ -1606,6 +1672,10 @@
   "USDSC": {
     "names": { "startaleusd": "USD" },
     "addresses": { "1868:0x3f99231dd03a9f0e7e3421c92b7b90fbe012985a": "USD" }
+  },
+  "USDSL": {
+    "names": { "usdslash": "USD" },
+    "addresses": { "8453:0xcc7b940e22e1eef83c0170608aed6d5fd386cdad": "USD" }
   },
   "USDSM": {
     "names": { "stablemintusd": "USD" },
@@ -1665,12 +1735,20 @@
     }
   },
   "USDV": {
-    "names": { "delphousdv": "USD", "solomonusdv": "USD", "usdv": "USD", "valtorumusd": "USD", "verifiedusd": "USD" },
+    "names": {
+      "delphousdv": "USD",
+      "solomonusdv": "USD",
+      "usdv": "USD",
+      "valtorumusd": "USD",
+      "veemusd": "USD",
+      "verifiedusd": "USD"
+    },
     "addresses": {
       "1:0x0e573ce2736dd9637a0b21058352e1667925c7a8": "USD",
       "56:0x323665443cef804a3b5206103304bd4872ea4253": "USD",
       "999:0x8c6eb3c8d1fddc752684274fb4a3eb98dbe9cd26": "USD",
-      "solana:ex5dakymcn6qwfa4n67tmmwsh8mjv68rx6yxtmvm532c": "USD"
+      "solana:ex5dakymcn6qwfa4n67tmmwsh8mjv68rx6yxtmvm532c": "USD",
+      "solana:u2juwdhs5hxphvea2s653jz4ctg3hfd4k1kksuprrua": "USD"
     }
   },
   "USDW": { "names": { "usdw": "USD" }, "addresses": { "10001:0x520a36ee3aa0b506288915f91fb4bbb23d09a7d7": "USD" } },
@@ -1696,12 +1774,13 @@
   "USDXL": { "names": { "lastusd": "USD" }, "addresses": { "999:0xca79db4b49f608ef54a5cb813fbed3a6387bc645": "USD" } },
   "USDY": { "names": { "ondousdollaryield": "USD" } },
   "USDZ": {
-    "names": { "anzenusdz": "USD", "usdz": "USD" },
+    "names": { "anzenusdz": "USD", "blitzusd": "USD", "usdz": "USD" },
     "addresses": {
       "169:0x73d23f3778a90be8846e172354a115543df2a7e4": "USD",
       "1:0xa469b7ee9ee773642b3e93e842e5d9b5baa10067": "USD",
       "81457:0x52056ed29fe015f4ba2e3b079d10c0b87f46e8c6": "USD",
-      "8453:0x04d5ddf5f3a8939889f11e97f8c4bb48317f1938": "USD"
+      "8453:0x04d5ddf5f3a8939889f11e97f8c4bb48317f1938": "USD",
+      "solana:usdz3kljgc2cskqmcojfn2c1mlrrjcgwvk3tjdix9c2": "USD"
     }
   },
   "USD₮": { "names": { "tetherusd": "USD" } },
@@ -1914,8 +1993,16 @@
     "names": { "xai": "USD", "xaistablecoin": "USD" },
     "addresses": { "1:0xd7c9f0e536dc865ae858b0c0453fe76d13c3beac": "USD" }
   },
+  "XCHF": { "names": { "cryptofranc": "CHF" }, "addresses": { "1:0xb4272071ecadd69d933adcd19ca99fe80664fc08": "CHF" } },
   "XCUSDC": { "names": { "xcusdc": "USD" } },
   "XCUSDT": { "names": { "xcusdt": "USD" } },
+  "XIDR": {
+    "names": { "straitsxxidr": "IDR", "xidr": "IDR" },
+    "addresses": {
+      "137:0x2c826035c1c36986117a0e949bd6ad4bab54afe2": "IDR",
+      "1:0xebf2096e01455108badcbaf86ce30b6e5a72aa52": "IDR"
+    }
+  },
   "XOFM": {
     "names": { "ecocfa": "XOF", "mentowestafricancfafranc": "XOF" },
     "addresses": { "42220:0x73f93dcc49cb8a239e2032663e9475dd5ef29a08": "XOF" }
@@ -1981,7 +2068,7 @@
     }
   },
   "ZEUSD": {
-    "names": { "bridgedzeusd": "USD", "zeusd": "USD", "zothzeusd": "USD" },
+    "names": { "zeusd": "USD", "zothzeusd": "USD" },
     "addresses": { "1:0x7dc9748da8e762e569f9269f48f69a1a9f8ea761": "USD" }
   },
   "ZKUSD": {
@@ -1989,7 +2076,7 @@
     "addresses": { "324:0xfc7e56298657b002b3e656400e746b7212912757": "USD" }
   },
   "ZUNETH": {
-    "names": { "bridgedzunamiomnieth": "", "zunamieth": "" },
+    "names": { "zunamieth": "", "zunamiomnieth": "" },
     "addresses": { "1:0xc2e660c62f72c2ad35ace6db78a616215e2f2222": "" }
   },
   "ZUNUSD": { "names": { "zunamiusd": "USD" }, "addresses": { "1:0x8c0d76c9b18779665475f3e212d9ca1ed6a1a0e6": "USD" } },

@@ -170,7 +170,7 @@
           "ptAddress": "0x810f9d4a751cafd5193617022b35fa0b0c166b4c",
           "ytAddress": "0x2b55b35d9be63d016ee902d87af29d2c4f397dc1"
         },
-        "risk": { "score": 2, "source": "pendle_inherit" },
+        "risk": { "score": 4, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -1416,7 +1416,8 @@
           "expiry": 1794441600,
           "underlyingAsset": "0xd0ee0cf300dfb598270cd7f4d0c6e0d8f6e13f29",
           "ytAddress": "0xe7ce63c6d7ed274707821bb197d980fe11a78913",
-          "syAddress": "0x3a853dfaf48053ebf890797227e08e9a3fb7b1f7"
+          "syAddress": "0x3a853dfaf48053ebf890797227e08e9a3fb7b1f7",
+          "expired": true
         },
         "risk": {
           "score": 6,
@@ -2019,7 +2020,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -3786,7 +3787,8 @@
           "expiry": 1794441600,
           "underlyingAsset": "0xd0ee0cf300dfb598270cd7f4d0c6e0d8f6e13f29",
           "ptAddress": "0x5afc3c215de250d8c24a496a528da421eff4d637",
-          "syAddress": "0x3a853dfaf48053ebf890797227e08e9a3fb7b1f7"
+          "syAddress": "0x3a853dfaf48053ebf890797227e08e9a3fb7b1f7",
+          "expired": true
         },
         "risk": {
           "score": 6,
@@ -4053,56 +4055,6 @@
           "source": "default"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
-      }
-    },
-    "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d": {
-      "chainId": "999",
-      "decimals": 6,
-      "name": "Principal Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM",
-      "address": "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d",
-      "symbol": "PT-wpUSDT(USD₮0)-2026/11/10",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/999/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb.svg",
-      "assetGroup": "Principal Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::PT-wpUSDT(USD₮0)-2026/11/10",
-      "currencyId": "Principal Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::PT-wpUSDT(USD₮0)-2026/11/10",
-      "props": {
-        "spectra": {
-          "tokenType": "PT",
-          "poolAddress": "0x2e8c7e71695bcc98da887d6b1298cc08b0941867",
-          "ptAddress": "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d",
-          "ytAddress": "0xdd53d063aa90228c7655acd18dceb90a3437d29c",
-          "ibtAddress": "0xd8d54b633877986f33971540ccd2b385d0e0e93f",
-          "underlyingAsset": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
-          "maturity": 1794268809
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
-        "issuerExposures": [
-          { "id": "tether", "name": "Tether", "kind": "institution", "hops": 1 }
-        ]
-      }
-    },
-    "0xdd53d063aa90228c7655acd18dceb90a3437d29c": {
-      "chainId": "999",
-      "decimals": 6,
-      "name": "Yield Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM",
-      "address": "0xdd53d063aa90228c7655acd18dceb90a3437d29c",
-      "symbol": "YT-wpUSDT(USD₮0)-2026/11/10",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/999/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb.svg",
-      "assetGroup": "Yield Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::YT-wpUSDT(USD₮0)-2026/11/10",
-      "currencyId": "Yield Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::YT-wpUSDT(USD₮0)-2026/11/10",
-      "props": {
-        "spectra": {
-          "tokenType": "YT",
-          "poolAddress": "0x2e8c7e71695bcc98da887d6b1298cc08b0941867",
-          "ptAddress": "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d",
-          "ytAddress": "0xdd53d063aa90228c7655acd18dceb90a3437d29c",
-          "ibtAddress": "0xd8d54b633877986f33971540ccd2b385d0e0e93f",
-          "underlyingAsset": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
-          "maturity": 1794268809
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
-        "issuerExposures": [
-          { "id": "tether", "name": "Tether", "kind": "institution", "hops": 1 }
-        ]
       }
     },
     "0xf4d9235269a96aadafc9adae454a0618ebe37949": {
@@ -18543,6 +18495,25 @@
         "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
       }
     },
+    "0x909369940f22dc1c143ac78753a33f41597138b1": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Anthropic xStock",
+      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
+      "symbol": "ANTX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
+      "assetGroup": "Anthropic xStock::ANTX",
+      "currencyId": "Anthropic xStock::ANTX",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "backed",
+          "underlying": "ANT"
+        },
+        "issuer": { "id": "backed", "name": "Backed", "kind": "institution" }
+      }
+    },
     "0xd8fc8f0b03eba61f64d08b0bef69d80916e5dda9": {
       "chainId": "999",
       "decimals": 18,
@@ -18868,6 +18839,56 @@
         "issuer": { "id": "liquity", "name": "Liquity", "kind": "protocol" }
       }
     },
+    "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d": {
+      "chainId": "999",
+      "decimals": 6,
+      "name": "Principal Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM",
+      "address": "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d",
+      "symbol": "PT-wpUSDT(USD₮0)-2026/11/10",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/999/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb.svg",
+      "assetGroup": "Principal Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::PT-wpUSDT(USD₮0)-2026/11/10",
+      "currencyId": "Principal Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::PT-wpUSDT(USD₮0)-2026/11/10",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0x2e8c7e71695bcc98da887d6b1298cc08b0941867",
+          "ptAddress": "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d",
+          "ytAddress": "0xdd53d063aa90228c7655acd18dceb90a3437d29c",
+          "ibtAddress": "0xd8d54b633877986f33971540ccd2b385d0e0e93f",
+          "underlyingAsset": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "maturity": 1794268809
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tether", "name": "Tether", "kind": "institution", "hops": 1 }
+        ]
+      }
+    },
+    "0xdd53d063aa90228c7655acd18dceb90a3437d29c": {
+      "chainId": "999",
+      "decimals": 6,
+      "name": "Yield Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM",
+      "address": "0xdd53d063aa90228c7655acd18dceb90a3437d29c",
+      "symbol": "YT-wpUSDT(USD₮0)-2026/11/10",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/999/0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb.svg",
+      "assetGroup": "Yield Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::YT-wpUSDT(USD₮0)-2026/11/10",
+      "currencyId": "Yield Token: wpUSDT(USD₮0) 2026/11/10 HyperEVM::YT-wpUSDT(USD₮0)-2026/11/10",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0x2e8c7e71695bcc98da887d6b1298cc08b0941867",
+          "ptAddress": "0x77a61315aa1ec5fa61fba6226653fe7b09a80f2d",
+          "ytAddress": "0xdd53d063aa90228c7655acd18dceb90a3437d29c",
+          "ibtAddress": "0xd8d54b633877986f33971540ccd2b385d0e0e93f",
+          "underlyingAsset": "0xb8ce59fc3717ada4c02eadf9682a9e934f625ebb",
+          "maturity": 1794268809
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tether", "name": "Tether", "kind": "institution", "hops": 1 }
+        ]
+      }
+    },
     "0x3f6da7ca4bac98dacf00581e860c5eb00e13a7a2": {
       "chainId": "999",
       "decimals": 6,
@@ -18941,7 +18962,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -19208,7 +19229,7 @@
       "logoURI": "https://www.hyperbeat.org/assets/images/vaults/hbhype.svg",
       "assetGroup": "Hyperbeat Ultra Hype::hbHYPE",
       "currencyId": "Hyperbeat Ultra Hype::hbHYPE",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x7dcffcb06b40344eeced2d1cbf096b299fe4b405": {
       "chainId": "999",
@@ -20055,7 +20076,6 @@
                 "1": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "56": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "146": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
-                "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
@@ -20254,7 +20274,7 @@
       "logoURI": "https://app.hyperbeat.org/assets/images/vaults/hbBTC.svg",
       "assetGroup": "Hyperbeat Ultra uBTC::hbBTC",
       "currencyId": "Hyperbeat Ultra uBTC::hbBTC",
-      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x618275f8efe54c2afa87bfb9f210a52f0ff89364": {
       "chainId": "999",
@@ -22844,7 +22864,16 @@
       "symbol": "LINK",
       "logoURI": "https://assets.coingecko.com/coins/images/877/thumb/chainlink-new-logo.png?1696502009",
       "assetGroup": "LINK",
-      "currencyId": "ChainLink Token::LINK"
+      "currencyId": "ChainLink Token::LINK",
+      "props": {
+        "ccip": {
+          "pool": "0x2768f0d350ac6876e5d056317ccf394ecd5d7c5e",
+          "poolType": "burnMint",
+          "poolVersion": "2.0.0",
+          "home": "1",
+          "destinations": ["1"]
+        }
+      }
     },
     "0x876e7f2f30935118a654fc0e1f807afc49efe500": {
       "chainId": "999",
@@ -22960,6 +22989,7 @@
                 "4663": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "33139": "0xe4103e80c967f58591a1d7ca443ed7e392fed862",
                 "42161": "0x7f9fbf9bdd3f4105c478b996b648fe6e828a1e98",
+                "43114": "0x8f86a15ec17cb3369d8b3e666dadbc11daa82b79",
                 "solana": "Gy6X83nN8ENZhfzZ6yjRoYwDSk4QMg3x5dNv8b2RhvdG"
               }
             }
@@ -23896,7 +23926,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0xb83d27f0f4133a7b0377a88089583131a903fdc7.png",
       "assetGroup": "Treehouse HYPE::tHYPE",
       "currencyId": "Treehouse HYPE::tHYPE",
-      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0xa3882d42ed12b57c10c85e8ec8febd0774600000": {
       "chainId": "999",
@@ -24011,7 +24041,11 @@
       "assetGroup": "Monetrix USD::USDM",
       "currencyId": "Monetrix USD::USDM",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "monetrix", "name": "Monetrix", "kind": "protocol" }
       }
@@ -24676,16 +24710,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/385/thumb/LSK-logo.png?1788508326",
       "assetGroup": "Lisk::LSK",
       "currencyId": "Lisk::LSK"
-    },
-    "0x909369940f22dc1c143ac78753a33f41597138b1": {
-      "chainId": "999",
-      "decimals": 18,
-      "name": "Anthropic xStock",
-      "address": "0x909369940f22dc1c143ac78753a33f41597138b1",
-      "symbol": "ANTX",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180104/thumb/ANTx.png?1793861573",
-      "assetGroup": "Anthropic xStock::ANTX",
-      "currencyId": "Anthropic xStock::ANTX"
     },
     "0x07a76acced707de999a54d39aff62a2d7ac4cc81": {
       "chainId": "999",

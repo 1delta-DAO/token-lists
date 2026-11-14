@@ -8344,7 +8344,7 @@
       "currencyId": "STASIS EURS::EURS",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -9738,7 +9738,7 @@
       "currencyId": "EUROe Stablecoin::EUROe",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -11110,11 +11110,7 @@
       "assetGroup": "EURO3::EURO3",
       "currencyId": "EURO3::EURO3",
       "props": {
-        "risk": {
-          "score": 4,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "EUR" },
         "issuer": { "id": "3adao", "name": "3A DAO", "kind": "protocol" }
       }
@@ -12774,11 +12770,7 @@
       "assetGroup": "Neutrino Index Token::USDN",
       "currencyId": "Neutrino Index Token::USDN",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -13862,7 +13854,15 @@
       "symbol": "XIDR",
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x2c826035c1c36986117a0e949bd6ad4bab54afe2/small/token-logo.png",
       "assetGroup": "XIDR::XIDR",
-      "currencyId": "XIDR::XIDR"
+      "currencyId": "XIDR::XIDR",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "IDR" }
+      }
     },
     "0x42e5e06ef5b90fe15f853f59299fc96259209c5c": {
       "chainId": "137",
@@ -15368,7 +15368,11 @@
       "assetGroup": "Stabl.fi CASH::CASH",
       "currencyId": "Stabl.fi CASH::CASH",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "stabl", "name": "Stabl.fi", "kind": "protocol" }
       }
@@ -15885,7 +15889,11 @@
       "assetGroup": "USC",
       "currencyId": "Classic USD::USC",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "brale", "name": "Brale", "kind": "institution" }
       }
@@ -19264,7 +19272,15 @@
       "symbol": "COPM",
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x12050c705152931cfee3dd56c52fb09dea816c23.png",
       "assetGroup": "COP Minteo::COPM",
-      "currencyId": "COP Minteo::COPM"
+      "currencyId": "COP Minteo::COPM",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "COP" }
+      }
     },
     "0x4843dee98801836f615a26894248584ae8744c8a": {
       "chainId": "137",
@@ -23464,12 +23480,7 @@
               "sharedDecimals": 6,
               "oapp": "schuman",
               "approvalRequired": true,
-              "peers": {
-                "1": "0xde1a8a3f0d2bba8a4d0454c1eb5ace2239b221be",
-                "9745": "0xf825e476ad696de47f78a8fd04e92ef1d5c6524c",
-                "43114": "0x35239f1469244558a1aa303ca49d4fb48d4c5d3b",
-                "solana": "3KNqzWyYtiGPeTC5JrNPNZerZkbuXgfwvQcdbibKsLEz"
-              }
+              "peers": {}
             }
           ]
         },
@@ -25432,11 +25443,7 @@
       "assetGroup": "Spice USD::USDS",
       "currencyId": "Spice USD::USDS",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "spice-trade",
@@ -29382,6 +29389,16 @@
       "symbol": "RWAT",
       "assetGroup": "RWAT::RWAT",
       "currencyId": "RWAT::RWAT"
+    },
+    "0x06e8bde95be4ce5cb1134bd47ad18a79ffb35822": {
+      "chainId": "137",
+      "decimals": 18,
+      "name": "Uniswap",
+      "address": "0x06e8bde95be4ce5cb1134bd47ad18a79ffb35822",
+      "symbol": "NUNI",
+      "logoURI": "https://tokens.debridge.finance/Logo/137/0x06e8bde95be4ce5cb1134bd47ad18a79ffb35822/small/token-logo.png",
+      "assetGroup": "Uniswap::NUNI",
+      "currencyId": "Uniswap::NUNI"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "137",

@@ -278,7 +278,14 @@
       "assetGroup": "yGOOGLc Base::SY-yGOOGLc",
       "currencyId": "yGOOGLc Base::SY-yGOOGLc",
       "props": {
-        "pendle": { "tokenType": "SY" },
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xe0c105dd9382e3b9ec197f573cc06ca912238bca",
+          "expiry": 1799280000,
+          "underlyingAsset": "0x4face8a423fc7c99e10c0dfe92fbd9633aa863fd",
+          "ptAddress": "0xf89b533340627166734fd40ace16832205cfb273",
+          "ytAddress": "0x438ce3f1c11ae7397c8323a85ee5e405ae907b02"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -727,7 +734,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xa6ef20fe18cd529ca15a8a53a29d1832b1f848ff",
           "ytAddress": "0x5cfcfa42936f1ee9935fcb97446a553bb82856b2",
-          "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19"
+          "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -999,6 +1007,7 @@
       "props": {
         "pendle": {
           "tokenType": "YT",
+          "marketAddress": "0xe0c105dd9382e3b9ec197f573cc06ca912238bca",
           "expiry": 1799280000,
           "underlyingAsset": "0x4face8a423fc7c99e10c0dfe92fbd9633aa863fd",
           "ptAddress": "0xf89b533340627166734fd40ace16832205cfb273",
@@ -1108,7 +1117,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xd993935e13851dd7517af10687ec7e5022127228",
           "ytAddress": "0x66b8f8b61de9fc36b592c9b8abe0d6d03a5b3e6d",
-          "syAddress": "0x65c3faaf6a25cb0311a29cce4b79bf8d37474342"
+          "syAddress": "0x65c3faaf6a25cb0311a29cce4b79bf8d37474342",
+          "expired": true
         },
         "risk": {
           "score": 3,
@@ -1469,7 +1479,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xa6ef20fe18cd529ca15a8a53a29d1832b1f848ff",
           "ptAddress": "0x29a2338194cb32f4fcfd559b1c7976c91fc0d3ff",
-          "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19"
+          "syAddress": "0x1e31c52936fc48146343a10f72c63c69dcddcd19",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -1832,7 +1843,8 @@
           "expiry": 1793836800,
           "underlyingAsset": "0xd993935e13851dd7517af10687ec7e5022127228",
           "ptAddress": "0x45099d137c7a1f5b28bdc4443fdfecd842e1ddee",
-          "syAddress": "0x65c3faaf6a25cb0311a29cce4b79bf8d37474342"
+          "syAddress": "0x65c3faaf6a25cb0311a29cce4b79bf8d37474342",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -3774,6 +3786,7 @@
       "props": {
         "pendle": {
           "tokenType": "PT",
+          "marketAddress": "0xe0c105dd9382e3b9ec197f573cc06ca912238bca",
           "expiry": 1799280000,
           "underlyingAsset": "0x4face8a423fc7c99e10c0dfe92fbd9633aa863fd",
           "ytAddress": "0x438ce3f1c11ae7397c8323a85ee5e405ae907b02",
@@ -4289,6 +4302,28 @@
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
+    "0xae27f0e72475f6b3af3b92ddc78da36acf994d7e": {
+      "chainId": "8453",
+      "decimals": 6,
+      "name": "Principal Token: tUSDCv2(USDC) 2027/02/13 Base",
+      "address": "0xae27f0e72475f6b3af3b92ddc78da36acf994d7e",
+      "symbol": "PT-tUSDCv2(USDC)-2027/02/13",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.svg",
+      "assetGroup": "Principal Token: tUSDCv2(USDC) 2027/02/13 Base::PT-tUSDCv2(USDC)-2027/02/13",
+      "currencyId": "Principal Token: tUSDCv2(USDC) 2027/02/13 Base::PT-tUSDCv2(USDC)-2027/02/13",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0x093956b337ce2c30bed2df0960aead883d7106ec",
+          "ptAddress": "0xae27f0e72475f6b3af3b92ddc78da36acf994d7e",
+          "ytAddress": "0xefaa6014bbdc9ccb5568fb918ba73816a94fdc8c",
+          "ibtAddress": "0x34ed3fc672fba382bbea53eac2fd16a9d3d55fcb",
+          "underlyingAsset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "maturity": 1802476802
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
     "0xb43326e29631891d069ed21970b09fca0b624cee": {
       "chainId": "8453",
       "decimals": 18,
@@ -4414,6 +4449,28 @@
           "ibtAddress": "0xe78285a51f51916f2311b7017db036d8351f3cf9",
           "underlyingAsset": "0x4200000000000000000000000000000000000006",
           "maturity": 1808092809
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
+    "0xefaa6014bbdc9ccb5568fb918ba73816a94fdc8c": {
+      "chainId": "8453",
+      "decimals": 6,
+      "name": "Yield Token: tUSDCv2(USDC) 2027/02/13 Base",
+      "address": "0xefaa6014bbdc9ccb5568fb918ba73816a94fdc8c",
+      "symbol": "YT-tUSDCv2(USDC)-2027/02/13",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.svg",
+      "assetGroup": "Yield Token: tUSDCv2(USDC) 2027/02/13 Base::YT-tUSDCv2(USDC)-2027/02/13",
+      "currencyId": "Yield Token: tUSDCv2(USDC) 2027/02/13 Base::YT-tUSDCv2(USDC)-2027/02/13",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0x093956b337ce2c30bed2df0960aead883d7106ec",
+          "ptAddress": "0xae27f0e72475f6b3af3b92ddc78da36acf994d7e",
+          "ytAddress": "0xefaa6014bbdc9ccb5568fb918ba73816a94fdc8c",
+          "ibtAddress": "0x34ed3fc672fba382bbea53eac2fd16a9d3d55fcb",
+          "underlyingAsset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+          "maturity": 1802476802
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
@@ -12176,6 +12233,633 @@
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
+    "0xb20000000000000000000034533ed3961f222cd4": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Adobe Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000034533ed3961f222cd4",
+      "symbol": "ADBEC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179987/thumb/ADBEc-icon-200.png?1793689762",
+      "assetGroup": "Adobe Inc. (Coinbase Tokenized Stock)::ADBEC",
+      "currencyId": "Adobe Inc. (Coinbase Tokenized Stock)::ADBEC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ADBE"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000049d38a179c97e33381": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Amgen Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000049d38a179c97e33381",
+      "symbol": "AMGNC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179988/thumb/AMGNc-icon-200_%281%29.png?1793689765",
+      "assetGroup": "Amgen Inc. (Coinbase Tokenized Stock)::AMGNC",
+      "currencyId": "Amgen Inc. (Coinbase Tokenized Stock)::AMGNC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "AMGN"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb200000000000000000000476c5a355abe1a2794": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Astera Labs, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000476c5a355abe1a2794",
+      "symbol": "ALABC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179989/thumb/ALABc-icon-200.png?1793689769",
+      "assetGroup": "Astera Labs, Inc. (Coinbase Tokenized Stock)::ALABC",
+      "currencyId": "Astera Labs, Inc. (Coinbase Tokenized Stock)::ALABC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ALAB"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000004217b9b4f6f6acb7b8": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Atlassian Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000004217b9b4f6f6acb7b8",
+      "symbol": "TEAMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179990/thumb/TEAMc-icon-200.png?1793689771",
+      "assetGroup": "Atlassian Corporation (Coinbase Tokenized Stock)::TEAMC",
+      "currencyId": "Atlassian Corporation (Coinbase Tokenized Stock)::TEAMC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "TEAM"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000005de7f2e0aca219c070": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Caterpillar Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000005de7f2e0aca219c070",
+      "symbol": "CATC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179991/thumb/CATc-icon-200.png?1793689774",
+      "assetGroup": "Caterpillar Inc. (Coinbase Tokenized Stock)::CATC",
+      "currencyId": "Caterpillar Inc. (Coinbase Tokenized Stock)::CATC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "CAT"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003bf350e420c13e431a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Chevron Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003bf350e420c13e431a",
+      "symbol": "CVXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179992/thumb/CVXc-icon-200.png?1793689778",
+      "assetGroup": "Chevron Corporation (Coinbase Tokenized Stock)::CVXC",
+      "currencyId": "Chevron Corporation (Coinbase Tokenized Stock)::CVXC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "CVX"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000015776ea82655c4f034": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Cisco Systems, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000015776ea82655c4f034",
+      "symbol": "CSCOC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179993/thumb/CSCOc-icon-200_%281%29.png?1793689783",
+      "assetGroup": "Cisco Systems, Inc. (Coinbase Tokenized Stock)::CSCOC",
+      "currencyId": "Cisco Systems, Inc. (Coinbase Tokenized Stock)::CSCOC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "CSCO"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000002c99976e240ed773e6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Datadog, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002c99976e240ed773e6",
+      "symbol": "DDOGC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179994/thumb/DDOGc-icon-200.png?1793689787",
+      "assetGroup": "Datadog, Inc. (Coinbase Tokenized Stock)::DDOGC",
+      "currencyId": "Datadog, Inc. (Coinbase Tokenized Stock)::DDOGC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "DDOG"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000034975347ff1848aab9": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Lam Research Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000034975347ff1848aab9",
+      "symbol": "LRCXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179995/thumb/LRCXc-icon-200.png?1793689790",
+      "assetGroup": "Lam Research Corporation (Coinbase Tokenized Stock)::LRCXC",
+      "currencyId": "Lam Research Corporation (Coinbase Tokenized Stock)::LRCXC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "LRCX"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb200000000000000000000241fe94fe97fcbf034": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Merck & Co., Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000241fe94fe97fcbf034",
+      "symbol": "MRKC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179996/thumb/MRKc-icon-200_%281%29.png?1793689793",
+      "assetGroup": "Merck & Co., Inc. (Coinbase Tokenized Stock)::MRKC",
+      "currencyId": "Merck & Co., Inc. (Coinbase Tokenized Stock)::MRKC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "MRK"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000002570652530a5e0f771": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Okta, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002570652530a5e0f771",
+      "symbol": "OKTAC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179998/thumb/OKTAc-icon-200.png?1793690329",
+      "assetGroup": "Okta, Inc. (Coinbase Tokenized Stock)::OKTAC",
+      "currencyId": "Okta, Inc. (Coinbase Tokenized Stock)::OKTAC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "OKTA"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000004ec7c19212979672f9": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Blink Charging Co. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000004ec7c19212979672f9",
+      "symbol": "BLNKC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180004/thumb/BLNKc-icon-200.png?1793690354",
+      "assetGroup": "Blink Charging Co. (Coinbase Tokenized Stock)::BLNKC",
+      "currencyId": "Blink Charging Co. (Coinbase Tokenized Stock)::BLNKC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "BLNK"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003086b1355bd43e25da": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Offerpad Solutions Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003086b1355bd43e25da",
+      "symbol": "OPADC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180005/thumb/OPADc-icon-200.png?1793690356",
+      "assetGroup": "Offerpad Solutions Inc. (Coinbase Tokenized Stock)::OPADC",
+      "currencyId": "Offerpad Solutions Inc. (Coinbase Tokenized Stock)::OPADC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "OPAD"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003958003d801724f9d3": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "MP Materials Corp. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003958003d801724f9d3",
+      "symbol": "MPC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179997/thumb/MPc-icon-200.png?1793690326",
+      "assetGroup": "MP Materials Corp. (Coinbase Tokenized Stock)::MPC",
+      "currencyId": "MP Materials Corp. (Coinbase Tokenized Stock)::MPC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "MP"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb200000000000000000000314b9f5f580168766a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Ouster, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000314b9f5f580168766a",
+      "symbol": "OUSTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179999/thumb/OUSTc-icon-200.png?1793690331",
+      "assetGroup": "Ouster, Inc. (Coinbase Tokenized Stock)::OUSTC",
+      "currencyId": "Ouster, Inc. (Coinbase Tokenized Stock)::OUSTC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "OUST"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000005672d78eff30d24665": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Qualcomm Incorporated (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000005672d78eff30d24665",
+      "symbol": "QCOMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180000/thumb/QCOMc-icon-200.png?1793690334",
+      "assetGroup": "Qualcomm Incorporated (Coinbase Tokenized Stock)::QCOMC",
+      "currencyId": "Qualcomm Incorporated (Coinbase Tokenized Stock)::QCOMC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "QCOM"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003f265ab1f74dd89ac0": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Snap Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003f265ab1f74dd89ac0",
+      "symbol": "SNAPC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180001/thumb/SNAPc-icon-200.png?1793690336",
+      "assetGroup": "Snap Inc. (Coinbase Tokenized Stock)::SNAPC",
+      "currencyId": "Snap Inc. (Coinbase Tokenized Stock)::SNAPC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "SNAP"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000054b11fd279a4f7d4ef": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Visa Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000054b11fd279a4f7d4ef",
+      "symbol": "VC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180002/thumb/Vc-icon-200.png?1793690338",
+      "assetGroup": "Visa Inc. (Coinbase Tokenized Stock)::VC",
+      "currencyId": "Visa Inc. (Coinbase Tokenized Stock)::VC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "V"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000000e63b7b0b6bc5b9213": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Zoom Communications, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000000e63b7b0b6bc5b9213",
+      "symbol": "ZMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180003/thumb/ZMc-icon-200.png?1793690340",
+      "assetGroup": "Zoom Communications, Inc. (Coinbase Tokenized Stock)::ZMC",
+      "currencyId": "Zoom Communications, Inc. (Coinbase Tokenized Stock)::ZMC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ZM"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000000d46361d597f543d06": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "D-Wave Quantum Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000000d46361d597f543d06",
+      "symbol": "QBTSC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180125/thumb/QBTSc-icon-200.png?1793941312",
+      "assetGroup": "D-Wave Quantum Inc. (Coinbase Tokenized Stock)::QBTSC",
+      "currencyId": "D-Wave Quantum Inc. (Coinbase Tokenized Stock)::QBTSC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "QBTS"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000002451af655ae942308d": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Cognex Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002451af655ae942308d",
+      "symbol": "CGNXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180124/thumb/CGNXc-icon-200.png?1793941235",
+      "assetGroup": "Cognex Corporation (Coinbase Tokenized Stock)::CGNXC",
+      "currencyId": "Cognex Corporation (Coinbase Tokenized Stock)::CGNXC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "CGNX"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000001a114de6d32433f3c0": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Serve Robotics Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001a114de6d32433f3c0",
+      "symbol": "SERVC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180130/thumb/SERVc-icon-200.png?1793942093",
+      "assetGroup": "Serve Robotics Inc. (Coinbase Tokenized Stock)::SERVC",
+      "currencyId": "Serve Robotics Inc. (Coinbase Tokenized Stock)::SERVC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "SERV"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000002f7bd112b645574214": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Intuitive Surgical, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002f7bd112b645574214",
+      "symbol": "ISRGC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180128/thumb/ISRGc-icon-200.png?1793941713",
+      "assetGroup": "Intuitive Surgical, Inc. (Coinbase Tokenized Stock)::ISRGC",
+      "currencyId": "Intuitive Surgical, Inc. (Coinbase Tokenized Stock)::ISRGC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ISRG"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb200000000000000000000252c42b75f49dacf59": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Rockwell Automation, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000252c42b75f49dacf59",
+      "symbol": "ROKC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180129/thumb/ROKc-icon-200.png?1793941868",
+      "assetGroup": "Rockwell Automation, Inc. (Coinbase Tokenized Stock)::ROKC",
+      "currencyId": "Rockwell Automation, Inc. (Coinbase Tokenized Stock)::ROKC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ROK"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000049b9fc3b3c8c9402ff": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "The Timken Company (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000049b9fc3b3c8c9402ff",
+      "symbol": "TKRC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180133/thumb/TKRc-icon-200.png?1793942406",
+      "assetGroup": "The Timken Company (Coinbase Tokenized Stock)::TKRC",
+      "currencyId": "The Timken Company (Coinbase Tokenized Stock)::TKRC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "TKR"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000002cd78d7c981e97c330": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Strive, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002cd78d7c981e97c330",
+      "symbol": "ASSTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180131/thumb/ASSTc-icon-200.png?1793942224",
+      "assetGroup": "Strive, Inc. (Coinbase Tokenized Stock)::ASSTC",
+      "currencyId": "Strive, Inc. (Coinbase Tokenized Stock)::ASSTC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ASST"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000011eea811eaedb29156": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Allient Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000011eea811eaedb29156",
+      "symbol": "ALNTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180135/thumb/ALNTc-icon-200.png?1793942847",
+      "assetGroup": "Allient Inc. (Coinbase Tokenized Stock)::ALNTC",
+      "currencyId": "Allient Inc. (Coinbase Tokenized Stock)::ALNTC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ALNT"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000047984ecae84db5fcf9": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Symbotic Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000047984ecae84db5fcf9",
+      "symbol": "SYMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180132/thumb/SYMc-icon-200.png?1793942302",
+      "assetGroup": "Symbotic Inc. (Coinbase Tokenized Stock)::SYMC",
+      "currencyId": "Symbotic Inc. (Coinbase Tokenized Stock)::SYMC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "SYM"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003fa80315bfd87efed8": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Figma, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003fa80315bfd87efed8",
+      "symbol": "FIGC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180127/thumb/FIGc-icon-200.png?1793941440",
+      "assetGroup": "Figma, Inc. (Coinbase Tokenized Stock)::FIGC",
+      "currencyId": "Figma, Inc. (Coinbase Tokenized Stock)::FIGC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "FIG"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000051b531471096c5caf6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Vishay Precision Group, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000051b531471096c5caf6",
+      "symbol": "VPGC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180134/thumb/VPGc-icon-200.png?1793942508",
+      "assetGroup": "Vishay Precision Group, Inc. (Coinbase Tokenized Stock)::VPGC",
+      "currencyId": "Vishay Precision Group, Inc. (Coinbase Tokenized Stock)::VPGC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "VPG"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000020790305a981e88a67": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Richtech Robotics Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000020790305a981e88a67",
+      "symbol": "RRC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180136/thumb/RRc-icon-200.png?1793943151",
+      "assetGroup": "Richtech Robotics Inc. (Coinbase Tokenized Stock)::RRC",
+      "currencyId": "Richtech Robotics Inc. (Coinbase Tokenized Stock)::RRC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "RR"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000002c8b0e3d7ff26f81a0": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Amkor Technology, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002c8b0e3d7ff26f81a0",
+      "symbol": "AMKRC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180123/thumb/AMKRc-icon-200.png?1793941166",
+      "assetGroup": "Amkor Technology, Inc. (Coinbase Tokenized Stock)::AMKRC",
+      "currencyId": "Amkor Technology, Inc. (Coinbase Tokenized Stock)::AMKRC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "AMKR"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000050fe6d1ef35b02e8fd": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Dell Technologies Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000050fe6d1ef35b02e8fd",
+      "symbol": "DELLC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180126/thumb/DELLc-icon-200.png?1793941386",
+      "assetGroup": "Dell Technologies Inc. (Coinbase Tokenized Stock)::DELLC",
+      "currencyId": "Dell Technologies Inc. (Coinbase Tokenized Stock)::DELLC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "DELL"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
     "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
       "chainId": "8453",
       "decimals": 18,
@@ -12863,11 +13547,7 @@
       "assetGroup": "ZeUSD::ZEUSD",
       "currencyId": "ZeUSD::ZeUSD",
       "props": {
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0x04c4032cbcdfda3c676fa86b5f4b61ede6c8286b",
           "poolType": "burnMint",
@@ -18004,14 +18684,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/37835/thumb/zunETH_200x200.png?1715741123",
       "assetGroup": "Zunami ETH::ZUNETH",
       "currencyId": "Zunami ETH::ZUNETH",
-      "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": {}
-      }
+      "props": { "risk": { "score": 4, "source": "default" }, "stablecoin": {} }
     },
     "0x7d1b04f97dda1fddf0ad9ef5a606e4a956261ac8": {
       "chainId": "8453",
@@ -24064,11 +24737,7 @@
       "assetGroup": "Dackie USD::DCKUSD",
       "currencyId": "Dackie USD::DCKUSD",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "dackie", "name": "DackieSwap", "kind": "protocol" }
       }
@@ -25964,9 +26633,9 @@
       "currencyId": "XSwap::XSWAP",
       "props": {
         "ccip": {
-          "pool": "0x4d87cbff8187c4b3e00fdf534cb310724536ea4c",
+          "pool": "0x4b462a829f1de75c6376ab606b3bff1389d529a9",
           "poolType": "burnMint",
-          "poolVersion": "1.5.0",
+          "poolVersion": "2.0.0",
           "home": "1",
           "destinations": ["1"]
         }
@@ -26564,7 +27233,6 @@
                 "56": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "146": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "999": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
-                "1088": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "2222": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "4663": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
                 "5042": "0x79bbf4508b1391af3a0f4b30bb5fc4aa9ab0e07c",
@@ -30830,7 +31498,15 @@
       "symbol": "MXNE",
       "logoURI": "https://assets.coingecko.com/coins/images/54735/thumb/mxne-logo-200.png?1741253834",
       "assetGroup": "Real MXN::MXNE",
-      "currencyId": "Real MXN::MXNE"
+      "currencyId": "Real MXN::MXNE",
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "MXN" }
+      }
     },
     "0x31d664ebd97a50d5a2cd49b16f7714ab2516ed25": {
       "chainId": "8453",
@@ -35596,11 +36272,7 @@
       "assetGroup": "USC::USC",
       "currencyId": "USC::USC",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "chi", "name": "Chi Protocol", "kind": "protocol" }
       }
@@ -36030,6 +36702,7 @@
       "assetGroup": "PUFETH",
       "currencyId": "xPufETH::xPufETH",
       "props": {
+        "risk": { "score": 3, "category": "LRT", "source": "issuer_inherit" },
         "ccip": {
           "pool": "0xd1e158549d79c1768170bd694dcba9c9f60ee2b8",
           "poolType": "burnMint",
@@ -44747,7 +45420,7 @@
       "currencyId": "Australian Digital Dollar::AUDD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -48801,7 +49474,9 @@
                 "14": "0xe030a89fd2b7f858c8aa47725679ca25d467dfd1",
                 "56": "0x5b2193fdc451c1f847be09ca9d13a4bf60f8c86b",
                 "999": "0x642ffc3496aca19106bab7a42f1f221a329654fe",
-                "4663": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e"
+                "4663": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e",
+                "5042": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e",
+                "747474": "0xa85abef37c7e812aca761b2bec62fff7f3728f1e"
               }
             }
           ]
@@ -52933,7 +53608,11 @@
       "symbol": "USDSL",
       "logoURI": "https://assets.coingecko.com/coins/images/102172960/thumb/USDSL.png?1776845958",
       "assetGroup": "USD Slash::USDSL",
-      "currencyId": "USD Slash::USDSL"
+      "currencyId": "USD Slash::USDSL",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0x761d38e5ddf6ccf6cf7c55759d5210750b5d60f3": {
       "chainId": "8453",
@@ -54452,11 +55131,7 @@
       "assetGroup": "R Stablecoin::R",
       "currencyId": "R Stablecoin::R",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "raft", "name": "Raft", "kind": "protocol" }
       }
@@ -60277,16 +60952,6 @@
       "assetGroup": "zMAG7::ZMAG7",
       "currencyId": "zMAG7::ZMAG7"
     },
-    "0xb20000000000000000000034533ed3961f222cd4": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Adobe Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000034533ed3961f222cd4",
-      "symbol": "ADBEC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179987/thumb/ADBEc-icon-200.png?1793689762",
-      "assetGroup": "Adobe Inc. (Coinbase Tokenized Stock)::ADBEC",
-      "currencyId": "Adobe Inc. (Coinbase Tokenized Stock)::ADBEC"
-    },
     "0x2e39d91ebbf9d032fe119aef84be115f13db5b0c": {
       "chainId": "8453",
       "decimals": 18,
@@ -60296,186 +60961,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179898/thumb/GR3YvlhL_400x400_%281%29.jpg?1793335005",
       "assetGroup": "Cat wif Box::DCAT",
       "currencyId": "Cat wif Box::DCAT"
-    },
-    "0xb20000000000000000000049d38a179c97e33381": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Amgen Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000049d38a179c97e33381",
-      "symbol": "AMGNC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179988/thumb/AMGNc-icon-200_%281%29.png?1793689765",
-      "assetGroup": "Amgen Inc. (Coinbase Tokenized Stock)::AMGNC",
-      "currencyId": "Amgen Inc. (Coinbase Tokenized Stock)::AMGNC"
-    },
-    "0xb200000000000000000000476c5a355abe1a2794": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Astera Labs, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000476c5a355abe1a2794",
-      "symbol": "ALABC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179989/thumb/ALABc-icon-200.png?1793689769",
-      "assetGroup": "Astera Labs, Inc. (Coinbase Tokenized Stock)::ALABC",
-      "currencyId": "Astera Labs, Inc. (Coinbase Tokenized Stock)::ALABC"
-    },
-    "0xb2000000000000000000004217b9b4f6f6acb7b8": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Atlassian Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000004217b9b4f6f6acb7b8",
-      "symbol": "TEAMC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179990/thumb/TEAMc-icon-200.png?1793689771",
-      "assetGroup": "Atlassian Corporation (Coinbase Tokenized Stock)::TEAMC",
-      "currencyId": "Atlassian Corporation (Coinbase Tokenized Stock)::TEAMC"
-    },
-    "0xb2000000000000000000005de7f2e0aca219c070": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Caterpillar Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000005de7f2e0aca219c070",
-      "symbol": "CATC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179991/thumb/CATc-icon-200.png?1793689774",
-      "assetGroup": "Caterpillar Inc. (Coinbase Tokenized Stock)::CATC",
-      "currencyId": "Caterpillar Inc. (Coinbase Tokenized Stock)::CATC"
-    },
-    "0xb2000000000000000000003bf350e420c13e431a": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Chevron Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003bf350e420c13e431a",
-      "symbol": "CVXC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179992/thumb/CVXc-icon-200.png?1793689778",
-      "assetGroup": "Chevron Corporation (Coinbase Tokenized Stock)::CVXC",
-      "currencyId": "Chevron Corporation (Coinbase Tokenized Stock)::CVXC"
-    },
-    "0xb20000000000000000000015776ea82655c4f034": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Cisco Systems, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000015776ea82655c4f034",
-      "symbol": "CSCOC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179993/thumb/CSCOc-icon-200_%281%29.png?1793689783",
-      "assetGroup": "Cisco Systems, Inc. (Coinbase Tokenized Stock)::CSCOC",
-      "currencyId": "Cisco Systems, Inc. (Coinbase Tokenized Stock)::CSCOC"
-    },
-    "0xb2000000000000000000002c99976e240ed773e6": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Datadog, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002c99976e240ed773e6",
-      "symbol": "DDOGC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179994/thumb/DDOGc-icon-200.png?1793689787",
-      "assetGroup": "Datadog, Inc. (Coinbase Tokenized Stock)::DDOGC",
-      "currencyId": "Datadog, Inc. (Coinbase Tokenized Stock)::DDOGC"
-    },
-    "0xb20000000000000000000034975347ff1848aab9": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Lam Research Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000034975347ff1848aab9",
-      "symbol": "LRCXC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179995/thumb/LRCXc-icon-200.png?1793689790",
-      "assetGroup": "Lam Research Corporation (Coinbase Tokenized Stock)::LRCXC",
-      "currencyId": "Lam Research Corporation (Coinbase Tokenized Stock)::LRCXC"
-    },
-    "0xb200000000000000000000241fe94fe97fcbf034": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Merck & Co., Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000241fe94fe97fcbf034",
-      "symbol": "MRKC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179996/thumb/MRKc-icon-200_%281%29.png?1793689793",
-      "assetGroup": "Merck & Co., Inc. (Coinbase Tokenized Stock)::MRKC",
-      "currencyId": "Merck & Co., Inc. (Coinbase Tokenized Stock)::MRKC"
-    },
-    "0xb2000000000000000000002570652530a5e0f771": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Okta, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002570652530a5e0f771",
-      "symbol": "OKTAC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179998/thumb/OKTAc-icon-200.png?1793690329",
-      "assetGroup": "Okta, Inc. (Coinbase Tokenized Stock)::OKTAC",
-      "currencyId": "Okta, Inc. (Coinbase Tokenized Stock)::OKTAC"
-    },
-    "0xb2000000000000000000004ec7c19212979672f9": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Blink Charging Co. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000004ec7c19212979672f9",
-      "symbol": "BLNKC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180004/thumb/BLNKc-icon-200.png?1793690354",
-      "assetGroup": "Blink Charging Co. (Coinbase Tokenized Stock)::BLNKC",
-      "currencyId": "Blink Charging Co. (Coinbase Tokenized Stock)::BLNKC"
-    },
-    "0xb2000000000000000000003086b1355bd43e25da": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Offerpad Solutions Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003086b1355bd43e25da",
-      "symbol": "OPADC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180005/thumb/OPADc-icon-200.png?1793690356",
-      "assetGroup": "Offerpad Solutions Inc. (Coinbase Tokenized Stock)::OPADC",
-      "currencyId": "Offerpad Solutions Inc. (Coinbase Tokenized Stock)::OPADC"
-    },
-    "0xb2000000000000000000003958003d801724f9d3": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "MP Materials Corp. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003958003d801724f9d3",
-      "symbol": "MPC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179997/thumb/MPc-icon-200.png?1793690326",
-      "assetGroup": "MP Materials Corp. (Coinbase Tokenized Stock)::MPC",
-      "currencyId": "MP Materials Corp. (Coinbase Tokenized Stock)::MPC"
-    },
-    "0xb200000000000000000000314b9f5f580168766a": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Ouster, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000314b9f5f580168766a",
-      "symbol": "OUSTC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102179999/thumb/OUSTc-icon-200.png?1793690331",
-      "assetGroup": "Ouster, Inc. (Coinbase Tokenized Stock)::OUSTC",
-      "currencyId": "Ouster, Inc. (Coinbase Tokenized Stock)::OUSTC"
-    },
-    "0xb2000000000000000000005672d78eff30d24665": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Qualcomm Incorporated (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000005672d78eff30d24665",
-      "symbol": "QCOMC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180000/thumb/QCOMc-icon-200.png?1793690334",
-      "assetGroup": "Qualcomm Incorporated (Coinbase Tokenized Stock)::QCOMC",
-      "currencyId": "Qualcomm Incorporated (Coinbase Tokenized Stock)::QCOMC"
-    },
-    "0xb2000000000000000000003f265ab1f74dd89ac0": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Snap Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003f265ab1f74dd89ac0",
-      "symbol": "SNAPC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180001/thumb/SNAPc-icon-200.png?1793690336",
-      "assetGroup": "Snap Inc. (Coinbase Tokenized Stock)::SNAPC",
-      "currencyId": "Snap Inc. (Coinbase Tokenized Stock)::SNAPC"
-    },
-    "0xb20000000000000000000054b11fd279a4f7d4ef": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Visa Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000054b11fd279a4f7d4ef",
-      "symbol": "VC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180002/thumb/Vc-icon-200.png?1793690338",
-      "assetGroup": "Visa Inc. (Coinbase Tokenized Stock)::VC",
-      "currencyId": "Visa Inc. (Coinbase Tokenized Stock)::VC"
-    },
-    "0xb2000000000000000000000e63b7b0b6bc5b9213": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Zoom Communications, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000000e63b7b0b6bc5b9213",
-      "symbol": "ZMC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180003/thumb/ZMc-icon-200.png?1793690340",
-      "assetGroup": "Zoom Communications, Inc. (Coinbase Tokenized Stock)::ZMC",
-      "currencyId": "Zoom Communications, Inc. (Coinbase Tokenized Stock)::ZMC"
     },
     "0x44b63af715d5ef02cc3646a6ce96875e11d69e85": {
       "chainId": "8453",
@@ -60507,16 +60992,6 @@
       "assetGroup": "Bucket Shop::BUCKET::8453::0",
       "currencyId": "Bucket Shop::BUCKET"
     },
-    "0xb2000000000000000000000d46361d597f543d06": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "D-Wave Quantum Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000000d46361d597f543d06",
-      "symbol": "QBTSC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180125/thumb/QBTSc-icon-200.png?1793941312",
-      "assetGroup": "D-Wave Quantum Inc. (Coinbase Tokenized Stock)::QBTSC",
-      "currencyId": "D-Wave Quantum Inc. (Coinbase Tokenized Stock)::QBTSC"
-    },
     "0x4cfcdd76df7f00f7f7d911263947a9b5ed0b0fe5": {
       "chainId": "8453",
       "decimals": 18,
@@ -60536,56 +61011,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180094/thumb/np44swwf5ly7a2cacunkj41ipk2i.?1793854050",
       "assetGroup": "Reboot::REBOOT",
       "currencyId": "Reboot::REBOOT"
-    },
-    "0xb2000000000000000000002451af655ae942308d": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Cognex Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002451af655ae942308d",
-      "symbol": "CGNXC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180124/thumb/CGNXc-icon-200.png?1793941235",
-      "assetGroup": "Cognex Corporation (Coinbase Tokenized Stock)::CGNXC",
-      "currencyId": "Cognex Corporation (Coinbase Tokenized Stock)::CGNXC"
-    },
-    "0xb2000000000000000000001a114de6d32433f3c0": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Serve Robotics Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000001a114de6d32433f3c0",
-      "symbol": "SERVC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180130/thumb/SERVc-icon-200.png?1793942093",
-      "assetGroup": "Serve Robotics Inc. (Coinbase Tokenized Stock)::SERVC",
-      "currencyId": "Serve Robotics Inc. (Coinbase Tokenized Stock)::SERVC"
-    },
-    "0xb2000000000000000000002f7bd112b645574214": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Intuitive Surgical, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002f7bd112b645574214",
-      "symbol": "ISRGC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180128/thumb/ISRGc-icon-200.png?1793941713",
-      "assetGroup": "Intuitive Surgical, Inc. (Coinbase Tokenized Stock)::ISRGC",
-      "currencyId": "Intuitive Surgical, Inc. (Coinbase Tokenized Stock)::ISRGC"
-    },
-    "0xb200000000000000000000252c42b75f49dacf59": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Rockwell Automation, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000252c42b75f49dacf59",
-      "symbol": "ROKC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180129/thumb/ROKc-icon-200.png?1793941868",
-      "assetGroup": "Rockwell Automation, Inc. (Coinbase Tokenized Stock)::ROKC",
-      "currencyId": "Rockwell Automation, Inc. (Coinbase Tokenized Stock)::ROKC"
-    },
-    "0xb20000000000000000000049b9fc3b3c8c9402ff": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "The Timken Company (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000049b9fc3b3c8c9402ff",
-      "symbol": "TKRC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180133/thumb/TKRc-icon-200.png?1793942406",
-      "assetGroup": "The Timken Company (Coinbase Tokenized Stock)::TKRC",
-      "currencyId": "The Timken Company (Coinbase Tokenized Stock)::TKRC"
     },
     "0x1a85b97f8b0e1cee4d5500e093f5970a2aeb3fb8": {
       "chainId": "8453",
@@ -60607,76 +61032,6 @@
       "assetGroup": "Bootr::BOOTR",
       "currencyId": "Bootr::BOOTR"
     },
-    "0xb2000000000000000000002cd78d7c981e97c330": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Strive, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002cd78d7c981e97c330",
-      "symbol": "ASSTC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180131/thumb/ASSTc-icon-200.png?1793942224",
-      "assetGroup": "Strive, Inc. (Coinbase Tokenized Stock)::ASSTC",
-      "currencyId": "Strive, Inc. (Coinbase Tokenized Stock)::ASSTC"
-    },
-    "0xb20000000000000000000011eea811eaedb29156": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Allient Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000011eea811eaedb29156",
-      "symbol": "ALNTC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180135/thumb/ALNTc-icon-200.png?1793942847",
-      "assetGroup": "Allient Inc. (Coinbase Tokenized Stock)::ALNTC",
-      "currencyId": "Allient Inc. (Coinbase Tokenized Stock)::ALNTC"
-    },
-    "0xb20000000000000000000047984ecae84db5fcf9": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Symbotic Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000047984ecae84db5fcf9",
-      "symbol": "SYMC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180132/thumb/SYMc-icon-200.png?1793942302",
-      "assetGroup": "Symbotic Inc. (Coinbase Tokenized Stock)::SYMC",
-      "currencyId": "Symbotic Inc. (Coinbase Tokenized Stock)::SYMC"
-    },
-    "0xb2000000000000000000003fa80315bfd87efed8": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Figma, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003fa80315bfd87efed8",
-      "symbol": "FIGC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180127/thumb/FIGc-icon-200.png?1793941440",
-      "assetGroup": "Figma, Inc. (Coinbase Tokenized Stock)::FIGC",
-      "currencyId": "Figma, Inc. (Coinbase Tokenized Stock)::FIGC"
-    },
-    "0xb20000000000000000000051b531471096c5caf6": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Vishay Precision Group, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000051b531471096c5caf6",
-      "symbol": "VPGC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180134/thumb/VPGc-icon-200.png?1793942508",
-      "assetGroup": "Vishay Precision Group, Inc. (Coinbase Tokenized Stock)::VPGC",
-      "currencyId": "Vishay Precision Group, Inc. (Coinbase Tokenized Stock)::VPGC"
-    },
-    "0xb20000000000000000000020790305a981e88a67": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Richtech Robotics Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000020790305a981e88a67",
-      "symbol": "RRC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180136/thumb/RRc-icon-200.png?1793943151",
-      "assetGroup": "Richtech Robotics Inc. (Coinbase Tokenized Stock)::RRC",
-      "currencyId": "Richtech Robotics Inc. (Coinbase Tokenized Stock)::RRC"
-    },
-    "0xb2000000000000000000002c8b0e3d7ff26f81a0": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Amkor Technology, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000002c8b0e3d7ff26f81a0",
-      "symbol": "AMKRC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180123/thumb/AMKRc-icon-200.png?1793941166",
-      "assetGroup": "Amkor Technology, Inc. (Coinbase Tokenized Stock)::AMKRC",
-      "currencyId": "Amkor Technology, Inc. (Coinbase Tokenized Stock)::AMKRC"
-    },
     "0x1b23704e3f4bc7081fb00cec582183e3fe43cef7": {
       "chainId": "8453",
       "decimals": 18,
@@ -60686,16 +61041,6 @@
       "logoURI": "https://assets.coingecko.com/coins/images/31301/thumb/ALB.png?1720133373",
       "assetGroup": "Alien Base::ALB",
       "currencyId": "Alien Base::ALB"
-    },
-    "0xb20000000000000000000050fe6d1ef35b02e8fd": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Dell Technologies Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000050fe6d1ef35b02e8fd",
-      "symbol": "DELLC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180126/thumb/DELLc-icon-200.png?1793941386",
-      "assetGroup": "Dell Technologies Inc. (Coinbase Tokenized Stock)::DELLC",
-      "currencyId": "Dell Technologies Inc. (Coinbase Tokenized Stock)::DELLC"
     },
     "0xd86800d5b021f5d79350c2f742bbb1ecc010bf82": {
       "chainId": "8453",
@@ -60726,6 +61071,160 @@
       "logoURI": "https://tokens.debridge.finance/Logo/8453/0xe125872d91a5a67704fa782aa74014adff7cae7e/small/token-logo.png",
       "assetGroup": "Reboot::Reboot",
       "currencyId": "Reboot::Reboot"
+    },
+    "0xb20000000000000000000005befa57b9b871e737": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000005befa57b9b871e737",
+      "symbol": "DOCNC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180251/thumb/DOCNc-icon-200.png?1794537575",
+      "assetGroup": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)::DOCNC",
+      "currencyId": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)::DOCNC"
+    },
+    "0xb2000000000000000000001dfd8c413ecd6ec630": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Pinterest, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001dfd8c413ecd6ec630",
+      "symbol": "PINSC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180255/thumb/PINSc-icon-200.png?1794538155",
+      "assetGroup": "Pinterest, Inc. (Coinbase Tokenized Stock)::PINSC",
+      "currencyId": "Pinterest, Inc. (Coinbase Tokenized Stock)::PINSC"
+    },
+    "0xb2000000000000000000003a67b9f116f25513d6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003a67b9f116f25513d6",
+      "symbol": "TGTXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180259/thumb/TGTXc-icon-200_%281%29.png?1794538799",
+      "assetGroup": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)::TGTXC",
+      "currencyId": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)::TGTXC"
+    },
+    "0xb2000000000000000000000cd31253817b36f88a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "QXO, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000000cd31253817b36f88a",
+      "symbol": "QXOC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180256/thumb/QXOc-icon-200.png?1794538215",
+      "assetGroup": "QXO, Inc. (Coinbase Tokenized Stock)::QXOC",
+      "currencyId": "QXO, Inc. (Coinbase Tokenized Stock)::QXOC"
+    },
+    "0xb2000000000000000000000c431e2a7c0ce7ea31": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000000c431e2a7c0ce7ea31",
+      "symbol": "SLSC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180257/thumb/SLSc-icon-200_%281%29.png?1794538279",
+      "assetGroup": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)::SLSC",
+      "currencyId": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)::SLSC"
+    },
+    "0xb200000000000000000000178d4c37485ea47ef6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Omeros Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000178d4c37485ea47ef6",
+      "symbol": "OMERC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180258/thumb/OMERc-icon-200.png?1794538668",
+      "assetGroup": "Omeros Corporation (Coinbase Tokenized Stock)::OMERC",
+      "currencyId": "Omeros Corporation (Coinbase Tokenized Stock)::OMERC"
+    },
+    "0xb20000000000000000000010718397aca876a20a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Absci Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000010718397aca876a20a",
+      "symbol": "ABSIC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180249/thumb/ABSIc-official.png?1794537365",
+      "assetGroup": "Absci Corporation (Coinbase Tokenized Stock)::ABSIC",
+      "currencyId": "Absci Corporation (Coinbase Tokenized Stock)::ABSIC"
+    },
+    "0xb2000000000000000000001bcf0441201d513fa5": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Danaher Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001bcf0441201d513fa5",
+      "symbol": "DHRC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180250/thumb/DHRc-icon-200.png?1794537430",
+      "assetGroup": "Danaher Corporation (Coinbase Tokenized Stock)::DHRC",
+      "currencyId": "Danaher Corporation (Coinbase Tokenized Stock)::DHRC"
+    },
+    "0xb20000000000000000000042cbbae483635c3774": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Gartner, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000042cbbae483635c3774",
+      "symbol": "ITC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180252/thumb/ITc-icon-200.png?1794537657",
+      "assetGroup": "Gartner, Inc. (Coinbase Tokenized Stock)::ITC",
+      "currencyId": "Gartner, Inc. (Coinbase Tokenized Stock)::ITC"
+    },
+    "0xb20000000000000000000005717baa337022c782": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Lyft, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000005717baa337022c782",
+      "symbol": "LYFTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180253/thumb/LYFTc-icon-200.png?1794537713",
+      "assetGroup": "Lyft, Inc. (Coinbase Tokenized Stock)::LYFTC",
+      "currencyId": "Lyft, Inc. (Coinbase Tokenized Stock)::LYFTC"
+    },
+    "0xb2000000000000000000001bcf8e5022d7f61919": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "MicroVision, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001bcf8e5022d7f61919",
+      "symbol": "MVISC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180198/thumb/MVISc-icon-200.png?1794315131",
+      "assetGroup": "MicroVision, Inc. (Coinbase Tokenized Stock)::MVISC",
+      "currencyId": "MicroVision, Inc. (Coinbase Tokenized Stock)::MVISC"
+    },
+    "0xb2000000000000000000003aa0410688baf4da88": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Newmont Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003aa0410688baf4da88",
+      "symbol": "NEMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180254/thumb/NEMc-icon-200.png?1794538049",
+      "assetGroup": "Newmont Corporation (Coinbase Tokenized Stock)::NEMC",
+      "currencyId": "Newmont Corporation (Coinbase Tokenized Stock)::NEMC"
+    },
+    "0xe904aea5e1b110c9174728fa2effc8aed19e98ef": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "PAX Gold",
+      "address": "0xe904aea5e1b110c9174728fa2effc8aed19e98ef",
+      "symbol": "PAXG",
+      "logoURI": "https://assets.coingecko.com/coins/images/9519/thumb/asset-paxg.png?1785284785",
+      "assetGroup": "PAXG",
+      "currencyId": "PAX Gold::PAXG",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
+      }
+    },
+    "0x9f4c76f421f47b3c234f841f477897f1d895177d": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "InfiniFi Token",
+      "address": "0x9f4c76f421f47b3c234f841f477897f1d895177d",
+      "symbol": "INFI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180232/thumb/photo_2026-11-09_14-06-39.jpg?1794424791",
+      "assetGroup": "InfiniFi Token::INFI",
+      "currencyId": "InfiniFi Token::INFI"
+    },
+    "0x15d0e0c55a3e7ee67152ad7e89acf164253ff68d": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Wormhole Bridged HYPE",
+      "address": "0x15d0e0c55a3e7ee67152ad7e89acf164253ff68d",
+      "symbol": "HYPE",
+      "logoURI": "https://assets.coingecko.com/coins/images/68481/thumb/hype.png?1755878697",
+      "assetGroup": "Wormhole Bridged HYPE::HYPE",
+      "currencyId": "Wormhole Bridged HYPE::HYPE"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",
