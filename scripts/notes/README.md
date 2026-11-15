@@ -11,6 +11,7 @@ The other overlays in this repo answer narrow questions in fields: `props.issuer
   "body": "…",                                     // 2–4 sentences
   "backing": "…",
   "yieldSource": "…",                              // null: the token earns nothing itself
+  "mechanism": "private-credit",                   // how it earns, as an id (see below); optional
   "redemption": "…",
   "issuer": "Apyx",
   "links": ["https://…"],
@@ -29,6 +30,15 @@ The other overlays in this repo answer narrow questions in fields: `props.issuer
 | `derived` | `notes.ts`                 | A `what` line read off props the pipeline already curated (pendle, spectra, savings, lst, rwa, stablecoin), e.g. "Pendle principal token on sUSDe · redeems for USDe on 22 Oct 2026 · fixed rate". |
 
 A curated note always wins. A group with neither gets no entry, because "no description" is an answer too.
+
+## `mechanism`
+
+How the token earns, as one id from a closed list (`MECHANISMS` in `notes.ts`): `lending`, `staking`, `restaking`, `basis-trade`, `treasuries`, `private-credit`, `reinsurance`, `dividends`, `hedged-trading`, `mixed`. Consumers turn the id into their own words (yieldcircle's Lite names a row "Basis trade via Ethena").
+
+- Set it per token, never per issuer: sUSDS and stUSDS are both Sky's and earn differently.
+- Leave it out for a token that earns nothing itself (USDC, USDe), and when the issuer's docs do not say. `mixed` is for a product that is honestly several of these, not for a guess.
+- A derived note gets one from props: `lst.type`, and `rwa.subType` for treasuries, private credit, reinsurance and basis-trade funds. A live Pendle PT takes its underlying's. A curated note without the field keeps the derived one.
+- `notes:check` fails on an id outside the list.
 
 ## Adding a note
 

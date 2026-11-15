@@ -105,6 +105,7 @@
     "confidence": "medium"
   },
   "PayFi Strategy Token::PST": {
+    "mechanism": "private-credit",
     "what": "Huma Finance PayFi LP token · USDC lent to payment financing",
     "body": "PST is Huma Finance's yield-bearing LP token, minted when USDC is supplied to Huma's Classic mode; it originated on Solana and is also issued on Ethereum. Deposited USDC funds short-term real-world payment financing (PayFi), such as pre-funding of cross-border payments, and yield accrues to the token in USDC terms.",
     "backing": "payment financing receivables (private credit)",
@@ -164,6 +165,7 @@
     "alsoGroups": ["ChainLink Token::LINK"]
   },
   "Re Protocol reUSD::REUSD": {
+    "mechanism": "reinsurance",
     "what": "Re senior reinsurance tranche · SOFR or sUSDe rate + 2.5%, price accrues",
     "body": "reUSD is the senior tranche of Re, an on-chain reinsurance marketplace. Capital that funds Re's partner reinsurers, held as admitted collateral in a Regulation 114 trust, earns SOFR + 250 bps; capital kept on-chain earns the 7-day trailing sUSDe rate + 250 bps. It does not rebase: the price is reset daily at 00:00 UTC, by at most 50 bps per update. Underwriting losses hit the reinsurer's own equity first, then reUSDe, and reUSD last.",
     "backing": "reinsurance collateral in a Regulation 114 trust (attested daily by The Network Firm via Chainlink) + on-chain stablecoins",
@@ -225,6 +227,7 @@
     "confidence": "medium"
   },
   "Wrapped Savings rUSD::WSRUSD": {
+    "mechanism": "mixed",
     "what": "Reservoir savings rUSD · yield from T-bills, lending, funding",
     "body": "wsrUSD is the ERC-4626 wrapped savings version of Reservoir's rUSD stablecoin. rUSD is a multi-collateral stablecoin backed by real-world assets and on-chain strategies, including T-bills, overcollateralized lending and funding-rate strategies; their yield accrues to wsrUSD's exchange rate. wsrUSD has no lock-up and no fees.",
     "backing": "T-bills, overcollateralized lending, funding-rate strategies",
@@ -389,6 +392,7 @@
     "confidence": "high"
   },
   "Ondo Short-Term US Government Treasuries::OUSG": {
+    "mechanism": "treasuries",
     "what": "Ondo tokenized short-term US Treasury fund",
     "body": "OUSG is a token from Ondo Finance representing shares in a fund that holds short-term US Treasuries, mostly through tokenized money-market and Treasury funds such as BlackRock's BUIDL. Treasury interest builds up in the token's price.",
     "backing": "Short-term US Treasuries (via funds such as BUIDL) and cash",
@@ -545,6 +549,7 @@
     "confidence": "medium"
   },
   "apyUSD::APYUSD": {
+    "mechanism": "dividends",
     "what": "Apyx savings token · wraps apxUSD, earns DAT preferred-share dividends",
     "body": "apyUSD is a non-rebasing ERC-4626 savings vault from Apyx that wraps apxUSD. apxUSD is a synthetic dollar backed by preferred shares issued by digital asset treasury companies (e.g. STRC, SATA) plus short-term Treasuries. Dividends from that basket are streamed to apyUSD through a rising exchange rate.",
     "backing": "apxUSD (DAT preferred shares + short-term Treasuries)",
@@ -629,6 +634,7 @@
     "confidence": "medium"
   },
   "Midas M1 USD Market Neutral::mM1-USD": {
+    "mechanism": "hedged-trading",
     "what": "Midas tokenized certificate · M1 Capital market-neutral USD strategy",
     "body": "mM1-USD is issued by Midas and tracks M1 Capital's market-neutral USD strategies, including price arbitrage, recursive lending and basis trading, with M1 Capital as risk manager. Returns accrue to the token NAV. Strata also offers senior and junior tranches built on mM1-USD.",
     "backing": "USDC deployed in market-neutral crypto strategies",
@@ -700,6 +706,7 @@
     "confidence": "medium"
   },
   "Tori Staked trUSD::STRUSD": {
+    "mechanism": "hedged-trading",
     "what": "Tori staked trUSD · ERC-4626 vault on delta-neutral synthetic dollar",
     "body": "strUSD is the staked form of trUSD, Tori Finance's synthetic dollar, issued as an ERC-4626 vault share whose trUSD exchange rate rises as strategies earn. trUSD is backed by delta-neutral trading positions rather than bank deposits, including cash-and-carry futures arbitrage and short-duration instruments with non-USD exposure hedged. Tori takes a performance fee inside the exchange rate.",
     "backing": "delta-neutral trading positions (futures basis, short-duration instruments)",
@@ -726,6 +733,7 @@
     "verify": "Fell to ~$0.92 in Jun 2026; the peg follows preferred-share prices, not cash reserves."
   },
   "Saturn sUSDat::SUSDAT": {
+    "mechanism": "dividends",
     "what": "Saturn staked USDat · yield from Strategy STRC preferred dividends",
     "body": "sUSDat is the staked, yield-bearing version of USDat, Saturn's dollar token whose reserves target M0's M (tokenized US Treasuries). When USDat is staked, Saturn moves the backing into STRC (Strategy's preferred stock) exposure, so sUSDat earns STRC dividends and also carries STRC price risk. Yield accrues through a rising sUSDat/USDat exchange rate.",
     "backing": "STRC preferred stock exposure (USDat itself: tokenized T-bills via M0)",
@@ -767,6 +775,7 @@
     "confidence": "high"
   },
   "Spark Savings USDG::spUSDG": {
+    "mechanism": "lending",
     "what": "Spark Savings vault on USDG (Robinhood Chain) · Spark Liquidity Layer yield",
     "body": "spUSDG is a Spark Savings V2 vault (ERC-4626) on Robinhood Chain (chain 4663) that takes deposits of USDG, the Paxos-issued Global Dollar stablecoin. Spark deploys deposits through the Spark Liquidity Layer, and yield accrues to the share price. It launched as a Robinhood Chain day-one product.",
     "backing": "USDG deployed by the Spark Liquidity Layer",
@@ -809,6 +818,7 @@
     "verify": "Junior tranche reportedly unfunded: the senior AA tranche has no first-loss buffer."
   },
   "Superstate Short Duration US Government Securities Fund::USTB": {
+    "mechanism": "treasuries",
     "what": "Tokenized short-term US Treasury fund · now managed by Invesco",
     "body": "USTB is the share token of a short-duration US government securities fund launched by Superstate. Since mid-2026 Invesco Advisers manages the portfolio and the fund was renamed the Invesco Short-Duration U.S. Government Securities Fund; Superstate still runs the token, transfer agency and contracts at the same address. The fund holds short-dated Treasuries and agency securities, and interest accrues to NAV. Only allowlisted investors can hold it.",
     "backing": "short-term US Treasuries and agency securities",
@@ -824,6 +834,7 @@
     "confidence": "high"
   },
   "Staked USDS::stUSDS": {
+    "mechanism": "lending",
     "what": "Sky stUSDS · USDS lent to SKY stakers who borrow against SKY",
     "body": "stUSDS is issued by Sky Protocol when USDS is supplied to the stUSDS module, which funds loans to SKY stakers borrowing against their staked SKY. Borrowed USDS earns the SKY borrow rate, and unused USDS earns the Sky Savings Rate. The module is isolated from sUSDS, so stUSDS holders bear losses if liquidations of SKY collateral do not cover the loans.",
     "backing": "USDS loans secured by staked SKY",
@@ -874,6 +885,7 @@
     "confidence": "medium"
   },
   "Nest BlackOpal LiquidStone II Vault::nOPAL": {
+    "mechanism": "private-credit",
     "what": "Nest vault share · BlackOpal LiquidStone II, Brazilian card receivables",
     "body": "nOPAL is a Nest (Plume Vaults) share token. The vault takes USDC and holds BlackOpal's LiquidStone II fund, which buys short-dated Brazilian credit-card receivables and hedges the currency back to the dollar; about 96 % sits in LiquidStone, the rest in a Nest treasury vault and cash. Interest builds up in the token's price; nothing is paid out. It moves between EVM chains as one LayerZero token and is also issued on Solana.",
     "backing": "BlackOpal LiquidStone II (FX-hedged Brazilian credit-card receivables), a Nest treasury vault, cash",
@@ -890,6 +902,7 @@
     "confidence": "medium"
   },
   "Hastra AUTO::AUTO": {
+    "mechanism": "private-credit",
     "what": "Hastra staked wYLDS · funds near-prime US auto loans (Agora Data / Figure)",
     "body": "AUTO is a share token you get by staking wYLDS with Hastra. The staked capital funds a Democratized Prime pool of near-prime US consumer auto loans, originated by Agora Data and structured by Figure on Provenance. It does not rebase: its value in wYLDS rises, read from Chainlink Data Streams. It carries more credit risk than PRIME.",
     "backing": "near-prime US consumer auto loans (Agora Data originates, Figure structures), secured by the vehicles",
@@ -974,6 +987,7 @@
     "verify": "Not a yield token: 100 % epoch fee, so holders earn 0 % staking yield (points only)."
   },
   "sUSDS::SUSDS": {
+    "mechanism": "lending",
     "what": "Sky savings rate on USDS · RWA T-bills + crypto-collateral loan fees",
     "body": "sUSDS is Sky's (ex-MakerDAO) non-rebasing ERC-4626 vault for USDS; its exchange rate rises every block at the Sky Savings Rate (SSR) set by Sky governance. The rate is paid out of Sky's protocol revenue: stability fees on USDS borrowed against ETH, wstETH and other crypto collateral, tokenized T-bill and other RWA allocations, and capital deployed by Sky's allocators such as the Spark Liquidity Layer. Deposited USDS itself is not lent out; it sits in the savings contract.",
     "backing": "USDS held in the Sky Savings Rate contract",
@@ -986,6 +1000,7 @@
     "alsoGroups": ["Savings USDS::sUSDS", "Savings USDS from Ethereum::sUSDS"]
   },
   "SDAI": {
+    "mechanism": "lending",
     "what": "Sky savings DAI (legacy DSR) · RWA T-bills + crypto-collateral loan fees",
     "body": "sDAI is an ERC-4626 wrapper of DAI deposited in Sky's Dai Savings Rate (DSR) Pot contract; its exchange rate rises as the DSR accrues. The DSR is funded from the same Sky revenue as the Sky Savings Rate (stability fees on crypto-collateral loans plus RWA/T-bill allocations), but governance sets it separately and it has generally been kept below the SSR since the DAI-to-USDS migration. DAI in the Pot is not lent out.",
     "backing": "DAI held in Sky's DSR (Pot) contract",
@@ -1009,6 +1024,7 @@
     "confidence": "high"
   },
   "Spark Savings USDT::SPUSDT": {
+    "mechanism": "lending",
     "what": "Spark savings vault on USDT · SparkLend/Morpho lending, syrupUSDT, DEX LP",
     "body": "spUSDT is a Spark Savings V2 ERC-4626 vault on Ethereum; deposited USDT earns a governance-set vault rate through a rising exchange rate. The Spark Liquidity Layer lends the USDT primarily on SparkLend, sends overflow to Morpho blue-chip vaults, makes a capped allocation to Maple's syrupUSDT, and places USDT in Curve/Uniswap pools; idle buffers earn the Sky Savings Rate via sUSDS. Spark describes the vault as backed by USDS.",
     "backing": "USDT deployed via the Spark Liquidity Layer (backstopped by USDS)",
@@ -1037,6 +1053,7 @@
     "confidence": "high"
   },
   "SYRUPUSDC": {
+    "mechanism": "private-credit",
     "what": "Maple lending pool of USDC · overcollateralized loans to crypto institutions",
     "body": "syrupUSDC is the ERC-4626 LP token of Maple's Syrup USDC pool; interest accrues to the share price. Maple Direct lends the pool's USDC to crypto-native institutions that post liquid digital assets as collateral, monitored for collateralization, and also deploys capital into futures basis (cash-and-carry) trades and DeFi liquidity provision. Losses from borrower defaults would be borne by the pool.",
     "backing": "USDC loans to institutions, collateralized by liquid crypto",
@@ -1065,6 +1082,7 @@
     "confidence": "high"
   },
   "SUSDE": {
+    "mechanism": "basis-trade",
     "what": "Ethena staked USDe · earns perp funding/basis + staked-ETH and reserve yield",
     "body": "sUSDe is Ethena's non-rebasing ERC-4626 vault for USDe; protocol revenue is periodically added to the vault, raising the exchange rate. USDe is backed by crypto assets (BTC, ETH, staked ETH) hedged with short perpetual/futures positions, plus stablecoins and short-duration RWAs. Yield comes from funding and basis spreads on the hedges, staked-ETH rewards and income on the stable reserves; when funding is negative stakers may receive nothing and the reserve fund absorbs losses.",
     "backing": "USDe (delta-hedged BTC/ETH/staked ETH + stablecoins and short-duration RWAs)",
@@ -1079,6 +1097,7 @@
     "confidence": "high"
   },
   "Savings crvUSD::scrvUSD": {
+    "mechanism": "lending",
     "what": "Curve savings crvUSD · DAO-set share of crvUSD mint-market borrow fees",
     "body": "scrvUSD is an ERC-4626 vault (based on Yearn V3) that holds crvUSD and rises in value against it. Interest paid by crvUSD borrowers in Curve's mint markets flows through a fee splitter and rewards handler, which sends a DAO-set share to the vault. Deposited crvUSD stays idle in the vault and is not lent out.",
     "backing": "crvUSD held idle in the vault",
@@ -1090,6 +1109,7 @@
     "confidence": "high"
   },
   "Staked Frax USD::sfrxUSD": {
+    "mechanism": "mixed",
     "what": "Frax staked frxUSD · rotates between carry trade, DeFi AMOs and T-bills",
     "body": "sfrxUSD is a non-rebasing ERC-4626 vault for frxUSD whose redemption rate rises as yield is added. Frax's Benchmark Yield Strategy, governed by the Frax DAO, moves capital to the best of three sources: carry trades (e.g. Ethena, Superstate), DeFi yield via AMOs (Aave, Curve, Convex) and T-bill/RWA funds (e.g. BlackRock, FinresPBC).",
     "backing": "frxUSD",
@@ -1101,6 +1121,7 @@
     "confidence": "high"
   },
   "sDOLA::SDOLA": {
+    "mechanism": "lending",
     "what": "Inverse Finance staked DOLA · FiRM fixed-rate borrower DBR revenue",
     "body": "sDOLA is an ERC-4626 wrapper around Inverse Finance's DOLA Savings Account; its exchange rate rises as revenue accrues. FiRM borrowers pay for fixed-rate loans by spending DBR (DOLA Borrowing Rights); part of that revenue goes to the savings account as DBR, which is converted to DOLA through the DAO's XY=K auction and compounded weekly, with no set minimum or maximum rate. Deposited DOLA is not rehypothecated. It is the senior layer under jrDOLA, which holds its deposits as sDOLA and takes FiRM bad debt first; sDOLA lives on Ethereum only, its CCIP bridge lanes having been shut down.",
     "backing": "DOLA held in the DOLA Savings Account",
@@ -1116,6 +1137,7 @@
     "confidence": "high"
   },
   "f(x) USD Saving::fxSAVE": {
+    "mechanism": "mixed",
     "what": "f(x) Protocol stability-pool vault of fxUSD/USDC · leverage fees + wstETH yield",
     "body": "fxSAVE is an ERC-4626 vault that tokenizes f(x) Protocol's Stability Pool; it accepts fxUSD or USDC and auto-compounds rewards into more fxUSD/USDC. The Stability Pool backstops f(x)'s leveraged xPOSITIONs and earns their trading/open-close fees, wstETH staking and reserve yield from collateral, and Aave lending yield on idle USDC.",
     "backing": "fxUSD and USDC in the f(x) Stability Pool",
@@ -1174,6 +1196,7 @@
     "alsoGroups": ["Staked USDz::sUSDz"]
   },
   "Astherus Staked USDF::asUSDF": {
+    "mechanism": "basis-trade",
     "what": "Aster staked USDF · delta-neutral spot-long/perp-short funding on Binance",
     "body": "asUSDF is the yield-bearing staked form of Aster's (formerly Astherus) USDF, which is minted 1:1 against USDT. The USDT sits with custodian Ceffu and is used to buy a basket of spot tokens while matching perp shorts are opened on Binance, so the position earns funding fees with little price exposure. Profits are booked weekly into the asUSDF contract and show up as a rising asUSDF/USDF exchange rate.",
     "backing": "USDF (USDT held at Ceffu in delta-neutral basis positions)",
@@ -1188,6 +1211,7 @@
     "confidence": "high"
   },
   "Compounding Open Dollar::CUSDO": {
+    "mechanism": "treasuries",
     "what": "OpenEden wrapped USDO · tokenized T-bill funds (TBILL, BUIDL, USYC, VBILL)",
     "body": "cUSDO is the non-rebasing ERC-4626 wrapper of OpenEden's rebasing USDO stablecoin; yield shows up as a rising cUSDO price rather than daily rebases, and it earns the same as USDO. USDO reserves are tokenized short-term US Treasury and repo funds: OpenEden TBILL, BlackRock BUIDL (Securitize), VanEck VBILL and Circle/Hashnote USYC. Treasury interest is passed through to holders.",
     "backing": "USDO (tokenized T-bill and reverse-repo funds)",
@@ -1246,6 +1270,7 @@
     "confidence": "high"
   },
   "Savings Usdd::sUSDD": {
+    "mechanism": "lending",
     "what": "USDD savings vault · Smart Allocator lends reserves on Aave, Spark, Morpho",
     "body": "sUSDD is the ERC-4626 savings vault for USDD, the TRON-ecosystem overcollateralized stablecoin; its exchange rate against USDD rises as yield accrues. Yield comes from the Smart Allocator, which deploys USDD's cash reserves (stablecoins) into lending markets such as Aave, Spark, Morpho and JustLend, keeps part as a risk reserve and passes the rest to stakers. The rate has been managed by the USDD/JUST DAO teams, e.g. reset to a 5% base APY in 2026.",
     "backing": "USDD (overcollateralized crypto and stablecoin reserves)",
@@ -1260,6 +1285,7 @@
     "confidence": "medium"
   },
   "Staked Falcon USD::sUSDf": {
+    "mechanism": "hedged-trading",
     "what": "Falcon staked USDf · funding/basis arb, cross-venue arb + altcoin staking",
     "body": "sUSDf is Falcon Finance's ERC-4626 vault on USDf, a synthetic dollar minted against stablecoins, BTC, ETH, altcoins and tokenized RWAs (gold, T-bills, equities). Yield shows up as a rising sUSDf/USDf exchange rate. It comes from mostly market-neutral trading of the collateral: positive and negative funding-rate arbitrage, spot/perp basis, cross-exchange arbitrage, native altcoin staking, DEX liquidity provision, options and statistical arbitrage.",
     "backing": "USDf (overcollateralized stablecoins, crypto and tokenized RWAs)",
@@ -1275,6 +1301,7 @@
     "confidence": "high"
   },
   "Staked InfiniFi USD::siUSD": {
+    "mechanism": "mixed",
     "what": "infiniFi staked iUSD · fractional-reserve mix of Aave/Spark lending and Pendle PTs",
     "body": "siUSD is the liquid staked form of iUSD, infiniFi's USDC-backed receipt dollar; yield is streamed in over 8-hour epochs and accrues in the siUSD price. infiniFi runs an on-chain fractional reserve: liquid deposits sit in liquid farms (Aave, Spark sUSDC) while capital locked as liUSD lets the protocol also allocate into longer-duration farms such as Pendle principal tokens. Protocol yield is shared between siUSD and liUSD holders, so siUSD earns more than the raw liquid lending rate; plain iUSD earns nothing. Since the June 2025 upgrade siUSD is no longer ERC-4626 and staking/unstaking go through infiniFi's Gateway.",
     "backing": "iUSD (USDC deployed across infiniFi farms)",
@@ -1335,6 +1362,7 @@
     "alsoGroups": ["Staked UTY::yUTY"]
   },
   "Staked YUSD::sYUSD": {
+    "mechanism": "basis-trade",
     "what": "Aegis staked YUSD · BTC collateral hedged with short perps, earns funding",
     "body": "sYUSD is the ERC-4626 staking vault for YUSD, Aegis's synthetic dollar backed by bitcoin held with institutional custodians (Fireblocks, Copper, Ceffu). The BTC is hedged with short BTC perpetuals on major exchanges, so the position is delta-neutral, and the funding paid by longs is the yield, compounded into a rising sYUSD/YUSD rate (about 4.3 % APR in October 2026). Fee and cooldown are admin dials on an upgradeable contract with no timelock observed.",
     "backing": "YUSD (custodied BTC hedged with short BTC perps)",
@@ -1350,6 +1378,7 @@
     "confidence": "high"
   },
   "Staked avUSD::savUSD": {
+    "mechanism": "hedged-trading",
     "what": "Avant staked avUSD · senior tranche of delta-neutral basis, lending and LP strategies",
     "body": "savUSD is the ERC-4626 staking token on avUSD, Avant's dollar backed 1:1 by USDC on Avalanche, and is the senior tranche of Avant's yield. Deposits go to market-neutral strategies run with trading partners: spot/short-futures basis trades, lending-rate arbitrage, Pendle yield trading, Aave supply and Curve/Uniswap liquidity. Profits raise the savUSD/avUSD rate, and the junior avUSDx tranche takes strategy losses first.",
     "backing": "avUSD (USDC), protected by the avUSDx junior tranche",
@@ -1361,6 +1390,7 @@
     "confidence": "high"
   },
   "Staked cap USD::stcUSD": {
+    "mechanism": "lending",
     "what": "Cap staked cUSD · loans to restaker-covered market makers + Aave on idle USDC",
     "body": "stcUSD is the ERC-4626 staking vault for cUSD, Cap's dollar backed 1:1 by stablecoin reserves (USDC). Institutional operators such as market makers and trading firms borrow from the reserve, and their credit is covered by restaked collateral delegated via Symbiotic/EigenLayer that is slashed on default. stcUSD earns the borrow interest above the hurdle rate plus underwriting premiums, and idle reserves are swept into Aave V3.",
     "backing": "cUSD (USDC reserve, lent to operators covered by restakers)",
@@ -1375,6 +1405,7 @@
     "confidence": "high"
   },
   "3Jane USD3::USD3": {
+    "mechanism": "private-credit",
     "what": "3Jane senior credit tranche on USDC · fintech receivables + crypto credit lines",
     "body": "USD3 is the senior ERC-4626 token minted when USDC is supplied to 3Jane. The USDC funds Fintech Credit Conduits (short-duration SMB and consumer receivables financed through SPVs) and unsecured crypto credit lines, with idle cash in Aave. USD3 earns a fixed share of whatever the pool earns, and losses hit originator equity, overcollateralization, reserves and the sUSD3 junior tranche before USD3.",
     "backing": "USDC lent to fintech originators and crypto borrowers; idle USDC in Aave",
@@ -1390,6 +1421,7 @@
     "confidence": "high"
   },
   "3Jane Staked USD3::sUSD3": {
+    "mechanism": "private-credit",
     "what": "3Jane junior first-loss tranche on USD3 · levered fintech and crypto credit yield",
     "body": "sUSD3 is the junior tranche minted by staking USD3, and its supply is capped by a tranche ratio (e.g. ~15% of debt). It earns a larger, levered share of the same pool income from fintech receivables and crypto credit lines. It absorbs credit losses after originator equity, overcollateralization and reserves but before senior USD3; low yields alone do not cut its principal.",
     "backing": "USD3 (subordinated claim on 3Jane's credit pool)",
@@ -1497,6 +1529,7 @@
     "verify": "Wiped out by the Neutrl NUSD impairment (Aug-Sep 2026)."
   },
   "Strata Senior USDat::SRUSDAT": {
+    "mechanism": "dividends",
     "what": "Strata senior tranche of Saturn sUSDat · fixed 65% of STRC dividend, junior covers NAV",
     "body": "srUSDat is the senior (protected) tranche of Strata's Saturn market, an ERC-4626 token over pooled sUSDat. sUSDat earns T-bill interest and dividends on Strategy's STRC preferred stock, and its NAV moves with STRC's price. srUSDat targets a fixed yield of 65% of the STRC dividend rate; jrUSDat absorbs STRC price swings and losses first, but it was only ~16 % of the pool in October 2026 after the mid-2026 sUSDat drawdown halved it. On Monad, srUSDat is a LayerZero OFT copy of the Ethereum token (an adapter locks the Ethereum shares 1:1), not a separate Strata deployment.",
     "backing": "USDat staked as sUSDat (T-bills + Strategy STRC preferred), protected by jrUSDat",
@@ -1581,6 +1614,7 @@
     "confidence": "high"
   },
   "YieldFi yUSD::yUSD": {
+    "mechanism": "hedged-trading",
     "what": "YieldFi yUSD (V2) · ERC-4626 on USDC, delta-neutral DeFi: LP, basis, funding, loops",
     "body": "yUSD is YieldFi's V2 yield-bearing dollar: an ERC-4626 vault with USDC as the asset, yield streamed into the share price (NAV updated at least twice a week). Capital goes to market-neutral positions: private LP deals, hedged carry, basis and funding-rate spreads, leverage looping and lending on venues like Pendle, Morpho and Aave, targeting under 1% directional exposure. It is the same product on Ethereum (0x19eb...) and as a bridged copy on L2s (0x4772...).",
     "backing": "USDC deployed into delta-neutral DeFi and basis positions",
@@ -1684,6 +1718,7 @@
     "verify": "Bitway's docs do not say what makes Absolute Return different from Core Alpha. Yield is off-chain at CEX/custodians and paid into the vault at a fixed rate that Bitway sets (Bitway keeps any surplus), so this is custodial credit risk with no on-chain proof of the strategy."
   },
   "Bitway Core Alpha U::BTWU": {
+    "mechanism": "basis-trade",
     "what": "Bitway Core Alpha on U · off-chain CEX market-neutral basis trades, fixed payout rate",
     "body": "Bitway Core Alpha is a Bitway Earn staking vault on BNB Chain. BTWU is the vault token for deposits of U (United Stables' stablecoin). Most deposits go to custodial accounts (multisigs, regulated CEXs, third-party custodians) and are traded off-chain, mainly as market-neutral basis/funding trades. Yield is paid back into the vault at a fixed rate that raises the token's exchange rate, and Bitway keeps any surplus. Core Alpha has been marketed as a higher-rate tier, at times with zero-fee flash unstake.",
     "backing": "U stablecoin deposits held with custodians/CEXs",
@@ -1749,6 +1784,7 @@
     "confidence": "high"
   },
   "Staked Yuzu USD::syzUSD": {
+    "mechanism": "mixed",
     "what": "Staked yzUSD (ERC-4626) · weekly target yield from Yuzu's leveraged stablecoin book",
     "body": "syzUSD is the ERC-4626 staking wrapper of yzUSD, the senior tranche of Yuzu Alpha. Each Friday Yuzu announces a target yield for the week's epoch and pays it in yzUSD into the vault, so the share price rises; the money comes from the collateral pool's strategies (Ethena USDe loops, Aave, Pendle, Euler, Fluid, Morpho, Spark, Maple, tokenized T-bills and CLOs), and Yuzu keeps a spread between earned and posted yield instead of a performance fee. Posted about 8% in Oct 2026 (12.5% in early epochs). Unstaking back to yzUSD is instant and permissionless; turning yzUSD into USDT0 needs Eligible Investor status or a DEX. Home chain is Plasma (about $59m); the Monad copy (about $10m) is bridged by LayerZero OFT and sits mostly in Euler and the YZM vault. Yuzu is active: $81m TVL and growing in Oct 2026, five Pashov/Dedaub audits to Jul 2026, OpenCover cover since Oct 2026.",
     "backing": "yzUSD (senior claim on Yuzu Alpha's overcollateralized pool; yzPP absorbs first losses, then the Reserve Fund)",
@@ -1781,6 +1817,7 @@
     "confidence": "high"
   },
   "Yuzu Money Vault::YZM": {
+    "mechanism": "mixed",
     "what": "Accountable YieldApp vault on Monad · USDC in, holds syzUSD, 3% performance fee",
     "body": "YZM is the ERC-4626 share of the Yuzu Money Vault on Accountable's YieldApp on Monad, launched Dec 2025 with a $10m cap that filled in days plus MON incentives. Deposits are USDC and the vault's core position is syzUSD, so the share price follows syzUSD's weekly yield less a 3% performance fee (no management, deposit or withdrawal fee); Accountable's Proof of Solvency verifies the vault's assets. It peaked near $20m and held about $2.2m in Oct 2026 with the share at about 1.06 USDC. On Monad it is collateral on Morpho (YZM/AUSD, YZM/USDC) and Curvance (YZM/AUSD).",
     "backing": "syzUSD held by the vault, so Yuzu Alpha's collateral pool one layer down",
@@ -1797,6 +1834,7 @@
     "verify": "Yuzu's docs have no page for this vault; fees, cap and redemption terms come from Trading Strategy and rwa.xyz listings. Monad syzUSD liquidity is thin, so a large exit may have to route via Plasma."
   },
   "Yuzu Prime::YZPRIME": {
+    "mechanism": "mixed",
     "what": "Yuzu Prime · levered tokenized T-bills, AAA CLOs and Maple lending, aims above SOFR",
     "body": "yzPrime is Yuzu's lower-risk product: a leveraged basket of tokenized T-bills (BUIDL, VBILL, WTGXX, JTRSY), AAA CLO tokens (JAAA, STAC) and overcollateralized lending via Maple, targeting a return above SOFR and T-bills. Yield accrues continuously into NAV with no weekly epochs; Accountable attests the backing (100.25% on 2026-10-14, about $7.6m, posted about 6.8%). Minted and redeemed for USDC at NAV by KYC-checked Eligible Investors only; anyone can hold it via DEXs.",
     "backing": "tokenized T-bills, AAA CLO tokens and Maple loans, with leverage",
@@ -1827,6 +1865,7 @@
     "confidence": "high"
   },
   "sUSDai::SUSDAI": {
+    "mechanism": "private-credit",
     "what": "USD.AI staked USDai · GPU-backed loans to AI data centers + T-bills on idle cash",
     "body": "sUSDai is the staked form of USDai, USD.AI's dollar that its docs say is 100% backed by PYUSD. Staked capital funds non-recourse loans to AI infrastructure operators at 70-80% LTV, 3-year amortization and 7-15% APR, each held in a bankruptcy-remote Delaware SPV that owns the GPUs (NVIDIA B200, B300, H200) and their revenue contracts, with about three months of debt service in reserve and Wilmington Trust as escrow; capital not yet lent sits in short-term T-bills. Loan interest and T-bill yield raise the sUSDai/USDai rate (about 6.9% on about $548m in Oct 2026; the protocol's TVL swung from $690m in Dec 2025 to $170m in Aug 2026 and back to $350m). sUSDai is not a stablecoin and is not redeemable at par on demand.",
     "backing": "USDai (PYUSD) lent against GPU hardware in Delaware SPVs; idle capital in T-bills",
@@ -1877,6 +1916,7 @@
     "verify": "Treat as discontinued: token-lists marks it DISCONTINUED (risk 5), DefiLlama shows $0 Plasma TVL for Trevee since early 2026, and Euler blacklists the splUSD vaults. No primary Trevee statement on redemption status was found."
   },
   "Yield Optimizer USD::YOUSD": {
+    "mechanism": "lending",
     "what": "YO USDC vault · lends USDC on lending markets against cbBTC, WETH and wstETH",
     "body": "yoUSD is the share token of YO Protocol's USDC vault, an operator-managed ERC-4626. YO deploys the USDC into overcollateralized lending markets, mostly on Base, borrowed against cbBTC, WETH and wstETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. On 12-13 January 2026 an operator rebalancing swap in this vault (stkGHO to USDC through Odos, with no effective slippage limit) lost about $3.7M; YO covered the loss from its own funds. The same operator setup still runs the vaults: a 4-of-6 Safe with no timelock over strategy calls and an EOA that posts the share price.",
     "backing": "USDC lent on overcollateralized markets (Base ~97%, Ethereum, Arbitrum)",
@@ -2122,6 +2162,7 @@
     "verify": "No proof of reserves; custodians and legal entity not named; the admin Safe can grant mint rights without a timelock."
   },
   "Staked Axis USD::SUSDX": {
+    "mechanism": "hedged-trading",
     "what": "Axis staked USDx · trading returns paid as rewards, 7-day request exit",
     "body": "sUSDx is the ERC-4626 staking vault over Axis USDx (not Stables Labs' sUSDX). Axis funds rewards from its trading book every ~3 days, at its discretion, and they vest over 3 days into a rising sUSDx/USDx rate; the vault does not lend the staked USDx. The exit is an ERC-7540 request: requestRedeem burns the shares and fixes the payout, Axis's servicer processes it after 7 days, then the holder claims. On 2026-10-15 about a quarter of the vault was queued to exit.",
     "backing": "Axis USDx",
@@ -2145,6 +2186,7 @@
     "verify": "No third-party attestation or named audit found; redemption terms and first-loss sizes are not published."
   },
   "Staked Forest Road USDfr::SUSDFR": {
+    "mechanism": "private-credit",
     "what": "Forest Road staked USDfr · specialty-finance loan interest, 21-day queued exit",
     "body": "sUSDfr is an ERC-4626 vault over USDfr, opened about 22 September 2026. Interest from Forest Road's loan facilities accrues into it continuously, less a 10 % performance fee, and an impairment source can mark declared losses into its price. The ~30 % APR it showed in October 2026 is real but comes from the whole book's interest landing on the roughly half of USDfr that is staked, so it dilutes as more is staked. Exits are throttled: after a 21-day hold a daily keeper settles requests out of about 1.67 % of idle reserves per epoch, priced at settlement.",
     "backing": "USDfr (USDC reserve plus Forest Road loan facilities)",
@@ -2173,6 +2215,7 @@
     "verify": "Carries Turkish-lira FX and carry exposure; backing wallets are EOAs; basket weights unpublished."
   },
   "GAIB sAID::SAID": {
+    "mechanism": "private-credit",
     "what": "GAIB staked AID · financing for GPUs and AI infrastructure, 30-day FIFO exit",
     "body": "sAID is GAIB's ERC-4626 vault over its AID dollar. Its value tracks a portfolio of off-chain AI-infrastructure financings (GPU and robotics deals) plus a T-bill and stablecoin buffer; rewards arrive about monthly and vest over ~30 days, and an operator can declare an unrealized loss that lowers the exit rate. sAID holds almost all AID in existence. Unstaking queues the value for 30 days, after which anyone can process the queue, but only out of liquidity GAIB's operator recalls: on 2026-10-16 that was 995 AID against 1.07M queued.",
     "backing": "AID deployed into off-chain AI-infrastructure financings plus a T-bill/stablecoin buffer",
@@ -2200,6 +2243,7 @@
     "verify": "Upgradeable token with an EOA among its admins; reserve composition not verified."
   },
   "sBold::sBOLD": {
+    "mechanism": "lending",
     "what": "K3 Capital sBOLD · BOLD in Liquity V2 stability pools (WETH/wstETH/rETH)",
     "body": "sBOLD is a non-upgradeable ERC-4626 built by K3 Capital over Liquity V2's BOLD. It splits deposits across the WETH (30 %), wstETH (60 %) and rETH (10 %) stability pools, which earn 75 % of borrower interest plus collateral from liquidations; anyone can call swap() to sell that collateral back into BOLD, and until then oracles value it. Deposits and withdrawals stop while unswapped collateral exceeds 7,500 BOLD, while paused, or if an oracle fails. A 2-of-3 Safe with no timelock sets the swap adapter, oracles and fees.",
     "backing": "BOLD in Liquity V2 stability pools, plus unswapped liquidation collateral",
@@ -2276,6 +2320,7 @@
     "verify": "No named fund, custodian or token-specific attestation."
   },
   "USDC Mix Yield Token::mixUSDC": {
+    "mechanism": "mixed",
     "what": "Alchemix V3 USDC yield token · Morpho Vault V2 over Yearn, infiniFi, Fluid, Tokemak",
     "body": "mixUSDC is Alchemix V3's USDC 'Mix Yield Token', the vault that holds Alchemist deposits. It is a Morpho Vault V2 whose adapters are Alchemix strategies rather than Morpho markets: Yearn's USD yVault (~42 %), infiniFi siUSD (~38 %), Fluid Lite USD (~20 %) and Tokemak autoUSD. Anyone can deposit; a 15 % performance fee applies. All curator timelocks are 0, so the allocation can change instantly.",
     "backing": "USDC in Yearn yvUSD, infiniFi siUSD, Fluid Lite USD and Tokemak autoUSD",
@@ -2288,6 +2333,7 @@
     "verify": "The curator is an unverified contract and timelocks are zero."
   },
   "WETH Mix Yield Token::mixWETH": {
+    "mechanism": "mixed",
     "what": "Alchemix V3 WETH yield token · Morpho Vault V2 over Yearn, Tokemak and ETH LSTs",
     "body": "mixWETH is Alchemix V3's WETH 'Mix Yield Token', a Morpho Vault V2 whose adapters are Alchemix strategies: Yearn WETH-1 (~33 %), Tokemak autoETH (~29 %), wstETH (~23 %), ether.fi eETH (~8 %) and sfrxETH (~7 %). It is ETH-denominated with a 5 % performance fee; the LST legs carry depeg risk and all curator timelocks are 0. Its yield stalled to near zero over a week in mid-October 2026 (about 1.7 % APR over 30 days).",
     "backing": "WETH in Yearn, Tokemak autoETH and liquid staking tokens",
@@ -2300,6 +2346,7 @@
     "verify": "The curator is an unverified contract, timelocks are zero, and the Tokemak autoETH leg is unscored."
   },
   "Royco Senior Tranche apyUSD::ROY-ST-apyUSD": {
+    "mechanism": "dividends",
     "what": "Royco senior tranche on apyUSD · protected share of yield, junior takes losses first",
     "body": "ROY-ST-apyUSD is the senior tranche of Royco V2's apyUSD market. It holds apyUSD, earns apyUSD's yield minus a premium paid to the junior tranche (ROY-JT), and is covered by that junior up to its size, about 28 % of the pool in October 2026. Its NAV is in dollars: apyUSD's share price times a Chainlink 'APXUSD / USD Exchange Rate' feed that reads 1.0, so an apxUSD market depeg is not marked. Senior deposits are capped by coverage. Exits pay apyUSD at the NAV of the request, so the day's yield while waiting is forfeited, and apyUSD's own exit takes 3-20 more days.",
     "backing": "apyUSD (Apyx, backed by apxUSD), protected by the junior tranche",
@@ -2712,6 +2759,7 @@
     "confidence": "medium"
   },
   "limUSD::LIMUSD": {
+    "mechanism": "basis-trade",
     "what": "Liminal limUSD · allocator over delta-neutral Hyperliquid funding and lending xTokens",
     "body": "limUSD is Liminal's USD allocator on HyperEVM (LayerZero copies on Ethereum and Arbitrum). It spreads deposits over Liminal's xTokens: delta-neutral HYPE and BTC carry positions on Hyperliquid that earn perp funding and staking yield, and a lending sleeve. Its price is not computed on-chain: Liminal posts the NAV (bounded per update), and price per share = NAV / supply (1.0362 USDC on 2026-10-16, about 8 % APR on $8.9M). Liminal takes 10 % of performance on top of the xTokens' own fees.",
     "backing": "USDC and Hyperliquid spot/perp positions held by Liminal's strategist",
@@ -2790,6 +2838,7 @@
     "verify": "Euro-denominated; jEUR's backing on Base was not verified; a forwarder set in Jarvis's Finder can act for holders."
   },
   "Staked USDu::sUSDu": {
+    "mechanism": "hedged-trading",
     "what": "Unitas staked USDu · JLP fees plus perp hedge, 7-day cooldown",
     "body": "sUSDu is the staking vault over Unitas's USDu on BNB Chain, a clone of Ethena's sUSDe. USDu is a synthetic dollar whose collateral sits in Jupiter's JLP pool hedged with perp shorts, earning JLP fees and funding; staked returns vest into sUSDu over 8 hours, about 11 % APR on $36.8M in October 2026. Staking is permissionless, while USDu mint and redeem are for whitelisted institutions. A 3-of-5 Safe with no timelock holds blacklist powers.",
     "backing": "USDu (JLP position hedged with perp shorts)",
@@ -3052,6 +3101,7 @@
     "confidence": "high"
   },
   "Savings reUSD::sreUSD": {
+    "mechanism": "lending",
     "what": "Savings reUSD · ERC-4626 vault earning a share of Resupply protocol revenue",
     "body": "sreUSD is Resupply's auto-compounding ERC-4626 vault over reUSD, with no lockup, cooldown or fee. It is paid 15% of the weekly protocol revenue (borrow interest and redemption fees), plus the whole surcharge borrowers pay while reUSD trades below $1, so it earns most when the peg is under stress. Unlike the Insurance Pool (7-day cooldown), it does not absorb bad debt, but it carries all of reUSD's peg risk.",
     "backing": "reUSD held in the vault",
@@ -3377,6 +3427,7 @@
     "confidence": "medium"
   },
   "OnRe Tokenized Reinsurance::ONyc": {
+    "mechanism": "reinsurance",
     "what": "OnRe ONyc · share of a Bermuda reinsurance fund, dollar NAV set by OnRe",
     "body": "ONyc is a share of OnRe's Bermuda reinsurance fund. The fund writes reinsurance contracts and holds stablecoin collateral against them; the premiums plus the collateral's yield accrue as a rising dollar NAV per ONyc. This is reinsurance risk, not a dollar deposit: a covered catastrophe is paid out of the fund and writes the NAV down, and the NAV is OnRe's own published figure over an off-chain book. OnRe keeps a freeze authority over the token.",
     "backing": "reinsurance contracts and the stablecoin collateral held against them",
@@ -3583,6 +3634,7 @@
     "verify": "Which validators the pool delegates to was not checked."
   },
   "BitFi Bitcoin::BFBTC": {
+    "mechanism": "basis-trade",
     "what": "BitFi yield-bearing BTC · Ceffu custody, delta-neutral basis trades on Binance",
     "body": "bfBTC is BitFi's yield-bearing BTC token, minted against BTC (native BTC, BTCB on BSC, hemiBTC on Hemi, BTC on Bitlayer) at a bfBTC–BTC ratio that BitFi's manager wallet posts each epoch. The BTC is held by Ceffu and mirrored 1:1 to Binance through MirrorX, where BitFi and partner quant teams run delta-neutral trades; their profit raises the ratio, and a loss would lower it. The yield is off-chain and BitFi's docs publish no proof of reserve, so the ratio is BitFi's word; RedStone carries it as a fundamental price feed. One token on Ethereum, BSC, Base, Bitlayer, Hemi, Core and Goat (on Ethereum, Base, Core and Goat it mints and redeems only through native BTC); the AILayer BFBTC is a plain 1:1 wrapper that earns nothing.",
     "backing": "BTC in Ceffu MPC custody, mirrored to Binance via MirrorX",

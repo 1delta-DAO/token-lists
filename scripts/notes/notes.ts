@@ -19,6 +19,10 @@
  *            `backing`, `yieldSource`, `redemption`, `links`, `updated`.
  *            `alsoGroups` points more groups (a mislabelled twin, a per-chain
  *            split) at the same note.
+ *            `mechanism` is HOW the token earns, as one of a closed list of ids
+ *            (`MECHANISMS`) — the word a consumer puts in front of the issuer
+ *            ("basis trade via Ethena"). Per token, never per issuer: Sky's
+ *            sUSDS and stUSDS earn differently.
  *   derived  a `what` line read off props the generator already curated
  *            (pendle, spectra, savings, lst, rwa, stablecoin). Generic by
  *            construction — "Pendle principal token on sUSDe · redeems for USDe
@@ -53,6 +57,25 @@ const OUT_PATH = path.join(repoRoot, 'asset-notes.json')
 /** The one-liner budget — the same as the `what` lines in yieldcircle's `assets.ts`. */
 const WHAT_MAX = 90
 
+/**
+ * How a token earns, as an id a consumer turns into its own words. A closed list: a note with
+ * a `mechanism` outside it fails the check. `mixed` is for a product that is honestly several
+ * of these (Frax's benchmark strategy, a vault of vaults) — never a guess at the largest part.
+ */
+export const MECHANISMS = [
+  'lending',
+  'staking',
+  'restaking',
+  'basis-trade',
+  'treasuries',
+  'private-credit',
+  'reinsurance',
+  'dividends',
+  'hedged-trading',
+  'mixed',
+] as const
+export type Mechanism = (typeof MECHANISMS)[number]
+
 export interface CuratedNote {
   what: string
   body?: string
@@ -66,6 +89,8 @@ export interface CuratedNote {
   updated?: string
   /** How well the facts are sourced: high = issuer docs + contract checked; low = could not identify. */
   confidence?: 'high' | 'medium' | 'low'
+  /** How the token earns (`MECHANISMS`); absent where it earns nothing itself or nobody has checked. */
+  mechanism?: Mechanism
   /** Other groups that are the same asset and share this note. */
   alsoGroups?: string[]
   /** Something is off (price, contract, identity) — consumers may hide or caveat the note. */
@@ -201,6 +226,34 @@ export function deriveWhat(group: string, entry: OmniCurrency): string | undefin
   return undefined
 }
 
+const LST_MECHANISM: Record<string, Mechanism> = { staking: 'staking', restaking: 'restaking' }
+const RWA_MECHANISM: Record<string, Mechanism> = {
+  treasury: 'treasuries',
+  'money-market': 'treasuries',
+  'private-credit': 'private-credit',
+  'corporate-debt': 'private-credit',
+  reinsurance: 'reinsurance',
+  'basis-trade': 'basis-trade',
+}
+
+/** The mechanism props alone can support (an LST's, a tokenized fund's), or undefined. */
+export function deriveMechanism(entry: OmniCurrency): Mechanism | undefined {
+  const lst = prop(entry, 'lst')
+  if (lst?.type && LST_MECHANISM[lst.type]) return LST_MECHANISM[lst.type]
+  const rwa = prop(entry, 'rwa')
+  return rwa?.subType ? RWA_MECHANISM[rwa.subType] : undefined
+}
+
+/** The token a live principal token is written on, as `chainId:address`, or undefined. */
+function ptUnderlying(entry: OmniCurrency): string | undefined {
+  for (const c of entry.currencies ?? []) {
+    const p = (c as any).props?.pendle
+    if (p?.tokenType === 'PT' && !p.expired && p.underlyingAsset)
+      return `${(c as any).chainId}:${String(p.underlyingAsset).toLowerCase()}`
+  }
+  return undefined
+}
+
 /** Problems with the curated file; empty when it is fit to ship. */
 export function validate(
   curated: Record<string, CuratedNote>,
@@ -215,6 +268,8 @@ export function validate(
     if (typeof n.what !== 'string' || !n.what.trim()) errors.push(`${at}: empty \`what\``)
     else if (n.what.length > WHAT_MAX) errors.push(`${at}: \`what\` is ${n.what.length} chars (max ${WHAT_MAX})`)
     if (n.confidence && !['high', 'medium', 'low'].includes(n.confidence)) errors.push(`${at}: bad \`confidence\``)
+    if (n.mechanism !== undefined && !(MECHANISMS as readonly string[]).includes(n.mechanism))
+      errors.push(`${at}: \`mechanism\` "${n.mechanism}" is not one of ${MECHANISMS.join(', ')}`)
     if (n.updated && !/^\d{4}-\d{2}-\d{2}$/.test(n.updated)) errors.push(`${at}: \`updated\` must be YYYY-MM-DD`)
     for (const l of n.links ?? []) if (!/^https:\/\//.test(l)) errors.push(`${at}: link is not https: ${l}`)
     for (const g of [group, ...(n.alsoGroups ?? [])]) {
@@ -237,11 +292,28 @@ export function buildNotes(
   const out: Record<string, AssetNote> = {}
   for (const [group, entry] of Object.entries(omni)) {
     const what = deriveWhat(group, entry)
-    if (what) out[group] = { what, source: 'derived' }
+    const mechanism = deriveMechanism(entry)
+    if (what) out[group] = { what, ...(mechanism ? { mechanism } : {}), source: 'derived' }
   }
   for (const [group, { alsoGroups, ...note }] of Object.entries(curated)) {
     for (const g of [group, ...(alsoGroups ?? [])])
-      if (g in omni || local.has(g)) out[g] = { ...note, source: 'curated' }
+      if (g in omni || local.has(g)) {
+        // a curated note without a mechanism keeps the one its props support (an LST with a hand-written note)
+        const mechanism = note.mechanism ?? out[g]?.mechanism
+        out[g] = { ...note, ...(mechanism ? { mechanism } : {}), source: 'curated' }
+      }
+  }
+  // a live principal token earns what its underlying earns, fixed: it takes that token's mechanism
+  const groupAt = new Map<string, string>()
+  for (const [group, entry] of Object.entries(omni))
+    for (const c of entry.currencies ?? [])
+      groupAt.set(`${(c as any).chainId}:${String((c as any).address).toLowerCase()}`, group)
+  for (const [group, entry] of Object.entries(omni)) {
+    const note = out[group]
+    if (!note || note.mechanism) continue
+    const under = ptUnderlying(entry)
+    const mechanism = under ? out[groupAt.get(under) ?? '']?.mechanism : undefined
+    if (mechanism) out[group] = { ...note, mechanism }
   }
   // stable key order so the file diffs cleanly
   return Object.fromEntries(
