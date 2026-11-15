@@ -75,6 +75,8 @@ export const MECHANISMS = [
   'mixed',
 ] as const
 export type Mechanism = (typeof MECHANISMS)[number]
+/** `mechanismOf`: a ticker, short enough to sit in front of the mechanism's word in a list row. */
+const MECHANISM_OF = /^[A-Z0-9]{2,6}$/
 
 export interface CuratedNote {
   what: string
@@ -91,6 +93,12 @@ export interface CuratedNote {
   confidence?: 'high' | 'medium' | 'low'
   /** How the token earns (`MECHANISMS`); absent where it earns nothing itself or nobody has checked. */
   mechanism?: Mechanism
+  /**
+   * The ONE named thing that pays it, as its ticker (`STRC` for Saturn's sUSDat: Strategy's
+   * preferred stock) — a consumer says "STRC dividends" instead of "Dividends". Only with a
+   * `mechanism`, and only when it is one thing: a basket (Apyx's DAT preferreds) has none.
+   */
+  mechanismOf?: string
   /** Other groups that are the same asset and share this note. */
   alsoGroups?: string[]
   /** Something is off (price, contract, identity) — consumers may hide or caveat the note. */
@@ -270,6 +278,11 @@ export function validate(
     if (n.confidence && !['high', 'medium', 'low'].includes(n.confidence)) errors.push(`${at}: bad \`confidence\``)
     if (n.mechanism !== undefined && !(MECHANISMS as readonly string[]).includes(n.mechanism))
       errors.push(`${at}: \`mechanism\` "${n.mechanism}" is not one of ${MECHANISMS.join(', ')}`)
+    if (n.mechanismOf !== undefined) {
+      if (!n.mechanism) errors.push(`${at}: \`mechanismOf\` without a \`mechanism\``)
+      if (typeof n.mechanismOf !== 'string' || !MECHANISM_OF.test(n.mechanismOf))
+        errors.push(`${at}: \`mechanismOf\` must be a ticker (2-6 of A-Z, 0-9)`)
+    }
     if (n.updated && !/^\d{4}-\d{2}-\d{2}$/.test(n.updated)) errors.push(`${at}: \`updated\` must be YYYY-MM-DD`)
     for (const l of n.links ?? []) if (!/^https:\/\//.test(l)) errors.push(`${at}: link is not https: ${l}`)
     for (const g of [group, ...(n.alsoGroups ?? [])]) {
@@ -304,6 +317,7 @@ export function buildNotes(
       }
   }
   // a live principal token earns what its underlying earns, fixed: it takes that token's mechanism
+  // (and what pays it, `mechanismOf`)
   const groupAt = new Map<string, string>()
   for (const [group, entry] of Object.entries(omni))
     for (const c of entry.currencies ?? [])
@@ -312,8 +326,9 @@ export function buildNotes(
     const note = out[group]
     if (!note || note.mechanism) continue
     const under = ptUnderlying(entry)
-    const mechanism = under ? out[groupAt.get(under) ?? '']?.mechanism : undefined
-    if (mechanism) out[group] = { ...note, mechanism }
+    const from = under ? out[groupAt.get(under) ?? ''] : undefined
+    if (from?.mechanism)
+      out[group] = { ...note, mechanism: from.mechanism, ...(from.mechanismOf ? { mechanismOf: from.mechanismOf } : {}) }
   }
   // stable key order so the file diffs cleanly
   return Object.fromEntries(

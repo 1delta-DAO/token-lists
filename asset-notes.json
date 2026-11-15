@@ -11388,7 +11388,8 @@
   "PT sUSDat (USDat) Ethereum::PT-sUSDat-14JAN2027": {
     "what": "Pendle principal token on sUSDat · redeems for USDat on 14 Jan 2027 · fixed rate",
     "source": "derived",
-    "mechanism": "dividends"
+    "mechanism": "dividends",
+    "mechanismOf": "STRC"
   },
   "PT sUSDat (USDat) Ethereum::PT-sUSDat-27AUG2026": {
     "what": "Pendle principal token on sUSDat · matured 27 Aug 2026",
@@ -11405,7 +11406,8 @@
   "PT sUSDat (USDat) Monad::PT-sUSDat-14JAN2027": {
     "what": "Pendle principal token on sUSDat · redeems for USDat on 14 Jan 2027 · fixed rate",
     "source": "derived",
-    "mechanism": "dividends"
+    "mechanism": "dividends",
+    "mechanismOf": "STRC"
   },
   "PT sUSDe (Bera Concrete) (USDe) Ethereum::PT-ctsUSDe-10APR2025": {
     "what": "Pendle principal token on sUSDe · matured 10 Apr 2025",
@@ -11873,7 +11875,8 @@
   "PT srUSDat (USDat) Ethereum::PT-srUSDat-14JAN2027": {
     "what": "Pendle principal token on srUSDat · redeems for USDat on 14 Jan 2027 · fixed rate",
     "source": "derived",
-    "mechanism": "dividends"
+    "mechanism": "dividends",
+    "mechanismOf": "STRC"
   },
   "PT srUSDat (USDat) Ethereum::PT-srUSDat-27AUG2026": {
     "what": "Pendle principal token on srUSDat · matured 27 Aug 2026",
@@ -11882,7 +11885,8 @@
   "PT srUSDat (USDat) Monad::PT-srUSDat-14JAN2027": {
     "what": "Pendle principal token on srUSDat · redeems for USDat on 14 Jan 2027 · fixed rate",
     "source": "derived",
-    "mechanism": "dividends"
+    "mechanism": "dividends",
+    "mechanismOf": "STRC"
   },
   "PT srUSDe (USDe) BNB::PT-srUSDe-25JUN2026-(ETH)": {
     "what": "Pendle principal token on srUSDe · matured 25 Jun 2026",
@@ -14876,6 +14880,7 @@
   },
   "Saturn sUSDat::SUSDAT": {
     "mechanism": "dividends",
+    "mechanismOf": "STRC",
     "what": "Saturn staked USDat · yield from Strategy STRC preferred dividends",
     "body": "sUSDat is the staked, yield-bearing version of USDat, Saturn's dollar token whose reserves target M0's M (tokenized US Treasuries). When USDat is staked, Saturn moves the backing into STRC (Strategy's preferred stock) exposure, so sUSDat earns STRC dividends and also carries STRC price risk. Yield accrues through a rising sUSDat/USDat exchange rate.",
     "backing": "STRC preferred stock exposure (USDat itself: tokenized T-bills via M0)",
@@ -16239,6 +16244,7 @@
   },
   "Strata Senior USDat::SRUSDAT": {
     "mechanism": "dividends",
+    "mechanismOf": "STRC",
     "what": "Strata senior tranche of Saturn sUSDat · fixed 65% of STRC dividend, junior covers NAV",
     "body": "srUSDat is the senior (protected) tranche of Strata's Saturn market, an ERC-4626 token over pooled sUSDat. sUSDat earns T-bill interest and dividends on Strategy's STRC preferred stock, and its NAV moves with STRC's price. srUSDat targets a fixed yield of 65% of the STRC dividend rate; jrUSDat absorbs STRC price swings and losses first, but it was only ~16 % of the pool in October 2026 after the mid-2026 sUSDat drawdown halved it. On Monad, srUSDat is a LayerZero OFT copy of the Ethereum token (an adapter locks the Ethereum shares 1:1), not a separate Strata deployment.",
     "backing": "USDat staked as sUSDat (T-bills + Strategy STRC preferred), protected by jrUSDat",

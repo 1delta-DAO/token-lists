@@ -39,6 +39,7 @@ How the token earns, as one id from a closed list (`MECHANISMS` in `notes.ts`): 
 - Leave it out for a token that earns nothing itself (USDC, USDe), and when the issuer's docs do not say. `mixed` is for a product that is honestly several of these, not for a guess.
 - A derived note gets one from props: `lst.type`, and `rwa.subType` for treasuries, private credit, reinsurance and basis-trade funds. A live Pendle PT takes its underlying's. A curated note without the field keeps the derived one.
 - `notes:check` fails on an id outside the list.
+- `mechanismOf` names the ONE thing that pays it, as a ticker: `"mechanism": "dividends", "mechanismOf": "STRC"` on Saturn's sUSDat and Strata's srUSDat, so a consumer can say "STRC dividends". Leave it out for a basket (Apyx's apyUSD earns from several issuers' preferred shares). A live Pendle PT takes its underlying's along with the mechanism.
 
 ## Adding a note
 
