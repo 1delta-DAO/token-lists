@@ -232,6 +232,23 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
  * "LST" market (`FWhZyxJQ…`, no issuer metadata) are deliberately absent.
  */
 const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
+  // Listed until Jupiter un-verified them (2026-11-14 refresh: tagged `unknown`, `isVerified`
+  // unset), kept because each is evidenced as a real cross-chain asset, not a Solana-only mint:
+  // `cg-group` = CoinGecko's platform map joined it to a group we list on an EVM chain;
+  // `oft` = LayerZero's registry, cross-checked on-chain, routes it (props.oft).
+  ASRRjA1R4RHVk5H9QKKm1jaQqMkxvv6nh5EypPrvwmxQ: 'Assisterr AI ASRR; cg-group `Assisterr AI::ASRR`',
+  boopkpWqe68MSxLqBGogs8ZbUDN4GXaLhFwNP7mpP1i: 'BOOP; cg-group `BOOP::BOOP`, oft (boopdotfun)',
+  EvPUFsBikS1B3GpbmVvUWAc4DXaBXD4zLDER9SVSEF27: 'CHAD CAT; cg-group `CHAD CAT::CHADCAT`',
+  CTAyri1T4d1QRfnmtSRpEsPS5tyH6shA1WTskhybmrMT: 'Cross The Ages CTA; cg-group `Cross The Ages::CTA`',
+  '5AnPDx9GposBi9jSW2dFfE5QQD3FmXbudoquMNDxpump': 'Dollar DOLLAR; cg-group `Dollar::DOLLAR`',
+  App2Sp9pgmQG7yD6uVaygULxALf4TpfALgnhHEkJimih: 'Houdini Swap LOCK; cg-group `Houdini Swap::LOCK`',
+  ETAtLmCmsoiEEKfNrHKJ2kYy3MoABhU6NQvpSfij5tDs: 'Media Network MEDIA; cg-group `Media Network::MEDIA`',
+  FS66v5XYtJAFo14LiPz5HT93EUMAHmYipCfQhLpU4ss8: 'Smog SMOG; cg-group `Smog::SMOG`',
+  wxmJYe17a2oGJZJ1wDe6ZyRKUKmrLj2pJsavEdTVhPP: 'WeatherXM WXM; cg-group `WeatherXM::WXM`',
+  BLiUhfaUFbSoMVeRqq3QYTA1eJsTsB3ZDEYtUsGGQ9em: 'SolForge Fusion SFG; oft',
+  Gu3LDkn7Vx3bmCzLafYNKcDxv2mH7YN44NJZFXnypump: 'Degen Spartan AI degenai; oft (degen-spartan-ai)',
+  '9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw': 'Zenrock zenBTC; oft (zenrock)',
+  SiLVFMgD3eD2rgK628NbTBq9MnuJF5FW2CRaVyTB35L: 'Dominion Silver SILV; tokenized silver, classified rwa',
   sUSDai6Y3GxysDEtA9BVcEFTaog6UZpYUVxJiMhAKYE:
     'Kamino "sUSDai Market" reserve; Jupiter-verified today, kept here should that lapse',
   GArhnnDj3GYhmQeApKVXaRv4TQFwhPcs3SNF6FXsTeXq: 'Kamino "Nest Market" reserve; icon on assets.plume.org (Nest)',
