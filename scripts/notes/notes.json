@@ -310,6 +310,12 @@
     "confidence": "high"
   },
   "Janus Henderson Anemoy AAA CLO Fund Token::JAAA": {
+    "mechanism": "private-credit",
+    "alsoGroups": [
+      "Janus Henderson Anemoy AAA CLO Fund::JAAA",
+      "Janus Henderson Anemoy AAA CLO Fund::JAAA::143::0",
+      "Janus Henderson Anemoy AAA CLO Fund::JAAA::43114::0"
+    ],
     "what": "Tokenized Janus Henderson AAA CLO fund (Centrifuge/Anemoy)",
     "body": "JAAA is a permissioned token for shares of the Janus Henderson Anemoy AAA CLO Fund, issued through Anemoy on Centrifuge. Janus Henderson manages the portfolio of AAA-rated collateralized loan obligation tranches. The token's NAV rises as the portfolio's floating-rate interest is earned.",
     "backing": "AAA-rated CLO tranches",
@@ -550,9 +556,10 @@
   },
   "apyUSD::APYUSD": {
     "mechanism": "dividends",
+    "mechanismOf": "STRC",
     "what": "Apyx savings token · wraps apxUSD, earns DAT preferred-share dividends",
-    "body": "apyUSD is a non-rebasing ERC-4626 savings vault from Apyx that wraps apxUSD. apxUSD is a synthetic dollar backed by preferred shares issued by digital asset treasury companies (e.g. STRC, SATA) plus short-term Treasuries. Dividends from that basket are streamed to apyUSD through a rising exchange rate.",
-    "backing": "apxUSD (DAT preferred shares + short-term Treasuries)",
+    "body": "apyUSD is a non-rebasing ERC-4626 savings vault from Apyx that wraps apxUSD. apxUSD is a synthetic dollar backed by preferred shares issued by digital asset treasury companies plus a buffer of cash and short-term Treasuries. The basket is mostly Strategy's STRC (around 90% by third-party accounts in 2026, the rest Strive's SATA), and Apyx can rebalance it across issuers. Dividends from that basket are streamed to apyUSD through a rising exchange rate.",
+    "backing": "apxUSD (DAT preferred shares, mostly STRC, some SATA + short-term Treasuries)",
     "yieldSource": "dividends from preferred shares and T-bill interest",
     "redemption": "permissionless deposit; unlock to apxUSD via request, ~20-day cooldown, then claim (faster flexible exit with declining fee from 3 days)",
     "issuer": "Apyx",
@@ -560,7 +567,7 @@
       "https://docs.apyx.fi/product-overview/apyusd-overview",
       "https://docs.apyx.fi/product-overview/apxusd-overview"
     ],
-    "updated": "2026-10-06",
+    "updated": "2026-11-16",
     "confidence": "high"
   },
   "Origin Ether::OETH": {
@@ -1379,7 +1386,7 @@
     "confidence": "high"
   },
   "Staked avUSD::savUSD": {
-    "mechanism": "hedged-trading",
+    "mechanism": "mixed",
     "what": "Avant staked avUSD · senior tranche of delta-neutral basis, lending and LP strategies",
     "body": "savUSD is the ERC-4626 staking token on avUSD, Avant's dollar backed 1:1 by USDC on Avalanche, and is the senior tranche of Avant's yield. Deposits go to market-neutral strategies run with trading partners: spot/short-futures basis trades, lending-rate arbitrage, Pendle yield trading, Aave supply and Curve/Uniswap liquidity. Profits raise the savUSD/avUSD rate, and the junior avUSDx tranche takes strategy losses first.",
     "backing": "avUSD (USDC), protected by the avUSDx junior tranche",
@@ -2349,6 +2356,7 @@
   },
   "Royco Senior Tranche apyUSD::ROY-ST-apyUSD": {
     "mechanism": "dividends",
+    "mechanismOf": "STRC",
     "what": "Royco senior tranche on apyUSD · protected share of yield, junior takes losses first",
     "body": "ROY-ST-apyUSD is the senior tranche of Royco V2's apyUSD market. It holds apyUSD, earns apyUSD's yield minus a premium paid to the junior tranche (ROY-JT), and is covered by that junior up to its size, about 28 % of the pool in October 2026. Its NAV is in dollars: apyUSD's share price times a Chainlink 'APXUSD / USD Exchange Rate' feed that reads 1.0, so an apxUSD market depeg is not marked. Senior deposits are capped by coverage. Exits pay apyUSD at the NAV of the request, so the day's yield while waiting is forfeited, and apyUSD's own exit takes 3-20 more days.",
     "backing": "apyUSD (Apyx, backed by apxUSD), protected by the junior tranche",
@@ -2663,6 +2671,7 @@
     "verify": "Exchange rate inflated on 2026-10-22 and all methods paused; re-check once Swell reprices and unpauses. Restaked ETH can be slashed by EigenLayer services."
   },
   "Hyperwave HLP::hwHLP": {
+    "mechanism": "perp-lp",
     "what": "Hyperwave liquid HLP · Hyperliquid's market-making vault as a token",
     "body": "hwHLP tokenizes a deposit in HLP, Hyperliquid's protocol vault that makes markets and takes over liquidations on HyperCore. Users deposit USDT0, USDe or USDHL and receive hwHLP, whose price follows HLP's profit and loss and can fall (about 3.6 % APR over 30 days in October 2026). The same address exists on HyperEVM and Ethereum.",
     "backing": "a position in Hyperliquid's HLP vault",
@@ -2840,7 +2849,7 @@
     "verify": "Euro-denominated; jEUR's backing on Base was not verified; a forwarder set in Jarvis's Finder can act for holders."
   },
   "Staked USDu::sUSDu": {
-    "mechanism": "hedged-trading",
+    "mechanism": "perp-lp",
     "what": "Unitas staked USDu · JLP fees plus perp hedge, 7-day cooldown",
     "body": "sUSDu is the staking vault over Unitas's USDu on BNB Chain, a clone of Ethena's sUSDe. USDu is a synthetic dollar whose collateral sits in Jupiter's JLP pool hedged with perp shorts, earning JLP fees and funding; staked returns vest into sUSDu over 8 hours, about 11 % APR on $36.8M in October 2026. Staking is permissionless, while USDu mint and redeem are for whitelisted institutions. A 3-of-5 Safe with no timelock holds blacklist powers.",
     "backing": "USDu (JLP position hedged with perp shorts)",
@@ -3652,5 +3661,86 @@
     ],
     "updated": "2026-10-27",
     "confidence": "high"
+  },
+  "DeFi Janus Henderson Anemoy AAA CLO Fund Token::deJAAA": {
+    "mechanism": "private-credit",
+    "alsoGroups": ["DeFi Janus Henderson Anemoy AAA CLO Fund::DEJAAA"],
+    "what": "Freely transferable DeFi wrapper of Anemoy's JAAA · AAA-rated CLO fund",
+    "body": "deJAAA is the DeFi share class of the Janus Henderson Anemoy AAA CLO Fund, issued through Centrifuge so that it can move between wallets and protocols without the allowlist the JAAA share itself enforces. It earns what the fund earns: floating-rate interest on AAA-rated collateralized loan obligation tranches. This is corporate credit, not government debt.",
+    "backing": "JAAA (AAA-rated CLO tranches)",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium"
+  },
+  "DeFi Janus Henderson Anemoy S&P500® Fund Token::DESPXA": {
+    "mechanism": null,
+    "what": "DeFi wrapper of Anemoy's SPXA · tokenized S&P 500 index fund, moves with the index",
+    "body": "deSPXA is the DeFi share class of the Janus Henderson Anemoy S&P 500 Index Fund (SPXA), issued through its own Centrifuge pool for non-US holders. It tracks the S&P 500 and accumulates income inside the fund: it is a stock index position whose price goes up and down with the market, not a yield product.",
+    "backing": "SPXA (S&P 500 index fund shares)",
+    "yieldSource": null,
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as sub-manager)",
+    "links": [
+      "https://centrifuge.io/blog/despxa-on-base",
+      "https://centrifuge.io/blog/centrifuge-launches-spxa"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium"
+  },
+  "Midas mBASIS::MBASIS": {
+    "mechanism": "basis-trade",
+    "what": "Midas tokenized certificate · delta-neutral basis trade, can rotate into mTBILL",
+    "body": "mBASIS is issued by Midas and tracks a delta-neutral basis strategy: spot crypto held against short perpetual futures, earning the funding rate. When funding turns against it the strategy can switch to a reverse basis trade or into mTBILL. Returns accrue to the token's NAV. It is not a Treasury fund, whatever its sibling mTBILL holds.",
+    "backing": "a managed basis-trade portfolio (spot against short perps), at times mTBILL",
+    "yieldSource": "perp funding and the spot-futures basis",
+    "redemption": "Midas-onboarded (KYC) holders via Midas; terms not confirmed",
+    "issuer": "Midas",
+    "links": [
+      "https://www.theblock.co/post/301070/tokenization-midas-yield-bearing-token-mbasis-ethena"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium"
+  },
+  "Reservoir rUSD::RUSD": {
+    "mechanism": null,
+    "what": "Reservoir dollar stablecoin · earns nothing itself; srUSD and wsrUSD are its savings",
+    "body": "rUSD is Reservoir's dollar stablecoin, backed by the protocol's balance sheet of real-world and on-chain assets and held to $1 by a peg stability module. Holding rUSD pays nothing: the balance sheet's income goes to the savings tokens srUSD and wsrUSD.",
+    "backing": "Reservoir's balance sheet (RWA, lending vaults, stablecoins via the PSM)",
+    "yieldSource": null,
+    "issuer": "Reservoir",
+    "links": [
+      "https://reservoir.beehiiv.com/p/what-is-reservoir"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium"
+  },
+  "Jupiter Perps::JLP::solana": {
+    "mechanism": "perp-lp",
+    "what": "Jupiter perps liquidity pool · SOL, ETH, BTC and stablecoins, counterparty to traders",
+    "body": "JLP is the share of the pool that backs Jupiter's perpetual exchange on Solana. The pool holds SOL, ETH, BTC, USDC and USDT and is the other side of every trade: it earns most of the exchange's fees and gains what traders lose, and pays out what they win. Its price also moves with the coins it holds.",
+    "backing": "the pool's SOL, ETH, WBTC, USDC and USDT",
+    "yieldSource": "perp trading, borrow and swap fees, plus traders' net losses",
+    "redemption": "burn JLP for a pool asset at any time, for a fee that depends on pool weights",
+    "issuer": "Jupiter",
+    "links": [
+      "https://support.jup.ag/hc/en-us/articles/18484986045980-What-is-JLP"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium"
+  },
+  "Wrapped HLP::WHLP": {
+    "mechanism": "perp-lp",
+    "what": "Wrapped HLP · dollar token on HyperEVM that deposits into Hyperliquid's HLP vault",
+    "body": "WHLP is a tokenized deposit in HLP, Hyperliquid's protocol vault that makes markets and takes over liquidations on HyperCore. Users mint it with USDT0; it started at $1 and its price follows HLP's profit and loss, so it can fall. Token listings credit Looping Collective as the developer; that is not confirmed from a primary source.",
+    "backing": "a position in Hyperliquid's HLP vault",
+    "yieldSource": "HLP market-making and liquidation profits",
+    "links": [
+      "https://defillama.com/protocol/wrapped-hlp"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "low"
   }
 }

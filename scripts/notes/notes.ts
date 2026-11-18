@@ -72,6 +72,7 @@ export const MECHANISMS = [
   'reinsurance',
   'dividends',
   'hedged-trading',
+  'perp-lp',
   'mixed',
 ] as const
 export type Mechanism = (typeof MECHANISMS)[number]
@@ -91,8 +92,12 @@ export interface CuratedNote {
   updated?: string
   /** How well the facts are sourced: high = issuer docs + contract checked; low = could not identify. */
   confidence?: 'high' | 'medium' | 'low'
-  /** How the token earns (`MECHANISMS`); absent where it earns nothing itself or nobody has checked. */
-  mechanism?: Mechanism
+  /**
+   * How the token earns (`MECHANISMS`); absent where it earns nothing itself or nobody has checked.
+   * `null` says so against the props: a derived mechanism is dropped (Reservoir's rUSD carries an
+   * `rwa` label for its backing and pays its holder nothing).
+   */
+  mechanism?: Mechanism | null
   /**
    * The ONE named thing that pays it, as its ticker (`STRC` for Saturn's sUSDat: Strategy's
    * preferred stock) — a consumer says "STRC dividends" instead of "Dividends". Only with a
@@ -105,7 +110,8 @@ export interface CuratedNote {
   verify?: string
 }
 
-export interface AssetNote extends Omit<CuratedNote, 'alsoGroups'> {
+export interface AssetNote extends Omit<CuratedNote, 'alsoGroups' | 'mechanism'> {
+  mechanism?: Mechanism
   source: 'curated' | 'derived'
 }
 
@@ -276,7 +282,7 @@ export function validate(
     if (typeof n.what !== 'string' || !n.what.trim()) errors.push(`${at}: empty \`what\``)
     else if (n.what.length > WHAT_MAX) errors.push(`${at}: \`what\` is ${n.what.length} chars (max ${WHAT_MAX})`)
     if (n.confidence && !['high', 'medium', 'low'].includes(n.confidence)) errors.push(`${at}: bad \`confidence\``)
-    if (n.mechanism !== undefined && !(MECHANISMS as readonly string[]).includes(n.mechanism))
+    if (n.mechanism != null && !(MECHANISMS as readonly string[]).includes(n.mechanism))
       errors.push(`${at}: \`mechanism\` "${n.mechanism}" is not one of ${MECHANISMS.join(', ')}`)
     if (n.mechanismOf !== undefined) {
       if (!n.mechanism) errors.push(`${at}: \`mechanismOf\` without a \`mechanism\``)
@@ -308,11 +314,12 @@ export function buildNotes(
     const mechanism = deriveMechanism(entry)
     if (what) out[group] = { what, ...(mechanism ? { mechanism } : {}), source: 'derived' }
   }
-  for (const [group, { alsoGroups, ...note }] of Object.entries(curated)) {
+  for (const [group, { alsoGroups, mechanism: own, ...note }] of Object.entries(curated)) {
     for (const g of [group, ...(alsoGroups ?? [])])
       if (g in omni || local.has(g)) {
-        // a curated note without a mechanism keeps the one its props support (an LST with a hand-written note)
-        const mechanism = note.mechanism ?? out[g]?.mechanism
+        // a curated note without a mechanism keeps the one its props support (an LST with a hand-written
+        // note); one that says `null` has none, whatever the props say
+        const mechanism = own === null ? undefined : (own ?? out[g]?.mechanism)
         out[g] = { ...note, ...(mechanism ? { mechanism } : {}), source: 'curated' }
       }
   }

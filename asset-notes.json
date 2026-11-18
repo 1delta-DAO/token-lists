@@ -8,7 +8,6 @@
     "source": "derived"
   },
   "3Jane Staked USD3::sUSD3": {
-    "mechanism": "private-credit",
     "what": "3Jane junior first-loss tranche on USD3 · levered fintech and crypto credit yield",
     "body": "sUSD3 is the junior tranche minted by staking USD3, and its supply is capped by a tranche ratio (e.g. ~15% of debt). It earns a larger, levered share of the same pool income from fintech receivables and crypto credit lines. It absorbs credit losses after originator equity, overcollateralization and reserves but before senior USD3; low yields alone do not cut its principal.",
     "backing": "USD3 (subordinated claim on 3Jane's credit pool)",
@@ -21,10 +20,10 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "3Jane USD3::USD3": {
-    "mechanism": "private-credit",
     "what": "3Jane senior credit tranche on USDC · fintech receivables + crypto credit lines",
     "body": "USD3 is the senior ERC-4626 token minted when USDC is supplied to 3Jane. The USDC funds Fintech Credit Conduits (short-duration SMB and consumer receivables financed through SPVs) and unsecured crypto credit lines, with idle cash in Aave. USD3 earns a fixed share of whatever the pool earns, and losses hit originator equity, overcollateralization, reserves and the sUSD3 junior tranche before USD3.",
     "backing": "USDC lent to fintech originators and crypto borrowers; idle USDC in Aave",
@@ -38,6 +37,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "3M xStock::MMMX": {
@@ -52,7 +52,10 @@
     "what": "Pendle standardized wrapper (SY) of 40acresUSDC",
     "source": "derived"
   },
-  "A7A5::A7A5": { "what": "Old Vector RUB stablecoin", "source": "derived" },
+  "A7A5::A7A5": {
+    "what": "Old Vector RUB stablecoin",
+    "source": "derived"
+  },
   "AAON (Ondo Tokenized)::AAONON": {
     "what": "Ondo tokenized stock · tracks AAON",
     "source": "derived"
@@ -73,7 +76,10 @@
     "what": "Ondo tokenized stock · tracks ACM Research",
     "source": "derived"
   },
-  "AGEUR": { "what": "Angle EUR stablecoin", "source": "derived" },
+  "AGEUR": {
+    "what": "Angle EUR stablecoin",
+    "source": "derived"
+  },
   "AGNC Investment xStock::AGNCX": {
     "what": "Backed tokenized stock · tracks AGNC Investment",
     "source": "derived"
@@ -122,7 +128,10 @@
     "what": "Backed tokenized stock · tracks AMD",
     "source": "derived"
   },
-  "AMD::AMD": { "what": "Robinhood tokenized stock", "source": "derived" },
+  "AMD::AMD": {
+    "what": "Robinhood tokenized stock",
+    "source": "derived"
+  },
   "AMETEK (Ondo Tokenized)::AMEON": {
     "what": "Ondo tokenized stock · tracks AMETEK",
     "source": "derived"
@@ -149,7 +158,9 @@
     "body": "ApeCoin is the governance and utility token of the ApeCoin DAO, which grew out of the Bored Ape Yacht Club ecosystem. Holders vote on DAO proposals and treasury use, and APE is the native gas token of ApeChain. It is not backed by any assets and earns nothing by itself.",
     "backing": "none (governance token)",
     "issuer": "ApeCoin DAO",
-    "links": ["https://apecoin.com/"],
+    "links": [
+      "https://apecoin.com/"
+    ],
     "updated": "2026-10-06",
     "confidence": "high",
     "source": "curated"
@@ -194,9 +205,18 @@
     "what": "Pendle standardized wrapper (SY) of ARM-WS-OS",
     "source": "derived"
   },
-  "ARYZE eEUR::EEUR": { "what": "ARYZE EUR stablecoin", "source": "derived" },
-  "ARYZE eGBP::EGBP": { "what": "ARYZE GBP stablecoin", "source": "derived" },
-  "ARYZE eUSD::EUSD": { "what": "ARYZE USD stablecoin", "source": "derived" },
+  "ARYZE eEUR::EEUR": {
+    "what": "ARYZE EUR stablecoin",
+    "source": "derived"
+  },
+  "ARYZE eGBP::EGBP": {
+    "what": "ARYZE GBP stablecoin",
+    "source": "derived"
+  },
+  "ARYZE eUSD::EUSD": {
+    "what": "ARYZE USD stablecoin",
+    "source": "derived"
+  },
   "ASML (bStocks Tokenized Stock)::ASMLB": {
     "what": "BStocks tokenized stock · tracks ASML",
     "source": "derived"
@@ -253,7 +273,10 @@
     "what": "Backed tokenized stock · tracks ATI",
     "source": "derived"
   },
-  "AUSD": { "what": "Agora stablecoin", "source": "curated" },
+  "AUSD": {
+    "what": "Agora stablecoin",
+    "source": "curated"
+  },
   "AUSD Monad::SY-AUSD": {
     "what": "Pendle standardized wrapper (SY) of AUSD",
     "source": "derived"
@@ -262,7 +285,10 @@
     "what": "Pendle standardized wrapper (SY) of AUSD",
     "source": "derived"
   },
-  "AVAX": { "what": "Avalanche native coin", "source": "curated" },
+  "AVAX": {
+    "what": "Avalanche native coin",
+    "source": "curated"
+  },
   "AVLT HyperEVM::SY-AVLT": {
     "what": "Pendle standardized wrapper (SY) of AVLT",
     "source": "derived"
@@ -388,7 +414,10 @@
     "what": "Coinbase tokenized stock · tracks Advanced Micro Devices, Inc.",
     "source": "derived"
   },
-  "Aegis YUSD::YUSD": { "what": "Aegis USD stablecoin", "source": "derived" },
+  "Aegis YUSD::YUSD": {
+    "what": "Aegis USD stablecoin",
+    "source": "derived"
+  },
   "Aehr Test Systems (Coinbase Tokenized Stock)::AEHRC": {
     "what": "Coinbase tokenized stock · tracks Aehr Test Systems",
     "source": "derived"
@@ -417,7 +446,10 @@
     "what": "Backed tokenized stock · tracks Aflac",
     "source": "derived"
   },
-  "Agant GBP::GBPA": { "what": "Agant GBP stablecoin", "source": "derived" },
+  "Agant GBP::GBPA": {
+    "what": "Agant GBP stablecoin",
+    "source": "derived"
+  },
   "Agilent Technologies xStock::AX": {
     "what": "Backed tokenized stock · tracks Agilent Technologies",
     "source": "derived"
@@ -595,7 +627,10 @@
     "what": "Backed tokenized stock · tracks Alphabet",
     "source": "derived"
   },
-  "Alto DUSD::DUSD": { "what": "Alto USD stablecoin", "source": "derived" },
+  "Alto DUSD::DUSD": {
+    "what": "Alto USD stablecoin",
+    "source": "derived"
+  },
   "Altria xStock::MOX": {
     "what": "Backed tokenized stock · tracks Altria",
     "source": "derived"
@@ -857,8 +892,14 @@
     "verify": "USDz supply has shrunk to under $10m on-chain (DefiLlama); docs show no wind-down, but check liquidity and whether the project is still active.",
     "source": "curated"
   },
-  "Anzen USDz::USDZ": { "what": "Anzen USD stablecoin", "source": "derived" },
-  "Anzen USDz::USDz": { "what": "Anzen USD stablecoin", "source": "derived" },
+  "Anzen USDz::USDZ": {
+    "what": "Anzen USD stablecoin",
+    "source": "derived"
+  },
+  "Anzen USDz::USDz": {
+    "what": "Anzen USD stablecoin",
+    "source": "derived"
+  },
   "Apollo Diversified Credit Securitize Fu::ACRED": {
     "what": "Securitize tokenized private-credit fund",
     "mechanism": "private-credit",
@@ -1113,14 +1154,15 @@
     "yieldSource": "BNB staking rewards plus Binance Launchpool/HODLer airdrop/Megadrop rewards",
     "redemption": "permissionless withdrawal to slisBNB; immediate when no Launchpool is active, otherwise queued (~3-5 business days); no fee",
     "issuer": "Aster (formerly Astherus)",
-    "links": ["https://docs.asterdex.com/earn/overview/mint-asbnb.md"],
+    "links": [
+      "https://docs.asterdex.com/earn/overview/mint-asbnb.md"
+    ],
     "updated": "2026-10-06",
     "confidence": "high",
     "mechanism": "staking",
     "source": "curated"
   },
   "Astherus Staked USDF::asUSDF": {
-    "mechanism": "basis-trade",
     "what": "Aster staked USDF · delta-neutral spot-long/perp-short funding on Binance",
     "body": "asUSDF is the yield-bearing staked form of Aster's (formerly Astherus) USDF, which is minted 1:1 against USDT. The USDT sits with custodian Ceffu and is used to buy a basket of spot tokens while matching perp shorts are opened on Binance, so the position earns funding fees with little price exposure. Profits are booked weekly into the asUSDF contract and show up as a rising asUSDF/USDF exchange rate.",
     "backing": "USDF (USDT held at Ceffu in delta-neutral basis positions)",
@@ -1133,6 +1175,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "basis-trade",
     "source": "curated"
   },
   "Astherus USDF::USDF": {
@@ -1327,7 +1370,10 @@
     "mechanism": "treasuries",
     "source": "derived"
   },
-  "BITUSD::bitusd": { "what": "bitSmiley USD stablecoin", "source": "derived" },
+  "BITUSD::bitusd": {
+    "what": "bitSmiley USD stablecoin",
+    "source": "derived"
+  },
   "BJ's Wholesale Club Holdings, Inc. (Coinbase Tokenized Stock::BJC": {
     "what": "Coinbase tokenized stock",
     "source": "derived"
@@ -1344,7 +1390,10 @@
     "what": "Backed tokenized stock · tracks Backed MicroStrategy",
     "source": "derived"
   },
-  "BNB": { "what": "BNB Chain native coin", "source": "curated" },
+  "BNB": {
+    "what": "BNB Chain native coin",
+    "source": "curated"
+  },
   "BNIU": {
     "what": "Backed tokenized stock · tracks Backed NIU Technologies",
     "source": "derived"
@@ -1353,7 +1402,10 @@
     "what": "Backed tokenized stock · tracks Backed NVIDIA",
     "source": "derived"
   },
-  "BOB Token::BOB": { "what": "zkBob USD stablecoin", "source": "derived" },
+  "BOB Token::BOB": {
+    "what": "zkBob USD stablecoin",
+    "source": "derived"
+  },
   "BOC Hong Kong xStock::BOCHKX": {
     "what": "Backed tokenized stock · tracks BOC Hong Kong",
     "source": "derived"
@@ -1363,9 +1415,18 @@
     "mechanism": "restaking",
     "source": "derived"
   },
-  "BREAD": { "what": "Breadchain USD stablecoin", "source": "derived" },
-  "BRL1::BRL1": { "what": "Token denominated in REAL", "source": "derived" },
-  "BRLA": { "what": "BRLA Digital REAL stablecoin", "source": "derived" },
+  "BREAD": {
+    "what": "Breadchain USD stablecoin",
+    "source": "derived"
+  },
+  "BRL1::BRL1": {
+    "what": "Token denominated in REAL",
+    "source": "derived"
+  },
+  "BRLA": {
+    "what": "BRLA Digital REAL stablecoin",
+    "source": "derived"
+  },
   "BRLA Token::BRLA": {
     "what": "BRLA Digital REAL stablecoin",
     "source": "derived"
@@ -1374,7 +1435,10 @@
     "what": "Backed tokenized stock · tracks Backed Tesla",
     "source": "derived"
   },
-  "BUSD": { "what": "Paxos USD stablecoin", "source": "derived" },
+  "BUSD": {
+    "what": "Paxos USD stablecoin",
+    "source": "derived"
+  },
   "BWX Technologies xStock::BWXTX": {
     "what": "Backed tokenized stock · tracks BWX Technologies",
     "source": "derived"
@@ -1564,7 +1628,10 @@
     "what": "Coinbase tokenized stock · tracks Beyond Meat, Inc.",
     "source": "derived"
   },
-  "BiLira::TRYB": { "what": "BiLira TRY stablecoin", "source": "derived" },
+  "BiLira::TRYB": {
+    "what": "BiLira TRY stablecoin",
+    "source": "derived"
+  },
   "BigBear.ai Holdings (Ondo Tokenized Stock)::BBAION": {
     "what": "Ondo tokenized stock · tracks BigBear.ai Holdings",
     "source": "derived"
@@ -1621,7 +1688,6 @@
     "source": "derived"
   },
   "BitFi Bitcoin::BFBTC": {
-    "mechanism": "basis-trade",
     "what": "BitFi yield-bearing BTC · Ceffu custody, delta-neutral basis trades on Binance",
     "body": "bfBTC is BitFi's yield-bearing BTC token, minted against BTC (native BTC, BTCB on BSC, hemiBTC on Hemi, BTC on Bitlayer) at a bfBTC–BTC ratio that BitFi's manager wallet posts each epoch. The BTC is held by Ceffu and mirrored 1:1 to Binance through MirrorX, where BitFi and partner quant teams run delta-neutral trades; their profit raises the ratio, and a loss would lower it. The yield is off-chain and BitFi's docs publish no proof of reserve, so the ratio is BitFi's word; RedStone carries it as a fundamental price feed. One token on Ethereum, BSC, Base, Bitlayer, Hemi, Core and Goat (on Ethereum, Base, Core and Goat it mints and redeems only through native BTC); the AILayer BFBTC is a plain 1:1 wrapper that earns nothing.",
     "backing": "BTC in Ceffu MPC custody, mirrored to Binance via MirrorX",
@@ -1637,9 +1703,13 @@
     ],
     "updated": "2026-10-27",
     "confidence": "high",
+    "mechanism": "basis-trade",
     "source": "curated"
   },
-  "BitFi USD::BFUSD": { "what": "BitFi USD stablecoin", "source": "derived" },
+  "BitFi USD::BFUSD": {
+    "what": "BitFi USD stablecoin",
+    "source": "derived"
+  },
   "BitFuFu xStock::FUFUX": {
     "what": "Backed tokenized stock · tracks BitFuFu",
     "source": "derived"
@@ -1740,7 +1810,6 @@
     "source": "curated"
   },
   "Bitway Core Alpha U::BTWU": {
-    "mechanism": "basis-trade",
     "what": "Bitway Core Alpha on U · off-chain CEX market-neutral basis trades, fixed payout rate",
     "body": "Bitway Core Alpha is a Bitway Earn staking vault on BNB Chain. BTWU is the vault token for deposits of U (United Stables' stablecoin). Most deposits go to custodial accounts (multisigs, regulated CEXs, third-party custodians) and are traded off-chain, mainly as market-neutral basis/funding trades. Yield is paid back into the vault at a fixed rate that raises the token's exchange rate, and Bitway keeps any surplus. Core Alpha has been marketed as a higher-rate tier, at times with zero-fee flash unstake.",
     "backing": "U stablecoin deposits held with custodians/CEXs",
@@ -1755,6 +1824,7 @@
     "updated": "2026-10-12",
     "confidence": "medium",
     "verify": "Bitway's docs do not say what makes Absolute Return different from Core Alpha. Yield is off-chain at CEX/custodians and paid into the vault at a fixed rate that Bitway sets (Bitway keeps any surplus), so this is custodial credit risk with no on-chain proof of the strategy.",
+    "mechanism": "basis-trade",
     "source": "curated"
   },
   "Bitway Core Alpha USD1::BTWUSD1": {
@@ -2149,7 +2219,10 @@
     "what": "PayTrie CAD stablecoin",
     "source": "derived"
   },
-  "CAD Coin::CADC": { "what": "PayTrie CAD stablecoin", "source": "derived" },
+  "CAD Coin::CADC": {
+    "what": "PayTrie CAD stablecoin",
+    "source": "derived"
+  },
   "CAD Coin::CADC::137::0": {
     "what": "Token denominated in CAD",
     "source": "derived"
@@ -2183,7 +2256,10 @@
     "what": "Coinbase tokenized stock · tracks CAVA Group, Inc.",
     "source": "derived"
   },
-  "CBBTC": { "what": "Coinbase wrapped bitcoin", "source": "curated" },
+  "CBBTC": {
+    "what": "Coinbase wrapped bitcoin",
+    "source": "curated"
+  },
   "CBETH": {
     "what": "Coinbase liquid-staked ETH",
     "mechanism": "staking",
@@ -2254,7 +2330,10 @@
     "what": "Backed tokenized stock · tracks CNA Financial",
     "source": "derived"
   },
-  "CNH Tether::CNHT": { "what": "Tether CNY stablecoin", "source": "derived" },
+  "CNH Tether::CNHT": {
+    "what": "Tether CNY stablecoin",
+    "source": "derived"
+  },
   "COP Minteo::COPM": {
     "what": "Token denominated in COP",
     "source": "derived"
@@ -2263,7 +2342,10 @@
     "what": "Backed tokenized stock · tracks COSCO SHIPPING",
     "source": "derived"
   },
-  "CRVUSD": { "what": "Curve stablecoin", "source": "curated" },
+  "CRVUSD": {
+    "what": "Curve stablecoin",
+    "source": "curated"
+  },
   "CSPC Pharmaceutical xStock::CSPCX": {
     "what": "Backed tokenized stock · tracks CSPC Pharmaceutical",
     "source": "derived"
@@ -2272,12 +2354,18 @@
     "what": "Backed tokenized stock · tracks CSX",
     "source": "derived"
   },
-  "CUSD": { "what": "Mento USD stablecoin", "source": "derived" },
+  "CUSD": {
+    "what": "Mento USD stablecoin",
+    "source": "derived"
+  },
   "CVS Health xStock::CVSX": {
     "what": "Backed tokenized stock · tracks CVS Health",
     "source": "derived"
   },
-  "CZUSD::CZUSD": { "what": "Czodiac USD stablecoin", "source": "derived" },
+  "CZUSD::CZUSD": {
+    "what": "Czodiac USD stablecoin",
+    "source": "derived"
+  },
   "Cadence Design Systems xStock::CDNSX": {
     "what": "Backed tokenized stock · tracks Cadence Design Systems",
     "source": "derived"
@@ -2302,7 +2390,10 @@
     "what": "Dinari tokenized stock · tracks Cantor Equity Partners I",
     "source": "derived"
   },
-  "Cap USD::CUSD": { "what": "Cap USD stablecoin", "source": "derived" },
+  "Cap USD::CUSD": {
+    "what": "Cap USD stablecoin",
+    "source": "derived"
+  },
   "Capital One (Ondo Tokenized Stock)::COFON": {
     "what": "Ondo tokenized stock · tracks Capital One",
     "source": "derived"
@@ -2440,7 +2531,10 @@
     "what": "Mento NGN stablecoin",
     "source": "derived"
   },
-  "Celo Real::CREAL": { "what": "Mento REAL stablecoin", "source": "derived" },
+  "Celo Real::CREAL": {
+    "what": "Mento REAL stablecoin",
+    "source": "derived"
+  },
   "Celo South African Rand::cZAR": {
     "what": "Mento ZAR stablecoin",
     "source": "derived"
@@ -2481,13 +2575,18 @@
     "what": "Robinhood tokenized stock · tracks Cerebras Systems",
     "source": "derived"
   },
-  "Chad USD::CUSD": { "what": "Token denominated in USD", "source": "derived" },
+  "Chad USD::CUSD": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "ChainLink Token::LINK": {
     "what": "Chainlink oracle network token",
     "body": "LINK is the native token of Chainlink, a decentralized oracle network that supplies price feeds, proof of reserve and cross-chain messaging (CCIP). It is used to pay node operators and for staking in Chainlink's staking program. It is bridged to many chains.",
     "backing": "none (utility token)",
     "issuer": "Chainlink",
-    "links": ["https://docs.chain.link/resources/link-token-contracts"],
+    "links": [
+      "https://docs.chain.link/resources/link-token-contracts"
+    ],
     "updated": "2026-10-06",
     "confidence": "high",
     "source": "curated"
@@ -2540,7 +2639,10 @@
     "what": "Coinbase tokenized stock · tracks Chewy, Inc.",
     "source": "derived"
   },
-  "Chilean Peso::WCLP": { "what": "Ripio CLP stablecoin", "source": "derived" },
+  "Chilean Peso::WCLP": {
+    "what": "Ripio CLP stablecoin",
+    "source": "derived"
+  },
   "China Construction Bank xStock::CCONBX": {
     "what": "Backed tokenized stock · tracks China Construction Bank",
     "source": "derived"
@@ -2788,7 +2890,10 @@
     "what": "Ondo tokenized stock · tracks Coca Cola Ondo Tokenized",
     "source": "derived"
   },
-  "Cod3x USD::CDXUSD": { "what": "Cod3x USD stablecoin", "source": "derived" },
+  "Cod3x USD::CDXUSD": {
+    "what": "Cod3x USD stablecoin",
+    "source": "derived"
+  },
   "Coeur Mining xStock::CDEX": {
     "what": "Backed tokenized stock · tracks Coeur Mining",
     "source": "derived"
@@ -2924,7 +3029,6 @@
     "source": "derived"
   },
   "Compounding Open Dollar::CUSDO": {
-    "mechanism": "treasuries",
     "what": "OpenEden wrapped USDO · tokenized T-bill funds (TBILL, BUIDL, USYC, VBILL)",
     "body": "cUSDO is the non-rebasing ERC-4626 wrapper of OpenEden's rebasing USDO stablecoin; yield shows up as a rising cUSDO price rather than daily rebases, and it earns the same as USDO. USDO reserves are tokenized short-term US Treasury and repo funds: OpenEden TBILL, BlackRock BUIDL (Securitize), VanEck VBILL and Circle/Hashnote USYC. Treasury interest is passed through to holders.",
     "backing": "USDO (tokenized T-bill and reverse-repo funds)",
@@ -2937,6 +3041,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "treasuries",
     "source": "curated"
   },
   "Concrete Decentralized Finance USDT::ctDefiUSDT": {
@@ -3196,8 +3301,14 @@
     "what": "Backed tokenized stock · tracks D.R. Horton",
     "source": "derived"
   },
-  "DAI": { "what": "Maker stablecoin", "source": "curated" },
-  "DAI::DAI": { "what": "Token denominated in USD", "source": "derived" },
+  "DAI": {
+    "what": "Maker stablecoin",
+    "source": "curated"
+  },
+  "DAI::DAI": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "DBIT Ethereum::SY-DBIT": {
     "what": "Pendle standardized wrapper (SY) of DBIT",
     "source": "derived"
@@ -3300,19 +3411,46 @@
     "source": "curated"
   },
   "DeFi Janus Henderson Anemoy AAA CLO Fund Token::deJAAA": {
-    "what": "Anemoy tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "Freely transferable DeFi wrapper of Anemoy's JAAA · AAA-rated CLO fund",
+    "body": "deJAAA is the DeFi share class of the Janus Henderson Anemoy AAA CLO Fund, issued through Centrifuge so that it can move between wallets and protocols without the allowlist the JAAA share itself enforces. It earns what the fund earns: floating-rate interest on AAA-rated collateralized loan obligation tranches. This is corporate credit, not government debt.",
+    "backing": "JAAA (AAA-rated CLO tranches)",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium",
+    "mechanism": "private-credit",
+    "source": "curated"
   },
   "DeFi Janus Henderson Anemoy AAA CLO Fund::DEJAAA": {
-    "what": "Anemoy tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "Freely transferable DeFi wrapper of Anemoy's JAAA · AAA-rated CLO fund",
+    "body": "deJAAA is the DeFi share class of the Janus Henderson Anemoy AAA CLO Fund, issued through Centrifuge so that it can move between wallets and protocols without the allowlist the JAAA share itself enforces. It earns what the fund earns: floating-rate interest on AAA-rated collateralized loan obligation tranches. This is corporate credit, not government debt.",
+    "backing": "JAAA (AAA-rated CLO tranches)",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium",
+    "mechanism": "private-credit",
+    "source": "curated"
   },
   "DeFi Janus Henderson Anemoy S&P500® Fund Token::DESPXA": {
-    "what": "Anemoy tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "DeFi wrapper of Anemoy's SPXA · tokenized S&P 500 index fund, moves with the index",
+    "body": "deSPXA is the DeFi share class of the Janus Henderson Anemoy S&P 500 Index Fund (SPXA), issued through its own Centrifuge pool for non-US holders. It tracks the S&P 500 and accumulates income inside the fund: it is a stock index position whose price goes up and down with the market, not a yield product.",
+    "backing": "SPXA (S&P 500 index fund shares)",
+    "yieldSource": null,
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as sub-manager)",
+    "links": [
+      "https://centrifuge.io/blog/despxa-on-base",
+      "https://centrifuge.io/blog/centrifuge-launches-spxa"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium",
+    "source": "curated"
   },
   "Decentralized Euro::DEURO": {
     "what": "dEURO EUR stablecoin",
@@ -3330,7 +3468,10 @@
     "what": "Backed tokenized stock · tracks Deckers Outdoor",
     "source": "derived"
   },
-  "Deel USD::DLUSD": { "what": "Deel USD stablecoin", "source": "derived" },
+  "Deel USD::DLUSD": {
+    "what": "Deel USD stablecoin",
+    "source": "derived"
+  },
   "Deere (Ondo Tokenized Stock)::DEON": {
     "what": "Ondo tokenized stock · tracks Deere",
     "source": "derived"
@@ -3576,7 +3717,10 @@
     "what": "Backed tokenized stock · tracks Dollar Tree",
     "source": "derived"
   },
-  "Dollar V3::FUSD": { "what": "Fuse USD stablecoin", "source": "derived" },
+  "Dollar V3::FUSD": {
+    "what": "Fuse USD stablecoin",
+    "source": "derived"
+  },
   "Dollar on Chain::DOC": {
     "what": "Money On Chain USD stablecoin",
     "source": "derived"
@@ -3668,7 +3812,10 @@
     "what": "Coinbase tokenized stock · tracks Dutch Bros Inc.",
     "source": "derived"
   },
-  "Dyad::DYAD": { "what": "DYAD USD stablecoin", "source": "derived" },
+  "Dyad::DYAD": {
+    "what": "DYAD USD stablecoin",
+    "source": "derived"
+  },
   "Dycom Industries xStock::DYX": {
     "what": "Backed tokenized stock · tracks Dycom Industries",
     "source": "derived"
@@ -3681,7 +3828,10 @@
     "what": "Backed tokenized stock · tracks Dynatrace",
     "source": "derived"
   },
-  "ECO CFA::eXOF": { "what": "Mento XOF stablecoin", "source": "derived" },
+  "ECO CFA::eXOF": {
+    "what": "Mento XOF stablecoin",
+    "source": "derived"
+  },
   "ELITE::ELIT": {
     "what": "Unverified token on Arbitrum",
     "body": "Unverified ERC-20 on Arbitrum named ELITE (ELIT), an upgradeable proxy with 10B supply and only 4 holders. No issuer, website or documentation could be found.",
@@ -3721,7 +3871,10 @@
     "what": "Backed tokenized stock · tracks EQT",
     "source": "derived"
   },
-  "ETH": { "what": "Ether", "source": "curated" },
+  "ETH": {
+    "what": "Ether",
+    "source": "curated"
+  },
   "ETH-Euler Prime Ethereum::SY-eWETH-2": {
     "what": "Pendle standardized wrapper (SY) of ETH-Euler Prime",
     "source": "derived"
@@ -3743,15 +3896,30 @@
     "what": "Société Générale euro stablecoin",
     "source": "curated"
   },
-  "EURA": { "what": "Angle EUR stablecoin", "source": "derived" },
-  "EURC": { "what": "Circle euro stablecoin", "source": "curated" },
-  "EURO3::EURO3": { "what": "3A DAO EUR stablecoin", "source": "derived" },
+  "EURA": {
+    "what": "Angle EUR stablecoin",
+    "source": "derived"
+  },
+  "EURC": {
+    "what": "Circle euro stablecoin",
+    "source": "curated"
+  },
+  "EURO3::EURO3": {
+    "what": "3A DAO EUR stablecoin",
+    "source": "derived"
+  },
   "EUROe Stablecoin::EUROE": {
     "what": "Membrane Finance EUR stablecoin",
     "source": "derived"
   },
-  "EURS": { "what": "STASIS EUR stablecoin", "source": "derived" },
-  "EURT": { "what": "Tether EUR stablecoin", "source": "derived" },
+  "EURS": {
+    "what": "STASIS EUR stablecoin",
+    "source": "derived"
+  },
+  "EURT": {
+    "what": "Tether EUR stablecoin",
+    "source": "derived"
+  },
   "EZETH": {
     "what": "Renzo liquid-restaked ETH",
     "mechanism": "restaking",
@@ -3764,7 +3932,9 @@
     "yieldSource": "SOL LST staking rewards from the SOL pool plus borrow fees paid by xBTC and xHYPE holders, after a treasury share",
     "redemption": null,
     "issuer": "Hylo",
-    "links": ["https://docs.hylo.so/protocol-overview/earn-pool"],
+    "links": [
+      "https://docs.hylo.so/protocol-overview/earn-pool"
+    ],
     "updated": "2026-10-08",
     "confidence": "medium",
     "source": "curated"
@@ -4111,8 +4281,14 @@
     "confidence": "high",
     "source": "curated"
   },
-  "FDUSD": { "what": "First Digital USD stablecoin", "source": "derived" },
-  "FEI": { "what": "Fei Protocol USD stablecoin", "source": "derived" },
+  "FDUSD": {
+    "what": "First Digital USD stablecoin",
+    "source": "derived"
+  },
+  "FEI": {
+    "what": "Fei Protocol USD stablecoin",
+    "source": "derived"
+  },
   "FGI Industries (ST0x Tokenized Stock)::WTFGI": {
     "what": "ST0x tokenized stock · tracks FGI Industries",
     "source": "derived"
@@ -4125,7 +4301,10 @@
     "what": "Robinhood tokenized stock · tracks Firefly Aerospace Inc.",
     "source": "derived"
   },
-  "FRAX": { "what": "Frax stablecoin", "source": "curated" },
+  "FRAX": {
+    "what": "Frax stablecoin",
+    "source": "curated"
+  },
   "FRAX-USDC Ethereum::SY-FRAXUSDC_CurveLP Convex": {
     "what": "Pendle standardized wrapper (SY) of FRAX-USDC",
     "source": "derived"
@@ -4135,7 +4314,10 @@
     "mechanism": "staking",
     "source": "derived"
   },
-  "FRXUSD": { "what": "Frax stablecoin", "source": "curated" },
+  "FRXUSD": {
+    "what": "Frax stablecoin",
+    "source": "curated"
+  },
   "FS KKR Capital (Dinari Tokenized Stock)::FSK": {
     "what": "Dinari tokenized stock · tracks FS KKR Capital",
     "source": "derived"
@@ -4207,7 +4389,10 @@
     "what": "Backed tokenized stock · tracks FedEx",
     "source": "derived"
   },
-  "Felix feUSD::FEUSD": { "what": "Felix USD stablecoin", "source": "derived" },
+  "Felix feUSD::FEUSD": {
+    "what": "Felix USD stablecoin",
+    "source": "derived"
+  },
   "Ferguson Enterprises xStock::FERGX": {
     "what": "Backed tokenized stock · tracks Ferguson Enterprises",
     "source": "derived"
@@ -4436,7 +4621,10 @@
     "what": "Ondo tokenized stock · tracks FormFactor",
     "source": "derived"
   },
-  "Forte AUD::AUDF": { "what": "Forte AUD stablecoin", "source": "derived" },
+  "Forte AUD::AUDF": {
+    "what": "Forte AUD stablecoin",
+    "source": "derived"
+  },
   "Fortinet Inc.::FTNT": {
     "what": "Robinhood tokenized stock · tracks Fortinet Inc.",
     "source": "derived"
@@ -4496,7 +4684,9 @@
     "yieldSource": "the ETF's bond-coupon distributions, reinvested via the multiplier",
     "redemption": "mint and redeem only for KYC'd non-US holders through Ondo; transfers are open",
     "issuer": "Ondo Global Markets",
-    "links": ["https://docs.ondo.finance/ondo-stocks/legal-and-regulatory.md"],
+    "links": [
+      "https://docs.ondo.finance/ondo-stocks/legal-and-regulatory.md"
+    ],
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "Principal is a junk-bond ETF price, not a dollar claim.",
@@ -4575,7 +4765,10 @@
     "what": "Backed tokenized stock · tracks Fundrise Innovation Fund, LLC",
     "source": "derived"
   },
-  "Fuse Dollar::fUSD": { "what": "Fuse USD stablecoin", "source": "derived" },
+  "Fuse Dollar::fUSD": {
+    "what": "Fuse USD stablecoin",
+    "source": "derived"
+  },
   "Fuse Dollar::fUSD::122::0": {
     "what": "Fuse USD stablecoin",
     "source": "derived"
@@ -4611,14 +4804,15 @@
     "yieldSource": null,
     "redemption": "redemption only for whitelisted parties; others sell on DEXes (the GAIB app charges a 10 bps sell fee)",
     "issuer": "GAIB",
-    "links": ["https://docs.gaib.ai/products/gaib-products/ai-dollar-aid.md"],
+    "links": [
+      "https://docs.gaib.ai/products/gaib-products/ai-dollar-aid.md"
+    ],
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "Upgradeable token with an EOA among its admins; reserve composition not verified.",
     "source": "curated"
   },
   "GAIB sAID::SAID": {
-    "mechanism": "private-credit",
     "what": "GAIB staked AID · financing for GPUs and AI infrastructure, 30-day FIFO exit",
     "body": "sAID is GAIB's ERC-4626 vault over its AID dollar. Its value tracks a portfolio of off-chain AI-infrastructure financings (GPU and robotics deals) plus a T-bill and stablecoin buffer; rewards arrive about monthly and vest over ~30 days, and an operator can declare an unrealized loss that lowers the exit rate. sAID holds almost all AID in existence. Unstaking queues the value for 30 days, after which anyone can process the queue, but only out of liquidity GAIB's operator recalls: on 2026-10-16 that was 995 AID against 1.07M queued.",
     "backing": "AID deployed into off-chain AI-infrastructure financings plus a T-bill/stablecoin buffer",
@@ -4632,6 +4826,7 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "Exit liquidity is operator-controlled (995 AID free vs 1.07M queued, Oct 2026); an EOA holds admin on both sAID and AID.",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "GE Aerospace xStock::GEX": {
@@ -4666,8 +4861,14 @@
     "what": "Backed tokenized stock · tracks GFL Environmental",
     "source": "derived"
   },
-  "GGUSD::GGUSD": { "what": "FSL USD stablecoin", "source": "derived" },
-  "GHO": { "what": "Aave stablecoin", "source": "curated" },
+  "GGUSD::GGUSD": {
+    "what": "FSL USD stablecoin",
+    "source": "derived"
+  },
+  "GHO": {
+    "what": "Aave stablecoin",
+    "source": "curated"
+  },
   "GHOUSR-gauge Ethereum::SY-Curve-GHOUSR": {
     "what": "Pendle standardized wrapper (SY) of GHOUSR-gauge",
     "source": "derived"
@@ -4692,14 +4893,26 @@
     "what": "Dinari tokenized stock",
     "source": "derived"
   },
-  "GRAI": { "what": "Gravita USD stablecoin", "source": "derived" },
+  "GRAI": {
+    "what": "Gravita USD stablecoin",
+    "source": "derived"
+  },
   "GRAIL-ARB CMLP Arbitrum::SY-ARB-GRAIL_Camelot": {
     "what": "Pendle standardized wrapper (SY) of GRAIL-ARB CMLP",
     "source": "derived"
   },
-  "GUSD": { "what": "Gemini USD stablecoin", "source": "derived" },
-  "GUSD::GUSD": { "what": "Token denominated in USD", "source": "derived" },
-  "GYEN": { "what": "GMO-Z.com Trust JPY stablecoin", "source": "derived" },
+  "GUSD": {
+    "what": "Gemini USD stablecoin",
+    "source": "derived"
+  },
+  "GUSD::GUSD": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
+  "GYEN": {
+    "what": "GMO-Z.com Trust JPY stablecoin",
+    "source": "derived"
+  },
   "Gains Network USDC::gUSDC": {
     "what": "gTrade USDC vault (Arbitrum) · counterparty to gTrade's leveraged traders",
     "body": "gUSDC is the ERC-4626 vault share behind gTrade, Gains Network's leveraged trading platform, on Arbitrum. The vault is the counterparty to every trade: it pays traders' profits, keeps their losses and earns a share of fees, so returns can turn negative for weeks. In October 2026 it showed about 4.3 % APR over 90 days but -9.5 % over 30 days, on about $4.1M.",
@@ -5057,7 +5270,9 @@
     "yieldSource": null,
     "redemption": "Redemptions against Ripe positions inside their redemption zone; the PSM redeem is allowlisted on Base and empty on Robinhood Chain; otherwise Curve pools",
     "issuer": "Ripe Protocol",
-    "links": ["https://docs.ripe.finance"],
+    "links": [
+      "https://docs.ripe.finance"
+    ],
     "updated": "2026-10-16",
     "confidence": "high",
     "verify": "About a quarter of circulating GREEN had no identified backing asset on 2026-10-15",
@@ -5123,7 +5338,10 @@
     "what": "Pendle standardized wrapper (SY) of HLPe",
     "source": "derived"
   },
-  "HOME::HOME": { "what": "Token denominated in USD", "source": "derived" },
+  "HOME::HOME": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "HP Inc. (Coinbase Tokenized Stock)::HPQC": {
     "what": "Coinbase tokenized stock · tracks HP Inc.",
     "source": "derived"
@@ -5136,8 +5354,14 @@
     "what": "Stable Universal USD stablecoin",
     "source": "derived"
   },
-  "HYDT::HYDT": { "what": "HYDT Protocol USD stablecoin", "source": "derived" },
-  "HYPE": { "what": "Hyperliquid native coin", "source": "curated" },
+  "HYDT::HYDT": {
+    "what": "HYDT Protocol USD stablecoin",
+    "source": "derived"
+  },
+  "HYPE": {
+    "what": "Hyperliquid native coin",
+    "source": "curated"
+  },
   "HYPE++ HyperEVM::SY-HYPE++": {
     "what": "Pendle standardized wrapper (SY) of HYPE++",
     "source": "derived"
@@ -5207,7 +5431,6 @@
     "source": "derived"
   },
   "Hastra AUTO::AUTO": {
-    "mechanism": "private-credit",
     "what": "Hastra staked wYLDS · funds near-prime US auto loans (Agora Data / Figure)",
     "body": "AUTO is a share token you get by staking wYLDS with Hastra. The staked capital funds a Democratized Prime pool of near-prime US consumer auto loans, originated by Agora Data and structured by Figure on Provenance. It does not rebase: its value in wYLDS rises, read from Chainlink Data Streams. It carries more credit risk than PRIME.",
     "backing": "near-prime US consumer auto loans (Agora Data originates, Figure structures), secured by the vehicles",
@@ -5220,6 +5443,7 @@
     ],
     "updated": "2026-10-08",
     "confidence": "high",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "Hastra PRIME::PRIME": {
@@ -5379,7 +5603,10 @@
     "what": "Backed tokenized stock · tracks Home Depot",
     "source": "derived"
   },
-  "Home::HOME": { "what": "HomeCoin USD stablecoin", "source": "derived" },
+  "Home::HOME": {
+    "what": "HomeCoin USD stablecoin",
+    "source": "derived"
+  },
   "Honest Abe::HA": {
     "what": "Unverified token on Ethereum",
     "body": "Unverified ERC-20 token on Ethereum named Honest Abe (HA). The contract source is not verified, it has 1,000,000 supply and only 2 holders, and no issuer, website or documentation could be found.",
@@ -5391,7 +5618,10 @@
     "verify": "Unidentified token: unverified contract, 2 holders, no price. Reported size is not credible.",
     "source": "curated"
   },
-  "Honey::HONEY": { "what": "Berachain USD stablecoin", "source": "derived" },
+  "Honey::HONEY": {
+    "what": "Berachain USD stablecoin",
+    "source": "derived"
+  },
   "Honeywell xStock::HONX": {
     "what": "Backed tokenized stock · tracks Honeywell",
     "source": "derived"
@@ -5483,7 +5713,9 @@
     "yieldSource": null,
     "redemption": "mint and redeem against the pool at flat, configurable fees",
     "issuer": "Hylo",
-    "links": ["https://docs.hylo.so/protocol-overview/xassets"],
+    "links": [
+      "https://docs.hylo.so/protocol-overview/xassets"
+    ],
     "updated": "2026-10-08",
     "confidence": "high",
     "source": "curated"
@@ -5495,7 +5727,10 @@
     "yieldSource": null,
     "redemption": "withdraw as a stake account (permissionless, 5 bps); instant SOL withdrawals are gated to Hylo",
     "issuer": "Hylo",
-    "links": ["https://docs.hylo.so", "https://docs.hylo.so/security/audits"],
+    "links": [
+      "https://docs.hylo.so",
+      "https://docs.hylo.so/security/audits"
+    ],
     "updated": "2026-10-17",
     "confidence": "high",
     "verify": "Not a yield token: 100 % epoch fee, so holders earn 0 % staking yield (points only).",
@@ -5507,7 +5742,9 @@
     "backing": "SOL staked to Hylo's validator",
     "yieldSource": "SOL staking rewards, 5–7 % (varies)",
     "issuer": "Hylo",
-    "links": ["https://docs.hylo.so"],
+    "links": [
+      "https://docs.hylo.so"
+    ],
     "updated": "2026-10-08",
     "confidence": "medium",
     "source": "curated"
@@ -5583,6 +5820,7 @@
     ],
     "updated": "2026-10-17",
     "confidence": "medium",
+    "mechanism": "perp-lp",
     "source": "curated"
   },
   "Hyperwave HYPE::hwHYPE": {
@@ -6061,7 +6299,10 @@
     "what": "Ondo tokenized stock · tracks JD com Ondo Tokenized",
     "source": "derived"
   },
-  "JEUR": { "what": "Token denominated in EUR", "source": "derived" },
+  "JEUR": {
+    "what": "Token denominated in EUR",
+    "source": "derived"
+  },
   "JPMorgan Chase (Dinari Tokenized Stock)::JPM": {
     "what": "Dinari tokenized stock · tracks JPMorgan Chase",
     "source": "derived"
@@ -6097,8 +6338,14 @@
     "verify": "Which validators the pool delegates to was not checked.",
     "source": "curated"
   },
-  "JPY Coin::JPYC": { "what": "JPYC JPY stablecoin", "source": "derived" },
-  "JPYC": { "what": "JPYC JPY stablecoin", "source": "derived" },
+  "JPY Coin::JPYC": {
+    "what": "JPYC JPY stablecoin",
+    "source": "derived"
+  },
+  "JPYC": {
+    "what": "JPYC JPY stablecoin",
+    "source": "derived"
+  },
   "JPYSC::JPYSC": {
     "what": "SBI Shinsei Trust & Banking JPY stablecoin",
     "source": "derived"
@@ -6186,19 +6433,52 @@
     "source": "curated"
   },
   "Janus Henderson Anemoy AAA CLO Fund::JAAA": {
-    "what": "Anemoy tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "Tokenized Janus Henderson AAA CLO fund (Centrifuge/Anemoy)",
+    "body": "JAAA is a permissioned token for shares of the Janus Henderson Anemoy AAA CLO Fund, issued through Anemoy on Centrifuge. Janus Henderson manages the portfolio of AAA-rated collateralized loan obligation tranches. The token's NAV rises as the portfolio's floating-rate interest is earned.",
+    "backing": "AAA-rated CLO tranches",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "redemption": "Subscriptions and redemptions in stablecoins for KYC'd, allowlisted investors via Centrifuge/Anemoy",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://www.anemoy.io/news/janus-henderson-anemoy-aaa-clo-onchain",
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "mechanism": "private-credit",
+    "source": "curated"
   },
   "Janus Henderson Anemoy AAA CLO Fund::JAAA::143::0": {
-    "what": "Anemoy tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "Tokenized Janus Henderson AAA CLO fund (Centrifuge/Anemoy)",
+    "body": "JAAA is a permissioned token for shares of the Janus Henderson Anemoy AAA CLO Fund, issued through Anemoy on Centrifuge. Janus Henderson manages the portfolio of AAA-rated collateralized loan obligation tranches. The token's NAV rises as the portfolio's floating-rate interest is earned.",
+    "backing": "AAA-rated CLO tranches",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "redemption": "Subscriptions and redemptions in stablecoins for KYC'd, allowlisted investors via Centrifuge/Anemoy",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://www.anemoy.io/news/janus-henderson-anemoy-aaa-clo-onchain",
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "mechanism": "private-credit",
+    "source": "curated"
   },
   "Janus Henderson Anemoy AAA CLO Fund::JAAA::43114::0": {
-    "what": "Anemoy tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "Tokenized Janus Henderson AAA CLO fund (Centrifuge/Anemoy)",
+    "body": "JAAA is a permissioned token for shares of the Janus Henderson Anemoy AAA CLO Fund, issued through Anemoy on Centrifuge. Janus Henderson manages the portfolio of AAA-rated collateralized loan obligation tranches. The token's NAV rises as the portfolio's floating-rate interest is earned.",
+    "backing": "AAA-rated CLO tranches",
+    "yieldSource": "Floating-rate interest on AAA CLO debt",
+    "redemption": "Subscriptions and redemptions in stablecoins for KYC'd, allowlisted investors via Centrifuge/Anemoy",
+    "issuer": "Anemoy / Centrifuge (Janus Henderson as manager)",
+    "links": [
+      "https://www.anemoy.io/news/janus-henderson-anemoy-aaa-clo-onchain",
+      "https://centrifuge.io/blog/centrifuge-janus-henderson-grove-tokenized-aaa-clo-fund"
+    ],
+    "updated": "2026-10-06",
+    "confidence": "high",
+    "mechanism": "private-credit",
+    "source": "curated"
   },
   "Janus Henderson Anemoy Treasury Fund Token::JTRSY": {
     "what": "Anemoy tokenized treasury fund",
@@ -6227,7 +6507,10 @@
     "what": "Backed tokenized stock · tracks Jersey Mike's Subs",
     "source": "derived"
   },
-  "Jigsaw USD::JUSD": { "what": "Jigsaw USD stablecoin", "source": "derived" },
+  "Jigsaw USD::JUSD": {
+    "what": "Jigsaw USD stablecoin",
+    "source": "derived"
+  },
   "Jito Staked SOL::JitoSOL": {
     "what": "Jito liquid-staked SOL · SPL stake pool with MEV rewards",
     "body": "JitoSOL is Jito's liquid staking token on the SPL Stake Pool program: deposited SOL is spread over about 670 validators chosen by StakeNet's on-chain rules, and staking plus MEV tip rewards raise JitoSOL against SOL (1.3070 SOL per JitoSOL on 2026-10-18, about 4.7 % APR after Jito's 4 % fee). It holds about 10.5M SOL. On chains other than Solana the token is a bridged representation of the Solana JitoSOL.",
@@ -6297,6 +6580,21 @@
     ],
     "updated": "2026-10-20",
     "confidence": "high",
+    "source": "curated"
+  },
+  "Jupiter Perps::JLP::solana": {
+    "what": "Jupiter perps liquidity pool · SOL, ETH, BTC and stablecoins, counterparty to traders",
+    "body": "JLP is the share of the pool that backs Jupiter's perpetual exchange on Solana. The pool holds SOL, ETH, BTC, USDC and USDT and is the other side of every trade: it earns most of the exchange's fees and gains what traders lose, and pays out what they win. Its price also moves with the coins it holds.",
+    "backing": "the pool's SOL, ETH, WBTC, USDC and USDT",
+    "yieldSource": "perp trading, borrow and swap fees, plus traders' net losses",
+    "redemption": "burn JLP for a pool asset at any time, for a fee that depends on pool weights",
+    "issuer": "Jupiter",
+    "links": [
+      "https://support.jup.ag/hc/en-us/articles/18484986045980-What-is-JLP"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium",
+    "mechanism": "perp-lp",
     "source": "curated"
   },
   "Jupiter Staked SOL::JupSOL::solana": {
@@ -6370,7 +6668,10 @@
     "what": "Backed tokenized stock · tracks KRAQ",
     "source": "derived"
   },
-  "KRW1::KRW1": { "what": "BDACS KRW stablecoin", "source": "derived" },
+  "KRW1::KRW1": {
+    "what": "BDACS KRW stablecoin",
+    "source": "derived"
+  },
   "KS2-RT Arbitrum::SY-Kyber Elastic axlWstEth-wstETH": {
     "what": "Pendle standardized wrapper (SY) of KS2-RT",
     "source": "derived"
@@ -6598,7 +6899,9 @@
     "body": "LINK is the native token of Chainlink, a decentralized oracle network that supplies price feeds, proof of reserve and cross-chain messaging (CCIP). It is used to pay node operators and for staking in Chainlink's staking program. It is bridged to many chains.",
     "backing": "none (utility token)",
     "issuer": "Chainlink",
-    "links": ["https://docs.chain.link/resources/link-token-contracts"],
+    "links": [
+      "https://docs.chain.link/resources/link-token-contracts"
+    ],
     "updated": "2026-10-06",
     "confidence": "high",
     "source": "curated"
@@ -6626,12 +6929,18 @@
     "mechanism": "staking",
     "source": "curated"
   },
-  "LUSD": { "what": "Liquity USD stablecoin", "source": "derived" },
+  "LUSD": {
+    "what": "Liquity USD stablecoin",
+    "source": "derived"
+  },
   "LUSD Stablecoin::LUSD": {
     "what": "Liquity USD stablecoin",
     "source": "derived"
   },
-  "LUSD::LUSD": { "what": "Token denominated in USD", "source": "derived" },
+  "LUSD::LUSD": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "LUSD::lUSD": {
     "what": "Linear Finance USD stablecoin",
     "source": "derived"
@@ -6664,7 +6973,10 @@
     "what": "Backed tokenized stock · tracks Las Vegas Sands",
     "source": "derived"
   },
-  "Last USD::USDXL": { "what": "HypurrFi USD stablecoin", "source": "derived" },
+  "Last USD::USDXL": {
+    "what": "HypurrFi USD stablecoin",
+    "source": "derived"
+  },
   "Lattice Semiconductor (Ondo Tokenized)::LSCCON": {
     "what": "Ondo tokenized stock · tracks Lattice Semiconductor",
     "source": "derived"
@@ -6693,7 +7005,10 @@
     "what": "Backed tokenized stock · tracks Leonardo DRS",
     "source": "derived"
   },
-  "Level USD::LVLUSD": { "what": "Level USD stablecoin", "source": "derived" },
+  "Level USD::LVLUSD": {
+    "what": "Level USD stablecoin",
+    "source": "derived"
+  },
   "Li Auto (Ondo Tokenized)::LION": {
     "what": "Ondo tokenized stock · tracks Li Auto",
     "source": "derived"
@@ -6742,7 +7057,10 @@
     "what": "Pendle standardized wrapper (SY) of Lido GGV",
     "source": "derived"
   },
-  "Lift Dollar::USDL": { "what": "Paxos USD stablecoin", "source": "derived" },
+  "Lift Dollar::USDL": {
+    "what": "Paxos USD stablecoin",
+    "source": "derived"
+  },
   "LightPath Technologies (Ondo Tokenized)::LPTHON": {
     "what": "Ondo tokenized stock · tracks LightPath Technologies",
     "source": "derived"
@@ -6880,12 +7198,18 @@
     "what": "Robinhood tokenized stock · tracks Lumentum",
     "source": "derived"
   },
-  "M by M0::M": { "what": "M0 USD stablecoin", "source": "derived" },
+  "M by M0::M": {
+    "what": "M0 USD stablecoin",
+    "source": "derived"
+  },
   "M&T Bank xStock::MTBX": {
     "what": "Backed tokenized stock · tracks M&T Bank",
     "source": "derived"
   },
-  "M::M": { "what": "M0 USD stablecoin", "source": "derived" },
+  "M::M": {
+    "what": "M0 USD stablecoin",
+    "source": "derived"
+  },
   "MACOM Technology Solutions Holdings (Ondo Tokenized)::MTSION": {
     "what": "Ondo tokenized stock · tracks MACOM Technology Solutions Holdings",
     "source": "derived"
@@ -6932,8 +7256,14 @@
     "what": "Backed tokenized stock · tracks MGM Resorts International",
     "source": "derived"
   },
-  "MIM": { "what": "Abracadabra USD stablecoin", "source": "derived" },
-  "MIM::MIM": { "what": "Token denominated in USD", "source": "derived" },
+  "MIM": {
+    "what": "Abracadabra USD stablecoin",
+    "source": "derived"
+  },
+  "MIM::MIM": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "MKS Inc. (Ondo Tokenized)::MKSION": {
     "what": "Ondo tokenized stock · tracks MKS Inc.",
     "source": "derived"
@@ -6950,7 +7280,10 @@
     "what": "MNEE USD stablecoin",
     "source": "derived"
   },
-  "MON": { "what": "Monad native coin", "source": "curated" },
+  "MON": {
+    "what": "Monad native coin",
+    "source": "curated"
+  },
   "MP Materials (Dinari Tokenized Stock)::MP": {
     "what": "Dinari tokenized stock · tracks MP Materials",
     "source": "derived"
@@ -6979,7 +7312,10 @@
     "what": "Backed tokenized stock · tracks MTR",
     "source": "derived"
   },
-  "MUSD": { "what": "mStable USD stablecoin", "source": "derived" },
+  "MUSD": {
+    "what": "mStable USD stablecoin",
+    "source": "derived"
+  },
   "MUXLP Arbitrum::SY-MUXLP": {
     "what": "Pendle standardized wrapper (SY) of MUXLP",
     "source": "derived"
@@ -6992,7 +7328,10 @@
     "what": "Ondo tokenized stock · tracks MYR Group",
     "source": "derived"
   },
-  "Macropod::AUDM": { "what": "Macropod AUD stablecoin", "source": "derived" },
+  "Macropod::AUDM": {
+    "what": "Macropod AUD stablecoin",
+    "source": "derived"
+  },
   "Madrigal Pharmaceuticals xStock::MDGLX": {
     "what": "Backed tokenized stock · tracks Madrigal Pharmaceuticals",
     "source": "derived"
@@ -7056,7 +7395,10 @@
     "mechanism": "staking",
     "source": "derived"
   },
-  "Mantle USD::mUSD": { "what": "Ondo USD stablecoin", "source": "derived" },
+  "Mantle USD::mUSD": {
+    "what": "Ondo USD stablecoin",
+    "source": "derived"
+  },
   "Marathon Petroleum xStock::MPCX": {
     "what": "Backed tokenized stock · tracks Marathon Petroleum",
     "source": "derived"
@@ -7180,7 +7522,10 @@
     "what": "Backed tokenized stock · tracks McKesson",
     "source": "derived"
   },
-  "Mead::MEAD": { "what": "RootsFi USD stablecoin", "source": "derived" },
+  "Mead::MEAD": {
+    "what": "RootsFi USD stablecoin",
+    "source": "derived"
+  },
   "Medline xStock::MDLNX": {
     "what": "Backed tokenized stock · tracks Medline",
     "source": "derived"
@@ -7193,7 +7538,10 @@
     "what": "Backed tokenized stock · tracks Medtronic",
     "source": "derived"
   },
-  "MegaUSD::USDM": { "what": "MegaETH USD stablecoin", "source": "derived" },
+  "MegaUSD::USDM": {
+    "what": "MegaETH USD stablecoin",
+    "source": "derived"
+  },
   "Meituan xStock::MEITX": {
     "what": "Backed tokenized stock · tracks Meituan",
     "source": "derived"
@@ -7248,8 +7596,14 @@
     "what": "Mento GBP stablecoin",
     "source": "derived"
   },
-  "Mento Dollar::USDm": { "what": "Mento USD stablecoin", "source": "derived" },
-  "Mento Euro::EURm": { "what": "Mento EUR stablecoin", "source": "derived" },
+  "Mento Dollar::USDm": {
+    "what": "Mento USD stablecoin",
+    "source": "derived"
+  },
+  "Mento Euro::EURm": {
+    "what": "Mento EUR stablecoin",
+    "source": "derived"
+  },
   "Mento Japanese Yen::JPYm": {
     "what": "Mento JPY stablecoin",
     "source": "derived"
@@ -7364,8 +7718,14 @@
     "what": "Tether MXN stablecoin",
     "source": "derived"
   },
-  "Mexican Peso::WMXN": { "what": "Ripio MXN stablecoin", "source": "derived" },
-  "Mezo USD::MUSD": { "what": "Mezo USD stablecoin", "source": "derived" },
+  "Mexican Peso::WMXN": {
+    "what": "Ripio MXN stablecoin",
+    "source": "derived"
+  },
+  "Mezo USD::MUSD": {
+    "what": "Mezo USD stablecoin",
+    "source": "derived"
+  },
   "Mezzanine Junior Hastra::mjHastra": {
     "what": "Mezzanine savings wrapper of wYLDS · earns its savings rate",
     "source": "derived"
@@ -7521,7 +7881,6 @@
     "source": "curated"
   },
   "Midas M1 USD Market Neutral::mM1-USD": {
-    "mechanism": "hedged-trading",
     "what": "Midas tokenized certificate · M1 Capital market-neutral USD strategy",
     "body": "mM1-USD is issued by Midas and tracks M1 Capital's market-neutral USD strategies, including price arbitrage, recursive lending and basis trading, with M1 Capital as risk manager. Returns accrue to the token NAV. Strata also offers senior and junior tranches built on mM1-USD.",
     "backing": "USDC deployed in market-neutral crypto strategies",
@@ -7534,6 +7893,7 @@
     ],
     "updated": "2026-10-06",
     "confidence": "medium",
+    "mechanism": "hedged-trading",
     "source": "curated"
   },
   "Midas Wellington Income Opportunities::MWIN": {
@@ -7552,9 +7912,19 @@
     "source": "curated"
   },
   "Midas mBASIS::MBASIS": {
-    "what": "Midas tokenized treasury fund",
-    "mechanism": "treasuries",
-    "source": "derived"
+    "what": "Midas tokenized certificate · delta-neutral basis trade, can rotate into mTBILL",
+    "body": "mBASIS is issued by Midas and tracks a delta-neutral basis strategy: spot crypto held against short perpetual futures, earning the funding rate. When funding turns against it the strategy can switch to a reverse basis trade or into mTBILL. Returns accrue to the token's NAV. It is not a Treasury fund, whatever its sibling mTBILL holds.",
+    "backing": "a managed basis-trade portfolio (spot against short perps), at times mTBILL",
+    "yieldSource": "perp funding and the spot-futures basis",
+    "redemption": "Midas-onboarded (KYC) holders via Midas; terms not confirmed",
+    "issuer": "Midas",
+    "links": [
+      "https://www.theblock.co/post/301070/tokenization-midas-yield-bearing-token-mbasis-ethena"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium",
+    "mechanism": "basis-trade",
+    "source": "curated"
   },
   "Midas mRe7YIELD::MRE7YIELD": {
     "what": "Midas USD stablecoin",
@@ -7764,12 +8134,18 @@
     "what": "Coinbase tokenized stock · tracks NANO Nuclear Energy Inc.",
     "source": "derived"
   },
-  "NECTAR::NECT": { "what": "Beraborrow USD stablecoin", "source": "derived" },
+  "NECTAR::NECT": {
+    "what": "Beraborrow USD stablecoin",
+    "source": "derived"
+  },
   "NECTAR::NECT::80094::0": {
     "what": "Token denominated in USD",
     "source": "derived"
   },
-  "NEXUS::NEX": { "what": "Token denominated in USD", "source": "derived" },
+  "NEXUS::NEX": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "NGI+ Ethereum::SY-NGI+": {
     "what": "Pendle standardized wrapper (SY) of NGI+",
     "source": "derived"
@@ -7923,7 +8299,6 @@
     "source": "derived"
   },
   "Nest BlackOpal LiquidStone II Vault::nOPAL": {
-    "mechanism": "private-credit",
     "what": "Nest vault share · BlackOpal LiquidStone II, Brazilian card receivables",
     "body": "nOPAL is a Nest (Plume Vaults) share token. The vault takes USDC and holds BlackOpal's LiquidStone II fund, which buys short-dated Brazilian credit-card receivables and hedges the currency back to the dollar; about 96 % sits in LiquidStone, the rest in a Nest treasury vault and cash. Interest builds up in the token's price; nothing is paid out. It moves between EVM chains as one LayerZero token and is also issued on Solana.",
     "backing": "BlackOpal LiquidStone II (FX-hedged Brazilian credit-card receivables), a Nest treasury vault, cash",
@@ -7938,6 +8313,7 @@
     ],
     "updated": "2026-10-08",
     "confidence": "medium",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "Nest BlackRock iShares AAA CLO Active ETF Vault::nCLOA": {
@@ -8070,7 +8446,10 @@
     "what": "Backed tokenized stock · tracks NextEra Energy",
     "source": "derived"
   },
-  "Nexus::NEX": { "what": "Token denominated in USD", "source": "derived" },
+  "Nexus::NEX": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "NiSource xStock::NIX": {
     "what": "Backed tokenized stock · tracks NiSource",
     "source": "derived"
@@ -8111,7 +8490,10 @@
     "what": "Backed tokenized stock · tracks Nongfu Spring",
     "source": "derived"
   },
-  "Noon USN::USN": { "what": "Noon USD stablecoin", "source": "derived" },
+  "Noon USN::USN": {
+    "what": "Noon USD stablecoin",
+    "source": "derived"
+  },
   "Nordic American Tankers (Ondo Tokenized)::NATON": {
     "what": "Ondo tokenized stock · tracks Nordic American Tankers",
     "source": "derived"
@@ -8140,7 +8522,10 @@
     "what": "Ondo tokenized stock · tracks Nova",
     "source": "derived"
   },
-  "Nova USD::USDN": { "what": "Token denominated in USD", "source": "derived" },
+  "Nova USD::USDN": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "Novatti Australian Digital Dollar::AUDD": {
     "what": "Novatti AUD stablecoin",
     "source": "derived"
@@ -8238,7 +8623,10 @@
     "mechanism": "staking",
     "source": "derived"
   },
-  "OUSD": { "what": "Origin USD stablecoin", "source": "derived" },
+  "OUSD": {
+    "what": "Origin USD stablecoin",
+    "source": "derived"
+  },
   "Oaktree Specialty Lending (Dinari Tokenized Stock)::OCSL": {
     "what": "Dinari tokenized stock · tracks Oaktree Specialty Lending",
     "source": "derived"
@@ -8304,7 +8692,6 @@
     "source": "derived"
   },
   "OnRe Tokenized Reinsurance::ONyc": {
-    "mechanism": "reinsurance",
     "what": "OnRe ONyc · share of a Bermuda reinsurance fund, dollar NAV set by OnRe",
     "body": "ONyc is a share of OnRe's Bermuda reinsurance fund. The fund writes reinsurance contracts and holds stablecoin collateral against them; the premiums plus the collateral's yield accrue as a rising dollar NAV per ONyc. This is reinsurance risk, not a dollar deposit: a covered catastrophe is paid out of the fund and writes the NAV down, and the NAV is OnRe's own published figure over an off-chain book. OnRe keeps a freeze authority over the token.",
     "backing": "reinsurance contracts and the stablecoin collateral held against them",
@@ -8316,6 +8703,7 @@
     ],
     "updated": "2026-10-27",
     "confidence": "medium",
+    "mechanism": "reinsurance",
     "source": "curated"
   },
   "Ondas Holdings (Ondo Tokenized)::ONDSON": {
@@ -8327,7 +8715,6 @@
     "source": "derived"
   },
   "Ondo Short-Term US Government Treasuries::OUSG": {
-    "mechanism": "treasuries",
     "what": "Ondo tokenized short-term US Treasury fund",
     "body": "OUSG is a token from Ondo Finance representing shares in a fund that holds short-term US Treasuries, mostly through tokenized money-market and Treasury funds such as BlackRock's BUIDL. Treasury interest builds up in the token's price.",
     "backing": "Short-term US Treasuries (via funds such as BUIDL) and cash",
@@ -8340,6 +8727,7 @@
     ],
     "updated": "2026-10-06",
     "confidence": "high",
+    "mechanism": "treasuries",
     "source": "curated"
   },
   "Ondo U.S. Dollar Token::USDON": {
@@ -8439,7 +8827,10 @@
     "mechanism": "staking",
     "source": "curated"
   },
-  "Orki USDK::USDK": { "what": "Orki USD stablecoin", "source": "derived" },
+  "Orki USDK::USDK": {
+    "what": "Orki USD stablecoin",
+    "source": "derived"
+  },
   "Oscar Health (Ondo Tokenized)::OSCRON": {
     "what": "Ondo tokenized stock · tracks Oscar Health",
     "source": "derived"
@@ -8492,7 +8883,10 @@
     "what": "Tempo native coin · dollar-priced",
     "source": "curated"
   },
-  "PAXG": { "what": "Paxos gold", "source": "curated" },
+  "PAXG": {
+    "what": "Paxos gold",
+    "source": "curated"
+  },
   "PAXGy X::SY-PAXGy": {
     "what": "Pendle standardized wrapper (SY) of PAXGy",
     "source": "derived"
@@ -8545,7 +8939,10 @@
     "what": "Ondo tokenized ETF · tracks PIMCO 0-5 Year High Yield Corporate Bond Index ETF (Ondo Tok",
     "source": "derived"
   },
-  "PLUME": { "what": "Plume native coin", "source": "curated" },
+  "PLUME": {
+    "what": "Plume native coin",
+    "source": "curated"
+  },
   "PLUS Korea Defense Industry Index ETF (Dinari Tokenized ETF)::KDEF": {
     "what": "Dinari tokenized ETF · tracks PLUS Korea Defense Industry Index ETF",
     "source": "derived"
@@ -9841,7 +10238,8 @@
   "PT apyUSD (apxUSD) Ethereum::PT-apyUSD-11FEB2027": {
     "what": "Pendle principal token on apyUSD · redeems for apxUSD on 11 Feb 2027 · fixed rate",
     "source": "derived",
-    "mechanism": "dividends"
+    "mechanism": "dividends",
+    "mechanismOf": "STRC"
   },
   "PT apyUSD (apxUSD) Ethereum::PT-apyUSD-18JUN2026": {
     "what": "Pendle principal token on apyUSD · matured 18 Jun 2026",
@@ -9870,7 +10268,8 @@
   "PT apyUSD (apxUSD) Monad::PT-apyUSD-24DEC2026": {
     "what": "Pendle principal token on apyUSD · redeems for apxUSD on 24 Dec 2026 · fixed rate",
     "source": "derived",
-    "mechanism": "dividends"
+    "mechanism": "dividends",
+    "mechanismOf": "STRC"
   },
   "PT asBNB (BNB) BNB::PT-asBNB-24JUL2025": {
     "what": "Pendle principal token on asBNB · matured 24 Jul 2025",
@@ -10071,7 +10470,7 @@
   "PT deJAAA (USDC) Base::PT-deJAAA-26NOV2026": {
     "what": "Pendle principal token on deJAAA · redeems for USDC on 26 Nov 2026 · fixed rate",
     "source": "derived",
-    "mechanism": "treasuries"
+    "mechanism": "private-credit"
   },
   "PT deJAAA (USDC) Base::PT-deJAAA-26NOV2026::8453::0": {
     "what": "Pendle principal token on deJAAA · redeems for USDC on 26 Nov 2026 · fixed rate",
@@ -11590,7 +11989,7 @@
   "PT sUSDu (USDu) BNB::PT-sUSDu-31DEC2026": {
     "what": "Pendle principal token on sUSDu · redeems for USDu on 31 Dec 2026 · fixed rate",
     "source": "derived",
-    "mechanism": "hedged-trading"
+    "mechanism": "perp-lp"
   },
   "PT sUSDx (USDx) Ethereum::PT-sUSDx-3DEC2026": {
     "what": "Pendle principal token on sUSDx · redeems for USDx on 3 Dec 2026 · fixed rate",
@@ -12919,7 +13318,10 @@
     "mechanism": "staking",
     "source": "derived"
   },
-  "PUSO::PUSO": { "what": "Mento PHP stablecoin", "source": "derived" },
+  "PUSO::PUSO": {
+    "what": "Mento PHP stablecoin",
+    "source": "derived"
+  },
   "PXDC Stablecoin::PXDC": {
     "what": "POWERCITY USD stablecoin",
     "source": "derived"
@@ -12957,7 +13359,10 @@
     "what": "Backed tokenized stock · tracks Palantir",
     "source": "derived"
   },
-  "Palm USD::PUSD": { "what": "Palm USD stablecoin", "source": "derived" },
+  "Palm USD::PUSD": {
+    "what": "Palm USD stablecoin",
+    "source": "derived"
+  },
   "Palo Alto Networks (Ondo Tokenized Stock)::PANWON": {
     "what": "Ondo tokenized stock · tracks Palo Alto Networks Ondo Tokenized",
     "source": "derived"
@@ -12999,7 +13404,10 @@
     "what": "Parallel USD stablecoin",
     "source": "derived"
   },
-  "Parallel::PAR": { "what": "Parallel EUR stablecoin", "source": "derived" },
+  "Parallel::PAR": {
+    "what": "Parallel EUR stablecoin",
+    "source": "derived"
+  },
   "Pareto AA Tranche - FalconXUSDC::AA_FalconXUSDC": {
     "what": "Pareto credit vault senior tranche · USDC loan to FalconX",
     "body": "AA_FalconXUSDC is the senior (AA) tranche token of Pareto's FalconX Credit Vault, where deposited USDC is lent to the prime broker FalconX. M11 Credit (Maven 11) curates the vault, handles credit checks and covenants, and runs the monthly epochs. Interest from FalconX accrues into the token's NAV. The junior BB tranche has reportedly never been funded, so the AA tranche has no first-loss buffer in practice.",
@@ -13049,9 +13457,11 @@
     "what": "Token denominated in USD",
     "source": "derived"
   },
-  "Paxos Gold::PAXG": { "what": "Paxos tokenized gold", "source": "derived" },
+  "Paxos Gold::PAXG": {
+    "what": "Paxos tokenized gold",
+    "source": "derived"
+  },
   "PayFi Strategy Token::PST": {
-    "mechanism": "private-credit",
     "what": "Huma Finance PayFi LP token · USDC lent to payment financing",
     "body": "PST is Huma Finance's yield-bearing LP token, minted when USDC is supplied to Huma's Classic mode; it originated on Solana and is also issued on Ethereum. Deposited USDC funds short-term real-world payment financing (PayFi), such as pre-funding of cross-border payments, and yield accrues to the token in USDC terms.",
     "backing": "payment financing receivables (private credit)",
@@ -13064,6 +13474,7 @@
     ],
     "updated": "2026-10-06",
     "confidence": "medium",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "PayPal (Ondo Tokenized Stock)::PYPLON": {
@@ -13074,7 +13485,10 @@
     "what": "Coinbase tokenized stock · tracks PayPal Holdings, Inc.",
     "source": "derived"
   },
-  "PayPal USD::PYUSD": { "what": "PayPal stablecoin", "source": "curated" },
+  "PayPal USD::PYUSD": {
+    "what": "PayPal stablecoin",
+    "source": "curated"
+  },
   "PayPal USD::PYUSD::42161::0": {
     "what": "PayPal USD stablecoin",
     "source": "derived"
@@ -13151,7 +13565,10 @@
     "what": "Robinhood tokenized stock · tracks Permian Resources",
     "source": "derived"
   },
-  "Peruvian Sol::WPEN": { "what": "Ripio PEN stablecoin", "source": "derived" },
+  "Peruvian Sol::WPEN": {
+    "what": "Ripio PEN stablecoin",
+    "source": "derived"
+  },
   "Peso Argentino::wARS": {
     "what": "Ripio ARS stablecoin",
     "source": "derived"
@@ -13210,7 +13627,10 @@
     "verify": "Which validators the pool delegates to was not checked.",
     "source": "curated"
   },
-  "Phase Dollar::CASH": { "what": "Phase USD stablecoin", "source": "derived" },
+  "Phase Dollar::CASH": {
+    "what": "Phase USD stablecoin",
+    "source": "derived"
+  },
   "Philip Morris International Inc. (Coinbase Tokenized Stock)::PMC": {
     "what": "Coinbase tokenized stock · tracks Philip Morris International Inc.",
     "source": "derived"
@@ -13223,7 +13643,10 @@
     "what": "Backed tokenized stock · tracks Phillips 66",
     "source": "derived"
   },
-  "PicWe_USDC::WEUSD": { "what": "PicWe USD stablecoin", "source": "derived" },
+  "PicWe_USDC::WEUSD": {
+    "what": "PicWe USD stablecoin",
+    "source": "derived"
+  },
   "Ping An Insurance Group Co. of China xStock::PICOX": {
     "what": "Backed tokenized stock · tracks Ping An Insurance Group Co. of China",
     "source": "derived"
@@ -13244,7 +13667,10 @@
     "what": "Backed tokenized stock · tracks Pinterest",
     "source": "derived"
   },
-  "Pinto::PINTO": { "what": "Pinto USD stablecoin", "source": "derived" },
+  "Pinto::PINTO": {
+    "what": "Pinto USD stablecoin",
+    "source": "derived"
+  },
   "Planet Fitness, Inc. (Coinbase Tokenized Stock)::PLNTC": {
     "what": "Coinbase tokenized stock · tracks Planet Fitness, Inc.",
     "source": "derived"
@@ -13314,7 +13740,10 @@
     "what": "Plume USD · USDC-backed stablecoin",
     "source": "curated"
   },
-  "Plume::PLUME": { "what": "Plume native coin", "source": "curated" },
+  "Plume::PLUME": {
+    "what": "Plume native coin",
+    "source": "curated"
+  },
   "Polymarket USD::pUSD": {
     "what": "Polymarket USD stablecoin",
     "source": "derived"
@@ -13756,8 +14185,14 @@
     "what": "Backed tokenized stock · tracks Quest Diagnostics",
     "source": "derived"
   },
-  "Quill USDQ::USDQ": { "what": "Quill USD stablecoin", "source": "derived" },
-  "R Stablecoin::R": { "what": "Raft USD stablecoin", "source": "derived" },
+  "Quill USDQ::USDQ": {
+    "what": "Quill USD stablecoin",
+    "source": "derived"
+  },
+  "R Stablecoin::R": {
+    "what": "Raft USD stablecoin",
+    "source": "derived"
+  },
   "RB Global xStock::RBAX": {
     "what": "Backed tokenized stock · tracks RB Global",
     "source": "derived"
@@ -13779,7 +14214,10 @@
     "what": "Ondo tokenized stock · tracks REalloys",
     "source": "derived"
   },
-  "RGUSD": { "what": "Reserve USD stablecoin", "source": "derived" },
+  "RGUSD": {
+    "what": "Reserve USD stablecoin",
+    "source": "derived"
+  },
   "RIF US Dollar::USDRIF": {
     "what": "RIF on Chain USD stablecoin",
     "source": "derived"
@@ -13867,7 +14305,6 @@
     "source": "derived"
   },
   "Re Protocol reUSD::REUSD": {
-    "mechanism": "reinsurance",
     "what": "Re senior reinsurance tranche · SOFR or sUSDe rate + 2.5%, price accrues",
     "body": "reUSD is the senior tranche of Re, an on-chain reinsurance marketplace. Capital that funds Re's partner reinsurers, held as admitted collateral in a Regulation 114 trust, earns SOFR + 250 bps; capital kept on-chain earns the 7-day trailing sUSDe rate + 250 bps. It does not rebase: the price is reset daily at 00:00 UTC, by at most 50 bps per update. Underwriting losses hit the reinsurer's own equity first, then reUSDe, and reUSD last.",
     "backing": "reinsurance collateral in a Regulation 114 trust (attested daily by The Network Firm via Chainlink) + on-chain stablecoins",
@@ -13881,14 +14318,21 @@
     ],
     "updated": "2026-10-16",
     "confidence": "high",
+    "mechanism": "reinsurance",
     "source": "curated"
   },
   "Re7LRT Ethereum::SY-Re7LRT": {
     "what": "Pendle standardized wrapper (SY) of Re7LRT",
     "source": "derived"
   },
-  "Real MXN::MXNE": { "what": "Token denominated in MXN", "source": "derived" },
-  "Real USD::USDR": { "what": "Tangible USD stablecoin", "source": "derived" },
+  "Real MXN::MXNE": {
+    "what": "Token denominated in MXN",
+    "source": "derived"
+  },
+  "Real USD::USDR": {
+    "what": "Tangible USD stablecoin",
+    "source": "derived"
+  },
   "Realty Income xStock::OX": {
     "what": "Backed tokenized stock · tracks Realty Income",
     "source": "derived"
@@ -14000,11 +14444,22 @@
     "what": "Backed tokenized stock · tracks ResMed",
     "source": "derived"
   },
-  "Reserve::RSV": { "what": "Reserve USD stablecoin", "source": "derived" },
-  "Reservoir rUSD::RUSD": {
-    "what": "Reservoir tokenized reinsurance",
-    "mechanism": "reinsurance",
+  "Reserve::RSV": {
+    "what": "Reserve USD stablecoin",
     "source": "derived"
+  },
+  "Reservoir rUSD::RUSD": {
+    "what": "Reservoir dollar stablecoin · earns nothing itself; srUSD and wsrUSD are its savings",
+    "body": "rUSD is Reservoir's dollar stablecoin, backed by the protocol's balance sheet of real-world and on-chain assets and held to $1 by a peg stability module. Holding rUSD pays nothing: the balance sheet's income goes to the savings tokens srUSD and wsrUSD.",
+    "backing": "Reservoir's balance sheet (RWA, lending vaults, stablecoins via the PSM)",
+    "yieldSource": null,
+    "issuer": "Reservoir",
+    "links": [
+      "https://reservoir.beehiiv.com/p/what-is-reservoir"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "medium",
+    "source": "curated"
   },
   "Reservoir srUSD::SRUSD": {
     "what": "Reservoir savings rUSD · RWA credit, DeFi money markets + crypto-backed loans",
@@ -14021,7 +14476,10 @@
     "confidence": "medium",
     "source": "curated"
   },
-  "Resolv USD::USR": { "what": "Resolv USD stablecoin", "source": "derived" },
+  "Resolv USD::USR": {
+    "what": "Resolv USD stablecoin",
+    "source": "derived"
+  },
   "Resolv wstUSR::WSTUSR": {
     "what": "Resolv wrapped staked USR · ETH staking + perp-short funding, in recovery",
     "body": "wstUSR is the non-rebasing wrapper of stUSR, Resolv's staked USR, and its value rises against USR. USR was backed by a delta-neutral pool of staked ETH (wstETH and others) and BTC hedged with short perps; staking rewards and funding were split between stUSR and the junior RLP tranche, with RLP taking a risk premium and absorbing losses. On 22 March 2026 a compromised minting key let an attacker mint about 80M unbacked USR; Resolv paused, and its May 2026 recovery plan paid 1 USDC per pre-incident USR (0.5 for post-incident) with claims open until 26 August 2026.",
@@ -14105,7 +14563,10 @@
     "what": "Robinhood tokenized stock · tracks Rigetti Computing",
     "source": "derived"
   },
-  "Rings scUSD::SCUSD": { "what": "Rings USD stablecoin", "source": "derived" },
+  "Rings scUSD::SCUSD": {
+    "what": "Rings USD stablecoin",
+    "source": "derived"
+  },
   "Riot Platforms (Dinari Tokenized Stock)::RIOT": {
     "what": "Dinari tokenized stock · tracks Riot Platforms",
     "source": "derived"
@@ -14135,7 +14596,10 @@
     "confidence": "high",
     "source": "curated"
   },
-  "Ripple USD::RLUSD": { "what": "Ripple stablecoin", "source": "curated" },
+  "Ripple USD::RLUSD": {
+    "what": "Ripple stablecoin",
+    "source": "curated"
+  },
   "Rivian Automotive (Ondo Tokenized)::RIVNON": {
     "what": "Ondo tokenized stock · tracks Rivian Automotive",
     "source": "derived"
@@ -14307,14 +14771,16 @@
     "yieldSource": "apyUSD yield plus the senior risk premium, net of losses absorbed",
     "redemption": "request through Royco's EntryPoint, wait 1 day, execute; paid in apyUSD at request-time NAV; limited by senior coverage",
     "issuer": "Royco",
-    "links": ["https://tradingstrategy.ai/vaults/protocols/royco"],
+    "links": [
+      "https://tradingstrategy.ai/vaults/protocols/royco"
+    ],
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "First-loss and already impaired: ~0.87 per share in Oct 2026 vs 1.02 in Jun 2026; principal can fall further.",
     "source": "curated"
   },
   "Royco Senior Tranche apyUSD::ROY-ST-apyUSD": {
-    "mechanism": "dividends",
+    "mechanismOf": "STRC",
     "what": "Royco senior tranche on apyUSD · protected share of yield, junior takes losses first",
     "body": "ROY-ST-apyUSD is the senior tranche of Royco V2's apyUSD market. It holds apyUSD, earns apyUSD's yield minus a premium paid to the junior tranche (ROY-JT), and is covered by that junior up to its size, about 28 % of the pool in October 2026. Its NAV is in dollars: apyUSD's share price times a Chainlink 'APXUSD / USD Exchange Rate' feed that reads 1.0, so an apxUSD market depeg is not marked. Senior deposits are capped by coverage. Exits pay apyUSD at the NAV of the request, so the day's yield while waiting is forfeited, and apyUSD's own exit takes 3-20 more days.",
     "backing": "apyUSD (Apyx, backed by apxUSD), protected by the junior tranche",
@@ -14328,6 +14794,7 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "The tranche can seize shares and blacklist accounts (role holder unverified); its oracle does not mark an apxUSD depeg.",
+    "mechanism": "dividends",
     "source": "curated"
   },
   "Rubrik xStock::RBRKX": {
@@ -14384,17 +14851,19 @@
     "source": "derived"
   },
   "SDAI": {
-    "mechanism": "lending",
     "what": "Sky savings DAI (legacy DSR) · RWA T-bills + crypto-collateral loan fees",
     "body": "sDAI is an ERC-4626 wrapper of DAI deposited in Sky's Dai Savings Rate (DSR) Pot contract; its exchange rate rises as the DSR accrues. The DSR is funded from the same Sky revenue as the Sky Savings Rate (stability fees on crypto-collateral loans plus RWA/T-bill allocations), but governance sets it separately and it has generally been kept below the SSR since the DAI-to-USDS migration. DAI in the Pot is not lent out.",
     "backing": "DAI held in Sky's DSR (Pot) contract",
     "yieldSource": "Sky revenue: stability fees on crypto-collateral loans and RWA/T-bill allocations",
     "redemption": "permissionless, instant redeem to DAI at current exchange rate",
     "issuer": "Sky (formerly MakerDAO); token deployed via Spark",
-    "links": ["https://docs.spark.finance/dev/savings/sdai-token"],
+    "links": [
+      "https://docs.spark.finance/dev/savings/sdai-token"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
     "verify": "Legacy product: most savings capital has moved to sUSDS and the DSR is set separately (lower) than the SSR.",
+    "mechanism": "lending",
     "source": "curated"
   },
   "SEI Investments xStock::SEICX": {
@@ -14474,7 +14943,10 @@
     "what": "Backed tokenized ETF · tracks SNDK 2x Long ETF",
     "source": "derived"
   },
-  "SOL": { "what": "Solana native coin", "source": "curated" },
+  "SOL": {
+    "what": "Solana native coin",
+    "source": "curated"
+  },
   "SOLVBTC.ENA": {
     "what": "Solv liquid-staked BTC",
     "mechanism": "staking",
@@ -14558,8 +15030,14 @@
     "what": "Backed tokenized stock · tracks SS&C Technologies",
     "source": "derived"
   },
-  "STAR Token::STAR": { "what": "Preon USD stablecoin", "source": "derived" },
-  "STAR::STAR": { "what": "Preon USD stablecoin", "source": "derived" },
+  "STAR Token::STAR": {
+    "what": "Preon USD stablecoin",
+    "source": "derived"
+  },
+  "STAR::STAR": {
+    "what": "Preon USD stablecoin",
+    "source": "derived"
+  },
   "STASIS EURS Token::EURS": {
     "what": "STASIS EUR stablecoin",
     "source": "derived"
@@ -14630,7 +15108,10 @@
     "what": "Backed tokenized stock · tracks SUI",
     "source": "derived"
   },
-  "SUSD": { "what": "Synthetix USD stablecoin", "source": "derived" },
+  "SUSD": {
+    "what": "Synthetix USD stablecoin",
+    "source": "derived"
+  },
   "SUSDA": {
     "what": "Avalon savings USDa · USDa deposited at Avalon's protocol-set target rate (~4 %)",
     "body": "sUSDa is Avalon Labs' savings token for USDa, Avalon's CeDeFi stablecoin minted against bitcoin collateral. Its value in USDa rises through Avalon's savings account, whose on-chain target APR was 4 % in October 2026 (1 sUSDa ≈ 1.132 USDa); the yield comes from USDa borrowing fees and Avalon's lending revenue. The same token runs on 13 chains under one group; Ethereum held about 516k sUSDa.",
@@ -14648,7 +15129,6 @@
     "source": "curated"
   },
   "SUSDE": {
-    "mechanism": "basis-trade",
     "what": "Ethena staked USDe · earns perp funding/basis + staked-ETH and reserve yield",
     "body": "sUSDe is Ethena's non-rebasing ERC-4626 vault for USDe; protocol revenue is periodically added to the vault, raising the exchange rate. USDe is backed by crypto assets (BTC, ETH, staked ETH) hedged with short perpetual/futures positions, plus stablecoins and short-duration RWAs. Yield comes from funding and basis spreads on the hedges, staked-ETH rewards and income on the stable reserves; when funding is negative stakers may receive nothing and the reserve fund absorbs losses.",
     "backing": "USDe (delta-hedged BTC/ETH/staked ETH + stablecoins and short-duration RWAs)",
@@ -14661,6 +15141,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "basis-trade",
     "source": "curated"
   },
   "SUSDX": {
@@ -14761,7 +15242,6 @@
     "source": "derived"
   },
   "SYRUPUSDC": {
-    "mechanism": "private-credit",
     "what": "Maple lending pool of USDC · overcollateralized loans to crypto institutions",
     "body": "syrupUSDC is the ERC-4626 LP token of Maple's Syrup USDC pool; interest accrues to the share price. Maple Direct lends the pool's USDC to crypto-native institutions that post liquid digital assets as collateral, monitored for collateralization, and also deploys capital into futures basis (cash-and-carry) trades and DeFi liquidity provision. Losses from borrower defaults would be borne by the pool.",
     "backing": "USDC loans to institutions, collateralized by liquid crypto",
@@ -14774,6 +15254,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "SYRUPUSDG": {
@@ -14879,7 +15360,6 @@
     "source": "derived"
   },
   "Saturn sUSDat::SUSDAT": {
-    "mechanism": "dividends",
     "mechanismOf": "STRC",
     "what": "Saturn staked USDat · yield from Strategy STRC preferred dividends",
     "body": "sUSDat is the staked, yield-bearing version of USDat, Saturn's dollar token whose reserves target M0's M (tokenized US Treasuries). When USDat is staked, Saturn moves the backing into STRC (Strategy's preferred stock) exposure, so sUSDat earns STRC dividends and also carries STRC price risk. Yield accrues through a rising sUSDat/USDat exchange rate.",
@@ -14894,6 +15374,7 @@
     ],
     "updated": "2026-10-06",
     "confidence": "medium",
+    "mechanism": "dividends",
     "source": "curated"
   },
   "Savings Green USD::sGREEN": {
@@ -14903,7 +15384,9 @@
     "yieldSource": "Interest and origination fees paid by Ripe borrowers",
     "redemption": "Instant redeem for GREEN",
     "issuer": "Ripe Protocol",
-    "links": ["https://docs.ripe.finance"],
+    "links": [
+      "https://docs.ripe.finance"
+    ],
     "updated": "2026-10-16",
     "confidence": "high",
     "source": "curated"
@@ -14915,35 +15398,41 @@
     "yieldSource": "Interest and origination fees paid by Ripe borrowers on Robinhood Chain",
     "redemption": "Instant redeem for GREEN",
     "issuer": "Ripe Protocol",
-    "links": ["https://docs.ripe.finance"],
+    "links": [
+      "https://docs.ripe.finance"
+    ],
     "updated": "2026-10-16",
     "confidence": "high",
     "source": "curated"
   },
   "Savings USDS from Ethereum::sUSDS": {
-    "mechanism": "lending",
     "what": "Sky savings rate on USDS · RWA T-bills + crypto-collateral loan fees",
     "body": "sUSDS is Sky's (ex-MakerDAO) non-rebasing ERC-4626 vault for USDS; its exchange rate rises every block at the Sky Savings Rate (SSR) set by Sky governance. The rate is paid out of Sky's protocol revenue: stability fees on USDS borrowed against ETH, wstETH and other crypto collateral, tokenized T-bill and other RWA allocations, and capital deployed by Sky's allocators such as the Spark Liquidity Layer. Deposited USDS itself is not lent out; it sits in the savings contract.",
     "backing": "USDS held in the Sky Savings Rate contract",
     "yieldSource": "Sky revenue: stability fees on crypto-collateral loans, RWA/T-bill allocations, allocator (Spark) yield",
     "redemption": "permissionless, instant redeem to USDS at current exchange rate; no fees",
     "issuer": "Sky (formerly MakerDAO)",
-    "links": ["https://developers.skyeco.com/protocol/tokens/susds/"],
+    "links": [
+      "https://developers.skyeco.com/protocol/tokens/susds/"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Savings USDS::sUSDS": {
-    "mechanism": "lending",
     "what": "Sky savings rate on USDS · RWA T-bills + crypto-collateral loan fees",
     "body": "sUSDS is Sky's (ex-MakerDAO) non-rebasing ERC-4626 vault for USDS; its exchange rate rises every block at the Sky Savings Rate (SSR) set by Sky governance. The rate is paid out of Sky's protocol revenue: stability fees on USDS borrowed against ETH, wstETH and other crypto collateral, tokenized T-bill and other RWA allocations, and capital deployed by Sky's allocators such as the Spark Liquidity Layer. Deposited USDS itself is not lent out; it sits in the savings contract.",
     "backing": "USDS held in the Sky Savings Rate contract",
     "yieldSource": "Sky revenue: stability fees on crypto-collateral loans, RWA/T-bill allocations, allocator (Spark) yield",
     "redemption": "permissionless, instant redeem to USDS at current exchange rate; no fees",
     "issuer": "Sky (formerly MakerDAO)",
-    "links": ["https://developers.skyeco.com/protocol/tokens/susds/"],
+    "links": [
+      "https://developers.skyeco.com/protocol/tokens/susds/"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Savings USG::sUSG": {
@@ -14962,7 +15451,6 @@
     "source": "curated"
   },
   "Savings Usdd::sUSDD": {
-    "mechanism": "lending",
     "what": "USDD savings vault · Smart Allocator lends reserves on Aave, Spark, Morpho",
     "body": "sUSDD is the ERC-4626 savings vault for USDD, the TRON-ecosystem overcollateralized stablecoin; its exchange rate against USDD rises as yield accrues. Yield comes from the Smart Allocator, which deploys USDD's cash reserves (stablecoins) into lending markets such as Aave, Spark, Morpho and JustLend, keeps part as a risk reserve and passes the rest to stakers. The rate has been managed by the USDD/JUST DAO teams, e.g. reset to a 5% base APY in 2026.",
     "backing": "USDD (overcollateralized crypto and stablecoin reserves)",
@@ -14975,23 +15463,25 @@
     ],
     "updated": "2026-10-12",
     "confidence": "medium",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Savings crvUSD::scrvUSD": {
-    "mechanism": "lending",
     "what": "Curve savings crvUSD · DAO-set share of crvUSD mint-market borrow fees",
     "body": "scrvUSD is an ERC-4626 vault (based on Yearn V3) that holds crvUSD and rises in value against it. Interest paid by crvUSD borrowers in Curve's mint markets flows through a fee splitter and rewards handler, which sends a DAO-set share to the vault. Deposited crvUSD stays idle in the vault and is not lent out.",
     "backing": "crvUSD held idle in the vault",
     "yieldSource": "DAO-set share of crvUSD borrowing fees",
     "redemption": "permissionless, instant redeem to crvUSD at current rate",
     "issuer": "Curve Finance",
-    "links": ["https://docs.curve.finance/user/curve-tokens/scrvusd"],
+    "links": [
+      "https://docs.curve.finance/user/curve-tokens/scrvusd"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Savings reUSD::sreUSD": {
-    "mechanism": "lending",
     "what": "Savings reUSD · ERC-4626 vault earning a share of Resupply protocol revenue",
     "body": "sreUSD is Resupply's auto-compounding ERC-4626 vault over reUSD, with no lockup, cooldown or fee. It is paid 15% of the weekly protocol revenue (borrow interest and redemption fees), plus the whole surcharge borrowers pay while reUSD trades below $1, so it earns most when the peg is under stress. Unlike the Insurance Pool (7-day cooldown), it does not absorb bad debt, but it carries all of reUSD's peg risk.",
     "backing": "reUSD held in the vault",
@@ -15005,9 +15495,13 @@
     ],
     "updated": "2026-10-20",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
-  "Savvy USD::svUSD": { "what": "Savvy USD stablecoin", "source": "derived" },
+  "Savvy USD::svUSD": {
+    "what": "Savvy USD stablecoin",
+    "source": "derived"
+  },
   "Sceptre Staked FLR::SFLR": {
     "what": "Sceptre sFLR · liquid-staked FLR, P-chain staking rewards, 14.5-day unlock",
     "body": "sFLR is Sceptre's liquid staking token on Flare (a BENQI sAVAX fork). Deposited FLR is moved by operator keys to stake on Flare's P-chain, and rewards are pushed back about every 3 days after Sceptre's 10 % cut, so the FLR value per sFLR (1.8913 on 2026-10-16) rises in steps: about 7.4 % APR over 30 days, while shorter windows mislead. One EOA owns the upgrade key and admin role with no timelock, and 34 operator EOAs move the staked FLR, so solvency is not provable on-chain.",
@@ -15309,7 +15803,10 @@
     "what": "Robinhood tokenized stock · tracks SoFi Technologies",
     "source": "derived"
   },
-  "SoFiUSD::SOFID": { "what": "SoFi USD stablecoin", "source": "derived" },
+  "SoFiUSD::SOFID": {
+    "what": "SoFi USD stablecoin",
+    "source": "derived"
+  },
   "SolarEdge Technologies (Ondo Tokenized)::SEDGON": {
     "what": "Ondo tokenized stock · tracks SolarEdge Technologies",
     "source": "derived"
@@ -15474,13 +15971,14 @@
     "yieldSource": "lending interest on SparkLend/Aave/Morpho, RWA/T-bill yield, sUSDS",
     "redemption": "instant from a liquidity buffer (up to ~$10M); larger exits via liquidity intents, usually filled within minutes",
     "issuer": "Spark",
-    "links": ["https://docs.spark.finance/products/spark-savings"],
+    "links": [
+      "https://docs.spark.finance/products/spark-savings"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
     "source": "curated"
   },
   "Spark Savings USDG::spUSDG": {
-    "mechanism": "lending",
     "what": "Spark Savings vault on USDG (Robinhood Chain) · Spark Liquidity Layer yield",
     "body": "spUSDG is a Spark Savings V2 vault (ERC-4626) on Robinhood Chain (chain 4663) that takes deposits of USDG, the Paxos-issued Global Dollar stablecoin. Spark deploys deposits through the Spark Liquidity Layer, and yield accrues to the share price. It launched as a Robinhood Chain day-one product.",
     "backing": "USDG deployed by the Spark Liquidity Layer",
@@ -15493,10 +15991,10 @@
     ],
     "updated": "2026-10-06",
     "confidence": "medium",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Spark Savings USDT::SPUSDT": {
-    "mechanism": "lending",
     "what": "Spark savings vault on USDT · SparkLend/Morpho lending, syrupUSDT, DEX LP",
     "body": "spUSDT is a Spark Savings V2 ERC-4626 vault on Ethereum; deposited USDT earns a governance-set vault rate through a rising exchange rate. The Spark Liquidity Layer lends the USDT primarily on SparkLend, sends overflow to Morpho blue-chip vaults, makes a capped allocation to Maple's syrupUSDT, and places USDT in Curve/Uniswap pools; idle buffers earn the Sky Savings Rate via sUSDS. Spark describes the vault as backed by USDS.",
     "backing": "USDT deployed via the Spark Liquidity Layer (backstopped by USDS)",
@@ -15509,6 +16007,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Spark USDC Vault::sUSDC": {
@@ -15564,7 +16063,10 @@
     "what": "Spectra ERC-4626 wrapper of Wrapped Ultimate Synthetic Delta Neutral",
     "source": "derived"
   },
-  "Sperax USD::USDs": { "what": "Sperax USD stablecoin", "source": "derived" },
+  "Sperax USD::USDs": {
+    "what": "Sperax USD stablecoin",
+    "source": "derived"
+  },
   "Spice USD::USDS": {
     "what": "Spice Trade USD stablecoin",
     "source": "derived"
@@ -15610,8 +16112,14 @@
     "what": "Stabl.fi USD stablecoin",
     "source": "derived"
   },
-  "StablR Euro::EURR": { "what": "StablR EUR stablecoin", "source": "derived" },
-  "Stable Coin::SBC": { "what": "Brale USD stablecoin", "source": "derived" },
+  "StablR Euro::EURR": {
+    "what": "StablR EUR stablecoin",
+    "source": "derived"
+  },
+  "Stable Coin::SBC": {
+    "what": "Brale USD stablecoin",
+    "source": "derived"
+  },
   "Stable Mint USD::USDSM": {
     "what": "Stable Mint USD stablecoin",
     "source": "derived"
@@ -15647,7 +16155,6 @@
     "source": "derived"
   },
   "Staked Axis USD::SUSDX": {
-    "mechanism": "hedged-trading",
     "what": "Axis staked USDx · trading returns paid as rewards, 7-day request exit",
     "body": "sUSDx is the ERC-4626 staking vault over Axis USDx (not Stables Labs' sUSDX). Axis funds rewards from its trading book every ~3 days, at its discretion, and they vest over 3 days into a rising sUSDx/USDx rate; the vault does not lend the staked USDx. The exit is an ERC-7540 request: requestRedeem burns the shares and fixes the payout, Axis's servicer processes it after 7 days, then the holder claims. On 2026-10-15 about a quarter of the vault was queued to exit.",
     "backing": "Axis USDx",
@@ -15660,10 +16167,10 @@
     ],
     "updated": "2026-10-17",
     "confidence": "high",
+    "mechanism": "hedged-trading",
     "source": "curated"
   },
   "Staked Falcon USD::sUSDf": {
-    "mechanism": "hedged-trading",
     "what": "Falcon staked USDf · funding/basis arb, cross-venue arb + altcoin staking",
     "body": "sUSDf is Falcon Finance's ERC-4626 vault on USDf, a synthetic dollar minted against stablecoins, BTC, ETH, altcoins and tokenized RWAs (gold, T-bills, equities). Yield shows up as a rising sUSDf/USDf exchange rate. It comes from mostly market-neutral trading of the collateral: positive and negative funding-rate arbitrage, spot/perp basis, cross-exchange arbitrage, native altcoin staking, DEX liquidity provision, options and statistical arbitrage.",
     "backing": "USDf (overcollateralized stablecoins, crypto and tokenized RWAs)",
@@ -15677,10 +16184,10 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "hedged-trading",
     "source": "curated"
   },
   "Staked Forest Road USDfr::SUSDFR": {
-    "mechanism": "private-credit",
     "what": "Forest Road staked USDfr · specialty-finance loan interest, 21-day queued exit",
     "body": "sUSDfr is an ERC-4626 vault over USDfr, opened about 22 September 2026. Interest from Forest Road's loan facilities accrues into it continuously, less a 10 % performance fee, and an impairment source can mark declared losses into its price. The ~30 % APR it showed in October 2026 is real but comes from the whole book's interest landing on the roughly half of USDfr that is staked, so it dilutes as more is staked. Exits are throttled: after a 21-day hold a daily keeper settles requests out of about 1.67 % of idle reserves per epoch, priced at settlement.",
     "backing": "USDfr (USDC reserve plus Forest Road loan facilities)",
@@ -15694,19 +16201,22 @@
     "updated": "2026-10-17",
     "confidence": "high",
     "verify": "Young and small (~$2.4M, opened Sep 2026), one originator; the headline rate will fall as staking grows.",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "Staked Frax USD::sfrxUSD": {
-    "mechanism": "mixed",
     "what": "Frax staked frxUSD · rotates between carry trade, DeFi AMOs and T-bills",
     "body": "sfrxUSD is a non-rebasing ERC-4626 vault for frxUSD whose redemption rate rises as yield is added. Frax's Benchmark Yield Strategy, governed by the Frax DAO, moves capital to the best of three sources: carry trades (e.g. Ethena, Superstate), DeFi yield via AMOs (Aave, Curve, Convex) and T-bill/RWA funds (e.g. BlackRock, FinresPBC).",
     "backing": "frxUSD",
     "yieldSource": "Benchmark Yield Strategy: carry trade, DeFi AMOs or T-bills/RWA",
     "redemption": "permissionless, instant redeem to frxUSD, no unstaking fee",
     "issuer": "Frax Finance",
-    "links": ["https://docs.frax.com/protocol/assets/frxusd/sfrxusd"],
+    "links": [
+      "https://docs.frax.com/protocol/assets/frxusd/sfrxusd"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Staked HYPE Shares::WSTHYPE": {
@@ -15721,14 +16231,15 @@
     "yieldSource": "HYPE staking rewards",
     "redemption": "unstake through Valantis (HyperCore unbonding) or trade",
     "issuer": "Valantis (stakedhype)",
-    "links": ["https://docs.stakedhype.fi/technical/audits"],
+    "links": [
+      "https://docs.stakedhype.fi/technical/audits"
+    ],
     "updated": "2026-10-17",
     "confidence": "high",
     "mechanism": "staking",
     "source": "curated"
   },
   "Staked InfiniFi USD::siUSD": {
-    "mechanism": "mixed",
     "what": "infiniFi staked iUSD · fractional-reserve mix of Aave/Spark lending and Pendle PTs",
     "body": "siUSD is the liquid staked form of iUSD, infiniFi's USDC-backed receipt dollar; yield is streamed in over 8-hour epochs and accrues in the siUSD price. infiniFi runs an on-chain fractional reserve: liquid deposits sit in liquid farms (Aave, Spark sUSDC) while capital locked as liUSD lets the protocol also allocate into longer-duration farms such as Pendle principal tokens. Protocol yield is shared between siUSD and liUSD holders, so siUSD earns more than the raw liquid lending rate; plain iUSD earns nothing. Since the June 2025 upgrade siUSD is no longer ERC-4626 and staking/unstaking go through infiniFi's Gateway.",
     "backing": "iUSD (USDC deployed across infiniFi farms)",
@@ -15742,6 +16253,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Staked JUSD::sJUSD": {
@@ -15771,7 +16283,9 @@
     "yieldSource": "none since Oct 2025; previously Aave/Morpho lending interest",
     "redemption": "unstake to lvlUSD with near-zero cooldown, lvlUSD redeems 1:1; minting disabled, contract-only access after front-end shutdown",
     "issuer": "Level",
-    "links": ["https://www.chaincatcher.com/en/article/2208648"],
+    "links": [
+      "https://www.chaincatcher.com/en/article/2208648"
+    ],
     "updated": "2026-10-12",
     "confidence": "medium",
     "verify": "Protocol sunset in late Sep 2025 (team acquired by Grove/Sky); no yield distributed since 2025-10-02. Issuer docs (docs.level.money) are offline; facts from news coverage.",
@@ -15827,20 +16341,21 @@
     "source": "curated"
   },
   "Staked USDS::stUSDS": {
-    "mechanism": "lending",
     "what": "Sky stUSDS · USDS lent to SKY stakers who borrow against SKY",
     "body": "stUSDS is issued by Sky Protocol when USDS is supplied to the stUSDS module, which funds loans to SKY stakers borrowing against their staked SKY. Borrowed USDS earns the SKY borrow rate, and unused USDS earns the Sky Savings Rate. The module is isolated from sUSDS, so stUSDS holders bear losses if liquidations of SKY collateral do not cover the loans.",
     "backing": "USDS loans secured by staked SKY",
     "yieldSource": "SKY borrow rate, plus Sky Savings Rate on idle funds",
     "redemption": "Permissionless withdraw to USDS, limited to unborrowed liquidity in the module",
     "issuer": "Sky",
-    "links": ["https://sky.money/stusds"],
+    "links": [
+      "https://sky.money/stusds"
+    ],
     "updated": "2026-10-06",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Staked USDu::sUSDu": {
-    "mechanism": "hedged-trading",
     "what": "Unitas staked USDu · JLP fees plus perp hedge, 7-day cooldown",
     "body": "sUSDu is the staking vault over Unitas's USDu on BNB Chain, a clone of Ethena's sUSDe. USDu is a synthetic dollar whose collateral sits in Jupiter's JLP pool hedged with perp shorts, earning JLP fees and funding; staked returns vest into sUSDu over 8 hours, about 11 % APR on $36.8M in October 2026. Staking is permissionless, while USDu mint and redeem are for whitelisted institutions. A 3-of-5 Safe with no timelock holds blacklist powers.",
     "backing": "USDu (JLP position hedged with perp shorts)",
@@ -15854,6 +16369,7 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "Custody of the hedge positions is not verified.",
+    "mechanism": "perp-lp",
     "source": "curated"
   },
   "Staked USDz::sUSDz": {
@@ -15907,7 +16423,6 @@
     "source": "curated"
   },
   "Staked YUSD::sYUSD": {
-    "mechanism": "basis-trade",
     "what": "Aegis staked YUSD · BTC collateral hedged with short perps, earns funding",
     "body": "sYUSD is the ERC-4626 staking vault for YUSD, Aegis's synthetic dollar backed by bitcoin held with institutional custodians (Fireblocks, Copper, Ceffu). The BTC is hedged with short BTC perpetuals on major exchanges, so the position is delta-neutral, and the funding paid by longs is the yield, compounded into a rising sYUSD/YUSD rate (about 4.3 % APR in October 2026). Fee and cooldown are admin dials on an upgradeable contract with no timelock observed.",
     "backing": "YUSD (custodied BTC hedged with short BTC perps)",
@@ -15921,10 +16436,10 @@
     ],
     "updated": "2026-10-17",
     "confidence": "high",
+    "mechanism": "basis-trade",
     "source": "curated"
   },
   "Staked Yuzu USD::syzUSD": {
-    "mechanism": "mixed",
     "what": "Staked yzUSD (ERC-4626) · weekly target yield from Yuzu's leveraged stablecoin book",
     "body": "syzUSD is the ERC-4626 staking wrapper of yzUSD, the senior tranche of Yuzu Alpha. Each Friday Yuzu announces a target yield for the week's epoch and pays it in yzUSD into the vault, so the share price rises; the money comes from the collateral pool's strategies (Ethena USDe loops, Aave, Pendle, Euler, Fluid, Morpho, Spark, Maple, tokenized T-bills and CLOs), and Yuzu keeps a spread between earned and posted yield instead of a performance fee. Posted about 8% in Oct 2026 (12.5% in early epochs). Unstaking back to yzUSD is instant and permissionless; turning yzUSD into USDT0 needs Eligible Investor status or a DEX. Home chain is Plasma (about $59m); the Monad copy (about $10m) is bridged by LayerZero OFT and sits mostly in Euler and the YZM vault. Yuzu is active: $81m TVL and growing in Oct 2026, five Pashov/Dedaub audits to Jul 2026, OpenCover cover since Oct 2026.",
     "backing": "yzUSD (senior claim on Yuzu Alpha's overcollateralized pool; yzPP absorbs first losses, then the Reserve Fund)",
@@ -15940,6 +16455,7 @@
     ],
     "updated": "2026-10-14",
     "confidence": "high",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Staked avETH::savETH": {
@@ -15948,20 +16464,21 @@
     "source": "derived"
   },
   "Staked avUSD::savUSD": {
-    "mechanism": "hedged-trading",
     "what": "Avant staked avUSD · senior tranche of delta-neutral basis, lending and LP strategies",
     "body": "savUSD is the ERC-4626 staking token on avUSD, Avant's dollar backed 1:1 by USDC on Avalanche, and is the senior tranche of Avant's yield. Deposits go to market-neutral strategies run with trading partners: spot/short-futures basis trades, lending-rate arbitrage, Pendle yield trading, Aave supply and Curve/Uniswap liquidity. Profits raise the savUSD/avUSD rate, and the junior avUSDx tranche takes strategy losses first.",
     "backing": "avUSD (USDC), protected by the avUSDx junior tranche",
     "yieldSource": "basis trades, lending arbitrage, Pendle, Aave, DEX liquidity",
     "redemption": "1-day cooldown savUSD to avUSD (no yield during it); avUSD redeems to USDC",
     "issuer": "Avant",
-    "links": ["https://docs.avantprotocol.com/overview/core-tokens.md"],
+    "links": [
+      "https://docs.avantprotocol.com/overview/core-tokens.md"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Staked cap USD::stcUSD": {
-    "mechanism": "lending",
     "what": "Cap staked cUSD · loans to restaker-covered market makers + Aave on idle USDC",
     "body": "stcUSD is the ERC-4626 staking vault for cUSD, Cap's dollar backed 1:1 by stablecoin reserves (USDC). Institutional operators such as market makers and trading firms borrow from the reserve, and their credit is covered by restaked collateral delegated via Symbiotic/EigenLayer that is slashed on default. stcUSD earns the borrow interest above the hurdle rate plus underwriting premiums, and idle reserves are swept into Aave V3.",
     "backing": "cUSD (USDC reserve, lent to operators covered by restakers)",
@@ -15974,10 +16491,10 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Staked infiniFi USD::siUSD": {
-    "mechanism": "mixed",
     "what": "infiniFi staked iUSD · fractional-reserve mix of Aave/Spark lending and Pendle PTs",
     "body": "siUSD is the liquid staked form of iUSD, infiniFi's USDC-backed receipt dollar; yield is streamed in over 8-hour epochs and accrues in the siUSD price. infiniFi runs an on-chain fractional reserve: liquid deposits sit in liquid farms (Aave, Spark sUSDC) while capital locked as liUSD lets the protocol also allocate into longer-duration farms such as Pendle principal tokens. Protocol yield is shared between siUSD and liUSD holders, so siUSD earns more than the raw liquid lending rate; plain iUSD earns nothing. Since the June 2025 upgrade siUSD is no longer ERC-4626 and staking/unstaking go through infiniFi's Gateway.",
     "backing": "iUSD (USDC deployed across infiniFi farms)",
@@ -15991,6 +16508,7 @@
     ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Staked invUSD Stablecoin::sinvUSD": {
@@ -16018,7 +16536,10 @@
     "what": "Yearn savings wrapper of BOLD · earns its savings rate",
     "source": "derived"
   },
-  "StandX DUSD::DUSD": { "what": "StandX USD stablecoin", "source": "derived" },
+  "StandX DUSD::DUSD": {
+    "what": "StandX USD stablecoin",
+    "source": "derived"
+  },
   "Stanley Black & Decker xStock::SWKX": {
     "what": "Backed tokenized stock · tracks Stanley Black & Decker",
     "source": "derived"
@@ -16243,7 +16764,6 @@
     "source": "curated"
   },
   "Strata Senior USDat::SRUSDAT": {
-    "mechanism": "dividends",
     "mechanismOf": "STRC",
     "what": "Strata senior tranche of Saturn sUSDat · fixed 65% of STRC dividend, junior covers NAV",
     "body": "srUSDat is the senior (protected) tranche of Strata's Saturn market, an ERC-4626 token over pooled sUSDat. sUSDat earns T-bill interest and dividends on Strategy's STRC preferred stock, and its NAV moves with STRC's price. srUSDat targets a fixed yield of 65% of the STRC dividend rate; jrUSDat absorbs STRC price swings and losses first, but it was only ~16 % of the pool in October 2026 after the mid-2026 sUSDat drawdown halved it. On Monad, srUSDat is a LayerZero OFT copy of the Ethereum token (an adapter locks the Ethereum shares 1:1), not a separate Strata deployment.",
@@ -16257,6 +16777,7 @@
     ],
     "updated": "2026-10-17",
     "confidence": "high",
+    "mechanism": "dividends",
     "source": "curated"
   },
   "Strata Senior USDe::SRUSDE": {
@@ -16490,7 +17011,6 @@
     "source": "derived"
   },
   "Superstate Short Duration US Government Securities Fund::USTB": {
-    "mechanism": "treasuries",
     "what": "Tokenized short-term US Treasury fund · now managed by Invesco",
     "body": "USTB is the share token of a short-duration US government securities fund launched by Superstate. Since mid-2026 Invesco Advisers manages the portfolio and the fund was renamed the Invesco Short-Duration U.S. Government Securities Fund; Superstate still runs the token, transfer agency and contracts at the same address. The fund holds short-dated Treasuries and agency securities, and interest accrues to NAV. Only allowlisted investors can hold it.",
     "backing": "short-term US Treasuries and agency securities",
@@ -16504,6 +17024,7 @@
     ],
     "updated": "2026-10-06",
     "confidence": "high",
+    "mechanism": "treasuries",
     "source": "curated"
   },
   "Superstate USCC::USCC": {
@@ -16612,7 +17133,10 @@
     "what": "Backed tokenized stock · tracks TBLL",
     "source": "derived"
   },
-  "TBTC": { "what": "Threshold bitcoin", "source": "curated" },
+  "TBTC": {
+    "what": "Threshold bitcoin",
+    "source": "curated"
+  },
   "TD Synnex xStock::SNXX": {
     "what": "Backed tokenized stock · tracks TD Synnex",
     "source": "derived"
@@ -16657,7 +17181,10 @@
     "what": "Backed tokenized stock · tracks TON",
     "source": "derived"
   },
-  "TOR::TOR": { "what": "Hector Network USD stablecoin", "source": "derived" },
+  "TOR::TOR": {
+    "what": "Hector Network USD stablecoin",
+    "source": "derived"
+  },
   "TQQQ xStock::TQQQX": {
     "what": "Backed tokenized ETF · tracks TQQQ",
     "source": "derived"
@@ -16686,7 +17213,10 @@
     "what": "Backed tokenized stock · tracks TTM Technologies",
     "source": "derived"
   },
-  "TUSD": { "what": "Techteryx USD stablecoin", "source": "derived" },
+  "TUSD": {
+    "what": "Techteryx USD stablecoin",
+    "source": "derived"
+  },
   "Taiwan Semiconductor (ST0x Tokenized Stock)::WTTSM": {
     "what": "ST0x tokenized stock · tracks Taiwan Semiconductor",
     "source": "derived"
@@ -16859,12 +17389,18 @@
     "what": "Tether tokenized gold",
     "source": "derived"
   },
-  "Tether Gold::XAUt": { "what": "Tether gold", "source": "curated" },
+  "Tether Gold::XAUt": {
+    "what": "Tether gold",
+    "source": "curated"
+  },
   "Tether USD (Synapse)::USDT": {
     "what": "Token denominated in USD",
     "source": "derived"
   },
-  "Tether USD::USDT": { "what": "Tether USD stablecoin", "source": "derived" },
+  "Tether USD::USDT": {
+    "what": "Tether USD stablecoin",
+    "source": "derived"
+  },
   "Tether USD::USDT::42220::0": {
     "what": "Token denominated in USD",
     "source": "derived"
@@ -16877,7 +17413,10 @@
     "what": "Token denominated in USD",
     "source": "derived"
   },
-  "Tether USD::USD₮": { "what": "Tether USD stablecoin", "source": "derived" },
+  "Tether USD::USD₮": {
+    "what": "Tether USD stablecoin",
+    "source": "derived"
+  },
   "Teucrium Wheat Fund (Dinari Tokenized ETF)::WEAT": {
     "what": "Dinari tokenized ETF · tracks Teucrium Wheat Fund",
     "source": "derived"
@@ -17072,7 +17611,6 @@
     "source": "derived"
   },
   "Tori Staked trUSD::STRUSD": {
-    "mechanism": "hedged-trading",
     "what": "Tori staked trUSD · ERC-4626 vault on delta-neutral synthetic dollar",
     "body": "strUSD is the staked form of trUSD, Tori Finance's synthetic dollar, issued as an ERC-4626 vault share whose trUSD exchange rate rises as strategies earn. trUSD is backed by delta-neutral trading positions rather than bank deposits, including cash-and-carry futures arbitrage and short-duration instruments with non-USD exposure hedged. Tori takes a performance fee inside the exchange rate.",
     "backing": "delta-neutral trading positions (futures basis, short-duration instruments)",
@@ -17085,9 +17623,13 @@
     ],
     "updated": "2026-10-06",
     "confidence": "medium",
+    "mechanism": "hedged-trading",
     "source": "curated"
   },
-  "Tori trUSD::TRUSD": { "what": "Tori USD stablecoin", "source": "derived" },
+  "Tori trUSD::TRUSD": {
+    "what": "Tori USD stablecoin",
+    "source": "derived"
+  },
   "Tower Semiconductor (Ondo Tokenized)::TSEMON": {
     "what": "Ondo tokenized stock · tracks Tower Semiconductor",
     "source": "derived"
@@ -17156,7 +17698,10 @@
     "what": "Backed tokenized stock · tracks Tron",
     "source": "derived"
   },
-  "TrueUSD::TUSD": { "what": "Techteryx USD stablecoin", "source": "derived" },
+  "TrueUSD::TUSD": {
+    "what": "Techteryx USD stablecoin",
+    "source": "derived"
+  },
   "Truist Financial xStock::TFCX": {
     "what": "Backed tokenized stock · tracks Truist Financial",
     "source": "derived"
@@ -17229,13 +17774,19 @@
     "what": "Backed tokenized stock · tracks UL Solutions",
     "source": "derived"
   },
-  "ULTRA::ULTRA": { "what": "Prisma USD stablecoin", "source": "derived" },
+  "ULTRA::ULTRA": {
+    "what": "Prisma USD stablecoin",
+    "source": "derived"
+  },
   "UNI": {
     "what": "Uniswap governance token",
     "body": "UNI is the governance token of the Uniswap protocol, a set of decentralized exchange contracts on Ethereum and many other chains. Holders vote on protocol upgrades, fee settings and use of the Uniswap treasury. It is not backed by any assets.",
     "backing": "none (governance token)",
     "issuer": "Uniswap Labs / Uniswap DAO",
-    "links": ["https://docs.uniswap.org/", "https://gov.uniswap.org/"],
+    "links": [
+      "https://docs.uniswap.org/",
+      "https://gov.uniswap.org/"
+    ],
     "updated": "2026-10-06",
     "confidence": "high",
     "source": "curated"
@@ -17245,7 +17796,10 @@
     "mechanism": "staking",
     "source": "derived"
   },
-  "UPS::UPS": { "what": "Robinhood tokenized stock", "source": "derived" },
+  "UPS::UPS": {
+    "what": "Robinhood tokenized stock",
+    "source": "derived"
+  },
   "US Brent Oil Fund (Ondo Tokenized)::BNOON": {
     "what": "Ondo tokenized ETF · tracks US Brent Oil Fund",
     "source": "derived"
@@ -17295,10 +17849,22 @@
     "what": "Robinhood tokenized stock · tracks USA Rare Earth",
     "source": "derived"
   },
-  "USAT::USAT": { "what": "Tether USD stablecoin", "source": "derived" },
-  "USC": { "what": "Brale USD stablecoin", "source": "derived" },
-  "USC Stablecoin::USC": { "what": "Orby USD stablecoin", "source": "derived" },
-  "USC::USC": { "what": "Chi Protocol USD stablecoin", "source": "derived" },
+  "USAT::USAT": {
+    "what": "Tether USD stablecoin",
+    "source": "derived"
+  },
+  "USC": {
+    "what": "Brale USD stablecoin",
+    "source": "derived"
+  },
+  "USC Stablecoin::USC": {
+    "what": "Orby USD stablecoin",
+    "source": "derived"
+  },
+  "USC::USC": {
+    "what": "Chi Protocol USD stablecoin",
+    "source": "derived"
+  },
   "USD (Midas mEDGE) Ethereum::SY-SY-mEDGE": {
     "what": "Pendle standardized wrapper (SY) of USD (Midas mEDGE)",
     "source": "derived"
@@ -17311,7 +17877,10 @@
     "what": "Token denominated in USD",
     "source": "derived"
   },
-  "USD Coin::USDC": { "what": "Token denominated in USD", "source": "derived" },
+  "USD Coin::USDC": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "USD Coin::USDC::42161::0": {
     "what": "Token denominated in USD",
     "source": "derived"
@@ -17336,13 +17905,22 @@
     "what": "Token denominated in USD",
     "source": "derived"
   },
-  "USD Tether::USDT": { "what": "Tether USD stablecoin", "source": "derived" },
+  "USD Tether::USDT": {
+    "what": "Tether USD stablecoin",
+    "source": "derived"
+  },
   "USD yVault::yvUSD": {
     "what": "Savings wrapper of USDC · earns its savings rate",
     "source": "derived"
   },
-  "USD+": { "what": "Overnight USD stablecoin", "source": "derived" },
-  "USD+::USD+": { "what": "Overnight USD stablecoin", "source": "derived" },
+  "USD+": {
+    "what": "Overnight USD stablecoin",
+    "source": "derived"
+  },
+  "USD+::USD+": {
+    "what": "Overnight USD stablecoin",
+    "source": "derived"
+  },
   "USD.infra::USD.infra::solana": {
     "what": "DAWN USD.infra · M0 wrapped-M stablecoin on Solana, backed by M0's T-bill dollar",
     "body": "USD.infra is DAWN's branded M0 extension stablecoin on Solana: its supply moves only by wrapping and unwrapping M0's $M, which is backed by US Treasury bills, so DAWN cannot mint at will. DAWN's Squads multisig holds freeze and global-pause authority over every holder. Most of it sits in the sUSD.infra lending vault; supply was about 14M in October 2026. Plain USD.infra earns nothing for holders.",
@@ -17367,7 +17945,10 @@
     "what": "Pendle standardized wrapper (SY) of USD0++",
     "source": "derived"
   },
-  "USD1::USD1": { "what": "World Liberty stablecoin", "source": "curated" },
+  "USD1::USD1": {
+    "what": "World Liberty stablecoin",
+    "source": "curated"
+  },
   "USD3 Ethereum::SY-USD3": {
     "what": "Pendle standardized wrapper (SY) of USD3",
     "source": "derived"
@@ -17376,16 +17957,34 @@
     "what": "Pendle standardized wrapper (SY) of USD3",
     "source": "derived"
   },
-  "USD::USD": { "what": "Token denominated in USD", "source": "derived" },
-  "USDA": { "what": "Angle USD stablecoin", "source": "derived" },
-  "USDA::USDA": { "what": "Angle USD stablecoin", "source": "derived" },
+  "USD::USD": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
+  "USDA": {
+    "what": "Angle USD stablecoin",
+    "source": "derived"
+  },
+  "USDA::USDA": {
+    "what": "Angle USD stablecoin",
+    "source": "derived"
+  },
   "USDA::USDA::56::0": {
     "what": "AP Web3 USD stablecoin",
     "source": "derived"
   },
-  "USDB::USDB": { "what": "Bancor USD stablecoin", "source": "derived" },
-  "USDBridge::USDB": { "what": "Bridge USD stablecoin", "source": "derived" },
-  "USDC": { "what": "Circle stablecoin", "source": "curated" },
+  "USDB::USDB": {
+    "what": "Bancor USD stablecoin",
+    "source": "derived"
+  },
+  "USDBridge::USDB": {
+    "what": "Bridge USD stablecoin",
+    "source": "derived"
+  },
+  "USDC": {
+    "what": "Circle stablecoin",
+    "source": "curated"
+  },
   "USDC (Morpho cbBTC/USDC) Base::SY-Morpho-cbBTC-USDC": {
     "what": "Pendle standardized wrapper (SY) of USDC (Morpho cbBTC/USDC)",
     "source": "derived"
@@ -17403,7 +18002,6 @@
     "source": "derived"
   },
   "USDC Mix Yield Token::mixUSDC": {
-    "mechanism": "mixed",
     "what": "Alchemix V3 USDC yield token · Morpho Vault V2 over Yearn, infiniFi, Fluid, Tokemak",
     "body": "mixUSDC is Alchemix V3's USDC 'Mix Yield Token', the vault that holds Alchemist deposits. It is a Morpho Vault V2 whose adapters are Alchemix strategies rather than Morpho markets: Yearn's USD yVault (~42 %), infiniFi siUSD (~38 %), Fluid Lite USD (~20 %) and Tokemak autoUSD. Anyone can deposit; a 15 % performance fee applies. All curator timelocks are 0, so the allocation can change instantly.",
     "backing": "USDC in Yearn yvUSD, infiniFi siUSD, Fluid Lite USD and Tokemak autoUSD",
@@ -17416,9 +18014,13 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "The curator is an unverified contract and timelocks are zero.",
+    "mechanism": "mixed",
     "source": "curated"
   },
-  "USDC+::USDC+": { "what": "Overnight USD stablecoin", "source": "derived" },
+  "USDC+::USDC+": {
+    "what": "Overnight USD stablecoin",
+    "source": "derived"
+  },
   "USDC-Euler Yield Ethereum::SY-eUSDC-22": {
     "what": "Pendle standardized wrapper (SY) of USDC-Euler Yield",
     "source": "derived"
@@ -17435,12 +18037,18 @@
     "what": "Circle USD stablecoin",
     "source": "derived"
   },
-  "USDD": { "what": "USDD USD stablecoin", "source": "derived" },
+  "USDD": {
+    "what": "USDD USD stablecoin",
+    "source": "derived"
+  },
   "USDE": {
     "what": "Ethena synthetic dollar · hedged ETH/BTC basis",
     "source": "curated"
   },
-  "USDE::USDE": { "what": "Token denominated in USD", "source": "derived" },
+  "USDE::USDE": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "USDF BNB::SY-USDF": {
     "what": "Pendle standardized wrapper (SY) of USDF",
     "source": "derived"
@@ -17461,12 +18069,18 @@
     "what": "Pendle standardized wrapper (SY) of USDG",
     "source": "derived"
   },
-  "USDGO::USDGO": { "what": "Token denominated in USD", "source": "derived" },
+  "USDGO::USDGO": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "USDH::USDH": {
     "what": "Native Markets USD stablecoin",
     "source": "derived"
   },
-  "USDK::USDK": { "what": "Token denominated in USD", "source": "derived" },
+  "USDK::USDK": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "USDKG::USDKG": {
     "what": "Virtual Asset Issuer (Kyrgyz MoF) USD stablecoin",
     "source": "derived"
@@ -17475,7 +18089,10 @@
     "what": "Liquid Loans USD stablecoin",
     "source": "derived"
   },
-  "USDM": { "what": "Mountain Protocol USD stablecoin", "source": "derived" },
+  "USDM": {
+    "what": "Mountain Protocol USD stablecoin",
+    "source": "derived"
+  },
   "USDM Stablecoin (Meridian)::USDM": {
     "what": "Meridian USD stablecoin",
     "source": "derived"
@@ -17484,13 +18101,22 @@
     "what": "Meridian USD stablecoin",
     "source": "derived"
   },
-  "USDP": { "what": "Paxos USD stablecoin", "source": "derived" },
+  "USDP": {
+    "what": "Paxos USD stablecoin",
+    "source": "derived"
+  },
   "USDP Stablecoin::USDP": {
     "what": "Unit Protocol USD stablecoin",
     "source": "derived"
   },
-  "USDR": { "what": "StablR USD stablecoin", "source": "derived" },
-  "USDS": { "what": "Sky (Maker) stablecoin", "source": "curated" },
+  "USDR": {
+    "what": "StablR USD stablecoin",
+    "source": "derived"
+  },
+  "USDS": {
+    "what": "Sky (Maker) stablecoin",
+    "source": "curated"
+  },
   "USDS Ethereum::SY-USDS": {
     "what": "Pendle standardized wrapper (SY) of USDS",
     "source": "derived"
@@ -17542,7 +18168,10 @@
     "what": "Pendle standardized wrapper (SY) of USDX",
     "source": "derived"
   },
-  "USDX::USDX": { "what": "Token denominated in USD", "source": "derived" },
+  "USDX::USDX": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "USDX::USDX::56::0": {
     "what": "Token denominated in USD",
     "source": "derived"
@@ -17552,7 +18181,10 @@
     "mechanism": "treasuries",
     "source": "derived"
   },
-  "USDa::USDa": { "what": "Avalon USD stablecoin", "source": "derived" },
+  "USDa::USDa": {
+    "what": "Avalon USD stablecoin",
+    "source": "derived"
+  },
   "USDaf Ethereum::SY-USDaf": {
     "what": "Pendle standardized wrapper (SY) of USDaf",
     "source": "derived"
@@ -17734,13 +18366,22 @@
     "what": "Pendle standardized wrapper (SY) of USDfr",
     "source": "derived"
   },
-  "USDp::USDp": { "what": "Parallel USD stablecoin", "source": "derived" },
-  "USDs::USDS": { "what": "Token denominated in USD", "source": "derived" },
+  "USDp::USDp": {
+    "what": "Parallel USD stablecoin",
+    "source": "derived"
+  },
+  "USDs::USDS": {
+    "what": "Token denominated in USD",
+    "source": "derived"
+  },
   "USDtb::USDTB": {
     "what": "Ethena / BlackRock BUIDL-backed dollar",
     "source": "curated"
   },
-  "USDu::USDu": { "what": "Unitas USD stablecoin", "source": "derived" },
+  "USDu::USDu": {
+    "what": "Unitas USD stablecoin",
+    "source": "derived"
+  },
   "USDx Ethereum::SY-USDx": {
     "what": "Pendle standardized wrapper (SY) of USDx",
     "source": "derived"
@@ -17786,7 +18427,10 @@
     "what": "Pendle standardized wrapper (SY) of USR",
     "source": "derived"
   },
-  "USTC": { "what": "Terra Classic USD stablecoin", "source": "derived" },
+  "USTC": {
+    "what": "Terra Classic USD stablecoin",
+    "source": "derived"
+  },
   "USUALX Ethereum::SY-USUALX": {
     "what": "Pendle standardized wrapper (SY) of USUALX",
     "source": "derived"
@@ -17944,8 +18588,14 @@
     "what": "Anything Labs USD stablecoin",
     "source": "derived"
   },
-  "Unity::UTY": { "what": "XSY USD stablecoin", "source": "derived" },
-  "Unity::UTY::43114::0": { "what": "XSY USD stablecoin", "source": "derived" },
+  "Unity::UTY": {
+    "what": "XSY USD stablecoin",
+    "source": "derived"
+  },
+  "Unity::UTY::43114::0": {
+    "what": "XSY USD stablecoin",
+    "source": "derived"
+  },
   "Universal ETH::uniETH": {
     "what": "Bedrock uniETH · liquid-staked ETH, non-rebasing rising exchange ratio",
     "body": "uniETH is Bedrock's ETH liquid staking token. ETH deposited into Bedrock's staking contract is staked on Ethereum validators, and uniETH's exchange ratio against ETH rises with staking rewards (about 2.4 % APR in October 2026, ~9k uniETH). The Arbitrum and Linea copies are bridged.",
@@ -17977,7 +18627,10 @@
     "what": "Ondo tokenized stock · tracks Uranium Energy",
     "source": "derived"
   },
-  "Usual USD::USD0": { "what": "Usual USD stablecoin", "source": "derived" },
+  "Usual USD::USD0": {
+    "what": "Usual USD stablecoin",
+    "source": "derived"
+  },
   "VAI Stablecoin::VAI": {
     "what": "Venus USD stablecoin",
     "source": "derived"
@@ -17998,7 +18651,10 @@
     "what": "VNX GBP stablecoin",
     "source": "derived"
   },
-  "VNX EURO::VEUR": { "what": "VNX EUR stablecoin", "source": "derived" },
+  "VNX EURO::VEUR": {
+    "what": "VNX EUR stablecoin",
+    "source": "derived"
+  },
   "VNX Swiss Franc::VCHF": {
     "what": "VNX CHF stablecoin",
     "source": "derived"
@@ -18205,7 +18861,10 @@
     "what": "Vesper USD stablecoin",
     "source": "derived"
   },
-  "Vesta Stable::VST": { "what": "Vesta USD stablecoin", "source": "derived" },
+  "Vesta Stable::VST": {
+    "what": "Vesta USD stablecoin",
+    "source": "derived"
+  },
   "ViaSat Inc.::VSAT": {
     "what": "Robinhood tokenized stock · tracks ViaSat Inc.",
     "source": "derived"
@@ -18336,7 +18995,6 @@
     "source": "derived"
   },
   "WETH Mix Yield Token::mixWETH": {
-    "mechanism": "mixed",
     "what": "Alchemix V3 WETH yield token · Morpho Vault V2 over Yearn, Tokemak and ETH LSTs",
     "body": "mixWETH is Alchemix V3's WETH 'Mix Yield Token', a Morpho Vault V2 whose adapters are Alchemix strategies: Yearn WETH-1 (~33 %), Tokemak autoETH (~29 %), wstETH (~23 %), ether.fi eETH (~8 %) and sfrxETH (~7 %). It is ETH-denominated with a 5 % performance fee; the LST legs carry depeg risk and all curator timelocks are 0. Its yield stalled to near zero over a week in mid-October 2026 (about 1.7 % APR over 30 days).",
     "backing": "WETH in Yearn, Tokemak autoETH and liquid staking tokens",
@@ -18349,13 +19007,17 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "The curator is an unverified contract, timelocks are zero, and the Tokemak autoETH leg is unscored.",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "WETH-2 yVault::yvWETH-2": {
     "what": "Savings wrapper of WETH · earns its savings rate",
     "source": "derived"
   },
-  "WEUSD::WEUSD": { "what": "PicWe USD stablecoin", "source": "derived" },
+  "WEUSD::WEUSD": {
+    "what": "PicWe USD stablecoin",
+    "source": "derived"
+  },
   "WH xStock::WHGROX": {
     "what": "Backed tokenized stock · tracks WH",
     "source": "derived"
@@ -18657,7 +19319,10 @@
     "confidence": "high",
     "source": "curated"
   },
-  "Worldwide USD::WUSD": { "what": "WSPN USD stablecoin", "source": "derived" },
+  "Worldwide USD::WUSD": {
+    "what": "WSPN USD stablecoin",
+    "source": "derived"
+  },
   "Worldwide USD::WUSD::1::0": {
     "what": "WSPN USD stablecoin",
     "source": "derived"
@@ -18814,6 +19479,19 @@
     "what": "Backed tokenized stock · tracks Wrapped Goldman Sachs",
     "source": "derived"
   },
+  "Wrapped HLP::WHLP": {
+    "what": "Wrapped HLP · dollar token on HyperEVM that deposits into Hyperliquid's HLP vault",
+    "body": "WHLP is a tokenized deposit in HLP, Hyperliquid's protocol vault that makes markets and takes over liquidations on HyperCore. Users mint it with USDT0; it started at $1 and its price follows HLP's profit and loss, so it can fall. Token listings credit Looping Collective as the developer; that is not confirmed from a primary source.",
+    "backing": "a position in Hyperliquid's HLP vault",
+    "yieldSource": "HLP market-making and liquidation profits",
+    "links": [
+      "https://defillama.com/protocol/wrapped-hlp"
+    ],
+    "updated": "2026-11-17",
+    "confidence": "low",
+    "mechanism": "perp-lp",
+    "source": "curated"
+  },
   "Wrapped Home Depot xStock::WHDX": {
     "what": "Backed tokenized stock · tracks Wrapped Home Depot",
     "source": "derived"
@@ -18969,7 +19647,6 @@
     "source": "derived"
   },
   "Wrapped Savings rUSD::WSRUSD": {
-    "mechanism": "mixed",
     "what": "Reservoir savings rUSD · yield from T-bills, lending, funding",
     "body": "wsrUSD is the ERC-4626 wrapped savings version of Reservoir's rUSD stablecoin. rUSD is a multi-collateral stablecoin backed by real-world assets and on-chain strategies, including T-bills, overcollateralized lending and funding-rate strategies; their yield accrues to wsrUSD's exchange rate. wsrUSD has no lock-up and no fees.",
     "backing": "T-bills, overcollateralized lending, funding-rate strategies",
@@ -18982,6 +19659,7 @@
     ],
     "updated": "2026-10-06",
     "confidence": "high",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Wrapped SpaceX xStock::WSPCXX": {
@@ -19054,7 +19732,9 @@
     "yieldSource": "share of tGBP reserve interest paid to Wren under a commercial agreement with BCP",
     "redemption": "permissionless mint; instant on-chain redeem to tGBP at NAV less a 25 bps fee, no cooldown",
     "issuer": "Wren Spire (BVI) Ltd, an Arb Capital company",
-    "links": ["https://wstgbp.com"],
+    "links": [
+      "https://wstgbp.com"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
     "source": "curated"
@@ -19067,9 +19747,18 @@
     "what": "Backed tokenized stock · tracks WuXi XDC Cayman",
     "source": "derived"
   },
-  "XAI Stablecoin::XAI": { "what": "Silo USD stablecoin", "source": "derived" },
-  "XAUM": { "what": "Matrixdock tokenized gold", "source": "derived" },
-  "XAUt::XAUt": { "what": "Tether tokenized gold", "source": "derived" },
+  "XAI Stablecoin::XAI": {
+    "what": "Silo USD stablecoin",
+    "source": "derived"
+  },
+  "XAUM": {
+    "what": "Matrixdock tokenized gold",
+    "source": "derived"
+  },
+  "XAUt::XAUt": {
+    "what": "Tether tokenized gold",
+    "source": "derived"
+  },
   "XGLD BNB::SY-XGLD": {
     "what": "Pendle standardized wrapper (SY) of XGLD",
     "source": "derived"
@@ -19078,13 +19767,22 @@
     "what": "Pendle standardized wrapper (SY) of XGLD",
     "source": "derived"
   },
-  "XIDR::XIDR": { "what": "Token denominated in IDR", "source": "derived" },
-  "XPL": { "what": "Plasma native coin", "source": "curated" },
+  "XIDR::XIDR": {
+    "what": "Token denominated in IDR",
+    "source": "derived"
+  },
+  "XPL": {
+    "what": "Plasma native coin",
+    "source": "curated"
+  },
   "XPO xStock::XPOX": {
     "what": "Backed tokenized stock · tracks XPO",
     "source": "derived"
   },
-  "XSGD::XSGD": { "what": "StraitsX SGD stablecoin", "source": "derived" },
+  "XSGD::XSGD": {
+    "what": "StraitsX SGD stablecoin",
+    "source": "derived"
+  },
   "XSGD::XSGD::137::0": {
     "what": "StraitsX SGD stablecoin",
     "source": "derived"
@@ -19130,7 +19828,10 @@
     "what": "Coinbase tokenized stock · tracks YETI Holdings, Inc.",
     "source": "derived"
   },
-  "YLDS::YLDS": { "what": "Figure USD stablecoin", "source": "derived" },
+  "YLDS::YLDS": {
+    "what": "Figure USD stablecoin",
+    "source": "derived"
+  },
   "YPF S.A. Tokenized by Sailing::YPFs": {
     "what": "Sailing tokenized stock · tracks YPF S.A. Tokenized by Sailing",
     "source": "derived"
@@ -23183,7 +23884,10 @@
     "what": "Pendle standardized wrapper (SY) of YU",
     "source": "derived"
   },
-  "YU::YU": { "what": "Yala USD stablecoin", "source": "derived" },
+  "YU::YU": {
+    "what": "Yala USD stablecoin",
+    "source": "derived"
+  },
   "YUM! Brands, Inc. (Coinbase Tokenized Stock)::YUMC": {
     "what": "Coinbase tokenized stock · tracks YUM! Brands, Inc.",
     "source": "derived"
@@ -23278,7 +23982,6 @@
     "source": "curated"
   },
   "Yield Optimizer USD::YOUSD": {
-    "mechanism": "lending",
     "what": "YO USDC vault · lends USDC on lending markets against cbBTC, WETH and wstETH",
     "body": "yoUSD is the share token of YO Protocol's USDC vault, an operator-managed ERC-4626. YO deploys the USDC into overcollateralized lending markets, mostly on Base, borrowed against cbBTC, WETH and wstETH. Shares are priced by YO's own oracle: an updater posts the share price, which can move at most 0.1% a day. The same vault address runs on Ethereum, Base and Arbitrum with one share price, and the operator moves assets between chains. On 12-13 January 2026 an operator rebalancing swap in this vault (stkGHO to USDC through Odos, with no effective slippage limit) lost about $3.7M; YO covered the loss from its own funds. The same operator setup still runs the vaults: a 4-of-6 Safe with no timelock over strategy calls and an EOA that posts the share price.",
     "backing": "USDC lent on overcollateralized markets (Base ~97%, Ethereum, Arbitrum)",
@@ -23292,6 +23995,7 @@
     ],
     "updated": "2026-10-17",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "Yield Optimizer yoloETH::YOLOETH": {
@@ -23310,7 +24014,10 @@
     "verify": "Deprecated: paused, zero supply",
     "source": "curated"
   },
-  "Yield TRYB::YTRYB": { "what": "BiLira USD stablecoin", "source": "derived" },
+  "Yield TRYB::YTRYB": {
+    "what": "BiLira USD stablecoin",
+    "source": "derived"
+  },
   "Yield Token: AAPLCT(AAPLc) 2026/09/30 Base::YT-AAPLCT(AAPLc)-2026/09/30": {
     "what": "Spectra yield token on AAPLCT · earns its yield until 30 Sep 2026",
     "source": "derived"
@@ -23593,7 +24300,6 @@
     "source": "curated"
   },
   "YieldFi yUSD::yUSD": {
-    "mechanism": "hedged-trading",
     "what": "YieldFi yUSD (V2) · ERC-4626 on USDC, delta-neutral DeFi: LP, basis, funding, loops",
     "body": "yUSD is YieldFi's V2 yield-bearing dollar: an ERC-4626 vault with USDC as the asset, yield streamed into the share price (NAV updated at least twice a week). Capital goes to market-neutral positions: private LP deals, hedged carry, basis and funding-rate spreads, leverage looping and lending on venues like Pendle, Morpho and Aave, targeting under 1% directional exposure. It is the same product on Ethereum (0x19eb...) and as a bridged copy on L2s (0x4772...).",
     "backing": "USDC deployed into delta-neutral DeFi and basis positions",
@@ -23607,6 +24313,7 @@
     "updated": "2026-10-12",
     "confidence": "medium",
     "verify": "Share price around 0.998 per USDC on-chain on 2026-10-12, a ~13% max drawdown in the past year, and TVL down >95% from its peak (tradingstrategy.ai flags it as likely abandoned). YieldFi moved new integrations to V3 vaults and marks yToken/vyToken as legacy. Check before showing as a live savings product.",
+    "mechanism": "hedged-trading",
     "source": "curated"
   },
   "YieldMax MSTR Option Income Strategy ETF (Dinari Tokenized E::MSTY": {
@@ -23635,7 +24342,6 @@
     "source": "derived"
   },
   "Yuzu Money Vault::YZM": {
-    "mechanism": "mixed",
     "what": "Accountable YieldApp vault on Monad · USDC in, holds syzUSD, 3% performance fee",
     "body": "YZM is the ERC-4626 share of the Yuzu Money Vault on Accountable's YieldApp on Monad, launched Dec 2025 with a $10m cap that filled in days plus MON incentives. Deposits are USDC and the vault's core position is syzUSD, so the share price follows syzUSD's weekly yield less a 3% performance fee (no management, deposit or withdrawal fee); Accountable's Proof of Solvency verifies the vault's assets. It peaked near $20m and held about $2.2m in Oct 2026 with the share at about 1.06 USDC. On Monad it is collateral on Morpho (YZM/AUSD, YZM/USDC) and Curvance (YZM/AUSD).",
     "backing": "syzUSD held by the vault, so Yuzu Alpha's collateral pool one layer down",
@@ -23650,10 +24356,10 @@
     "updated": "2026-10-14",
     "confidence": "medium",
     "verify": "Yuzu's docs have no page for this vault; fees, cap and redemption terms come from Trading Strategy and rwa.xyz listings. Monad syzUSD liquidity is thin, so a large exit may have to route via Plasma.",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Yuzu Prime::YZPRIME": {
-    "mechanism": "mixed",
     "what": "Yuzu Prime · levered tokenized T-bills, AAA CLOs and Maple lending, aims above SOFR",
     "body": "yzPrime is Yuzu's lower-risk product: a leveraged basket of tokenized T-bills (BUIDL, VBILL, WTGXX, JTRSY), AAA CLO tokens (JAAA, STAC) and overcollateralized lending via Maple, targeting a return above SOFR and T-bills. Yield accrues continuously into NAV with no weekly epochs; Accountable attests the backing (100.25% on 2026-10-14, about $7.6m, posted about 6.8%). Minted and redeemed for USDC at NAV by KYC-checked Eligible Investors only; anyone can hold it via DEXs.",
     "backing": "tokenized T-bills, AAA CLO tokens and Maple loans, with leverage",
@@ -23666,6 +24372,7 @@
     ],
     "updated": "2026-10-14",
     "confidence": "medium",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "Yuzu Protection Pool::yzPP": {
@@ -23734,7 +24441,10 @@
     "verify": "The mandate and its strategy were not checked.",
     "source": "curated"
   },
-  "ZeUSD::ZEUSD": { "what": "Zoth USD stablecoin", "source": "derived" },
+  "ZeUSD::ZEUSD": {
+    "what": "Zoth USD stablecoin",
+    "source": "derived"
+  },
   "Zebra Technologies xStock::ZBRAX": {
     "what": "Backed tokenized stock · tracks Zebra Technologies",
     "source": "derived"
@@ -23894,7 +24604,10 @@
     "what": "Pendle standardized wrapper (SY) of agETH",
     "source": "derived"
   },
-  "agEUR::EURA": { "what": "Token denominated in EUR", "source": "derived" },
+  "agEUR::EURA": {
+    "what": "Token denominated in EUR",
+    "source": "derived"
+  },
   "alUSD Ethereum::SY-alUSD": {
     "what": "Pendle standardized wrapper (SY) of alUSD",
     "source": "derived"
@@ -23914,7 +24627,9 @@
     "yieldSource": null,
     "redemption": "1:1 through Apyx-approved channels only; others trade on Curve and Uniswap",
     "issuer": "Apyx",
-    "links": ["https://docs.apyx.fi/product-overview/alqusd.md"],
+    "links": [
+      "https://docs.apyx.fi/product-overview/alqusd.md"
+    ],
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "No named fund, custodian or token-specific attestation.",
@@ -24009,10 +24724,10 @@
     "source": "derived"
   },
   "apyUSD::APYUSD": {
-    "mechanism": "dividends",
+    "mechanismOf": "STRC",
     "what": "Apyx savings token · wraps apxUSD, earns DAT preferred-share dividends",
-    "body": "apyUSD is a non-rebasing ERC-4626 savings vault from Apyx that wraps apxUSD. apxUSD is a synthetic dollar backed by preferred shares issued by digital asset treasury companies (e.g. STRC, SATA) plus short-term Treasuries. Dividends from that basket are streamed to apyUSD through a rising exchange rate.",
-    "backing": "apxUSD (DAT preferred shares + short-term Treasuries)",
+    "body": "apyUSD is a non-rebasing ERC-4626 savings vault from Apyx that wraps apxUSD. apxUSD is a synthetic dollar backed by preferred shares issued by digital asset treasury companies plus a buffer of cash and short-term Treasuries. The basket is mostly Strategy's STRC (around 90% by third-party accounts in 2026, the rest Strive's SATA), and Apyx can rebalance it across issuers. Dividends from that basket are streamed to apyUSD through a rising exchange rate.",
+    "backing": "apxUSD (DAT preferred shares, mostly STRC, some SATA + short-term Treasuries)",
     "yieldSource": "dividends from preferred shares and T-bill interest",
     "redemption": "permissionless deposit; unlock to apxUSD via request, ~20-day cooldown, then claim (faster flexible exit with declining fee from 3 days)",
     "issuer": "Apyx",
@@ -24020,8 +24735,9 @@
       "https://docs.apyx.fi/product-overview/apyusd-overview",
       "https://docs.apyx.fi/product-overview/apxusd-overview"
     ],
-    "updated": "2026-10-06",
+    "updated": "2026-11-16",
     "confidence": "high",
+    "mechanism": "dividends",
     "source": "curated"
   },
   "asBNB BNB::SY-asBNB": {
@@ -24060,7 +24776,10 @@
     "what": "Pendle standardized wrapper (SY) of avUSD",
     "source": "derived"
   },
-  "avUSD::avUSD": { "what": "Avant synthetic dollar", "source": "curated" },
+  "avUSD::avUSD": {
+    "what": "Avant synthetic dollar",
+    "source": "curated"
+  },
   "bUSDC.e-20 Sonic::SY-Silo-20-USDC.e": {
     "what": "Pendle standardized wrapper (SY) of bUSDC.e-20",
     "source": "derived"
@@ -24155,7 +24874,10 @@
     "confidence": "medium",
     "source": "curated"
   },
-  "dForce USD::USX": { "what": "dForce USD stablecoin", "source": "derived" },
+  "dForce USD::USX": {
+    "what": "dForce USD stablecoin",
+    "source": "derived"
+  },
   "dForce USD::USX::42161::0": {
     "what": "dForce USD stablecoin",
     "source": "derived"
@@ -24256,14 +24978,26 @@
     "what": "Dinari tokenized stock · tracks eToro Group",
     "source": "derived"
   },
-  "eUSD (OLD)::EUSD": { "what": "Lybra USD stablecoin", "source": "derived" },
+  "eUSD (OLD)::EUSD": {
+    "what": "Lybra USD stablecoin",
+    "source": "derived"
+  },
   "eUSD Ethereum::SY-eUSD": {
     "what": "Pendle standardized wrapper (SY) of eUSD",
     "source": "derived"
   },
-  "eUSD::EUSD": { "what": "Lybra USD stablecoin", "source": "derived" },
-  "eUSD::EUSD::1::0": { "what": "Telcoin USD stablecoin", "source": "derived" },
-  "eUSD::eUSD": { "what": "Telcoin USD stablecoin", "source": "derived" },
+  "eUSD::EUSD": {
+    "what": "Lybra USD stablecoin",
+    "source": "derived"
+  },
+  "eUSD::EUSD::1::0": {
+    "what": "Telcoin USD stablecoin",
+    "source": "derived"
+  },
+  "eUSD::eUSD": {
+    "what": "Telcoin USD stablecoin",
+    "source": "derived"
+  },
   "eUSDe (May 2025) Ethereum::SY-eUSDE": {
     "what": "Pendle standardized wrapper (SY) of eUSDe (May 2025)",
     "source": "derived"
@@ -24382,16 +25116,18 @@
     "source": "derived"
   },
   "f(x) USD Saving::fxSAVE": {
-    "mechanism": "mixed",
     "what": "f(x) Protocol stability-pool vault of fxUSD/USDC · leverage fees + wstETH yield",
     "body": "fxSAVE is an ERC-4626 vault that tokenizes f(x) Protocol's Stability Pool; it accepts fxUSD or USDC and auto-compounds rewards into more fxUSD/USDC. The Stability Pool backstops f(x)'s leveraged xPOSITIONs and earns their trading/open-close fees, wstETH staking and reserve yield from collateral, and Aave lending yield on idle USDC.",
     "backing": "fxUSD and USDC in the f(x) Stability Pool",
     "yieldSource": "xPOSITION trading fees, wstETH collateral yield, Aave USDC lending",
     "redemption": "redeem to fxSP then fxUSD/USDC after 60-minute cooldown, or instantly with 1% fee",
     "issuer": "f(x) Protocol (AladdinDAO)",
-    "links": ["https://fxprotocol.gitbook.io/fx-docs"],
+    "links": [
+      "https://fxprotocol.gitbook.io/fx-docs"
+    ],
     "updated": "2026-10-12",
     "confidence": "medium",
+    "mechanism": "mixed",
     "source": "curated"
   },
   "f(x) USD::fxUSD": {
@@ -25136,7 +25872,6 @@
     "source": "derived"
   },
   "limUSD::LIMUSD": {
-    "mechanism": "basis-trade",
     "what": "Liminal limUSD · allocator over delta-neutral Hyperliquid funding and lending xTokens",
     "body": "limUSD is Liminal's USD allocator on HyperEVM (LayerZero copies on Ethereum and Arbitrum). It spreads deposits over Liminal's xTokens: delta-neutral HYPE and BTC carry positions on Hyperliquid that earn perp funding and staking yield, and a lending sleeve. Its price is not computed on-chain: Liminal posts the NAV (bounded per update), and price per share = NAV / supply (1.0362 USDC on 2026-10-16, about 8 % APR on $8.9M). Liminal takes 10 % of performance on top of the xTokens' own fees.",
     "backing": "USDC and Hyperliquid spot/perp positions held by Liminal's strategist",
@@ -25151,6 +25886,7 @@
     "updated": "2026-10-17",
     "confidence": "medium",
     "verify": "NAV is posted by Liminal with no attestation; the instant buffer is held by an EOA.",
+    "mechanism": "basis-trade",
     "source": "curated"
   },
   "liquidBeraBTC Ethereum::SY-liquidBeraBTC": {
@@ -25382,7 +26118,10 @@
     "what": "Pendle standardized wrapper (SY) of pWBTC",
     "source": "derived"
   },
-  "peg eUSD::PEUSD": { "what": "Lybra USD stablecoin", "source": "derived" },
+  "peg eUSD::PEUSD": {
+    "what": "Lybra USD stablecoin",
+    "source": "derived"
+  },
   "pufETH Ethereum::SY pufETH": {
     "what": "Pendle standardized wrapper (SY) of pufETH",
     "source": "derived"
@@ -25509,7 +26248,6 @@
     "source": "derived"
   },
   "sBold::sBOLD": {
-    "mechanism": "lending",
     "what": "K3 Capital sBOLD · BOLD in Liquity V2 stability pools (WETH/wstETH/rETH)",
     "body": "sBOLD is a non-upgradeable ERC-4626 built by K3 Capital over Liquity V2's BOLD. It splits deposits across the WETH (30 %), wstETH (60 %) and rETH (10 %) stability pools, which earn 75 % of borrower interest plus collateral from liquidations; anyone can call swap() to sell that collateral back into BOLD, and until then oracles value it. Deposits and withdrawals stop while unswapped collateral exceeds 7,500 BOLD, while paused, or if an oracle fails. A 2-of-3 Safe with no timelock sets the swap adapter, oracles and fees.",
     "backing": "BOLD in Liquity V2 stability pools, plus unswapped liquidation collateral",
@@ -25523,6 +26261,7 @@
     ],
     "updated": "2026-10-17",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "sDAI Ethereum::SY-sDAI": {
@@ -25534,7 +26273,6 @@
     "source": "derived"
   },
   "sDOLA::SDOLA": {
-    "mechanism": "lending",
     "what": "Inverse Finance staked DOLA · FiRM fixed-rate borrower DBR revenue",
     "body": "sDOLA is an ERC-4626 wrapper around Inverse Finance's DOLA Savings Account; its exchange rate rises as revenue accrues. FiRM borrowers pay for fixed-rate loans by spending DBR (DOLA Borrowing Rights); part of that revenue goes to the savings account as DBR, which is converted to DOLA through the DAO's XY=K auction and compounded weekly, with no set minimum or maximum rate. Deposited DOLA is not rehypothecated. It is the senior layer under jrDOLA, which holds its deposits as sDOLA and takes FiRM bad debt first; sDOLA lives on Ethereum only, its CCIP bridge lanes having been shut down.",
     "backing": "DOLA held in the DOLA Savings Account",
@@ -25548,6 +26286,7 @@
     ],
     "updated": "2026-10-20",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "sENA Ethereum::SY-sENA": {
@@ -25602,7 +26341,10 @@
     "what": "Pendle standardized wrapper (SY) of sETH",
     "source": "derived"
   },
-  "sEUR::SEUR": { "what": "Synthetix EUR stablecoin", "source": "derived" },
+  "sEUR::SEUR": {
+    "what": "Synthetix EUR stablecoin",
+    "source": "derived"
+  },
   "sFRAX Ethereum::SY-sFRAX": {
     "what": "Pendle standardized wrapper (SY) of sFRAX",
     "source": "derived"
@@ -25687,7 +26429,10 @@
     "what": "Pendle standardized wrapper (SY) of sUSD3",
     "source": "derived"
   },
-  "sUSD::sUSD": { "what": "Synthetix USD stablecoin", "source": "derived" },
+  "sUSD::sUSD": {
+    "what": "Synthetix USD stablecoin",
+    "source": "derived"
+  },
   "sUSDC.e Arbitrum::SY-sUSDC-ARBSilo": {
     "what": "Pendle standardized wrapper (SY) of sUSDC.e",
     "source": "derived"
@@ -25709,16 +26454,18 @@
     "source": "derived"
   },
   "sUSDS::SUSDS": {
-    "mechanism": "lending",
     "what": "Sky savings rate on USDS · RWA T-bills + crypto-collateral loan fees",
     "body": "sUSDS is Sky's (ex-MakerDAO) non-rebasing ERC-4626 vault for USDS; its exchange rate rises every block at the Sky Savings Rate (SSR) set by Sky governance. The rate is paid out of Sky's protocol revenue: stability fees on USDS borrowed against ETH, wstETH and other crypto collateral, tokenized T-bill and other RWA allocations, and capital deployed by Sky's allocators such as the Spark Liquidity Layer. Deposited USDS itself is not lent out; it sits in the savings contract.",
     "backing": "USDS held in the Sky Savings Rate contract",
     "yieldSource": "Sky revenue: stability fees on crypto-collateral loans, RWA/T-bill allocations, allocator (Spark) yield",
     "redemption": "permissionless, instant redeem to USDS at current exchange rate; no fees",
     "issuer": "Sky (formerly MakerDAO)",
-    "links": ["https://developers.skyeco.com/protocol/tokens/susds/"],
+    "links": [
+      "https://developers.skyeco.com/protocol/tokens/susds/"
+    ],
     "updated": "2026-10-12",
     "confidence": "high",
+    "mechanism": "lending",
     "source": "curated"
   },
   "sUSDX BNB::SY-sUSDX": {
@@ -25750,7 +26497,6 @@
     "source": "derived"
   },
   "sUSDai::SUSDAI": {
-    "mechanism": "private-credit",
     "what": "USD.AI staked USDai · GPU-backed loans to AI data centers + T-bills on idle cash",
     "body": "sUSDai is the staked form of USDai, USD.AI's dollar that its docs say is 100% backed by PYUSD. Staked capital funds non-recourse loans to AI infrastructure operators at 70-80% LTV, 3-year amortization and 7-15% APR, each held in a bankruptcy-remote Delaware SPV that owns the GPUs (NVIDIA B200, B300, H200) and their revenue contracts, with about three months of debt service in reserve and Wilmington Trust as escrow; capital not yet lent sits in short-term T-bills. Loan interest and T-bill yield raise the sUSDai/USDai rate (about 6.9% on about $548m in Oct 2026; the protocol's TVL swung from $690m in Dec 2025 to $170m in Aug 2026 and back to $350m). sUSDai is not a stablecoin and is not redeemable at par on demand.",
     "backing": "USDai (PYUSD) lent against GPU hardware in Delaware SPVs; idle capital in T-bills",
@@ -25765,6 +26511,7 @@
     ],
     "updated": "2026-10-14",
     "confidence": "high",
+    "mechanism": "private-credit",
     "source": "curated"
   },
   "sUSDat BNB::SY-sUSDat": {
@@ -26220,7 +26967,10 @@
     "what": "Pendle standardized wrapper (SY) of tBTC",
     "source": "derived"
   },
-  "tBTC::tBTC": { "what": "Threshold bitcoin", "source": "curated" },
+  "tBTC::tBTC": {
+    "what": "Threshold bitcoin",
+    "source": "curated"
+  },
   "tETH Ethereum::SY tETH": {
     "what": "Pendle standardized wrapper (SY) of tETH",
     "source": "derived"
@@ -26253,7 +27003,10 @@
     "what": "Pendle standardized wrapper (SY) of trUSD",
     "source": "derived"
   },
-  "uaht.io::UAHT": { "what": "UAHT UAH stablecoin", "source": "derived" },
+  "uaht.io::UAHT": {
+    "what": "UAHT UAH stablecoin",
+    "source": "derived"
+  },
   "uniBTC (Corn Concrete) Ethereum::SY-ctCornuniBTC": {
     "what": "Pendle standardized wrapper (SY) of uniBTC (Corn Concrete)",
     "source": "derived"
@@ -26527,7 +27280,9 @@
     "yieldSource": "HYPE perp funding plus staking yield, minus a 10 % performance fee",
     "redemption": "instant at 0.3 % up to the redemption buffer, or a free request Liminal pays out automatically within about three days",
     "issuer": "Liminal",
-    "links": ["https://docs.liminal.money/tokenized/limusd.md"],
+    "links": [
+      "https://docs.liminal.money/tokenized/limusd.md"
+    ],
     "updated": "2026-10-27",
     "confidence": "medium",
     "source": "curated"
@@ -26690,5 +27445,8 @@
     "what": "Pendle standardized wrapper (SY) of z0BTCeBTC",
     "source": "derived"
   },
-  "zkUSD::ZKUSD": { "what": "Goal3 USD stablecoin", "source": "derived" }
+  "zkUSD::ZKUSD": {
+    "what": "Goal3 USD stablecoin",
+    "source": "derived"
+  }
 }
