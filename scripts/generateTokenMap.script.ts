@@ -285,7 +285,13 @@ async function readTokenLists(): Promise<{
           const enumKey = AutoGenHelpers.symbolToKey(tokenInList.symbol)
           const symbolParsed = AutoGenHelpers.normalizeSymbol(tokenInList.symbol)
           if (!symbolToNames[symbolParsed]) symbolToNames[symbolParsed] = []
-          if (enumKey && tokenInList.decimals) {
+          // 0 is a real ERC-20 decimals value (Pharos tokenized stocks are whole shares), but a
+          // third-party list may also write 0 for "unknown". Trust it only from our own lists,
+          // where a 0 can only come from `onchain:decimals` reading `decimals()` on-chain;
+          // anything else would publish a balance mis-scaled by 10^18.
+          const decimals = Number(tokenInList.decimals)
+          const hasDecimals = decimals > 0 || (is1delta && tokenInList.decimals !== '' && decimals === 0)
+          if (enumKey && hasDecimals) {
             const lcAddress = tokenInList.address?.toLowerCase() ?? tokenInList.id?.toLowerCase()
             /** Filter for NATIVE placeholders */
             if ((lcAddress.length === 66 || isAddress(lcAddress)) && !GENERAL_BLACKLIST.includes(lcAddress)) {

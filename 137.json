@@ -96,12 +96,6 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "securitize",
           "name": "Securitize",
@@ -8344,7 +8338,7 @@
       "currencyId": "STASIS EURS::EURS",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -8987,10 +8981,7 @@
               "sharedDecimals": 6,
               "oapp": "wirex-pay",
               "approvalRequired": true,
-              "peers": {
-                "5042": "0xa83a7be150d97b77c4ad96742ea38ab7c8e13782",
-                "8453": "0x35e0966208f518371e79cc9fd35559112068ddad"
-              }
+              "peers": {}
             }
           ]
         }
@@ -10932,7 +10923,7 @@
       "currencyId": "Real USD::USDR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -15368,11 +15359,7 @@
       "assetGroup": "Stabl.fi CASH::CASH",
       "currencyId": "Stabl.fi CASH::CASH",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "stabl", "name": "Stabl.fi", "kind": "protocol" }
       }
@@ -15889,11 +15876,7 @@
       "assetGroup": "USC",
       "currencyId": "Classic USD::USC",
       "props": {
-        "risk": {
-          "score": 5,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "brale", "name": "Brale", "kind": "institution" }
       }
@@ -26976,7 +26959,11 @@
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -29177,7 +29164,7 @@
       "assetGroup": "Altura Vault Tokens::AVLT",
       "currencyId": "Altura Vault Tokens::AVLT",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x6a92b1e99de09f71cd96bc91f934826d96b8b26e": {
@@ -29399,6 +29386,15 @@
       "logoURI": "https://tokens.debridge.finance/Logo/137/0x06e8bde95be4ce5cb1134bd47ad18a79ffb35822/small/token-logo.png",
       "assetGroup": "Uniswap::NUNI",
       "currencyId": "Uniswap::NUNI"
+    },
+    "0x0b16f64948468a54ab3736a5da1a8eb83d46d602": {
+      "chainId": "137",
+      "decimals": 18,
+      "name": "Uruguayan Peso",
+      "address": "0x0b16f64948468a54ab3736a5da1a8eb83d46d602",
+      "symbol": "wUYU",
+      "assetGroup": "Uruguayan Peso::wUYU",
+      "currencyId": "Uruguayan Peso::wUYU"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "137",

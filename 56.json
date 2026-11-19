@@ -934,7 +934,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -968,7 +968,7 @@
           "ytAddress": "0xdcf4f4260ab766fd458e4d883ddf01522a7e4bb8"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1252,7 +1252,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1562,7 +1562,7 @@
           "ytAddress": "0x74a5afde0ae6ab639ce3826ffa33efd7e636092e"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1906,7 +1906,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -2153,7 +2153,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3335,7 +3335,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3800,7 +3800,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -8649,12 +8649,6 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "securitize",
           "name": "Securitize",
@@ -32533,9 +32527,9 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "ccip": {
           "pool": "0x8e4ec56b2e74bd48557f327ea35f6f08b7e8a4bd",
@@ -32555,7 +32549,6 @@
             "747474"
           ]
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "avUSD", "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -43439,7 +43432,7 @@
       "currencyId": "Stables Labs USDX::USDX",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -52099,7 +52092,7 @@
       "currencyId": "Staked USDX::sUSDX",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -57829,7 +57822,7 @@
       "currencyId": "HYDT::HYDT",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 5,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -76784,7 +76777,7 @@
       "currencyId": "Resolv USD::USR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -77074,7 +77067,7 @@
       "currencyId": "Resolv Liquidity Provider Token::RLP",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -79385,11 +79378,7 @@
       "assetGroup": "bnb USD::bnbUSD",
       "currencyId": "bnb USD::bnbUSD",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "sigma-money",
@@ -80833,7 +80822,7 @@
       "currencyId": "USDA::USDA",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 5,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -83206,7 +83195,7 @@
       "currencyId": "Resolv wstUSR::WSTUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -91267,8 +91256,7 @@
       "symbol": "RTUSQ",
       "logoURI": "https://assets.coingecko.com/coins/images/102173258/thumb/rtUSQ_%285%29.png?1778664381",
       "assetGroup": "CICADA rtUSQ::RTUSQ",
-      "currencyId": "CICADA rtUSQ::RTUSQ",
-      "props": { "stablecoin": { "base": "USD" } }
+      "currencyId": "CICADA rtUSQ::RTUSQ"
     },
     "0x777bf78ad4546b61607a17bf4a1977dbbea98c28": {
       "chainId": "56",
@@ -96553,6 +96541,11 @@
       "assetGroup": "Flying Tulip USD::FTUSD",
       "currencyId": "Flying Tulip USD::FTUSD",
       "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "flying-tulip",
@@ -97049,7 +97042,10 @@
       "symbol": "SPYSHIELDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102180227/thumb/spyshieldon_160x160.png?1794409238",
       "assetGroup": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON",
-      "currencyId": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON"
+      "currencyId": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xba4530bf12ee2741154685d857b99fee2b9b538b": {
       "chainId": "56",
@@ -97059,7 +97055,10 @@
       "symbol": "BIG5ON",
       "logoURI": "https://assets.coingecko.com/coins/images/102180228/thumb/big5on_160x160.png?1794409556",
       "assetGroup": "Ondo Big 5 Core Allocation Portfolio::BIG5ON",
-      "currencyId": "Ondo Big 5 Core Allocation Portfolio::BIG5ON"
+      "currencyId": "Ondo Big 5 Core Allocation Portfolio::BIG5ON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0xd86800d5b021f5d79350c2f742bbb1ecc010bf82": {
       "chainId": "56",
@@ -97120,6 +97119,196 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102179230/thumb/CRCLs.png?1791366497",
       "assetGroup": "Circle (Stove Tokenized Stock)::CRCLS",
       "currencyId": "Circle (Stove Tokenized Stock)::CRCLS"
+    },
+    "0x51add1ee13101759c2aafa05aef557ff3bf0d9e1": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "DEXRise",
+      "address": "0x51add1ee13101759c2aafa05aef557ff3bf0d9e1",
+      "symbol": "DXR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180319/thumb/dexrise-200.png?1794995325",
+      "assetGroup": "DEXRise::DXR",
+      "currencyId": "DEXRise::DXR"
+    },
+    "0x7ed958b4cd75acd52cb28140371613dd9e277777": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Long",
+      "address": "0x7ed958b4cd75acd52cb28140371613dd9e277777",
+      "symbol": "龙",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180290/thumb/Long.jpg?1794830001",
+      "assetGroup": "Long::龙",
+      "currencyId": "Long::龙"
+    },
+    "0xea40e9b0d4910c1123d9c2b73d5a952c225bfaaa": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Doosan Enerbility (Stove Tokenized Stock)",
+      "address": "0xea40e9b0d4910c1123d9c2b73d5a952c225bfaaa",
+      "symbol": "DOOSANS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179224/thumb/doosans.png?1791366465",
+      "assetGroup": "Doosan Enerbility (Stove Tokenized Stock)::DOOSANS",
+      "currencyId": "Doosan Enerbility (Stove Tokenized Stock)::DOOSANS"
+    },
+    "0xf095607f8ab6f8f813a1f93f70047ec2f0a8bd85": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Take-Two Interactive Software (Ondo Tokenized Stock)",
+      "address": "0xf095607f8ab6f8f813a1f93f70047ec2f0a8bd85",
+      "symbol": "TTWOON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180296/thumb/ttwoon_160x160.png?1794898150",
+      "assetGroup": "Take-Two Interactive Software (Ondo Tokenized Stock)::TTWOON",
+      "currencyId": "Take-Two Interactive Software (Ondo Tokenized Stock)::TTWOON"
+    },
+    "0x2429a99b26630f3b71799ecc8d007390cae95273": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Franklin US Equity Bitcoin DRIP Index ETF (Ondo Tokenized ET",
+      "address": "0x2429a99b26630f3b71799ecc8d007390cae95273",
+      "symbol": "FBEQON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180297/thumb/fbeqon_160x160.png?1794898433",
+      "assetGroup": "Franklin US Equity Bitcoin DRIP Index ETF (Ondo Tokenized ET::FBEQON",
+      "currencyId": "Franklin US Equity Bitcoin DRIP Index ETF (Ondo Tokenized ET::FBEQON"
+    },
+    "0x894866bde9335bef347784e66ecb9bf0e942ffc0": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Franklin US Equity Index ETF (Ondo Tokenized ETF)",
+      "address": "0x894866bde9335bef347784e66ecb9bf0e942ffc0",
+      "symbol": "USPXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180309/thumb/uspxon_160x160.png?1794909512",
+      "assetGroup": "Franklin US Equity Index ETF (Ondo Tokenized ETF)::USPXON",
+      "currencyId": "Franklin US Equity Index ETF (Ondo Tokenized ETF)::USPXON"
+    },
+    "0xea62ba54ea274b090c7bdecc3e74910edb5a7e77": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Franklin US Core Bond ETF (Ondo Tokenized ETF)",
+      "address": "0xea62ba54ea274b090c7bdecc3e74910edb5a7e77",
+      "symbol": "FLCBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180310/thumb/flcbon_160x160.png?1794909969",
+      "assetGroup": "Franklin US Core Bond ETF (Ondo Tokenized ETF)::FLCBON",
+      "currencyId": "Franklin US Core Bond ETF (Ondo Tokenized ETF)::FLCBON"
+    },
+    "0xc939b2b442e79c6240a4f7c8b6cf6d71ec31bb2b": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Franklin US Treasury Bond ETF (Ondo Tokenized ETF)",
+      "address": "0xc939b2b442e79c6240a4f7c8b6cf6d71ec31bb2b",
+      "symbol": "FLGVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180311/thumb/flgvon_160x160.png?1794910224",
+      "assetGroup": "Franklin US Treasury Bond ETF (Ondo Tokenized ETF)::FLGVON",
+      "currencyId": "Franklin US Treasury Bond ETF (Ondo Tokenized ETF)::FLGVON"
+    },
+    "0x35c486c5448b3cb1ade45c75de302ab291442576": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "SoFi Technologies (Stove Tokenized Stock)",
+      "address": "0x35c486c5448b3cb1ade45c75de302ab291442576",
+      "symbol": "SOFIS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179103/thumb/SOFIs.png?1791189192",
+      "assetGroup": "SoFi Technologies (Stove Tokenized Stock)::SOFIS",
+      "currencyId": "SoFi Technologies (Stove Tokenized Stock)::SOFIS"
+    },
+    "0x9b365cb5cb359d71b9c451f2ea21d059849a9ac2": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Samsung Life Insurance (Stove Tokenized Stock)",
+      "address": "0x9b365cb5cb359d71b9c451f2ea21d059849a9ac2",
+      "symbol": "SLIFES",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179057/thumb/slifes.png?1791047523",
+      "assetGroup": "Samsung Life Insurance (Stove Tokenized Stock)::SLIFES",
+      "currencyId": "Samsung Life Insurance (Stove Tokenized Stock)::SLIFES"
+    },
+    "0x455bd4ad29823741d76f65a72139e93665504f83": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Intel (Stove Tokenized Stock)",
+      "address": "0x455bd4ad29823741d76f65a72139e93665504f83",
+      "symbol": "INTCS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179102/thumb/INTCs.png?1791189174",
+      "assetGroup": "Intel (Stove Tokenized Stock)::INTCS",
+      "currencyId": "Intel (Stove Tokenized Stock)::INTCS"
+    },
+    "0x95a3180f42fc798561f2148f0a85ca96ba48bfe7": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Apple (Stove Tokenized Stock)",
+      "address": "0x95a3180f42fc798561f2148f0a85ca96ba48bfe7",
+      "symbol": "AAPLS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179104/thumb/AAPLs.png?1791189212",
+      "assetGroup": "Apple (Stove Tokenized Stock)::AAPLS",
+      "currencyId": "Apple (Stove Tokenized Stock)::AAPLS"
+    },
+    "0x550528b637da6cfdf59040b21d8c2b85d6496e3a": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "KB Financial Group (Stove Tokenized Stock)",
+      "address": "0x550528b637da6cfdf59040b21d8c2b85d6496e3a",
+      "symbol": "KBFGS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179058/thumb/kbfgs.png?1791047526",
+      "assetGroup": "KB Financial Group (Stove Tokenized Stock)::KBFGS",
+      "currencyId": "KB Financial Group (Stove Tokenized Stock)::KBFGS"
+    },
+    "0x257a61f0178911df9ab1ca3f9735bce67efa3591": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Micron Technology (Stove Tokenized Stock)",
+      "address": "0x257a61f0178911df9ab1ca3f9735bce67efa3591",
+      "symbol": "MUS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179108/thumb/MUs.png?1791190143",
+      "assetGroup": "Micron Technology (Stove Tokenized Stock)::MUS",
+      "currencyId": "Micron Technology (Stove Tokenized Stock)::MUS"
+    },
+    "0xedfe5a04ebfdc7da8931e915b2402b7e020689bf": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "SpaceX (Stove Tokenized Stock)",
+      "address": "0xedfe5a04ebfdc7da8931e915b2402b7e020689bf",
+      "symbol": "SPCXS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179109/thumb/SPCXs.png?1791190167",
+      "assetGroup": "SpaceX (Stove Tokenized Stock)::SPCXS",
+      "currencyId": "SpaceX (Stove Tokenized Stock)::SPCXS"
+    },
+    "0x6a7cfbf34438307cdb36947f83bca8a394ef12ed": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Tesla (Stove Tokenized Stock)",
+      "address": "0x6a7cfbf34438307cdb36947f83bca8a394ef12ed",
+      "symbol": "TSLAS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179107/thumb/TSLAs.png?1791190122",
+      "assetGroup": "Tesla (Stove Tokenized Stock)::TSLAS",
+      "currencyId": "Tesla (Stove Tokenized Stock)::TSLAS"
+    },
+    "0x0b16f64948468a54ab3736a5da1a8eb83d46d602": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Uruguayan Peso",
+      "address": "0x0b16f64948468a54ab3736a5da1a8eb83d46d602",
+      "symbol": "WUYU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180291/thumb/wuyu_logo_outline_200x200.png?1794830161",
+      "assetGroup": "Uruguayan Peso::WUYU",
+      "currencyId": "Uruguayan Peso::WUYU"
+    },
+    "0x343ccbc9f8409f862008b7abebfff20ecf935c75": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Anthropic (Ondo Tokenized Stock)",
+      "address": "0x343ccbc9f8409f862008b7abebfff20ecf935c75",
+      "symbol": "ANTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180295/thumb/anton_160x160.png?1794897940",
+      "assetGroup": "Anthropic (Ondo Tokenized Stock)::ANTON",
+      "currencyId": "Anthropic (Ondo Tokenized Stock)::ANTON"
+    },
+    "0x11125e44843170467a7955d29776d63760ea4b6e": {
+      "chainId": "56",
+      "decimals": 18,
+      "name": "Lithosphere Algorithmic",
+      "address": "0x11125e44843170467a7955d29776d63760ea4b6e",
+      "symbol": "LAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180298/thumb/Lax_Logo.png?1794902129",
+      "assetGroup": "Lithosphere Algorithmic::LAX",
+      "currencyId": "Lithosphere Algorithmic::LAX"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "56",

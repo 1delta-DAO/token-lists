@@ -729,7 +729,7 @@
           "ytAddress": "0xa36a3c6a1f1c48ab4d822b7527b0029fd373e2cf"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1420,7 +1420,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -2609,7 +2609,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3343,7 +3343,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3791,7 +3791,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -18962,7 +18962,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -19489,7 +19489,7 @@
       "currencyId": "Resolv USD::USR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -19607,7 +19607,7 @@
       "currencyId": "Resolv Liquidity Provider Token::RLP",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -21068,7 +21068,11 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -21235,7 +21239,7 @@
       "currencyId": "MEV Capital USR::mcUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "vault_inherit"
         }
@@ -21407,7 +21411,7 @@
       "assetGroup": "Spectra ERC4626 Wrapper: Resolv USD::sw-USR",
       "currencyId": "Spectra ERC4626 Wrapper: Resolv USD::sw-USR",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x21d2de7206d5ce3e201da14010ebaa32858b89da": {
@@ -21638,7 +21642,7 @@
       "assetGroup": "USR/USDT0::USR-USDT0",
       "currencyId": "USR/USDT0::USR-USDT0",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x34c7c50e44ed7ab6360c2fe18f15e66083e5ec29": {
@@ -21839,7 +21843,7 @@
       "currencyId": "Balancer mcUSR-gtUSDT0::mcUSR-gtUSDT0",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xa5bec44e681e8138dfd4925f3023a54eddc99ea2": {
@@ -22226,7 +22230,7 @@
       "currencyId": "Balancer mcUSR-MC_USDT0::mcUSR-MC_USDT0",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xb2432ac4bb415716c106dca066a13c1a0ab3cc23": {
@@ -22752,7 +22756,7 @@
       "currencyId": "Resolv wstUSR::WSTUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -23660,7 +23664,7 @@
       "assetGroup": "Altura Vault Tokens::AVLT",
       "currencyId": "Altura Vault Tokens::AVLT",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x053f6755320d06b8fd6675581b0475b2e32399b1": {
@@ -24820,6 +24824,26 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180182/thumb/EQSPCX.png?1794208773",
       "assetGroup": "SpaceX (EQX Tokenized Stock)::EQSPCX",
       "currencyId": "SpaceX (EQX Tokenized Stock)::EQSPCX"
+    },
+    "0xeb22ec1b402dcc4155b9d8d2e1db2f2d229162cc": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Ensemble VOL Vault Share",
+      "address": "0xeb22ec1b402dcc4155b9d8d2e1db2f2d229162cc",
+      "symbol": "VOL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180281/thumb/approved_token_200.png?1794682898",
+      "assetGroup": "Ensemble VOL Vault Share::VOL",
+      "currencyId": "Ensemble VOL Vault Share::VOL"
+    },
+    "0x0b16f64948468a54ab3736a5da1a8eb83d46d602": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Uruguayan Peso",
+      "address": "0x0b16f64948468a54ab3736a5da1a8eb83d46d602",
+      "symbol": "WUYU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180291/thumb/wuyu_logo_outline_200x200.png?1794830161",
+      "assetGroup": "Uruguayan Peso::WUYU",
+      "currencyId": "Uruguayan Peso::WUYU"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "999",

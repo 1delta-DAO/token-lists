@@ -41,7 +41,7 @@
           "maturity": 1821139205
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -68,7 +68,7 @@
           "underlyingAsset": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -98,7 +98,7 @@
           "maturity": 1821139205
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -129,7 +129,7 @@
           "maturity": 1821139211
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -160,7 +160,7 @@
           "maturity": 1821139211
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -499,12 +499,7 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": {
           "id": "securitize",
           "name": "Securitize",
@@ -8288,7 +8283,7 @@
       "currencyId": "deUSD::deUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -8742,9 +8737,9 @@
       "props": {
         "savings": { "underlying": "avUSD", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "ccip": {
           "pool": "0x8fcc42c414e29e8e3dbfa1628cf45e8ed80c999d",
@@ -8764,7 +8759,6 @@
             "80094"
           ]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
@@ -12695,7 +12689,7 @@
       "currencyId": "Staked deUSD::sdeUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -15061,7 +15055,11 @@
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -15721,7 +15719,7 @@
       "assetGroup": "MEV USDC::mevUSDC",
       "currencyId": "MEV USDC::mevUSDC",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x94f9bb5c972285728dcee7eaece48bec2ff341ce": {
@@ -15735,7 +15733,7 @@
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -17115,6 +17113,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180222/thumb/Peak.jpg?1794393866",
       "assetGroup": "Peak::PEAK",
       "currencyId": "Peak::PEAK"
+    },
+    "0x898d93e5bf6ee61a03f50cb0cdbf9c3751da8dc7": {
+      "chainId": "43114",
+      "decimals": 18,
+      "name": "Avax Hook",
+      "address": "0x898d93e5bf6ee61a03f50cb0cdbf9c3751da8dc7",
+      "symbol": "HOOK",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180277/thumb/hookavax-coin-logo.png?1794662661",
+      "assetGroup": "Avax Hook::HOOK",
+      "currencyId": "Avax Hook::HOOK"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "43114",

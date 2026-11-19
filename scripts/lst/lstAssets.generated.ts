@@ -200,7 +200,10 @@ export const LST_GENERATED: LstRegistry = {
     '0xd4169e045bcf9a86cc00101225d9ed61d2f51af2': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
   },
   '480': { '0x2416092f143378750bb29b79ed961ab195cceea5': { type: 'restaking', asset: 'ETH', provider: 'renzo' } },
-  '988': { '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' } },
+  '988': {
+    '0x60a08269e5f3406d8fd7892567d53188c7f75009': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },
+    '0xecac9c5f704e954931349da37f60e39f515c11c1': { type: 'staking', asset: 'BTC', provider: 'lombard' },
+  },
   '999': {
     '0xa321d2a72db265c04d5c1318ed69a719681bbade': { type: 'restaking', asset: 'ETH', provider: 'kelp' },
     '0xa3d68b74bf0528fdd07263c60d6488749044914b': { type: 'restaking', asset: 'ETH', provider: 'etherfi' },

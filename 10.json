@@ -194,12 +194,6 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "securitize",
           "name": "Securitize",
@@ -20924,7 +20918,11 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -22299,7 +22297,7 @@
       "assetGroup": "Altura Vault Tokens::AVLT",
       "currencyId": "Altura Vault Tokens::AVLT",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x1eaf7cceaa5dc6d605760718722fbcc58579b3ff": {

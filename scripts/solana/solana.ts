@@ -115,6 +115,13 @@ const SOLANA_MAPPEDS: { [mint: string]: string } = {
   // 2026-10-04, when that row stopped matching. A group is an identity and
   // may not move between runs, so the join it already had is pinned.
   C4Kkr9NZU3VbyedcgutU6LKmi6MKz81sx6gRmk5pX519: 'VNX EURO::VEUR',
+  // Backed xStocks that joined their Ethereum group through the platform map until the
+  // 2026-11-18 run, when those rows stopped matching and the mints fell to `…x::solana`
+  // (losing the group's issuer). Pinned for the VEUR reason.
+  XsG5QyZTQnVSpsXRpD92K5ZGoxXjsmfTyx7fW7r18DV: 'Hut 8 xStock::HUTX',
+  XsMJtFbb8BwzQtck3oRXyAfs7SAPRuTXnSEDNd7BAVz: 'Planet Labs xStock::PLX',
+  XsZUSqxAXKJkEimvD4CoVvEb4WUC92TFgj5zRtBxFeL: 'Warner Bros. Discovery xStock::WBDX',
+  XsaQGz41BEQkS9xAB44uvUtuXcdLJAXEU1dogEzWMZ8: 'Strategy PP Fixed xStock::STRKX',
   // Wrapped SOL (and so native SOL, which shares its group): joined `SOL` through
   // CoinGecko's platform map until the 2026-10-14 run, when that row stopped
   // matching and the mint fell through to `Wrapped SOL::SOL::solana` — every

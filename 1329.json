@@ -29,7 +29,6 @@
                 "4217": "0xd45c2377241f1da765570e0d57920f1cf4855bcb",
                 "5000": "0x0be393dc46248e4285dc5caca3084bc7e9bfbb41",
                 "42161": "0x0be393dc46248e4285dc5caca3084bc7e9bfbb41",
-                "98866": "0x944acfc05062339c6862555b42f12d3fb03f8122",
                 "solana": "7YNReenG6AXgVUfmSizt6hoVXrznS4zDdgCj1UTLJ2S3"
               }
             }
@@ -277,9 +276,9 @@
       "props": {
         "savings": { "underlying": "avUSD", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "ccip": {
           "pool": "0x25fa35c9672ea3ef762704ac4f77bc2f9d4d3598",
@@ -288,7 +287,6 @@
           "home": "43114",
           "destinations": ["1", "56", "42161", "43114", "80094"]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
@@ -334,7 +332,7 @@
       "assetGroup": "Sei fastUSD::fastUSD",
       "currencyId": "Sei fastUSD::fastUSD",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xdf77686d99667ae56bc18f539b777dbc2bbe3e9f": {
@@ -347,7 +345,7 @@
       "assetGroup": "Staked sfastUSD::sfastUSD",
       "currencyId": "Staked fastUSD::sfastUSD",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x049eaa1b2c9934aaacc12a141484eefd62867653": {
@@ -1347,7 +1345,7 @@
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },

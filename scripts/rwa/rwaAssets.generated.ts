@@ -20377,6 +20377,7 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'anchored',
       underlying: 'SPCX',
     },
+    '0x23c4bddea5e7e284fb4027c6050bc5e6f7fae23f': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SMH' },
     '0x2fabf1c784b8583d63c00c5c9c0377d8cf1a3245': { type: 'fund', subType: 'private-credit', issuer: 'securitize' },
     '0x5a0f93d040de44e78f251b03c43be9cf317dcf64': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
     '0x5da938ad48c46bd22ca362a91517ce2c16367d09': {
@@ -20386,6 +20387,12 @@ export const RWA_GENERATED: RwaRegistry = {
       underlying: 'TLT',
     },
     '0x5f8a1c74c112865bd05dbe4752c7608332719062': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
+    '0x6215a58ed045d71f2561aaabe54f4c885c522998': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'SKHY',
+    },
     '0x6e8568ba7b43138d9210959a9523155e274550c9': {
       type: 'equity',
       subType: 'stock',
@@ -20394,6 +20401,12 @@ export const RWA_GENERATED: RwaRegistry = {
     },
     '0x8c213ee79581ff4984583c6a801e5263418c4b86': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
     '0x8de0f3295b9e42b29e7617bada7c603277420451': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
+    '0x8e2eed8b8b5e13ea7bf38e50d7821d2c57309072': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'SPCX',
+    },
     '0x909369940f22dc1c143ac78753a33f41597138b1': {
       type: 'equity',
       subType: 'stock',
@@ -20402,8 +20415,27 @@ export const RWA_GENERATED: RwaRegistry = {
     },
     '0x90a2a4c76b5d8c0bc892a69ea28aa775a8f2dd48': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SPY' },
     '0x9477724bb54ad5417de8baff29e59df3fb4da74f': { type: 'fund', subType: 'private-credit', issuer: 'securitize' },
+    '0xa8ddb5cd96b5222afe198316e9a57caa642850d5': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'NVDA',
+    },
     '0xad48f183e586e92a591a610397ebf534609df797': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
     '0xc18e6f730896971a79d748e8dea61067a9bc6040': { type: 'fund', subType: 'treasury', issuer: 'anemoy' },
+    '0xc3fdbe3a68ee5de461d30415a8165cf9aefe1171': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'TSLA',
+    },
+    '0xe2047ee3bddb5c99ae428ab83df63f8730698e30': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'MU',
+    },
+    '0xe7e553cd128f0011777323a0b44a7b96ea1cb540': { type: 'fund', subType: 'etf', issuer: 'backed', underlying: 'SPY' },
   },
   '146': {
     '0x09d4214c03d01f49544c0448dbe3a27f768f2b34': { type: 'credit', subType: 'reinsurance', issuer: 'reservoir' },
@@ -23599,6 +23631,12 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'backed',
       underlying: 'HSY',
     },
+    '0xc3a8d2e18d33e0800f84cb4ca6529d18fad225df': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'BRK.B',
+    },
     '0xc3fdbe3a68ee5de461d30415a8165cf9aefe1171': {
       type: 'equity',
       subType: 'stock',
@@ -23634,6 +23672,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'backed',
       underlying: 'PPL',
+    },
+    '0xc6639026a3a862cd4fcbae3f67cb2d25a2959d37': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'MCD',
     },
     '0xc7866e01c8a929b5dd5a1e67512b2d27faa4d121': {
       type: 'equity',
@@ -24270,6 +24314,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'backed',
       underlying: 'ECL',
+    },
+    '0xe4784b45415aac58b289f9373314261c788c91e8': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'backed',
+      underlying: 'KO',
     },
     '0xe49922893496b17ac12fdd7c74720a92010d889d': {
       type: 'fund',
@@ -35155,6 +35205,18 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'coinbase',
       underlying: 'ABNB',
     },
+    '0xb20000000000000000000005717baa337022c782': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'LYFT',
+    },
+    '0xb20000000000000000000005befa57b9b871e737': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'DOCN',
+    },
     '0xb20000000000000000000006f910a0e7bbd3c168': {
       type: 'equity',
       subType: 'stock',
@@ -35178,6 +35240,18 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'SEZL',
+    },
+    '0xb2000000000000000000000c431e2a7c0ce7ea31': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'SLS',
+    },
+    '0xb2000000000000000000000cd31253817b36f88a': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'QXO',
     },
     '0xb2000000000000000000000d46361d597f543d06': {
       type: 'equity',
@@ -35208,6 +35282,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'KSS',
+    },
+    '0xb20000000000000000000010718397aca876a20a': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'ABSI',
     },
     '0xb200000000000000000000115bf2283265fb04db': {
       type: 'equity',
@@ -35256,6 +35336,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'AEHR',
+    },
+    '0xb200000000000000000000178d4c37485ea47ef6': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'OMER',
     },
     '0xb20000000000000000000017bb66e9301e913a99': {
       type: 'equity',
@@ -35311,11 +35397,29 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'coinbase',
       underlying: 'CAVA',
     },
+    '0xb2000000000000000000001bcf0441201d513fa5': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'DHR',
+    },
+    '0xb2000000000000000000001bcf8e5022d7f61919': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'MVIS',
+    },
     '0xb2000000000000000000001ca01a48688ec7d3cc': {
       type: 'equity',
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'CHPT',
+    },
+    '0xb2000000000000000000001dfd8c413ecd6ec630': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'PINS',
     },
     '0xb2000000000000000000001e800a7f5189430cd0': {
       type: 'equity',
@@ -35503,6 +35607,18 @@ export const RWA_GENERATED: RwaRegistry = {
       issuer: 'coinbase',
       underlying: 'SNDK',
     },
+    '0xb2000000000000000000003a67b9f116f25513d6': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'TGTX',
+    },
+    '0xb2000000000000000000003aa0410688baf4da88': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'NEM',
+    },
     '0xb2000000000000000000003ae0817c304acbb1de': {
       type: 'equity',
       subType: 'stock',
@@ -35574,6 +35690,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'coinbase',
       underlying: 'DJT',
+    },
+    '0xb20000000000000000000042cbbae483635c3774': {
+      type: 'equity',
+      subType: 'stock',
+      issuer: 'coinbase',
+      underlying: 'IT',
     },
     '0xb200000000000000000000431a5c1e48e3b1d130': {
       type: 'equity',
@@ -36562,6 +36684,12 @@ export const RWA_GENERATED: RwaRegistry = {
       subType: 'stock',
       issuer: 'dinari',
       underlying: 'LLY',
+    },
+    '0xe904aea5e1b110c9174728fa2effc8aed19e98ef': {
+      type: 'commodity',
+      subType: 'gold',
+      issuer: 'paxos',
+      underlying: 'XAU',
     },
     '0xe991c1c657dc47ee1d01135c1dad63f971b8d7ce': {
       type: 'fund',

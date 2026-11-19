@@ -335,7 +335,11 @@ export function buildNotes(
     const under = ptUnderlying(entry)
     const from = under ? out[groupAt.get(under) ?? ''] : undefined
     if (from?.mechanism)
-      out[group] = { ...note, mechanism: from.mechanism, ...(from.mechanismOf ? { mechanismOf: from.mechanismOf } : {}) }
+      out[group] = {
+        ...note,
+        mechanism: from.mechanism,
+        ...(from.mechanismOf ? { mechanismOf: from.mechanismOf } : {}),
+      }
   }
   // stable key order so the file diffs cleanly
   return Object.fromEntries(

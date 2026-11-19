@@ -142,6 +142,26 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x065a77445757d6c1baa5441952cb5517a0e20cd7": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Base",
+      "address": "0x065a77445757d6c1baa5441952cb5517a0e20cd7",
+      "symbol": "PT-USDe-28FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1bc8b04b-4665-44ce-a623-a89ce47d51ac.svg",
+      "assetGroup": "PT USDe (USDe) Base::PT-USDe-28FEB2027",
+      "currencyId": "PT USDe (USDe) Base::PT-USDe-28FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1803772800,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ytAddress": "0xe0c8491bf78e1789f3b1ec8d7a69dbd2983ff025",
+          "syAddress": "0x2fd5d7e8cfedb64064a7b80f147d0a3a5b00aa49"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x07237cf449de4e6345ec69daabd252523c0b9f8d": {
       "chainId": "8453",
       "decimals": 6,
@@ -580,7 +600,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -629,6 +649,26 @@
           "ptAddress": "0x43fe057b02ce301a2b09c9873676032892566de7",
           "syAddress": "0x77d07ab8466a57fb8615aeb75c37abff25c06ebf",
           "expired": true
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x24f040ef66f15eab886f29accb3f0e3673fe7507": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Base",
+      "address": "0x24f040ef66f15eab886f29accb3f0e3673fe7507",
+      "symbol": "PT-USDe-30NOV2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1bc8b04b-4665-44ce-a623-a89ce47d51ac.svg",
+      "assetGroup": "PT USDe (USDe) Base::PT-USDe-30NOV2027",
+      "currencyId": "PT USDe (USDe) Base::PT-USDe-30NOV2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1827532800,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ytAddress": "0xda55e24f67ba2f2a21a5755d9ca062cc33752d58",
+          "syAddress": "0xc1b5c7ad9c6e9e09aa90b0fb1540438390e1c444"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -738,7 +778,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -797,6 +837,40 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "anzen", "name": "Anzen", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0x2fd5d7e8cfedb64064a7b80f147d0a3a5b00aa49": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "USDe Base",
+      "address": "0x2fd5d7e8cfedb64064a7b80f147d0a3a5b00aa49",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f1a7b750-016c-4396-b656-3cf7550271e7.svg",
+      "assetGroup": "USDe Base::SY-USDe",
+      "currencyId": "USDe Base::SY-USDe",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0x302e6c35012aa00e7df9a0fff02aaffa944629a9": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "USDe Base",
+      "address": "0x302e6c35012aa00e7df9a0fff02aaffa944629a9",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f1a7b750-016c-4396-b656-3cf7550271e7.svg",
+      "assetGroup": "USDe Base::SY-USDe::8453::0",
+      "currencyId": "USDe Base::SY-USDe",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
         ]
       }
     },
@@ -1057,7 +1131,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1197,7 +1271,7 @@
           "ytAddress": "0x22cf19b7d8de1b53bbd9792e12ea86191985731f"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1405,7 +1479,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1526,7 +1600,7 @@
       "address": "0x5dfbeaea9e41f85c334075482a20afb7031207ae",
       "symbol": "SY-USDe",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/4f69cd58-8a2b-4076-8edd-0034dc22b324.svg",
-      "assetGroup": "USDe Base::SY-USDe",
+      "assetGroup": "USDe Base::SY-USDe::8453::1",
       "currencyId": "USDe Base::SY-USDe",
       "props": {
         "pendle": {
@@ -1707,7 +1781,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1872,7 +1946,7 @@
           "ytAddress": "0xd7bc85f4aa2315c5fe7f256b314ed9c083027c23"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -2032,6 +2106,26 @@
             "hops": 1
           }
         ]
+      }
+    },
+    "0x71c82540da319fdb9ede619ffa07ff8cc19b9c83": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Base",
+      "address": "0x71c82540da319fdb9ede619ffa07ff8cc19b9c83",
+      "symbol": "YT-USDe-31MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2f7c5972-0301-48f4-aba7-5cadc32620d4.svg",
+      "assetGroup": "YT USDe (USDe) Base::YT-USDe-31MAY2027",
+      "currencyId": "YT USDe (USDe) Base::YT-USDe-31MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1811721600,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ptAddress": "0x8fd93a272dba4511d5c3a56de9d439f4851ae48e",
+          "syAddress": "0x302e6c35012aa00e7df9a0fff02aaffa944629a9"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0x73838d7ae05294b2f4d648971e33e812ee048f56": {
@@ -2406,6 +2500,26 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x8fd93a272dba4511d5c3a56de9d439f4851ae48e": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Base",
+      "address": "0x8fd93a272dba4511d5c3a56de9d439f4851ae48e",
+      "symbol": "PT-USDe-31MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1bc8b04b-4665-44ce-a623-a89ce47d51ac.svg",
+      "assetGroup": "PT USDe (USDe) Base::PT-USDe-31MAY2027",
+      "currencyId": "PT USDe (USDe) Base::PT-USDe-31MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1811721600,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ytAddress": "0x71c82540da319fdb9ede619ffa07ff8cc19b9c83",
+          "syAddress": "0x302e6c35012aa00e7df9a0fff02aaffa944629a9"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x9000ff950fc0b83efbec98d4b07434402644319f": {
       "chainId": "8453",
       "decimals": 8,
@@ -2598,6 +2712,26 @@
         ]
       }
     },
+    "0xa6450981911c7dab9ba040871f690a628433f37d": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Base",
+      "address": "0xa6450981911c7dab9ba040871f690a628433f37d",
+      "symbol": "YT-USDe-31AUG2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2f7c5972-0301-48f4-aba7-5cadc32620d4.svg",
+      "assetGroup": "YT USDe (USDe) Base::YT-USDe-31AUG2027",
+      "currencyId": "YT USDe (USDe) Base::YT-USDe-31AUG2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1819670400,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ptAddress": "0xbe454e51c5ab4af33e966448bb7c14fe2187a8c5",
+          "syAddress": "0xca73dfce8d36cd4d63d5a3378e946b3d8636daff"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xa681e18c253ebfe8ec6c11a4e1ef93d1263671b0": {
       "chainId": "8453",
       "decimals": 18,
@@ -2653,7 +2787,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -2926,6 +3060,26 @@
         ]
       }
     },
+    "0xbe454e51c5ab4af33e966448bb7c14fe2187a8c5": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "PT USDe (USDe) Base",
+      "address": "0xbe454e51c5ab4af33e966448bb7c14fe2187a8c5",
+      "symbol": "PT-USDe-31AUG2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1bc8b04b-4665-44ce-a623-a89ce47d51ac.svg",
+      "assetGroup": "PT USDe (USDe) Base::PT-USDe-31AUG2027",
+      "currencyId": "PT USDe (USDe) Base::PT-USDe-31AUG2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1819670400,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ytAddress": "0xa6450981911c7dab9ba040871f690a628433f37d",
+          "syAddress": "0xca73dfce8d36cd4d63d5a3378e946b3d8636daff"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xbef1cc67f26a517c7d742a5c77f25c4285a07985": {
       "chainId": "8453",
       "decimals": 18,
@@ -2980,6 +3134,23 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "kaito", "name": "Kaito", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0xc1b5c7ad9c6e9e09aa90b0fb1540438390e1c444": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "USDe Base",
+      "address": "0xc1b5c7ad9c6e9e09aa90b0fb1540438390e1c444",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f1a7b750-016c-4396-b656-3cf7550271e7.svg",
+      "assetGroup": "USDe Base::SY-USDe::8453::2",
+      "currencyId": "USDe Base::SY-USDe",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
         ]
       }
     },
@@ -3135,6 +3306,23 @@
         ]
       }
     },
+    "0xca73dfce8d36cd4d63d5a3378e946b3d8636daff": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "USDe Base",
+      "address": "0xca73dfce8d36cd4d63d5a3378e946b3d8636daff",
+      "symbol": "SY-USDe",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/f1a7b750-016c-4396-b656-3cf7550271e7.svg",
+      "assetGroup": "USDe Base::SY-USDe::8453::3",
+      "currencyId": "USDe Base::SY-USDe",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
     "0xccb098820c719a19bad808d5933529da603dc80e": {
       "chainId": "8453",
       "decimals": 18,
@@ -3239,9 +3427,29 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0xda55e24f67ba2f2a21a5755d9ca062cc33752d58": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Base",
+      "address": "0xda55e24f67ba2f2a21a5755d9ca062cc33752d58",
+      "symbol": "YT-USDe-30NOV2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2f7c5972-0301-48f4-aba7-5cadc32620d4.svg",
+      "assetGroup": "YT USDe (USDe) Base::YT-USDe-30NOV2027",
+      "currencyId": "YT USDe (USDe) Base::YT-USDe-30NOV2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1827532800,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ptAddress": "0x24f040ef66f15eab886f29accb3f0e3673fe7507",
+          "syAddress": "0xc1b5c7ad9c6e9e09aa90b0fb1540438390e1c444"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
@@ -3419,6 +3627,26 @@
         ]
       }
     },
+    "0xe0c8491bf78e1789f3b1ec8d7a69dbd2983ff025": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "YT USDe (USDe) Base",
+      "address": "0xe0c8491bf78e1789f3b1ec8d7a69dbd2983ff025",
+      "symbol": "YT-USDe-28FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/2f7c5972-0301-48f4-aba7-5cadc32620d4.svg",
+      "assetGroup": "YT USDe (USDe) Base::YT-USDe-28FEB2027",
+      "currencyId": "YT USDe (USDe) Base::YT-USDe-28FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1803772800,
+          "underlyingAsset": "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34",
+          "ptAddress": "0x065a77445757d6c1baa5441952cb5517a0e20cd7",
+          "syAddress": "0x2fd5d7e8cfedb64064a7b80f147d0a3a5b00aa49"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xe177d57cba726c7697e3845b8d0db8d593636842": {
       "chainId": "8453",
       "decimals": 18,
@@ -3546,7 +3774,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -3692,7 +3920,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3960,34 +4188,6 @@
         ]
       }
     },
-    "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "Principal Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base",
-      "address": "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa",
-      "symbol": "PT-sw-AAPLc(ref-AAPLc)-2026/11/30",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xb200000000000000000000c2e324d24d7eecd1fb.png",
-      "assetGroup": "Principal Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::PT-sw-AAPLc(ref-AAPLc)-2026/11/30",
-      "currencyId": "Principal Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::PT-sw-AAPLc(ref-AAPLc)-2026/11/30",
-      "props": {
-        "spectra": {
-          "tokenType": "PT",
-          "poolAddress": "0x83e08fc15cc48dc69ab356a9f24c6262e4e10542",
-          "ptAddress": "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa",
-          "ytAddress": "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77",
-          "ibtAddress": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
-          "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
-          "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0",
-          "maturity": 1795996808
-        },
-        "risk": {
-          "score": 2,
-          "category": "PRINCIPAL_TOKEN",
-          "source": "pendle_inherit"
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
-      }
-    },
     "0x17c8b7a23ddfe64c7cd0b3594dbed67c8c2e6eb5": {
       "chainId": "8453",
       "decimals": 18,
@@ -4170,30 +4370,6 @@
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
-    "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "Yield Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base",
-      "address": "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77",
-      "symbol": "YT-sw-AAPLc(ref-AAPLc)-2026/11/30",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xb200000000000000000000c2e324d24d7eecd1fb.png",
-      "assetGroup": "Yield Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::YT-sw-AAPLc(ref-AAPLc)-2026/11/30",
-      "currencyId": "Yield Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::YT-sw-AAPLc(ref-AAPLc)-2026/11/30",
-      "props": {
-        "spectra": {
-          "tokenType": "YT",
-          "poolAddress": "0x83e08fc15cc48dc69ab356a9f24c6262e4e10542",
-          "ptAddress": "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa",
-          "ytAddress": "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77",
-          "ibtAddress": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
-          "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
-          "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0",
-          "maturity": 1795996808
-        },
-        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
-      }
-    },
     "0x554e6255dda7dbad01d7e29c887ad5eac6c64ec2": {
       "chainId": "8453",
       "decimals": 8,
@@ -4321,7 +4497,10 @@
           "underlyingAsset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
           "maturity": 1802476802
         },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xb43326e29631891d069ed21970b09fca0b624cee": {
@@ -4347,30 +4526,6 @@
           "score": 4,
           "category": "PRINCIPAL_TOKEN",
           "source": "default"
-        },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
-      }
-    },
-    "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "Spectra ERC4626 Wrapper: Apple Inc. Base",
-      "address": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
-      "symbol": "sw-AAPLc",
-      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xb200000000000000000000c2e324d24d7eecd1fb.png",
-      "assetGroup": "Spectra ERC4626 Wrapper: Apple Inc. Base::sw-AAPLc",
-      "currencyId": "Spectra ERC4626 Wrapper: Apple Inc. Base::sw-AAPLc",
-      "props": {
-        "spectra": {
-          "tokenType": "IBT",
-          "ibtAddress": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
-          "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
-          "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0"
-        },
-        "risk": {
-          "score": 2,
-          "category": "TOKENIZED_EQUITY",
-          "source": "pendle_inherit"
         },
         "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
@@ -4472,7 +4627,10 @@
           "underlyingAsset": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
           "maturity": 1802476802
         },
-        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "circle", "name": "Circle", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xfc72de4009148a730f89db04f287a28178898a9c": {
@@ -12860,6 +13018,258 @@
         "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
       }
     },
+    "0xb20000000000000000000005befa57b9b871e737": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000005befa57b9b871e737",
+      "symbol": "DOCNC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180251/thumb/DOCNc-icon-200.png?1794537575",
+      "assetGroup": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)::DOCNC",
+      "currencyId": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)::DOCNC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "DOCN"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000001dfd8c413ecd6ec630": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Pinterest, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001dfd8c413ecd6ec630",
+      "symbol": "PINSC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180255/thumb/PINSc-icon-200.png?1794538155",
+      "assetGroup": "Pinterest, Inc. (Coinbase Tokenized Stock)::PINSC",
+      "currencyId": "Pinterest, Inc. (Coinbase Tokenized Stock)::PINSC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "PINS"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003a67b9f116f25513d6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003a67b9f116f25513d6",
+      "symbol": "TGTXC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180259/thumb/TGTXc-icon-200_%281%29.png?1794538799",
+      "assetGroup": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)::TGTXC",
+      "currencyId": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)::TGTXC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "TGTX"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000000cd31253817b36f88a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "QXO, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000000cd31253817b36f88a",
+      "symbol": "QXOC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180256/thumb/QXOc-icon-200.png?1794538215",
+      "assetGroup": "QXO, Inc. (Coinbase Tokenized Stock)::QXOC",
+      "currencyId": "QXO, Inc. (Coinbase Tokenized Stock)::QXOC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "QXO"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000000c431e2a7c0ce7ea31": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000000c431e2a7c0ce7ea31",
+      "symbol": "SLSC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180257/thumb/SLSc-icon-200_%281%29.png?1794538279",
+      "assetGroup": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)::SLSC",
+      "currencyId": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)::SLSC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "SLS"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb200000000000000000000178d4c37485ea47ef6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Omeros Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000178d4c37485ea47ef6",
+      "symbol": "OMERC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180258/thumb/OMERc-icon-200.png?1794538668",
+      "assetGroup": "Omeros Corporation (Coinbase Tokenized Stock)::OMERC",
+      "currencyId": "Omeros Corporation (Coinbase Tokenized Stock)::OMERC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "OMER"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000010718397aca876a20a": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Absci Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000010718397aca876a20a",
+      "symbol": "ABSIC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180249/thumb/ABSIc-official.png?1794537365",
+      "assetGroup": "Absci Corporation (Coinbase Tokenized Stock)::ABSIC",
+      "currencyId": "Absci Corporation (Coinbase Tokenized Stock)::ABSIC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "ABSI"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000001bcf0441201d513fa5": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Danaher Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001bcf0441201d513fa5",
+      "symbol": "DHRC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180250/thumb/DHRc-icon-200.png?1794537430",
+      "assetGroup": "Danaher Corporation (Coinbase Tokenized Stock)::DHRC",
+      "currencyId": "Danaher Corporation (Coinbase Tokenized Stock)::DHRC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "DHR"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000042cbbae483635c3774": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Gartner, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000042cbbae483635c3774",
+      "symbol": "ITC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180252/thumb/ITc-icon-200.png?1794537657",
+      "assetGroup": "Gartner, Inc. (Coinbase Tokenized Stock)::ITC",
+      "currencyId": "Gartner, Inc. (Coinbase Tokenized Stock)::ITC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "IT"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb20000000000000000000005717baa337022c782": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Lyft, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000005717baa337022c782",
+      "symbol": "LYFTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180253/thumb/LYFTc-icon-200.png?1794537713",
+      "assetGroup": "Lyft, Inc. (Coinbase Tokenized Stock)::LYFTC",
+      "currencyId": "Lyft, Inc. (Coinbase Tokenized Stock)::LYFTC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "LYFT"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000001bcf8e5022d7f61919": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "MicroVision, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000001bcf8e5022d7f61919",
+      "symbol": "MVISC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180198/thumb/MVISc-icon-200.png?1794315131",
+      "assetGroup": "MicroVision, Inc. (Coinbase Tokenized Stock)::MVISC",
+      "currencyId": "MicroVision, Inc. (Coinbase Tokenized Stock)::MVISC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "MVIS"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xb2000000000000000000003aa0410688baf4da88": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Newmont Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003aa0410688baf4da88",
+      "symbol": "NEMC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180254/thumb/NEMc-icon-200.png?1794538049",
+      "assetGroup": "Newmont Corporation (Coinbase Tokenized Stock)::NEMC",
+      "currencyId": "Newmont Corporation (Coinbase Tokenized Stock)::NEMC",
+      "props": {
+        "rwa": {
+          "type": "equity",
+          "subType": "stock",
+          "issuer": "coinbase",
+          "underlying": "NEM"
+        },
+        "issuer": { "id": "coinbase", "name": "Coinbase", "kind": "cex" }
+      }
+    },
+    "0xe904aea5e1b110c9174728fa2effc8aed19e98ef": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "PAX Gold",
+      "address": "0xe904aea5e1b110c9174728fa2effc8aed19e98ef",
+      "symbol": "PAXG",
+      "logoURI": "https://assets.coingecko.com/coins/images/9519/thumb/asset-paxg.png?1785284785",
+      "assetGroup": "PAXG",
+      "currencyId": "PAX Gold::PAXG",
+      "props": {
+        "rwa": {
+          "type": "commodity",
+          "subType": "gold",
+          "issuer": "paxos",
+          "underlying": "XAU"
+        },
+        "risk": {
+          "score": 2,
+          "category": "BLUE_CHIP",
+          "source": "issuer_inherit"
+        },
+        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
+      }
+    },
     "0x2ae3f1ec7f1f5012cfeab0185bfc7aa3cf0dec22": {
       "chainId": "8453",
       "decimals": 18,
@@ -13934,6 +14344,82 @@
           "home": "1",
           "destinations": ["1", "137", "42161", "43114"]
         }
+      }
+    },
+    "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Principal Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base",
+      "address": "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa",
+      "symbol": "PT-sw-AAPLc(ref-AAPLc)-2026/11/30",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xb200000000000000000000c2e324d24d7eecd1fb.png",
+      "assetGroup": "Principal Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::PT-sw-AAPLc(ref-AAPLc)-2026/11/30",
+      "currencyId": "Principal Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::PT-sw-AAPLc(ref-AAPLc)-2026/11/30",
+      "props": {
+        "spectra": {
+          "tokenType": "PT",
+          "poolAddress": "0x83e08fc15cc48dc69ab356a9f24c6262e4e10542",
+          "ptAddress": "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa",
+          "ytAddress": "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77",
+          "ibtAddress": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
+          "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
+          "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0",
+          "maturity": 1795996808
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
+    "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Yield Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base",
+      "address": "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77",
+      "symbol": "YT-sw-AAPLc(ref-AAPLc)-2026/11/30",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xb200000000000000000000c2e324d24d7eecd1fb.png",
+      "assetGroup": "Yield Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::YT-sw-AAPLc(ref-AAPLc)-2026/11/30",
+      "currencyId": "Yield Token: sw-AAPLc(ref-AAPLc) 2026/11/30 Base::YT-sw-AAPLc(ref-AAPLc)-2026/11/30",
+      "props": {
+        "spectra": {
+          "tokenType": "YT",
+          "poolAddress": "0x83e08fc15cc48dc69ab356a9f24c6262e4e10542",
+          "ptAddress": "0x06f195a135fb53adb5439de9efacbc36fe0bb9aa",
+          "ytAddress": "0x4f172e3afb8154d94dc8df5abd270c2d58df4a77",
+          "ibtAddress": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
+          "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
+          "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0",
+          "maturity": 1795996808
+        },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
+      }
+    },
+    "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Spectra ERC4626 Wrapper: Apple Inc. Base",
+      "address": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
+      "symbol": "sw-AAPLc",
+      "logoURI": "https://tokens.spectra.finance/images/tokens/8453/0xb200000000000000000000c2e324d24d7eecd1fb.png",
+      "assetGroup": "Spectra ERC4626 Wrapper: Apple Inc. Base::sw-AAPLc",
+      "currencyId": "Spectra ERC4626 Wrapper: Apple Inc. Base::sw-AAPLc",
+      "props": {
+        "spectra": {
+          "tokenType": "IBT",
+          "ibtAddress": "0xbfd984f6f9cef73e062fe6b840aa1a091051ca71",
+          "baseIbtAddress": "0xb200000000000000000000c2e324d24d7eecd1fb",
+          "underlyingAsset": "0x40ed34a01857eb704e205b73c0a94ac3621b21b0"
+        },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "spectra", "name": "Spectra", "kind": "protocol" }
       }
     },
     "0x189a9e3246aea31490bb808741a072b64abb766b": {
@@ -24508,7 +24994,7 @@
       "currencyId": "Cod3x USD::CDXUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -30901,7 +31387,7 @@
       "currencyId": "Resolv USD::USR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -30991,7 +31477,7 @@
       "currencyId": "Apostro Resolv USD::aprUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "vault_inherit"
         }
@@ -31097,7 +31583,7 @@
       "currencyId": "Resolv Liquidity Provider Token::RLP",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -33378,7 +33864,7 @@
       "assetGroup": "Pendle LP USR 24APR2025::LP-USR-24APR2025",
       "currencyId": "Pendle LP USR 24APR2025::LP-USR-24APR2025",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x0022228a2cc5e7ef0274a7baa600d44da5ab5776": {
@@ -33470,7 +33956,7 @@
       "assetGroup": "Pendle LP USR 25SEP2025::LP-USR-25SEP2025",
       "currencyId": "Pendle LP USR 25SEP2025::LP-USR-25SEP2025",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x1155d1731b495bf22f016e13cafb6afa53bd8a28": {
@@ -34939,7 +35425,6 @@
       "assetGroup": "Yield TRYB::YTRYB",
       "currencyId": "Yield TRYB::YTRYB",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "bilira", "name": "BiLira", "kind": "institution" }
       }
     },
@@ -35474,7 +35959,7 @@
       "assetGroup": "Wrapped ExtraX Base USR::wexBaseUSR",
       "currencyId": "Wrapped ExtraX Base USR::wexBaseUSR",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x5d54725b48d2c8badf5f6046c71c3ffb73e26228": {
@@ -41595,7 +42080,11 @@
       "assetGroup": "USDp::USDp",
       "currencyId": "USDp::USDp",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -42328,7 +42817,7 @@
       "currencyId": "Wrapped sUSDX::sUSDX",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -42351,7 +42840,7 @@
       "currencyId": "Wrapped USDX::USDX",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -43257,7 +43746,7 @@
       "currencyId": "Resolv wstUSR::WSTUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -45420,7 +45909,7 @@
       "currencyId": "Australian Digital Dollar::AUDD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -57658,7 +58147,7 @@
       "assetGroup": "Altura Vault Tokens::AVLT",
       "currencyId": "Altura Vault Tokens::AVLT",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x9aff49c8392a8756cc6cedce76a3987f33dd0ba3": {
@@ -60670,9 +61159,9 @@
       "props": {
         "savings": { "underlying": "avUSD", "base": "USD" },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "ccip": {
           "pool": "0x82d6818d933da2657d011433ea32cf4d23368258",
@@ -60681,7 +61170,6 @@
           "home": "43114",
           "destinations": ["1", "43114"]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
@@ -61072,140 +61560,6 @@
       "assetGroup": "Reboot::Reboot",
       "currencyId": "Reboot::Reboot"
     },
-    "0xb20000000000000000000005befa57b9b871e737": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000005befa57b9b871e737",
-      "symbol": "DOCNC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180251/thumb/DOCNc-icon-200.png?1794537575",
-      "assetGroup": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)::DOCNC",
-      "currencyId": "DigitalOcean Holdings, Inc. (Coinbase Tokenized Stock)::DOCNC"
-    },
-    "0xb2000000000000000000001dfd8c413ecd6ec630": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Pinterest, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000001dfd8c413ecd6ec630",
-      "symbol": "PINSC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180255/thumb/PINSc-icon-200.png?1794538155",
-      "assetGroup": "Pinterest, Inc. (Coinbase Tokenized Stock)::PINSC",
-      "currencyId": "Pinterest, Inc. (Coinbase Tokenized Stock)::PINSC"
-    },
-    "0xb2000000000000000000003a67b9f116f25513d6": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003a67b9f116f25513d6",
-      "symbol": "TGTXC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180259/thumb/TGTXc-icon-200_%281%29.png?1794538799",
-      "assetGroup": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)::TGTXC",
-      "currencyId": "TG Therapeutics, Inc. (Coinbase Tokenized Stock)::TGTXC"
-    },
-    "0xb2000000000000000000000cd31253817b36f88a": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "QXO, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000000cd31253817b36f88a",
-      "symbol": "QXOC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180256/thumb/QXOc-icon-200.png?1794538215",
-      "assetGroup": "QXO, Inc. (Coinbase Tokenized Stock)::QXOC",
-      "currencyId": "QXO, Inc. (Coinbase Tokenized Stock)::QXOC"
-    },
-    "0xb2000000000000000000000c431e2a7c0ce7ea31": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000000c431e2a7c0ce7ea31",
-      "symbol": "SLSC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180257/thumb/SLSc-icon-200_%281%29.png?1794538279",
-      "assetGroup": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)::SLSC",
-      "currencyId": "SELLAS Life Sciences Group, Inc. (Coinbase Tokenized Stock)::SLSC"
-    },
-    "0xb200000000000000000000178d4c37485ea47ef6": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Omeros Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb200000000000000000000178d4c37485ea47ef6",
-      "symbol": "OMERC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180258/thumb/OMERc-icon-200.png?1794538668",
-      "assetGroup": "Omeros Corporation (Coinbase Tokenized Stock)::OMERC",
-      "currencyId": "Omeros Corporation (Coinbase Tokenized Stock)::OMERC"
-    },
-    "0xb20000000000000000000010718397aca876a20a": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Absci Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000010718397aca876a20a",
-      "symbol": "ABSIC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180249/thumb/ABSIc-official.png?1794537365",
-      "assetGroup": "Absci Corporation (Coinbase Tokenized Stock)::ABSIC",
-      "currencyId": "Absci Corporation (Coinbase Tokenized Stock)::ABSIC"
-    },
-    "0xb2000000000000000000001bcf0441201d513fa5": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Danaher Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000001bcf0441201d513fa5",
-      "symbol": "DHRC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180250/thumb/DHRc-icon-200.png?1794537430",
-      "assetGroup": "Danaher Corporation (Coinbase Tokenized Stock)::DHRC",
-      "currencyId": "Danaher Corporation (Coinbase Tokenized Stock)::DHRC"
-    },
-    "0xb20000000000000000000042cbbae483635c3774": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Gartner, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000042cbbae483635c3774",
-      "symbol": "ITC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180252/thumb/ITc-icon-200.png?1794537657",
-      "assetGroup": "Gartner, Inc. (Coinbase Tokenized Stock)::ITC",
-      "currencyId": "Gartner, Inc. (Coinbase Tokenized Stock)::ITC"
-    },
-    "0xb20000000000000000000005717baa337022c782": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Lyft, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb20000000000000000000005717baa337022c782",
-      "symbol": "LYFTC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180253/thumb/LYFTc-icon-200.png?1794537713",
-      "assetGroup": "Lyft, Inc. (Coinbase Tokenized Stock)::LYFTC",
-      "currencyId": "Lyft, Inc. (Coinbase Tokenized Stock)::LYFTC"
-    },
-    "0xb2000000000000000000001bcf8e5022d7f61919": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "MicroVision, Inc. (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000001bcf8e5022d7f61919",
-      "symbol": "MVISC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180198/thumb/MVISc-icon-200.png?1794315131",
-      "assetGroup": "MicroVision, Inc. (Coinbase Tokenized Stock)::MVISC",
-      "currencyId": "MicroVision, Inc. (Coinbase Tokenized Stock)::MVISC"
-    },
-    "0xb2000000000000000000003aa0410688baf4da88": {
-      "chainId": "8453",
-      "decimals": 8,
-      "name": "Newmont Corporation (Coinbase Tokenized Stock)",
-      "address": "0xb2000000000000000000003aa0410688baf4da88",
-      "symbol": "NEMC",
-      "logoURI": "https://assets.coingecko.com/coins/images/102180254/thumb/NEMc-icon-200.png?1794538049",
-      "assetGroup": "Newmont Corporation (Coinbase Tokenized Stock)::NEMC",
-      "currencyId": "Newmont Corporation (Coinbase Tokenized Stock)::NEMC"
-    },
-    "0xe904aea5e1b110c9174728fa2effc8aed19e98ef": {
-      "chainId": "8453",
-      "decimals": 18,
-      "name": "PAX Gold",
-      "address": "0xe904aea5e1b110c9174728fa2effc8aed19e98ef",
-      "symbol": "PAXG",
-      "logoURI": "https://assets.coingecko.com/coins/images/9519/thumb/asset-paxg.png?1785284785",
-      "assetGroup": "PAXG",
-      "currencyId": "PAX Gold::PAXG",
-      "props": {
-        "risk": { "score": 4, "source": "default" },
-        "issuer": { "id": "paxos", "name": "Paxos", "kind": "institution" }
-      }
-    },
     "0x9f4c76f421f47b3c234f841f477897f1d895177d": {
       "chainId": "8453",
       "decimals": 18,
@@ -61214,7 +61568,8 @@
       "symbol": "INFI",
       "logoURI": "https://assets.coingecko.com/coins/images/102180232/thumb/photo_2026-11-09_14-06-39.jpg?1794424791",
       "assetGroup": "InfiniFi Token::INFI",
-      "currencyId": "InfiniFi Token::INFI"
+      "currencyId": "InfiniFi Token::INFI",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x15d0e0c55a3e7ee67152ad7e89acf164253ff68d": {
       "chainId": "8453",
@@ -61225,6 +61580,120 @@
       "logoURI": "https://assets.coingecko.com/coins/images/68481/thumb/hype.png?1755878697",
       "assetGroup": "Wormhole Bridged HYPE::HYPE",
       "currencyId": "Wormhole Bridged HYPE::HYPE"
+    },
+    "0xb200000000000000000000264d3a9dea68aa6631": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "The Goodyear Tire & Rubber Company (Coinbase Tokenized Stock",
+      "address": "0xb200000000000000000000264d3a9dea68aa6631",
+      "symbol": "GTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180301/thumb/GTc-icon-200.png?1794903151",
+      "assetGroup": "The Goodyear Tire & Rubber Company (Coinbase Tokenized Stock::GTC",
+      "currencyId": "The Goodyear Tire & Rubber Company (Coinbase Tokenized Stock::GTC"
+    },
+    "0xb200000000000000000000211a2ed33fad95b0b3": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "The RealReal, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb200000000000000000000211a2ed33fad95b0b3",
+      "symbol": "REALC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180300/thumb/REALc-icon-200.png?1794903142",
+      "assetGroup": "The RealReal, Inc. (Coinbase Tokenized Stock)::REALC",
+      "currencyId": "The RealReal, Inc. (Coinbase Tokenized Stock)::REALC"
+    },
+    "0xb20000000000000000000033be01089cf02a2025": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "The Western Union Company (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000033be01089cf02a2025",
+      "symbol": "WUC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180304/thumb/WUc-official.png?1794904038",
+      "assetGroup": "The Western Union Company (Coinbase Tokenized Stock)::WUC",
+      "currencyId": "The Western Union Company (Coinbase Tokenized Stock)::WUC"
+    },
+    "0xb2000000000000000000003cdb2c0f94e4ebf605": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "CLEAR Secure, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003cdb2c0f94e4ebf605",
+      "symbol": "YOUC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180299/thumb/YOUc-official.png?1794903051",
+      "assetGroup": "CLEAR Secure, Inc. (Coinbase Tokenized Stock)::YOUC",
+      "currencyId": "CLEAR Secure, Inc. (Coinbase Tokenized Stock)::YOUC"
+    },
+    "0xb20000000000000000000038e9982fe875b7e066": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Coupang, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000038e9982fe875b7e066",
+      "symbol": "CPNGC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180302/thumb/CPNGc-official.png?1794903158",
+      "assetGroup": "Coupang, Inc. (Coinbase Tokenized Stock)::CPNGC",
+      "currencyId": "Coupang, Inc. (Coinbase Tokenized Stock)::CPNGC"
+    },
+    "0x0b16f64948468a54ab3736a5da1a8eb83d46d602": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Uruguayan Peso",
+      "address": "0x0b16f64948468a54ab3736a5da1a8eb83d46d602",
+      "symbol": "WUYU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180291/thumb/wuyu_logo_outline_200x200.png?1794830161",
+      "assetGroup": "Uruguayan Peso::WUYU",
+      "currencyId": "Uruguayan Peso::WUYU"
+    },
+    "0xb20000000000000000000030945cb9c538d0b326": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Visteon Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000030945cb9c538d0b326",
+      "symbol": "VCc",
+      "assetGroup": "Visteon Corporation (Coinbase Tokenized Stock)::VCc",
+      "currencyId": "Visteon Corporation (Coinbase Tokenized Stock)::VCc"
+    },
+    "0x8888cdad9ef66382f89e68f95ec384d89ec28888": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Nami",
+      "address": "0x8888cdad9ef66382f89e68f95ec384d89ec28888",
+      "symbol": "NAMI",
+      "assetGroup": "Nami::NAMI",
+      "currencyId": "Nami::NAMI"
+    },
+    "0xb20000000000000000000007b4fcc48e2d70dcc6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Cohu, Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb20000000000000000000007b4fcc48e2d70dcc6",
+      "symbol": "COHUc",
+      "assetGroup": "Cohu, Inc. (Coinbase Tokenized Stock)::COHUc",
+      "currencyId": "Cohu, Inc. (Coinbase Tokenized Stock)::COHUc"
+    },
+    "0xe7645444eb4e8e04d886c7038dd0152d331d3680": {
+      "chainId": "8453",
+      "decimals": 18,
+      "name": "Lithosphere Algorithmic",
+      "address": "0xe7645444eb4e8e04d886c7038dd0152d331d3680",
+      "symbol": "LAX",
+      "assetGroup": "Lithosphere Algorithmic::LAX",
+      "currencyId": "Lithosphere Algorithmic::LAX"
+    },
+    "0xb2000000000000000000003fc6f17c8b775bca78": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "Ubiquiti Inc. (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000003fc6f17c8b775bca78",
+      "symbol": "UIc",
+      "assetGroup": "Ubiquiti Inc. (Coinbase Tokenized Stock)::UIc",
+      "currencyId": "Ubiquiti Inc. (Coinbase Tokenized Stock)::UIc"
+    },
+    "0xb2000000000000000000002756093a39e13e08c6": {
+      "chainId": "8453",
+      "decimals": 8,
+      "name": "FMC Corporation (Coinbase Tokenized Stock)",
+      "address": "0xb2000000000000000000002756093a39e13e08c6",
+      "symbol": "FMCc",
+      "assetGroup": "FMC Corporation (Coinbase Tokenized Stock)::FMCc",
+      "currencyId": "FMC Corporation (Coinbase Tokenized Stock)::FMCc"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "8453",

@@ -49,7 +49,11 @@
           "ptAddress": "0x09d08ac4af75f39bafcb260bfd07ea78fc7dc094",
           "syAddress": "0xf9991db7fb56f30f7a8e58f6c8197892b32250a9"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x003984ecc30bafe364efa8c0112cdd94b8216406": {
@@ -194,7 +198,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -724,7 +728,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1108,6 +1112,7 @@
           "ptAddress": "0x9327c9743d06efce3f784049f1aeed3d63a05be6",
           "syAddress": "0xc994861c0041d88addf99fd136fe94fdd9b634bf"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -1266,7 +1271,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1468,7 +1473,15 @@
           "ytAddress": "0x0009f07dd409ba166dee4b5493448e31ae174783",
           "syAddress": "0xf9991db7fb56f30f7a8e58f6c8197892b32250a9"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x0a0e172511114456ec63a85ff32e45c5e0e27d63": {
@@ -1798,7 +1811,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1832,8 +1845,8 @@
           "ytAddress": "0xc4924f9e6e1feea9f44ed117711af2ed14600081"
         },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
+          "score": 3,
+          "category": "YIELD_STABLE",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -2228,6 +2241,7 @@
           "ptAddress": "0x2757eea99c54dcb9e319ae00f08fe841e4574450",
           "syAddress": "0xa57854210b569aabf55f8f99ad16705053e563b8"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -2398,7 +2412,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -2522,7 +2536,7 @@
           "ytAddress": "0x08903411e7a3eb500e30aac3bdd44775055b8c00"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -2628,7 +2642,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -2803,7 +2817,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3053,7 +3067,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3423,7 +3437,15 @@
           "ptAddress": "0x247934a535e4a37b95c13feb7efef778e39dc7e5",
           "ytAddress": "0x4fe7edd2aab0b82dae6885d2a2612b84aa77b0dd"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x15ddc249a326698c5a001ab6a92b76f7acc091e0": {
@@ -4130,7 +4152,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -4741,7 +4763,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5387,7 +5409,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5417,7 +5439,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5690,7 +5712,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5771,7 +5793,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5831,7 +5853,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5883,7 +5905,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -5910,6 +5932,11 @@
           "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
           "ytAddress": "0x4fe7edd2aab0b82dae6885d2a2612b84aa77b0dd",
           "syAddress": "0x1593d2b64365bed60caf54ecb7448171214e33c1"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -6055,7 +6082,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -6368,6 +6395,11 @@
           "ytAddress": "0x0f0815baeaa76a147b957fe061d76b49e93c065c",
           "syAddress": "0xa57854210b569aabf55f8f99ad16705053e563b8"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -6494,7 +6526,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -6830,7 +6862,7 @@
           "ytAddress": "0x30ea2e13ffcdd9ec18335f4d10181eb14a6d5498"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -6859,7 +6891,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -7435,7 +7467,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -7667,7 +7699,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -7939,7 +7971,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -8237,7 +8269,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -8307,7 +8339,15 @@
           "ptAddress": "0x65bc0a0cf38ecdfc95e553de01af01a56da225ce",
           "ytAddress": "0xe90faaf3f95cdef13b2bd67ed49ce4a1a83c49f4"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x3199c7c3c972a8da5f9fad2a838383f827b735f1": {
@@ -8789,7 +8829,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -9398,7 +9438,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -9601,7 +9641,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -9631,7 +9671,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -10260,7 +10300,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -10443,7 +10483,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -10879,6 +10919,26 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0x425c0ba61271e6b7a538a4c34a77ed825a81017c": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "PT sUSDe (USDe) Ethereum",
+      "address": "0x425c0ba61271e6b7a538a4c34a77ed825a81017c",
+      "symbol": "PT-sUSDE-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/6f77480b-c00e-444d-8065-1f3858b4399d.svg",
+      "assetGroup": "PT sUSDe (USDe) Ethereum::PT-sUSDE-25FEB2027",
+      "currencyId": "PT sUSDe (USDe) Ethereum::PT-sUSDE-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+          "ytAddress": "0x44be6a203783175561a5606c00cf2d4a4a95bf1f",
+          "syAddress": "0xbf98480425a29197e5d99d003017f63a1e595d02"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x4263edde8814056f8672acc3a8d6a57160003245": {
       "chainId": "1",
       "decimals": 18,
@@ -10899,7 +10959,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -11321,6 +11381,26 @@
         "issuerExposures": [
           { "id": "etherfi", "name": "Ether.fi", "kind": "protocol", "hops": 1 }
         ]
+      }
+    },
+    "0x44be6a203783175561a5606c00cf2d4a4a95bf1f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "YT sUSDe (USDe) Ethereum",
+      "address": "0x44be6a203783175561a5606c00cf2d4a4a95bf1f",
+      "symbol": "YT-sUSDE-25FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/e6879e1f-fa5f-450f-80b1-615de6d46080.svg",
+      "assetGroup": "YT sUSDe (USDe) Ethereum::YT-sUSDE-25FEB2027",
+      "currencyId": "YT sUSDe (USDe) Ethereum::YT-sUSDE-25FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1803513600,
+          "underlyingAsset": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+          "ptAddress": "0x425c0ba61271e6b7a538a4c34a77ed825a81017c",
+          "syAddress": "0xbf98480425a29197e5d99d003017f63a1e595d02"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0x44ce0cada0ffbd8219b0f56ad7ba460130cdb842": {
@@ -11867,7 +11947,7 @@
           "ptAddress": "0xaacae34960cac6f32826f81e15f855f8e8c7f39e",
           "ytAddress": "0x3992e4c12e22d7535d6144f3af66e712963e9345"
         },
-        "risk": { "score": 3, "source": "pendle_inherit" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -12447,7 +12527,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -13239,6 +13319,7 @@
           "ptAddress": "0x247934a535e4a37b95c13feb7efef778e39dc7e5",
           "syAddress": "0x1593d2b64365bed60caf54ecb7448171214e33c1"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -14066,7 +14147,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -14898,7 +14979,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -14955,7 +15036,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -15180,7 +15261,11 @@
           "ptAddress": "0x93d246c13d880702ea1fe6c47bd022a1027fc7fb",
           "syAddress": "0xa09482f2f6cb5f2177b05144bc276d06b8b818eb"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x5b8ab5cbe12365cf0939501c80a99f481253a6e4": {
@@ -15759,7 +15844,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -15923,7 +16008,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -16606,7 +16691,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -16745,7 +16830,7 @@
           "ytAddress": "0x9c970bb2582193ba76da1e88aadf423e612fab72"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -16769,6 +16854,11 @@
           "underlyingAsset": "0x4c9edd5852cd905f086c759e8383e09bff1e68b3",
           "ytAddress": "0xe90faaf3f95cdef13b2bd67ed49ce4a1a83c49f4",
           "syAddress": "0x31853542da976400fb66278be7a09636aad332fc"
+        },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
@@ -16890,7 +16980,10 @@
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x66c68a7bcc4cbcab43a2947a529765d86d4ef14f": {
@@ -17370,7 +17463,7 @@
           "ytAddress": "0x77de4be22ecc633416d79371ef8e861fb1d2cc39"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -17535,7 +17628,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -17564,7 +17657,7 @@
           "ytAddress": "0x112b56037552d9a5142493f44480ba98c2586805"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -18163,7 +18256,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -18192,7 +18285,7 @@
           "ytAddress": "0xfac0a88f74570478367ba1a52b4a30cfec6ec431"
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "pendle_inherit"
         },
@@ -18370,7 +18463,10 @@
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x7131ed1994ba1a2a5392fe4d99e579f49f5ed48f": {
@@ -18575,7 +18671,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -18814,7 +18910,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -19496,7 +19592,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -19526,7 +19622,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -20659,7 +20755,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -20865,7 +20961,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -22265,7 +22361,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -22777,7 +22873,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -23005,7 +23101,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -23082,7 +23178,7 @@
           "ytAddress": "0x5a2e9209a7c521ca9b7e1f0e17229c7e57f9294d"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -23279,6 +23375,11 @@
           "ytAddress": "0x078394b1aceb6a070d1fa1e1c85a92256f7a6c74",
           "syAddress": "0xc994861c0041d88addf99fd136fe94fdd9b634bf"
         },
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -23431,7 +23532,15 @@
           "ytAddress": "0x5b543e433164ce8dc9447f3f21091580dea3dcc0",
           "syAddress": "0xa09482f2f6cb5f2177b05144bc276d06b8b818eb"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x93d5ced9fb7e784400590b3b978c015d4a7d9f46": {
@@ -23657,7 +23766,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -24135,7 +24244,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -24243,7 +24352,7 @@
           "ytAddress": "0x3e89cc4d0edf5777ac84e07fb1898caa6fbb19b4"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -24720,7 +24829,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -24750,7 +24859,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -25006,7 +25115,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -25345,7 +25454,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -25527,7 +25636,7 @@
           "ytAddress": "0x64ea1f01b3416719ecb67ddd4d36b28db65a6d1b"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -26050,7 +26159,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -26353,7 +26462,15 @@
           "ptAddress": "0x2757eea99c54dcb9e319ae00f08fe841e4574450",
           "ytAddress": "0x0f0815baeaa76a147b957fe061d76b49e93c065c"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xa57feedbd31f4ebd7761d5c3aeed7deccb8f95ee": {
@@ -26872,7 +26989,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -27080,7 +27197,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -27217,7 +27334,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -27299,7 +27416,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -27743,7 +27860,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -27867,7 +27984,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -28009,7 +28126,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -28572,6 +28689,7 @@
           "ptAddress": "0xeba135f422f85a4bb49e5c934d2731909864c371",
           "syAddress": "0x4d654f255d54637112844bd8802b716170904fee"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -29365,7 +29483,7 @@
           "ptAddress": "0xa3ca92a69c6809607837bc3bd6b13e4c1e1e8ae9",
           "ytAddress": "0x4e99312e0beba4d73d8e8e9368fd24f4670624d9"
         },
-        "risk": { "score": 3, "source": "pendle_inherit" },
+        "risk": { "score": 2, "source": "pendle_inherit" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -29680,7 +29798,7 @@
           "ytAddress": "0x4263edde8814056f8672acc3a8d6a57160003245"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -29706,7 +29824,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -30015,7 +30133,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -32037,7 +32155,15 @@
           "ptAddress": "0x9327c9743d06efce3f784049f1aeed3d63a05be6",
           "ytAddress": "0x078394b1aceb6a070d1fa1e1c85a92256f7a6c74"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xc9950c55126c125173e9319077253d633221283a": {
@@ -32145,7 +32271,10 @@
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xca8ce1dc82916bf90e2d5e68c3e47e6ce15553ed": {
@@ -32472,7 +32601,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -33451,7 +33580,7 @@
           "expired": true
         },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -34162,7 +34291,11 @@
           "ptAddress": "0xe987aa6f6e5444cdaa126f987b08f4de47594112",
           "syAddress": "0x7e8a16e87fa6b0f2e657db47f3dbfe2e981ef211"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xd7b2a47ac9236d9685b573a2428f72ec45e97c45": {
@@ -34777,7 +34910,7 @@
           "ytAddress": "0x77fe4cd64b5b37da507c1d69ced1e0497ed463f7"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -35614,6 +35747,11 @@
           "ptAddress": "0xed1671d417c4e6484a121913300d157aa3b6041e",
           "ytAddress": "0xe9f0c5c8d66652c5e83f395d09cd5187d9a82f86"
         },
+        "risk": {
+          "score": 2,
+          "category": "TOKENIZED_EQUITY",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "backed", "name": "Backed", "kind": "institution", "hops": 1 }
@@ -35846,7 +35984,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -36254,7 +36392,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -36886,6 +37024,7 @@
           "ptAddress": "0x65bc0a0cf38ecdfc95e553de01af01a56da225ce",
           "syAddress": "0x31853542da976400fb66278be7a09636aad332fc"
         },
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
         "issuerExposures": [
           { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
@@ -36976,7 +37115,15 @@
           "ytAddress": "0xd7ace3eb6307a5f5a98b1e3a032fb2f9d7df675d",
           "syAddress": "0x7e8a16e87fa6b0f2e657db47f3dbfe2e981ef211"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "tori", "name": "Tori", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xe98acd91c3021967120bcc0d46af49d55833650b": {
@@ -37053,7 +37200,11 @@
           "ptAddress": "0xed1671d417c4e6484a121913300d157aa3b6041e",
           "syAddress": "0xdf96c9e167077cadab40ef01f35f4e1827b311d8"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "backed", "name": "Backed", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xe9fc41f0accc4872d2952eb0fa087202c2de2a6a": {
@@ -37383,6 +37534,11 @@
           "ytAddress": "0xb223397eba3d502b944d1a07a7ff8a6054ab2282",
           "syAddress": "0x4d654f255d54637112844bd8802b716170904fee"
         },
+        "risk": {
+          "score": 3,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
@@ -37436,7 +37592,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -37761,7 +37917,15 @@
           "ytAddress": "0xe9f0c5c8d66652c5e83f395d09cd5187d9a82f86",
           "syAddress": "0xdf96c9e167077cadab40ef01f35f4e1827b311d8"
         },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "risk": {
+          "score": 2,
+          "category": "PRINCIPAL_TOKEN",
+          "source": "pendle_inherit"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "backed", "name": "Backed", "kind": "institution", "hops": 1 }
+        ]
       }
     },
     "0xed5cc19927e3a4ac20e4a9e9e433ddd99138504e": {
@@ -38255,7 +38419,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -38668,7 +38832,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -38758,7 +38922,10 @@
       "currencyId": "USDe Ethereum::SY-USDe",
       "props": {
         "pendle": { "tokenType": "SY" },
-        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "ethena", "name": "Ethena", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0xf358ffe722a0984e940351462fef4a77dde04c33": {
@@ -38872,7 +39039,7 @@
           "ytAddress": "0x9510ee7b7451fd06de799813270b4bc5a7f6bbf7"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -39667,7 +39834,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -40264,7 +40431,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -40459,7 +40626,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -40869,7 +41036,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -41008,7 +41175,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -41351,12 +41518,6 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "securitize",
           "name": "Securitize",
@@ -41836,11 +41997,6 @@
           "type": "fund",
           "subType": "money-market",
           "issuer": "securitize"
-        },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
         },
         "issuer": {
           "id": "securitize",
@@ -77021,7 +77177,7 @@
       "currencyId": "Binance USD::BUSD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -80113,7 +80269,7 @@
       "currencyId": "Gemini Dollar::GUSD",
       "props": {
         "risk": {
-          "score": 2,
+          "score": 1,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -82066,7 +82222,7 @@
       "currencyId": "Magic Internet Money::MIM",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -89868,7 +90024,7 @@
       "currencyId": "STASIS EURO::EURS",
       "props": {
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -103765,7 +103921,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -105900,7 +106056,7 @@
       "currencyId": "Novatti Australian Digital Dollar::AUDD",
       "props": {
         "risk": {
-          "score": 4,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -106214,11 +106370,7 @@
       "currencyId": "Threshold USD::THUSD",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "threshold", "name": "Threshold", "kind": "protocol" }
       }
@@ -113039,7 +113191,11 @@
       "currencyId": "ULTRA::ULTRA",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "prisma", "name": "Prisma", "kind": "protocol" }
       }
@@ -121925,9 +122081,9 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
-          "category": "COMPROMISED",
-          "source": "issuer_inherit"
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
         },
         "stablecoin": { "base": "USD" },
         "issuer": {
@@ -130064,7 +130220,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -130389,7 +130545,7 @@
       "currencyId": "Elixir deUSD::DEUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -130538,7 +130694,7 @@
       "currencyId": "Elixir Staked deUSD::SDEUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -131223,7 +131379,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -137812,7 +137968,6 @@
           ]
         },
         "retired": { "reason": "discontinued", "source": "risk" },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "level", "name": "Level", "kind": "protocol" }
       }
     },
@@ -142989,7 +143144,7 @@
       "currencyId": "MEV Capital Resolv USD::MC-USR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "vault_inherit"
         }
@@ -143190,7 +143345,7 @@
       "assetGroup": "Principal Token: wstUSR-1750896030::PT-wstUSR-1750896030",
       "currencyId": "Principal Token: wstUSR-1750896030::PT-wstUSR-1750896030",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xd0097149aa4cc0d0e1fc99b8bd73fc17dc32c1e9": {
@@ -143203,7 +143358,7 @@
       "assetGroup": "Principal Token: wstUSR-1740182579::PT-wstUSR-1740182579",
       "currencyId": "Principal Token: wstUSR-1740182579::PT-wstUSR-1740182579",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x5085dd6fad07c12e38fae01bc2a4938d2c08b1bc": {
@@ -143216,7 +143371,7 @@
       "assetGroup": "Apostro Resolv USD::aprUSR",
       "currencyId": "Apostro Resolv USD::aprUSR",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xe87ed29896b91421ff43f69257abf78300e40c7a": {
@@ -143619,7 +143774,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -148980,7 +149135,14 @@
       "logoURI": "https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0xb05097849BCA421A3f51B249BA6CCa4aF4b97cb9/logo.png",
       "assetGroup": "Float FLOAT::FLOAT",
       "currencyId": "Float FLOAT::FLOAT",
-      "props": { "risk": { "score": 4, "source": "default" }, "stablecoin": {} }
+      "props": {
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": {}
+      }
     },
     "0x4c25bdf026ea05f32713f00f73ca55857fbf6342": {
       "chainId": "1",
@@ -152906,7 +153068,7 @@
       "assetGroup": "PT-yvCurve-GHO-USR(GHOUSR)-2026/01/18::Principal Token: yvCurve-GHO-USR(GHOUSR) 2026/01/18",
       "currencyId": "Principal Token: yvCurve-GHO-USR(GHOUSR) 2026/01/18::PT-yvCurve-GHO-USR(GHOUSR)-2026/01/18",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xa4304072d94704b59a501c2dcf3eb37280b65ca7": {
@@ -172078,7 +172240,7 @@
       "currencyId": "Staked USR::stUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -173768,7 +173930,11 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -174188,7 +174354,7 @@
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -174929,7 +175095,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -179269,7 +179435,7 @@
       "currencyId": "USD CoinVertible::USDCV",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -179774,7 +179940,7 @@
       "logoURI": "https://raw.githubusercontent.com/cowprotocol/token-lists/main/src/public/images/1/0x89e93172aef8261db8437b90c3dcb61545a05317/logo.png",
       "assetGroup": "Savings USDaf::sUSDaf",
       "currencyId": "Savings USDaf::sUSDaf",
-      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x972966bcc17f7d818de4f27dc146ef539c231bdf": {
       "chainId": "1",
@@ -180455,7 +180621,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -180488,7 +180654,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -182696,7 +182862,7 @@
       "currencyId": "msUSD::msUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -182718,7 +182884,7 @@
       "assetGroup": "msY::msY",
       "currencyId": "msY::msY",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xe1be424f442d0687129128c6c38aace44f8c8dbc": {
@@ -183529,9 +183695,9 @@
       "currencyId": "Staked avUSD::savUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "savings": { "underlying": "avUSD", "base": "USD" },
         "ccip": {
@@ -183553,7 +183719,6 @@
             "747474"
           ]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
     },
@@ -184084,7 +184249,7 @@
       "currencyId": "Strata Senior NUSD::srNUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -185479,7 +185644,7 @@
       "assetGroup": "Staked Stream BTC::xBTC",
       "currencyId": "Staked Stream BTC::xBTC",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x15fdf122152642048f797e57ca8fff8986192be5": {
@@ -185711,7 +185876,7 @@
       "assetGroup": "Wrapped gmUSD::wgmUSD",
       "currencyId": "Wrapped gmUSD::wgmUSD",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x4ce9c93513dff543bc392870d57df8c04e89ba0a": {
@@ -185745,7 +185910,7 @@
       "props": {
         "suspicious": true,
         "mimic": true,
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x610209dabf47375307bb2a3263f85440eedc7834": {
@@ -185908,7 +186073,7 @@
       "assetGroup": "Staked Stream ETH::xETH",
       "currencyId": "Staked Stream ETH::xETH",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0x7f723fee1e65a7d26be51a05af0b5efee4a7d5ae": {
@@ -186711,7 +186876,7 @@
       "props": {
         "savings": { "underlying": "NUSD", "base": "USD" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -188606,7 +188771,7 @@
       "currencyId": "Universal USD::USDU",
       "props": {
         "risk": {
-          "score": 1,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -188732,7 +188897,7 @@
       "assetGroup": "Altura Vault Tokens::AVLT",
       "currencyId": "Altura Vault Tokens::AVLT",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xf458ad24b1de7c653e8471efb0b87710b316b7d9": {
@@ -193466,7 +193631,8 @@
       "symbol": "SDUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102179400/thumb/sDUSD_1.png?1791734704",
       "assetGroup": "Alto Staked DUSD::SDUSD",
-      "currencyId": "Alto Staked DUSD::SDUSD"
+      "currencyId": "Alto Staked DUSD::SDUSD",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x73df7018cbcb919ccde48c3f12f4326688ac4446": {
       "chainId": "1",
@@ -194628,11 +194794,7 @@
       "assetGroup": "Nova USD::USDN",
       "currencyId": "Nova USD::USDN",
       "props": {
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -194802,7 +194964,8 @@
       "symbol": "INFI",
       "logoURI": "https://assets.coingecko.com/coins/images/102180232/thumb/photo_2026-11-09_14-06-39.jpg?1794424791",
       "assetGroup": "InfiniFi Token::INFI",
-      "currencyId": "InfiniFi Token::INFI"
+      "currencyId": "InfiniFi Token::INFI",
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0xe4706809d3878fffb619fd492eb9e63d9b772581": {
       "chainId": "1",
@@ -194821,7 +194984,10 @@
       "symbol": "SPYSHIELDON",
       "logoURI": "https://assets.coingecko.com/coins/images/102180227/thumb/spyshieldon_160x160.png?1794409238",
       "assetGroup": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON",
-      "currencyId": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON"
+      "currencyId": "Ondo US 500 Capital Shielded Portfolio::SPYSHIELDON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x6f866bdee4b603bc907098ad596552a7af0f1de3": {
       "chainId": "1",
@@ -194831,7 +194997,10 @@
       "symbol": "BIG5ON",
       "logoURI": "https://assets.coingecko.com/coins/images/102180228/thumb/big5on_160x160.png?1794409556",
       "assetGroup": "Ondo Big 5 Core Allocation Portfolio::BIG5ON",
-      "currencyId": "Ondo Big 5 Core Allocation Portfolio::BIG5ON"
+      "currencyId": "Ondo Big 5 Core Allocation Portfolio::BIG5ON",
+      "props": {
+        "issuer": { "id": "ondo", "name": "Ondo", "kind": "institution" }
+      }
     },
     "0x35ebe010cdd541284fcfd2f85992a392a488f989": {
       "chainId": "1",
@@ -194872,6 +195041,196 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102176824/thumb/pumper_logo.jpg?1788859946",
       "assetGroup": "Pumper::PUMPER",
       "currencyId": "Pumper::PUMPER"
+    },
+    "0x4a8360633e3a04346bf2cfc1fe371293fbd4a836": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "DYPE",
+      "address": "0x4a8360633e3a04346bf2cfc1fe371293fbd4a836",
+      "symbol": "DYPE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180274/thumb/DYPE.png?1794661723",
+      "assetGroup": "DYPE::DYPE",
+      "currencyId": "DYPE::DYPE"
+    },
+    "0xfa80c7349cc2357c42a64c2954b24b1a61c29435": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Staked SwanUSD",
+      "address": "0xfa80c7349cc2357c42a64c2954b24b1a61c29435",
+      "symbol": "SSWANUSD",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180279/thumb/sSwanUSD-1024.png?1794663151",
+      "assetGroup": "Staked SwanUSD::SSWANUSD",
+      "currencyId": "Staked SwanUSD::SSWANUSD"
+    },
+    "0xd0a32f6d4850f9d6df7d4f8f84af1fcd3cf993cc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "SwanDAO",
+      "address": "0xd0a32f6d4850f9d6df7d4f8f84af1fcd3cf993cc",
+      "symbol": "SWAN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180278/thumb/swanUSD-1024.png?1794663080",
+      "assetGroup": "SwanDAO::SWAN",
+      "currencyId": "SwanDAO::SWAN"
+    },
+    "0xd305785d98f72868d047ce8d4cbaec6dcb6acccc": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "zipcoin",
+      "address": "0xd305785d98f72868d047ce8d4cbaec6dcb6acccc",
+      "symbol": "ZC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180286/thumb/logo_200x200.jpg?1794741873",
+      "assetGroup": "zipcoin::ZC::1::0",
+      "currencyId": "zipcoin::ZC"
+    },
+    "0x1cc657c9ac2ae8fabf95ef4f4923af13e883e19a": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "BitFi",
+      "address": "0x1cc657c9ac2ae8fabf95ef4f4923af13e883e19a",
+      "symbol": "BFI",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180287/thumb/BFI.png?1794741988",
+      "assetGroup": "BitFi::BFI",
+      "currencyId": "BitFi::BFI"
+    },
+    "0x81c3060ba8e87c06a493a5549e202ee3741a794c": {
+      "chainId": "1",
+      "decimals": 8,
+      "name": "Symbiosis Bridged BTC (Ethereum)",
+      "address": "0x81c3060ba8e87c06a493a5549e202ee3741a794c",
+      "symbol": "SYMBTC",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180324/thumb/symBTC.png?1794998272",
+      "assetGroup": "Symbiosis Bridged BTC (Ethereum)::SYMBTC",
+      "currencyId": "Symbiosis Bridged BTC (Ethereum)::SYMBTC"
+    },
+    "0x5200f539478f58d9aea962095ba3b16b5e550e00": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Clearpool",
+      "address": "0x5200f539478f58d9aea962095ba3b16b5e550e00",
+      "symbol": "CLEAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180289/thumb/Clearpool_New_Icon_-_Light.png?1794820665",
+      "assetGroup": "Clearpool::CLEAR",
+      "currencyId": "Clearpool::CLEAR"
+    },
+    "0x0b16f64948468a54ab3736a5da1a8eb83d46d602": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Uruguayan Peso",
+      "address": "0x0b16f64948468a54ab3736a5da1a8eb83d46d602",
+      "symbol": "WUYU",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180291/thumb/wuyu_logo_outline_200x200.png?1794830161",
+      "assetGroup": "Uruguayan Peso::WUYU",
+      "currencyId": "Uruguayan Peso::WUYU"
+    },
+    "0x43a0943893474f246aa58e9921d975ad60adee59": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Anthropic (Ondo Tokenized Stock)",
+      "address": "0x43a0943893474f246aa58e9921d975ad60adee59",
+      "symbol": "ANTON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180295/thumb/anton_160x160.png?1794897940",
+      "assetGroup": "Anthropic (Ondo Tokenized Stock)::ANTON",
+      "currencyId": "Anthropic (Ondo Tokenized Stock)::ANTON"
+    },
+    "0x6c190f0b8f7525244c6dcf0363a1241a99509101": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Take-Two Interactive Software (Ondo Tokenized Stock)",
+      "address": "0x6c190f0b8f7525244c6dcf0363a1241a99509101",
+      "symbol": "TTWOON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180296/thumb/ttwoon_160x160.png?1794898150",
+      "assetGroup": "Take-Two Interactive Software (Ondo Tokenized Stock)::TTWOON",
+      "currencyId": "Take-Two Interactive Software (Ondo Tokenized Stock)::TTWOON"
+    },
+    "0x7fa8725e25b0c005a22499461aaa3f1b1c2962fe": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Franklin US Equity Bitcoin DRIP Index ETF (Ondo Tokenized ET",
+      "address": "0x7fa8725e25b0c005a22499461aaa3f1b1c2962fe",
+      "symbol": "FBEQON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180297/thumb/fbeqon_160x160.png?1794898433",
+      "assetGroup": "Franklin US Equity Bitcoin DRIP Index ETF (Ondo Tokenized ET::FBEQON",
+      "currencyId": "Franklin US Equity Bitcoin DRIP Index ETF (Ondo Tokenized ET::FBEQON"
+    },
+    "0xbd79b7db6f70979df7f4124e161eb3586085d140": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Lithosphere Algorithmic",
+      "address": "0xbd79b7db6f70979df7f4124e161eb3586085d140",
+      "symbol": "LAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180298/thumb/Lax_Logo.png?1794902129",
+      "assetGroup": "Lithosphere Algorithmic::LAX",
+      "currencyId": "Lithosphere Algorithmic::LAX"
+    },
+    "0x3ccf4f79b5d6aceb786c20f74b8df07c7e14160f": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Franklin US Equity Index ETF (Ondo Tokenized ETF)",
+      "address": "0x3ccf4f79b5d6aceb786c20f74b8df07c7e14160f",
+      "symbol": "USPXON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180309/thumb/uspxon_160x160.png?1794909512",
+      "assetGroup": "Franklin US Equity Index ETF (Ondo Tokenized ETF)::USPXON",
+      "currencyId": "Franklin US Equity Index ETF (Ondo Tokenized ETF)::USPXON"
+    },
+    "0xf1f558c95b14ad95d4da1822770dc4ff0f1bcc30": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Franklin US Core Bond ETF (Ondo Tokenized ETF)",
+      "address": "0xf1f558c95b14ad95d4da1822770dc4ff0f1bcc30",
+      "symbol": "FLCBON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180310/thumb/flcbon_160x160.png?1794909969",
+      "assetGroup": "Franklin US Core Bond ETF (Ondo Tokenized ETF)::FLCBON",
+      "currencyId": "Franklin US Core Bond ETF (Ondo Tokenized ETF)::FLCBON"
+    },
+    "0xfeebbddda97d26605050e85099e697fd9567d597": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Franklin US Treasury Bond ETF (Ondo Tokenized ETF)",
+      "address": "0xfeebbddda97d26605050e85099e697fd9567d597",
+      "symbol": "FLGVON",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180311/thumb/flgvon_160x160.png?1794910224",
+      "assetGroup": "Franklin US Treasury Bond ETF (Ondo Tokenized ETF)::FLGVON",
+      "currencyId": "Franklin US Treasury Bond ETF (Ondo Tokenized ETF)::FLGVON"
+    },
+    "0xede6a93741f2466decfd709158e235fbfaf001a1": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Lucia",
+      "address": "0xede6a93741f2466decfd709158e235fbfaf001a1",
+      "symbol": "LUCIA",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180313/thumb/logo.png?1794986782",
+      "assetGroup": "Lucia::LUCIA",
+      "currencyId": "Lucia::LUCIA"
+    },
+    "0x160a8a73059d54f68d77ac1626c08425ec2ec0e0": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Wanted Star",
+      "address": "0x160a8a73059d54f68d77ac1626c08425ec2ec0e0",
+      "symbol": "WSTAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180314/thumb/logo.png?1794991621",
+      "assetGroup": "Wanted Star::WSTAR",
+      "currencyId": "Wanted Star::WSTAR"
+    },
+    "0x79e4c36c462a3a4fb17b0ba96fbf85034279268b": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Chunkee The Manatee",
+      "address": "0x79e4c36c462a3a4fb17b0ba96fbf85034279268b",
+      "symbol": "CHUNKEE",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180316/thumb/logo1.png?1794993235",
+      "assetGroup": "Chunkee The Manatee::CHUNKEE",
+      "currencyId": "Chunkee The Manatee::CHUNKEE"
+    },
+    "0x53d0ea0a685220718dc6a0a6e4617194c6f37921": {
+      "chainId": "1",
+      "decimals": 18,
+      "name": "Inference Backed Endogenous Financial Reserve",
+      "address": "0x53d0ea0a685220718dc6a0a6e4617194c6f37921",
+      "symbol": "INFER",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180318/thumb/7Y4RNshV_400x400.jpg?1794993609",
+      "assetGroup": "Inference Backed Endogenous Financial Reserve::INFER",
+      "currencyId": "Inference Backed Endogenous Financial Reserve::INFER"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1",

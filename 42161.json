@@ -682,7 +682,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -1346,7 +1346,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3032,7 +3032,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -3587,7 +3587,7 @@
           "ytAddress": "0x2b1fd950f3362b3b79f16770c0c38b9d2bc6276e"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -4506,7 +4506,7 @@
           "ytAddress": "0x1a4e2416aecbaff968797228d9aa6109fa1b814a"
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -6160,7 +6160,7 @@
           "expired": true
         },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "pendle_inherit"
         },
@@ -7654,12 +7654,6 @@
           "subType": "money-market",
           "issuer": "securitize"
         },
-        "risk": {
-          "score": 1,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "securitize",
           "name": "Securitize",
@@ -28769,7 +28763,6 @@
             "80094"
           ]
         },
-        "stablecoin": { "base": "USD" },
         "savings": { "underlying": "avUSD", "base": "USD" },
         "issuer": { "id": "avant", "name": "Avant", "kind": "protocol" }
       }
@@ -33753,7 +33746,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -35634,7 +35627,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -35657,7 +35650,7 @@
       "currencyId": "Staked USDX::sUSDX",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -35801,7 +35794,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 2,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -50964,7 +50957,7 @@
       "currencyId": "deUSD::deUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -51612,7 +51605,7 @@
       "currencyId": "Resolv USD::USR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -51885,7 +51878,11 @@
       "currencyId": "USDp::USDp",
       "props": {
         "permit": { "type": 1, "version": "1" },
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "parallel", "name": "Parallel", "kind": "protocol" }
       }
@@ -52175,7 +52172,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 3,
+          "score": 4,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -52775,7 +52772,7 @@
       "currencyId": "Resolv wstUSR::WSTUSR",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "savings_inherit"
         },
@@ -52904,7 +52901,7 @@
       "currencyId": "Resolv RLP::RLP",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -53024,7 +53021,7 @@
       "currencyId": "Staked Stream USD::xUSD",
       "props": {
         "risk": {
-          "score": 6,
+          "score": 7,
           "category": "COMPROMISED",
           "source": "whitelist"
         },
@@ -54719,7 +54716,7 @@
       "assetGroup": "Altura Vault Tokens::AVLT",
       "currencyId": "Altura Vault Tokens::AVLT",
       "props": {
-        "risk": { "score": 6, "category": "COMPROMISED", "source": "whitelist" }
+        "risk": { "score": 7, "category": "COMPROMISED", "source": "whitelist" }
       }
     },
     "0xd687759f35bb747a29246a4b9495c8f52c49e00c": {
@@ -70321,6 +70318,15 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180071/thumb/MDLNs.png?1793800374",
       "assetGroup": "Medline (Stove Tokenized Stock)::MDLNS",
       "currencyId": "Medline (Stove Tokenized Stock)::MDLNS"
+    },
+    "0xa8940698fda5a07abaef4a5ccdf2f1bb525b47a2": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Brazilian Digital",
+      "address": "0xa8940698fda5a07abaef4a5ccdf2f1bb525b47a2",
+      "symbol": "BRZ",
+      "assetGroup": "Brazilian Digital::BRZ",
+      "currencyId": "Brazilian Digital::BRZ"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42161",
