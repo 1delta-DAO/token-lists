@@ -7551,6 +7551,62 @@
           "to": "Ether fi Staked BTC::EBTC"
         }
       ]
+    },
+    {
+      "id": "2026-11-25-brz",
+      "date": "2026-11-25",
+      "base": "1f40ef1",
+      "summary": "Transfero BRZ (BRL stablecoin) unified. The current BRZ deployments were split over `Brazilian Digital::BRZ` (Ethereum, Polygon, Arbitrum, BNB, RSK, Solana), `BRZ Token::BRZ` (Base, Optimism, Avalanche) and `Brazilian Digital Token::BRZ` (Tempo); all fold into `Brazilian Digital::BRZ`, which now carries `stablecoin.base = REAL` and issuer Transfero. The superseded 4-decimal v1 contracts — identified by bytecode: every v2 is the same EIP-1967 proxy over the same implementation — move to `Brazilian Digital v1 (superseded)::BRZ`: Ethereum 0x4204…, Polygon 0x491a… and Avalanche 0x491a…. Row move: Avalanche 0x491a… LEAVES `Brazilian Digital::BRZ` (history filed there for 43114:0x491a… belongs to the v1 group), and Avalanche 0x0553… joins it.",
+      "groupFolds": {
+        "BRZ Token::BRZ": "Brazilian Digital::BRZ",
+        "Brazilian Digital Token::BRZ": "Brazilian Digital::BRZ",
+        "BRZ::BRZ": "Brazilian Digital v1 (superseded)::BRZ",
+        "Brazilian Digital::BRZ::1::0": "Brazilian Digital v1 (superseded)::BRZ"
+      },
+      "rows": [
+        {
+          "chainId": "10",
+          "address": "0xe9185ee218cae427af7b9764a011bb89fea761b4",
+          "from": "BRZ Token::BRZ",
+          "to": "Brazilian Digital::BRZ"
+        },
+        {
+          "chainId": "8453",
+          "address": "0xe9185ee218cae427af7b9764a011bb89fea761b4",
+          "from": "BRZ Token::BRZ",
+          "to": "Brazilian Digital::BRZ"
+        },
+        {
+          "chainId": "43114",
+          "address": "0x05539f021b66fd01d1fb1ff8e167cdd09bf7c2d0",
+          "from": "BRZ Token::BRZ",
+          "to": "Brazilian Digital::BRZ"
+        },
+        {
+          "chainId": "43114",
+          "address": "0x491a4eb4f1fc3bff8e1d2fc856a6a46663ad556f",
+          "from": "Brazilian Digital::BRZ",
+          "to": "Brazilian Digital v1 (superseded)::BRZ"
+        },
+        {
+          "chainId": "4217",
+          "address": "0x20c0000000000000000000009bf0d22be57c9f67",
+          "from": "Brazilian Digital Token::BRZ",
+          "to": "Brazilian Digital::BRZ"
+        },
+        {
+          "chainId": "1",
+          "address": "0x420412e765bfa6d85aaac94b4f7b708c89be2e2b",
+          "from": "Brazilian Digital::BRZ::1::0",
+          "to": "Brazilian Digital v1 (superseded)::BRZ"
+        },
+        {
+          "chainId": "137",
+          "address": "0x491a4eb4f1fc3bff8e1d2fc856a6a46663ad556f",
+          "from": "BRZ::BRZ",
+          "to": "Brazilian Digital v1 (superseded)::BRZ"
+        }
+      ]
     }
   ]
 }

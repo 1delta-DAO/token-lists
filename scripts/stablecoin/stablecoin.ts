@@ -108,6 +108,15 @@ const STABLECOIN_MANUAL: StablecoinGroupMap = {
   'AllUnity CHF::CHFAU': { base: 'CHF' },
   'AllUnity SEK::SEKAU': { base: 'SEK' },
   'BRLA Token::BRLA': { base: 'REAL' },
+  // Transfero BRZ — BRL stablecoin (1:1 reais, issued by Transfero) and absent from the
+  // DeFiLlama stablecoin feed, so nothing flagged it: it is the loan / collateral leg of the
+  // Polygon Morpho Blue BRZ/frxUSD, sfrxUSD/BRZ and TESOURO/BRZ markets. The lookup runs on
+  // the PRE-alias group, so every spelling GROUP_ALIAS folds is listed, plus the superseded
+  // 4-decimal v1 group (ADDRESS_GROUP_OVERRIDE), which DefiLlama still prices at par.
+  'Brazilian Digital::BRZ': { base: 'REAL' },
+  'BRZ Token::BRZ': { base: 'REAL' },
+  'Brazilian Digital Token::BRZ': { base: 'REAL' },
+  'Brazilian Digital v1 (superseded)::BRZ': { base: 'REAL' },
   // Ticker-named groups of real dollars the feed lists without (or under another) group.
   // Their deployments' names are just the ticker, which is no identity evidence for the
   // symbol fallback, so they are keyed here by group, each checked against its deployments in the lists:

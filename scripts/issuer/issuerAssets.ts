@@ -587,6 +587,11 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Monerium EUR emoney::EURE::100::0': { id: 'monerium', name: 'Monerium', kind: 'institution' },
   BRLA: { id: 'brla', name: 'BRLA Digital', kind: 'institution' }, // every deployment "BRLA Digital BRLA"
   'BRLA Token::BRLA': { id: 'brla', name: 'BRLA Digital', kind: 'institution' },
+  // Transfero BRZ — every spelling the BRZ GROUP_ALIAS folds, plus the superseded v1 group.
+  'Brazilian Digital::BRZ': { id: 'transfero', name: 'Transfero', kind: 'institution' },
+  'BRZ Token::BRZ': { id: 'transfero', name: 'Transfero', kind: 'institution' },
+  'Brazilian Digital Token::BRZ': { id: 'transfero', name: 'Transfero', kind: 'institution' },
+  'Brazilian Digital v1 (superseded)::BRZ': { id: 'transfero', name: 'Transfero', kind: 'institution' },
   // Bridged USDC is still Circle's dollar (README: the bridge is not the desk).
   USDBC: { id: 'circle', name: 'Circle', kind: 'institution' }, // "USD Base Coin" 8453: 0xd9aa… — Base standard-bridge USDC
   'USDC::USDC(Wormhole)': { id: 'circle', name: 'Circle', kind: 'institution' },
@@ -918,6 +923,7 @@ export const ISSUER_CURATED: IssuerGroupMap = {
   'Earn Hylo USD::eHYUSD::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // HnnGv3Hr…
   'Hylo Leveraged BTC::xBTC::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // 2zCo6bUo… — NOT OKX's xBTC
   'Hylo Leveraged SOL::xSOL::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // 4sWNB8zG…
+  'Hylo 3x Leveraged ONYC::xONYC::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // BzaYb37T… — xYIELD levercoin over OnRe ONyc
   'Hylo Staked SOL::hyloSOL::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // hy1oXYgr…
   'Hylo SOL Plus::hyloSOL+::solana': { id: 'hylo', name: 'Hylo', kind: 'protocol' }, // hy1opf2b…
   // OKX's wrapped BTC: X Layer (196 0xb7c0…) and its Solana mint CtzPWv73…,

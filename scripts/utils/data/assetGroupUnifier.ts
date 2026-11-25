@@ -105,6 +105,15 @@ export const GROUP_ALIAS: Record<string, string> = {
   // split one asset into two groups. Canonical = the uppercase form, matching the
   // majority of chains and the stablecoin overlay key.
   'Tokenised GBP::tGBP': 'Tokenised GBP::TGBP',
+  // Transfero BRZ (BRL stablecoin) — the current 18-decimal deployments answer `name() ==
+  // 'BRZ Token'` (Base/OP 0xe918…, Polygon 0x4ed1…, Ethereum 0x01d3…) and Tempo's TIP-20
+  // `Brazilian Digital Token`, but the lists filed Ethereum/Polygon/Arbitrum/BNB/Avalanche/RSK
+  // and Solana under the CoinGecko name. One asset (CoinGecko `brz` lists every one of these
+  // addresses); canonical = the CoinGecko group the majority already holds. The superseded
+  // 4-decimal contracts are moved off by ADDRESS_GROUP_OVERRIDE so no chain ends up with two
+  // addresses in this group.
+  'BRZ Token::BRZ': 'Brazilian Digital::BRZ',
+  'Brazilian Digital Token::BRZ': 'Brazilian Digital::BRZ',
   // YO Protocol vaults — ONE vault per asset at ONE address on Ethereum, Base and
   // Arbitrum, with one share price (YoOracle) across all of them. CoinGecko lists only
   // one chain per vault ("Yield Optimizer USD"/YOUSD on Base, …), so every deployment
@@ -892,6 +901,18 @@ export const ADDRESS_GROUP_OVERRIDE: Record<string, string> = {
   // - "DogeBonk" on Ethereum (CoinGecko `dogebonk-eth`, 420.69M fixed supply) — a separate coin
   //   from DogeBonk.com's BSC DOBO 0xae2d…, whose CCIP mirror on Ethereum is 0x3683…adac.
   '1:0x73c6a7491d0db90bdb0060308cde0f49dfd1d0b0': 'DogeBonk ETH::DOBO',
+  // Transfero BRZ v1 — the original 4-decimal contracts on chains where the 18-decimal BRZ
+  // replaced them. Both still transfer and DefiLlama prices them at par, so they stay BRL
+  // stablecoins, but in their own group: sharing `Brazilian Digital::BRZ` with the live token
+  // pushed the Ethereum one into a `::1::0` dedup suffix and filed Polygon's under `BRZ::BRZ`.
+  // Identified by BYTECODE (2026-11-25), not by CoinGecko: every v2 deployment (1:0x01d3…,
+  // 137:0x4ed1…, 8453/10:0xe918…, 42161:0xa894…, 43114:0x0553…) is the same EIP-1967 proxy
+  // over the same implementation code, and Avalanche's 0x491a… is byte-identical to Polygon's
+  // v1 at the same address — CoinGecko still lists it as Avalanche's BRZ, which is stale.
+  // (BNB 0x71be… and RSK 0xe355… are 4-decimal too, but the only BRZ we list there.)
+  '1:0x420412e765bfa6d85aaac94b4f7b708c89be2e2b': 'Brazilian Digital v1 (superseded)::BRZ',
+  '137:0x491a4eb4f1fc3bff8e1d2fc856a6a46663ad556f': 'Brazilian Digital v1 (superseded)::BRZ',
+  '43114:0x491a4eb4f1fc3bff8e1d2fc856a6a46663ad556f': 'Brazilian Digital v1 (superseded)::BRZ',
 }
 
 export function overrideAssetGroupByAddress(chainId: string, lcAddress: string, gr: string) {

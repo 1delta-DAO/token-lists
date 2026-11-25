@@ -285,6 +285,11 @@ const SOLANA_EXTRA_MINTS: { [mint: string]: string } = {
   // (exponentTranching.ts), checked against Jupiter's `mintAuthority`.
   E1ovyHMqfSQxEofRP2T1pP5iZ2obug92WBvar1KKQKn8:
     'Loopscale "PT-sUSDai-25FEB27 / USDG" loop collateral; api.exponent.finance/pt-token metadata (vault absent from /vaults)',
+  // Hylo's xYIELD levercoins (lending-sdks margin-fetcher-sol `HYLO_XYIELD`):
+  // the `["exo_levercoin", collateral]` PDA of the exchange, minted by its
+  // `mint_auth` PDA; Jupiter answers it unverified
+  BzaYb37TkhSMW8d7Xfa1zB697NWZdRG9DGWesdiYs5qA:
+    'Hylo xONYC (Hylo 3x Leveraged ONYC); the exo pair over ONyc mints it (exchange HYEXCHtH…)',
   // Loopscale's own vault shares: the `lpMint` of its curated vaults.
   Hj3avy8d4k1skU3aScok7VWxEQSw6Bchuu5C9oV6vNz5:
     'Loopscale "USDC Genesis" vault lpMint (oneUSDC); collateral on Loopscale USDC + SOL vaults',

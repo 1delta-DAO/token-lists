@@ -1,0 +1,392 @@
+{
+  "backed": {
+    "name": "Backed Finance",
+    "entity": "Backed Finance AG",
+    "structure": "Swiss public limited company (Aktiengesellschaft); issues tracker certificates (xStocks / bTokens) over single stocks, ETFs and bonds, backed 1:1 by the underlying held with regulated custodians",
+    "country": "Switzerland (Zug)",
+    "platform": "Backed",
+    "about": "The dominant tokenized-equity issuer in these lists (7,790 rows). xStocks are tracker certificates issued as ERC-20 and Solana SPL tokens; the holder owns a claim on the certificate, not the underlying share. Governed by Swiss law.",
+    "links": [
+      { "label": "Product structure", "url": "https://assets.backed.fi/structure" },
+      { "label": "NVDAx factsheet (tracker certificate)", "url": "https://documents.backed.fi/backed-assets-factsheet-NVDAx.pdf" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Backed Finance AG Zug commercial register (UID CHE-410.125.970); backed.fi structure page; Backed NVDAx factsheet"
+  },
+  "ondo": {
+    "name": "Ondo Global Markets",
+    "entity": "Ondo Global Markets (BVI) Limited",
+    "structure": "Bankruptcy-remote SPV in the British Virgin Islands; tokenized stocks are structured notes (debt instruments) governed by Swiss law under the Issuer's Sales Terms; Regulation S",
+    "country": "British Virgin Islands (issuer); parent Ondo Finance Inc is US",
+    "platform": "Ondo",
+    "about": "Issues 'Ondo Stocks' (tokenized stocks, ETFs and ADRs) as structured notes backed 1:1 (plus buffer) by the underlying securities held via a regulated custodial broker-dealer, with a first-priority security interest for tokenholders held by a security agent. 90.01% owned by Flux Finance Inc (subsidiary of the Ondo Foundation), 9.99% by Ondo Finance Inc. Offered only to non-US persons under Reg S.",
+    "links": [
+      { "label": "Legal & regulatory", "url": "https://docs.ondo.finance/ondo-stocks/legal-and-regulatory" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Ondo legal & regulatory docs (issuer, ownership, Swiss-law Sales Terms, Reg S)"
+  },
+  "dinari": {
+    "name": "Dinari",
+    "entity": "Dinari Securities, LLC",
+    "structure": "US broker-dealer registered with the SEC and a FINRA member; dShares are backed 1:1 by underlying US stocks/ETFs held by a registered US broker-dealer custodian",
+    "country": "United States",
+    "platform": "Dinari",
+    "about": "Issues dShares, tokenized representations of US stocks and ETFs backed 1:1 by the underlying securities held in custody.",
+    "links": [
+      { "label": "Disclosures", "url": "https://dinari.com/us/disclosures" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Dinari disclosures page (Dinari Securities, LLC SEC/FINRA broker-dealer); OnChain Benchmark issuer profile"
+  },
+  "coinbase": {
+    "name": "Coinbase (Tokenized Stocks)",
+    "entity": "Coinbase Onchain SPV Ltd",
+    "structure": "Special-purpose vehicle incorporated in the Abu Dhabi Global Market; bankruptcy-remote structure supervised by ADGM FSRA; underlying shares held by Alpaca (regulated broker/custodian); B20 standard on Base",
+    "country": "Abu Dhabi (ADGM)",
+    "platform": "Coinbase / Base",
+    "about": "Coinbase Tokenized Stocks on Base: the token represents a beneficial interest in a pool of real shares held by a regulated custodian in a bankruptcy-remote ADGM structure. A third-party 'wrapper' — the underlying companies did not consent to tokenization — and not available to US persons.",
+    "links": [
+      { "label": "Base launch announcement", "url": "https://www.base.org/blog/tokenized-stocks" },
+      { "label": "Galaxy Research analysis", "url": "https://www.galaxy.com/insights/research/coinbase-tokenized-stocks-base-third-party-issuer-sec-innovation-exemption" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Coinbase Onchain SPV Ltd prospectus (ADGM FSMR 2015); Base launch blog; Galaxy Research Aug 2026"
+  },
+  "robinhood": {
+    "name": "Robinhood (Stock Tokens)",
+    "entity": "Robinhood Assets (Jersey) Limited",
+    "structure": "Jersey company issuing tokenised debt securities under a base prospectus",
+    "country": "Jersey (Channel Islands)",
+    "platform": "Robinhood RHJ",
+    "about": "Robinhood Stock Tokens are tokenized debt securities issued by Robinhood Assets (Jersey) Limited, linked to 200+ US stocks and ETFs.",
+    "links": [
+      { "label": "Stock Tokens", "url": "https://robinhood.com/rhj/stocktokens/" },
+      { "label": "RHJ base prospectus", "url": "https://cdn.robinhood.com/assets/robinhood/legal/rhj_base_prospectus.pdf" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Robinhood RHJ base prospectus (25 June 2026, Robinhood Assets (Jersey) Limited)"
+  },
+  "bstocks": {
+    "name": "bStocks (Binance)",
+    "entity": "BTECH Holdings Ltd",
+    "structure": "Private company limited by shares incorporated in the Abu Dhabi Global Market; certificates over shares representing a beneficial interest",
+    "country": "Abu Dhabi (ADGM)",
+    "platform": "Binance / BNB Chain",
+    "about": "Binance's bStocks are tokenized securities on BNB Chain tracking US stocks and ETFs, admitted to the ADGM official list; structured as certificates over shares.",
+    "links": [
+      { "label": "Binance bStocks FAQ", "url": "https://www.binance.com/en/support/faq/detail/f0c03cd6509a4085b4cce1636f16be38" }
+    ],
+    "checked": "2026-11-25",
+    "source": "BTECH Holdings Ltd prospectus (ADGM); Binance bStocks FAQ"
+  },
+  "backpack": {
+    "name": "Backpack Securities",
+    "entity": "Trek Nexus Markets Ltd (issuer/bare trustee, BVI); broker Backpack Securities Global Limited (New Zealand)",
+    "structure": "BVI bare trust over a pooled holding of the referenced shares; the token is a 'non-negotiable digital record evidencing a pro rata beneficial entitlement'; Regulation S",
+    "country": "British Virgin Islands (issuer); New Zealand (broker)",
+    "platform": "Backpack Exchange",
+    "about": "Tokenized stocks and ETFs on Solana (xStock). The holder gets a beneficial interest in a BVI bare-trust pool of shares, redeemable via Backpack Exchange. The token side is unregulated and disclaims security status (BVI FSC); SEC-registered broker-dealers sit only in the custody chain. Governed by BVI law (Issuer T&Cs) with the off-chain brokerage entitlement under New York law (UCC Art. 8).",
+    "links": [
+      { "label": "Tokenized stocks", "url": "https://backpack.exchange/tokenized-stocks" },
+      { "label": "RWA Sonar issuer dossier", "url": "https://rwasonar.com/issuers/backpack-securities.html" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Backpack Issuer T&Cs; RWA Sonar issuer dossier (Sep 2026, entity map, BVI governing law, NZ register 9406953)"
+  },
+  "sailing": {
+    "name": "Sailing Protocol",
+    "entity": "Not disclosed",
+    "structure": "Tokenized equities said to maintain reserves of the tracked stock; US persons restricted unless accredited",
+    "country": "Not disclosed",
+    "platform": "Sailing",
+    "about": "Small tokenized-equity project (tokens on Arbitrum) that describes itself as 'a technology company' and says it maintains stock reserves, but publishes no issuer entity, jurisdiction or prospectus. RootData marks the project inactive.",
+    "links": [
+      { "label": "About", "url": "https://sailing.global/about" },
+      { "label": "FAQ", "url": "https://docs.sailingprotocol.org/frequently-asked-questions" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Sailing Protocol FAQ/About; RootData project entry (inactive); no legal entity located"
+  },
+  "st0x": {
+    "name": "ST0x",
+    "entity": "S01 Issuer GmbH",
+    "structure": "German GmbH (Berlin); tokenised debt instruments each carrying a contractual right of exchange for one listed share; base prospectus approved by the Liechtenstein FMA",
+    "country": "Germany (Berlin)",
+    "platform": "ST0x",
+    "about": "Issues tStock / wtStock — unsecured debt instruments of S01 Issuer GmbH, each with a right to exchange for one share; dividends are delivered via the wrapper. Offered to the public under a Liechtenstein FMA-approved base prospectus (notified across the EEA), not to US persons.",
+    "links": [
+      { "label": "Legal", "url": "https://st0x.io/docs/legal" },
+      { "label": "S01 Issuer programme", "url": "https://www.s01issuer.com/programmes/st0x" }
+    ],
+    "checked": "2026-11-25",
+    "source": "ST0x legal docs; S01 Issuer GmbH base prospectus (Liechtenstein FMA, ESMA entry BPWO-77)"
+  },
+  "anchored": {
+    "name": "Anchored (aStocks)",
+    "entity": "Anchored Capital Ltd",
+    "structure": "British Virgin Islands company; aStocks are trust receipts under a bare trust over Anchored Finance SPC (segregated portfolio) fund shares",
+    "country": "British Virgin Islands",
+    "platform": "Anchored Finance",
+    "about": "Issues aStocks — 1:1-backed ERC-20 tokens tracking single stocks, ETFs and ETPs. Each token is a beneficial entitlement under a bare trust over Anchored Finance SPC segregated-portfolio fund shares.",
+    "links": [
+      { "label": "Anchored", "url": "https://anchored.finance/" },
+      { "label": "Factsheet (WOOF)", "url": "https://img.anchored.finance/factSheets/WOOF.pdf" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Anchored Capital Ltd BVI register (i-BVI); Anchored factsheets ('Issuer: Anchored Capital Ltd'); Ketju Research"
+  },
+  "solon": {
+    "name": "Solon",
+    "entity": "Not disclosed",
+    "structure": "Single tokenized NVIDIA stock deployment (NVDA.sol) on Base",
+    "country": "Not disclosed",
+    "platform": "Solon",
+    "about": "One tokenized stock row (Solon NVDA, chain 5042). No public issuer entity, jurisdiction or prospectus was located.",
+    "links": [],
+    "checked": "2026-11-25",
+    "source": "token-list row only; no public issuer documentation located"
+  },
+  "nest": {
+    "name": "Nest (Plume Vaults)",
+    "entity": "Nest DAO LLC; developed by Kimber Labs Inc. (d/b/a Plume)",
+    "structure": "Marshall Islands non-profit DAO LLC operating Nest Credit; each vault share is one LayerZero OFT over institutional private-credit, treasury and CLO funds",
+    "country": "Marshall Islands (Nest DAO LLC); Plume developed by Kimber Labs Inc. (Delaware, US)",
+    "platform": "Nest / Plume",
+    "about": "Plume's flagship RWA vault protocol. Vault shares (nTokens) wrap underlying tokenized funds including BlackRock iShares AAA CLO ETF, Apollo diversified credit, Goldfinch Prime and treasury products.",
+    "links": [
+      { "label": "About Nest", "url": "https://docs.plume.org/nest" },
+      { "label": "Nest", "url": "https://nest.credit/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Nest/Plume docs ('Developed by Kimber Labs Inc.'); LEI 254900CI5XNYLYYVY397 (Kimber Labs Inc., Delaware); AssetTokenization.com (Nest DAO LLC, Marshall Islands)"
+  },
+  "blackrock": {
+    "name": "BlackRock (iShares)",
+    "entity": "BlackRock, Inc.",
+    "structure": "US public company; the underlying iShares ETFs are SEC-registered funds — but the tokenized rows are third-party wrappers over those ETFs, not BlackRock-issued tokens",
+    "country": "United States",
+    "platform": "iShares (third-party tokenized wrappers)",
+    "about": "The 'blackrock' rows in the list are tokenized iShares ETFs (AGG, HYG, CLOA, TLT, …) wrapped by third-party issuers — Reality Finance 'rStock' and Anchored 'aStock' — so the tokenholder's counterparty is the wrapper, not BlackRock. BlackRock's own BUIDL money-market fund appears under the 'securitize' issuer in this list.",
+    "links": [],
+    "checked": "2026-11-25",
+    "source": "token-list rows (rStock/aStock iShares names); RWA.xyz 'SP500 rStock' (Reality, realityfinance.xyz); Anchored factsheets; Securitize BUIDL"
+  },
+  "anemoy": {
+    "name": "Anemoy (Centrifuge)",
+    "entity": "Anemoy Capital SPC Ltd",
+    "structure": "British Virgin Islands segregated portfolio company; a professional fund licensed by the BVI Financial Services Commission",
+    "country": "British Virgin Islands",
+    "platform": "Centrifuge",
+    "about": "Issues tokenized funds on Centrifuge, including the Janus Henderson Anemoy Treasury Fund (JTRSY) and AAA CLO Fund (JAAA), open to non-US professional investors.",
+    "links": [
+      { "label": "JTRSY (Centrifuge)", "url": "https://app.centrifuge.io/pool/281474976710662" }
+    ],
+    "checked": "2026-11-25",
+    "source": "S&P Global Ratings (Anemoy Capital SPC Ltd, BVI SPC); Centrifuge pool page; LEI 2549009CBJ86SM12V633"
+  },
+  "midas": {
+    "name": "Midas",
+    "entity": "Midas Software GmbH",
+    "structure": "German GmbH (Berlin); issues blockchain-based certificates 'mTokens' under a base prospectus approved by the Liechtenstein FMA (Regulation (EU) 2017/1129)",
+    "country": "Germany (Berlin)",
+    "platform": "Midas",
+    "about": "Issues mTBILL / mBASIS treasury certificates and other mTokens over US T-bills and third-party fund strategies; offered under a Liechtenstein FMA-approved base prospectus.",
+    "links": [
+      { "label": "mTBILL", "url": "https://midas.app/mTBILL" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Midas Software GmbH base prospectus (17 July 2026); MFSA Final Terms filings"
+  },
+  "securitize": {
+    "name": "Securitize",
+    "entity": "Securitize, Inc.; Securitize Markets, LLC; Securitize Transfer Agent, LLC",
+    "structure": "US Delaware corporation; SEC-registered transfer agent and FINRA/SEC-registered broker-dealer",
+    "country": "United States",
+    "platform": "Securitize",
+    "about": "Compliance infrastructure for tokenized securities; issues and administers BlackRock BUIDL, Hamilton Lane SCOPE, Apollo Diversified Credit and other private-credit and money-market funds.",
+    "links": [
+      { "label": "Securitize", "url": "https://www.securitize.io/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Securitize ToS (Securitize, Inc., Delaware); SEC EDGAR filings"
+  },
+  "superstate": {
+    "name": "Superstate",
+    "entity": "Superstate Advisers LLC",
+    "structure": "US SEC-registered investment adviser (New York); tokenized private funds (Delaware)",
+    "country": "United States",
+    "platform": "Superstate",
+    "about": "Manages USTB (Invesco Short Duration US Government Securities Fund) and USCC (crypto carry/basis fund) as tokenized private funds.",
+    "links": [
+      { "label": "USTB", "url": "https://superstate.com/ustb" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Superstate Advisers LLC Form ADV / SEC IAPD brochure"
+  },
+  "franklin": {
+    "name": "Franklin Templeton",
+    "entity": "Franklin OnChain U.S. Government Money Fund (Franklin Templeton)",
+    "structure": "US money-market fund (Delaware statutory trust), tokenized as BENJI (FOBXX)",
+    "country": "United States",
+    "platform": "Franklin Templeton",
+    "about": "BENJI is the first SEC-registered on-chain US government money-market fund, issued by Franklin Templeton.",
+    "links": [],
+    "checked": "2026-11-25",
+    "source": "rwaAssets.ts note (Franklin OnChain U.S. Government Money Fund); Franklin Templeton BENJI materials"
+  },
+  "vaneck": {
+    "name": "VanEck",
+    "entity": "VanEck (VanEck Treasury Fund)",
+    "structure": "US fund, tokenized via Securitize",
+    "country": "United States",
+    "platform": "VanEck / Securitize",
+    "about": "VBILL — the VanEck Treasury Fund, a tokenized US government-securities fund issued through Securitize.",
+    "links": [],
+    "checked": "2026-11-25",
+    "source": "rwaAssets.ts note ('VanEck Treasury Fund (Securitize)')"
+  },
+  "circle": {
+    "name": "Circle (USYC / Hashnote)",
+    "entity": "Hashnote Holdings LLC (acquired by Circle)",
+    "structure": "US Delaware limited liability company; USYC is a tokenized money-market fund available only to non-US (Regulation S) qualified investors",
+    "country": "United States",
+    "platform": "Circle",
+    "about": "USYC (US Yield Coin) is Hashnote's tokenized money-market fund; Hashnote Holdings LLC was acquired 100% by Circle in January 2025.",
+    "links": [
+      { "label": "USYC", "url": "https://www.circle.com/usyc" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Circle USYC page; Circle 10-Q (Hashnote Holdings LLC, Delaware, acquired Jan 2025)"
+  },
+  "matrixdock": {
+    "name": "Matrixdock",
+    "entity": "Matrixdock (Matrixport Group)",
+    "structure": "Singapore tokenization platform; XAUm = 1 troy ounce of 99.99% LBMA-certified gold",
+    "country": "Singapore",
+    "platform": "Matrixdock",
+    "about": "Issues XAUm, a tokenized gold product (1 token = 1 troy oz LBMA gold), part of the Matrixport Group.",
+    "links": [
+      { "label": "Matrixdock", "url": "https://www.matrixdock.com/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "OnChain Benchmark issuer profile (Singapore); Matrixdock docs"
+  },
+  "reservoir": {
+    "name": "Reservoir",
+    "entity": "Not disclosed (decentralized protocol)",
+    "structure": "Permissionless stablecoin protocol issuing rUSD; this repo classifies it as credit/reinsurance-backed",
+    "country": "Not disclosed",
+    "platform": "Reservoir",
+    "about": "Issues rUSD, which this repo tags as reinsurance/RWA-backed credit; Reservoir's own docs describe a multi-collateral stablecoin redeemable 1:1 for USDC/USDT/USD1. No single incorporated issuer is disclosed.",
+    "links": [
+      { "label": "Reservoir docs", "url": "https://docs.reservoir.xyz/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Reservoir docs; labels/rwaLstRules.ts (credit/reinsurance classification)"
+  },
+  "tether": {
+    "name": "Tether Gold",
+    "entity": "TG Commodities Limited",
+    "structure": "British Virgin Islands company; XAUt is backed by allocated physical gold",
+    "country": "British Virgin Islands",
+    "platform": "Tether",
+    "about": "XAUt (Tether Gold) is backed by allocated physical gold; issued by TG Commodities Limited, a Tether-affiliated BVI company.",
+    "links": [
+      { "label": "Tether Gold", "url": "https://gold.tether.to/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Tether Gold transparency/terms (TG Commodities Limited)"
+  },
+  "paxos": {
+    "name": "Paxos Gold",
+    "entity": "Paxos Trust Company, LLC",
+    "structure": "US New York limited-purpose trust company, regulated by the NYDFS",
+    "country": "United States",
+    "platform": "Paxos",
+    "about": "PAXG (Paxos Gold) is backed 1:1 by allocated physical gold; issued by Paxos Trust Company, a NYDFS-regulated limited-purpose trust.",
+    "links": [
+      { "label": "PAX Gold", "url": "https://paxos.com/paxg/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Paxos PAXG materials"
+  },
+  "unitas": {
+    "name": "Unitas",
+    "entity": "Unitas Foundation S.A.",
+    "structure": "British Virgin Islands company; XGLD is a yield-bearing gold asset backed by Tether Gold (XAUt) collateral",
+    "country": "British Virgin Islands",
+    "platform": "Unitas",
+    "about": "Unitas issues USDu and XGLD; XGLD is a yield-bearing gold asset backed by Tether Gold (XAUt) collateral with delta-neutral yield strategies.",
+    "links": [
+      { "label": "Unitas Foundation", "url": "https://unitas.foundation/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Unitas docs; i-BVI company register (Unitas Foundation S.A.)"
+  },
+  "prestocks": {
+    "name": "PreStocks",
+    "entity": "Not disclosed (no incorporated issuer identified)",
+    "structure": "Tokenized pre-IPO price-tracking tokens on Solana; attestations by BlockOffice Pte. Ltd. (Singapore)",
+    "country": "Not disclosed",
+    "platform": "PreStocks",
+    "about": "Pre-IPO tokens tracking private companies (SpaceX, OpenAI, Anthropic, Neuralink, …) on Solana. No incorporated issuer, SPV or counterparty is identified; the ToS describes 'a distributed network of contributors located around the world'.",
+    "links": [
+      { "label": "PreStocks", "url": "https://prestocks.com/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "RWA Sonar (no incorporated issuer identified); PreStocks attestation report (BlockOffice Pte. Ltd., Singapore)"
+  },
+  "tessera": {
+    "name": "Tessera",
+    "entity": "Dedicated issuer per token; segregated portfolios in a Cayman Islands SPC",
+    "structure": "Loan participation rights with a non-security legal opinion under Singapore law",
+    "country": "Cayman Islands (SPC); Singapore (legal opinion)",
+    "platform": "Tessera",
+    "about": "T-Tokens (tSpaceX, tOpenAI, tKalshi) are loan participation rights via a dedicated issuer entity and a segregated portfolio inside a Cayman SPC, giving economic exposure to private-share valuations. Repayment depends on a qualifying liquidity event.",
+    "links": [
+      { "label": "Structure explainer", "url": "https://blog.tessera.pe/posts/how-t-tokens-are-actually-structured" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Tessera blog 'How T-Tokens Are Actually Structured' (Cayman SPC, Singapore-law opinion)"
+  },
+  "shift": {
+    "name": "Shift (SHIFT DAO)",
+    "entity": "SHIFT DAO LLC",
+    "structure": "Marshall Islands for-profit series DAO LLC (Decentralized Autonomous Organization Act 2022); each leveraged/inverse product is a designated Series holding third-party daily-reset leveraged ETFs",
+    "country": "Marshall Islands",
+    "platform": "Shift",
+    "about": "Issues leveraged and inverse tokenized stocks/indices on Solana (SPX3L, TSL2L, …). Each token is a membership interest in a Series whose treasury holds a daily-reset leveraged ETF (e.g. Direxion SPXL) via DekaBank and ALPACADB LTD custodians — synthetic exposure, no claim on the referenced share. Governed by Marshall Islands law.",
+    "links": [
+      { "label": "Legal hub", "url": "https://www.shiftrwa.xyz/legal-hub" }
+    ],
+    "checked": "2026-11-25",
+    "source": "RWA Sonar issuer dossier (SHIFT DAO LLC, RMI, Series operating agreements, MINS LLC nominee)"
+  },
+  "vnx": {
+    "name": "VNX",
+    "entity": "VNX Commodities AG",
+    "structure": "Liechtenstein company; VNXAU = 1 gram of allocated LBMA-certified gold",
+    "country": "Liechtenstein (Vaduz)",
+    "platform": "VNX",
+    "about": "VNX Gold (VNXAU) — one gram of allocated physical gold held in Liechtenstein/Swiss vaults, with periodic agreed-upon-procedures reserve reports. (These rows carry no issuer slug in the list; identified from the token.)",
+    "links": [
+      { "label": "VNX Gold", "url": "https://vnx.li/vnxau" }
+    ],
+    "checked": "2026-11-25",
+    "source": "VNX agreed-upon-procedures report (VNX Commodities AG, Vaduz)"
+  },
+  "dominion": {
+    "name": "Dominion",
+    "entity": "Not disclosed",
+    "structure": "Vaulted-silver token (SILV) on Solana",
+    "country": "Not disclosed",
+    "platform": "Dominion",
+    "about": "SILV was Dominion's tokenized physical silver. Dominion ceased operations after a September 2026 exploit; a pre-hack holder refund programme paid $63 per SILV. (These rows carry no issuer slug in the list.)",
+    "links": [
+      { "label": "Dominion", "url": "https://dominion.market/" }
+    ],
+    "checked": "2026-11-25",
+    "source": "Dominion closure notice (dominion.market)"
+  }
+}
