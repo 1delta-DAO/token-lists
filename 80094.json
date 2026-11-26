@@ -1577,7 +1577,6 @@
           "home": "9745",
           "destinations": ["9745"]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },
@@ -2355,7 +2354,16 @@
       "logoURI": "https://assets.coingecko.com/coins/images/14483/thumb/token_OHM_%281%29.png?1696514169",
       "assetGroup": "OHM",
       "currencyId": "Olympus::OHM",
-      "props": { "risk": { "score": 4, "source": "default" } }
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "ccip": {
+          "pool": "0xebde552d851dd6dfd3d360c596d3f4af6e5f9678",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453", "42161"]
+        }
+      }
     },
     "0x6536cead649249cae42fc9bfb1f999429b3ec755": {
       "chainId": "80094",
@@ -3866,6 +3874,16 @@
         },
         "issuer": { "id": "elixir", "name": "Elixir", "kind": "protocol" }
       }
+    },
+    "0xb8cd0b8e056a91c00fd388eddb37e6e445844b21": {
+      "chainId": "80094",
+      "decimals": 18,
+      "name": "COMPUTE.r",
+      "address": "0xb8cd0b8e056a91c00fd388eddb37e6e445844b21",
+      "symbol": "COMPUTE.R",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180325/thumb/icon-compute-laptop.webp?1794998901",
+      "assetGroup": "COMPUTE.r::COMPUTE.R",
+      "currencyId": "COMPUTE.r::COMPUTE.R"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "80094",

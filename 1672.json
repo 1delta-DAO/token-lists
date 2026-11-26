@@ -11,16 +11,8 @@
       "assetGroup": "Janus Henderson Anemoy Treasury Fund Token::JTRSY",
       "currencyId": "Janus Henderson Anemoy Treasury Fund Token::JTRSY",
       "props": {
-        "rwa": {
-          "type": "fund",
-          "subType": "treasury",
-          "issuer": "anemoy"
-        },
-        "issuer": {
-          "id": "anemoy",
-          "name": "Anemoy",
-          "kind": "institution"
-        }
+        "rwa": { "type": "fund", "subType": "treasury", "issuer": "anemoy" },
+        "issuer": { "id": "anemoy", "name": "Anemoy", "kind": "institution" }
       }
     },
     "0x09d4214c03d01f49544c0448dbe3a27f768f2b34": {
@@ -43,14 +35,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "reservoir",
-          "name": "Reservoir",
-          "kind": "protocol"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x4b01436d82dff601281f7ebdf44e73a47d77ee3d": {
@@ -61,12 +47,7 @@
       "symbol": "BTCVC",
       "assetGroup": "BTCVC::BTCVC",
       "currencyId": "BTCVC::BTCVC",
-      "props": {
-        "risk": {
-          "score": 4,
-          "source": "default"
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x52c48d4213107b20bc583832b0d951fb9ca8f0b0": {
       "chainId": "1672",
@@ -80,20 +61,13 @@
       "props": {
         "wnative": true,
         "denomination": "PROS",
-        "risk": {
-          "score": 1,
-          "category": "NATIVE",
-          "source": "whitelist"
-        },
+        "risk": { "score": 1, "category": "NATIVE", "source": "whitelist" },
         "ccip": {
           "pool": "0xcb79097744d5266bfca287a43612d9613be46300",
           "poolType": "lockRelease",
           "poolVersion": "1.5.1",
           "home": "1672",
-          "destinations": [
-            "1",
-            "8453"
-          ]
+          "destinations": ["1", "8453"]
         }
       }
     },
@@ -113,14 +87,8 @@
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "circle",
-          "name": "Circle",
-          "kind": "institution"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x078640a1af5c634a5c9b59644ea9db2bbf4b67c7": {
@@ -152,10 +120,7 @@
       "currencyId": "Wrapped Ether::WETH",
       "props": {
         "denomination": "ETH",
-        "risk": {
-          "score": 4,
-          "source": "default"
-        }
+        "risk": { "score": 4, "source": "default" }
       }
     },
     "0x20b363a311a1b95a80157b641a10a8773f6fdd90": {
@@ -227,9 +192,7 @@
           "poolType": "burnMint",
           "poolVersion": "1.5.1",
           "home": "1",
-          "destinations": [
-            "1"
-          ]
+          "destinations": ["1"]
         }
       }
     },
@@ -268,11 +231,7 @@
       "symbol": "USD",
       "assetGroup": "USD::USD",
       "currencyId": "USD::USD",
-      "props": {
-        "stablecoin": {
-          "base": "USD"
-        }
-      }
+      "props": { "stablecoin": { "base": "USD" } }
     },
     "0x843913de261a1712d3ae8d4bc751e705bb0823b8": {
       "chainId": "1672",
@@ -300,12 +259,7 @@
       "symbol": "pALPHA",
       "assetGroup": "Ember Pharos Alpha::pALPHA",
       "currencyId": "Ember Pharos Alpha::pALPHA",
-      "props": {
-        "risk": {
-          "score": 4,
-          "source": "default"
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0xe6b9da03a33bc2b7736325c8a15a0c4d13cf1408": {
       "chainId": "1672",
@@ -593,9 +547,7 @@
           "poolType": "burnMint",
           "poolVersion": "1.5.1",
           "home": "1672",
-          "destinations": [
-            "42161"
-          ]
+          "destinations": ["42161"]
         }
       }
     },
@@ -717,14 +669,8 @@
       "assetGroup": "Bridged USDC (Pharos)::USDC.e",
       "currencyId": "Bridged USDC (Pharos)::USDC.e",
       "props": {
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "circle",
-          "name": "Circle",
-          "kind": "institution"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x61997601cebf74395aeb99edc4f30d16c77a30d2": {
@@ -995,10 +941,7 @@
           "poolType": "burnMint",
           "poolVersion": "1.5.1",
           "home": "42161",
-          "destinations": [
-            "1",
-            "42161"
-          ]
+          "destinations": ["1", "42161"]
         }
       }
     },
@@ -1166,19 +1109,9 @@
       "assetGroup": "Wrapped Savings rUSD::WSRUSD",
       "currencyId": "Wrapped Savings rUSD::wsrUSD",
       "props": {
-        "savings": {
-          "underlying": "rUSD",
-          "base": "USD"
-        },
-        "risk": {
-          "score": 4,
-          "source": "default"
-        },
-        "issuer": {
-          "id": "reservoir",
-          "name": "Reservoir",
-          "kind": "protocol"
-        }
+        "savings": { "underlying": "rUSD", "base": "USD" },
+        "risk": { "score": 4, "source": "default" },
+        "issuer": { "id": "reservoir", "name": "Reservoir", "kind": "protocol" }
       }
     },
     "0x7ab037cc617acd7922a67996d1ba872153aaaed0": {
@@ -1619,18 +1552,9 @@
           "poolType": "burnMint",
           "poolVersion": "1.6.1",
           "home": "9745",
-          "destinations": [
-            "9745"
-          ]
+          "destinations": ["9745"]
         },
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "yuzu",
-          "name": "Yuzu",
-          "kind": "protocol"
-        }
+        "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },
     "0x81acc053ca20e75faed94382e297e6bad50c2c2c": {
@@ -1695,12 +1619,7 @@
       "symbol": "mmUSDC",
       "assetGroup": "USDC Vault::mmUSDC",
       "currencyId": "USDC Vault::mmUSDC",
-      "props": {
-        "risk": {
-          "score": 4,
-          "source": "vault_inherit"
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x82135bab2b5252b186e7f16dd1796d7a2dba08c0": {
       "chainId": "1672",
@@ -1774,12 +1693,7 @@
       "logoURI": "https://assets.coingecko.com/coins/images/69326/thumb/bfBTC-logo-symbol-color.png?1758193458",
       "assetGroup": "BitFi Bitcoin::BFBTC",
       "currencyId": "BitFi Bitcoin::bfBTC",
-      "props": {
-        "risk": {
-          "score": 2,
-          "source": "vault_inherit"
-        }
-      }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x8d296f4cc5ae608199e1e7869c922c5698028743": {
       "chainId": "1672",
@@ -1854,12 +1768,7 @@
       "logoURI": "https://storage.googleapis.com/socialscan-public-asset/explorer/pharos/FunctionBTC.png",
       "assetGroup": "FunctionBTC::FBTC",
       "currencyId": "FunctionBTC::FBTC",
-      "props": {
-        "risk": {
-          "score": 4,
-          "source": "default"
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x1c207fc400467f711d388fffc914da17c3703048": {
       "chainId": "1672",
@@ -2361,14 +2270,8 @@
       "currencyId": "USD Coin::USDC",
       "props": {
         "denomination": "USDC",
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "circle",
-          "name": "Circle",
-          "kind": "institution"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "circle", "name": "Circle", "kind": "institution" }
       }
     },
     "0x745e91ced27d2157f73a9fe5ef36be7c0061701a": {
@@ -2435,14 +2338,8 @@
       "assetGroup": "rwaUSDi::rwaUSDi",
       "currencyId": "rwaUSDi::rwaUSDi",
       "props": {
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "multipli",
-          "name": "Multipli",
-          "kind": "protocol"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "multipli", "name": "Multipli", "kind": "protocol" }
       }
     },
     "0x97cf68b9f081b568c240e13807b8f7d9f7292a0d": {
@@ -2597,12 +2494,7 @@
       "symbol": "sbPharosPrime",
       "assetGroup": "SharpByte Pharos Prime::sbPharosPrime",
       "currencyId": "SharpByte Pharos Prime::sbPharosPrime",
-      "props": {
-        "risk": {
-          "score": 2,
-          "source": "vault_inherit"
-        }
-      }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x8dc0fd04247e3777a2ea4cfe340c9178b64bbdcf": {
       "chainId": "1672",
@@ -3549,29 +3441,16 @@
       "assetGroup": "Tori Staked trUSD::STRUSD",
       "currencyId": "Staked trUSD::strUSD",
       "props": {
-        "savings": {
-          "underlying": "trUSD",
-          "base": "USD"
-        },
+        "savings": { "underlying": "trUSD", "base": "USD" },
         "ccip": {
           "pool": "0x7305a63323d3171c6311d8f3218c3a7d164f3f0f",
           "poolType": "burnMint",
           "poolVersion": "2.0.0",
           "home": "1",
-          "destinations": [
-            "1",
-            "143",
-            "42161"
-          ]
+          "destinations": ["1", "143", "42161"]
         },
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "tori",
-          "name": "Tori",
-          "kind": "protocol"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
     },
     "0x2aec9c0e281d83f93d3d45c79f062c00d051bab3": {
@@ -3600,12 +3479,7 @@
       "symbol": "APC3M",
       "assetGroup": "AxilPrimeCredit-3M::APC3M::1672::1",
       "currencyId": "AxilPrimeCredit-3M::APC3M",
-      "props": {
-        "risk": {
-          "score": 4,
-          "source": "default"
-        }
-      }
+      "props": { "risk": { "score": 4, "source": "default" } }
     },
     "0x3816102cdaff06e2a5a362ca7f767ccfd2337003": {
       "chainId": "1672",
@@ -3621,20 +3495,10 @@
           "poolType": "burnMint",
           "poolVersion": "2.0.0",
           "home": "1",
-          "destinations": [
-            "1",
-            "143",
-            "42161"
-          ]
+          "destinations": ["1", "143", "42161"]
         },
-        "stablecoin": {
-          "base": "USD"
-        },
-        "issuer": {
-          "id": "tori",
-          "name": "Tori",
-          "kind": "protocol"
-        }
+        "stablecoin": { "base": "USD" },
+        "issuer": { "id": "tori", "name": "Tori", "kind": "protocol" }
       }
     },
     "0x3739595a7c0751938854e0f68da3b9f84050a2ee": {
@@ -4114,6 +3978,69 @@
       "symbol": "BEs",
       "assetGroup": "Bloom Energy::BEs",
       "currencyId": "Bloom Energy::BEs"
+    },
+    "0x15b598d6671f11fe030ab33bebe5f4abb48b237d": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "pL0zw464",
+      "address": "0x15b598d6671f11fe030ab33bebe5f4abb48b237d",
+      "symbol": "pL0ZW",
+      "assetGroup": "pL0zw464::pL0ZW::1672::0",
+      "currencyId": "pL0zw464::pL0ZW"
+    },
+    "0x1d354b0e163a53f524a7f9dbb7b8cc01c9bfd529": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Uniswap V2",
+      "address": "0x1d354b0e163a53f524a7f9dbb7b8cc01c9bfd529",
+      "symbol": "UNI-V2",
+      "assetGroup": "Uniswap V2::UNI-V2::1672::71",
+      "currencyId": "Uniswap V2::UNI-V2"
+    },
+    "0x0431cd6e7bed1dba5dccebba414aeb811bea02e6": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Gap Reentry Reversal Shares",
+      "address": "0x0431cd6e7bed1dba5dccebba414aeb811bea02e6",
+      "symbol": "GRRSS",
+      "assetGroup": "Gap Reentry Reversal Shares::GRRSS",
+      "currencyId": "Gap Reentry Reversal Shares::GRRSS"
+    },
+    "0xdb0ea3265331043fd2d86f0a03f6db69d519a2d5": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "AIarbi Shares",
+      "address": "0xdb0ea3265331043fd2d86f0a03f6db69d519a2d5",
+      "symbol": "AIAR",
+      "assetGroup": "AIarbi Shares::AIAR",
+      "currencyId": "AIarbi Shares::AIAR"
+    },
+    "0x92db25f5aa11b81b061044924bd2f511d8c13d56": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "hengjiTest112501 Shares",
+      "address": "0x92db25f5aa11b81b061044924bd2f511d8c13d56",
+      "symbol": "HJ112501",
+      "assetGroup": "hengjiTest112501 Shares::HJ112501",
+      "currencyId": "hengjiTest112501 Shares::HJ112501"
+    },
+    "0xf3dacc9af9417d9ffecd64635824aabdef18c1e3": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "Uniswap V2",
+      "address": "0xf3dacc9af9417d9ffecd64635824aabdef18c1e3",
+      "symbol": "UNI-V2",
+      "assetGroup": "Uniswap V2::UNI-V2::1672::72",
+      "currencyId": "Uniswap V2::UNI-V2"
+    },
+    "0x05eb3739624820e4fad1408dc41c3ded35d56b23": {
+      "chainId": "1672",
+      "decimals": 18,
+      "name": "RWA boren Vault Shares",
+      "address": "0x05eb3739624820e4fad1408dc41c3ded35d56b23",
+      "symbol": "RWAboren",
+      "assetGroup": "RWA boren Vault Shares::RWAboren",
+      "currencyId": "RWA boren Vault Shares::RWAboren"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "1672",

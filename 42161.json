@@ -34853,9 +34853,18 @@
       "address": "0xf0cb2dc0db5e6c66b9a70ac27b06b878da017028",
       "symbol": "OHM",
       "logoURI": "https://raw.githubusercontent.com/CamelotLabs/default-token-list/main/src/assets/ohm.png",
-      "assetGroup": "Olympus::OHM",
+      "assetGroup": "OHM",
       "currencyId": "Olympus::OHM",
-      "props": { "permit": { "type": 1, "version": "1" } }
+      "props": {
+        "permit": { "type": 1, "version": "1" },
+        "ccip": {
+          "pool": "0xf35193da8c10e44af10853ba5a3a1a6f7529e39a",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "10", "4663", "8453", "80094"]
+        }
+      }
     },
     "0x300d2c875c6fb8ce4bf5480b4d34b7c9ea8a33a4": {
       "chainId": "42161",
@@ -44973,6 +44982,7 @@
                 "5042": "0xffb20098fd7b8e84762eea4609f299d101427f24",
                 "8453": "0xffb20098fd7b8e84762eea4609f299d101427f24",
                 "9745": "0xffb20098fd7b8e84762eea4609f299d101427f24",
+                "57073": "0xffb20098fd7b8e84762eea4609f299d101427f24",
                 "solana": "2xVEUsPGGv9Fe3NFc4UmhWd7Y2Ni7MjiSCL8oQJ9bzLZ"
               }
             }
@@ -45011,6 +45021,7 @@
                 "5042": "0xffa10065ce1d1c42fabc46e06b84ed8ffeb4bae5",
                 "8453": "0xffa10065ce1d1c42fabc46e06b84ed8ffeb4bae5",
                 "9745": "0xffa10065ce1d1c42fabc46e06b84ed8ffeb4bae5",
+                "57073": "0xffa10065ce1d1c42fabc46e06b84ed8ffeb4bae5",
                 "solana": "5JZFgHYyVYuNk3BXYbKHiSzrk6EEVV9FLFPJmYvuPfis"
               }
             }
@@ -53042,7 +53053,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x252b965400862d94bda35fecf7ee0f204a53cc36.png",
       "assetGroup": "Yearn USND::yUSND",
       "currencyId": "Yearn USND::yUSND",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0xe4783824593a50bfe9dc873204cec171ebc62de0": {
       "chainId": "42161",
@@ -70325,6 +70336,7 @@
       "name": "Brazilian Digital",
       "address": "0xa8940698fda5a07abaef4a5ccdf2f1bb525b47a2",
       "symbol": "BRZ",
+      "logoURI": "https://assets.coingecko.com/coins/images/8472/thumb/MicrosoftTeams-image_%286%29.png?1696508657",
       "assetGroup": "Brazilian Digital::BRZ",
       "currencyId": "Brazilian Digital::BRZ",
       "props": {
@@ -70335,6 +70347,26 @@
           "kind": "institution"
         }
       }
+    },
+    "0xc5a46ad2bf662abeee0ba8e8f4d8a97af21d1ed5": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Anthropic (Stove Tokenized Stock)",
+      "address": "0xc5a46ad2bf662abeee0ba8e8f4d8a97af21d1ed5",
+      "symbol": "ANTS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180374/thumb/ANTs.png?1795263272",
+      "assetGroup": "Anthropic (Stove Tokenized Stock)::ANTS",
+      "currencyId": "Anthropic (Stove Tokenized Stock)::ANTS"
+    },
+    "0x5614deffc4ed6e40f795fc79cdb415e52a6227e5": {
+      "chainId": "42161",
+      "decimals": 18,
+      "name": "Anthropic PBC (Anchored Tokenized Stock)",
+      "address": "0x5614deffc4ed6e40f795fc79cdb415e52a6227e5",
+      "symbol": "AANT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180351/thumb/aANT-logo.png?1795167069",
+      "assetGroup": "Anthropic PBC (Anchored Tokenized Stock)::AANT",
+      "currencyId": "Anthropic PBC (Anchored Tokenized Stock)::AANT"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42161",

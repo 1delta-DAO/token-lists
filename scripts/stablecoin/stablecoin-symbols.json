@@ -160,7 +160,9 @@
     "addresses": { "42220:0xe8537a3d056da446677b9e9d6c5db704eaab4787": "REAL" }
   },
   "BRTH": { "names": { "brth": "REAL" }, "addresses": { "137:0x38fd02dc840f099772392f2dfe3a3bee9aab3ab7": "REAL" } },
-  "BRZ": { "names": { "braziliandigital": "REAL", "braziliandigitaltoken": "REAL", "brztoken": "REAL" } },
+  "BRZ": {
+    "names": { "braziliandigital": "REAL", "braziliandigitaltoken": "REAL", "brz": "REAL", "brztoken": "REAL" }
+  },
   "BTCUSD": {
     "names": { "bitcoinusd": "USD", "btcusd": "USD" },
     "addresses": {
@@ -196,12 +198,16 @@
   "BYC": { "names": { "bytecash": "USD" } },
   "BYUSD": { "names": { "byusd": "USD" } },
   "CADC": {
-    "names": { "cadcoin": "CAD" },
+    "names": { "cadcoin": "CAD", "legacycadcoin": "CAD" },
     "addresses": {
+      "137:0x74d9423a2886618522f7c992edf647ea707a38eb": "CAD",
       "137:0x9de41aff9f55219d5bf4359f167d1d0c772a396d": "CAD",
+      "1:0x49a6f6aeab68ea001beaa4815186eb22fbdccf2a": "CAD",
       "1:0xcadc0acd4b445166f12d2c07eac6e2544fbe2eef": "CAD",
       "42161:0x2b28e826b55e399f4d4699b85f68666ac51e6f70": "CAD",
-      "8453:0x043eb4b75d0805c43d7c834902e335621983cf03": "CAD"
+      "8453:0x043eb4b75d0805c43d7c834902e335621983cf03": "CAD",
+      "8453:0x5e63e9c06c3f2c779ef29a8071f94f5a724eb5e4": "CAD",
+      "solana:52splaafjkmwhnj3tl2puaugyggxsbvipp4whrtbp82s": "CAD"
     }
   },
   "CADD": {
@@ -245,6 +251,7 @@
       "42220:0xb55a79f398e759e43c95b979163f30ec87ee131d": "CHF"
     }
   },
+  "CHFU": { "names": { "chfu": "CHF" }, "addresses": { "1:0x4b43f48a665e2f15c4913a76cf67509672396146": "CHF" } },
   "CJPY": {
     "names": { "celojapaneseyen": "JPY", "cjpy": "JPY", "convertiblejpytoken": "JPY" },
     "addresses": { "1:0x1cfa5641c01406ab8ac350ded7d735ec41298372": "JPY" }
@@ -484,6 +491,7 @@
     "addresses": { "1:0xdb25f211ab05b1c97d595516f45794528a807ad8": "EUR" }
   },
   "EURT": { "names": { "eurotether": "EUR" }, "addresses": { "1:0xc581b735a1688071a1746c968e0798d642ede491": "EUR" } },
+  "EURU": { "names": { "euru": "EUR" }, "addresses": { "1:0x6e30d56cb23068de5a084d4a4f2a909823424f06": "EUR" } },
   "EURW": {
     "names": { "newrailseuro": "EUR" },
     "addresses": { "143:0x1111b3ded9f1fe1801ad4ebef8e2788183a24111": "EUR" }
@@ -495,6 +503,7 @@
       "electronicusd": "USD",
       "etherfiusd": "USD",
       "eusd": "USD",
+      "owneusd": "USD",
       "telcoineusd": "USD"
     },
     "addresses": {
@@ -504,6 +513,7 @@
       "1:0x97de57ec338ab5d51557da3434828c5dbfada371": "USD",
       "1:0xa0d69e286b938e21cbf7e51d71f6a4c8918f482f": "USD",
       "1:0xa4335da338ec4c07c391fc1a9bf75f306adadc08": "USD",
+      "4663:0x8b84d644cecaee6d21373f37e1ba00f85ed7cdb7": "USD",
       "56:0xa4335da338ec4c07c391fc1a9bf75f306adadc08": "USD",
       "8453:0x14913815bcfde78baead2111f463d038ac9c2949": "USD",
       "solana:hqmycztdq9g3ozejdrueqsftlkgyfvbpd3yhatnain3l": "USD"
@@ -788,7 +798,6 @@
   "KPK_USDC_YIELDV2": { "names": { "kpkusdcyieldv2morphovault": "USD" } },
   "KRW1": { "names": { "krw1": "KRW" }, "addresses": { "1:0xb83fc84df7028251066c25f5d61d12fd9d9c8be4": "KRW" } },
   "KRWQ": { "names": { "krwq": "KRW" } },
-  "KTB": { "names": { "etherfusektb": "USD" } },
   "KUSD": {
     "names": { "kerneusd": "USD", "kolibriusd": "USD" },
     "addresses": { "8453:0x5c2efdf0d8d286959b42308966bc2b97f5680aa3": "USD" }
@@ -804,7 +813,6 @@
   "LIMUSD": { "names": { "limusd": "USD" } },
   "LISUSD": { "names": { "listausd": "USD" }, "addresses": { "56:0x0782b6d8c4551b9760e74c0545a9bcd90bdc41e5": "USD" } },
   "LITUSD": { "names": { "litusd": "USD" }, "addresses": { "1:0x3b5f2810fb2168ffa9c73160f97bf9f2461ffa5c": "USD" } },
-  "LOAZND": { "names": { "mudigitallockedaznd": "USD" } },
   "LUSD": {
     "names": { "liquityusd": "USD", "lusdstablecoin": "USD" },
     "addresses": { "1:0x5f98805a4e8be255a32880fdec7f6728c6568ba0": "USD" }
@@ -1085,7 +1093,6 @@
       "8453:0xd74fb32112b1ef5b4c428fead8da8d85a0019009": "USD"
     }
   },
-  "SAID": { "names": { "gaibsaid": "USD" } },
   "SATOSHI STABLECOIN V2": { "names": { "satusd": "USD" } },
   "SATUSD": {
     "names": { "riverstablecoin": "USD", "satoshistablecoin": "USD" },
@@ -1214,10 +1221,13 @@
       "1:0x059a6b0ba116c63191182a0956cf697d0d2213ec": "USD"
     }
   },
-  "SYZUSD": { "names": { "stakedyuzuusd": "USD" } },
   "TAKO": {
     "names": { "takenosusd": "USD" },
     "addresses": { "solana:he1zd1o5wtuchz5qovmsdfhzjyqecvgyk75tug95rnhl": "USD" }
+  },
+  "TBRL": {
+    "names": { "tenbinbrazilianreal": "REAL" },
+    "addresses": { "1:0x4c1b46adb8877e389171ec6ef67b385094c0afad": "REAL" }
   },
   "TGBP": {
     "names": { "tokenisedgbp": "GBP" },
@@ -1235,6 +1245,10 @@
   "THUSD": {
     "names": { "thresholdusd": "USD" },
     "addresses": { "1:0xcfc5bd99915aaa815401c5a41a927ab7a38d29cf": "USD" }
+  },
+  "TMXN": {
+    "names": { "tenbinmexicanpeso": "MXN" },
+    "addresses": { "1:0x8d015afcb6f437010653352eb1e58152c4e23734": "MXN" }
   },
   "TOR": { "names": { "tor": "USD" }, "addresses": { "250:0x74e23df9110aa9ea0b6ff2faee01e740ca1c642e": "USD" } },
   "TRUSD": {
@@ -1274,6 +1288,7 @@
   },
   "UNO": { "names": { "uno": "USD" } },
   "URM": { "names": { "urm": "USD" }, "addresses": { "8453:0xf0e3349f00972475a5d16721796091aa3b997837": "USD" } },
+  "USAD": { "names": { "usad": "USD" } },
   "USAT": { "names": { "usat": "USD" }, "addresses": { "1:0x07041776f5007aca2a54844f50503a18a72a8b68": "USD" } },
   "USBD": {
     "names": { "usbd": "USD" },

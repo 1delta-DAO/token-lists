@@ -479,7 +479,8 @@
           "expiry": 1795046400,
           "underlyingAsset": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
           "ptAddress": "0x9f1e57d8984d9ae2b081ed6fceff2fb60cb785f1",
-          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
+          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -675,7 +676,8 @@
           "expiry": 1795046400,
           "underlyingAsset": "0x92fd66527192e3e61d4ddd13322aa222de86f9b5",
           "ytAddress": "0x7eee53b86290e58179ed96bea7887a37e8a1b7b9",
-          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51"
+          "syAddress": "0x06fc2568fa3c8a9862d8f35bc6758355b3a32f51",
+          "expired": true
         },
         "risk": {
           "score": 2,
@@ -6509,6 +6511,25 @@
           "poolVersion": "1.5.1",
           "home": "1",
           "destinations": ["1"]
+        }
+      }
+    },
+    "0x9c859dc91db65bd7375660341231227336daa134": {
+      "chainId": "4663",
+      "decimals": 9,
+      "name": "Olympus",
+      "address": "0x9c859dc91db65bd7375660341231227336daa134",
+      "symbol": "OHM",
+      "logoURI": "https://assets.coingecko.com/coins/images/14483/large/token_OHM_%281%29.png?1628311611",
+      "assetGroup": "OHM",
+      "currencyId": "Olympus::OHM",
+      "props": {
+        "ccip": {
+          "pool": "0x5824850d8a6e46a473445a5af214c7ebd46c5ecb",
+          "poolType": "burnMint",
+          "poolVersion": "1.5.1",
+          "home": "1",
+          "destinations": ["1", "8453", "42161"]
         }
       }
     },
@@ -20038,7 +20059,11 @@
       "symbol": "EUSD",
       "logoURI": "https://assets.coingecko.com/coins/images/102180181/thumb/orange.png?1794207389",
       "assetGroup": "Own eUSD::EUSD",
-      "currencyId": "Own eUSD::EUSD"
+      "currencyId": "Own eUSD::EUSD",
+      "props": {
+        "risk": { "score": 4, "source": "default" },
+        "stablecoin": { "base": "USD" }
+      }
     },
     "0xc17fba7484bdb276c2b5a7593e14fcaf21155c45": {
       "chainId": "4663",
@@ -20326,8 +20351,139 @@
       "name": "Anthropic, PBC • Robinhood Token",
       "address": "0xbbb6c29bcc3a1028a2b54310df73f4f7a3bcb373",
       "symbol": "ANT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180312/thumb/ANT.png?1794954793",
       "assetGroup": "Anthropic, PBC • Robinhood Token::ANT",
       "currencyId": "Anthropic, PBC • Robinhood Token::ANT"
+    },
+    "0xe0ab3a7a32ef7bbd2a5142d88a73020164a4aa57": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Genesis Chad",
+      "address": "0xe0ab3a7a32ef7bbd2a5142d88a73020164a4aa57",
+      "symbol": "GENESIS",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180435/thumb/76E1A53C-001B-47F6-A59E-632597D0C680.png?1795616285",
+      "assetGroup": "Genesis Chad::GENESIS",
+      "currencyId": "Genesis Chad::GENESIS"
+    },
+    "0x3b6e95b2ed4976f54cdf551468d9c8f1e132e9a4": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "HEPH AI",
+      "address": "0x3b6e95b2ed4976f54cdf551468d9c8f1e132e9a4",
+      "symbol": "HEPH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180443/thumb/lzxe4s87qx391atii4j8v3on3ppb.?1795669386",
+      "assetGroup": "HEPH AI::HEPH",
+      "currencyId": "HEPH AI::HEPH"
+    },
+    "0xb15cd4c4e42cdb25fc939815711ea7875f4aa844": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Moth",
+      "address": "0xb15cd4c4e42cdb25fc939815711ea7875f4aa844",
+      "symbol": "MOTH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180444/thumb/7iuf6kljonuuwfwgyje34utirji0.?1795669719",
+      "assetGroup": "Moth::MOTH",
+      "currencyId": "Moth::MOTH"
+    },
+    "0xaa1f4de6b9f7cdf11fb8aa97ce163d35d731cdb1": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Corbel Finance",
+      "address": "0xaa1f4de6b9f7cdf11fb8aa97ce163d35d731cdb1",
+      "symbol": "CORBEL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180439/thumb/nwv6hpyk0b1uditwp9cf0mjsctda.?1795668908",
+      "assetGroup": "Corbel Finance::CORBEL",
+      "currencyId": "Corbel Finance::CORBEL"
+    },
+    "0x84b3f4a37eead8194f7180ed8aaad43c1b0df537": {
+      "chainId": "4663",
+      "decimals": 8,
+      "name": "Bandar Buys BTC",
+      "address": "0x84b3f4a37eead8194f7180ed8aaad43c1b0df537",
+      "symbol": "$BANDAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180409/thumb/1000597163.png?1795530576",
+      "assetGroup": "Bandar Buys BTC::$BANDAR",
+      "currencyId": "Bandar Buys BTC::$BANDAR"
+    },
+    "0x6dbe95076584f869dd09a44131e9a3c13f34d7d6": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "alphamorph",
+      "address": "0x6dbe95076584f869dd09a44131e9a3c13f34d7d6",
+      "symbol": "MORPH",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180386/thumb/2r4to0b4kuq8vh4x9fyorqd062fa.?1795335387",
+      "assetGroup": "alphamorph::MORPH",
+      "currencyId": "alphamorph::MORPH"
+    },
+    "0x524988ccc8d7a23566e2fffb24b1b07e5aa2f134": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Idlex Network",
+      "address": "0x524988ccc8d7a23566e2fffb24b1b07e5aa2f134",
+      "symbol": "IDLEX",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180440/thumb/evrg4m0121q4zapl3k1qokvwvgdm.?1795668971",
+      "assetGroup": "Idlex Network::IDLEX",
+      "currencyId": "Idlex Network::IDLEX"
+    },
+    "0x80e10255a83b257f5a8674d363f547842aa53b8e": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "T Rowe Price Technology ETF • Robinhood Token",
+      "address": "0x80e10255a83b257f5a8674d363f547842aa53b8e",
+      "symbol": "TTEQ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180341/thumb/TTEQ.png?1795157177",
+      "assetGroup": "T Rowe Price Technology ETF • Robinhood Token::TTEQ",
+      "currencyId": "T Rowe Price Technology ETF • Robinhood Token::TTEQ"
+    },
+    "0x189505a04f906debdc79ac3c2374c1922eb90012": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "POOLZ",
+      "address": "0x189505a04f906debdc79ac3c2374c1922eb90012",
+      "symbol": "POOLZ",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180375/thumb/poolz_logo_2.jpg?1795263786",
+      "assetGroup": "POOLZ::POOLZ",
+      "currencyId": "POOLZ::POOLZ"
+    },
+    "0xd281bf1649c5db6744d23f61bb25b05b4d1dff35": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Agentic Cat",
+      "address": "0xd281bf1649c5db6744d23f61bb25b05b4d1dff35",
+      "symbol": "ACAT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180385/thumb/agentic.jpg?1795335237",
+      "assetGroup": "Agentic Cat::ACAT",
+      "currencyId": "Agentic Cat::ACAT"
+    },
+    "0x42b96dbc55e79e930d866c1ee486a342366546bc": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "BrainChain",
+      "address": "0x42b96dbc55e79e930d866c1ee486a342366546bc",
+      "symbol": "BRAIN",
+      "logoURI": "https://assets.coingecko.com/coins/images/102179984/thumb/brainc_400x400.jpg?1793627051",
+      "assetGroup": "BrainChain::BRAIN::4663::0",
+      "currencyId": "BrainChain::BRAIN"
+    },
+    "0x5614deffc4ed6e40f795fc79cdb415e52a6227e5": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Anthropic PBC (Anchored Tokenized Stock)",
+      "address": "0x5614deffc4ed6e40f795fc79cdb415e52a6227e5",
+      "symbol": "AANT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180351/thumb/aANT-logo.png?1795167069",
+      "assetGroup": "Anthropic PBC (Anchored Tokenized Stock)::AANT",
+      "currencyId": "Anthropic PBC (Anchored Tokenized Stock)::AANT"
+    },
+    "0x8639dee23bb8a5153b150e55b2bdb40827d1afc8": {
+      "chainId": "4663",
+      "decimals": 18,
+      "name": "Midas mF-ONE",
+      "address": "0x8639dee23bb8a5153b150e55b2bdb40827d1afc8",
+      "symbol": "MF-ONE",
+      "logoURI": "https://assets.coingecko.com/coins/images/66975/thumb/mfone-logo.png?1751307469",
+      "assetGroup": "Midas mF-ONE::MF-ONE",
+      "currencyId": "Midas mF-ONE::MF-ONE"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "4663",

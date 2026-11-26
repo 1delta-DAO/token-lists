@@ -208,6 +208,27 @@
         ]
       }
     },
+    "0x217ef6d9b7c9d99e9086e8394245e87325404cf0": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "PT reUSD (USDC) Monad",
+      "address": "0x217ef6d9b7c9d99e9086e8394245e87325404cf0",
+      "symbol": "PT-reUSD-20MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/359682d7-49a8-43d0-8799-1be18bea116a.svg",
+      "assetGroup": "PT reUSD (USDC) Monad::PT-reUSD-20MAY2027",
+      "currencyId": "PT reUSD (USDC) Monad::PT-reUSD-20MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "marketAddress": "0xe67e082e9f1253d72a3592b2fd4adcc78dd047ca",
+          "expiry": 1810771200,
+          "underlyingAsset": "0xd25f563e12ff616262f8c947fec108db934f8059",
+          "ytAddress": "0xa5dddeeea9cd667166f91777c97bc80e58fdc5a5",
+          "syAddress": "0x4fef2c8370dff2c8dd6cf451254e946c330d7073"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0x2e570a44909df47c4cad13c626626f59d056e9da": {
       "chainId": "143",
       "decimals": 6,
@@ -362,6 +383,47 @@
           "syAddress": "0xeb9bfd1c1acfef4f9b4c4630dc1f373631073ef0"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
+    "0x4df8a87f747e475123b0de30814d43b5680cecf5": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "apyUSD Monad",
+      "address": "0x4df8a87f747e475123b0de30814d43b5680cecf5",
+      "symbol": "SY-apyUSD",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/57c6e942-f35a-4be7-91f6-aaaa2da1c0cd.svg",
+      "assetGroup": "apyUSD Monad::SY-apyUSD::143::0",
+      "currencyId": "apyUSD Monad::SY-apyUSD",
+      "props": {
+        "pendle": { "tokenType": "SY" },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "apyx", "name": "Apyx", "kind": "protocol", "hops": 1 }
+        ]
+      }
+    },
+    "0x4fef2c8370dff2c8dd6cf451254e946c330d7073": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "reUSD Monad",
+      "address": "0x4fef2c8370dff2c8dd6cf451254e946c330d7073",
+      "symbol": "SY-reUSD",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/157e1d4c-56ca-432d-9b93-2e66f35995ca.svg",
+      "assetGroup": "reUSD Monad::SY-reUSD",
+      "currencyId": "reUSD Monad::SY-reUSD",
+      "props": {
+        "pendle": {
+          "tokenType": "SY",
+          "marketAddress": "0xe67e082e9f1253d72a3592b2fd4adcc78dd047ca",
+          "expiry": 1810771200,
+          "underlyingAsset": "0xd25f563e12ff616262f8c947fec108db934f8059",
+          "ptAddress": "0x217ef6d9b7c9d99e9086e8394245e87325404cf0",
+          "ytAddress": "0xa5dddeeea9cd667166f91777c97bc80e58fdc5a5"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
+        "issuerExposures": [
+          { "id": "re", "name": "Re", "kind": "protocol", "hops": 1 }
+        ]
       }
     },
     "0x515006ec8f83ae9262ddf0eccb1128415a0bb3cb": {
@@ -539,7 +601,7 @@
       "address": "0x8c0ee449b8babc933047541249952d5084a7d99d",
       "symbol": "SY-reUSD",
       "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/157e1d4c-56ca-432d-9b93-2e66f35995ca.svg",
-      "assetGroup": "reUSD Monad::SY-reUSD",
+      "assetGroup": "reUSD Monad::SY-reUSD::143::0",
       "currencyId": "reUSD Monad::SY-reUSD",
       "props": {
         "pendle": {
@@ -676,6 +738,27 @@
         "issuerExposures": [
           { "id": "strata", "name": "Strata", "kind": "protocol", "hops": 1 }
         ]
+      }
+    },
+    "0xa5dddeeea9cd667166f91777c97bc80e58fdc5a5": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "YT reUSD (USDC) Monad",
+      "address": "0xa5dddeeea9cd667166f91777c97bc80e58fdc5a5",
+      "symbol": "YT-reUSD-20MAY2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/a070509c-6e39-4f58-9ac6-e58ea9c2e064.svg",
+      "assetGroup": "YT reUSD (USDC) Monad::YT-reUSD-20MAY2027",
+      "currencyId": "YT reUSD (USDC) Monad::YT-reUSD-20MAY2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "marketAddress": "0xe67e082e9f1253d72a3592b2fd4adcc78dd047ca",
+          "expiry": 1810771200,
+          "underlyingAsset": "0xd25f563e12ff616262f8c947fec108db934f8059",
+          "ptAddress": "0x217ef6d9b7c9d99e9086e8394245e87325404cf0",
+          "syAddress": "0x4fef2c8370dff2c8dd6cf451254e946c330d7073"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0xa7deac306a4520f4f2f94d150ca2fbd13080b607": {
@@ -1061,6 +1144,26 @@
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
+    "0xe7775970357541ee6ee7e884dc760c2a5b904618": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "YT apyUSD (apxUSD) Monad",
+      "address": "0xe7775970357541ee6ee7e884dc760c2a5b904618",
+      "symbol": "YT-apyUSD-11FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/1545f140-ab8e-4a6d-ac1d-ba6d348d3ec2.svg",
+      "assetGroup": "YT apyUSD (apxUSD) Monad::YT-apyUSD-11FEB2027",
+      "currencyId": "YT apyUSD (apxUSD) Monad::YT-apyUSD-11FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "YT",
+          "expiry": 1802304000,
+          "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+          "ptAddress": "0xeb733cff5325c384f1a1a6ceadea0c1c36055198",
+          "syAddress": "0x4df8a87f747e475123b0de30814d43b5680cecf5"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
+      }
+    },
     "0xe99f124109752f8e62b4fd5c7e3c01c1bbf58b24": {
       "chainId": "143",
       "decimals": 6,
@@ -1088,6 +1191,26 @@
         "issuerExposures": [
           { "id": "agora", "name": "Agora", "kind": "institution", "hops": 1 }
         ]
+      }
+    },
+    "0xeb733cff5325c384f1a1a6ceadea0c1c36055198": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "PT apyUSD (apxUSD) Monad",
+      "address": "0xeb733cff5325c384f1a1a6ceadea0c1c36055198",
+      "symbol": "PT-apyUSD-11FEB2027",
+      "logoURI": "https://storage.googleapis.com/prod-pendle-bucket-a/images/uploads/00fd8af5-c5de-4d03-8112-b231c7fc4cc1.svg",
+      "assetGroup": "PT apyUSD (apxUSD) Monad::PT-apyUSD-11FEB2027",
+      "currencyId": "PT apyUSD (apxUSD) Monad::PT-apyUSD-11FEB2027",
+      "props": {
+        "pendle": {
+          "tokenType": "PT",
+          "expiry": 1802304000,
+          "underlyingAsset": "0xfd957d7e27d239da5455b82303b2f618f73a9c49",
+          "ytAddress": "0xe7775970357541ee6ee7e884dc760c2a5b904618",
+          "syAddress": "0x4df8a87f747e475123b0de30814d43b5680cecf5"
+        },
+        "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" }
       }
     },
     "0xeb9bfd1c1acfef4f9b4c4630dc1f373631073ef0": {
@@ -2617,12 +2740,7 @@
       "assetGroup": "Mu Digital Locked AZND::LOAZND",
       "currencyId": "Mu Digital Locked AZND::LOAZND",
       "props": {
-        "risk": {
-          "score": 3,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
-        "stablecoin": { "base": "USD" },
+        "risk": { "score": 4, "source": "default" },
         "issuer": {
           "id": "mu-digital",
           "name": "Mu Digital",
@@ -2989,11 +3107,7 @@
             }
           ]
         },
-        "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
-        },
+        "risk": { "score": 4, "source": "default" },
         "ccip": {
           "pool": "0x012247950ee154dc26d4514b84b3b60336c55ea5",
           "poolType": "burnMint",
@@ -3001,7 +3115,6 @@
           "home": "9745",
           "destinations": ["9745"]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },
@@ -3211,7 +3324,6 @@
       "assetGroup": "Etherfuse KTB::KTB",
       "currencyId": "Etherfuse KTB::KTB",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "etherfuse",
           "name": "Etherfuse",
@@ -4334,7 +4446,7 @@
           "poolType": "burnMint",
           "poolVersion": "2.0.0",
           "home": "1",
-          "destinations": ["1", "56"]
+          "destinations": ["1", "56", "196"]
         },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
@@ -4372,7 +4484,7 @@
           "poolType": "burnMint",
           "poolVersion": "2.0.0",
           "home": "1",
-          "destinations": ["1", "56"]
+          "destinations": ["1", "56", "196"]
         },
         "issuer": { "id": "saturn", "name": "Saturn", "kind": "protocol" }
       }
@@ -6006,6 +6118,16 @@
           "kind": "institution"
         }
       }
+    },
+    "0x5614deffc4ed6e40f795fc79cdb415e52a6227e5": {
+      "chainId": "143",
+      "decimals": 18,
+      "name": "Anthropic PBC (Anchored Tokenized Stock)",
+      "address": "0x5614deffc4ed6e40f795fc79cdb415e52a6227e5",
+      "symbol": "AANT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180351/thumb/aANT-logo.png?1795167069",
+      "assetGroup": "Anthropic PBC (Anchored Tokenized Stock)::AANT",
+      "currencyId": "Anthropic PBC (Anchored Tokenized Stock)::AANT"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "143",

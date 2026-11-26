@@ -1265,7 +1265,11 @@
       "assetGroup": "Celo South African Rand::cZAR",
       "currencyId": "Celo South African Rand::cZAR",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "ZAR" },
         "issuer": { "id": "mento", "name": "Mento", "kind": "protocol" }
       }
@@ -1684,6 +1688,24 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180291/thumb/wuyu_logo_outline_200x200.png?1794830161",
       "assetGroup": "Uruguayan Peso::WUYU",
       "currencyId": "Uruguayan Peso::WUYU"
+    },
+    "0xe9185ee218cae427af7b9764a011bb89fea761b4": {
+      "chainId": "42220",
+      "decimals": 18,
+      "name": "Brazilian Digital",
+      "address": "0xe9185ee218cae427af7b9764a011bb89fea761b4",
+      "symbol": "BRZ",
+      "logoURI": "https://assets.coingecko.com/coins/images/8472/thumb/MicrosoftTeams-image_%286%29.png?1696508657",
+      "assetGroup": "Brazilian Digital::BRZ",
+      "currencyId": "Brazilian Digital::BRZ",
+      "props": {
+        "stablecoin": { "base": "REAL" },
+        "issuer": {
+          "id": "transfero",
+          "name": "Transfero",
+          "kind": "institution"
+        }
+      }
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "42220",

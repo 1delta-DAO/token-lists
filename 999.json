@@ -1719,7 +1719,8 @@
           "expiry": 1795651200,
           "underlyingAsset": "0x1822bd335489d84abdd0779a7dcaeda0625e83c8",
           "ytAddress": "0x6df3fbb4373fe1409e4697f214f723ab61640130",
-          "syAddress": "0xcf6b4c156f51818922b98524dc832e352f40d516"
+          "syAddress": "0xcf6b4c156f51818922b98524dc832e352f40d516",
+          "expired": true
         },
         "risk": {
           "score": 3,
@@ -1777,7 +1778,8 @@
           "expiry": 1795651200,
           "underlyingAsset": "0x1822bd335489d84abdd0779a7dcaeda0625e83c8",
           "ptAddress": "0x6b7cea9d070bbffd8205f256897319139cdef399",
-          "syAddress": "0xcf6b4c156f51818922b98524dc832e352f40d516"
+          "syAddress": "0xcf6b4c156f51818922b98524dc832e352f40d516",
+          "expired": true
         },
         "risk": { "score": 4, "category": "YIELD_TOKEN", "source": "default" },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -18962,7 +18964,7 @@
       "props": {
         "permit": { "type": 1, "version": "1" },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "STABLECOIN",
           "source": "stablecoin"
         },
@@ -20455,7 +20457,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x0571362ba5ea9784a97605f57483f865a37dbeaa.png",
       "assetGroup": "Gauntlet uETH Vault::gtuETH",
       "currencyId": "Gauntlet uETH Vault::gtuETH",
-      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 4, "source": "vault_inherit" } }
     },
     "0x0fe958d31c0aa613a0b08901fb26a7761c5b14f4": {
       "chainId": "999",
@@ -20514,7 +20516,7 @@
       "logoURI": "https://raw.githubusercontent.com/balancer/tokenlists/main/src/assets/images/tokens/0x53a333e51e96fe288bc9add7cdc4b1ead2cd2ffa.png",
       "assetGroup": "Gauntlet USDT0 Vault::gtUSDT0",
       "currencyId": "Gauntlet USDT0 Vault::gtUSDT0",
-      "props": { "risk": { "score": 1, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
     },
     "0x599d155d5c97335c026f9ff7d8ef26753a609272": {
       "chainId": "999",
@@ -23812,9 +23814,9 @@
       "currencyId": "Staked Yuzu USD::syzUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "issuer_inherit"
         },
         "ccip": {
           "pool": "0xd32ab76a165f1a716986ba8c58344e3df4397f5e",
@@ -23823,7 +23825,6 @@
           "home": "9745",
           "destinations": ["9745"]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },
@@ -24844,6 +24845,66 @@
       "logoURI": "https://assets.coingecko.com/coins/images/102180291/thumb/wuyu_logo_outline_200x200.png?1794830161",
       "assetGroup": "Uruguayan Peso::WUYU",
       "currencyId": "Uruguayan Peso::WUYU"
+    },
+    "0x59a72a4b8d632005112f7d2bc0d035e06be043d9": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Ensemble iVOL",
+      "address": "0x59a72a4b8d632005112f7d2bc0d035e06be043d9",
+      "symbol": "IVOL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180370/thumb/ensemble.jpg?1795171842",
+      "assetGroup": "Ensemble iVOL::IVOL",
+      "currencyId": "Ensemble iVOL::IVOL"
+    },
+    "0xd2778440c4c1934185a2f8cb7e09a9a7a7cc21f0": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Ensemble iBULL",
+      "address": "0xd2778440c4c1934185a2f8cb7e09a9a7a7cc21f0",
+      "symbol": "IBULL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180367/thumb/ensemble.jpg?1795169534",
+      "assetGroup": "Ensemble iBULL::IBULL",
+      "currencyId": "Ensemble iBULL::IBULL"
+    },
+    "0xe12f47589a272665203ce727854cf3fef8a8ed94": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Ensemble BEAR",
+      "address": "0xe12f47589a272665203ce727854cf3fef8a8ed94",
+      "symbol": "BEAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180368/thumb/ensemble.jpg?1795169713",
+      "assetGroup": "Ensemble BEAR::BEAR",
+      "currencyId": "Ensemble BEAR::BEAR"
+    },
+    "0xb0808ffd220541568f70efe9774c795cd0c310aa": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Ensemble iBEAR",
+      "address": "0xb0808ffd220541568f70efe9774c795cd0c310aa",
+      "symbol": "IBEAR",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180369/thumb/ensemble.jpg?1795169904",
+      "assetGroup": "Ensemble iBEAR::IBEAR",
+      "currencyId": "Ensemble iBEAR::IBEAR"
+    },
+    "0x2d561b24e754b105bb0df34a3345aac1fe805210": {
+      "chainId": "999",
+      "decimals": 18,
+      "name": "Ensemble BULL",
+      "address": "0x2d561b24e754b105bb0df34a3345aac1fe805210",
+      "symbol": "BULL",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180366/thumb/ensemble.jpg?1795169198",
+      "assetGroup": "Ensemble BULL::BULL",
+      "currencyId": "Ensemble BULL::BULL"
+    },
+    "0x5fc54614bc8bc9ab519ff6ea8e0fd56e7859f242": {
+      "chainId": "999",
+      "decimals": 8,
+      "name": "Anthropic (EQX Tokenized Stock)",
+      "address": "0x5fc54614bc8bc9ab519ff6ea8e0fd56e7859f242",
+      "symbol": "EQANT",
+      "logoURI": "https://assets.coingecko.com/coins/images/102180373/thumb/EQANT.png?1795263244",
+      "assetGroup": "Anthropic (EQX Tokenized Stock)::EQANT",
+      "currencyId": "Anthropic (EQX Tokenized Stock)::EQANT"
     },
     "0x0000000000000000000000000000000000000000": {
       "chainId": "999",

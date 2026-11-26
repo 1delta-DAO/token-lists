@@ -202,8 +202,8 @@
           "ytAddress": "0x3a138e9e6e5614d0ea754af778e2783c23617cd8"
         },
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
+          "score": 3,
+          "category": "YIELD_STABLE",
           "source": "pendle_inherit"
         },
         "issuer": { "id": "pendle", "name": "Pendle", "kind": "protocol" },
@@ -398,7 +398,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -827,7 +827,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -883,7 +883,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -1315,7 +1315,7 @@
           "expired": true
         },
         "risk": {
-          "score": 2,
+          "score": 3,
           "category": "PRINCIPAL_TOKEN",
           "source": "pendle_inherit"
         },
@@ -2559,13 +2559,6 @@
       "currencyId": "Wrapped liquid staked Ether 2.0::wstETH",
       "props": {
         "lst": { "type": "staking", "asset": "ETH", "provider": "lido" },
-        "ccip": {
-          "pool": "0xa4b1d393104a5ef340154c337009156aa0e83bd8",
-          "poolType": "burnMint",
-          "poolVersion": "1.5.1",
-          "home": "1",
-          "destinations": ["1"]
-        },
         "issuer": { "id": "lido", "name": "Lido", "kind": "protocol" }
       }
     },
@@ -3471,9 +3464,9 @@
       "currencyId": "Staked Yuzu USD::syzUSD",
       "props": {
         "risk": {
-          "score": 2,
-          "category": "STABLECOIN",
-          "source": "stablecoin"
+          "score": 3,
+          "category": "YIELD_STABLE",
+          "source": "whitelist"
         },
         "oft": {
           "eid": 30383,
@@ -3495,7 +3488,6 @@
           "home": "9745",
           "destinations": ["1", "143", "999", "1329", "1672", "8453", "80094"]
         },
-        "stablecoin": { "base": "USD" },
         "issuer": { "id": "yuzu", "name": "Yuzu", "kind": "protocol" }
       }
     },

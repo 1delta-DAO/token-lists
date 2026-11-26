@@ -12769,7 +12769,11 @@
       "assetGroup": "Neutrino Index Token::USDN",
       "currencyId": "Neutrino Index Token::USDN",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" }
       }
     },
@@ -15367,7 +15371,11 @@
       "assetGroup": "Stabl.fi CASH::CASH",
       "currencyId": "Stabl.fi CASH::CASH",
       "props": {
-        "risk": { "score": 4, "source": "default" },
+        "risk": {
+          "score": 5,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
         "stablecoin": { "base": "USD" },
         "issuer": { "id": "stabl", "name": "Stabl.fi", "kind": "protocol" }
       }
@@ -18886,7 +18894,7 @@
       "symbol": "yvWMATIC-A",
       "assetGroup": "WMATIC yVault-A::yvWMATIC-A",
       "currencyId": "WMATIC yVault-A::yvWMATIC-A",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0xa013fbd4b711f9ded6fb09c1c0d358e2fbc2eaa0": {
       "chainId": "137",
@@ -18896,7 +18904,7 @@
       "symbol": "yvUSDC-A",
       "assetGroup": "USDC yVault-A::yvUSDC-A",
       "currencyId": "USDC yVault-A::yvUSDC-A",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0x305f25377d0a39091e99b975558b1bdfc3975654": {
       "chainId": "137",
@@ -18906,7 +18914,7 @@
       "symbol": "yvWETH-A",
       "assetGroup": "WETH yVault-A::yvWETH-A",
       "currencyId": "WETH yVault-A::yvWETH-A",
-      "props": { "risk": { "score": 2, "source": "vault_inherit" } }
+      "props": { "risk": { "score": 3, "source": "vault_inherit" } }
     },
     "0x8519d8deae7ba984c4c7850b11c4671b4f62b330": {
       "chainId": "137",
@@ -28224,7 +28232,6 @@
       "assetGroup": "Etherfuse KTB::KTB",
       "currencyId": "Etherfuse KTB::KTB",
       "props": {
-        "stablecoin": { "base": "USD" },
         "issuer": {
           "id": "etherfuse",
           "name": "Etherfuse",
@@ -29382,7 +29389,14 @@
       "symbol": "CADC",
       "assetGroup": "CAD Coin::CADC::137::0",
       "currencyId": "CAD Coin::CADC",
-      "props": { "stablecoin": { "base": "CAD" } }
+      "props": {
+        "risk": {
+          "score": 2,
+          "category": "STABLECOIN",
+          "source": "stablecoin"
+        },
+        "stablecoin": { "base": "CAD" }
+      }
     },
     "0x0a55e7248b8e590b1c89d442d27bb30743f83b37": {
       "chainId": "137",
